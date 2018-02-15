@@ -26,8 +26,8 @@ REM php_setvars and phpsdk_buildtree will break the batch run them after envirom
 ::@SET VSINSTALLDIR=c:\MsVS%VSOverridePrefix%%VCVersionOverride%\
 @SET VCINSTALLDIR=%Path32%\Microsoft Visual Studio %VCVersionOverride%.0\VC\
 @SET VSINSTALLDIR=%Path32%\Microsoft Visual Studio %VCVersionOverride%.0\
-
-if "%PHP_SDK_ROOT_PATH%" == "" SET PHP_SDK_ROOT_PATH=c:\php-sdk\ & SET PHP_SDK_BIN_PATH=c:\php-sdk\bin & echo Changed PHP_SDK_ROOT_PATH: %PHP_SDK_ROOT_PATH%
+if "%PHP_SDK_ROOT_PATH%" == "" SET PHP_SDK_ROOT_PATH=c:\php-5.6.3x4VC9\ & SET PHP_SDK_BIN_PATH=c:\php-5.6.3x4VC9\bin & echo Changed PHP_SDK_ROOT_PATH: %PHP_SDK_ROOT_PATH%
+::if "%PHP_SDK_ROOT_PATH%" == "" SET PHP_SDK_ROOT_PATH=c:\php-sdk\ & SET PHP_SDK_BIN_PATH=c:\php-sdk\bin & echo Changed PHP_SDK_ROOT_PATH: %PHP_SDK_ROOT_PATH%
 if "%PHP_SDK_VC%" == "" SET PHP_SDK_VC=vc%VCVersionOverride%
 @SET PHP_SDK_BIN_PATH=%PHP_SDK_ROOT_PATH%\bin
 @SET PHP_SDK_MSYS2_PATH=%PHP_SDK_ROOT_PATH%\msys2\usr\bin
