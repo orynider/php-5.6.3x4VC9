@@ -1,0 +1,129 @@
+
+'\"
+'\" The contents of this file are subject to the AOLserver Public License
+'\" Version 1.1 (the "License"); you may not use this file except in
+'\" compliance with the License. You may obtain a copy of the License at
+'\" http://aolserver.com/.
+'\"
+'\" Software distributed under the License is distributed on an "AS IS"
+'\" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See
+'\" the License for the specific language governing rights and limitations
+'\" under the License.
+'\"
+'\" The Original Code is AOLserver Code and related documentation
+'\" distributed by AOL.
+'\" 
+'\" The Initial Developer of the Original Code is America Online,
+'\" Inc. Portions created by AOL are Copyright (C) 1999 America Online,
+'\" Inc. All Rights Reserved.
+'\"
+'\" Alternatively, the contents of this file may be used under the terms
+'\" of the GNU General Public License (the "GPL"), in which case the
+'\" provisions of GPL are applicable instead of those above.  If you wish
+'\" to allow use of your version of this file only under the terms of the
+'\" GPL and not to allow others to use your version of this file under the
+'\" License, indicate your decision by deleting the provisions above and
+'\" replace them with the notice and other provisions required by the GPL.
+'\" If you do not delete the provisions above, a recipient may use your
+'\" version of this file under either the License or the GPL.
+'\" 
+'\"
+'\" $Header: /Users/dossy/Desktop/cvs/aolserver/doc/Ns_Pathname.3,v 1.6 2006/04/19 17:37:30 jgdavidson Exp $
+'\"
+'\" 
+.so man.macros
+
+.TH Ns_Pathname 3 4.0 AOLserver "AOLserver Library Procedures"
+.BS
+'\" Note:  do not modify the .SH NAME line immediately below!
+.SH NAME
+Ns_HomePath, Ns_LibPath, Ns_MakePath, Ns_ModulePath, Ns_NormalizePath, Ns_PathIsAbsolute \- Pathname procedures
+.SH SYNOPSIS
+.nf
+\fB#include "ns.h"\fR
+.sp
+char *
+\fBNs_HomePath\fR(\fINs_DString *dest, ...\fR)
+.sp
+char *
+\fBNs_LibPath\fR(\fINs_DString *dest, ...\fR)
+.sp
+char *
+\fBNs_MakePath\fR(\fINs_DString *dest, ...\fR)
+.sp
+char *
+\fBNs_ModulePath\fR(\fINs_DString *dest, char *server, char *module, ...\fR)
+.sp
+char *
+\fBNs_NormalizePath\fR(\fINs_DString *dsPtr, char *path\fR)
+.sp
+int
+\fBNs_PathIsAbsolute\fR(\fIchar *path\fR)
+.BE
+
+.SH DESCRIPTION
+.PP
+These functions operate on file pathnames. They work with Unix and
+Windows pathnames on their respective hosts.
+
+.TP
+\fBNs_HomePath\fR(\fIdest, ...\fR)
+Construct a path name relative to the home directory of the server.
+The full path is constructed by appending the library directory
+followed by each of the variable number of string elements after
+the \fIdest\fR argument.  The elements will be separated by a \fI/\fR
+character.  The list must be terminated with a NULL string.
+
+.TP
+\fBNs_LibPath\fR(\fIdest, ...\fR)
+Construct a path name relative to the library directory of the
+server, normally the \fIlib/\fR subdirectory of the home directory.
+The full path is constructed by appending the library directory
+followed by each of the variable number of string elements after
+the \fIdest\fR argument.  The elements will be separated by a \fI/\fR
+character.  The list must be terminated with a NULL string.
+
+.TP
+\fBNs_MakePath\fR(\fIdest, ...\fR)
+Construct a path name from a list of path elements. The Ns_MakePath
+function constructs a path name by appending a list of path elements
+to the given Ns_DString. The path elements are separated by single
+slashes, and the resulting path name is appended to the given
+Ns_DString. The last argument needs to be NULL to indicate the end
+of the argument list.
+
+.TP
+\fBNs_ModulePath\fR(\fIdest, char *server, char *module, ...\fR)
+Construct a server and/or module specific pathname relative to the
+server home directory.  The path in constructed by first appending
+the server home directory.  Next, if the \fIserver\fR argument is
+not NULL, "server/\fIserver\R" will be appended to the destination
+and if the \fImodule\fR argument is not NULL, "module/\fImodule\fR"
+will be appended.  Finally, all other string elements, if any, will
+be appended to the destination with separating \fI/\fR characters.
+The list must be terminated with a NULL string.
+
+.TP
+\fBNs_NormalizePath\fR(\fIdsPtr, path\fR)
+Normalize a path name. This function removes any extraneous slashes
+from the path and resolves "." and ".."  references. The result is
+appended to the given Ns_DString. The following code appends "/dog"
+to the Ns_DString:
+
+.CS
+Ns_NormalizePath(&ds,
+    "/dog/cat/../../rat/../../dog//mouse/..");
+.CE
+
+.TP
+\fBNs_PathIsAbsolute\fR(\fIpath\fR)
+Check for an absolute path name. Return NS_TRUE if the path is
+absolute and NS_FALSE otherwise. Under Unix, an absolute path starts
+with a "/". On Windows, it starts with a drive letter followed
+immediately by a ":".
+
+.SH "SEE ALSO"
+nsd(1), info(n)
+
+.SH KEYWORDS
+

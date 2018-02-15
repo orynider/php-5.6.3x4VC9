@@ -1,0 +1,97 @@
+
+'\"
+'\" The contents of this file are subject to the AOLserver Public License
+'\" Version 1.1 (the "License"); you may not use this file except in
+'\" compliance with the License. You may obtain a copy of the License at
+'\" http://aolserver.com/.
+'\"
+'\" Software distributed under the License is distributed on an "AS IS"
+'\" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See
+'\" the License for the specific language governing rights and limitations
+'\" under the License.
+'\"
+'\" The Original Code is AOLserver Code and related documentation
+'\" distributed by AOL.
+'\" 
+'\" The Initial Developer of the Original Code is America Online,
+'\" Inc. Portions created by AOL are Copyright (C) 1999 America Online,
+'\" Inc. All Rights Reserved.
+'\"
+'\" Alternatively, the contents of this file may be used under the terms
+'\" of the GNU General Public License (the "GPL"), in which case the
+'\" provisions of GPL are applicable instead of those above.  If you wish
+'\" to allow use of your version of this file only under the terms of the
+'\" GPL and not to allow others to use your version of this file under the
+'\" License, indicate your decision by deleting the provisions above and
+'\" replace them with the notice and other provisions required by the GPL.
+'\" If you do not delete the provisions above, a recipient may use your
+'\" version of this file under either the License or the GPL.
+'\" 
+'\"
+'\" $Header: /Users/dossy/Desktop/cvs/aolserver/doc/Ns_TempFile.3,v 1.2 2009/12/08 04:13:18 jgdavidson Exp $
+'\"
+'\" 
+.so man.macros
+
+.TH Ns_GetTemp 3 4.5 AOLserver "AOLserver Library Procedures"
+.BS
+'\" Note:  do not modify the .SH NAME line immediately below!
+.SH NAME
+Ns_GetTemp, Ns_ReleaseTemp \- routines for efficient open temp files
+.SH SYNOPSIS
+.nf
+\fB#include "ns.h"\fR
+.sp
+int
+\fBNs_GetTemp\fR(\fIvoid\fR)
+.sp
+void
+\fBNs_ReleaseTemp\fR(\int fd\fR)
+.AS int fd
+.AP int fd in
+File descriptor for open temp file returned from a prior call to \fBNs_GetTemp\fR.
+.BE
+
+.SH DESCRIPTION
+.PP
+The \fBNs_GetTemp\fR and \fBNs_Release\fR routines provide a means to efficiently
+use open temporary files when necessary to handle data too large for in-memory
+structures or to facilitate passing content to forked processes.  The
+approach is to leave some files open when not in use, avoiding comparably expensive
+\fBcreat\fR and \fBclose\fR system calls in favor of quick \fBftruncate\fR's.
+The server uses this interface internally to support large-content uploads into
+temp files (see \fBNs_ConnContentFd\fR) and to support the open files needed
+to send content to and from CGI's.
+
+.TP
+int \fBNs_GetTemp(void)\fR
+To use a temporary file, call \fBNs_GetTemp\fR. The result will be a a file
+descriptor to an empty file opened in read+write mode located in a 
+server-configure temporary location.  If no more files can be opened, the result
+is -1.  The open file descriptor can then be used to write content, seek to any
+location, and read back bytes.  When no longer needed, the file descriptor
+can be released by passing it to \fBNs_ReleaseTemp\fR.
+.sp
+An open file returned by \fBNs_GetTemp\fR may also be used with a higher-level
+buffering API, e.g. \fBfdopen\fR to get an open \fIFILE *\fR object.  In the case
+it is inconvenient or not possible to later disassociate the open file descriptor,
+the API's close routine (e.g., \fBfclose\fR) can be called instead of
+\fBNs_ReleaseTemp\fR.  While the temp file cannot be efficient re-used in this case, 
+such usage will not lead to any underlying resource leaks or corruption.
+.sp
+Note that the actual underlying file cannot be accessed by name outside of the
+running server.  On Unix, the files are deleted just after open for the first
+time and on Windows the \fI_SH_DENYRW\fR flag inhibits sharing. This is done
+both to ensure cleanup at server shutdown or failure and also provides a security benefit, inhibiting other processes from being able to view the content 
+temporarily stored in the files.
+
+.TP
+void \fBNs_ReleaseTemp(int fd)\fR
+\fBNs_ReleaseTemp\fR returns an open file descriptor to a cache for re-use,
+first truncating any data which may be present.
+
+.SH "SEE ALSO"
+Ns_ConnContentFd(3)
+
+.SH KEYWORDS
+file

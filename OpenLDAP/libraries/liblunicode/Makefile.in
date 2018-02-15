@@ -1,0 +1,36 @@
+# $OpenLDAP: pkg/ldap/libraries/liblunicode/Makefile.in,v 1.6.2.2 2000/10/02 17:20:31 kurt Exp $
+## Copyright 1998-2000 The OpenLDAP Foundation, All Rights Reserved.
+## COPYING RESTRICTIONS APPLY, see COPYRIGHT file
+##
+## Makefile.in for LDAP -lldap
+##
+LIBRARY = liblunicode.a
+
+XXDIR = $(srcdir)/*/
+XXHEADERS = ucdata.h ure.h
+XXSRCS	= ucdata.c ucgendat.c ure.c urestubs.c
+SRCS	= 
+OBJS	= ucdata.o ure.o urestubs.o
+
+XLIB = -llunicode
+PROGRAMS = ucgendat
+
+LDAP_INCDIR= ../../include       
+LDAP_LIBDIR= ../../libraries
+
+ucgendat: $(LIBRARY) ucgendat.o
+	$(LTLINK) -o $@ ucgendat.o $(LIBS)
+
+.links :
+	@for i in $(XXSRCS) $(XXHEADERS); do \
+		$(RM) $$i ; \
+		$(LN_S) $(XXDIR)$$i . ; \
+	done
+	touch .links
+
+$(XXSRCS) : .links
+
+clean-local: FORCE
+	@$(RM) .links
+
+depend-common: .links

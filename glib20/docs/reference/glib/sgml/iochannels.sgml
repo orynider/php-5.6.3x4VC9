@@ -1,0 +1,1512 @@
+<refentry id="glib-IO-Channels">
+<refmeta>
+<refentrytitle>IO Channels</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>IO Channels</refname><refpurpose>portable support for using files, pipes and sockets.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GIOChannel">GIOChannel</link>;
+
+<link linkend="GIOChannel">GIOChannel</link>* <link linkend="g-io-channel-unix-new">g_io_channel_unix_new</link>           (int fd);
+<link linkend="gint">gint</link>        <link linkend="g-io-channel-unix-get-fd">g_io_channel_unix_get_fd</link>        (<link linkend="GIOChannel">GIOChannel</link> *channel);
+
+void        <link linkend="g-io-channel-init">g_io_channel_init</link>               (<link linkend="GIOChannel">GIOChannel</link> *channel);
+
+<link linkend="GIOChannel">GIOChannel</link>* <link linkend="g-io-channel-new-file">g_io_channel_new_file</link>           (const <link linkend="gchar">gchar</link> *filename,
+                                             const <link linkend="gchar">gchar</link> *mode,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-read-chars">g_io_channel_read_chars</link>         (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gsize">gsize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_read,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-read-unichar">g_io_channel_read_unichar</link>       (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gunichar">gunichar</link> *thechar,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-read-line">g_io_channel_read_line</link>          (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> **str_return,
+                                             <link linkend="gsize">gsize</link> *length,
+                                             <link linkend="gsize">gsize</link> *terminator_pos,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-read-line-string">g_io_channel_read_line_string</link>   (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GString">GString</link> *buffer,
+                                             <link linkend="gsize">gsize</link> *terminator_pos,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-read-to-end">g_io_channel_read_to_end</link>        (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> **str_return,
+                                             <link linkend="gsize">gsize</link> *length,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-write-chars">g_io_channel_write_chars</link>        (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gssize">gssize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_written,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-write-unichar">g_io_channel_write_unichar</link>      (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gunichar">gunichar</link> thechar,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-flush">g_io_channel_flush</link>              (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>      (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint64">gint64</link> offset,
+                                             <link linkend="GSeekType">GSeekType</link> type,
+                                             <link linkend="GError">GError</link> **error);
+enum        <link linkend="GSeekType">GSeekType</link>;
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-shutdown">g_io_channel_shutdown</link>           (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gboolean">gboolean</link> flush,
+                                             <link linkend="GError">GError</link> **err);
+
+enum        <link linkend="GIOStatus">GIOStatus</link>;
+enum        <link linkend="GIOChannelError">GIOChannelError</link>;
+#define     <link linkend="G-IO-CHANNEL-ERROR-CAPS">G_IO_CHANNEL_ERROR</link>
+<link linkend="GIOChannelError">GIOChannelError</link> <link linkend="g-io-channel-error-from-errno">g_io_channel_error_from_errno</link>
+                                            (<link linkend="gint">gint</link> en);
+
+void        <link linkend="g-io-channel-ref">g_io_channel_ref</link>                (<link linkend="GIOChannel">GIOChannel</link> *channel);
+void        <link linkend="g-io-channel-unref">g_io_channel_unref</link>              (<link linkend="GIOChannel">GIOChannel</link> *channel);
+
+<link linkend="GSource">GSource</link>*    <link linkend="g-io-create-watch">g_io_create_watch</link>               (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition);
+<link linkend="guint">guint</link>       <link linkend="g-io-add-watch">g_io_add_watch</link>                  (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition,
+                                             <link linkend="GIOFunc">GIOFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+<link linkend="guint">guint</link>       <link linkend="g-io-add-watch-full">g_io_add_watch_full</link>             (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint">gint</link> priority,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition,
+                                             <link linkend="GIOFunc">GIOFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data,
+                                             <link linkend="GDestroyNotify">GDestroyNotify</link> notify);
+enum        <link linkend="GIOCondition">GIOCondition</link>;
+<link linkend="gboolean">gboolean</link>    (<link linkend="GIOFunc">*GIOFunc</link>)                      (<link linkend="GIOChannel">GIOChannel</link> *source,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition,
+                                             <link linkend="gpointer">gpointer</link> data);
+
+struct      <link linkend="GIOFuncs">GIOFuncs</link>;
+
+<link linkend="gsize">gsize</link>       <link linkend="g-io-channel-get-buffer-size">g_io_channel_get_buffer_size</link>    (<link linkend="GIOChannel">GIOChannel</link> *channel);
+void        <link linkend="g-io-channel-set-buffer-size">g_io_channel_set_buffer_size</link>    (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gsize">gsize</link> size);
+<link linkend="GIOCondition">GIOCondition</link> <link linkend="g-io-channel-get-buffer-condition">g_io_channel_get_buffer_condition</link>
+                                            (<link linkend="GIOChannel">GIOChannel</link> *channel);
+<link linkend="GIOFlags">GIOFlags</link>    <link linkend="g-io-channel-get-flags">g_io_channel_get_flags</link>          (<link linkend="GIOChannel">GIOChannel</link> *channel);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-set-flags">g_io_channel_set_flags</link>          (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GIOFlags">GIOFlags</link> flags,
+                                             <link linkend="GError">GError</link> **error);
+enum        <link linkend="GIOFlags">GIOFlags</link>;
+G_CONST_RETURN <link linkend="gchar">gchar</link>* <link linkend="g-io-channel-get-line-term">g_io_channel_get_line_term</link>
+                                            (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint">gint</link> *length);
+void        <link linkend="g-io-channel-set-line-term">g_io_channel_set_line_term</link>      (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *line_term,
+                                             <link linkend="gint">gint</link> length);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-io-channel-get-buffered">g_io_channel_get_buffered</link>       (<link linkend="GIOChannel">GIOChannel</link> *channel);
+void        <link linkend="g-io-channel-set-buffered">g_io_channel_set_buffered</link>       (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gboolean">gboolean</link> buffered);
+G_CONST_RETURN <link linkend="gchar">gchar</link>* <link linkend="g-io-channel-get-encoding">g_io_channel_get_encoding</link>
+                                            (<link linkend="GIOChannel">GIOChannel</link> *channel);
+<link linkend="GIOStatus">GIOStatus</link>   <link linkend="g-io-channel-set-encoding">g_io_channel_set_encoding</link>       (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *encoding,
+                                             <link linkend="GError">GError</link> **error);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-io-channel-get-close-on-unref">g_io_channel_get_close_on_unref</link> (<link linkend="GIOChannel">GIOChannel</link> *channel);
+void        <link linkend="g-io-channel-set-close-on-unref">g_io_channel_set_close_on_unref</link> (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gboolean">gboolean</link> do_close);
+
+
+<link linkend="GIOError">GIOError</link>    <link linkend="g-io-channel-read">g_io_channel_read</link>               (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gsize">gsize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_read);
+enum        <link linkend="GIOError">GIOError</link>;
+<link linkend="GIOError">GIOError</link>    <link linkend="g-io-channel-write">g_io_channel_write</link>              (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gsize">gsize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_written);
+<link linkend="GIOError">GIOError</link>    <link linkend="g-io-channel-seek">g_io_channel_seek</link>               (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint64">gint64</link> offset,
+                                             <link linkend="GSeekType">GSeekType</link> type);
+void        <link linkend="g-io-channel-close">g_io_channel_close</link>              (<link linkend="GIOChannel">GIOChannel</link> *channel);
+
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+The <link linkend="GIOChannel">GIOChannel</link> data type aims to provide a portable method for using file
+descriptors, pipes, and sockets, and integrating them into the
+<link linkend="glib-The-Main-Event-Loop">main event loop</link>.
+Currently full support is available on UNIX platforms, support for
+Windows is only partially complete.
+</para>
+<para>
+To create a new <link linkend="GIOChannel">GIOChannel</link> on UNIX systems use <link linkend="g-io-channel-unix-new">g_io_channel_unix_new</link>().
+This works for plain file descriptors, pipes and sockets.
+Alternatively, a channel can be created for a file in a system independent
+manner using <link linkend="g-io-channel-new-file">g_io_channel_new_file</link>().
+</para>
+<para>
+Once a <link linkend="GIOChannel">GIOChannel</link> has been created, it can be used in a generic manner
+with the functions <link linkend="g-io-channel-read-chars">g_io_channel_read_chars</link>(), <link linkend="g-io-channel-write-chars">g_io_channel_write_chars</link>(),
+<link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>(), and <link linkend="g-io-channel-close">g_io_channel_close</link>().
+</para>
+<para>
+To add a <link linkend="GIOChannel">GIOChannel</link> to the 
+<link linkend="glib-The-Main-Event-Loop">main event loop</link>
+use <link linkend="g-io-add-watch">g_io_add_watch</link>() or <link linkend="g-io-add-watch-full">g_io_add_watch_full</link>(). Here you specify which events
+you are interested in on the <link linkend="GIOChannel">GIOChannel</link>, and provide a function to be
+called whenever these events occur.
+</para>
+<para>
+<link linkend="GIOChannel">GIOChannel</link> instances are created with an initial reference count of 1.
+<link linkend="g-io-channel-ref">g_io_channel_ref</link>() and <link linkend="g-io-channel-unref">g_io_channel_unref</link>() can be used to increment or
+decrement the reference count respectively. When the reference count falls
+to 0, the <link linkend="GIOChannel">GIOChannel</link> is freed. (Though it isn't closed automatically,
+unless it was created using <link linkend="g-io-channel-new-from-file">g_io_channel_new_from_file</link>().)
+Using <link linkend="g-io-add-watch">g_io_add_watch</link>() or <link linkend="g-io-add-watch-full">g_io_add_watch_full</link>() increments a channel's
+reference count.
+</para>
+<para>
+GTK+ contains the convenience function <link linkend="gtk-input-add-full">gtk_input_add_full</link>()
+which creates a <link linkend="GIOChannel">GIOChannel</link> from a file descriptor and adds it to the
+<link linkend="glib-The-Main-Event-Loop">main event loop</link>.
+The event source can later be removed with <link linkend="gtk-input-remove">gtk_input_remove</link>().
+Similar functions can also be found in GDK.
+</para>
+<para>
+The new functions <link linkend="g-io-channel-read-chars">g_io_channel_read_chars</link>(), <link linkend="g-io-channel-read-line">g_io_channel_read_line</link>(),
+<link linkend="g-io-channel-read-line-string">g_io_channel_read_line_string</link>(), <link linkend="g-io-channel-read-to-end">g_io_channel_read_to_end</link>(),
+<link linkend="g-io-channel-write-chars">g_io_channel_write_chars</link>(), <link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>(),
+and <link linkend="g-io-channel-flush">g_io_channel_flush</link>() should not be mixed with the
+deprecated functions <link linkend="g-io-channel-read">g_io_channel_read</link>(), <link linkend="g-io-channel-write">g_io_channel_write</link>(),
+and <link linkend="g-io-channel-seek">g_io_channel_seek</link>() on the same channel.
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GIOChannel">struct GIOChannel</title>
+<programlisting>struct GIOChannel
+{
+  /*&lt; private &gt;*/
+  guint ref_count;
+  GIOFuncs *funcs;
+
+  gchar *encoding;
+  GIConv read_cd;
+  GIConv write_cd;
+  gchar *line_term;		/* String which indicates the end of a line of text */
+  guint line_term_len;		/* So we can have null in the line term */
+
+  gsize buf_size;
+  GString *read_buf;		/* Raw data from the channel */
+  GString *encoded_read_buf;    /* Channel data converted to UTF-8 */
+  GString *write_buf;		/* Data ready to be written to the file */
+  gchar partial_write_buf[6];	/* UTF-8 partial characters, null terminated */
+
+  /* Group the flags together, immediately after partial_write_buf, to save memory */
+
+  guint use_buffer     : 1;	/* The encoding uses the buffers */
+  guint do_encode      : 1;	/* The encoding uses the GIConv coverters */
+  guint close_on_unref : 1;	/* Close the channel on final unref */
+  guint is_readable    : 1;	/* Cached GIOFlag */
+  guint is_writeable   : 1;	/* ditto */
+  guint is_seekable    : 1;	/* ditto */
+
+  gpointer reserved1;	
+  gpointer reserved2;	
+};
+</programlisting>
+<para>
+A data structure representing an IO Channel. The fields should be considered
+private and should only be accessed with the following functions.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-unix-new">g_io_channel_unix_new ()</title>
+<programlisting><link linkend="GIOChannel">GIOChannel</link>* g_io_channel_unix_new           (int fd);</programlisting>
+<para>
+Creates a new <link linkend="GIOChannel">GIOChannel</link> given a file descriptor.
+On UNIX systems this works for plain files, pipes, and sockets.
+</para>
+<para>
+The returned <link linkend="GIOChannel">GIOChannel</link> has a reference count of 1.
+</para><variablelist role="params">
+<varlistentry><term><parameter>fd</parameter>&nbsp;:</term>
+<listitem><para>a file descriptor.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a new <link linkend="GIOChannel">GIOChannel</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-unix-get-fd">g_io_channel_unix_get_fd ()</title>
+<programlisting><link linkend="gint">gint</link>        g_io_channel_unix_get_fd        (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Returns the file descriptor of the UNIX <link linkend="GIOChannel">GIOChannel</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GIOChannel">GIOChannel</link>, created with <link linkend="g-io-channel-unix-new">g_io_channel_unix_new</link>().
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the file descriptor of the <link linkend="GIOChannel">GIOChannel</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-init">g_io_channel_init ()</title>
+<programlisting>void        g_io_channel_init               (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Initializes a <link linkend="GIOChannel">GIOChannel</link> struct. This is called by each of the above functions
+when creating a <link linkend="GIOChannel">GIOChannel</link>, and so is not often needed by the application
+programmer (unless you are creating a new type of <link linkend="GIOChannel">GIOChannel</link>).
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GIOChannel">GIOChannel</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-new-file">g_io_channel_new_file ()</title>
+<programlisting><link linkend="GIOChannel">GIOChannel</link>* g_io_channel_new_file           (const <link linkend="gchar">gchar</link> *filename,
+                                             const <link linkend="gchar">gchar</link> *mode,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Open a file <parameter>filename</parameter> as a <link linkend="GIOChannel">GIOChannel</link> using mode <parameter>mode</parameter>. This
+channel will be closed when the last reference to it is dropped,
+so there is no need to call <link linkend="g-io-channel-close">g_io_channel_close</link>() (though doing
+so will not cause problems, as long as no attempt is made to
+access the channel after it is closed).</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>filename</parameter>&nbsp;:</term>
+<listitem><para> A string containing the name of a file.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>mode</parameter>&nbsp;:</term>
+<listitem><para> One of "r", "w", "a", "r+", "w+", "a+". These have
+       the same meaning as in <function><link linkend="fopen">fopen</link>()</function>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <literal>G_FILE_ERROR</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A <link linkend="GIOChannel">GIOChannel</link> on success, <literal>NULL</literal> on failure.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-read-chars">g_io_channel_read_chars ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_read_chars         (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gsize">gsize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_read,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Replacement for <link linkend="g-io-channel-read">g_io_channel_read</link>() with the new API.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>buf</parameter>&nbsp;:</term>
+<listitem><para> a buffer to read data into
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>count</parameter>&nbsp;:</term>
+<listitem><para> the size of the buffer. Note that the buffer may
+        not be complelely filled even if there is data
+        in the buffer if the remaining data is not a
+        complete character.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>bytes_read</parameter>&nbsp;:</term>
+<listitem><para> The number of bytes read. This may be zero even on
+             success if count &lt; 6 and the channel's encoding is non-<literal>NULL</literal>.
+             This indicates that the next UTF-8 character is too wide for
+             the buffer.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GConvertError">GConvertError</link>
+        or <link linkend="GIOChannelError">GIOChannelError</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-read-unichar">g_io_channel_read_unichar ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_read_unichar       (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gunichar">gunichar</link> *thechar,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+This function cannot be called on a channel with <literal>NULL</literal> encoding.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>thechar</parameter>&nbsp;:</term>
+<listitem><para> a location to return a character
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GConvertError">GConvertError</link>
+        or <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> a <link linkend="GIOStatus">GIOStatus</link>
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-read-line">g_io_channel_read_line ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_read_line          (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> **str_return,
+                                             <link linkend="gsize">gsize</link> *length,
+                                             <link linkend="gsize">gsize</link> *terminator_pos,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Reads a line, including the terminating character(s),
+from a <link linkend="GIOChannel">GIOChannel</link> into a newly-allocated string.
+<parameter>str_return</parameter> will contain allocated memory if the return
+is <literal>G_IO_STATUS_NORMAL</literal>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>str_return</parameter>&nbsp;:</term>
+<listitem><para> The line read from the <link linkend="GIOChannel">GIOChannel</link>, including the
+             line terminator. This data should be freed with <link linkend="g-free">g_free</link>()
+             when no longer needed. This is a nul-terminated string. 
+             If a <parameter>length</parameter> of zero is returned, this will be <literal>NULL</literal> instead.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>length</parameter>&nbsp;:</term>
+<listitem><para> location to store length of the read data, or <literal>NULL</literal>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>terminator_pos</parameter>&nbsp;:</term>
+<listitem><para> location to store position of line terminator, or <literal>NULL</literal>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GConvertError">GConvertError</link>
+        or <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-read-line-string">g_io_channel_read_line_string ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_read_line_string   (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GString">GString</link> *buffer,
+                                             <link linkend="gsize">gsize</link> *terminator_pos,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Reads a line from a <link linkend="GIOChannel">GIOChannel</link>, using a <link linkend="GString">GString</link> as a buffer.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>buffer</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GString">GString</link> into which the line will be written.
+         If <parameter>buffer</parameter> already contains data, the old data will
+         be overwritten.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>terminator_pos</parameter>&nbsp;:</term>
+<listitem><para> location to store position of line terminator, or <literal>NULL</literal>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> a location to store an error of type <link linkend="GConvertError">GConvertError</link>
+        or <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-read-to-end">g_io_channel_read_to_end ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_read_to_end        (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> **str_return,
+                                             <link linkend="gsize">gsize</link> *length,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Reads all the remaining data from the file.
+</para>
+<para>
+Return value: <literal>G_IO_STATUS_NORMAL</literal> on success. This function never</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>str_return</parameter>&nbsp;:</term>
+<listitem><para> Location to store a pointer to a string holding
+             the remaining data in the <link linkend="GIOChannel">GIOChannel</link>. This data should
+             be freed with <link linkend="g-free">g_free</link>() when no longer needed. This
+             data is terminated by an extra nul character, but there 
+             may be other nuls in the intervening data.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>length</parameter>&nbsp;:</term>
+<listitem><para> Location to store length of the data
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GConvertError">GConvertError</link>
+        or <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>G_IO_STATUS_EOF</literal>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-write-chars">g_io_channel_write_chars ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_write_chars        (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gssize">gssize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_written,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Replacement for <link linkend="g-io-channel-write">g_io_channel_write</link>() with the new API.
+</para>
+<para>
+On seekable channels with encodings other than <literal>NULL</literal> or UTF-8, generic
+mixing of reading and writing is not allowed. A call to <link linkend="g-io-channel-write-chars">g_io_channel_write_chars</link>()
+may only be made on a channel from which data has been read in the
+cases described in the documentation for <link linkend="g-io-channel-set-encoding">g_io_channel_set_encoding</link>().</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>buf</parameter>&nbsp;:</term>
+<listitem><para> a buffer to write data from
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>count</parameter>&nbsp;:</term>
+<listitem><para> the size of the buffer. If -1, the buffer
+        is taken to be a nul-terminated string.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>bytes_written</parameter>&nbsp;:</term>
+<listitem><para> The number of bytes written. This can be nonzero
+                even if the return value is not <literal>G_IO_STATUS_NORMAL</literal>.
+                If the return value is <literal>G_IO_STATUS_NORMAL</literal> and the
+                channel is blocking, this will always be equal
+                to <parameter>count</parameter> if <parameter>count</parameter> &gt;= 0.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GConvertError">GConvertError</link>
+        or <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-write-unichar">g_io_channel_write_unichar ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_write_unichar      (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gunichar">gunichar</link> thechar,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+This function cannot be called on a channel with <literal>NULL</literal> encoding.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>thechar</parameter>&nbsp;:</term>
+<listitem><para> a character
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GConvertError">GConvertError</link>
+        or <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> a <link linkend="GIOStatus">GIOStatus</link>
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-flush">g_io_channel_flush ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_flush              (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Flushes the write buffer for the GIOChannel.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> location to store an error of type <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation: One of
+  <link linkend="G-IO-CHANNEL-NORMAL-CAPS">G_IO_CHANNEL_NORMAL</link>, <link linkend="G-IO-CHANNEL-AGAIN-CAPS">G_IO_CHANNEL_AGAIN</link>, or
+  <link linkend="G-IO-CHANNEL-ERROR-CAPS">G_IO_CHANNEL_ERROR</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-seek-position">g_io_channel_seek_position ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_seek_position      (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint64">gint64</link> offset,
+                                             <link linkend="GSeekType">GSeekType</link> type,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Replacement for <link linkend="g-io-channel-seek">g_io_channel_seek</link>() with the new API.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>offset</parameter>&nbsp;:</term>
+<listitem><para> The offset in bytes from the position specified by <parameter>type</parameter>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>type</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GSeekType">GSeekType</link>. The type <literal>G_SEEK_CUR</literal> is only allowed in those
+                     cases where a call to <link linkend="g-io-channel-set-encoding">g_io_channel_set_encoding</link>()
+                     is allowed. See the documentation for
+                     <link linkend="g-io-channel-set-encoding">g_io_channel_set_encoding</link>() for details.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GSeekType">enum GSeekType</title>
+<programlisting>typedef enum
+{
+  G_SEEK_CUR,
+  G_SEEK_SET,
+  G_SEEK_END
+} GSeekType;
+</programlisting>
+<para>
+An enumeration specifying the base position for a <link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>()
+operation.
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_SEEK_CUR</literal></term>
+<listitem><para>the current position in the file.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_SEEK_SET</literal></term>
+<listitem><para>the start of the file.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_SEEK_END</literal></term>
+<listitem><para>the end of the file.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-shutdown">g_io_channel_shutdown ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_shutdown           (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gboolean">gboolean</link> flush,
+                                             <link linkend="GError">GError</link> **err);</programlisting>
+<para>
+Close an IO channel. Any pending data to be written will be
+flushed if <parameter>flush</parameter> is <literal>TRUE</literal>. The channel will not be freed until the
+last reference is dropped using <link linkend="g-io-channel-unref">g_io_channel_unref</link>().</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>flush</parameter>&nbsp;:</term>
+<listitem><para> if <literal>TRUE</literal>, flush pending
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>err</parameter>&nbsp;:</term>
+<listitem><para> location to store a <link linkend="GIOChannelError">GIOChannelError</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GIOStatus">enum GIOStatus</title>
+<programlisting>typedef enum
+{
+  G_IO_STATUS_ERROR,
+  G_IO_STATUS_NORMAL,
+  G_IO_STATUS_EOF,
+  G_IO_STATUS_AGAIN
+} GIOStatus;
+</programlisting>
+<para>
+Stati returned by most of the <link linkend="GIOFuncs">GIOFuncs</link> functions. 
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_IO_STATUS_ERROR</literal></term>
+<listitem><para>An error occurred.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_STATUS_NORMAL</literal></term>
+<listitem><para>Success.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_STATUS_EOF</literal></term>
+<listitem><para>End of file.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_STATUS_AGAIN</literal></term>
+<listitem><para>Resource temporarily unavailable.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GIOChannelError">enum GIOChannelError</title>
+<programlisting>typedef enum
+{
+  /* Derived from errno */
+  G_IO_CHANNEL_ERROR_FBIG,
+  G_IO_CHANNEL_ERROR_INVAL,
+  G_IO_CHANNEL_ERROR_IO,
+  G_IO_CHANNEL_ERROR_ISDIR,
+  G_IO_CHANNEL_ERROR_NOSPC,
+  G_IO_CHANNEL_ERROR_NXIO,
+  G_IO_CHANNEL_ERROR_OVERFLOW,
+  G_IO_CHANNEL_ERROR_PIPE,
+  /* Other */
+  G_IO_CHANNEL_ERROR_FAILED
+} GIOChannelError;
+</programlisting>
+<para>
+Error codes returned by <link linkend="GIOChannel">GIOChannel</link> operations.
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_FBIG</literal></term>
+<listitem><para>File too large.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_INVAL</literal></term>
+<listitem><para>Invalid argument.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_IO</literal></term>
+<listitem><para>IO error.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_ISDIR</literal></term>
+<listitem><para>File is a directory.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_NOSPC</literal></term>
+<listitem><para>No space left on device.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_NXIO</literal></term>
+<listitem><para>No such device or address.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_OVERFLOW</literal></term>
+<listitem><para>Value too large for defined datatype.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_PIPE</literal></term>
+<listitem><para>Broken pipe.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_CHANNEL_ERROR_FAILED</literal></term>
+<listitem><para>Some other error.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-IO-CHANNEL-ERROR-CAPS">G_IO_CHANNEL_ERROR</title>
+<programlisting>#define G_IO_CHANNEL_ERROR g_io_channel_error_quark()
+</programlisting>
+<para>
+Error domain for <link linkend="GIOChannel">GIOChannel</link> operations. Errors in this domain will
+be from the <link linkend="GIOChannelError">GIOChannelError</link> enumeration. See <link linkend="GError">GError</link> for information on
+error domains.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-error-from-errno">g_io_channel_error_from_errno ()</title>
+<programlisting><link linkend="GIOChannelError">GIOChannelError</link> g_io_channel_error_from_errno
+                                            (<link linkend="gint">gint</link> en);</programlisting>
+<para>
+Converts an <literal>errno</literal> error number to a <link linkend="GIOChannelError">GIOChannelError</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>en</parameter>&nbsp;:</term>
+<listitem><para> an <literal>errno</literal> error number, e.g. <literal>EINVAL</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> a <link linkend="GIOChannelError">GIOChannelError</link> error number, e.g. <literal>G_IO_CHANNEL_ERROR_INVAL</literal>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-ref">g_io_channel_ref ()</title>
+<programlisting>void        g_io_channel_ref                (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Increments the reference count of a <link linkend="GIOChannel">GIOChannel</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GIOChannel">GIOChannel</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-unref">g_io_channel_unref ()</title>
+<programlisting>void        g_io_channel_unref              (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Decrements the reference count of a <link linkend="GIOChannel">GIOChannel</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GIOChannel">GIOChannel</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-create-watch">g_io_create_watch ()</title>
+<programlisting><link linkend="GSource">GSource</link>*    g_io_create_watch               (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition);</programlisting>
+<para>
+Creates a <link linkend="GSource">GSource</link> that's dispatched when <parameter>condition</parameter> is met for the given
+<parameter>channel</parameter>. For example, if condition is <link linkend="G-IO-IN-CAPS">G_IO_IN</link>, the source will be dispatched
+when there's data available for reading.  <link linkend="g-io-add-watch">g_io_add_watch</link>() is a simpler
+interface to this same functionality, for the case where you want to add the
+source to the default main loop at the default priority.
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GIOChannel">GIOChannel</link> to watch
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>condition</parameter>&nbsp;:</term>
+<listitem><para>conditions to watch for
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a new <link linkend="GSource">GSource</link>
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-add-watch">g_io_add_watch ()</title>
+<programlisting><link linkend="guint">guint</link>       g_io_add_watch                  (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition,
+                                             <link linkend="GIOFunc">GIOFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Adds the <link linkend="GIOChannel">GIOChannel</link> into the
+<link linkend="glib-The-Main-Event-Loop">main event loop</link>
+with the default priority.
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GIOChannel">GIOChannel</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>condition</parameter>&nbsp;:</term>
+<listitem><para>the condition to watch for.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to call when the condition is satisfied.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para>user data to pass to <parameter>func</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the event source id.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-add-watch-full">g_io_add_watch_full ()</title>
+<programlisting><link linkend="guint">guint</link>       g_io_add_watch_full             (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint">gint</link> priority,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition,
+                                             <link linkend="GIOFunc">GIOFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data,
+                                             <link linkend="GDestroyNotify">GDestroyNotify</link> notify);</programlisting>
+<para>
+Adds the <link linkend="GIOChannel">GIOChannel</link> into the
+<link linkend="glib-The-Main-Event-Loop">main event loop</link>
+with the given priority.
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GIOChannel">GIOChannel</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>priority</parameter>&nbsp;:</term>
+<listitem><para>the priority of the <link linkend="GIOChannel">GIOChannel</link> source.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>condition</parameter>&nbsp;:</term>
+<listitem><para>the condition to watch for.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to call when the condition is satisfied.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para>user data to pass to <parameter>func</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>notify</parameter>&nbsp;:</term>
+<listitem><para>the function to call when the source is removed.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the event source id.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GIOCondition">enum GIOCondition</title>
+<programlisting>typedef enum
+{
+  G_IO_IN	GLIB_SYSDEF_POLLIN,
+  G_IO_OUT	GLIB_SYSDEF_POLLOUT,
+  G_IO_PRI	GLIB_SYSDEF_POLLPRI,
+  G_IO_ERR	GLIB_SYSDEF_POLLERR,
+  G_IO_HUP	GLIB_SYSDEF_POLLHUP,
+  G_IO_NVAL	GLIB_SYSDEF_POLLNVAL
+} GIOCondition;
+</programlisting>
+<para>
+A bitwise combination representing a condition to watch for on an event
+source.
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_IO_IN</literal></term>
+<listitem><para>There is data to read.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_OUT</literal></term>
+<listitem><para>Data can be written (without blocking).
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_PRI</literal></term>
+<listitem><para>There is urgent data to read.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_ERR</literal></term>
+<listitem><para>Error condition.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_HUP</literal></term>
+<listitem><para>Hung up (the connection has been broken, usually for pipes 
+           and sockets).
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_NVAL</literal></term>
+<listitem><para>Invalid request. The file descriptor is not open.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GIOFunc">GIOFunc ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    (*GIOFunc)                      (<link linkend="GIOChannel">GIOChannel</link> *source,
+                                             <link linkend="GIOCondition">GIOCondition</link> condition,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Specifies the type of function passed to <link linkend="g-io-add-watch">g_io_add_watch</link>() or
+<link linkend="g-io-add-watch-full">g_io_add_watch_full</link>(), which is called when the requested condition on a
+<link linkend="GIOChannel">GIOChannel</link> is satisfied.
+</para><variablelist role="params">
+<varlistentry><term><parameter>source</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GIOChannel">GIOChannel</link> event source.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>condition</parameter>&nbsp;:</term>
+<listitem><para>the condition which has been satisfied.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>user data set in <link linkend="g-io-add-watch">g_io_add_watch</link>() or <link linkend="g-io-add-watch-full">g_io_add_watch_full</link>().
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the function should return <literal>FALSE</literal> if the event source should be
+removed.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GIOFuncs">struct GIOFuncs</title>
+<programlisting>struct GIOFuncs
+{
+  GIOStatus (*io_read)           (GIOChannel   *channel, 
+			          gchar        *buf, 
+				  gsize         count,
+				  gsize        *bytes_read,
+				  GError      **err);
+  GIOStatus (*io_write)          (GIOChannel   *channel, 
+				  const gchar  *buf, 
+				  gsize         count,
+				  gsize        *bytes_written,
+				  GError      **err);
+  GIOStatus (*io_seek)           (GIOChannel   *channel, 
+				  gint64        offset, 
+				  GSeekType     type,
+				  GError      **err);
+  GIOStatus  (*io_close)         (GIOChannel   *channel,
+				  GError      **err);
+  GSource*   (*io_create_watch)  (GIOChannel   *channel,
+				  GIOCondition  condition);
+  void       (*io_free)          (GIOChannel   *channel);
+  GIOStatus  (*io_set_flags)     (GIOChannel   *channel,
+                                  GIOFlags      flags,
+				  GError      **err);
+  GIOFlags   (*io_get_flags)     (GIOChannel   *channel);
+};
+</programlisting>
+<para>
+A table of functions used to handle different types of <link linkend="GIOChannel">GIOChannel</link> in a
+generic way.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-get-buffer-size">g_io_channel_get_buffer_size ()</title>
+<programlisting><link linkend="gsize">gsize</link>       g_io_channel_get_buffer_size    (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Gets the buffer size.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the size of the buffer.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-set-buffer-size">g_io_channel_set_buffer_size ()</title>
+<programlisting>void        g_io_channel_set_buffer_size    (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gsize">gsize</link> size);</programlisting>
+<para>
+Sets the buffer size.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>size</parameter>&nbsp;:</term>
+<listitem><para> the size of the buffer. 0 == pick a good size
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-get-buffer-condition">g_io_channel_get_buffer_condition ()</title>
+<programlisting><link linkend="GIOCondition">GIOCondition</link> g_io_channel_get_buffer_condition
+                                            (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+This function returns a <link linkend="GIOCondition">GIOCondition</link> depending on whether there
+is data to be read/space to write data in the
+internal buffers in the <link linkend="GIOChannel">GIOChannel</link>. Only the flags <literal>G_IO_IN</literal> and
+<literal>G_IO_OUT</literal> may be set.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> A <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A <link linkend="GIOCondition">GIOCondition</link>
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-get-flags">g_io_channel_get_flags ()</title>
+<programlisting><link linkend="GIOFlags">GIOFlags</link>    g_io_channel_get_flags          (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Gets the current flags for a <link linkend="GIOChannel">GIOChannel</link>, including read-only
+flags such as <literal>G_IO_FLAG_IS_READABLE</literal>.
+</para>
+<para>
+The values of the flags <literal>G_IO_FLAG_IS_READABLE</literal> and <literal>G_IO_FLAG_IS_WRITEABLE</literal>
+are cached for internal use by the channel when it is created.
+If they should change at some later point (e.g. partial shutdown
+of a socket with the UNIX <function><link linkend="shutdown">shutdown</link>()</function> function), the user
+should immediately call <link linkend="g-io-channel-get-flags">g_io_channel_get_flags</link>() to update
+the internal values of these flags.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the flags which are set on the channel
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-set-flags">g_io_channel_set_flags ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_set_flags          (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="GIOFlags">GIOFlags</link> flags,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Sets the (writeable) flags in <parameter>channel</parameter> to (<parameter>flags</parameter> &amp; <literal>G_IO_CHANNEL_SET_MASK</literal>).</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&nbsp;:</term>
+<listitem><para> the flags to set on the IO channel.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> A location to return an error of type <link linkend="GIOChannelError">GIOChannelError</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the status of the operation. 
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GIOFlags">enum GIOFlags</title>
+<programlisting>typedef enum
+{
+  G_IO_FLAG_APPEND = 1 &lt;&lt; 0,
+  G_IO_FLAG_NONBLOCK = 1 &lt;&lt; 1,
+  G_IO_FLAG_IS_READABLE = 1 &lt;&lt; 2,	/* Read only flag */
+  G_IO_FLAG_IS_WRITEABLE = 1 &lt;&lt; 3,	/* Read only flag */
+  G_IO_FLAG_IS_SEEKABLE = 1 &lt;&lt; 4,	/* Read only flag */
+  G_IO_FLAG_MASK = (1 &lt;&lt; 5) - 1,
+  G_IO_FLAG_GET_MASK = G_IO_FLAG_MASK,
+  G_IO_FLAG_SET_MASK = G_IO_FLAG_APPEND | G_IO_FLAG_NONBLOCK
+} GIOFlags;
+</programlisting>
+<para>
+Specifies properties of a <link linkend="GIOChannel">GIOChannel</link>. Some of the flags can only
+be read with <link linkend="g-io-channel-get-flags">g_io_channel_get_flags</link>(), but not changed with
+<link linkend="g-io-channel-set-flags">g_io_channel_set_flags</link>(). 
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_IO_FLAG_APPEND</literal></term>
+<listitem><para>turns on append mode, corresponds to <literal>O_APPEND</literal> (see the 
+   documentation of the UNIX <function><link linkend="open">open</link>()</function> syscall).
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_FLAG_NONBLOCK</literal></term>
+<listitem><para>turns on nonblocking mode, corresponds to 
+   <literal>O_NONBLOCK</literal>/<literal>O_NDELAY</literal> (see the documentation of the UNIX 
+   <function><link linkend="open">open</link>()</function> syscall).
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_FLAG_IS_READABLE</literal></term>
+<listitem><para>indicates that the io channel is readable. This flag 
+   can not be changed.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_FLAG_IS_WRITEABLE</literal></term>
+<listitem><para>indicates that the io channel is writable. This flag 
+   can not be changed.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_FLAG_IS_SEEKABLE</literal></term>
+<listitem><para>indicates that the io channel is seekable, i.e. that 
+   <link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>() can be used on it. This flag can not be changed.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_FLAG_MASK</literal></term>
+<listitem><para>
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_FLAG_GET_MASK</literal></term>
+<listitem><para>
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_IO_FLAG_SET_MASK</literal></term>
+<listitem><para>
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-get-line-term">g_io_channel_get_line_term ()</title>
+<programlisting>G_CONST_RETURN <link linkend="gchar">gchar</link>* g_io_channel_get_line_term
+                                            (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint">gint</link> *length);</programlisting>
+<para>
+This returns the string that <link linkend="GIOChannel">GIOChannel</link> uses to determine
+where in the file a line break occurs. A value of <literal>NULL</literal>
+indicates auto detection.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>length</parameter>&nbsp;:</term>
+<listitem><para> a location to return the length of the line terminator
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> The line termination string. This value
+  is owned by GLib and must not be freed.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-set-line-term">g_io_channel_set_line_term ()</title>
+<programlisting>void        g_io_channel_set_line_term      (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *line_term,
+                                             <link linkend="gint">gint</link> length);</programlisting>
+<para>
+This sets the string that <link linkend="GIOChannel">GIOChannel</link> uses to determine
+where in the file a line break occurs.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>line_term</parameter>&nbsp;:</term>
+<listitem><para> The line termination string. Use <literal>NULL</literal> for auto detect.
+            Auto detection breaks on "\n", "\r\n", "\r", "\0", and
+            the Unicode paragraph separator. Auto detection should
+            not be used for anything other than file-based channels.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>length</parameter>&nbsp;:</term>
+<listitem><para> The length of the termination string. If -1 is passed, the
+         string is assumed to be nul-terminated. This option allows
+         termination strings with embeded nuls.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-get-buffered">g_io_channel_get_buffered ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_io_channel_get_buffered       (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Returns whether <parameter>channel</parameter> is buffered.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>TRUE</literal> if the <parameter>channel</parameter> is buffered. 
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-set-buffered">g_io_channel_set_buffered ()</title>
+<programlisting>void        g_io_channel_set_buffered       (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gboolean">gboolean</link> buffered);</programlisting>
+<para>
+The buffering state can only be set if the channel's encoding
+is <literal>NULL</literal>. For any other encoding, the channel must be buffered.
+</para>
+<para>
+A buffered channel can only be set unbuffered if the channel's
+internal buffers have been flushed. Newly created channels or
+channels which have returned <literal>G_IO_STATUS_EOF</literal>
+not require such a flush. For write-only channels, a call to
+<link linkend="g-io-channel-flush">g_io_channel_flush</link>() is sufficient. For all other channels,
+the buffers may be flushed by a call to <link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>().
+This includes the possibility of seeking with seek type <literal>G_SEEK_CUR</literal>
+and an offset of zero. Note that this means that socket-based
+channels cannot be set unbuffered once they have had data
+read from them.
+</para>
+<para>
+On unbuffered channels, it is safe to mix read and write
+calls from the new and old APIs, if this is necessary for
+maintaining old code.
+</para>
+<para>
+The default state of the channel is buffered.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>buffered</parameter>&nbsp;:</term>
+<listitem><para> whether to set the channel buffered or unbuffered
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-get-encoding">g_io_channel_get_encoding ()</title>
+<programlisting>G_CONST_RETURN <link linkend="gchar">gchar</link>* g_io_channel_get_encoding
+                                            (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Gets the encoding for the input/output of the channel. The internal
+encoding is always UTF-8. The encoding <literal>NULL</literal> makes the
+channel safe for binary data.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A string containing the encoding, this string is
+  owned by GLib and must not be freed.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-set-encoding">g_io_channel_set_encoding ()</title>
+<programlisting><link linkend="GIOStatus">GIOStatus</link>   g_io_channel_set_encoding       (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *encoding,
+                                             <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Sets the encoding for the input/output of the channel. The internal
+encoding is always UTF-8. The default encoding for the
+external file is UTF-8.
+</para>
+<para>
+The encoding <literal>NULL</literal> is safe to use with binary data.
+</para>
+<para>
+The encoding can only be set if one of the following conditions
+is true:
+</para>
+<para>
+1. The channel was just created, and has not been written to
+   or read from yet.
+</para>
+<para>
+2. The channel is write-only.
+</para>
+<para>
+3. The channel is a file, and the file pointer was just
+   repositioned by a call to <link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>().
+   (This flushes all the internal buffers.)
+</para>
+<para>
+4. The current encoding is <literal>NULL</literal> or UTF-8.
+</para>
+<para>
+5. One of the (new API) read functions has just returned <literal>G_IO_STATUS_EOF</literal>
+   (or, in the case of <link linkend="g-io-channel-read-to-end">g_io_channel_read_to_end</link>(), <literal>G_IO_STATUS_NORMAL</literal>).
+</para>
+<para>
+6. One of the functions <link linkend="g-io-channel-read-chars">g_io_channel_read_chars</link>() or <link linkend="g-io-channel-read-unichar">g_io_channel_read_unichar</link>()
+   has returned <literal>G_IO_STATUS_AGAIN</literal> or <literal>G_IO_STATUS_ERROR</literal>. This may be
+   useful in the case of <literal>G_CONVERT_ERROR_ILLEGAL_SEQUENCE</literal>.
+   Returning one of these statuses from <link linkend="g-io-channel-read-line">g_io_channel_read_line</link>(),
+   <link linkend="g-io-channel-read-line-string">g_io_channel_read_line_string</link>(), or <link linkend="g-io-channel-read-to-end">g_io_channel_read_to_end</link>()
+   does <emphasis>not</emphasis> guarantee that the encoding can be changed.
+</para>
+<para>
+Channels which do not meet one of the above conditions cannot call
+<link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>() with an offset of <literal>G_SEEK_CUR</literal>,
+and, if they are "seekable", cannot
+call <link linkend="g-io-channel-write-chars">g_io_channel_write_chars</link>() after calling one
+of the API "read" functions.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>encoding</parameter>&nbsp;:</term>
+<listitem><para> the encoding type
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&nbsp;:</term>
+<listitem><para> location to store an error of type <link linkend="GConvertError">GConvertError</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>G_IO_STATUS_NORMAL</literal> if the encoding was successfully set.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-get-close-on-unref">g_io_channel_get_close_on_unref ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_io_channel_get_close_on_unref (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<para>
+Returns whether the file/socket/whatever associated with <parameter>channel</parameter>
+will be closed when <parameter>channel</parameter> receives its final unref and is
+destroyed. The default value of this is <literal>TRUE</literal> for channels created
+by <link linkend="g-io-channel-new-file">g_io_channel_new_file</link>(), and <literal>FALSE</literal> for all other channels.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> Whether the channel will be closed on the final unref of
+              the GIOChannel data structure.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-set-close-on-unref">g_io_channel_set_close_on_unref ()</title>
+<programlisting>void        g_io_channel_set_close_on_unref (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gboolean">gboolean</link> do_close);</programlisting>
+<para>
+Setting this flag to <literal>TRUE</literal> for a channel you have already closed
+can cause problems.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>do_close</parameter>&nbsp;:</term>
+<listitem><para> Whether to close the channel on the final unref of
+           the GIOChannel data structure. The default value of
+           this is <literal>TRUE</literal> for channels created by <link linkend="g-io-channel-new-file">g_io_channel_new_file</link>(),
+           and <literal>FALSE</literal> for all other channels.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-read">g_io_channel_read ()</title>
+<programlisting><link linkend="GIOError">GIOError</link>    g_io_channel_read               (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gsize">gsize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_read);</programlisting>
+<warning>
+<para>
+<literal>g_io_channel_read</literal> is deprecated and should not be used in newly-written code.
+</para>
+</warning>
+<para>
+Reads data from a <link linkend="GIOChannel">GIOChannel</link>. This function is deprecated. New code should
+use <link linkend="g-io-channel-read-chars">g_io_channel_read_chars</link>() instead.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>. 
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>buf</parameter>&nbsp;:</term>
+<listitem><para> a buffer to read the data into (which should be at least count bytes long).
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>count</parameter>&nbsp;:</term>
+<listitem><para> the number of bytes to read from the <link linkend="GIOChannel">GIOChannel</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>bytes_read</parameter>&nbsp;:</term>
+<listitem><para> returns the number of bytes actually read. 
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>G_IO_ERROR_NONE</literal> if the operation was successful. 
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GIOError">enum GIOError</title>
+<programlisting>typedef enum
+{
+  G_IO_ERROR_NONE,
+  G_IO_ERROR_AGAIN,
+  G_IO_ERROR_INVAL,
+  G_IO_ERROR_UNKNOWN
+} GIOError;
+</programlisting>
+<para>
+<link linkend="GIOError">GIOError</link> is only used by the deprecated functions <link linkend="g-io-channel-read">g_io_channel_read</link>(),
+<link linkend="g-io-channel-write">g_io_channel_write</link>(), and <link linkend="g-io-channel-seek">g_io_channel_seek</link>().
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-write">g_io_channel_write ()</title>
+<programlisting><link linkend="GIOError">GIOError</link>    g_io_channel_write              (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             const <link linkend="gchar">gchar</link> *buf,
+                                             <link linkend="gsize">gsize</link> count,
+                                             <link linkend="gsize">gsize</link> *bytes_written);</programlisting>
+<warning>
+<para>
+<literal>g_io_channel_write</literal> is deprecated and should not be used in newly-written code.
+</para>
+</warning>
+<para>
+Writes data to a <link linkend="GIOChannel">GIOChannel</link>. This function is deprecated. New code should
+use <link linkend="g-io-channel-write-chars">g_io_channel_write_chars</link>() instead.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para>  a <link linkend="GIOChannel">GIOChannel</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>buf</parameter>&nbsp;:</term>
+<listitem><para> the buffer containing the data to write. 
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>count</parameter>&nbsp;:</term>
+<listitem><para> the number of bytes to write.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>bytes_written</parameter>&nbsp;:</term>
+<listitem><para>  the number of bytes actually written.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>  <literal>G_IO_ERROR_NONE</literal> if the operation was successful.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-seek">g_io_channel_seek ()</title>
+<programlisting><link linkend="GIOError">GIOError</link>    g_io_channel_seek               (<link linkend="GIOChannel">GIOChannel</link> *channel,
+                                             <link linkend="gint64">gint64</link> offset,
+                                             <link linkend="GSeekType">GSeekType</link> type);</programlisting>
+<warning>
+<para>
+<literal>g_io_channel_seek</literal> is deprecated and should not be used in newly-written code.
+</para>
+</warning>
+<para>
+Sets the current position in the <link linkend="GIOChannel">GIOChannel</link>, similar to the standard library
+function <function><link linkend="fseek">fseek</link>()</function>. This function is deprecated. New 
+code should use <link linkend="g-io-channel-seek-position">g_io_channel_seek_position</link>() instead.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GIOChannel">GIOChannel</link>. 
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>offset</parameter>&nbsp;:</term>
+<listitem><para> an offset, in bytes, which is added to the position specified by <parameter>type</parameter>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>type</parameter>&nbsp;:</term>
+<listitem><para> the position in the file, which can be <literal>G_SEEK_CUR</literal> (the current
+       position), <literal>G_SEEK_SET</literal> (the start of the file), or <literal>G_SEEK_END</literal> (the end of the
+       file).
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>G_IO_ERROR_NONE</literal> if the operation was successful.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-io-channel-close">g_io_channel_close ()</title>
+<programlisting>void        g_io_channel_close              (<link linkend="GIOChannel">GIOChannel</link> *channel);</programlisting>
+<warning>
+<para>
+<literal>g_io_channel_close</literal> is deprecated and should not be used in newly-written code.
+</para>
+</warning>
+<para>
+Close an IO channel. Any pending data to be written will be
+flushed, ignoring errors. The channel will not be freed until the
+last reference is dropped using <link linkend="g-io-channel-unref">g_io_channel_unref</link>(). This
+function is deprecated: you should use <link linkend="g-io-channel-shutdown">g_io_channel_shutdown</link>()
+instead.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>channel</parameter>&nbsp;:</term>
+<listitem><para> A <link linkend="GIOChannel">GIOChannel</link>
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+<refsect1>
+<title>See Also</title>
+<para>
+<variablelist>
+
+<varlistentry>
+<term><link linkend="gtk-input-add-full">gtk_input_add_full</link>(), <link linkend="gtk-input-remove">gtk_input_remove</link>(), <link linkend="gdk-input-add">gdk_input_add</link>(),
+<link linkend="gdk-input-add-full">gdk_input_add_full</link>(), <link linkend="gdk-input-remove">gdk_input_remove</link>()</term>
+<listitem><para>
+Convenience functions for creating <link linkend="GIOChannel">GIOChannel</link> instances and adding them to the
+<link linkend="glib-The-Main-Event-Loop">main event loop</link>.
+</para></listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</refsect1>
+
+</refentry>

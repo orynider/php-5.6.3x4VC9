@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iconv", "iconv.vcproj", "{58C9BBBA-FF08-4FA0-AAFC-8A6C3E512988}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_TS|Win32 = Debug_TS|Win32
+		Release_TS|Win32 = Release_TS|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58C9BBBA-FF08-4FA0-AAFC-8A6C3E512988}.Debug_TS|Win32.ActiveCfg = Debug_TS|Win32
+		{58C9BBBA-FF08-4FA0-AAFC-8A6C3E512988}.Debug_TS|Win32.Build.0 = Debug_TS|Win32
+		{58C9BBBA-FF08-4FA0-AAFC-8A6C3E512988}.Release_TS|Win32.ActiveCfg = Release_TS|Win32
+		{58C9BBBA-FF08-4FA0-AAFC-8A6C3E512988}.Release_TS|Win32.Build.0 = Release_TS|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

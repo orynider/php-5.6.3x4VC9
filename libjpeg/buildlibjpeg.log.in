@@ -1,0 +1,786 @@
+Mi, mar. 30 2016 09:38:56         jcapimin.c
+Mi, mar. 30 2016 09:38:56         jinclude.h
+Mi, mar. 30 2016 09:38:56         jconfig.h
+Mi, mar. 30 2016 09:38:56         jpeglib.h
+Mi, mar. 30 2016 09:38:56         jmorecfg.h
+Mi, mar. 30 2016 09:38:56         jpegint.h
+Mi, mar. 30 2016 09:38:56         jerror.h
+D, feb. 04 2018 19:58:17       jcapimin.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcapimin.c
+jcapimin.c
+Mi, mar. 30 2016 09:38:56         jcapistd.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:17       jcapistd.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcapistd.c
+jcapistd.c
+Mi, mar. 30 2016 09:38:56         jcarith.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:18       jcarith.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcarith.c
+jcarith.c
+Mi, mar. 30 2016 09:38:56         jctrans.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:18       jctrans.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jctrans.c
+jctrans.c
+Mi, mar. 30 2016 09:38:56         jcparam.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:18       jcparam.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcparam.c
+jcparam.c
+Mi, mar. 30 2016 09:38:56         jdatadst.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:18       jdatadst.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdatadst.c
+jdatadst.c
+Mi, mar. 30 2016 09:38:56         jcinit.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:18       jcinit.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcinit.c
+jcinit.c
+Mi, mar. 30 2016 09:38:56         jcmaster.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:18       jcmaster.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcmaster.c
+jcmaster.c
+Mi, mar. 30 2016 09:38:56         jcmarker.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:19       jcmarker.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcmarker.c
+jcmarker.c
+Mi, mar. 30 2016 09:38:56         jcmainct.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:19       jcmainct.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcmainct.c
+jcmainct.c
+Mi, mar. 30 2016 09:38:56         jcprepct.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:19       jcprepct.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcprepct.c
+jcprepct.c
+Mi, mar. 30 2016 09:38:56         jccoefct.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:19       jccoefct.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jccoefct.c
+jccoefct.c
+Mi, mar. 30 2016 09:38:56         jccolor.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:19       jccolor.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jccolor.c
+jccolor.c
+Mi, mar. 30 2016 09:38:56         jcsample.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:19       jcsample.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcsample.c
+jcsample.c
+Mi, mar. 30 2016 09:38:56         jchuff.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:20       jchuff.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jchuff.c
+jchuff.c
+Mi, mar. 30 2016 09:38:56         jcdctmgr.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+Mi, mar. 30 2016 09:38:56         jdct.h
+D, feb. 04 2018 19:58:20       jcdctmgr.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcdctmgr.c
+jcdctmgr.c
+Mi, mar. 30 2016 09:38:56         jfdctfst.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:03:58         jdct.h
+D, feb. 04 2018 19:58:20       jfdctfst.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jfdctfst.c
+jfdctfst.c
+Mi, mar. 30 2016 09:38:56         jfdctflt.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:03:58         jdct.h
+D, feb. 04 2018 19:58:20       jfdctflt.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jfdctflt.c
+jfdctflt.c
+Mi, mar. 30 2016 09:38:56         jfdctint.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:03:58         jdct.h
+D, feb. 04 2018 19:58:21       jfdctint.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jfdctint.c
+jfdctint.c
+Mi, mar. 30 2016 09:38:56         jdapimin.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:21       jdapimin.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdapimin.c
+jdapimin.c
+Mi, mar. 30 2016 09:38:56         jdapistd.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:21       jdapistd.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdapistd.c
+jdapistd.c
+Mi, mar. 30 2016 09:38:56         jdarith.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:22       jdarith.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdarith.c
+jdarith.c
+Mi, mar. 30 2016 09:38:56         jdtrans.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:22       jdtrans.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdtrans.c
+jdtrans.c
+Mi, mar. 30 2016 09:38:56         jdatasrc.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:22       jdatasrc.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdatasrc.c
+jdatasrc.c
+Mi, mar. 30 2016 09:38:56         jdmaster.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:22       jdmaster.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdmaster.c
+jdmaster.c
+Mi, mar. 30 2016 09:38:56         jdinput.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:22       jdinput.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdinput.c
+jdinput.c
+Mi, mar. 30 2016 09:38:56         jdmarker.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:23       jdmarker.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdmarker.c
+jdmarker.c
+jdmarker.c(331) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\string.h(157) : see declaration of 'strncpy'
+jdmarker.c(655) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\string.h(157) : see declaration of 'strncpy'
+Mi, mar. 30 2016 09:38:56         jdhuff.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:23       jdhuff.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdhuff.c
+jdhuff.c
+Mi, mar. 30 2016 09:38:56         jdmainct.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:23       jdmainct.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdmainct.c
+jdmainct.c
+Mi, mar. 30 2016 09:38:56         jdcoefct.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:23       jdcoefct.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdcoefct.c
+jdcoefct.c
+Mi, mar. 30 2016 09:38:56         jdpostct.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:23       jdpostct.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdpostct.c
+jdpostct.c
+Mi, mar. 30 2016 09:38:56         jddctmgr.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:03:58         jdct.h
+D, feb. 04 2018 19:58:23       jddctmgr.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jddctmgr.c
+jddctmgr.c
+Mi, mar. 30 2016 09:38:56         jidctfst.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:03:58         jdct.h
+D, feb. 04 2018 19:58:24       jidctfst.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jidctfst.c
+jidctfst.c
+Mi, mar. 30 2016 09:38:56         jidctflt.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:03:58         jdct.h
+D, feb. 04 2018 19:58:24       jidctflt.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jidctflt.c
+jidctflt.c
+Mi, mar. 30 2016 09:38:56         jidctint.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:03:58         jdct.h
+D, feb. 04 2018 19:58:25       jidctint.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jidctint.c
+jidctint.c
+Mi, mar. 30 2016 09:38:56         jdsample.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:25       jdsample.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdsample.c
+jdsample.c
+Mi, mar. 30 2016 09:38:56         jdcolor.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:25       jdcolor.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdcolor.c
+jdcolor.c
+Mi, mar. 30 2016 09:38:56         jquant1.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:25       jquant1.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jquant1.c
+jquant1.c
+Mi, mar. 30 2016 09:38:56         jquant2.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:25       jquant2.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jquant2.c
+jquant2.c
+Mi, mar. 30 2016 09:38:56         jdmerge.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:26       jdmerge.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jdmerge.c
+jdmerge.c
+Mi, mar. 30 2016 09:38:56         jaricom.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:26       jaricom.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jaricom.c
+jaricom.c
+Mi, mar. 30 2016 09:38:56         jcomapi.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:26       jcomapi.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jcomapi.c
+jcomapi.c
+Mi, mar. 30 2016 09:38:56         jutils.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:26       jutils.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jutils.c
+jutils.c
+Mi, mar. 30 2016 09:38:56         jerror.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+Mi, mar. 30 2016 09:38:56         jversion.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 19:58:26       jerror.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jerror.c
+jerror.c
+jerror.c(194) : warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(366) : see declaration of 'sprintf'
+jerror.c(200) : warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(366) : see declaration of 'sprintf'
+Mi, mar. 30 2016 09:38:56         jmemmgr.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+Mi, mar. 30 2016 09:38:56         jmemsys.h
+D, feb. 04 2018 19:58:26       jmemmgr.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jmemmgr.c
+jmemmgr.c
+jmemmgr.c(1107) : warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdlib.h(447) : see declaration of 'getenv'
+jmemmgr.c(1110) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+Mi, mar. 30 2016 09:38:56         jmemnobs.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:01         jmemsys.h
+D, feb. 04 2018 19:58:26       jmemnobs.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jmemnobs.c
+jmemnobs.c
+D, feb. 04 2018 19:58:27     libjpeg_a.lib
+	del libjpeg_a.lib
+	lib -out:libjpeg_a.lib  jcapimin.obj jcapistd.obj jcarith.obj jctrans.obj jcparam.obj  jdatadst.obj jcinit.obj jcmaster.obj jcmarker.obj jcmainct.obj  jcprepct.obj jccoefct.obj jccolor.obj jcsample.obj jchuff.obj  jcdctmgr.obj jfdctfst.obj jfdctflt.obj jfdctint.obj jdapimin.obj jdapistd.obj jdarith.obj jdtrans.obj jdatasrc.obj  jdmaster.obj jdinput.obj jdmarker.obj jdhuff.obj jdmainct.obj  jdcoefct.obj jdpostct.obj jddctmgr.obj jidctfst.obj jidctflt.obj  jidctint.obj jdsample.obj jdcolor.obj jquant1.obj jquant2.obj  jdmerge.obj jaricom.obj jcomapi.obj jutils.obj jerror.obj jmemmgr.obj jmemnobs.obj
+Microsoft (R) Library Manager Version 9.00.21022.08
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+Mi, mar. 30 2016 09:38:56         cjpeg.c
+Mi, mar. 30 2016 09:38:56         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+Mi, mar. 30 2016 09:38:56         cderror.h
+D, feb. 04 2018 20:04:01         jversion.h
+D, feb. 04 2018 19:58:27       cjpeg.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD cjpeg.c
+cjpeg.c
+cjpeg.c(277) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+cjpeg.c(345) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+cjpeg.c(412) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+cjpeg.c(439) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+cjpeg.c(461) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+cjpeg.c(597) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+cjpeg.c(608) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+Mi, mar. 30 2016 09:38:56         rdppm.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:27       rdppm.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdppm.c
+rdppm.c
+Mi, mar. 30 2016 09:38:56         rdgif.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:27       rdgif.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdgif.c
+rdgif.c
+Mi, mar. 30 2016 09:38:56         rdtarga.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:28       rdtarga.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdtarga.c
+rdtarga.c
+Mi, mar. 30 2016 09:38:56         rdrle.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:28       rdrle.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdrle.c
+rdrle.c
+Mi, mar. 30 2016 09:38:56         rdbmp.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:28       rdbmp.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdbmp.c
+rdbmp.c
+Mi, mar. 30 2016 09:38:56         rdswitch.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:28       rdswitch.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdswitch.c
+rdswitch.c
+rdswitch.c(91) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+rdswitch.c(184) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+rdswitch.c(281) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+rdswitch.c(313) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+rdswitch.c(347) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+Mi, mar. 30 2016 09:38:56         cdjpeg.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:28       cdjpeg.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD cdjpeg.c
+cdjpeg.c
+cdjpeg.c(154) : warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _setmode. See online help for details.
+        C:\MsVS09\VC\INCLUDE\io.h(318) : see declaration of 'setmode'
+cdjpeg.c(154) : warning C4996: 'fileno': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _fileno. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(722) : see declaration of 'fileno'
+cdjpeg.c(172) : warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _setmode. See online help for details.
+        C:\MsVS09\VC\INCLUDE\io.h(318) : see declaration of 'setmode'
+D, feb. 04 2018 20:04:02       libjpeg_a.lib
+D, feb. 04 2018 19:58:29     cjpeg.exe
+D, feb. 04 2018 20:04:02       cjpeg.c
+	link /DEBUG /DEBUGTYPE:cv  /INCREMENTAL:NO /NOLOGO -subsystem:console,5.01 -out:cjpeg.exe cjpeg.obj rdppm.obj rdgif.obj rdtarga.obj rdrle.obj rdbmp.obj  rdswitch.obj cdjpeg.obj libjpeg_a.lib kernel32.lib  ws2_32.lib mswsock.lib advapi32.lib
+Mi, mar. 30 2016 09:38:56         djpeg.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 20:04:01         jversion.h
+D, feb. 04 2018 19:58:29       djpeg.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD djpeg.c
+djpeg.c
+djpeg.c(208) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+djpeg.c(280) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+djpeg.c(299) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+djpeg.c(336) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+djpeg.c(510) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+djpeg.c(521) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+Mi, mar. 30 2016 09:38:56         wrppm.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:29       wrppm.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD wrppm.c
+wrppm.c
+Mi, mar. 30 2016 09:38:56         wrgif.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:29       wrgif.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD wrgif.c
+wrgif.c
+Mi, mar. 30 2016 09:38:56         wrtarga.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:29       wrtarga.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD wrtarga.c
+wrtarga.c
+Mi, mar. 30 2016 09:38:56         wrrle.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:29       wrrle.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD wrrle.c
+wrrle.c
+Mi, mar. 30 2016 09:38:56         wrbmp.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:30       wrbmp.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD wrbmp.c
+wrbmp.c
+Mi, mar. 30 2016 09:38:56         rdcolmap.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+D, feb. 04 2018 19:58:30       rdcolmap.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdcolmap.c
+rdcolmap.c
+D, feb. 04 2018 20:04:03       cdjpeg.obj
+D, feb. 04 2018 20:04:02       libjpeg_a.lib
+D, feb. 04 2018 19:58:30     djpeg.exe
+D, feb. 04 2018 20:04:03       djpeg.c
+	link /DEBUG /DEBUGTYPE:cv  /INCREMENTAL:NO /NOLOGO -subsystem:console,5.01 -out:djpeg.exe djpeg.obj wrppm.obj wrgif.obj wrtarga.obj wrrle.obj wrbmp.obj  rdcolmap.obj cdjpeg.obj libjpeg_a.lib kernel32.lib  ws2_32.lib mswsock.lib advapi32.lib
+Mi, mar. 30 2016 09:38:56         jpegtran.c
+D, feb. 04 2018 20:04:02         cdjpeg.h
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:02         cderror.h
+Mi, mar. 30 2016 09:38:56         transupp.h
+D, feb. 04 2018 20:04:01         jversion.h
+D, feb. 04 2018 19:58:30       jpegtran.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD jpegtran.c
+jpegtran.c
+jpegtran.c(239) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+jpegtran.c(284) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+jpegtran.c(463) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+jpegtran.c(488) : warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(324) : see declaration of 'sscanf'
+jpegtran.c(532) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+D, feb. 04 2018 20:04:03       rdswitch.obj
+D, feb. 04 2018 20:04:03       cdjpeg.obj
+Mi, mar. 30 2016 09:38:56         transupp.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 20:03:55         jpeglib.h
+D, feb. 04 2018 20:03:55         jmorecfg.h
+D, feb. 04 2018 20:03:55         jpegint.h
+D, feb. 04 2018 20:03:55         jerror.h
+D, feb. 04 2018 20:04:04         transupp.h
+D, feb. 04 2018 19:58:30       transupp.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD transupp.c
+transupp.c
+D, feb. 04 2018 20:04:02       libjpeg_a.lib
+D, feb. 04 2018 19:58:31     jpegtran.exe
+D, feb. 04 2018 20:04:04       jpegtran.c
+link /DEBUG /DEBUGTYPE:cv  /INCREMENTAL:NO /NOLOGO -subsystem:console,5.01 -out:jpegtran.exe jpegtran.obj rdswitch.obj cdjpeg.obj transupp.obj libjpeg_a.lib kernel32.lib  ws2_32.lib mswsock.lib advapi32.lib /pdb:"libjpeg_a.pdb"
+
+Mi, mar. 30 2016 09:38:56         rdjpgcom.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 19:58:31       rdjpgcom.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD rdjpgcom.c
+rdjpgcom.c
+rdjpgcom.c(490) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+rdjpgcom.c(497) : warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _setmode. See online help for details.
+        C:\MsVS09\VC\INCLUDE\io.h(318) : see declaration of 'setmode'
+rdjpgcom.c(497) : warning C4996: 'fileno': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _fileno. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(722) : see declaration of 'fileno'
+D, feb. 04 2018 19:58:31     rdjpgcom.exe
+D, feb. 04 2018 20:04:05       rdjpgcom.c
+	link /DEBUG /DEBUGTYPE:cv  /INCREMENTAL:NO /NOLOGO -subsystem:console,5.01 -out:rdjpgcom.exe rdjpgcom.obj kernel32.lib  ws2_32.lib mswsock.lib advapi32.lib
+Mi, mar. 30 2016 09:38:56         wrjpgcom.c
+D, feb. 04 2018 20:03:55         jinclude.h
+D, feb. 04 2018 20:03:55         jconfig.h
+D, feb. 04 2018 19:58:31       wrjpgcom.obj
+	cl -c -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -GS -D_X86_=1  -DWIN32 -D_WIN32 -W3 -D_WINNT -D_WIN32_WINNT=0x0501 -DNTDDI_VERSION=0x05010000 -D_WIN32_IE=0x0600 -DWINVER=0x0501 -Zi -Od -DDEBUG  -D_MT -MTd -I. /MD wrjpgcom.c
+wrjpgcom.c
+wrjpgcom.c(443) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+wrjpgcom.c(462) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\string.h(74) : see declaration of 'strcpy'
+wrjpgcom.c(477) : warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\string.h(79) : see declaration of 'strcat'
+wrjpgcom.c(478) : warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\string.h(79) : see declaration of 'strcat'
+wrjpgcom.c(501) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+wrjpgcom.c(508) : warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _setmode. See online help for details.
+        C:\MsVS09\VC\INCLUDE\io.h(318) : see declaration of 'setmode'
+wrjpgcom.c(508) : warning C4996: 'fileno': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _fileno. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(722) : see declaration of 'fileno'
+wrjpgcom.c(528) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+        C:\MsVS09\VC\INCLUDE\stdio.h(237) : see declaration of 'fopen'
+D, feb. 04 2018 19:58:31     wrjpgcom.exe
+D, feb. 04 2018 20:04:05       wrjpgcom.c
+	link /DEBUG /DEBUGTYPE:cv  /INCREMENTAL:NO /NOLOGO -subsystem:console,5.01 -out:wrjpgcom.exe wrjpgcom.obj kernel32.lib  ws2_32.lib mswsock.lib advapi32.lib
+                            all target does not exist

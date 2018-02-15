@@ -1,0 +1,354 @@
+<refentry id="glib-Relations-and-Tuples">
+<refmeta>
+<refentrytitle>Relations and Tuples</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Relations and Tuples</refname><refpurpose>tables of data which can be indexed on any number of fields.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GRelation">GRelation</link>;
+<link linkend="GRelation">GRelation</link>*  <link linkend="g-relation-new">g_relation_new</link>                  (<link linkend="gint">gint</link> fields);
+void        <link linkend="g-relation-index">g_relation_index</link>                (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gint">gint</link> field,
+                                             <link linkend="GHashFunc">GHashFunc</link> hash_func,
+                                             <link linkend="GEqualFunc">GEqualFunc</link> key_equal_func);
+void        <link linkend="g-relation-insert">g_relation_insert</link>               (<link linkend="GRelation">GRelation</link> *relation,
+                                             ...);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-relation-exists">g_relation_exists</link>               (<link linkend="GRelation">GRelation</link> *relation,
+                                             ...);
+<link linkend="gint">gint</link>        <link linkend="g-relation-count">g_relation_count</link>                (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gconstpointer">gconstpointer</link> key,
+                                             <link linkend="gint">gint</link> field);
+<link linkend="GTuples">GTuples</link>*    <link linkend="g-relation-select">g_relation_select</link>               (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gconstpointer">gconstpointer</link> key,
+                                             <link linkend="gint">gint</link> field);
+<link linkend="gint">gint</link>        <link linkend="g-relation-delete">g_relation_delete</link>               (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gconstpointer">gconstpointer</link> key,
+                                             <link linkend="gint">gint</link> field);
+void        <link linkend="g-relation-destroy">g_relation_destroy</link>              (<link linkend="GRelation">GRelation</link> *relation);
+
+void        <link linkend="g-relation-print">g_relation_print</link>                (<link linkend="GRelation">GRelation</link> *relation);
+
+struct      <link linkend="GTuples">GTuples</link>;
+void        <link linkend="g-tuples-destroy">g_tuples_destroy</link>                (<link linkend="GTuples">GTuples</link> *tuples);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-tuples-index">g_tuples_index</link>                  (<link linkend="GTuples">GTuples</link> *tuples,
+                                             <link linkend="gint">gint</link> index,
+                                             <link linkend="gint">gint</link> field);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+A <link linkend="GRelation">GRelation</link> is a table of data which can be indexed on any number of fields,
+rather like simple database tables. A <link linkend="GRelation">GRelation</link> contains a number of
+records, called tuples. Each record contains a number of fields.
+Records are not ordered, so it is not possible to find the record at a
+particular index.
+</para>
+<para>
+Note that <link linkend="GRelation">GRelation</link> tables are currently limited to 2 fields.
+</para>
+<para>
+To create a GRelation, use <link linkend="g-relation-new">g_relation_new</link>().
+</para>
+<para>
+To specify which fields should be indexed, use <link linkend="g-relation-index">g_relation_index</link>().
+Note that this must be called before any tuples are added to the <link linkend="GRelation">GRelation</link>.
+</para>
+<para>
+To add records to a <link linkend="GRelation">GRelation</link> use <link linkend="g-relation-insert">g_relation_insert</link>().
+</para>
+<para>
+To determine if a given record appears in a <link linkend="GRelation">GRelation</link>, use
+<link linkend="g-relation-exists">g_relation_exists</link>(). Note that fields are compared directly, so pointers
+must point to the exact same position (i.e. different copies of the same
+string will not match.)
+</para>
+<para>
+To count the number of records which have a particular value in a given
+field, use <link linkend="g-relation-count">g_relation_count</link>().
+</para>
+<para>
+To get all the records which have a particular value in a given field,
+use <link linkend="g-relation-select">g_relation_select</link>(). To access fields of the resulting records,
+use <link linkend="g-tuples-index">g_tuples_index</link>(). To free the resulting records use <link linkend="g-tuples-destroy">g_tuples_destroy</link>().
+</para>
+<para>
+To delete all records which have a particular value in a given field,
+use <link linkend="g-relation-delete">g_relation_delete</link>().
+</para>
+<para>
+To destroy the <link linkend="GRelation">GRelation</link>, use <link linkend="g-relation-destroy">g_relation_destroy</link>().
+</para>
+<para>
+To help debug <link linkend="GRelation">GRelation</link> objects, use <link linkend="g-relation-print">g_relation_print</link>().
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GRelation">struct GRelation</title>
+<programlisting>struct GRelation;</programlisting>
+<para>
+The <link linkend="GRelation">GRelation</link> struct is an opaque data structure to represent a
+<link linkend="glib-Relations-and-Tuples">Relation</link>.
+It should only be accessed via the following functions.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-relation-new">g_relation_new ()</title>
+<programlisting><link linkend="GRelation">GRelation</link>*  g_relation_new                  (<link linkend="gint">gint</link> fields);</programlisting>
+<para>
+Creates a new <link linkend="GRelation">GRelation</link> with the given number of fields.
+Note that currently the number of fields must be 2.
+</para><variablelist role="params">
+<varlistentry><term><parameter>fields</parameter>&nbsp;:</term>
+<listitem><para>the number of fields.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a new <link linkend="GRelation">GRelation</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-index">g_relation_index ()</title>
+<programlisting>void        g_relation_index                (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gint">gint</link> field,
+                                             <link linkend="GHashFunc">GHashFunc</link> hash_func,
+                                             <link linkend="GEqualFunc">GEqualFunc</link> key_equal_func);</programlisting>
+<para>
+Creates an index on the given field.
+Note that this must be called before any records are added to the <link linkend="GRelation">GRelation</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>field</parameter>&nbsp;:</term>
+<listitem><para>the field to index, counting from 0.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hash_func</parameter>&nbsp;:</term>
+<listitem><para>a function to produce a hash value from the field data.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key_equal_func</parameter>&nbsp;:</term>
+<listitem><para>a function to compare two values of the given field.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-insert">g_relation_insert ()</title>
+<programlisting>void        g_relation_insert               (<link linkend="GRelation">GRelation</link> *relation,
+                                             ...);</programlisting>
+<para>
+Inserts a record into a <link linkend="GRelation">GRelation</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>...</parameter>&nbsp;:</term>
+<listitem><para>the fields of the record to add. This must match the number of
+fields in the <link linkend="GRelation">GRelation</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-exists">g_relation_exists ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_relation_exists               (<link linkend="GRelation">GRelation</link> *relation,
+                                             ...);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if a record with the given values exists in a <link linkend="GRelation">GRelation</link>.
+Note that the values are compared directly, so that, for example, two
+copies of the same string will not match.
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>...</parameter>&nbsp;:</term>
+<listitem><para>the fields of the record to compare. The number must match the
+number of fields in the <link linkend="GRelation">GRelation</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if a record matches.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-count">g_relation_count ()</title>
+<programlisting><link linkend="gint">gint</link>        g_relation_count                (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gconstpointer">gconstpointer</link> key,
+                                             <link linkend="gint">gint</link> field);</programlisting>
+<para>
+Returns the number of tuples in a <link linkend="GRelation">GRelation</link> that have the given value
+in the given field.
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para>the value to compare with.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>field</parameter>&nbsp;:</term>
+<listitem><para>the field of each record to match.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the number of matches.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-select">g_relation_select ()</title>
+<programlisting><link linkend="GTuples">GTuples</link>*    g_relation_select               (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gconstpointer">gconstpointer</link> key,
+                                             <link linkend="gint">gint</link> field);</programlisting>
+<para>
+Returns all of the tuples which have the given key in the given field.
+Use <link linkend="g-tuples-index">g_tuples_index</link>() to access the returned records.
+The returned records should be freed with <link linkend="g-tuples-destroy">g_tuples_destroy</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para>the value to compare with.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>field</parameter>&nbsp;:</term>
+<listitem><para>the field of each record to match.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the records (tuples) that matched.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-delete">g_relation_delete ()</title>
+<programlisting><link linkend="gint">gint</link>        g_relation_delete               (<link linkend="GRelation">GRelation</link> *relation,
+                                             <link linkend="gconstpointer">gconstpointer</link> key,
+                                             <link linkend="gint">gint</link> field);</programlisting>
+<para>
+Deletes any records from a <link linkend="GRelation">GRelation</link> that have the given key value in
+the given field.
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para>the value to compare with.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>field</parameter>&nbsp;:</term>
+<listitem><para>the field of each record to match.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the number of records deleted.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-destroy">g_relation_destroy ()</title>
+<programlisting>void        g_relation_destroy              (<link linkend="GRelation">GRelation</link> *relation);</programlisting>
+<para>
+Destroys the <link linkend="GRelation">GRelation</link>, freeing all memory allocated.
+However, it does not free memory allocated for the
+tuple data, so you should free that first if appropriate.
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-relation-print">g_relation_print ()</title>
+<programlisting>void        g_relation_print                (<link linkend="GRelation">GRelation</link> *relation);</programlisting>
+<para>
+Outputs information about all records in a <link linkend="GRelation">GRelation</link>, as well as the indexes.
+It is for debugging.
+</para><variablelist role="params">
+<varlistentry><term><parameter>relation</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRelation">GRelation</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GTuples">struct GTuples</title>
+<programlisting>struct GTuples
+{
+  guint len;
+};
+</programlisting>
+<para>
+The <link linkend="GTuples">GTuples</link> struct is used to return records (or tuples) from the
+<link linkend="GRelation">GRelation</link> by <link linkend="g-relation-select">g_relation_select</link>().
+It only contains one public member - the number of records that matched.
+To access the matched records, you must use <link linkend="g-tuples-index">g_tuples_index</link>().
+</para><variablelist role="struct">
+<varlistentry>
+<term><link linkend="guint">guint</link> <structfield>len</structfield></term>
+<listitem><para>the number of records that matched.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-tuples-destroy">g_tuples_destroy ()</title>
+<programlisting>void        g_tuples_destroy                (<link linkend="GTuples">GTuples</link> *tuples);</programlisting>
+<para>
+Frees the records which were returned by <link linkend="g-relation-select">g_relation_select</link>().
+This should always be called after <link linkend="g-relation-select">g_relation_select</link>() when you are
+finished with the records.
+The records are not removed from the <link linkend="GRelation">GRelation</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>tuples</parameter>&nbsp;:</term>
+<listitem><para>the tuple data to free.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-tuples-index">g_tuples_index ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_tuples_index                  (<link linkend="GTuples">GTuples</link> *tuples,
+                                             <link linkend="gint">gint</link> index,
+                                             <link linkend="gint">gint</link> field);</programlisting>
+<para>
+Gets a field from the records returned by <link linkend="g-relation-select">g_relation_select</link>().
+It returns the given field of the record at the given index.
+The returned value should not be changed.
+</para><variablelist role="params">
+<varlistentry><term><parameter>tuples</parameter>&nbsp;:</term>
+<listitem><para>the tuple data, returned by <link linkend="g-relation-select">g_relation_select</link>().
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>index</parameter>&nbsp;:</term>
+<listitem><para>the index of the record.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>field</parameter>&nbsp;:</term>
+<listitem><para>the field to return.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the field of the record.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

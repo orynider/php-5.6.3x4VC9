@@ -1,0 +1,10583 @@
+<HTML
+><HEAD
+><TITLE
+>GType</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GObject Reference Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="API Reference"
+HREF="r28.html"><LINK
+REL="PREVIOUS"
+TITLE="API Reference"
+HREF="r28.html"><LINK
+REL="NEXT"
+TITLE="GTypePlugin"
+HREF="gobject-gtypeplugin.html"></HEAD
+><BODY
+CLASS="REFENTRY"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="5"
+>GObject Reference Manual</FONT
+></TH
+></TR
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="gobject-gtypeplugin.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+></TABLE
+></DIV
+><H1
+><A
+NAME="GOBJECT-GTYPE">GType</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN35"
+></A
+><H2
+>Name</H2
+>GType&nbsp;--&nbsp;The GLib Runtime type identification and management system</DIV
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN38"><H2
+>Synopsis</H2
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="SYNOPSIS"
+>&#13;#include &lt;gobject.h&gt;
+
+
+typedef     <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>;
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FUNDAMENTAL-CAPS"
+>G_TYPE_FUNDAMENTAL</A
+>              (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FUNDAMENTAL-MAX-CAPS"
+>G_TYPE_FUNDAMENTAL_MAX</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-MAKE-FUNDAMENTAL-CAPS"
+>G_TYPE_MAKE_FUNDAMENTAL</A
+>         (x)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-ABSTRACT-CAPS"
+>G_TYPE_IS_ABSTRACT</A
+>              (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-DERIVED-CAPS"
+>G_TYPE_IS_DERIVED</A
+>               (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-FUNDAMENTAL-CAPS"
+>G_TYPE_IS_FUNDAMENTAL</A
+>           (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-VALUE-TYPE-CAPS"
+>G_TYPE_IS_VALUE_TYPE</A
+>            (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-HAS-VALUE-TABLE-CAPS"
+>G_TYPE_HAS_VALUE_TABLE</A
+>          (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-CLASSED-CAPS"
+>G_TYPE_IS_CLASSED</A
+>               (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-INSTANTIATABLE-CAPS"
+>G_TYPE_IS_INSTANTIATABLE</A
+>        (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-DERIVABLE-CAPS"
+>G_TYPE_IS_DERIVABLE</A
+>             (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-DEEP-DERIVABLE-CAPS"
+>G_TYPE_IS_DEEP_DERIVABLE</A
+>        (type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-IS-INTERFACE-CAPS"
+>G_TYPE_IS_INTERFACE</A
+>             (type)
+struct      <A
+HREF="gobject-gtype.html#GTYPEINTERFACE"
+>GTypeInterface</A
+>;
+struct      <A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+>;
+struct      <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+>;
+struct      <A
+HREF="gobject-gtype.html#GTYPEFUNDAMENTALINFO"
+>GTypeFundamentalInfo</A
+>;
+struct      <A
+HREF="gobject-gtype.html#GINTERFACEINFO"
+>GInterfaceInfo</A
+>;
+struct      <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+>;
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FROM-INSTANCE-CAPS"
+>G_TYPE_FROM_INSTANCE</A
+>            (instance)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FROM-CLASS-CAPS"
+>G_TYPE_FROM_CLASS</A
+>               (g_class)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FROM-INTERFACE-CAPS"
+>G_TYPE_FROM_INTERFACE</A
+>           (g_iface)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-INSTANCE-GET-CLASS-CAPS"
+>G_TYPE_INSTANCE_GET_CLASS</A
+>       (instance, g_type, c_type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-INSTANCE-GET-INTERFACE-CAPS"
+>G_TYPE_INSTANCE_GET_INTERFACE</A
+>   (instance, g_type, c_type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHECK-INSTANCE-CAPS"
+>G_TYPE_CHECK_INSTANCE</A
+>           (instance)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHECK-INSTANCE-CAST-CAPS"
+>G_TYPE_CHECK_INSTANCE_CAST</A
+>      (instance, g_type, c_type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHECK-INSTANCE-TYPE-CAPS"
+>G_TYPE_CHECK_INSTANCE_TYPE</A
+>      (instance, g_type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHECK-CLASS-CAST-CAPS"
+>G_TYPE_CHECK_CLASS_CAST</A
+>         (g_class, g_type, c_type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHECK-CLASS-TYPE-CAPS"
+>G_TYPE_CHECK_CLASS_TYPE</A
+>         (g_class, g_type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHECK-VALUE-CAPS"
+>G_TYPE_CHECK_VALUE</A
+>              (value)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHECK-VALUE-TYPE-CAPS"
+>G_TYPE_CHECK_VALUE_TYPE</A
+>         (value, g_type)
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FLAG-RESERVED-ID-BIT-CAPS"
+>G_TYPE_FLAG_RESERVED_ID_BIT</A
+>
+void        <A
+HREF="gobject-gtype.html#G-TYPE-INIT"
+>g_type_init</A
+>                     (void);
+enum        <A
+HREF="gobject-gtype.html#GTYPEDEBUGFLAGS"
+>GTypeDebugFlags</A
+>;
+void        <A
+HREF="gobject-gtype.html#G-TYPE-INIT-WITH-DEBUG-FLAGS"
+>g_type_init_with_debug_flags</A
+>    (<A
+HREF="gobject-gtype.html#GTYPEDEBUGFLAGS"
+>GTypeDebugFlags</A
+> debug_flags);
+G_CONST_RETURN <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A>* <A
+HREF="gobject-gtype.html#G-TYPE-NAME"
+>g_type_name</A
+>           (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+<A
+HREF=../glib/glib-quarks.html#GQUARK
+>GQuark</A>      <A
+HREF="gobject-gtype.html#G-TYPE-QNAME"
+>g_type_qname</A
+>                    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-FROM-NAME"
+>g_type_from_name</A
+>                (const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *name);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-PARENT"
+>g_type_parent</A
+>                   (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+<A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A>       <A
+HREF="gobject-gtype.html#G-TYPE-DEPTH"
+>g_type_depth</A
+>                    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-NEXT-BASE"
+>g_type_next_base</A
+>                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> leaf_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> root_type);
+<A
+HREF=../glib/glib-basic-types.html#GBOOLEAN
+>gboolean</A>    <A
+HREF="gobject-gtype.html#G-TYPE-IS-A"
+>g_type_is_a</A
+>                     (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> is_a_type);
+<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    <A
+HREF="gobject-gtype.html#G-TYPE-CLASS-REF"
+>g_type_class_ref</A
+>                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    <A
+HREF="gobject-gtype.html#G-TYPE-CLASS-PEEK"
+>g_type_class_peek</A
+>               (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-CLASS-UNREF"
+>g_type_class_unref</A
+>              (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);
+<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    <A
+HREF="gobject-gtype.html#G-TYPE-CLASS-PEEK-PARENT"
+>g_type_class_peek_parent</A
+>        (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);
+<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    <A
+HREF="gobject-gtype.html#G-TYPE-INTERFACE-PEEK"
+>g_type_interface_peek</A
+>           (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> instance_class,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> iface_type);
+<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    <A
+HREF="gobject-gtype.html#G-TYPE-INTERFACE-PEEK-PARENT"
+>g_type_interface_peek_parent</A
+>    (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_iface);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>*      <A
+HREF="gobject-gtype.html#G-TYPE-CHILDREN"
+>g_type_children</A
+>                 (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A> *n_children);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>*      <A
+HREF="gobject-gtype.html#G-TYPE-INTERFACES"
+>g_type_interfaces</A
+>               (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A> *n_interfaces);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-SET-QDATA"
+>g_type_set_qdata</A
+>                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-quarks.html#GQUARK
+>GQuark</A> quark,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> data);
+<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    <A
+HREF="gobject-gtype.html#G-TYPE-GET-QDATA"
+>g_type_get_qdata</A
+>                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-quarks.html#GQUARK
+>GQuark</A> quark);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-QUERY"
+>g_type_query</A
+>                    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF="gobject-gtype.html#GTYPEQUERY"
+>GTypeQuery</A
+> *query);
+struct      <A
+HREF="gobject-gtype.html#GTYPEQUERY"
+>GTypeQuery</A
+>;
+void        (<A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>*GBaseInitFunc</A
+>)                (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);
+void        (<A
+HREF="gobject-gtype.html#GBASEFINALIZEFUNC"
+>*GBaseFinalizeFunc</A
+>)            (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);
+void        (<A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>*GClassInitFunc</A
+>)               (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> class_data);
+void        (<A
+HREF="gobject-gtype.html#GCLASSFINALIZEFUNC"
+>*GClassFinalizeFunc</A
+>)           (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> class_data);
+void        (<A
+HREF="gobject-gtype.html#GINSTANCEINITFUNC"
+>*GInstanceInitFunc</A
+>)            (<A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+> *instance,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);
+void        (<A
+HREF="gobject-gtype.html#GINTERFACEINITFUNC"
+>*GInterfaceInitFunc</A
+>)           (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_iface,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> iface_data);
+void        (<A
+HREF="gobject-gtype.html#GINTERFACEFINALIZEFUNC"
+>*GInterfaceFinalizeFunc</A
+>)       (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_iface,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> iface_data);
+<A
+HREF=../glib/glib-basic-types.html#GBOOLEAN
+>gboolean</A>    (<A
+HREF="gobject-gtype.html#GTYPECLASSCACHEFUNC"
+>*GTypeClassCacheFunc</A
+>)          (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> cache_data,
+                                             GTypeClass *g_class);
+enum        <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+>;
+enum        <A
+HREF="gobject-gtype.html#GTYPEFUNDAMENTALFLAGS"
+>GTypeFundamentalFlags</A
+>;
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-STATIC"
+>g_type_register_static</A
+>          (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> parent_type,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> *info,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-DYNAMIC"
+>g_type_register_dynamic</A
+>         (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> parent_type,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> *plugin,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-FUNDAMENTAL"
+>g_type_register_fundamental</A
+>     (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type_id,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> *info,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEFUNDAMENTALINFO"
+>GTypeFundamentalInfo</A
+> *finfo,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-ADD-INTERFACE-STATIC"
+>g_type_add_interface_static</A
+>     (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             const <A
+HREF="gobject-gtype.html#GINTERFACEINFO"
+>GInterfaceInfo</A
+> *info);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-ADD-INTERFACE-DYNAMIC"
+>g_type_add_interface_dynamic</A
+>    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> *plugin);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-INTERFACE-ADD-PREREQUISITE"
+>g_type_interface_add_prerequisite</A
+>
+                                            (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> prerequisite_type);
+<A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+>* <A
+HREF="gobject-gtype.html#G-TYPE-GET-PLUGIN"
+>g_type_get_plugin</A
+>              (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+<A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+>* <A
+HREF="gobject-gtype.html#G-TYPE-INTERFACE-GET-PLUGIN"
+>g_type_interface_get_plugin</A
+>    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> implementation_type);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-FUNDAMENTAL-NEXT"
+>g_type_fundamental_next</A
+>         (void);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtype.html#G-TYPE-FUNDAMENTAL"
+>g_type_fundamental</A
+>              (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type_id);
+<A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+>* <A
+HREF="gobject-gtype.html#G-TYPE-CREATE-INSTANCE"
+>g_type_create_instance</A
+>       (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-FREE-INSTANCE"
+>g_type_free_instance</A
+>            (<A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+> *instance);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-ADD-CLASS-CACHE-FUNC"
+>g_type_add_class_cache_func</A
+>     (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> cache_data,
+                                             <A
+HREF="gobject-gtype.html#GTYPECLASSCACHEFUNC"
+>GTypeClassCacheFunc</A
+> cache_func);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-REMOVE-CLASS-CACHE-FUNC"
+>g_type_remove_class_cache_func</A
+>  (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> cache_data,
+                                             <A
+HREF="gobject-gtype.html#GTYPECLASSCACHEFUNC"
+>GTypeClassCacheFunc</A
+> cache_func);
+void        <A
+HREF="gobject-gtype.html#G-TYPE-CLASS-UNREF-UNCACHED"
+>g_type_class_unref_uncached</A
+>     (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);
+<A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+>* <A
+HREF="gobject-gtype.html#G-TYPE-VALUE-TABLE-PEEK"
+>g_type_value_table_peek</A
+>    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);
+
+
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-INVALID-CAPS"
+>G_TYPE_INVALID</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-NONE-CAPS"
+>G_TYPE_NONE</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-INTERFACE-CAPS"
+>G_TYPE_INTERFACE</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-CHAR-CAPS"
+>G_TYPE_CHAR</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-UCHAR-CAPS"
+>G_TYPE_UCHAR</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-BOOLEAN-CAPS"
+>G_TYPE_BOOLEAN</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-INT-CAPS"
+>G_TYPE_INT</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-UINT-CAPS"
+>G_TYPE_UINT</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-LONG-CAPS"
+>G_TYPE_LONG</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-ULONG-CAPS"
+>G_TYPE_ULONG</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-INT64-CAPS"
+>G_TYPE_INT64</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-UINT64-CAPS"
+>G_TYPE_UINT64</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-ENUM-CAPS"
+>G_TYPE_ENUM</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FLAGS-CAPS"
+>G_TYPE_FLAGS</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-FLOAT-CAPS"
+>G_TYPE_FLOAT</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-DOUBLE-CAPS"
+>G_TYPE_DOUBLE</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-STRING-CAPS"
+>G_TYPE_STRING</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-POINTER-CAPS"
+>G_TYPE_POINTER</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-BOXED-CAPS"
+>G_TYPE_BOXED</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-PARAM-CAPS"
+>G_TYPE_PARAM</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-OBJECT-CAPS"
+>G_TYPE_OBJECT</A
+>
+
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-RESERVED-GLIB-FIRST-CAPS"
+>G_TYPE_RESERVED_GLIB_FIRST</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-RESERVED-GLIB-LAST-CAPS"
+>G_TYPE_RESERVED_GLIB_LAST</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-RESERVED-BSE-FIRST-CAPS"
+>G_TYPE_RESERVED_BSE_FIRST</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-RESERVED-BSE-LAST-CAPS"
+>G_TYPE_RESERVED_BSE_LAST</A
+>
+#define     <A
+HREF="gobject-gtype.html#G-TYPE-RESERVED-USER-FIRST-CAPS"
+>G_TYPE_RESERVED_USER_FIRST</A
+>&#13;</PRE
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN248"
+></A
+><H2
+>Description</H2
+><P
+>The GType API is the foundation of the GObject system.  It provides the
+facilities for registering and managing all fundamental data types,
+user-defined object and interface types.  Before using any GType
+or GObject functions, <A
+HREF="gobject-gtype.html#G-TYPE-INIT"
+>g_type_init</A
+>() must be called to initialize the
+type system.</P
+><P
+>For type creation and registration purposes, all types fall into one of
+two categories: static or dynamic.  Static types are never loaded or
+unloaded at run-time as dynamic types may be.  Static types are created
+with <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-STATIC"
+>g_type_register_static</A
+>() that gets type specific information passed
+in via a <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure.
+Dynamic types are created with <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-DYNAMIC"
+>g_type_register_dynamic</A
+>() which takes a
+<A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> structure instead. The remaining type information (the
+<A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure) is retrieved during runtime through <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+>
+and the g_type_plugin_*() API.
+These registration functions are usually called only once from a 
+function whose only purpose is to return the type identifier for a 
+specific class.  Once the type (or class or interface) is registered,
+it may be instantiated, inherited, or implemented depending on exactly
+what sort of type it is.
+There is also a third registration function for registering fundamental
+types called <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-FUNDAMENTAL"
+>g_type_register_fundamental</A
+>() which requires both a <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+>
+structure and a GTypeFundamentalInfo structure but it is seldom used
+since most fundamental types are predefined rather than user-defined.</P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN261"
+></A
+><H2
+>Details</H2
+><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN263"
+></A
+><H3
+><A
+NAME="GTYPE"
+></A
+>GType</H3
+><P
+>A numerical value which represents the unique identifier of a registered
+type.</P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN267"
+></A
+><H3
+><A
+NAME="G-TYPE-FUNDAMENTAL-CAPS"
+></A
+>G_TYPE_FUNDAMENTAL()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_FUNDAMENTAL(type)	(g_type_fundamental (type))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is a fundamental data type such as <A
+HREF="gobject-gtype.html#G-TYPE-INT-CAPS"
+>G_TYPE_INT</A
+> or
+<A
+HREF="gobject-gtype.html#G-TYPE-POINTER-CAPS"
+>G_TYPE_POINTER</A
+>. Fundamental types are types that serve as fundaments for
+the derived types, thus they are the roots of distinct inheritance hierarchies.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN277"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN283"
+></A
+><H3
+><A
+NAME="G-TYPE-FUNDAMENTAL-MAX-CAPS"
+></A
+>G_TYPE_FUNDAMENTAL_MAX</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define	G_TYPE_FUNDAMENTAL_MAX		(255 &lt;&lt; G_TYPE_FUNDAMENTAL_SHIFT)</PRE
+></TD
+></TR
+></TABLE
+><P
+>An integer constant that represents the number of identifiers reserved
+for types that are assigned at compile-time.</P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN288"
+></A
+><H3
+><A
+NAME="G-TYPE-MAKE-FUNDAMENTAL-CAPS"
+></A
+>G_TYPE_MAKE_FUNDAMENTAL()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define	G_TYPE_MAKE_FUNDAMENTAL(x)	((GType) ((x) &lt;&lt; G_TYPE_FUNDAMENTAL_SHIFT))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the type ID for the fundamental type number <TT
+CLASS="PARAMETER"
+><I
+>x</I
+></TT
+>.
+Use <A
+HREF="gobject-gtype.html#G-TYPE-FUNDAMENTAL-NEXT"
+>g_type_fundamental_next</A
+>() instead of this macro to create new fundamental 
+types.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN296"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>x</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>the fundamental type number.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN301"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-ABSTRACT-CAPS"
+></A
+>G_TYPE_IS_ABSTRACT()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_ABSTRACT(type)                (g_type_test_flags ((type), G_TYPE_FLAG_ABSTRACT))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is an abstract type.  An abstract type can not be
+instantiated and is normally used as an abstract base class for
+derived classes.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN309"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN315"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-DERIVED-CAPS"
+></A
+>G_TYPE_IS_DERIVED()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_DERIVED(type)                 ((type) &gt; G_TYPE_FUNDAMENTAL_MAX)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is derived (or in object-oriented terminology:
+inherited) from another type (this holds true for all non-fundamental
+types).</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN323"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN329"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-FUNDAMENTAL-CAPS"
+></A
+>G_TYPE_IS_FUNDAMENTAL()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_FUNDAMENTAL(type)             ((type) &lt;= G_TYPE_FUNDAMENTAL_MAX)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is a fundamental type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN337"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN343"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-VALUE-TYPE-CAPS"
+></A
+>G_TYPE_IS_VALUE_TYPE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_VALUE_TYPE(type)              (g_type_check_is_value_type (type))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN349"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN355"
+></A
+><H3
+><A
+NAME="G-TYPE-HAS-VALUE-TABLE-CAPS"
+></A
+>G_TYPE_HAS_VALUE_TABLE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_HAS_VALUE_TABLE(type)            (g_type_value_table_peek (type) != NULL)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> has a <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+>.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN364"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN370"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-CLASSED-CAPS"
+></A
+>G_TYPE_IS_CLASSED()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_CLASSED(type)                 (g_type_test_flags ((type), G_TYPE_FLAG_CLASSED))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is a classed type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN378"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN384"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-INSTANTIATABLE-CAPS"
+></A
+>G_TYPE_IS_INSTANTIATABLE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_INSTANTIATABLE(type)          (g_type_test_flags ((type), G_TYPE_FLAG_INSTANTIATABLE))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> can be instantiated.  Instantiation is the
+process of creating an instance (object) of this type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN392"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN398"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-DERIVABLE-CAPS"
+></A
+>G_TYPE_IS_DERIVABLE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_DERIVABLE(type)               (g_type_test_flags ((type), G_TYPE_FLAG_DERIVABLE))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is a derivable type.  A derivable type can
+be used as the base class of a flat (single-level) class hierarchy.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN406"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN412"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-DEEP-DERIVABLE-CAPS"
+></A
+>G_TYPE_IS_DEEP_DERIVABLE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_DEEP_DERIVABLE(type)          (g_type_test_flags ((type), G_TYPE_FLAG_DEEP_DERIVABLE))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is a deep derivable type.  A deep derivable type
+can be used as the base class of a deep (multi-level) class hierarchy.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN420"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN426"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-INTERFACE-CAPS"
+></A
+>G_TYPE_IS_INTERFACE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_IS_INTERFACE(type)               (G_TYPE_FUNDAMENTAL (type) == G_TYPE_INTERFACE)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is an interface type.
+Interface types are types that provide pure APIs, the implementation
+of which is provided by another type (which is then said to conform
+to the interface).  GLib interfaces are somewhat analogous to Java
+interfaces and C++ classes containing only pure virtual functions, 
+with the difference that GType interfaces are not derivable (but see
+<A
+HREF="gobject-gtype.html#G-TYPE-INTERFACE-ADD-PREREQUISITE"
+>g_type_interface_add_prerequisite</A
+>() for an alternative).</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN435"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN441"
+></A
+><H3
+><A
+NAME="GTYPEINTERFACE"
+></A
+>struct GTypeInterface</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GTypeInterface
+{
+  /*&lt; private &gt;*/
+  GType g_type;         /* iface type */
+  GType g_instance_type;
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+>An opaque structure used as the base of all interface types.</P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN446"
+></A
+><H3
+><A
+NAME="GTYPEINSTANCE"
+></A
+>struct GTypeInstance</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GTypeInstance
+{
+  /*&lt; private &gt;*/
+  GTypeClass *g_class;
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+>An opaque structure used as the base of all type instances.</P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN451"
+></A
+><H3
+><A
+NAME="GTYPEINFO"
+></A
+>struct GTypeInfo</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GTypeInfo
+{
+  /* interface types, classed types, instantiated types */
+  guint16                class_size;
+  
+  GBaseInitFunc          base_init;
+  GBaseFinalizeFunc      base_finalize;
+  
+  /* classed types, instantiated types */
+  GClassInitFunc         class_init;
+  GClassFinalizeFunc     class_finalize;
+  gconstpointer          class_data;
+  
+  /* instantiated types */
+  guint16                instance_size;
+  guint16                n_preallocs;
+  GInstanceInitFunc      instance_init;
+  
+  /* value handling */
+  const GTypeValueTable	*value_table;
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+>This structure is used to provide the type system with the information
+required to initialize and destruct (finalize) a type's class and
+instances thereof.
+The initialized structure is passed to the <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-STATIC"
+>g_type_register_static</A
+>() function
+(or is copied into the provided <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure in the
+<A
+HREF="gobject-gtypeplugin.html#G-TYPE-PLUGIN-COMPLETE-TYPE-INFO"
+>g_type_plugin_complete_type_info</A
+>()). The type system will perform a deep
+copy of this structure, so it's memory does not need to be persistent
+across invocation of <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-STATIC"
+>g_type_register_static</A
+>().</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN461"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GUINT16
+>guint16</A> <TT
+CLASS="STRUCTFIELD"
+><I
+>class_size</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	 Size of the class structure (required for interface, classed and instantiatable types).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN467"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>base_init</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	 Location of the base initialization function (optional).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN473"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtype.html#GBASEFINALIZEFUNC"
+>GBaseFinalizeFunc</A
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>base_finalize</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> Location of the base finalization function (optional).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN479"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>GClassInitFunc</A
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>class_init</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	 Location of the class initialization function (optional, for classed and instantiatable types only).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN485"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtype.html#GCLASSFINALIZEFUNC"
+>GClassFinalizeFunc</A
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>class_finalize</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Location of the class finalization function (optional).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN491"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GCONSTPOINTER
+>gconstpointer</A> <TT
+CLASS="STRUCTFIELD"
+><I
+>class_data</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	 User-supplied data passed to the class init/finalize functions.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN497"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GUINT16
+>guint16</A> <TT
+CLASS="STRUCTFIELD"
+><I
+>instance_size</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> Size of the instance (object) structure (required for instantiatable types only).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN503"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GUINT16
+>guint16</A> <TT
+CLASS="STRUCTFIELD"
+><I
+>n_preallocs</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	 Number of pre-allocated (cached) instances to reserve memory for (0 indicates no caching).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN509"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtype.html#GINSTANCEINITFUNC"
+>GInstanceInitFunc</A
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>instance_init</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> Location of the instance initialization function (optional, for instantiatable types only).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN515"><SPAN
+STYLE="white-space: nowrap"
+>const <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+> *<TT
+CLASS="STRUCTFIELD"
+><I
+>value_table</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	 A <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+> function table for generic handling of GValues of this type (usually only
+		 useful for fundamental types).&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN522"
+></A
+><H3
+><A
+NAME="GTYPEFUNDAMENTALINFO"
+></A
+>struct GTypeFundamentalInfo</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GTypeFundamentalInfo
+{
+  GTypeFundamentalFlags  type_flags;
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+>A structure that provides information to the type system which is
+used specifically for managing fundamental types.  </P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN527"
+></A
+><H3
+><A
+NAME="GINTERFACEINFO"
+></A
+>struct GInterfaceInfo</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GInterfaceInfo
+{
+  GInterfaceInitFunc     interface_init;
+  GInterfaceFinalizeFunc interface_finalize;
+  gpointer               interface_data;
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+>A structure that provides information to the type system which is
+used specifically for managing interface types.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN533"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtype.html#GINTERFACEINITFUNC"
+>GInterfaceInitFunc</A
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>interface_init</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Location of the function that initializes the interface.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN539"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtype.html#GINTERFACEFINALIZEFUNC"
+>GInterfaceFinalizeFunc</A
+> <TT
+CLASS="STRUCTFIELD"
+><I
+>interface_finalize</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Location of the function that finalizes the interface.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN545"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> <TT
+CLASS="STRUCTFIELD"
+><I
+>interface_data</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Location of user data passed to the <TT
+CLASS="PARAMETER"
+><I
+>interface_init</I
+></TT
+> and
+	 		<TT
+CLASS="PARAMETER"
+><I
+>interface_finalize</I
+></TT
+> functions (optional).&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN553"
+></A
+><H3
+><A
+NAME="GTYPEVALUETABLE"
+></A
+>struct GTypeValueTable</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GTypeValueTable
+{
+  void     (*value_init)         (GValue       *value);
+  void     (*value_free)         (GValue       *value);
+  void     (*value_copy)         (const GValue *src_value,
+				  GValue       *dest_value);
+  /* varargs functionality (optional) */
+  gpointer (*value_peek_pointer) (const GValue *value);
+  gchar	    *collect_format;
+  gchar*   (*collect_value)      (GValue       *value,
+				  guint         n_collect_values,
+				  GTypeCValue  *collect_values,
+				  guint		collect_flags);
+  gchar	    *lcopy_format;
+  gchar*   (*lcopy_value)        (const GValue *value,
+				  guint         n_collect_values,
+				  GTypeCValue  *collect_values,
+				  guint		collect_flags);
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+>The <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+> provides the functions required by the <A
+HREF="gobject-generic-values.html#GVALUE"
+>GValue</A
+> implementation,
+to serve as a container for values of a type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN561"><SPAN
+STYLE="white-space: nowrap"
+>void (*<TT
+CLASS="STRUCTFIELD"
+><I
+>value_init</I
+></TT
+>) (GValue       *value)</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Default initialize <TT
+CLASS="PARAMETER"
+><I
+>values</I
+></TT
+> contents by poking values
+			directly into the value-&gt;data array. The data array of
+			the <A
+HREF="gobject-generic-values.html#GVALUE"
+>GValue</A
+> passed into this function was zero-filled
+			with <TT
+CLASS="FUNCTION"
+>memset()</TT
+>, so no care has to
+                        be taken to free any
+			old contents. E.g. for the implementation of a string
+			value that may never be <TT
+CLASS="LITERAL"
+>NULL</TT
+>, the implementation might
+			look like:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  value-&gt;data[0].v_pointer = g_strdup ("");
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN573"><SPAN
+STYLE="white-space: nowrap"
+>void (*<TT
+CLASS="STRUCTFIELD"
+><I
+>value_free</I
+></TT
+>) (GValue       *value)</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Free any old contents that might be left in the
+			data array of the passed in <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+>. No resources may
+			remain allocated through the <A
+HREF="gobject-generic-values.html#GVALUE"
+>GValue</A
+> contents after
+			this function returns. E.g. for our above string type:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  /* only free strings without a specific flag for static storage */
+  if (!(value-&gt;data[1].v_uint &#38; G_VALUE_NOCOPY_CONTENTS))
+    g_free (value-&gt;data[0].v_pointer);
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN582"><SPAN
+STYLE="white-space: nowrap"
+>void (*<TT
+CLASS="STRUCTFIELD"
+><I
+>value_copy</I
+></TT
+>) (const GValue *src_value,
+				  GValue       *dest_value)</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		<TT
+CLASS="PARAMETER"
+><I
+>dest_value</I
+></TT
+> is a <A
+HREF="gobject-generic-values.html#GVALUE"
+>GValue</A
+> with zero-filled data section
+			and <TT
+CLASS="PARAMETER"
+><I
+>src_value</I
+></TT
+> is a properly setup <A
+HREF="gobject-generic-values.html#GVALUE"
+>GValue</A
+> of same or
+			derived type.
+			The purpose of this function is to copy the contents of
+			<TT
+CLASS="PARAMETER"
+><I
+>src_value</I
+></TT
+> into <TT
+CLASS="PARAMETER"
+><I
+>dest_value</I
+></TT
+> in a way, that even after
+			<TT
+CLASS="PARAMETER"
+><I
+>src_value</I
+></TT
+> has been freed, the contents of <TT
+CLASS="PARAMETER"
+><I
+>dest_value</I
+></TT
+>
+			remain valid. String type example:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  dest_value-&gt;data[0].v_pointer = g_strdup (src_value-&gt;data[0].v_pointer);
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN597"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> (*<TT
+CLASS="STRUCTFIELD"
+><I
+>value_peek_pointer</I
+></TT
+>) (const GValue *value)</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	If the value contents fit into a pointer, such as objects
+			or strings, return this pointer, so the caller can peek at
+			the current contents. To extend on our above string example:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  return value-&gt;data[0].v_pointer;
+}</PRE
+></TD
+></TR
+></TABLE
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN605"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *<TT
+CLASS="STRUCTFIELD"
+><I
+>collect_format</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	A string format describing how to collect the contents of
+			this value, bit-by-bit. Each character in the format represents
+			an argument to be collected, the characters themselves indicate
+			the type of the argument. Currently supported arguments are:
+<P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN613"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>        'i' - Integers. passed as collect_values[].v_int.
+  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN617"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>        'l' - Longs. passed as collect_values[].v_long.
+  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN621"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>        'd' - Doubles. passed as collect_values[].v_double.
+  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN625"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>        'p' - Pointers. passed as collect_values[].v_pointer.
+  </P
+></TD
+></TR
+></TBODY
+></TABLE
+>
+			It should be noted, that for variable argument list construction,
+			ANSI C promotes every type smaller than an integer to an int, and
+			floats to doubles. So for collection of short int or char, 'i'
+			needs to be used, and for collection of floats 'd'.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN629"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A>* (*<TT
+CLASS="STRUCTFIELD"
+><I
+>collect_value</I
+></TT
+>) (GValue       *value,
+				  guint         n_collect_values,
+				  GTypeCValue  *collect_values,
+				  guint		collect_flags)</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The collect_value() function is responsible for converting the
+			values collected from a variable argument list into contents
+			suitable for storage in a GValue. This function should setup
+			<TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+> similar to value_init(), e.g. for a string value that
+			does not allow <TT
+CLASS="LITERAL"
+>NULL</TT
+> pointers, it needs to either spew an error,
+			or do an implicit conversion by storing an empty string.
+			The <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+> passed in to this function has a zero-filled data
+			array, so just like for value_init() it is guaranteed to not
+			contain any old contents that might need freeing.
+			<TT
+CLASS="PARAMETER"
+><I
+>n_collect_values</I
+></TT
+> is exactly the string length of <TT
+CLASS="PARAMETER"
+><I
+>collect_format</I
+></TT
+>,
+			and <TT
+CLASS="PARAMETER"
+><I
+>collect_values</I
+></TT
+> is an array of unions <A
+HREF="gobject-varargs-value-collection.html#GTYPECVALUE"
+>GTypeCValue</A
+> with
+			length <TT
+CLASS="PARAMETER"
+><I
+>n_collect_values</I
+></TT
+>, containing the collected values
+			according to <TT
+CLASS="PARAMETER"
+><I
+>collect_format</I
+></TT
+>.
+			<TT
+CLASS="PARAMETER"
+><I
+>collect_flags</I
+></TT
+> is an argument provided as a hint by the caller,
+			which may contain the flag G_VALUE_NOCOPY_CONTENTS indicating,
+			that the collected value contents may be considered "static"
+			for the duration of the <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+> lifetime.
+			Thus an extra copy of the contents stored in <TT
+CLASS="PARAMETER"
+><I
+>collect_values</I
+></TT
+> is
+			not required for assignment to <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+>.
+			For our above string example, we continue with:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  if (!collect_values[0].v_pointer)
+    value-&#62;data[0].v_pointer = g_strdup ("");
+  else if (collect_flags &#38; G_VALUE_NOCOPY_CONTENTS)
+    {
+      value-&gt;data[0].v_pointer = collect_values[0].v_pointer;
+      /* keep a flag for the value_free() implementation to not free this string */
+      value-&gt;data[1].v_uint = G_VALUE_NOCOPY_CONTENTS;
+    }
+  else
+    value-&gt;data[0].v_pointer = g_strdup (collect_values[0].v_pointer);
+
+  return NULL;
+}</PRE
+></TD
+></TR
+></TABLE
+>
+			It should be noted, that it is generally a bad idea to follow the
+			G_VALUE_NOCOPY_CONTENTS hint for reference counted types. Due to
+			reentrancy requirements and reference count assertions performed
+			by the GSignal code, reference counts should always be incremented
+			for reference counted contents stored in the value-&gt;data array.
+			To deviate from our string example for a moment, and taking a look
+			at an exemplary implementation for collect_value() of <A
+HREF="gobject-the-base-object-type.html#GOBJECT"
+>GObject</A
+>:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  if (collect_values[0].v_pointer)
+    {
+      GObject *object = G_OBJECT (collect_values[0].v_pointer);
+
+      /* never honour G_VALUE_NOCOPY_CONTENTS for ref-counted types */
+      value-&gt;data[0].v_pointer = g_object_ref (object);
+      return NULL;
+    }
+  else
+    return g_strdup_printf ("Object passed as invalid NULL pointer");
+}</PRE
+></TD
+></TR
+></TABLE
+>
+			The reference count for valid objects is always incremented,
+			regardless of <TT
+CLASS="PARAMETER"
+><I
+>collect_flags</I
+></TT
+>. For invalid objects, the example
+			returns a newly allocated string without altering <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+>.
+			Upon success, collect_value() needs to return <TT
+CLASS="LITERAL"
+>NULL</TT
+>, if however
+			a malicious condition occurred, collect_value() may spew an
+			error by returning a newly allocated non-<TT
+CLASS="LITERAL"
+>NULL</TT
+> string, giving
+			a suitable description of the error condition.
+			The calling code makes no assumptions about the <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+>
+			contents being valid upon error returns, <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+>
+			is simply thrown away without further freeing. As such, it is
+			a good idea to not allocate <A
+HREF="gobject-generic-values.html#GVALUE"
+>GValue</A
+> contents, prior to returning
+			an error, however, collect_values() is not obliged to return
+			a correctly setup <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+> for error returns, simply because
+			any non-<TT
+CLASS="LITERAL"
+>NULL</TT
+> return is considered a fatal condition so further
+			program behaviour is undefined.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN673"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *<TT
+CLASS="STRUCTFIELD"
+><I
+>lcopy_format</I
+></TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Format description of the arguments to collect for <TT
+CLASS="PARAMETER"
+><I
+>lcopy_value</I
+></TT
+>,
+			analogous to <TT
+CLASS="PARAMETER"
+><I
+>collect_format</I
+></TT
+>. Usually, <TT
+CLASS="PARAMETER"
+><I
+>lcopy_format</I
+></TT
+> string consists
+			only of 'p's to provide lcopy_value() with pointers to storage locations.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN683"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A>* (*<TT
+CLASS="STRUCTFIELD"
+><I
+>lcopy_value</I
+></TT
+>) (const GValue *value,
+				  guint         n_collect_values,
+				  GTypeCValue  *collect_values,
+				  guint		collect_flags)</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		This function is responsible for storing the <TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+> contents into
+			arguments passed through a variable argument list which got
+			collected into <TT
+CLASS="PARAMETER"
+><I
+>collect_values</I
+></TT
+> according to <TT
+CLASS="PARAMETER"
+><I
+>lcopy_format</I
+></TT
+>.
+			<TT
+CLASS="PARAMETER"
+><I
+>n_collect_values</I
+></TT
+> equals the string length of <TT
+CLASS="PARAMETER"
+><I
+>lcopy_format</I
+></TT
+>,
+			and <TT
+CLASS="PARAMETER"
+><I
+>collect_flags</I
+></TT
+> may contain G_VALUE_NOCOPY_CONTENTS.
+			In contrast to collect_value(), lcopy_value() is obliged to
+			always properly support G_VALUE_NOCOPY_CONTENTS.
+			Similar to collect_value() the function may prematurely abort
+			by returning a newly allocated string describing an error condition.
+			To complete the string example:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  gchar **string_p = collect_values[0].v_pointer;
+
+  if (!string_p)
+    return g_strdup_printf ("string location passed as NULL");
+
+  if (collect_flags &#38; G_VALUE_NOCOPY_CONTENTS)
+    *string_p = value-&gt;data[0].v_pointer;
+  else
+    *string_p = g_strdup (value-&gt;data[0].v_pointer);
+
+}</PRE
+></TD
+></TR
+></TABLE
+>
+			And an exemplary version of lcopy_value() for
+			reference-counted types:
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="90%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>{
+  GObject **object_p = collect_values[0].v_pointer;
+
+  if (!object_p)
+    return g_strdup_printf ("object location passed as NULL");
+  if (!value-&gt;data[0].v_pointer)
+    *object_p = NULL;
+  else if (collect_flags &#38; G_VALUE_NOCOPY_CONTENTS) /* always honour */
+    *object_p = value-&gt;data[0].v_pointer;
+  else
+    *object_p = g_object_ref (value-&gt;data[0].v_pointer);
+  return NULL;
+}</PRE
+></TD
+></TR
+></TABLE
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN705"
+></A
+><H3
+><A
+NAME="G-TYPE-FROM-INSTANCE-CAPS"
+></A
+>G_TYPE_FROM_INSTANCE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_FROM_INSTANCE(instance)                          (G_TYPE_FROM_CLASS (((GTypeInstance*) (instance))-&gt;g_class))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the type identifier from a given <TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+> structure.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN712"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Location of a valid <A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+> structure.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN718"
+></A
+><H3
+><A
+NAME="G-TYPE-FROM-CLASS-CAPS"
+></A
+>G_TYPE_FROM_CLASS()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_FROM_CLASS(g_class)                              (((GTypeClass*) (g_class))-&gt;g_type)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the type identifier from a given <TT
+CLASS="PARAMETER"
+><I
+>class</I
+></TT
+> structure.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN725"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Location of a valid GTypeClass structure.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN731"
+></A
+><H3
+><A
+NAME="G-TYPE-FROM-INTERFACE-CAPS"
+></A
+>G_TYPE_FROM_INTERFACE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_FROM_INTERFACE(g_iface)                          (((GTypeInterface*) (g_iface))-&gt;g_type)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the type identifier from a given <TT
+CLASS="PARAMETER"
+><I
+>interface</I
+></TT
+> structure.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN738"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_iface</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Location of a valid <A
+HREF="gobject-gtype.html#GTYPEINTERFACE"
+>GTypeInterface</A
+> structure.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN744"
+></A
+><H3
+><A
+NAME="G-TYPE-INSTANCE-GET-CLASS-CAPS"
+></A
+>G_TYPE_INSTANCE_GET_CLASS()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_INSTANCE_GET_CLASS(instance, g_type, c_type)     (_G_TYPE_IGC ((instance), (g_type), c_type))</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the class structure of a given <TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>, casted
+to a specified anchestor type <TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+> of the instance.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN752"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Location of the <A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+> structure.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN758"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The anchestor type of the class to be returned.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN763"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>c_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The corresponding C type of <TT
+CLASS="PARAMETER"
+><I
+>g_Type</I
+></TT
+>.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN769"
+></A
+><H3
+><A
+NAME="G-TYPE-INSTANCE-GET-INTERFACE-CAPS"
+></A
+>G_TYPE_INSTANCE_GET_INTERFACE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_INSTANCE_GET_INTERFACE(instance, g_type, c_type) (_G_TYPE_IGI ((instance), (g_type), c_type))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN775"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN780"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN785"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>c_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN790"
+></A
+><H3
+><A
+NAME="G-TYPE-CHECK-INSTANCE-CAPS"
+></A
+>G_TYPE_CHECK_INSTANCE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHECK_INSTANCE(instance)				(_G_TYPE_CHI ((GTypeInstance*) (instance)))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN796"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN801"
+></A
+><H3
+><A
+NAME="G-TYPE-CHECK-INSTANCE-CAST-CAPS"
+></A
+>G_TYPE_CHECK_INSTANCE_CAST()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHECK_INSTANCE_CAST(instance, g_type, c_type)    (_G_TYPE_CIC ((instance), (g_type), c_type))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN807"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN812"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN817"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>c_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN822"
+></A
+><H3
+><A
+NAME="G-TYPE-CHECK-INSTANCE-TYPE-CAPS"
+></A
+>G_TYPE_CHECK_INSTANCE_TYPE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHECK_INSTANCE_TYPE(instance, g_type)            (_G_TYPE_CIT ((instance), (g_type)))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN828"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN833"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN838"
+></A
+><H3
+><A
+NAME="G-TYPE-CHECK-CLASS-CAST-CAPS"
+></A
+>G_TYPE_CHECK_CLASS_CAST()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHECK_CLASS_CAST(g_class, g_type, c_type)        (_G_TYPE_CCC ((g_class), (g_type), c_type))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN844"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN849"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN854"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>c_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN859"
+></A
+><H3
+><A
+NAME="G-TYPE-CHECK-CLASS-TYPE-CAPS"
+></A
+>G_TYPE_CHECK_CLASS_TYPE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHECK_CLASS_TYPE(g_class, g_type)                (_G_TYPE_CCT ((g_class), (g_type)))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN865"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN870"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN875"
+></A
+><H3
+><A
+NAME="G-TYPE-CHECK-VALUE-CAPS"
+></A
+>G_TYPE_CHECK_VALUE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHECK_VALUE(value)				(_G_TYPE_CHV ((value)))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN881"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN886"
+></A
+><H3
+><A
+NAME="G-TYPE-CHECK-VALUE-TYPE-CAPS"
+></A
+>G_TYPE_CHECK_VALUE_TYPE()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHECK_VALUE_TYPE(value, g_type)			(_G_TYPE_CVH ((value), (g_type)))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN892"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>value</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN897"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN902"
+></A
+><H3
+><A
+NAME="G-TYPE-FLAG-RESERVED-ID-BIT-CAPS"
+></A
+>G_TYPE_FLAG_RESERVED_ID_BIT</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define	G_TYPE_FLAG_RESERVED_ID_BIT	((GType) (1 &lt;&lt; 0))</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN907"
+></A
+><H3
+><A
+NAME="G-TYPE-INIT"
+></A
+>g_type_init ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_init                     (void);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Prior to any use of the type system, <A
+HREF="gobject-gtype.html#G-TYPE-INIT"
+>g_type_init</A
+>() has to be called to initialize
+the type system and assorted other code portions (such as the various fundamental
+type implementations or the signal system).</P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN913"
+></A
+><H3
+><A
+NAME="GTYPEDEBUGFLAGS"
+></A
+>enum GTypeDebugFlags</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>typedef enum	/*&lt; skip &gt;*/
+{
+  G_TYPE_DEBUG_NONE	= 0,
+  G_TYPE_DEBUG_OBJECTS	= 1 &lt;&lt; 0,
+  G_TYPE_DEBUG_SIGNALS	= 1 &lt;&lt; 1,
+  G_TYPE_DEBUG_MASK	= 0x03
+} GTypeDebugFlags;</PRE
+></TD
+></TR
+></TABLE
+><P
+>The <SPAN
+CLASS="TYPE"
+>GTypeDebugFlags</SPAN
+> enumeration values can be passed to
+<A
+HREF="gobject-gtype.html#G-TYPE-INIT-WITH-DEBUG-FLAGS"
+>g_type_init_with_debug_flags</A
+>() to trigger debugging messages during runtime.
+Note that the messages can also be triggered by setting the
+<TT
+CLASS="ENVAR"
+>GOBJECT_DEBUG</TT
+> environment variable to a ':'-separated list of 
+"objects" and "signals".&#13;</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN922"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_DEBUG_NONE</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Print no messages.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN927"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_DEBUG_OBJECTS</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Print messages about object bookkeeping.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN932"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_DEBUG_SIGNALS</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Print messages about signal emissions.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN937"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_DEBUG_MASK</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN942"
+></A
+><H3
+><A
+NAME="G-TYPE-INIT-WITH-DEBUG-FLAGS"
+></A
+>g_type_init_with_debug_flags ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_init_with_debug_flags    (<A
+HREF="gobject-gtype.html#GTYPEDEBUGFLAGS"
+>GTypeDebugFlags</A
+> debug_flags);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Similar to <A
+HREF="gobject-gtype.html#G-TYPE-INIT"
+>g_type_init</A
+>(), but additionally sets debug flags.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN950"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>debug_flags</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Bitwise combination of <A
+HREF="gobject-gtype.html#GTYPEDEBUGFLAGS"
+>GTypeDebugFlags</A
+> values for debugging purposes.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN956"
+></A
+><H3
+><A
+NAME="G-TYPE-NAME"
+></A
+>g_type_name ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>G_CONST_RETURN <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A>* g_type_name           (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Return the unique name that is assigned to a type ID (this is the preferred method
+to find out whether a specific type has been registered for the passed in ID yet).</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN964"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Type to return name for.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN969"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Static type name or <TT
+CLASS="LITERAL"
+>NULL</TT
+>.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN975"
+></A
+><H3
+><A
+NAME="G-TYPE-QNAME"
+></A
+>g_type_qname ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-quarks.html#GQUARK
+>GQuark</A>      g_type_qname                    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Return the corresponding quark of the type IDs name.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN983"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>   Type to return quark of type name for.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN988"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The type names quark or 0.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN993"
+></A
+><H3
+><A
+NAME="G-TYPE-FROM-NAME"
+></A
+>g_type_from_name ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_from_name                (const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *name);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Lookup the type ID from a given type name, returns 0 if no type has been registered under this name
+(this is the preferred method to find out by name whether a specific type has been registered yet).</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1001"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>   Type name to lookup.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1006"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Corresponding type ID or 0.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1011"
+></A
+><H3
+><A
+NAME="G-TYPE-PARENT"
+></A
+>g_type_parent ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_parent                   (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Return the direct parent type of the passed in type.
+If the passed in type has no parent, i.e. is a fundamental type, 0 is returned.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1019"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>   The derived type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1024"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The parent type.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1029"
+></A
+><H3
+><A
+NAME="G-TYPE-DEPTH"
+></A
+>g_type_depth ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A>       g_type_depth                    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the length of the ancestry of the passed in type. This includes the
+type itself, so that e.g. a fundamental type has depth 1.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1037"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>   A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1043"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The depth of <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1049"
+></A
+><H3
+><A
+NAME="G-TYPE-NEXT-BASE"
+></A
+>g_type_next_base ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_next_base                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> leaf_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> root_type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Given a <TT
+CLASS="PARAMETER"
+><I
+>leaf_type</I
+></TT
+> and a <TT
+CLASS="PARAMETER"
+><I
+>root_type</I
+></TT
+> which is contained in its anchestry, return
+the type that <TT
+CLASS="PARAMETER"
+><I
+>root_type</I
+></TT
+> is the immediate parent of.
+In other words, this function determines the type that is derived directly from
+<TT
+CLASS="PARAMETER"
+><I
+>root_type</I
+></TT
+> which is also a base class of <TT
+CLASS="PARAMETER"
+><I
+>leaf_type</I
+></TT
+>.  Given a root type and a
+leaf type, this function can be used to determine the types and order in which
+the leaf type is descended from the root type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1063"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>leaf_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Descendant of <TT
+CLASS="PARAMETER"
+><I
+>root_type</I
+></TT
+> and the type to be returned.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1069"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>root_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Immediate parent of the returned type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1074"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Immediate child of <TT
+CLASS="PARAMETER"
+><I
+>root_type</I
+></TT
+> and anchestor of <TT
+CLASS="PARAMETER"
+><I
+>leaf_type</I
+></TT
+>.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1081"
+></A
+><H3
+><A
+NAME="G-TYPE-IS-A"
+></A
+>g_type_is_a ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GBOOLEAN
+>gboolean</A>    g_type_is_a                     (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> is_a_type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>If <TT
+CLASS="PARAMETER"
+><I
+>is_a_type</I
+></TT
+> is a derivable type, check whether <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is a descendant of <TT
+CLASS="PARAMETER"
+><I
+>is_a_type</I
+></TT
+>.
+If <TT
+CLASS="PARAMETER"
+><I
+>is_a_type</I
+></TT
+> is an interface, check whether <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> conforms to it.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1095"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>     Type to check anchestry for.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1100"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>is_a_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Possible anchestor of <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> or interface <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> could conform to.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1107"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>  <TT
+CLASS="LITERAL"
+>TRUE</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is_a <TT
+CLASS="PARAMETER"
+><I
+>is_a_type</I
+></TT
+> holds true.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1115"
+></A
+><H3
+><A
+NAME="G-TYPE-CLASS-REF"
+></A
+>g_type_class_ref ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    g_type_class_ref                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Increments the reference count of the class structure belonging to
+<TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>. This function will demand-create the class if it doesn't
+exist already.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1124"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	  Type ID of a classed type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1129"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The GTypeClass structure for the given type ID.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1135"
+></A
+><H3
+><A
+NAME="G-TYPE-CLASS-PEEK"
+></A
+>g_type_class_peek ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    g_type_class_peek               (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>This function is essentially the same as <A
+HREF="gobject-gtype.html#G-TYPE-CLASS-REF"
+>g_type_class_ref</A
+>(), except that
+the classes reference count isn't incremented. Therefore, this function
+may return <TT
+CLASS="LITERAL"
+>NULL</TT
+> if the class of the type passed in does not currently
+exist (hasn't been referenced before).</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1145"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Type ID of a classed type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1150"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The GTypeClass structure for the given type ID or <TT
+CLASS="LITERAL"
+>NULL</TT
+>
+		if the class does not currently exist.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1157"
+></A
+><H3
+><A
+NAME="G-TYPE-CLASS-UNREF"
+></A
+>g_type_class_unref ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_class_unref              (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Decrements the reference count of the class structure being passed in.
+Once the last reference count of a class has been released, classes
+may be finalized by the type system, so further dereferencing of a
+class pointer after <A
+HREF="gobject-gtype.html#G-TYPE-CLASS-UNREF"
+>g_type_class_unref</A
+>() are invalid.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1165"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The GTypeClass structure to unreference.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1171"
+></A
+><H3
+><A
+NAME="G-TYPE-CLASS-PEEK-PARENT"
+></A
+>g_type_class_peek_parent ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    g_type_class_peek_parent        (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);</PRE
+></TD
+></TR
+></TABLE
+><P
+>This is a convenience function, often needed in class initializers.
+It essentially takes the immediate parent type of the class passed in,
+and returns the class structure thereof. Since derived classes hold
+a reference count on their parent classes as long as they are instantiated,
+the returned class will always exist. This function is essentially
+equivalent to:
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>g_type_class_peek (g_type_parent (G_TYPE_FROM_CLASS (g_class)));</PRE
+></TD
+></TR
+></TABLE
+>&#13;</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1181"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The GTypeClass structure to retrieve the parent class for.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1187"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The parent class of <TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1193"
+></A
+><H3
+><A
+NAME="G-TYPE-INTERFACE-PEEK"
+></A
+>g_type_interface_peek ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    g_type_interface_peek           (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> instance_class,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> iface_type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the <A
+HREF="gobject-gtype.html#GTYPEINTERFACE"
+>GTypeInterface</A
+> structure of an interface to which the passed in 
+class conforms.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1203"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>A GTypeClass structure.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1209"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>iface_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>    An interface ID which this class conforms to.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1214"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>       The <A
+HREF="gobject-gtype.html#GTYPEINTERFACE"
+>GTypeInterface</A
+> structure of <TT
+CLASS="PARAMETER"
+><I
+>iface_type</I
+></TT
+>, or <TT
+CLASS="LITERAL"
+>NULL</TT
+> if the
+                 class is not instantiated.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1222"
+></A
+><H3
+><A
+NAME="G-TYPE-INTERFACE-PEEK-PARENT"
+></A
+>g_type_interface_peek_parent ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    g_type_interface_peek_parent    (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_iface);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1230"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_iface</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1235"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1240"
+></A
+><H3
+><A
+NAME="G-TYPE-CHILDREN"
+></A
+>g_type_children ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>*      g_type_children                 (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A> *n_children);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Return a newly allocated and 0-terminated array of type IDs, listing the
+child types of <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>. The return value has to be <A
+HREF=../glib/glib-memory-allocation.html#G-FREE
+>g_free</A>()ed after use.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1251"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>      The parent type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1256"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>n_children</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Optional <A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A> pointer to contain the number of child types.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1262"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>   Newly allocated and 0-terminated array of child types.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1267"
+></A
+><H3
+><A
+NAME="G-TYPE-INTERFACES"
+></A
+>g_type_interfaces ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>*      g_type_interfaces               (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A> *n_interfaces);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Return a newly allocated and 0-terminated array of type IDs, listing the
+interface types that <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> conforms to. The return value has to be
+<A
+HREF=../glib/glib-memory-allocation.html#G-FREE
+>g_free</A>()ed after use.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1278"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>        The type to list interface types for.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1283"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>n_interfaces</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Optional <A
+HREF=../glib/glib-basic-types.html#GUINT
+>guint</A> pointer to contain the number of interface types.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1289"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>     Newly allocated and 0-terminated array of interface types.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1294"
+></A
+><H3
+><A
+NAME="G-TYPE-SET-QDATA"
+></A
+>g_type_set_qdata ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_set_qdata                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-quarks.html#GQUARK
+>GQuark</A> quark,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> data);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1303"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1308"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>quark</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1313"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1318"
+></A
+><H3
+><A
+NAME="G-TYPE-GET-QDATA"
+></A
+>g_type_get_qdata ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A>    g_type_get_qdata                (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF=../glib/glib-quarks.html#GQUARK
+>GQuark</A> quark);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1327"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1332"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>quark</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1337"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1342"
+></A
+><H3
+><A
+NAME="G-TYPE-QUERY"
+></A
+>g_type_query ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_query                    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type,
+                                             <A
+HREF="gobject-gtype.html#GTYPEQUERY"
+>GTypeQuery</A
+> *query);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1350"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1355"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>query</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1360"
+></A
+><H3
+><A
+NAME="GTYPEQUERY"
+></A
+>struct GTypeQuery</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GTypeQuery
+{
+  GType		type;
+  const gchar  *type_name;
+  guint		class_size;
+  guint		instance_size;
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1365"
+></A
+><H3
+><A
+NAME="GBASEINITFUNC"
+></A
+>GBaseInitFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        (*GBaseInitFunc)                (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);</PRE
+></TD
+></TR
+></TABLE
+><P
+>A callback function used by the type system to do base initialization
+of the class structures of derived types. It is called as part of the
+initialization process of all derived classes and should reallocate
+or reset all dynamic class members copied over from the parent class.
+Therefore class members, e.g. strings, that are not sufficiently
+handled by a plain memory copy of the parent class into the derived class
+have to be altered. See <A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>GClassInitFunc</A
+>() for a discussion of the class
+intialization process.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1373"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The GTypeClass structure to initialize.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1379"
+></A
+><H3
+><A
+NAME="GBASEFINALIZEFUNC"
+></A
+>GBaseFinalizeFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        (*GBaseFinalizeFunc)            (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);</PRE
+></TD
+></TR
+></TABLE
+><P
+>A callback function used by the type system to finalize those portions
+of a derived types class structure that were setup from the corresponding
+<A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>() function. Class finalization basically works the inverse
+way in which class intialization is performed.
+See <A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>GClassInitFunc</A
+>() for a discussion of the class intialization process.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1388"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The GTypeClass structure to finalize.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1394"
+></A
+><H3
+><A
+NAME="GCLASSINITFUNC"
+></A
+>GClassInitFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        (*GClassInitFunc)               (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> class_data);</PRE
+></TD
+></TR
+></TABLE
+><P
+>A callback function used by the type system to initialize the class
+of a specific type. This function should initialize all static class
+members.
+The initialization process of a class involves:
+<P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1402"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	1 - Copying common members from the parent class over to the
+	derived class structure.
+  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1406"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	2 -  Zero initialization of the remaining members not copied
+	over from the parent class.
+  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1410"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	3 - Invocation of the <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>() initializers of all parent
+	types and the class' type.
+  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1415"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	4 - Invocation of the class' <A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>GClassInitFunc</A
+>() initializer.
+  </P
+></TD
+></TR
+></TBODY
+></TABLE
+>
+Since derived classes are partially initialized through a memory copy
+of the parent class, the general rule is that <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>() and
+<A
+HREF="gobject-gtype.html#GBASEFINALIZEFUNC"
+>GBaseFinalizeFunc</A
+>() should take care of necessary reinitialization
+and release of those class members that were introduced by the type
+that specified these <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>()/<A
+HREF="gobject-gtype.html#GBASEFINALIZEFUNC"
+>GBaseFinalizeFunc</A
+>().
+<A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>GClassInitFunc</A
+>() should only care about initializing static
+class members, while dynamic class members (such as allocated strings
+or reference counted resources) are better handled by a <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>()
+for this type, so proper initialization of the dynamic class members
+is performed for class initialization of derived types as well.
+An example may help to correspond the intend of the different class
+initializers:
+
+<TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>typedef struct {
+  GObjectClass parent_class;
+  gint         static_integer;
+  gchar       *dynamic_string;
+} TypeAClass;
+static void
+type_a_base_class_init (TypeAClass *class)
+{
+  class-&#62;dynamic_string = g_strdup ("some string");
+}
+static void
+type_a_base_class_finalize (TypeAClass *class)
+{
+  g_free (class-&#62;dynamic_string);
+}
+static void
+type_a_class_init (TypeAClass *class)
+{
+  class-&#62;static_integer = 42;
+}
+
+typedef struct {
+  TypeAClass   parent_class;
+  gfloat       static_float;
+  GString     *dynamic_gstring;
+} TypeBClass;
+static void
+type_b_base_class_init (TypeBClass *class)
+{
+  class-&#62;dynamic_gstring = g_string_new ("some other string");
+}
+static void
+type_b_base_class_finalize (TypeBClass *class)
+{
+  g_string_free (class-&#62;dynamic_gstring);
+}
+static void
+type_b_class_init (TypeBClass *class)
+{
+  class-&#62;static_float = 3.14159265358979323846;
+}</PRE
+></TD
+></TR
+></TABLE
+>
+Initialization of TypeBClass will first cause initialization of
+TypeAClass (derived classes reference their parent classes, see
+<A
+HREF="gobject-gtype.html#G-TYPE-CLASS-REF"
+>g_type_class_ref</A
+>() on this).
+Initialization of TypeAClass roughly involves zero-initializing its fields,
+then calling its <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>() type_a_base_class_init() that allocates
+its dynamic members (dynamic_string) and finally calling its <A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>GClassInitFunc</A
+>()
+type_a_class_init() to initialize its static members (static_integer).
+The first step in the initialization process of TypeBClass is then
+a plain memory copy of the contents of TypeAClass into TypeBClass and 
+zero-initialization of the remaining fields in TypeBClass.
+The dynamic members of TypeAClass within TypeBClass now need
+reinitialization which is performed by calling type_a_base_class_init()
+with an argument of TypeBClass.
+After that, the <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>() of TypeBClass, type_b_base_class_init()
+is called to allocate the dynamic members of TypeBClass (dynamic_gstring),
+and finally the <A
+HREF="gobject-gtype.html#GCLASSINITFUNC"
+>GClassInitFunc</A
+>() of TypeBClass, type_b_class_init(),
+is called to complete the initialization process with the static members
+(static_float).
+Corresponding finalization counter parts to the <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>() functions
+have to be provided to release allocated resources at class finalization
+time.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1440"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The GTypeClass structure to initialize.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1446"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>class_data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The <TT
+CLASS="PARAMETER"
+><I
+>class_data</I
+></TT
+> member supplied via the <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1453"
+></A
+><H3
+><A
+NAME="GCLASSFINALIZEFUNC"
+></A
+>GClassFinalizeFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        (*GClassFinalizeFunc)           (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> class_data);</PRE
+></TD
+></TR
+></TABLE
+><P
+>A callback function used by the type system to finalize a class.
+This function is rarely needed, as dynamically allocated class resources
+should be handled by <A
+HREF="gobject-gtype.html#GBASEINITFUNC"
+>GBaseInitFunc</A
+>() and <A
+HREF="gobject-gtype.html#GBASEFINALIZEFUNC"
+>GBaseFinalizeFunc</A
+>().
+Also, specification of a <A
+HREF="gobject-gtype.html#GCLASSFINALIZEFUNC"
+>GClassFinalizeFunc</A
+>() in the <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+>
+structure of a static type is invalid, because classes of static types
+will never be finalized (they are artificially kept alive when their
+reference count drops to zero).</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1465"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The GTypeClass structure to finalize.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1471"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>class_data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The <TT
+CLASS="PARAMETER"
+><I
+>class_data</I
+></TT
+> member supplied via the <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1478"
+></A
+><H3
+><A
+NAME="GINSTANCEINITFUNC"
+></A
+>GInstanceInitFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        (*GInstanceInitFunc)            (<A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+> *instance,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);</PRE
+></TD
+></TR
+></TABLE
+><P
+>A callback function used by the type system to initialize a new
+instance of a type. This function initializes all instance members and
+allocates any resources required by it.
+Initialization of a derived instance involves calling all its parent
+types instance initializers, therefore the class member of the instance
+is altered during its initialization to always point to the class that
+belongs to the type the current initializer was introduced for.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1486"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The instance to initialize.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1491"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The class of the type the instance is created for.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1496"
+></A
+><H3
+><A
+NAME="GINTERFACEINITFUNC"
+></A
+>GInterfaceInitFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        (*GInterfaceInitFunc)           (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_iface,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> iface_data);</PRE
+></TD
+></TR
+></TABLE
+><P
+>A callback function used by the type system to initialize a new
+interface.  This function should initialize all internal data and
+allocate any resources required by the interface.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1504"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_iface</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The interface structure to initialize.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1509"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>iface_data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The <TT
+CLASS="PARAMETER"
+><I
+>class_data</I
+></TT
+> supplied via the <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1516"
+></A
+><H3
+><A
+NAME="GINTERFACEFINALIZEFUNC"
+></A
+>GInterfaceFinalizeFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        (*GInterfaceFinalizeFunc)       (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_iface,
+                                             <A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> iface_data);</PRE
+></TD
+></TR
+></TABLE
+><P
+>A callback function used by the type system to finalize an interface.
+This function should destroy any internal data and release any resources
+allocated by the corresponding <A
+HREF="gobject-gtype.html#GINTERFACEINITFUNC"
+>GInterfaceInitFunc</A
+>() function.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1525"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_iface</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The interface structure to finalize.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1530"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>iface_data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The <TT
+CLASS="PARAMETER"
+><I
+>class_data</I
+></TT
+> supplied via the <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1537"
+></A
+><H3
+><A
+NAME="GTYPECLASSCACHEFUNC"
+></A
+>GTypeClassCacheFunc ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GBOOLEAN
+>gboolean</A>    (*GTypeClassCacheFunc)          (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> cache_data,
+                                             GTypeClass *g_class);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1546"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>cache_data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1551"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1556"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1561"
+></A
+><H3
+><A
+NAME="GTYPEFLAGS"
+></A
+>enum GTypeFlags</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>typedef enum    /*&lt; skip &gt;*/
+{
+  G_TYPE_FLAG_ABSTRACT		= (1 &lt;&lt; 4),
+  G_TYPE_FLAG_VALUE_ABSTRACT	= (1 &lt;&lt; 5)
+} GTypeFlags;</PRE
+></TD
+></TR
+></TABLE
+><P
+>Bit masks used to check or determine characteristics of a type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1567"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_FLAG_ABSTRACT</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Indicates an abstract type. No instances can be
+			created for an abstract type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1572"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_FLAG_VALUE_ABSTRACT</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1577"
+></A
+><H3
+><A
+NAME="GTYPEFUNDAMENTALFLAGS"
+></A
+>enum GTypeFundamentalFlags</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>typedef enum    /*&lt; skip &gt;*/
+{
+  G_TYPE_FLAG_CLASSED           = (1 &lt;&lt; 0),
+  G_TYPE_FLAG_INSTANTIATABLE    = (1 &lt;&lt; 1),
+  G_TYPE_FLAG_DERIVABLE         = (1 &lt;&lt; 2),
+  G_TYPE_FLAG_DEEP_DERIVABLE    = (1 &lt;&lt; 3)
+} GTypeFundamentalFlags;</PRE
+></TD
+></TR
+></TABLE
+><P
+>Bit masks used to check or determine specific characteristics of a
+fundamental type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1583"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_FLAG_CLASSED</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Indicates a classed type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1588"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_FLAG_INSTANTIATABLE</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Indicates an instantiable type (implies classed).</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1593"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_FLAG_DERIVABLE</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Indicates a flat derivable type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1598"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="LITERAL"
+>G_TYPE_FLAG_DEEP_DERIVABLE</TT
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Indicates a deep derivable type (implies derivable).&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1603"
+></A
+><H3
+><A
+NAME="G-TYPE-REGISTER-STATIC"
+></A
+>g_type_register_static ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_register_static          (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> parent_type,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> *info,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Registers <TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+> as the name of a new static type derived from
+<TT
+CLASS="PARAMETER"
+><I
+>parent_type</I
+></TT
+>.  The type system uses the information contained in the
+<A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure pointed to by <TT
+CLASS="PARAMETER"
+><I
+>info</I
+></TT
+> to manage the type and its
+instances (if not abstract).  The value of <TT
+CLASS="PARAMETER"
+><I
+>flags</I
+></TT
+> determines the nature
+(e.g. abstract or not) of the type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1619"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>parent_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Type which this type will be derived from.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1624"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	0-terminated string used as the name of the new type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1629"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>info</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		The <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure for this type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1635"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>flags</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Bitwise combination of <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> values.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1641"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The new type identifier.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1646"
+></A
+><H3
+><A
+NAME="G-TYPE-REGISTER-DYNAMIC"
+></A
+>g_type_register_dynamic ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_register_dynamic         (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> parent_type,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> *plugin,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Registers <TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+> as the name of a new dynamic type derived from
+<TT
+CLASS="PARAMETER"
+><I
+>parent_type</I
+></TT
+>.  The type system uses the information contained in the
+<A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> structure pointed to by <TT
+CLASS="PARAMETER"
+><I
+>plugin</I
+></TT
+> to manage the type and its
+instances (if not abstract).  The value of <TT
+CLASS="PARAMETER"
+><I
+>flags</I
+></TT
+> determines the nature
+(e.g. abstract or not) of the type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1662"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>parent_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	Type which this type will be derived from.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1667"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	0-terminated string used as the name of the new type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1672"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>plugin</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> structure to retrieve the <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> from.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1679"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>flags</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Bitwise combination of <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> values.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1685"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The new type identifier or <A
+HREF="gobject-gtype.html#G-TYPE-INVALID-CAPS"
+>G_TYPE_INVALID</A
+> if registration failed.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1691"
+></A
+><H3
+><A
+NAME="G-TYPE-REGISTER-FUNDAMENTAL"
+></A
+>g_type_register_fundamental ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_register_fundamental     (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type_id,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> *info,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEFUNDAMENTALINFO"
+>GTypeFundamentalInfo</A
+> *finfo,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Registers <TT
+CLASS="PARAMETER"
+><I
+>type_id</I
+></TT
+> as the predefined identifier and <TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+> as the
+name of a fundamental type.  The type system uses the information
+contained in the <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure pointed to by <TT
+CLASS="PARAMETER"
+><I
+>info</I
+></TT
+> and the 
+<A
+HREF="gobject-gtype.html#GTYPEFUNDAMENTALINFO"
+>GTypeFundamentalInfo</A
+> structure pointed to by <TT
+CLASS="PARAMETER"
+><I
+>finfo</I
+></TT
+> to manage the
+type and its instances.  The value of <TT
+CLASS="PARAMETER"
+><I
+>flags</I
+></TT
+> determines additional
+characteristics of the fundamental type.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1710"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type_id</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	A predefined GTypeFundamentals value.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1716"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	0-terminated string used as the name of the new type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1721"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>info</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		The <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> structure for this type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1727"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>finfo</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		The <A
+HREF="gobject-gtype.html#GTYPEFUNDAMENTALINFO"
+>GTypeFundamentalInfo</A
+> structure for this type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1733"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>flags</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		Bitwise combination of <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> values.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1739"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The predefined type identifier.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1744"
+></A
+><H3
+><A
+NAME="G-TYPE-ADD-INTERFACE-STATIC"
+></A
+>g_type_add_interface_static ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_add_interface_static     (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             const <A
+HREF="gobject-gtype.html#GINTERFACEINFO"
+>GInterfaceInfo</A
+> *info);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Adds the static <TT
+CLASS="PARAMETER"
+><I
+>interface_type</I
+></TT
+> to <TT
+CLASS="PARAMETER"
+><I
+>instantiable_type</I
+></TT
+>.  The information
+contained in the GTypeInterfaceInfo structure pointed to by <TT
+CLASS="PARAMETER"
+><I
+>info</I
+></TT
+>
+is used to manage the relationship.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1757"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	 <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value of an instantiable type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1763"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>interface_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value of an interface type.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1769"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>info</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		 The <A
+HREF="gobject-gtype.html#GINTERFACEINFO"
+>GInterfaceInfo</A
+> structure for this
+		 (<TT
+CLASS="PARAMETER"
+><I
+>instance_type</I
+></TT
+>, <TT
+CLASS="PARAMETER"
+><I
+>interface_type</I
+></TT
+>) combination.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1777"
+></A
+><H3
+><A
+NAME="G-TYPE-ADD-INTERFACE-DYNAMIC"
+></A
+>g_type_add_interface_dynamic ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_add_interface_dynamic    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> *plugin);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1786"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1791"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>interface_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1796"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>plugin</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1801"
+></A
+><H3
+><A
+NAME="G-TYPE-INTERFACE-ADD-PREREQUISITE"
+></A
+>g_type_interface_add_prerequisite ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_interface_add_prerequisite
+                                            (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> prerequisite_type);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1809"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>interface_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1814"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>prerequisite_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1819"
+></A
+><H3
+><A
+NAME="G-TYPE-GET-PLUGIN"
+></A
+>g_type_get_plugin ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+>* g_type_get_plugin              (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> structure for <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> or
+<TT
+CLASS="LITERAL"
+>NULL</TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> does not have a <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+> structure.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1832"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>		The <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> to retrieve the plugin for.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1838"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	The corresponding plugin if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is a dynamic type,
+		<TT
+CLASS="LITERAL"
+>NULL</TT
+> otherwise.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1845"
+></A
+><H3
+><A
+NAME="G-TYPE-INTERFACE-GET-PLUGIN"
+></A
+>g_type_interface_get_plugin ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+>* g_type_interface_get_plugin    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> implementation_type);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1854"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1859"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>implementation_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1864"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1869"
+></A
+><H3
+><A
+NAME="G-TYPE-FUNDAMENTAL-NEXT"
+></A
+>g_type_fundamental_next ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_fundamental_next         (void);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the next free fundamental type id which can be used to
+register a new fundamental type with <A
+HREF="gobject-gtype.html#G-TYPE-REGISTER-FUNDAMENTAL"
+>g_type_register_fundamental</A
+>().
+The returned type ID represents the highest currently registered
+fundamental type identifier.&#13;</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1877"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The nextmost fundamental type ID to be registered,
+          or 0 if the type system ran out of fundamental type IDs.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1882"
+></A
+><H3
+><A
+NAME="G-TYPE-FUNDAMENTAL"
+></A
+>g_type_fundamental ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_fundamental              (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type_id);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Internal function, used to extract the fundamental type ID portion.
+use <A
+HREF="gobject-gtype.html#G-TYPE-FUNDAMENTAL-CAPS"
+>G_TYPE_FUNDAMENTAL</A
+>() instead.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1891"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type_id</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>valid type ID</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1896"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>fundamental type ID
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1901"
+></A
+><H3
+><A
+NAME="G-TYPE-CREATE-INSTANCE"
+></A
+>g_type_create_instance ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+>* g_type_create_instance       (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Creates and initializes an instance of <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> if <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> is valid and can
+be instantiated. The type system only performs basic allocation and
+structure setups for instances, actual instance creation should happen
+through functions supplied by the type's fundamental type implementation.
+So use of <A
+HREF="gobject-gtype.html#G-TYPE-CREATE-INSTANCE"
+>g_type_create_instance</A
+>() is reserved for implementators of
+fundamental types only. E.g. instances of the <A
+HREF="gobject-the-base-object-type.html#GOBJECT"
+>GObject</A
+> hierarchy
+should be created via <A
+HREF="gobject-the-base-object-type.html#G-OBJECT-NEW"
+>g_object_new</A
+>() and <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>never</I
+></SPAN
+>
+directly through <A
+HREF="gobject-gtype.html#G-TYPE-CREATE-INSTANCE"
+>g_type_create_instance</A
+>() which doesn't handle
+things like singleton objects or object construction.
+Note: Do <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>not</I
+></SPAN
+> use this function, unless you're
+implementing a fundamental type. Also language bindings should <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>not</I
+></SPAN
+>
+use this function but <A
+HREF="gobject-the-base-object-type.html#G-OBJECT-NEW"
+>g_object_new</A
+>() instead.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1919"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	  An instantiabtable type to create an instance for.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1924"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>An allocated and initialized instance, subject to further
+	  treatment by the fundamental type implementation.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1929"
+></A
+><H3
+><A
+NAME="G-TYPE-FREE-INSTANCE"
+></A
+>g_type_free_instance ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_free_instance            (<A
+HREF="gobject-gtype.html#GTYPEINSTANCE"
+>GTypeInstance</A
+> *instance);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1936"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1941"
+></A
+><H3
+><A
+NAME="G-TYPE-ADD-CLASS-CACHE-FUNC"
+></A
+>g_type_add_class_cache_func ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_add_class_cache_func     (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> cache_data,
+                                             <A
+HREF="gobject-gtype.html#GTYPECLASSCACHEFUNC"
+>GTypeClassCacheFunc</A
+> cache_func);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1949"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>cache_data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1954"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>cache_func</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1959"
+></A
+><H3
+><A
+NAME="G-TYPE-REMOVE-CLASS-CACHE-FUNC"
+></A
+>g_type_remove_class_cache_func ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_remove_class_cache_func  (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> cache_data,
+                                             <A
+HREF="gobject-gtype.html#GTYPECLASSCACHEFUNC"
+>GTypeClassCacheFunc</A
+> cache_func);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1967"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>cache_data</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1972"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>cache_func</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1977"
+></A
+><H3
+><A
+NAME="G-TYPE-CLASS-UNREF-UNCACHED"
+></A
+>g_type_class_unref_uncached ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_class_unref_uncached     (<A
+HREF=../glib/glib-basic-types.html#GPOINTER
+>gpointer</A> g_class);</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN1984"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>g_class</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN1989"
+></A
+><H3
+><A
+NAME="G-TYPE-VALUE-TABLE-PEEK"
+></A
+>g_type_value_table_peek ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+>* g_type_value_table_peek    (<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> type);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns the location of the <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+> associated with <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>.
+<SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Note, this function should only be used from source code
+that implements or has internal knowledge of the implementation of
+<TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>.</I
+></SPAN
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2001"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>   A <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> value.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2007"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Location of the <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+> associated with <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+> or
+          <TT
+CLASS="LITERAL"
+>NULL</TT
+> if there is no <A
+HREF="gobject-gtype.html#GTYPEVALUETABLE"
+>GTypeValueTable</A
+> associated with <TT
+CLASS="PARAMETER"
+><I
+>type</I
+></TT
+>.
+&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2017"
+></A
+><H3
+><A
+NAME="G-TYPE-INVALID-CAPS"
+></A
+>G_TYPE_INVALID</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_INVALID			G_TYPE_MAKE_FUNDAMENTAL (0)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2022"
+></A
+><H3
+><A
+NAME="G-TYPE-NONE-CAPS"
+></A
+>G_TYPE_NONE</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_NONE			G_TYPE_MAKE_FUNDAMENTAL (1)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2027"
+></A
+><H3
+><A
+NAME="G-TYPE-INTERFACE-CAPS"
+></A
+>G_TYPE_INTERFACE</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_INTERFACE		G_TYPE_MAKE_FUNDAMENTAL (2)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2032"
+></A
+><H3
+><A
+NAME="G-TYPE-CHAR-CAPS"
+></A
+>G_TYPE_CHAR</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_CHAR			G_TYPE_MAKE_FUNDAMENTAL (3)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2037"
+></A
+><H3
+><A
+NAME="G-TYPE-UCHAR-CAPS"
+></A
+>G_TYPE_UCHAR</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_UCHAR			G_TYPE_MAKE_FUNDAMENTAL (4)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2042"
+></A
+><H3
+><A
+NAME="G-TYPE-BOOLEAN-CAPS"
+></A
+>G_TYPE_BOOLEAN</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_BOOLEAN			G_TYPE_MAKE_FUNDAMENTAL (5)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2047"
+></A
+><H3
+><A
+NAME="G-TYPE-INT-CAPS"
+></A
+>G_TYPE_INT</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_INT			G_TYPE_MAKE_FUNDAMENTAL (6)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2052"
+></A
+><H3
+><A
+NAME="G-TYPE-UINT-CAPS"
+></A
+>G_TYPE_UINT</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_UINT			G_TYPE_MAKE_FUNDAMENTAL (7)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2057"
+></A
+><H3
+><A
+NAME="G-TYPE-LONG-CAPS"
+></A
+>G_TYPE_LONG</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_LONG			G_TYPE_MAKE_FUNDAMENTAL (8)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2062"
+></A
+><H3
+><A
+NAME="G-TYPE-ULONG-CAPS"
+></A
+>G_TYPE_ULONG</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_ULONG			G_TYPE_MAKE_FUNDAMENTAL (9)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2067"
+></A
+><H3
+><A
+NAME="G-TYPE-INT64-CAPS"
+></A
+>G_TYPE_INT64</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_INT64			G_TYPE_MAKE_FUNDAMENTAL (10)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2072"
+></A
+><H3
+><A
+NAME="G-TYPE-UINT64-CAPS"
+></A
+>G_TYPE_UINT64</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_UINT64			G_TYPE_MAKE_FUNDAMENTAL (11)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2077"
+></A
+><H3
+><A
+NAME="G-TYPE-ENUM-CAPS"
+></A
+>G_TYPE_ENUM</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_ENUM			G_TYPE_MAKE_FUNDAMENTAL (12)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2082"
+></A
+><H3
+><A
+NAME="G-TYPE-FLAGS-CAPS"
+></A
+>G_TYPE_FLAGS</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_FLAGS			G_TYPE_MAKE_FUNDAMENTAL (13)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2087"
+></A
+><H3
+><A
+NAME="G-TYPE-FLOAT-CAPS"
+></A
+>G_TYPE_FLOAT</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_FLOAT			G_TYPE_MAKE_FUNDAMENTAL (14)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2092"
+></A
+><H3
+><A
+NAME="G-TYPE-DOUBLE-CAPS"
+></A
+>G_TYPE_DOUBLE</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_DOUBLE			G_TYPE_MAKE_FUNDAMENTAL (15)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2097"
+></A
+><H3
+><A
+NAME="G-TYPE-STRING-CAPS"
+></A
+>G_TYPE_STRING</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_STRING			G_TYPE_MAKE_FUNDAMENTAL (16)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2102"
+></A
+><H3
+><A
+NAME="G-TYPE-POINTER-CAPS"
+></A
+>G_TYPE_POINTER</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_POINTER			G_TYPE_MAKE_FUNDAMENTAL (17)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2107"
+></A
+><H3
+><A
+NAME="G-TYPE-BOXED-CAPS"
+></A
+>G_TYPE_BOXED</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_BOXED			G_TYPE_MAKE_FUNDAMENTAL (18)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2112"
+></A
+><H3
+><A
+NAME="G-TYPE-PARAM-CAPS"
+></A
+>G_TYPE_PARAM</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_PARAM			G_TYPE_MAKE_FUNDAMENTAL (19)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2117"
+></A
+><H3
+><A
+NAME="G-TYPE-OBJECT-CAPS"
+></A
+>G_TYPE_OBJECT</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_OBJECT			G_TYPE_MAKE_FUNDAMENTAL (20)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2122"
+></A
+><H3
+><A
+NAME="G-TYPE-RESERVED-GLIB-FIRST-CAPS"
+></A
+>G_TYPE_RESERVED_GLIB_FIRST</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_RESERVED_GLIB_FIRST	(21)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2127"
+></A
+><H3
+><A
+NAME="G-TYPE-RESERVED-GLIB-LAST-CAPS"
+></A
+>G_TYPE_RESERVED_GLIB_LAST</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_RESERVED_GLIB_LAST	(31)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2132"
+></A
+><H3
+><A
+NAME="G-TYPE-RESERVED-BSE-FIRST-CAPS"
+></A
+>G_TYPE_RESERVED_BSE_FIRST</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_RESERVED_BSE_FIRST	(32)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2137"
+></A
+><H3
+><A
+NAME="G-TYPE-RESERVED-BSE-LAST-CAPS"
+></A
+>G_TYPE_RESERVED_BSE_LAST</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_RESERVED_BSE_LAST	(48)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2142"
+></A
+><H3
+><A
+NAME="G-TYPE-RESERVED-USER-FIRST-CAPS"
+></A
+>G_TYPE_RESERVED_USER_FIRST</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define G_TYPE_RESERVED_USER_FIRST	(49)</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><BR
+CLEAR="all"><BR><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="gobject-gtypeplugin.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+><TR
+><TD
+COLSPAN="2"
+ALIGN="left"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>API Reference</B
+></FONT
+></TD
+><TD
+COLSPAN="2"
+ALIGN="right"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>GTypePlugin</B
+></FONT
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

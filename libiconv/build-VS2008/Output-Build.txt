@@ -1,0 +1,735 @@
+1>------ Rebuild All started: Project: libiconv_static, Configuration: Release Win32 ------
+1>Deleting intermediate and output files for project 'libiconv_static', configuration 'Release|Win32'
+1>Compiling...
+1>iconv.c
+1>c:\php-sdk\libiconv\lib\ascii.h(25) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ascii.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ascii.h(39) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\ascii.h(36) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ascii.h(36) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf8.h(55) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\utf8.h(27) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf8.h(89) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\utf8.h(95) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf8.h(73) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2.h(56) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2be.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2be.h(39) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2le.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2le.h(39) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4.h(55) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4be.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4be.h(35) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4le.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4le.h(35) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf16be.h(27) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf16be.h(54) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf16le.h(27) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf16le.h(54) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf32be.h(27) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf32be.h(41) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf32le.h(27) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf32le.h(41) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\utf7.h(80) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\utf7.h(90) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\utf7.h(244) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\utf7.h(250) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(252) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(254) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(282) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\utf7.h(292) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(295) : warning C4244: '=' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(298) : warning C4244: '=' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(336) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(338) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\utf7.h(340) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\ucs2internal.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2internal.h(44) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\ucs2internal.h(40) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2swapped.h(28) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\ucs2swapped.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs2swapped.h(47) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\ucs2swapped.h(51) : warning C4244: 'initializing' : conversion from 'ucs4_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\ucs2swapped.h(44) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4internal.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4internal.h(35) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4swapped.h(28) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\ucs4swapped.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ucs4swapped.h(43) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\ucs4swapped.h(40) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\c99.h(47) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\c99.h(68) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\c99.h(29) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\c99.h(99) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\c99.h(111) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\c99.h(118) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\c99.h(96) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\java.h(45) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\java.h(74) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\java.h(28) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\java.h(100) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(107) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(108) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(109) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(110) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(121) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(122) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(123) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(124) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(127) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(128) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(129) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(130) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\java.h(97) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_1.h(25) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_1.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_1.h(36) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_1.h(33) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_1.h(33) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_2.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_2.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_2.h(99) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_2.h(95) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_2.h(95) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_3.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_3.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_3.h(103) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_3.h(99) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_3.h(99) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_4.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_4.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_4.h(99) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_4.h(95) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_4.h(95) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_5.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_5.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_5.h(80) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_5.h(76) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_5.h(76) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_6.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_6.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_6.h(85) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_6.h(81) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_6.h(81) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_7.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_7.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_7.h(92) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_7.h(88) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_7.h(88) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_8.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_8.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_8.h(92) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_8.h(88) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_8.h(88) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_9.h(37) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_9.h(37) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_9.h(72) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_9.h(68) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_9.h(68) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_10.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_10.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_10.h(93) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_10.h(89) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_10.h(89) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_11.h(25) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_11.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_11.h(43) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_11.h(47) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_11.h(40) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_11.h(40) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_13.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_13.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_13.h(96) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_13.h(92) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_13.h(92) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_14.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_14.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_14.h(108) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_14.h(104) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_14.h(104) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_15.h(34) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_15.h(34) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_15.h(64) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_15.h(70) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_15.h(60) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_15.h(60) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_16.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_16.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_16.h(99) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso8859_16.h(95) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso8859_16.h(95) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_r.h(54) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_r.h(54) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_r.h(134) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\koi8_r.h(130) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_r.h(130) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_u.h(54) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_u.h(54) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_u.h(142) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\koi8_u.h(138) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_u.h(138) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_ru.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_ru.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_ru.h(140) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\koi8_ru.h(136) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_ru.h(136) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1250.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1250.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1250.h(120) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1250.h(116) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1250.h(116) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1251.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1251.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1251.h(110) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1251.h(106) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1251.h(106) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1252.h(34) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1252.h(34) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1252.h(82) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1252.h(86) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1252.h(78) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1252.h(78) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1253.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1253.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1253.h(101) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1253.h(97) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1253.h(97) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1254.h(44) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1254.h(44) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1254.h(123) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1254.h(127) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1254.h(119) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1254.h(119) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1255.h(183) : warning C4244: '=' : conversion from 'state_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1255.h(171) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1255.h(302) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1255.h(298) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1256.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1256.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1256.h(130) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1256.h(126) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1256.h(126) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1257.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1257.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1257.h(120) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1257.h(116) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1257.h(116) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1258.h(86) : warning C4244: '=' : conversion from 'state_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1258.h(74) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1258.h(207) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1258.h(211) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1258.h(274) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1258.h(203) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp850.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp850.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp850.h(105) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp850.h(101) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp850.h(101) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp862.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp862.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp862.h(126) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp862.h(136) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp862.h(146) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp862.h(122) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp862.h(122) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp866.h(43) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp866.h(43) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp866.h(106) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp866.h(102) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp866.h(102) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1131.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1131.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1131.h(115) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1131.h(111) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1131.h(111) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_roman.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_roman.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_roman.h(140) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_roman.h(136) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_roman.h(136) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_centraleurope.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_centraleurope.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_centraleurope.h(116) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_centraleurope.h(112) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_centraleurope.h(112) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_iceland.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_iceland.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_iceland.h(137) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_iceland.h(133) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_iceland.h(133) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_croatian.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_croatian.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_croatian.h(142) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_croatian.h(138) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_croatian.h(138) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_romania.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_romania.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_romania.h(142) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_romania.h(138) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_romania.h(138) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_cyrillic.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_cyrillic.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_cyrillic.h(113) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_cyrillic.h(109) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_cyrillic.h(109) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_ukraine.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_ukraine.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_ukraine.h(120) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_ukraine.h(116) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_ukraine.h(116) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_greek.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_greek.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_greek.h(114) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_greek.h(110) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_greek.h(110) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_turkish.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_turkish.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_turkish.h(138) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_turkish.h(134) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_turkish.h(134) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_hebrew.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_hebrew.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_hebrew.h(113) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_hebrew.h(109) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_hebrew.h(109) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_arabic.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_arabic.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_arabic.h(117) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_arabic.h(113) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_arabic.h(113) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_thai.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_thai.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_thai.h(107) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mac_thai.h(103) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mac_thai.h(103) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hp_roman8.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hp_roman8.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hp_roman8.h(98) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\hp_roman8.h(94) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hp_roman8.h(94) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\nextstep.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\nextstep.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\nextstep.h(122) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\nextstep.h(118) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\nextstep.h(118) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\armscii_8.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\armscii_8.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\armscii_8.h(97) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\armscii_8.h(103) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\armscii_8.h(93) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\armscii_8.h(93) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_academy.h(34) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_academy.h(34) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_academy.h(83) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\georgian_academy.h(89) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\georgian_academy.h(95) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\georgian_academy.h(79) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_academy.h(79) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_ps.h(44) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_ps.h(44) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_ps.h(100) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\georgian_ps.h(106) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\georgian_ps.h(96) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\georgian_ps.h(96) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_t.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_t.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_t.h(126) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\koi8_t.h(122) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\koi8_t.h(122) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\pt154.h(40) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\pt154.h(40) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\pt154.h(101) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\pt154.h(97) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\pt154.h(97) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\rk1048.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\rk1048.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\rk1048.h(126) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\rk1048.h(122) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\rk1048.h(122) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mulelao.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mulelao.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mulelao.h(83) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\mulelao.h(79) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\mulelao.h(79) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1133.h(45) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1133.h(45) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1133.h(95) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1133.h(91) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1133.h(91) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\tis620.h(25) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\tis620.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\tis620.h(43) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\tis620.h(47) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\tis620.h(40) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\tis620.h(40) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp874.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp874.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp874.h(94) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp874.h(90) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp874.h(90) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\viscii.h(62) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\viscii.h(62) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\viscii.h(128) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\viscii.h(124) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\viscii.h(124) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\tcvn.h(91) : warning C4244: '=' : conversion from 'state_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\tcvn.h(80) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\tcvn.h(221) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\tcvn.h(276) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\tcvn.h(217) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_jp.h(28) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_jp.h(28) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_jp.h(47) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso646_jp.h(44) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_jp.h(44) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0201.h(25) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0201.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0201.h(49) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\jisx0201.h(61) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\jisx0201.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0201.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0208.h(1012) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0208.h(2376) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0212.h(913) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\jisx0212.h(2156) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_cn.h(26) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_cn.h(26) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_cn.h(45) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso646_cn.h(42) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso646_cn.h(42) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gb2312.h(1081) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gb2312.h(2534) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\isoir165ext.h(160) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\isoir165ext.h(755) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gbkext1.h(828) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gbkext2.h(1149) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gbkext_inv.h(2302) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp936ext.h(37) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp936ext.h(81) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gbk.h(140) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cns11643_1.h(856) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_2.h(1087) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_3.h(943) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_4.h(32) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_5.h(1251) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_6.h(941) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_7.h(961) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_15.h(1056) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cns11643_inv.h(15368) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\big5.h(1873) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\big5.h(4119) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ksc5601.h(1188) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\ksc5601.h(2983) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\johab_hangul.h(104) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\johab_hangul.h(197) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\euc_jp.h(171) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\euc_jp.h(180) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\sjis.h(123) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp932ext.h(148) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp932ext.h(656) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp932.h(194) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(44) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(50) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(57) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(68) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(100) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(136) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(157) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp.h(178) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(45) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(51) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(58) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(69) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(74) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(79) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(112) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(124) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(160) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(181) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(202) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp1.h(224) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(62) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(68) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(75) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(82) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(93) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(100) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(105) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(110) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(117) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(126) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(131) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(138) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(219) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(232) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(245) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(258) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(410) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(441) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(465) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(493) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(518) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(541) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(569) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(596) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jp2.h(626) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\cp50221_0208_ext.h(46) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp50221_0208_ext.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp50221_0208_ext.h(125) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp50221_0208_ext.h(125) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp50221_0212_ext.h(49) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp50221_0212_ext.h(49) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp50221_0212_ext.h(114) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp50221_0212_ext.h(114) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(92) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(98) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(105) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(112) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(123) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(128) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(133) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(146) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(154) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(193) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(234) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(293) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(314) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(332) : warning C4244: 'initializing' : conversion from 'ucs4_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(333) : warning C4244: '=' : conversion from 'int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(365) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(383) : warning C4244: 'initializing' : conversion from 'ucs4_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(384) : warning C4244: '=' : conversion from 'int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso2022_jpms.h(405) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\cp936.h(109) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp936.h(110) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp936.h(116) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp936.h(117) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\gb18030ext.h(46) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gb18030ext.h(244) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gb18030uni.h(170) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gb18030uni.h(250) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\gb18030uni.h(223) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\gb18030.h(331) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\gb18030.h(335) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\gb18030.h(336) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\gb18030.h(353) : warning C4244: 'initializing' : conversion from 'ucs4_t' to 'unsigned short', possible loss of data
+1>c:\php-sdk\libiconv\lib\gb18030.h(374) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(62) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(69) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(76) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(85) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(116) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(123) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(145) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(197) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(220) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(250) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cn.h(275) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(72) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(79) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(86) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(93) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(102) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(111) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(118) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(125) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(132) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(139) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(232) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(239) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(261) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(315) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(338) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(368) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(393) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(415) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(437) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(459) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(481) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(503) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_cnext.h(530) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\hz.h(112) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\hz.h(132) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\cp950ext.h(35) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp950ext.h(120) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp950.h(237) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp950.h(238) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\hkscs1999.h(852) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hkscs1999.h(2952) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\big5hkscs1999.h(109) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\big5hkscs1999.h(136) : warning C4018: '>' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs1999.h(151) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs1999.h(170) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs1999.h(185) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\hkscs2001.h(59) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hkscs2001.h(553) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\big5hkscs2001.h(116) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\big5hkscs2001.h(143) : warning C4018: '>' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2001.h(158) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2001.h(177) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2001.h(188) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2001.h(203) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\hkscs2004.h(78) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hkscs2004.h(545) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\big5hkscs2004.h(121) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\big5hkscs2004.h(148) : warning C4018: '>' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2004.h(163) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2004.h(182) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2004.h(193) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2004.h(204) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2004.h(219) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\hkscs2008.h(55) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\hkscs2008.h(366) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(126) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(153) : warning C4018: '>' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(168) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(187) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(198) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(209) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(220) : warning C4018: '>=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\big5hkscs2008.h(235) : warning C4244: 'initializing' : conversion from 'state_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\uhc_1.h(806) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\uhc_1.h(1699) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\uhc_2.h(488) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\uhc_2.h(996) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp949.h(118) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp949.h(121) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\johab.h(74) : warning C4244: 'initializing' : conversion from 'int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\johab.h(95) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\johab.h(131) : warning C4244: '=' : conversion from 'unsigned int' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\iso2022_kr.h(61) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_kr.h(68) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_kr.h(81) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_kr.h(88) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_kr.h(111) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_kr.h(152) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\iso2022_kr.h(174) : warning C4018: '<' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\cp437.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp437.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp437.h(131) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp437.h(127) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp437.h(127) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp737.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp737.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp737.h(120) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp737.h(116) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp737.h(116) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp775.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp775.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp775.h(125) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp775.h(121) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp775.h(121) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp852.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp852.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp852.h(128) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp852.h(124) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp852.h(124) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp853.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp853.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp853.h(132) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp853.h(128) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp853.h(128) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp855.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp855.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp855.h(111) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp855.h(107) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp855.h(107) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp857.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp857.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp857.h(123) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp857.h(119) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp857.h(119) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp858.h(25) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp858.h(25) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp858.h(42) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp858.h(38) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp858.h(38) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp860.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp860.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp860.h(126) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp860.h(140) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp860.h(122) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp860.h(122) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp861.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp861.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp861.h(131) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp861.h(127) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp861.h(127) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp863.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp863.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp863.h(131) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp863.h(127) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp863.h(127) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp864.h(57) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp864.h(57) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp864.h(157) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp864.h(163) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp864.h(153) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp864.h(153) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp865.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp865.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp865.h(131) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp865.h(127) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp865.h(127) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp869.h(52) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp869.h(52) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp869.h(120) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp869.h(116) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp869.h(116) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1125.h(43) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1125.h(43) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1125.h(110) : warning C4244: '=' : conversion from 'ucs4_t' to 'unsigned char', possible loss of data
+1>c:\php-sdk\libiconv\lib\cp1125.h(106) : warning C4100: 'n' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\cp1125.h(106) : warning C4100: 'conv' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(46) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(90) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(141) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(257) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(330) : warning C4245: '=' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(342) : warning C4245: '=' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(348) : warning C4245: '=' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(358) : warning C4245: '=' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(391) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(404) : warning C4245: '=' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(410) : warning C4245: '=' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(417) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(421) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(478) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(491) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(496) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(502) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(516) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_unicode.h(518) : warning C4018: '<=' : signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(40) : warning C4273: 'mbrtowc' : inconsistent dll linkage
+1>        C:\MsVS09\VC\include\wchar.h(1177) : see previous definition of 'mbrtowc'
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(182) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(195) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(216) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(219) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(251) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(267) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(346) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(379) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(395) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(399) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(420) : warning C4245: 'return' : conversion from 'int' to 'size_t', signed/unsigned mismatch
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(471) : warning C4100: 'outbytesleft' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(471) : warning C4100: 'outbuf' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\loop_wchar.h(470) : warning C4100: 'icd' : unreferenced formal parameter
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(102) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(106) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(192) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(196) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(102) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(106) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(192) : warning C4127: conditional expression is constant
+1>c:\php-sdk\libiconv\lib\iconv_open1.h(196) : warning C4127: conditional expression is constant
+1>..\..\lib\iconv.c(431) : warning C4090: 'function' : different 'const' qualifiers
+1>..\..\lib\iconv.c(563) : warning C4127: conditional expression is constant
+1>..\..\lib\iconv.c(567) : warning C4127: conditional expression is constant
+1>relocatable.c
+1>localcharset.c
+1>Creating library...
+1>Build log was saved at "file://c:\php-sdk\libiconv\build-VS2008\libiconv-static\Release\BuildLog.htm"
+1>libiconv_static - 0 error(s), 724 warning(s)
+========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========

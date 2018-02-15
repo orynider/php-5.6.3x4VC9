@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pgsql", "pgsql.vcproj", "{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_TS|Win32 = Debug_TS|Win32
+		Debug|Win32 = Debug|Win32
+		Release_TS|Win32 = Release_TS|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Debug_TS|Win32.ActiveCfg = Debug_TS|Win32
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Debug_TS|Win32.Build.0 = Debug_TS|Win32
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Debug|Win32.Build.0 = Debug|Win32
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Release_TS|Win32.ActiveCfg = Release_TS|Win32
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Release_TS|Win32.Build.0 = Release_TS|Win32
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Release|Win32.ActiveCfg = Release|Win32
+		{4F33B1B9-44CB-4FBE-AEE6-AE78B868C897}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

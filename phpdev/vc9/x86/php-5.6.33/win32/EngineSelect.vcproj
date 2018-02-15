@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9,00"
+	Name="EngineSelect"
+	ProjectGUID="{1A313B2A-BCC6-4A8A-BFCA-641264BD17EA}"
+	Keyword="MakeFileProj"
+	TargetFrameworkVersion="0"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Release"
+			IntermediateDirectory=".\Release"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="EngineSelect.bat"
+				ReBuildCommandLine="EngineSelect.bat /a"
+				CleanCommandLine=""
+				Output="EngineSelect.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Debug"
+			IntermediateDirectory=".\Debug"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="EngineSelect.bat"
+				ReBuildCommandLine="EngineSelect.bat /a"
+				CleanCommandLine=""
+				Output="EngineSelect.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

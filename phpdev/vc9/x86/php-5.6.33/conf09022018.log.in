@@ -1,0 +1,306 @@
+snapshot: forcing --disable-security-flags shared
+snapshot: forcing activescript on
+snapshot: forcing apache2-3filter on
+snapshot: forcing apache2-4filter on
+snapshot: forcing apache2-3handler on
+snapshot: forcing nsapi on
+snapshot: forcing pi3web on
+snapshot: forcing curl on
+snapshot: forcing dba on
+snapshot: forcing enchant on
+snapshot: forcing --without-libvpx shared
+snapshot: forcing gettext on
+snapshot: forcing gmp on
+snapshot: forcing mhash on
+snapshot: forcing ibm_db2 on
+snapshot: forcing imap on
+snapshot: forcing interbase on
+snapshot: forcing intl on
+snapshot: forcing ldap on
+snapshot: forcing libmbfl on
+snapshot: forcing --disable-mbregex-backtrack shared
+snapshot: forcing mssql on
+snapshot: forcing dblib on
+snapshot: forcing oci8 on
+snapshot: forcing oci8-11g on
+snapshot: forcing oci8-12c on
+snapshot: forcing openssl on
+snapshot: forcing pgsql on
+snapshot: forcing pspell on
+snapshot: forcing rar on
+snapshot: forcing snmp on
+snapshot: forcing sybase-ct on
+snapshot: forcing tidy on
+snapshot: forcing xdebug on
+snapshot: forcing redis on
+snapshot: forcing --disable-redis-session shared
+snapshot: forcing redis-igbinary on
+snapshot: forcing mysql on
+snapshot: forcing soap on
+snapshot: forcing sqlite on
+snapshot: forcing xmlrpc on
+Saving configure options to config.nice.bat
+Checking for cl.exe ...  <in default path>
+  Detected compiler MSVC9 (Visual C++ 2008)
+  Detected 32-bit compiler
+Checking for link.exe ...  C:\MsVS09\VC\Bin
+Checking for nmake.exe ...  <in default path>
+Checking for lib.exe ...  <in default path>
+Checking for bison.exe ...  <in default path>
+Checking for re2c.exe ...  <in default path>
+  Detected re2c version 0.16
+Checking for zip.exe ...  <in default path>
+Checking for lemon.exe ...  <in default path>
+Checking for mc.exe ...  C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin
+Checking for mt.exe ...  C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin
+
+Build dir: Release_TS
+PHP Core:  php5ts.dll and php5ts.lib
+
+Checking for wspiapi.h ...  <in default path>
+Enabling IPv6 support
+Checking for ns.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for library nsd.lib ... ..\deps\lib\nsd.lib
+Enabling SAPI sapi\aolserver
+Checking for httpd.h ...  C:\Program Files\Apache Group\Apache\include
+Checking for library ApacheCore.lib ... ..\..\..\..\..\Program Files\Apache Group\Apache\libexec\ApacheCore.lib
+Enabling SAPI sapi\apache
+Checking for httpd.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\apache2
+Checking for library libhttpd.lib ... ..\deps\lib\apache2\libhttpd.lib
+Checking for library libapr.lib ... ..\deps\lib\apache2\libapr.lib
+Checking for library libaprutil.lib ... ..\deps\lib\apache2\libaprutil.lib
+Enabling SAPI sapi\apache2filter
+Checking for httpd.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\apache2_2
+Checking for library libhttpd.lib ... ..\deps\lib\apache2_2\libhttpd.lib
+Checking for library libapr-1.lib ... ..\deps\lib\apache2_2\libapr-1.lib
+Checking for library libaprutil-1.lib ... ..\deps\lib\apache2_2\libaprutil-1.lib
+Enabling SAPI sapi\apache2filter (via sapi\apache2_2filter)
+Checking for httpd.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\apache2
+Checking for library libhttpd.lib ... ..\deps\lib\apache2\libhttpd.lib
+Checking for library libapr.lib ... ..\deps\lib\apache2\libapr.lib
+Checking for library libaprutil.lib ... ..\deps\lib\apache2\libaprutil.lib
+Enabling SAPI sapi\apache2handler
+Checking for httpd.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\apache2_2
+Checking for library libhttpd.lib ... ..\deps\lib\apache2_2\libhttpd.lib
+Checking for library libapr-1.lib ... ..\deps\lib\apache2_2\libapr-1.lib
+Checking for library libaprutil-1.lib ... ..\deps\lib\apache2_2\libaprutil-1.lib
+Enabling SAPI sapi\apache2handler (via sapi\apache2_2handler)
+Checking for httpd.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\apache2_4
+Checking for library libhttpd.lib ... ..\deps\lib\apache2_4\libhttpd.lib
+Checking for library libapr-1.lib ... ..\deps\lib\apache2_4\libapr-1.lib
+Checking for library libaprutil-1.lib ... ..\deps\lib\apache2_4\libaprutil-1.lib
+Enabling SAPI sapi\apache2handler (via sapi\apache2_4handler)
+Checking for httpd.h ...  C:\Program Files\Apache Group\Apache\include
+Checking for library ApacheCore.lib ... ..\..\..\..\..\Program Files\Apache Group\Apache\libexec\ApacheCore.lib
+Enabling SAPI sapi\apache_hooks
+Enabling SAPI sapi\cgi
+Enabling SAPI sapi\cli
+Enabling SAPI sapi\cli
+Enabling SAPI sapi\embed
+Enabling SAPI sapi\isapi
+Enabling SAPI sapi\phpdbg
+Enabling SAPI sapi\phpdbg
+Enabling extension ext\bcmath
+Checking for library libbz2_a.lib;libbz2.lib ... ..\deps\lib\libbz2_a.lib
+Checking for bzlib.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Enabling extension ext\bz2 [shared]
+Enabling extension ext\calendar
+Checking for library oleaut32.lib ... <in LIB path> OleAut32.Lib
+Enabling extension ext\com_dotnet
+Checking for mscoree.h ...  <in default path>
+Enabling extension ext\ctype
+Enabling extension ext\date
+Enabling extension ext\ereg
+Enabling extension ext\fileinfo [shared]
+Enabling extension ext\filter
+Enabling extension ext\ftp
+Checking for library libjpeg_a.lib;libjpeg.lib ... ..\deps\lib\libjpeg_a.lib
+Checking for library freetype_a.lib;freetype.lib ... ..\deps\lib\freetype_a.lib
+Checking for ft2build.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for library libpng_a.lib;libpng.lib ... ..\deps\lib\libpng_a.lib
+Checking for gd.h ...  ext\gd\libgd
+Checking for png.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\libpng15
+Checking for library libiconv_a.lib;libiconv.lib ... ..\deps\lib\libiconv_a.lib
+Checking for iconv.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for library zlib_a.lib;zlib.lib ... ..\deps\lib\zlib_a.lib
+Checking for library libXpm_a.lib ... ..\deps\lib\libxpm_a.lib
+Checking for xpm.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\X11
+Checking for library T1_StaticMD.lib ... ..\deps\lib\T1_StaticMD.lib
+Checking for t1lib.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for library User32.lib ... <in LIB path> User32.Lib
+Checking for library Gdi32.lib ... <in LIB path> Gdi32.Lib
+Enabling extension ext\gd [shared]
+Enabling extension ext\hash
+Checking for library libiconv_a.lib ... ..\deps\lib\libiconv_a.lib
+Checking for iconv.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Enabling extension ext\iconv
+Enabling extension ext\json
+Enabling extension ext\mbstring [shared]
+Using bundled libmbfl...
+Checking for mcrypt.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for library libmcrypt_a.lib;libmcrypt.lib ... ..\deps\lib\libmcrypt_a.lib
+Checking for library Advapi32.lib ... <in LIB path> AdvAPI32.Lib
+Enabling extension ext\mcrypt
+Checking for library ws2_32.lib ... <in LIB path> WS2_32.Lib
+Enabling extension ext\mysqlnd
+Checking for library zlib_a.lib;zlib.lib ... ..\deps\lib\zlib_a.lib
+Checking for library odbc32.lib ... <in LIB path> odbc32.lib
+Checking for library odbccp32.lib ... <in LIB path> odbccp32.lib
+Checking for sql.h ...  <in default path>
+Checking for sqlext.h ...  <in default path>
+Enabling extension ext\odbc [shared]
+Enabling extension ext\opcache [shared]
+Enabling extension ext\pcre
+Enabling extension ext\reflection
+Enabling extension ext\session
+Enabling extension ext\shmop
+Checking for library ws2_32.lib ... <in LIB path> WS2_32.Lib
+Checking for library Iphlpapi.lib ... <in LIB path> IPHlpApi.Lib
+Checking for winsock.h ...  <in default path>
+Enabling extension ext\sockets [shared]
+Enabling extension ext\spl
+Enabling extension ext\sqlite3 [shared]
+Checking for timelib_config.h ...  ext/date/lib
+Enabling extension ext\standard
+Checking for oniguruma.h ...  ext\mbstring\oniguruma
+Enabling extension ext\tokenizer
+Checking for zlib.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for zipconf.h ...  ext\zip\lib
+Checking for library zlib_a.lib ... ..\deps\lib\zlib_a.lib
+Enabling extension ext\zip [shared]
+Enabling extension ext\exif [shared]
+Enabling extension ext\http
+Checking for zlib.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for pecl/hash ...  ext\http\..\hash
+Checking for curl/curl.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for openssl/crypto.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include
+Checking for library libcurl_a.lib;libcurl.lib;libcurl.lib ... ..\deps\lib\libcurl_a.lib
+Checking for library ssleay32.lib ... ..\deps\lib\ssleay32.lib
+Checking for library libeay32.lib ... ..\deps\lib\libeay32.lib
+Checking for library zlib.lib;zlib_a.lib ... ..\deps\lib\zlib.lib
+Checking for library winmm.lib ... <in LIB path> WinMM.Lib
+Enabling extension ext\mysqli [shared]
+	mysqlnd build
+Enabling extension ext\pdo
+Checking for library sybdb.lib ... <not found>
+Checking for library sybdb.lib ... <not found>
+Checking for library ntwdblib.lib ... <not found>
+Checking for library ntwdblib.lib ... <not found>
+Checking for library ntwdblib.lib ... <not found>
+Checking for library ntwdblib.lib ... <not found>
+Checking for library ntwdblib.lib ... <not found>
+Checking for library fbclient_ms.lib ... ..\deps\lib\fbclient_ms.lib
+Checking for ibase.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\interbase
+Enabling extension ext\pdo_firebird [shared]
+INFO: mysqlnd build
+Enabling extension ext\pdo_mysql [shared]
+Checking for oci.h ...  <not found>
+Checking for oci.h ...  <not found>
+Checking for library odbc32.lib ... <in LIB path> odbc32.lib
+Checking for library odbccp32.lib ... <in LIB path> odbccp32.lib
+Checking for sql.h ...  <in default path>
+Checking for sqlext.h ...  <in default path>
+Enabling extension ext\pdo_odbc [shared]
+Checking for library libpq.lib ... ..\deps\lib\libpq.lib
+Checking for libpq-fe.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\pgsql
+Enabling extension ext\pdo_pgsql [shared]
+Checking for pg_config.h ...  C:\php-sdk\phpdev\vc9\x86\deps\include\pgsql
+Enabling extension ext\pdo_sqlite [shared]
+Checking for sqlite3.h ...  <not found>
+Checking for sqlite3.h ...  <not found>
+Enabling extension ext\phar
+Checking for library libeay32st.lib ... ..\deps\lib\libeay32st.lib
+        Native OpenSSL support in Phar enabled
+
+Creating build dirs...
+Generating files...
+Generating Makefile
+Generating main/internal_functions.c
+	[content unchanged; skipping]
+Generating main/config.w32.h
+Generating phpize
+Done.
+
+
+
+Enabled extensions:
+-------------------------
+| Extension    | Mode   |
+-------------------------
+| bcmath       | static |
+| bz2          | shared |
+| calendar     | static |
+| com_dotnet   | static |
+| ctype        | static |
+| date         | static |
+| ereg         | static |
+| exif         | shared |
+| fileinfo     | shared |
+| filter       | static |
+| ftp          | static |
+| gd           | shared |
+| hash         | static |
+| http         | static |
+| iconv        | static |
+| json         | static |
+| mbstring     | shared |
+| mcrypt       | static |
+| mysqli       | shared |
+| mysqlnd      | static |
+| odbc         | shared |
+| opcache      | shared |
+| pcre         | static |
+| pdo          | static |
+| pdo_firebird | shared |
+| pdo_mysql    | shared |
+| pdo_odbc     | shared |
+| pdo_pgsql    | shared |
+| pdo_sqlite   | shared |
+| phar         | static |
+| reflection   | static |
+| session      | static |
+| shmop        | static |
+| sockets      | shared |
+| spl          | static |
+| sqlite3      | shared |
+| standard     | static |
+| tokenizer    | static |
+| zip          | shared |
+-------------------------
+
+
+Enabled SAPI:
+--------------------
+| Sapi Name        |
+--------------------
+| aolserver        |
+| apache           |
+| apache2filter    |
+| apache2_2filter  |
+| apache2handler   |
+| apache2_2handler |
+| apache2_4handler |
+| apache_hooks     |
+| cgi              |
+| cli              |
+| cli_win32        |
+| embed            |
+| isapi            |
+| phpdbg           |
+| phpdbgs          |
+--------------------
+
+
+---------------------------------------------
+|                 |                         |
+---------------------------------------------
+| Build type      | Release                 |
+| Thread Safety   | Yes                     |
+| Compiler        | MSVC9 (Visual C++ 2008) |
+| Architecture    | x86                     |
+| Optimization    | PGO disabled            |
+| Static analyzer | disabled                |
+---------------------------------------------
+
+
+Type 'nmake snap' to build a PHP snapshot

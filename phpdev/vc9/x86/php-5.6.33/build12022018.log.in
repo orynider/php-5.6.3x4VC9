@@ -1,0 +1,29 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+	SET PATH=C:\php-sdk\bin\;C:\Program Files\Git\mingw32\bin\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\include\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Windows\Microsoft.NET\Framework\v3.5;;C:\MsVS09\Common7\IDE;C:\MsVS09\Common7\Tools;;C:\MsVS09\VC\Bin;C:\MsVS09\VC\Bin\VCPackages;;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin\NETFX 4.0 Tools;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin;;C:\Program Files\Microsoft SDKs\Windows\v8.1\bin\NETFX 4.0 Tools;c:\MsVS09\\Common7\IDE;c:\MsVS09\\VC\BIN;c:\MsVS09\\Common7\Tools;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Framework\v2.0.50727;c:\MsVS09\\VC\VCPackages;C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin;C:\php-sdk\bin;C:\php-sdk\msys2\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Universal Extractor;C:\Program Files\Universal Extractor\bin;C:\Program Files\WinMerge;C:\Program Files\Microsoft Network Monitor 3\;C:\Program Files\Skype\Phone\;c:\Program Files\Java\jdk1.8.0_152\bin\;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\Git\cmd;c:\Program Files\Resource Hacker\;C:\Program Files\CVSNT\;C:\php-sdk\phpdev\vc9\x86\deps\bin
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_simple_bind_s
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_unbind_s
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_msgfree
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_next_entry
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ber_free
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_next_attribute
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_value_free_len
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_get_values_len
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_first_attribute
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_memfree
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_get_dn
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_first_entry
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_search_s
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_init
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_set_option
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_err2string
+Release_TS\php5ts.dll : fatal error LNK1120: 16 unresolved externals

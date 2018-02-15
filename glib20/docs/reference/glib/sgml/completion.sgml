@@ -1,0 +1,276 @@
+<refentry id="glib-Automatic-String-Completion">
+<refmeta>
+<refentrytitle>Automatic String Completion</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Automatic String Completion</refname><refpurpose>support for automatic completion using a group of target strings.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GCompletion">GCompletion</link>;
+<link linkend="GCompletion">GCompletion</link>* <link linkend="g-completion-new">g_completion_new</link>               (<link linkend="GCompletionFunc">GCompletionFunc</link> func);
+<link linkend="gchar">gchar</link>*      (<link linkend="GCompletionFunc">*GCompletionFunc</link>)              (<link linkend="gpointer">gpointer</link>);
+void        <link linkend="g-completion-add-items">g_completion_add_items</link>          (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             <link linkend="GList">GList</link> *items);
+void        <link linkend="g-completion-remove-items">g_completion_remove_items</link>       (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             <link linkend="GList">GList</link> *items);
+void        <link linkend="g-completion-clear-items">g_completion_clear_items</link>        (<link linkend="GCompletion">GCompletion</link> *cmp);
+<link linkend="GList">GList</link>*      <link linkend="g-completion-complete">g_completion_complete</link>           (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             const <link linkend="gchar">gchar</link> *prefix,
+                                             <link linkend="gchar">gchar</link> **new_prefix);
+void        <link linkend="g-completion-set-compare">g_completion_set_compare</link>        (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             <link linkend="GCompletionStrncmpFunc">GCompletionStrncmpFunc</link> strncmp_func);
+<link linkend="gint">gint</link>        (<link linkend="GCompletionStrncmpFunc">*GCompletionStrncmpFunc</link>)       (const <link linkend="gchar">gchar</link> *s1,
+                                             const <link linkend="gchar">gchar</link> *s2,
+                                             <link linkend="gsize">gsize</link> n);
+void        <link linkend="g-completion-free">g_completion_free</link>               (<link linkend="GCompletion">GCompletion</link> *cmp);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+<link linkend="GCompletion">GCompletion</link> provides support for automatic completion of a string using
+any group of target strings. It is typically used for file name completion
+as is common in many UNIX shells.
+</para>
+<para>
+A <link linkend="GCompletion">GCompletion</link> is created using <link linkend="g-completion-new">g_completion_new</link>().
+Target items are added and removed with
+<link linkend="g-completion-add-items">g_completion_add_items</link>(), <link linkend="g-completion-remove-items">g_completion_remove_items</link>() and
+<link linkend="g-completion-clear-items">g_completion_clear_items</link>().
+A completion attempt is requested with <link linkend="g-completion-complete">g_completion_complete</link>().
+When no longer needed, the <link linkend="GCompletion">GCompletion</link> is freed with <link linkend="g-completion-free">g_completion_free</link>().
+</para>
+<para>
+Items in the completion can be simple strings (e.g. filenames),
+or pointers to arbitrary data structures. If data structures are used
+you must provide a <link linkend="GCompletionFunc">GCompletionFunc</link> in <link linkend="g-completion-new">g_completion_new</link>(),
+which retrieves the item's string from the data structure.
+You can change the way in which strings are compared by setting
+a different <link linkend="GCompletionStrncmpFunc">GCompletionStrncmpFunc</link> in <link linkend="g-completion-set-compare">g_completion_set_compare</link>().
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GCompletion">struct GCompletion</title>
+<programlisting>struct GCompletion
+{
+  GList* items;
+  GCompletionFunc func;
+ 
+  gchar* prefix;
+  GList* cache;
+  GCompletionStrncmpFunc strncmp_func;
+};
+</programlisting>
+<para>
+The data structure used for automatic completion.
+</para><variablelist role="struct">
+<varlistentry>
+<term><link linkend="GList">GList</link> *<structfield>items</structfield></term>
+<listitem><para>list of target items (strings or data structures).
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GCompletionFunc">GCompletionFunc</link> <structfield>func</structfield></term>
+<listitem><para>function which is called to get the string associated with a target 
+  item. It is <literal>NULL</literal> if the target items are strings.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="gchar">gchar</link> *<structfield>prefix</structfield></term>
+<listitem><para>the last prefix passed to <link linkend="g-completion-complete">g_completion_complete</link>().
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GList">GList</link> *<structfield>cache</structfield></term>
+<listitem><para>the list of items which begin with <parameter>prefix</parameter>.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GCompletionStrncmpFunc">GCompletionStrncmpFunc</link> <structfield>strncmp_func</structfield></term>
+<listitem><para>
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-completion-new">g_completion_new ()</title>
+<programlisting><link linkend="GCompletion">GCompletion</link>* g_completion_new               (<link linkend="GCompletionFunc">GCompletionFunc</link> func);</programlisting>
+<para>
+Creates a new <link linkend="GCompletion">GCompletion</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to be called to return the string representing an item
+in the <link linkend="GCompletion">GCompletion</link>, or <literal>NULL</literal> if strings are going to be used as the
+<link linkend="GCompletion">GCompletion</link> items.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the new <link linkend="GCompletion">GCompletion</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GCompletionFunc">GCompletionFunc ()</title>
+<programlisting><link linkend="gchar">gchar</link>*      (*GCompletionFunc)              (<link linkend="gpointer">gpointer</link>);</programlisting>
+<para>
+Specifies the type of the function passed to <link linkend="g-completion-new">g_completion_new</link>().
+It should return the string corresponding to the given target item.
+This is used when you use data structures as <link linkend="GCompletion">GCompletion</link> items.
+</para><variablelist role="params">
+<varlistentry><term><parameter>Param1</parameter>&nbsp;:</term>
+<listitem><para>the completion item.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the string corresponding to the item.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-completion-add-items">g_completion_add_items ()</title>
+<programlisting>void        g_completion_add_items          (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             <link linkend="GList">GList</link> *items);</programlisting>
+<para>
+Adds items to the <link linkend="GCompletion">GCompletion</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>cmp</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GCompletion">GCompletion</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>items</parameter>&nbsp;:</term>
+<listitem><para>the list of items to add.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-completion-remove-items">g_completion_remove_items ()</title>
+<programlisting>void        g_completion_remove_items       (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             <link linkend="GList">GList</link> *items);</programlisting>
+<para>
+Removes items from a <link linkend="GCompletion">GCompletion</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>cmp</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GCompletion">GCompletion</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>items</parameter>&nbsp;:</term>
+<listitem><para>the items to remove.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-completion-clear-items">g_completion_clear_items ()</title>
+<programlisting>void        g_completion_clear_items        (<link linkend="GCompletion">GCompletion</link> *cmp);</programlisting>
+<para>
+Removes all items from the <link linkend="GCompletion">GCompletion</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>cmp</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GCompletion">GCompletion</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-completion-complete">g_completion_complete ()</title>
+<programlisting><link linkend="GList">GList</link>*      g_completion_complete           (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             const <link linkend="gchar">gchar</link> *prefix,
+                                             <link linkend="gchar">gchar</link> **new_prefix);</programlisting>
+<para>
+Attempts to complete the string <parameter>prefix</parameter> using the <link linkend="GCompletion">GCompletion</link> target items.
+</para><variablelist role="params">
+<varlistentry><term><parameter>cmp</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GCompletion">GCompletion</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>prefix</parameter>&nbsp;:</term>
+<listitem><para>the prefix string, typically typed by the user, which is compared
+with each of the items.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>new_prefix</parameter>&nbsp;:</term>
+<listitem><para>if non-<literal>NULL</literal>, returns the longest prefix which is common to all
+items that matched <parameter>prefix</parameter>, or <literal>NULL</literal> if no items matched <parameter>prefix</parameter>.
+This string should be freed when no longer needed.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the list of items whose strings begin with <parameter>prefix</parameter>. This should
+not be changed.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-completion-set-compare">g_completion_set_compare ()</title>
+<programlisting>void        g_completion_set_compare        (<link linkend="GCompletion">GCompletion</link> *cmp,
+                                             <link linkend="GCompletionStrncmpFunc">GCompletionStrncmpFunc</link> strncmp_func);</programlisting>
+<para>
+Sets the function to use for string comparisons. The default
+string comparison function is <function><link linkend="strncmp">strncmp</link>()</function>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>cmp</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GCompletion">GCompletion</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>strncmp_func</parameter>&nbsp;:</term>
+<listitem><para>the string comparison function.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GCompletionStrncmpFunc">GCompletionStrncmpFunc ()</title>
+<programlisting><link linkend="gint">gint</link>        (*GCompletionStrncmpFunc)       (const <link linkend="gchar">gchar</link> *s1,
+                                             const <link linkend="gchar">gchar</link> *s2,
+                                             <link linkend="gsize">gsize</link> n);</programlisting>
+<para>
+Specifies the type of the function passed to <link linkend="g-completion-set-compare">g_completion_set_compare</link>().
+This is used when you use strings as <link linkend="GCompletion">GCompletion</link> items.
+</para><variablelist role="params">
+<varlistentry><term><parameter>s1</parameter>&nbsp;:</term>
+<listitem><para>string to compare with <parameter>s2</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>s2</parameter>&nbsp;:</term>
+<listitem><para>string to compare with <parameter>s1</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n</parameter>&nbsp;:</term>
+<listitem><para>maximal number of bytes to compare.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>an integer less than, equal to, or greater than zero if the 
+first <parameter>n</parameter> bytes of <parameter>s1</parameter> is found, respectively, to be less than, to match, 
+or to be greater than the first <parameter>n</parameter> bytes of <parameter>s2</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-completion-free">g_completion_free ()</title>
+<programlisting>void        g_completion_free               (<link linkend="GCompletion">GCompletion</link> *cmp);</programlisting>
+<para>
+Frees all memory used by the <link linkend="GCompletion">GCompletion</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>cmp</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GCompletion">GCompletion</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

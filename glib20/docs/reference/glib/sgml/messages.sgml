@@ -1,0 +1,411 @@
+<refentry id="glib-Message-Logging">
+<refmeta>
+<refentrytitle>Message Logging</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Message Logging</refname><refpurpose>versatile support for logging messages with different levels of importance.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+#define     <link linkend="G-LOG-DOMAIN-CAPS">G_LOG_DOMAIN</link>
+#define     <link linkend="G-LOG-FATAL-MASK-CAPS">G_LOG_FATAL_MASK</link>
+#define     <link linkend="G-LOG-LEVEL-USER-SHIFT-CAPS">G_LOG_LEVEL_USER_SHIFT</link>
+void        (<link linkend="GLogFunc">*GLogFunc</link>)                     (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *message,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+enum        <link linkend="GLogLevelFlags">GLogLevelFlags</link>;
+
+void        <link linkend="g-log">g_log</link>                           (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *format,
+                                             ...);
+void        <link linkend="g-logv">g_logv</link>                          (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *format,
+                                             va_list args);
+#define     <link linkend="g-message">g_message</link>                       (...)
+#define     <link linkend="g-warning">g_warning</link>                       (...)
+#define     <link linkend="g-critical">g_critical</link>                      (...)
+#define     <link linkend="g-error">g_error</link>                         (...)
+
+<link linkend="guint">guint</link>       <link linkend="g-log-set-handler">g_log_set_handler</link>               (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_levels,
+                                             <link linkend="GLogFunc">GLogFunc</link> log_func,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+void        <link linkend="g-log-remove-handler">g_log_remove_handler</link>            (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="guint">guint</link> handler_id);
+<link linkend="GLogLevelFlags">GLogLevelFlags</link> <link linkend="g-log-set-always-fatal">g_log_set_always_fatal</link>       (<link linkend="GLogLevelFlags">GLogLevelFlags</link> fatal_mask);
+<link linkend="GLogLevelFlags">GLogLevelFlags</link> <link linkend="g-log-set-fatal-mask">g_log_set_fatal_mask</link>         (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> fatal_mask);
+void        <link linkend="g-log-default-handler">g_log_default_handler</link>           (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *message,
+                                             <link linkend="gpointer">gpointer</link> unused_data);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+These functions provide support for logging error messages or messages
+used for debugging.
+</para>
+
+<para>
+There are several built-in levels of messages, defined in <link linkend="GLogLevelFlags">GLogLevelFlags</link>.
+These can be extended with user-defined levels.
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="G-LOG-DOMAIN-CAPS">G_LOG_DOMAIN</title>
+<programlisting>#define G_LOG_DOMAIN    ((gchar*) 0)
+</programlisting>
+<para>
+Defines the log domain.
+For applications, this is typically left as the default <literal>NULL</literal> (or "") domain.
+Libraries should define this so that any messages which they log can
+be differentiated from messages from other libraries and application code.
+But be careful not to define it in any public header files.
+</para>
+<para>
+For example, GTK+ uses this in its Makefile.am:
+</para>
+<informalexample><programlisting>
+INCLUDES = -DG_LOG_DOMAIN=\"Gtk\"
+</programlisting></informalexample></refsect2>
+<refsect2>
+<title><anchor id="G-LOG-FATAL-MASK-CAPS">G_LOG_FATAL_MASK</title>
+<programlisting>#define G_LOG_FATAL_MASK        (G_LOG_FLAG_RECURSION | G_LOG_LEVEL_ERROR)
+</programlisting>
+<para>
+GLib log levels that are considered fatal by default.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-LOG-LEVEL-USER-SHIFT-CAPS">G_LOG_LEVEL_USER_SHIFT</title>
+<programlisting>#define G_LOG_LEVEL_USER_SHIFT  (8)
+</programlisting>
+<para>
+Log level shift offset for user defined log levels (0-7 are used by GLib).
+</para></refsect2>
+<refsect2>
+<title><anchor id="GLogFunc">GLogFunc ()</title>
+<programlisting>void        (*GLogFunc)                     (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *message,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Specifies the prototype of log handler functions.
+</para><variablelist role="params">
+<varlistentry><term><parameter>log_domain</parameter>&nbsp;:</term>
+<listitem><para>the log domain of the message.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>log_level</parameter>&nbsp;:</term>
+<listitem><para>the log level of the message (including the fatal and recursion
+flags).
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>message</parameter>&nbsp;:</term>
+<listitem><para>the message to process.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para>user data, set in <link linkend="g-log-set-handler">g_log_set_handler</link>().
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GLogLevelFlags">enum GLogLevelFlags</title>
+<programlisting>typedef enum
+{
+  /* log flags */
+  G_LOG_FLAG_RECURSION          = 1 &lt;&lt; 0,
+  G_LOG_FLAG_FATAL              = 1 &lt;&lt; 1,
+
+  /* GLib log levels */
+  G_LOG_LEVEL_ERROR             = 1 &lt;&lt; 2,       /* always fatal */
+  G_LOG_LEVEL_CRITICAL          = 1 &lt;&lt; 3,
+  G_LOG_LEVEL_WARNING           = 1 &lt;&lt; 4,
+  G_LOG_LEVEL_MESSAGE           = 1 &lt;&lt; 5,
+  G_LOG_LEVEL_INFO              = 1 &lt;&lt; 6,
+  G_LOG_LEVEL_DEBUG             = 1 &lt;&lt; 7,
+
+  G_LOG_LEVEL_MASK              = ~(G_LOG_FLAG_RECURSION | G_LOG_FLAG_FATAL)
+} GLogLevelFlags;
+</programlisting>
+<para>
+Flags specifying the level of log messages.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-log">g_log ()</title>
+<programlisting>void        g_log                           (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *format,
+                                             ...);</programlisting>
+<para>
+Logs an error or debugging message.
+If the log level has been set as fatal, the <function><link linkend="abort">abort</link>()</function>
+function is called to terminate the program.
+</para><variablelist role="params">
+<varlistentry><term><parameter>log_domain</parameter>&nbsp;:</term>
+<listitem><para>the log domain, usually <link linkend="G-LOG-DOMAIN-CAPS">G_LOG_DOMAIN</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>log_level</parameter>&nbsp;:</term>
+<listitem><para>the log level, either from <link linkend="GLogLevelFlags">GLogLevelFlags</link> or a user-defined level.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>format</parameter>&nbsp;:</term>
+<listitem><para>the message format. See the <function>printf()</function>
+documentation.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>...</parameter>&nbsp;:</term>
+<listitem><para>the parameters to insert into the format string.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-logv">g_logv ()</title>
+<programlisting>void        g_logv                          (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *format,
+                                             va_list args);</programlisting>
+<para>
+Logs an error or debugging message.
+If the log level has been set as fatal, the <function><link linkend="abort">abort</link>()</function>
+function is called to terminate the program.
+</para><variablelist role="params">
+<varlistentry><term><parameter>log_domain</parameter>&nbsp;:</term>
+<listitem><para>the log domain.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>log_level</parameter>&nbsp;:</term>
+<listitem><para>the log level.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>format</parameter>&nbsp;:</term>
+<listitem><para>the message format. See the <function>printf()</function>
+documentation.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>args</parameter>&nbsp;:</term>
+<listitem><para>the parameters to insert into the format string.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-message">g_message()</title>
+<programlisting>#define     g_message(...)</programlisting>
+<para>
+A convenience function/macro to log a normal message.
+</para><variablelist role="params">
+<varlistentry><term><parameter>...</parameter>&nbsp;:</term>
+<listitem><para>the parameters to insert into the format string.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-warning">g_warning()</title>
+<programlisting>#define     g_warning(...)</programlisting>
+<para>
+A convenience function/macro to log a warning message.
+</para><variablelist role="params">
+<varlistentry><term><parameter>...</parameter>&nbsp;:</term>
+<listitem><para>format string, followed by parameters to insert into the format string (as with <function>printf()</function>)
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-critical">g_critical()</title>
+<programlisting>#define     g_critical(...)</programlisting>
+<para>
+Logs a "critical warning" (<link linkend="G-LOG-LEVEL-CRITICAL-CAPS">G_LOG_LEVEL_CRITICAL</link>). It's more or less
+application-defined what constitutes a critical vs. a regular
+warning. You could call <link linkend="g-log-set-always-fatal">g_log_set_always_fatal</link>() to make critical
+warnings exit the program, then use <link linkend="g-critical">g_critical</link>() for fatal errors, for
+example.
+</para><variablelist role="params">
+<varlistentry><term><parameter>...</parameter>&nbsp;:</term>
+<listitem><para>format string, followed by parameters to insert into the format string (as with <function>printf()</function>)
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-error">g_error()</title>
+<programlisting>#define     g_error(...)</programlisting>
+<para>
+A convenience function/macro to log an error message.
+Error messages are always fatal, resulting in a call to
+<function><link linkend="abort">abort</link>()</function> to terminate the application.
+This function will result in a core dump; don't use it for errors you
+expect. Using this function indicates a bug in your program, i.e. an
+assertion failure.
+</para><variablelist role="params">
+<varlistentry><term><parameter>...</parameter>&nbsp;:</term>
+<listitem><para>the parameters to insert into the format string.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-log-set-handler">g_log_set_handler ()</title>
+<programlisting><link linkend="guint">guint</link>       g_log_set_handler               (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_levels,
+                                             <link linkend="GLogFunc">GLogFunc</link> log_func,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Sets the log handler for a domain and a set of log levels.
+To handle fatal and recursive messages the <parameter>log_levels</parameter> parameter
+must be combined with the <link linkend="G-LOG-FLAG-FATAL-CAPS">G_LOG_FLAG_FATAL</link> and <link linkend="G-LOG-FLAG-RECURSIVE-CAPS">G_LOG_FLAG_RECURSIVE</link> bit flags.
+</para>
+<para>
+Note that since the <link linkend="G-LOG-LEVEL-ERROR-CAPS">G_LOG_LEVEL_ERROR</link> log level is always fatal, if you want
+to set a handler for this log level you must combine it with <link linkend="G-LOG-FLAG-FATAL-CAPS">G_LOG_FLAG_FATAL</link>.
+</para>
+
+<example>
+<title>Adding a log handler for all warning messages in the default (application) domain</title>
+<programlisting>
+  g_log_set_handler (NULL, G_LOG_LEVEL_WARNING | G_LOG_FLAG_FATAL
+                     | G_LOG_FLAG_RECURSIVE, my_log_handler, NULL);
+</programlisting>
+</example>
+
+<example>
+<title>Adding a log handler for all critical messages from GTK+</title>
+<programlisting>
+  g_log_set_handler ("Gtk", G_LOG_LEVEL_CRITICAL | G_LOG_FLAG_FATAL
+                     | G_LOG_FLAG_RECURSIVE, my_log_handler, NULL);
+</programlisting>
+</example>
+
+<example>
+<title>Adding a log handler for <emphasis>all</emphasis> messages from GLib</title>
+<programlisting>
+  g_log_set_handler ("GLib", G_LOG_LEVEL_MASK | G_LOG_FLAG_FATAL
+                     | G_LOG_FLAG_RECURSIVE, my_log_handler, NULL);
+</programlisting>
+</example><variablelist role="params">
+<varlistentry><term><parameter>log_domain</parameter>&nbsp;:</term>
+<listitem><para>the log domain, or <literal>NULL</literal> for the default "" application domain.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>log_levels</parameter>&nbsp;:</term>
+<listitem><para>the log levels to apply the log handler for. To handle fatal
+and recursive messages as well, combine the log levels with the
+<link linkend="G-LOG-FLAG-FATAL-CAPS">G_LOG_FLAG_FATAL</link> and <link linkend="G-LOG-FLAG-RECURSIVE-CAPS">G_LOG_FLAG_RECURSIVE</link> bit flags.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>log_func</parameter>&nbsp;:</term>
+<listitem><para>the log handler function.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para>data passed to the log handler.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the id of the new handler.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-log-remove-handler">g_log_remove_handler ()</title>
+<programlisting>void        g_log_remove_handler            (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="guint">guint</link> handler_id);</programlisting>
+<para>
+Removes the log handler.
+</para><variablelist role="params">
+<varlistentry><term><parameter>log_domain</parameter>&nbsp;:</term>
+<listitem><para>the log domain.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>handler_id</parameter>&nbsp;:</term>
+<listitem><para>the id of the handler, which was returned in <link linkend="g-log-set-handler">g_log_set_handler</link>().
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-log-set-always-fatal">g_log_set_always_fatal ()</title>
+<programlisting><link linkend="GLogLevelFlags">GLogLevelFlags</link> g_log_set_always_fatal       (<link linkend="GLogLevelFlags">GLogLevelFlags</link> fatal_mask);</programlisting>
+<para>
+Sets the message levels which are always fatal, in any log domain.
+When a message with any of these levels is logged the program terminates.
+You can only set the levels defined by GLib to be fatal.
+<literal>G_LOG_LEVEL_ERROR</literal> is always fatal.
+</para><variablelist role="params">
+<varlistentry><term><parameter>fatal_mask</parameter>&nbsp;:</term>
+<listitem><para>the mask containing bits set for each level of error which is
+to be fatal.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the old fatal mask.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-log-set-fatal-mask">g_log_set_fatal_mask ()</title>
+<programlisting><link linkend="GLogLevelFlags">GLogLevelFlags</link> g_log_set_fatal_mask         (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> fatal_mask);</programlisting>
+<para>
+Sets the log levels which are fatal in the given domain.
+<literal>G_LOG_LEVEL_ERROR</literal> is always fatal.
+</para><variablelist role="params">
+<varlistentry><term><parameter>log_domain</parameter>&nbsp;:</term>
+<listitem><para>the log domain.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>fatal_mask</parameter>&nbsp;:</term>
+<listitem><para>the new fatal mask.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the old fatal mask for the log domain.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-log-default-handler">g_log_default_handler ()</title>
+<programlisting>void        g_log_default_handler           (const <link linkend="gchar">gchar</link> *log_domain,
+                                             <link linkend="GLogLevelFlags">GLogLevelFlags</link> log_level,
+                                             const <link linkend="gchar">gchar</link> *message,
+                                             <link linkend="gpointer">gpointer</link> unused_data);</programlisting>
+<para>
+The default log handler.
+This is used if no log handler has been set for the particular log domain
+and log level combination. It outputs the message to stderr or stdout
+and if the log level is fatal it calls <function><link linkend="abort">abort</link>()</function>.
+</para>
+<para>
+stderr is used for levels <literal>G_LOG_LEVEL_ERROR</literal>, <literal>G_LOG_LEVEL_CRITICAL</literal>, and
+<literal>G_LOG_LEVEL_WARNING</literal>. stdout is used for the rest.
+(On the Windows platform, stdout is always used.)
+</para><variablelist role="params">
+<varlistentry><term><parameter>log_domain</parameter>&nbsp;:</term>
+<listitem><para>the log domain of the message.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>log_level</parameter>&nbsp;:</term>
+<listitem><para>the level of the message.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>message</parameter>&nbsp;:</term>
+<listitem><para>the message.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>unused_data</parameter>&nbsp;:</term>
+<listitem><para>data passed from <link linkend="g-log">g_log</link>() which is unused.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

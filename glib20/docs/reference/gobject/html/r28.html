@@ -1,0 +1,293 @@
+<HTML
+><HEAD
+><TITLE
+>API Reference</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GObject Reference Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Introduction"
+HREF="f4.html"><LINK
+REL="NEXT"
+TITLE="GType"
+HREF="gobject-gtype.html"></HEAD
+><BODY
+CLASS="REFERENCE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="5"
+>GObject Reference Manual</FONT
+></TH
+></TR
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="f4.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&nbsp;</B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="gobject-gtype.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="REFERENCE"
+><A
+NAME="AEN28"><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+>I. API Reference</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="gobject-gtype.html"
+>GType</A
+>&nbsp;--&nbsp;The GLib Runtime type identification and management system</DT
+><DT
+><A
+HREF="gobject-gtypeplugin.html"
+>GTypePlugin</A
+>&nbsp;--&nbsp;</DT
+><DT
+><A
+HREF="gobject-gtypemodule.html"
+>GTypeModule</A
+>&nbsp;--&nbsp;Type Loading Modules</DT
+><DT
+><A
+HREF="gobject-the-base-object-type.html"
+>GObject</A
+>&nbsp;--&nbsp;The base object type.</DT
+><DT
+><A
+HREF="gobject-enumeration-and-flag-types.html"
+>Enums and Flags</A
+>&nbsp;--&nbsp;Enumeration and flags types.</DT
+><DT
+><A
+HREF="gobject-boxed-types.html"
+>GBoxed</A
+>&nbsp;--&nbsp;Mechanism to wrap opaque C structures registered by the type system.</DT
+><DT
+><A
+HREF="gobject-generic-values.html"
+>Generic Values</A
+>&nbsp;--&nbsp;A polymorphic type that can hold values of any other type.</DT
+><DT
+><A
+HREF="gobject-standard-parameter-and-value-types.html"
+>Parameters and Values</A
+>&nbsp;--&nbsp;Standard Parameter and Value Types.</DT
+><DT
+><A
+HREF="gobject-varargs-value-collection.html"
+>Varargs Value Collection</A
+>&nbsp;--&nbsp;</DT
+><DT
+><A
+HREF="gobject-gparamspec.html"
+>GParamSpec</A
+>&nbsp;--&nbsp;Meta data object for parameter specifications.</DT
+><DT
+><A
+HREF="gobject-signals.html"
+>Signals</A
+>&nbsp;--&nbsp;Signals provide a means for customization of object behaviour and are used
+as general purpose notification mechanism.</DT
+><DT
+><A
+HREF="gobject-closures.html"
+>Closures</A
+>&nbsp;--&nbsp;</DT
+><DT
+><A
+HREF="gobject-value-arrays.html"
+>Value arrays</A
+>&nbsp;--&nbsp;A <A
+HREF="gobject-value-arrays.html#GVALUEARRAY"
+>GValueArray</A
+> is a container structure to maintain an array of <A
+HREF="gobject-generic-values.html#GVALUE"
+>GValue</A
+> elements.</DT
+></DL
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><BR
+CLEAR="all"><BR><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="f4.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&nbsp;</B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="gobject-gtype.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+><TR
+><TD
+COLSPAN="2"
+ALIGN="left"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Introduction</B
+></FONT
+></TD
+><TD
+COLSPAN="2"
+ALIGN="right"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>GType</B
+></FONT
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

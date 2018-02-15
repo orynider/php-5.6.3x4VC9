@@ -1,0 +1,450 @@
+
+amigax.c,215
+AllocRastPort 52,2365
+FreeRastPort 103,3354
+AllocXImage 133,3853
+FreeXImage 158,4242
+XPutPixel 172,4425
+AllocBestPen 186,4644
+FreePens 255,6622
+ParseColor 273,6896
+QueryColor 343,8388
+QueryColors 371,8954
+
+amigax.h,930
+#define AMIGA_X37,2070
+#define Success 46,2174
+#define ZPixmap 49,2219
+#define Bool 51,2240
+#define Status 52,2261
+#define True 53,2282
+#define False 54,2301
+typedef struct ColorMap  *Colormap;Colormap56,2321
+typedef void  *Visual;Visual58,2358
+}   XImage;XImage63,2462
+}   XColor;XColor68,2559
+typedef struct Screen   Display;Display70,2572
+#define XGrabServer(XGrabServer73,2607
+#define XUngrabServer(XUngrabServer74,2648
+#define XDefaultScreen(XDefaultScreen76,2690
+#define XDefaultVisual(XDefaultVisual77,2731
+#define XDefaultColormap(XDefaultColormap78,2775
+#define XDefaultDepth(XDefaultDepth79,2837
+#define XCreateImage(XCreateImage81,2905
+#define XDestroyImage(XDestroyImage83,3029
+#define XAllocColor(XAllocColor85,3078
+#define XFreeColors(XFreeColors87,3161
+#define XParseColor(XParseColor89,3251
+#define XQueryColor(XQueryColor91,3345
+#define XQueryColors(XQueryColors93,3418
+
+Attrib.c,222
+CreateOldColorTable(47,2266
+FreeOldColorTable(67,2702
+xpmFreeColorTable(92,3147
+XpmFreeExtensions(114,3543
+XpmAttributesSize(142,4093
+xpmInitAttributes(151,4210
+xpmSetAttributes(179,4896
+XpmFreeAttributes(249,6895
+
+CrBufFrI.c,221
+XpmCreateBufferFromImage(53,2565
+#define RETURN(RETURN91,3504
+XpmCreateBufferFromXpmImage(98,3590
+WriteColors(250,7194
+WritePixels(296,8122
+ExtensionsSize(329,8851
+WriteExtensions(350,9334
+CommentsSize(384,10013
+
+CrBufFrP.c,35
+XpmCreateBufferFromPixmap(38,1992
+
+CrDatFrI.c,197
+XpmCreateDataFromImage(54,2578
+#define RETURN(RETURN89,3487
+XpmCreateDataFromXpmImage(96,3572
+CreateColors(213,6721
+CreatePixels(253,7518
+CountExtensions(285,8240
+CreateExtensions(311,8873
+
+CrDatFrP.c,33
+XpmCreateDataFromPixmap(38,1992
+
+create.c,1342
+xpmstrcasecmp(159,6864
+xpmVisualType(181,7184
+}      CloseColor;CloseColor214,7764
+closeness_cmp(217,7795
+AllocColor(232,8185
+SetCloseColor(255,8691
+#define ITERATIONS 333,12152
+#define COLOR_FACTOR 342,12435
+#define BRIGHTNESS_FACTOR 343,12464
+#define USE_CLOSECOLOR 422,14724
+SetColor(440,15221
+CreateColors(504,16826
+FreeColors(736,22875
+#define RETURN(RETURN749,23149
+XpmCreateImageFromXpmImage(756,23235
+CreateXImage(972,29697
+static unsigned char Const _reverse_byte[1029,31345
+_XReverse_Bytes(1065,33075
+xpm_xynormalizeimagebits(1078,33249
+xpm_znormalizeimagebits(1108,33786
+static unsigned char Const _lomask[1147,34324
+static unsigned char Const _himask[1149,34424
+_putbits(1153,34537
+PutImagePixels(1201,35880
+static unsigned long byteorderpixel 1278,37994
+PutImagePixels32(1288,38212
+PutImagePixels16(1398,40683
+PutImagePixels8(1479,42331
+PutImagePixels1(1526,43216
+XpmCreatePixmapFromXpmImage(1640,46052
+APutImagePixels 1682,47134
+MSWPutImagePixels(1725,48121
+PutPixel1(1774,49155
+PutPixel(1807,49975
+PutPixel32(1843,50836
+PutPixel32MSB(1857,51108
+PutPixel32LSB(1874,51446
+PutPixel16MSB(1891,51784
+PutPixel16LSB(1906,52072
+PutPixel8(1921,52360
+PutPixel1MSB(1932,52546
+PutPixel1LSB(1946,52831
+xpmParseDataAndCreate(1965,53223
+ParseAndPutPixels(2304,62369
+#define FREE_CIDX 2387,64209
+
+CrIFrBuf.c,92
+XpmCreateImageFromBuffer(40,2050
+XpmCreateXpmImageFromBuffer(83,3122
+OpenBuffer(108,3649
+
+CrIFrDat.c,87
+XpmCreateImageFromData(40,2048
+XpmCreateXpmImageFromData(83,3105
+OpenArray(108,3613
+
+CrIFrP.c,34
+xpmCreateImageFromPixmap(38,1993
+
+CrPFrBuf.c,35
+XpmCreatePixmapFromBuffer(38,1992
+
+CrPFrDat.c,33
+XpmCreatePixmapFromData(38,1992
+
+CrPFrI.c,34
+xpmCreatePixmapFromImage(38,1993
+
+data.c,312
+static char *RCS_Version 37,2016
+static char *RCS_Id 40,2097
+#define Getc(Getc47,2237
+#define Ungetc(Ungetc48,2273
+ParseComment(52,2338
+xpmNextString(179,4765
+xpmNextWord(235,6081
+xpmNextUI(272,6877
+xpmGetString(287,7125
+xpmGetCmt(371,8705
+xpmDataType xpmDataTypes[387,9044
+xpmParseHeader(403,9401
+
+hashtab.c,343
+AtomMake(42,2196
+#define HASH_FUNCTION 70,2824
+#define INITIAL_HASH_SIZE 72,2921
+#define HASH_TABLE_GROWS 73,2986
+#define HASH_FUNCTION	77,3097
+#define INITIAL_HASH_SIZE 79,3213
+#define HASH_TABLE_GROWS 80,3269
+xpmHashSlot(107,3830
+HashTableGrows(134,4326
+xpmHashIntern(169,5104
+xpmHashTableInit(198,5684
+xpmHashTableFree(221,6189
+
+Image.c,50
+xpmInitXpmImage(41,2046
+XpmFreeXpmImage(53,2237
+
+Info.c,93
+xpmInitXpmInfo(41,2046
+XpmFreeXpmInfo(57,2303
+xpmSetInfoMask(88,2962
+xpmSetInfo(103,3314
+
+misc.c,110
+xpmstrdup(43,2105
+xpmatoui(57,2270
+XpmGetErrorString(82,2681
+XpmLibraryVersion(108,3270
+XpmFree(120,3443
+
+parse.c,215
+char *xpmColorKeys[49,2390
+xpmParseValues(58,2613
+xpmParseColors(168,5317
+ParsePixels(328,9580
+#define FREE_CIDX 389,11037
+xpmParseExtensions(484,13225
+#define RETURN(RETURN595,16013
+xpmParseData(605,16203
+
+RdFToBuf.c,124
+#define stat 50,2270
+#define fstat 51,2289
+#define fdopen 52,2310
+#define O_RDONLY 53,2333
+XpmReadFileToBuffer(57,2372
+
+RdFToDat.c,27
+XpmReadFileToData(38,1992
+
+RdFToI.c,203
+# define popen 38,2050
+# define pclose 39,2072
+#  define stat 42,2139
+#  define fstat 43,2160
+XpmReadFileToImage(52,2326
+XpmReadFileToXpmImage(97,3482
+OpenReadFile(126,4102
+xpmDataClose(208,6060
+
+RdFToP.c,29
+XpmReadFileToPixmap(38,1992
+
+rgb.c,179
+xpmReadRgbNames(56,2507
+xpmGetRgbName(118,3979
+xpmFreeRgbNames(144,4724
+xpmReadRgbNames(162,5054
+xpmGetRgbName(178,5408
+xpmGetRGBfromName(202,5946
+xpmFreeRgbNames(274,7452
+
+rgbtab.h,144
+}      rgbRecord;rgbRecord44,2448
+#define myRGB(myRGB50,2557
+static rgbRecord theRGBRecords[53,2616
+static int numTheRGBRecords 292,11727
+
+scan.c,640
+#define MAXPRINTABLE 47,2184
+static char *printable 51,2328
+}      PixelsMap;PixelsMap68,2851
+storePixel(115,4450
+storeMaskPixel(150,5185
+#define RETURN(RETURN169,5541
+XpmCreateXpmImageFromImage(180,5743
+ScanTransparentColor(349,10129
+ScanOtherColors(403,11613
+static unsigned long Const low_bits_table[573,16108
+GetImagePixels(596,16826
+static unsigned long byteorderpixel 695,19340
+GetImagePixels32(699,19413
+GetImagePixels16(764,21050
+GetImagePixels8(810,22119
+GetImagePixels1(843,22822
+#define CLEAN_UP(CLEAN_UP886,23839
+AGetImagePixels 894,23980
+MSWGetImagePixels(933,24858
+XpmCreateXpmImageFromPixmap(963,25460
+
+simx.c,390
+boundCheckingMalloc(52,2524
+boundCheckingCalloc(70,2962
+boundCheckingRealloc(88,3472
+XDefaultVisual(108,3974
+XDefaultScreen(115,4122
+XDefaultDepth(123,4265
+XDefaultColormap(133,4445
+hexCharToInt(141,4617
+rgbFromHex(158,4848
+XParseColor(188,5644
+XAllocColor(216,6241
+XQueryColors(223,6437
+XFreeColors(239,6865
+XCreateImage(248,7068
+XImageFree(270,7612
+XDestroyImage(277,7682
+
+simx.h,563
+#define _SIMX_H38,2066
+#define FUNC(FUNC52,2460
+#define LFUNC(LFUNC53,2495
+#define FUNC(FUNC55,2547
+#define LFUNC(LFUNC56,2582
+typedef HDC Display;Display67,2896
+typedef void *Screen;Screen68,2948
+typedef void *Visual;Visual69,2987
+typedef HPALETTE Colormap;Colormap72,3065
+typedef COLORREF Pixel;Pixel73,3122
+#define PIXEL_ALREADY_TYPEDEFED	75,3147
+}      XColor;XColor80,3275
+}      XImage;XImage87,3401
+#define ZPixmap 121,4607
+#define XYBitmap 122,4649
+#define True 125,4706
+#define False 126,4721
+typedef BOOL Bool;Bool129,4757
+
+WrFFrBuf.c,32
+XpmWriteFileFromBuffer(38,1992
+
+WrFFrDat.c,30
+XpmWriteFileFromData(38,1992
+
+WrFFrI.c,254
+# define popen 42,2127
+# define pclose 43,2149
+XpmWriteFileFromImage(63,2762
+XpmWriteFileFromXpmImage(94,3565
+xpmWriteFile(156,4827
+WriteColors(214,6303
+WritePixels(238,6756
+WriteExtensions(280,7626
+OpenWriteFile(301,8096
+xpmDataClose(345,9035
+
+WrFFrP.c,32
+XpmWriteFileFromPixmap(38,1992
+
+xpm.h,2963
+#define XPM_h46,2179
+#define XpmFormat 60,2680
+#define XpmVersion 61,2700
+#define XpmRevision 62,2721
+#define XpmIncludeVersion 63,2744
+# define SYSV	68,2860
+#define NEED_STRCASECMP	71,2992
+typedef unsigned long Pixel;Pixel83,3332
+# define PIXEL_ALREADY_TYPEDEFED84,3387
+#  define NeedFunctionPrototypes 90,3599
+#  define NeedFunctionPrototypes 92,3641
+#define XpmColorError 103,3809
+#define XpmSuccess 104,3836
+#define XpmOpenFailed 105,3863
+#define XpmFileInvalid 106,3890
+#define XpmNoMemory 107,3917
+#define XpmColorFailed 108,3944
+}      XpmColorSymbol;XpmColorSymbol114,4105
+}      XpmExtension;XpmExtension120,4324
+}      XpmColor;XpmColor129,4640
+}      XpmImage;XpmImage138,4968
+}      XpmInfo;XpmInfo149,5514
+typedef int (*XpmAllocColorFunc)XpmAllocColorFunc151,5531
+typedef int (*XpmFreeColorsFunc)XpmFreeColorsFunc161,5747
+}      XpmAttributes;XpmAttributes231,8637
+#define XpmVisual	234,8697
+#define XpmColormap	235,8726
+#define XpmDepth	236,8757
+#define XpmSize	237,8785
+#define XpmHotspot	238,8834
+#define XpmCharsPerPixel 239,8892
+#define XpmColorSymbols	240,8927
+#define XpmRgbFilename	241,8962
+#define XpmInfos	243,9034
+#define XpmReturnInfos	244,9062
+#define XpmReturnPixels	246,9114
+#define XpmExtensions 247,9149
+#define XpmReturnExtensions 248,9185
+#define XpmExactColors 250,9228
+#define XpmCloseness	251,9264
+#define XpmRGBCloseness	252,9297
+#define XpmColorKey	253,9333
+#define XpmColorTable 255,9366
+#define XpmReturnColorTable 256,9402
+#define XpmReturnAllocPixels 258,9445
+#define XpmAllocCloseColors 259,9483
+#define XpmBitmapFormat 260,9520
+#define XpmAllocColor 262,9557
+#define XpmFreeColors 263,9593
+#define XpmColorClosure 264,9629
+#define XpmComments 268,9698
+#define XpmReturnComments 269,9734
+#define XpmUndefPixel 273,9849
+#define XpmUndefPixel 276,9921
+#define XPM_MONO	283,10099
+#define XPM_GREY4	284,10118
+#define XPM_GRAY4	285,10138
+#define XPM_GREY 286,10158
+#define XPM_GRAY 287,10178
+#define XPM_COLOR	288,10198
+#define FUNC(FUNC293,10314
+#define LFUNC(LFUNC294,10349
+#define FUNC(FUNC296,10391
+#define LFUNC(LFUNC297,10426
+#define XpmPixmapColorError 469,15383
+#define XpmPixmapSuccess 470,15426
+#define XpmPixmapOpenFailed 471,15466
+#define XpmPixmapFileInvalid 472,15509
+#define XpmPixmapNoMemory 473,15553
+#define XpmPixmapColorFailed 474,15594
+#define XpmReadPixmapFile(XpmReadPixmapFile476,15639
+#define XpmWritePixmapFile(XpmWritePixmapFile478,15751
+#define PixmapColorError 482,15885
+#define PixmapSuccess 483,15925
+#define PixmapOpenFailed 484,15962
+#define PixmapFileInvalid 485,16002
+#define PixmapNoMemory 486,16043
+#define PixmapColorFailed 487,16081
+#define ColorSymbol 489,16123
+#define XReadPixmapFile(XReadPixmapFile491,16159
+#define XWritePixmapFile(XWritePixmapFile493,16269
+#define XCreatePixmapFromData(XCreatePixmapFromData495,16377
+#define XCreateDataFromPixmap(XCreateDataFromPixmap497,16497
+
+XpmI.h,1523
+#define XPMI_h43,2241
+#define index 62,2564
+#define rindex 66,2608
+#define bcopy(bcopy77,2813
+#define bzero(bzero80,2897
+#define LONG6487,3051
+#define XpmFree(XpmFree103,3518
+#define XpmMalloc(XpmMalloc106,3566
+#define XpmRealloc(XpmRealloc107,3605
+#define XpmCalloc(XpmCalloc108,3658
+#define XpmMalloc(XpmMalloc111,3764
+#define XpmRealloc(XpmRealloc112,3840
+#define XpmCalloc(XpmCalloc113,3911
+#define XPMMAXCMTLEN 117,4007
+}      xpmData;xpmData134,4363
+#define XPMARRAY 136,4380
+#define XPMFILE 137,4399
+#define XPMPIPE 138,4418
+#define XPMBUFFER 139,4437
+#define EOL 141,4458
+#define TAB 142,4475
+#define SPC 143,4492
+}      xpmDataType;xpmDataType155,4941
+}      xpmRgbName;xpmRgbName166,5169
+#define MAX_RGBNAMES 169,5253
+#define TRANSPARENT_COLOR 173,5310
+#define NKEYS 176,5402
+typedef struct _xpmHashAtom _xpmHashAtom212,6588
+}      *xpmHashAtom;xpmHashAtom215,6650
+}      xpmHashTable;xpmHashTable222,6760
+#define HashAtomData(HashAtomData229,7026
+#define HashColorIndex(HashColorIndex230,7062
+#define USE_HASHTABLE 231,7123
+#define xpmGetC(xpmGetC239,7373
+#define XYNORMALIZE(XYNORMALIZE296,9481
+#define ZNORMALIZE(ZNORMALIZE300,9647
+#define XYINDEX(XYINDEX304,9770
+#define ZINDEX(ZINDEX308,9908
+#define ZINDEX32(ZINDEX32311,10006
+#define ZINDEX16(ZINDEX16313,10076
+#define ZINDEX8(ZINDEX8315,10146
+#define ZINDEX1(ZINDEX1317,10208
+#define Const 321,10316
+#define Const 323,10342
+#define xpmstrdup 330,10448
+#define xpmstrcasecmp 337,10598

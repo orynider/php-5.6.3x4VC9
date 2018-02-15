@@ -1,0 +1,90 @@
+1>------ Build started: Project: freetype, Configuration: Debug Multithreaded Win32 ------
+1>Compiling...
+1>autofit.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>winfnt.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>type42.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>type1cid.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>type1.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>truetype.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>sfnt.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>raster.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>psmodule.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>pshinter.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>psaux.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>pfr.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>pcf.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftwinfnt.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>fttype1.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftsynth.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftpfr.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftpatent.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftotval.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftmm.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>Generating Code...
+1>Compiling...
+1>ftlcdfil.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftgxval.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftfntfmt.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftbbox.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>smooth.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftsystem.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftstroke.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftlzw.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftinit.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftgzip.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftglyph.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftgasp.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftfstype.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftcache.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftbitmap.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>ftbase.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>cff.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>c:\php-sdk\freetype\src\cff\cffload.c(1371) : warning C4244: '=' : conversion from 'FT_UInt32' to 'FT_Byte', possible loss of data
+1>bdf.c
+1>C:\MsVS09\VC\include\sal.h(138) : warning C4001: nonstandard extension 'single line comment' was used
+1>Generating Code...
+1>c:\php-sdk\freetype\src\base\ftobjs.c(4999) : warning C4702: unreachable code
+1>c:\php-sdk\freetype\src\base\ftobjs.c(5000) : warning C4702: unreachable code
+1>Compiling...
+1>ftdebug.c
+1>Creating library...
+1>Build log was saved at "file://c:\php-sdk\freetype\objs\debug_mt\BuildLog.htm"
+1>freetype - 0 error(s), 41 warning(s)
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

@@ -1,0 +1,513 @@
+TEST_EXES=..\gdbuild\tests\bmp_bmp_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\bmp_bmp_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\bmp_bug00275.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\bmp_bug00276.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\freetype_bug00132.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd_bug00383.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd_gd_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd_gd_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd_gd_num_colors.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd_gd_versiontest.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_bug00209.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_bug00309.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_bug00354.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_bug00383.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_bug_289.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_gd2_empty_file.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_gd2_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_gd2_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_gd2_read.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_gd2_read_corrupt.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_php_bug_72339.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gd2_too_few_image_data.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagearc_bug00079.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagebrightness_basic.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageclone_bug00300.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecolor_basic.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecolorclosest_gdimagecolorclosest.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecolordeallocate_gdimagecolordeallocate.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecolorexact_gdimagecolorexact.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecolorreplace_gdimagecolorreplace.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecolorresolve_gdimagecolorresolve.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecolortransparent_gdimagecolortransparent.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecontrast_basic.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageconvolution_basic.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecopy_bug00007.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecopy_bug00081.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecopyresampled_basic.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecopyresampled_basic_alpha.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecopyresampled_bug00201.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecopyresampled_exact_alpha.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecopyrotated_bug00020.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecreate_bug00340.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecrop_bug00297.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecrop_bug00432.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagecrop_php_bug_72494.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefile_gdnametest.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefill_bug00002_1.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefill_bug00002_2.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefill_bug00002_3.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefill_bug00002_4.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefill_bug00104_1.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledarc_php_bug43828.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledellipse_bug00010.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledellipse_bug00191.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledellipse_github_bug_00238.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledpolygon_bug00100.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon0.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon1.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon2.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon3.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledpolygon_php_bug_64641.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledpolygon_self_intersecting.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledrectangle_bug00004.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledrectangle_bug00078.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilledrectangle_bug00106_gdimagefilledrectangle.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilltoborder_bug00037.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilltoborder_github_bug_215.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagefilter_gdCopyBlurred.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageflip_gdimageflip.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagegrayscale_basic.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagegrayscale_bug00386.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_bug00072.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_bug00077.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_bug00111.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_bug00315.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_gdImageAALine_thickness.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_gdimageline_aa.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_gdimageline_aa_outofrange.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_gdimageline_bug5.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageline_github_bug_167.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagenegate_basic.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon0.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon1.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon2.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon3.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagepixelate_gdimagepixelate.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagepolygon_gdimagepolygon0.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagepolygon_gdimagepolygon1.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagepolygon_gdimagepolygon2.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagepolygon_gdimagepolygon3.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerectangle_bug00003.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerectangle_bug00106_gdimagerectangle.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerectangle_bug00299.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerectangle_github_bug_00172.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerectangle_point_ordering.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerotate_bug00067.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerotate_php_bug_64898.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagerotate_php_bug_65070.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagescale_bug00329.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagescale_bug00330.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagescale_bug_overflow_large_new_size.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagescale_github_bug_00218.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagescatterex_bug00208_1.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagescatterex_bug00208_2.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagesetpixel_alpha_blending.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagesetpixel_bug00186.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagesetpixel_gdeffectmultiply.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagesetpixel_gdeffectoverlay.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagestringft_gdimagestringft_bbox.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagestringftex_gdimagestringftex_returnfontpathname.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagetruecolortopalette_bug00307.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagetruecolortopalette_php_bug_67325.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdimagetruecolortopalette_php_bug_72512.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdinterpolatedscale_gdModesAndPalettes.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdinterpolatedscale_gdTrivialResize.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdnewfilectx_gdnewfilectx_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdtiled_bug00032.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gdtransformaffineboundingbox_github_bug_00221.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_bug00005.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_bug00005_2.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_bug00006.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_bug00060.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_bug00066.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_bug00181.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_bug00227.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_gif_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_gif_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_ossfuzz5700.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_php_bug_75571.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\gif_uninitialized_memory_read.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\jpeg_bug00338.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\jpeg_bug_github_18.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\jpeg_jpeg_empty_file.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\jpeg_jpeg_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\jpeg_jpeg_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\jpeg_jpeg_read.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\jpeg_jpeg_resolution.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00011.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00033.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00086.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00088.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00193.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00338.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00381_1.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_bug00381_2.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_png_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_png_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\png_png_resolution.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_bug00084.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_bug00247.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_bug00247a.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_bug00248.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_bug00248a.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_heap_overflow.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_tga_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tga_tga_read.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tiff_tiff_dpi.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tiff_tiff_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tiff_tiff_invalid_read.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tiff_tiff_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\tiff_tiff_read_bw.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\wbmp_wbmp_im2im.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\wbmp_wbmp_null.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\webp_bug00111.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\webp_bug_double_free.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\xbm_github_bug_109.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\xbm_github_bug_170.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\xbm_x10_basic_read.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\xpm_bug00166.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\xpm_bug00185.exe $(TEST_EXES) 
+TEST_EXES=..\gdbuild\tests\xpm_color_name.exe $(TEST_EXES) 
+..\gdbuild\bmp_bmp_im2im.obj: tests\bmp\bmp_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\bmp_bmp_null.obj: tests\bmp\bmp_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\bmp_bug00275.obj: tests\bmp\bug00275.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\bmp_bug00276.obj: tests\bmp\bug00276.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\freetype_bug00132.obj: tests\freetype\bug00132.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd_bug00383.obj: tests\gd\bug00383.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd_gd_im2im.obj: tests\gd\gd_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd_gd_null.obj: tests\gd\gd_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd_gd_num_colors.obj: tests\gd\gd_num_colors.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd_gd_versiontest.obj: tests\gd\gd_versiontest.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_bug00209.obj: tests\gd2\bug00209.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_bug00309.obj: tests\gd2\bug00309.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_bug00354.obj: tests\gd2\bug00354.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_bug00383.obj: tests\gd2\bug00383.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_bug_289.obj: tests\gd2\bug_289.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_gd2_empty_file.obj: tests\gd2\gd2_empty_file.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_gd2_im2im.obj: tests\gd2\gd2_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_gd2_null.obj: tests\gd2\gd2_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_gd2_read.obj: tests\gd2\gd2_read.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_gd2_read_corrupt.obj: tests\gd2\gd2_read_corrupt.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_php_bug_72339.obj: tests\gd2\php_bug_72339.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gd2_too_few_image_data.obj: tests\gd2\too_few_image_data.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagearc_bug00079.obj: tests\gdimagearc\bug00079.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagebrightness_basic.obj: tests\gdimagebrightness\basic.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageclone_bug00300.obj: tests\gdimageclone\bug00300.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecolor_basic.obj: tests\gdimagecolor\basic.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecolorclosest_gdimagecolorclosest.obj: tests\gdimagecolorclosest\gdimagecolorclosest.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecolordeallocate_gdimagecolordeallocate.obj: tests\gdimagecolordeallocate\gdimagecolordeallocate.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecolorexact_gdimagecolorexact.obj: tests\gdimagecolorexact\gdimagecolorexact.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecolorreplace_gdimagecolorreplace.obj: tests\gdimagecolorreplace\gdimagecolorreplace.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecolorresolve_gdimagecolorresolve.obj: tests\gdimagecolorresolve\gdimagecolorresolve.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecolortransparent_gdimagecolortransparent.obj: tests\gdimagecolortransparent\gdimagecolortransparent.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecontrast_basic.obj: tests\gdimagecontrast\basic.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageconvolution_basic.obj: tests\gdimageconvolution\basic.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecopy_bug00007.obj: tests\gdimagecopy\bug00007.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecopy_bug00081.obj: tests\gdimagecopy\bug00081.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecopyresampled_basic.obj: tests\gdimagecopyresampled\basic.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecopyresampled_basic_alpha.obj: tests\gdimagecopyresampled\basic_alpha.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecopyresampled_bug00201.obj: tests\gdimagecopyresampled\bug00201.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecopyresampled_exact_alpha.obj: tests\gdimagecopyresampled\exact_alpha.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecopyrotated_bug00020.obj: tests\gdimagecopyrotated\bug00020.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecreate_bug00340.obj: tests\gdimagecreate\bug00340.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecrop_bug00297.obj: tests\gdimagecrop\bug00297.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecrop_bug00432.obj: tests\gdimagecrop\bug00432.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagecrop_php_bug_72494.obj: tests\gdimagecrop\php_bug_72494.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefile_gdnametest.obj: tests\gdimagefile\gdnametest.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefill_bug00002_1.obj: tests\gdimagefill\bug00002_1.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefill_bug00002_2.obj: tests\gdimagefill\bug00002_2.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefill_bug00002_3.obj: tests\gdimagefill\bug00002_3.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefill_bug00002_4.obj: tests\gdimagefill\bug00002_4.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefill_bug00104_1.obj: tests\gdimagefill\bug00104_1.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledarc_php_bug43828.obj: tests\gdimagefilledarc\php_bug43828.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledellipse_bug00010.obj: tests\gdimagefilledellipse\bug00010.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledellipse_bug00191.obj: tests\gdimagefilledellipse\bug00191.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledellipse_github_bug_00238.obj: tests\gdimagefilledellipse\github_bug_00238.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledpolygon_bug00100.obj: tests\gdimagefilledpolygon\bug00100.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon0.obj: tests\gdimagefilledpolygon\gdimagefilledpolygon0.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon1.obj: tests\gdimagefilledpolygon\gdimagefilledpolygon1.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon2.obj: tests\gdimagefilledpolygon\gdimagefilledpolygon2.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon3.obj: tests\gdimagefilledpolygon\gdimagefilledpolygon3.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledpolygon_php_bug_64641.obj: tests\gdimagefilledpolygon\php_bug_64641.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledpolygon_self_intersecting.obj: tests\gdimagefilledpolygon\self_intersecting.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledrectangle_bug00004.obj: tests\gdimagefilledrectangle\bug00004.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledrectangle_bug00078.obj: tests\gdimagefilledrectangle\bug00078.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilledrectangle_bug00106_gdimagefilledrectangle.obj: tests\gdimagefilledrectangle\bug00106_gdimagefilledrectangle.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilltoborder_bug00037.obj: tests\gdimagefilltoborder\bug00037.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilltoborder_github_bug_215.obj: tests\gdimagefilltoborder\github_bug_215.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagefilter_gdCopyBlurred.obj: tests\gdimagefilter\gdCopyBlurred.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageflip_gdimageflip.obj: tests\gdimageflip\gdimageflip.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagegrayscale_basic.obj: tests\gdimagegrayscale\basic.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagegrayscale_bug00386.obj: tests\gdimagegrayscale\bug00386.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_bug00072.obj: tests\gdimageline\bug00072.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_bug00077.obj: tests\gdimageline\bug00077.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_bug00111.obj: tests\gdimageline\bug00111.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_bug00315.obj: tests\gdimageline\bug00315.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_gdImageAALine_thickness.obj: tests\gdimageline\gdImageAALine_thickness.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_gdimageline_aa.obj: tests\gdimageline\gdimageline_aa.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_gdimageline_aa_outofrange.obj: tests\gdimageline\gdimageline_aa_outofrange.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_gdimageline_bug5.obj: tests\gdimageline\gdimageline_bug5.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageline_github_bug_167.obj: tests\gdimageline\github_bug_167.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagenegate_basic.obj: tests\gdimagenegate\basic.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageopenpolygon_gdimageopenpolygon0.obj: tests\gdimageopenpolygon\gdimageopenpolygon0.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageopenpolygon_gdimageopenpolygon1.obj: tests\gdimageopenpolygon\gdimageopenpolygon1.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageopenpolygon_gdimageopenpolygon2.obj: tests\gdimageopenpolygon\gdimageopenpolygon2.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimageopenpolygon_gdimageopenpolygon3.obj: tests\gdimageopenpolygon\gdimageopenpolygon3.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagepixelate_gdimagepixelate.obj: tests\gdimagepixelate\gdimagepixelate.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagepolygon_gdimagepolygon0.obj: tests\gdimagepolygon\gdimagepolygon0.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagepolygon_gdimagepolygon1.obj: tests\gdimagepolygon\gdimagepolygon1.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagepolygon_gdimagepolygon2.obj: tests\gdimagepolygon\gdimagepolygon2.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagepolygon_gdimagepolygon3.obj: tests\gdimagepolygon\gdimagepolygon3.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerectangle_bug00003.obj: tests\gdimagerectangle\bug00003.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerectangle_bug00106_gdimagerectangle.obj: tests\gdimagerectangle\bug00106_gdimagerectangle.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerectangle_bug00299.obj: tests\gdimagerectangle\bug00299.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerectangle_github_bug_00172.obj: tests\gdimagerectangle\github_bug_00172.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerectangle_point_ordering.obj: tests\gdimagerectangle\point_ordering.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerotate_bug00067.obj: tests\gdimagerotate\bug00067.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerotate_php_bug_64898.obj: tests\gdimagerotate\php_bug_64898.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagerotate_php_bug_65070.obj: tests\gdimagerotate\php_bug_65070.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagescale_bug00329.obj: tests\gdimagescale\bug00329.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagescale_bug00330.obj: tests\gdimagescale\bug00330.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagescale_bug_overflow_large_new_size.obj: tests\gdimagescale\bug_overflow_large_new_size.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagescale_github_bug_00218.obj: tests\gdimagescale\github_bug_00218.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagescatterex_bug00208_1.obj: tests\gdimagescatterex\bug00208_1.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagescatterex_bug00208_2.obj: tests\gdimagescatterex\bug00208_2.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagesetpixel_alpha_blending.obj: tests\gdimagesetpixel\alpha_blending.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagesetpixel_bug00186.obj: tests\gdimagesetpixel\bug00186.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagesetpixel_gdeffectmultiply.obj: tests\gdimagesetpixel\gdeffectmultiply.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagesetpixel_gdeffectoverlay.obj: tests\gdimagesetpixel\gdeffectoverlay.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagestringft_gdimagestringft_bbox.obj: tests\gdimagestringft\gdimagestringft_bbox.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagestringftex_gdimagestringftex_returnfontpathname.obj: tests\gdimagestringftex\gdimagestringftex_returnfontpathname.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagetruecolortopalette_bug00307.obj: tests\gdimagetruecolortopalette\bug00307.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagetruecolortopalette_php_bug_67325.obj: tests\gdimagetruecolortopalette\php_bug_67325.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdimagetruecolortopalette_php_bug_72512.obj: tests\gdimagetruecolortopalette\php_bug_72512.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdinterpolatedscale_gdModesAndPalettes.obj: tests\gdinterpolatedscale\gdModesAndPalettes.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdinterpolatedscale_gdTrivialResize.obj: tests\gdinterpolatedscale\gdTrivialResize.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdnewfilectx_gdnewfilectx_null.obj: tests\gdnewfilectx\gdnewfilectx_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdtiled_bug00032.obj: tests\gdtiled\bug00032.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gdtransformaffineboundingbox_github_bug_00221.obj: tests\gdtransformaffineboundingbox\github_bug_00221.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_bug00005.obj: tests\gif\bug00005.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_bug00005_2.obj: tests\gif\bug00005_2.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_bug00006.obj: tests\gif\bug00006.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_bug00060.obj: tests\gif\bug00060.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_bug00066.obj: tests\gif\bug00066.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_bug00181.obj: tests\gif\bug00181.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_bug00227.obj: tests\gif\bug00227.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_gif_im2im.obj: tests\gif\gif_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_gif_null.obj: tests\gif\gif_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_ossfuzz5700.obj: tests\gif\ossfuzz5700.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_php_bug_75571.obj: tests\gif\php_bug_75571.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\gif_uninitialized_memory_read.obj: tests\gif\uninitialized_memory_read.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\jpeg_bug00338.obj: tests\jpeg\bug00338.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\jpeg_bug_github_18.obj: tests\jpeg\bug_github_18.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\jpeg_jpeg_empty_file.obj: tests\jpeg\jpeg_empty_file.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\jpeg_jpeg_im2im.obj: tests\jpeg\jpeg_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\jpeg_jpeg_null.obj: tests\jpeg\jpeg_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\jpeg_jpeg_read.obj: tests\jpeg\jpeg_read.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\jpeg_jpeg_resolution.obj: tests\jpeg\jpeg_resolution.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00011.obj: tests\png\bug00011.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00033.obj: tests\png\bug00033.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00086.obj: tests\png\bug00086.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00088.obj: tests\png\bug00088.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00193.obj: tests\png\bug00193.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00338.obj: tests\png\bug00338.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00381_1.obj: tests\png\bug00381_1.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_bug00381_2.obj: tests\png\bug00381_2.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_png_im2im.obj: tests\png\png_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_png_null.obj: tests\png\png_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\png_png_resolution.obj: tests\png\png_resolution.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_bug00084.obj: tests\tga\bug00084.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_bug00247.obj: tests\tga\bug00247.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_bug00247a.obj: tests\tga\bug00247a.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_bug00248.obj: tests\tga\bug00248.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_bug00248a.obj: tests\tga\bug00248a.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_heap_overflow.obj: tests\tga\heap_overflow.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_tga_null.obj: tests\tga\tga_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tga_tga_read.obj: tests\tga\tga_read.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tiff_tiff_dpi.obj: tests\tiff\tiff_dpi.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tiff_tiff_im2im.obj: tests\tiff\tiff_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tiff_tiff_invalid_read.obj: tests\tiff\tiff_invalid_read.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tiff_tiff_null.obj: tests\tiff\tiff_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tiff_tiff_read_bw.obj: tests\tiff\tiff_read_bw.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\wbmp_wbmp_im2im.obj: tests\wbmp\wbmp_im2im.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\wbmp_wbmp_null.obj: tests\wbmp\wbmp_null.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\webp_bug00111.obj: tests\webp\bug00111.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\webp_bug_double_free.obj: tests\webp\bug_double_free.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\xbm_github_bug_109.obj: tests\xbm\github_bug_109.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\xbm_github_bug_170.obj: tests\xbm\github_bug_170.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\xbm_x10_basic_read.obj: tests\xbm\x10_basic_read.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\xpm_bug00166.obj: tests\xpm\bug00166.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\xpm_bug00185.obj: tests\xpm\bug00185.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\xpm_color_name.obj: tests\xpm\color_name.c; $(CC) $(TEST_CFLAGS) /c $** /Fd$*.pdb /Fo:$@  
+..\gdbuild\tests\bmp_bmp_im2im.exe: ..\gdbuild\bmp_bmp_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\bmp_bmp_null.exe: ..\gdbuild\bmp_bmp_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\bmp_bug00275.exe: ..\gdbuild\bmp_bug00275.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\bmp_bug00276.exe: ..\gdbuild\bmp_bug00276.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\freetype_bug00132.exe: ..\gdbuild\freetype_bug00132.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd_bug00383.exe: ..\gdbuild\gd_bug00383.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd_gd_im2im.exe: ..\gdbuild\gd_gd_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd_gd_null.exe: ..\gdbuild\gd_gd_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd_gd_num_colors.exe: ..\gdbuild\gd_gd_num_colors.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd_gd_versiontest.exe: ..\gdbuild\gd_gd_versiontest.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_bug00209.exe: ..\gdbuild\gd2_bug00209.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_bug00309.exe: ..\gdbuild\gd2_bug00309.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_bug00354.exe: ..\gdbuild\gd2_bug00354.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_bug00383.exe: ..\gdbuild\gd2_bug00383.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_bug_289.exe: ..\gdbuild\gd2_bug_289.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_gd2_empty_file.exe: ..\gdbuild\gd2_gd2_empty_file.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_gd2_im2im.exe: ..\gdbuild\gd2_gd2_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_gd2_null.exe: ..\gdbuild\gd2_gd2_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_gd2_read.exe: ..\gdbuild\gd2_gd2_read.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_gd2_read_corrupt.exe: ..\gdbuild\gd2_gd2_read_corrupt.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_php_bug_72339.exe: ..\gdbuild\gd2_php_bug_72339.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gd2_too_few_image_data.exe: ..\gdbuild\gd2_too_few_image_data.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagearc_bug00079.exe: ..\gdbuild\gdimagearc_bug00079.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagebrightness_basic.exe: ..\gdbuild\gdimagebrightness_basic.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageclone_bug00300.exe: ..\gdbuild\gdimageclone_bug00300.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecolor_basic.exe: ..\gdbuild\gdimagecolor_basic.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecolorclosest_gdimagecolorclosest.exe: ..\gdbuild\gdimagecolorclosest_gdimagecolorclosest.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecolordeallocate_gdimagecolordeallocate.exe: ..\gdbuild\gdimagecolordeallocate_gdimagecolordeallocate.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecolorexact_gdimagecolorexact.exe: ..\gdbuild\gdimagecolorexact_gdimagecolorexact.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecolorreplace_gdimagecolorreplace.exe: ..\gdbuild\gdimagecolorreplace_gdimagecolorreplace.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecolorresolve_gdimagecolorresolve.exe: ..\gdbuild\gdimagecolorresolve_gdimagecolorresolve.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecolortransparent_gdimagecolortransparent.exe: ..\gdbuild\gdimagecolortransparent_gdimagecolortransparent.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecontrast_basic.exe: ..\gdbuild\gdimagecontrast_basic.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageconvolution_basic.exe: ..\gdbuild\gdimageconvolution_basic.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecopy_bug00007.exe: ..\gdbuild\gdimagecopy_bug00007.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecopy_bug00081.exe: ..\gdbuild\gdimagecopy_bug00081.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecopyresampled_basic.exe: ..\gdbuild\gdimagecopyresampled_basic.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecopyresampled_basic_alpha.exe: ..\gdbuild\gdimagecopyresampled_basic_alpha.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecopyresampled_bug00201.exe: ..\gdbuild\gdimagecopyresampled_bug00201.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecopyresampled_exact_alpha.exe: ..\gdbuild\gdimagecopyresampled_exact_alpha.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecopyrotated_bug00020.exe: ..\gdbuild\gdimagecopyrotated_bug00020.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecreate_bug00340.exe: ..\gdbuild\gdimagecreate_bug00340.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecrop_bug00297.exe: ..\gdbuild\gdimagecrop_bug00297.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecrop_bug00432.exe: ..\gdbuild\gdimagecrop_bug00432.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagecrop_php_bug_72494.exe: ..\gdbuild\gdimagecrop_php_bug_72494.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefile_gdnametest.exe: ..\gdbuild\gdimagefile_gdnametest.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefill_bug00002_1.exe: ..\gdbuild\gdimagefill_bug00002_1.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefill_bug00002_2.exe: ..\gdbuild\gdimagefill_bug00002_2.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefill_bug00002_3.exe: ..\gdbuild\gdimagefill_bug00002_3.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefill_bug00002_4.exe: ..\gdbuild\gdimagefill_bug00002_4.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefill_bug00104_1.exe: ..\gdbuild\gdimagefill_bug00104_1.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledarc_php_bug43828.exe: ..\gdbuild\gdimagefilledarc_php_bug43828.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledellipse_bug00010.exe: ..\gdbuild\gdimagefilledellipse_bug00010.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledellipse_bug00191.exe: ..\gdbuild\gdimagefilledellipse_bug00191.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledellipse_github_bug_00238.exe: ..\gdbuild\gdimagefilledellipse_github_bug_00238.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledpolygon_bug00100.exe: ..\gdbuild\gdimagefilledpolygon_bug00100.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon0.exe: ..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon0.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon1.exe: ..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon1.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon2.exe: ..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon2.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledpolygon_gdimagefilledpolygon3.exe: ..\gdbuild\gdimagefilledpolygon_gdimagefilledpolygon3.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledpolygon_php_bug_64641.exe: ..\gdbuild\gdimagefilledpolygon_php_bug_64641.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledpolygon_self_intersecting.exe: ..\gdbuild\gdimagefilledpolygon_self_intersecting.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledrectangle_bug00004.exe: ..\gdbuild\gdimagefilledrectangle_bug00004.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledrectangle_bug00078.exe: ..\gdbuild\gdimagefilledrectangle_bug00078.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilledrectangle_bug00106_gdimagefilledrectangle.exe: ..\gdbuild\gdimagefilledrectangle_bug00106_gdimagefilledrectangle.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilltoborder_bug00037.exe: ..\gdbuild\gdimagefilltoborder_bug00037.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilltoborder_github_bug_215.exe: ..\gdbuild\gdimagefilltoborder_github_bug_215.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagefilter_gdCopyBlurred.exe: ..\gdbuild\gdimagefilter_gdCopyBlurred.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageflip_gdimageflip.exe: ..\gdbuild\gdimageflip_gdimageflip.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagegrayscale_basic.exe: ..\gdbuild\gdimagegrayscale_basic.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagegrayscale_bug00386.exe: ..\gdbuild\gdimagegrayscale_bug00386.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_bug00072.exe: ..\gdbuild\gdimageline_bug00072.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_bug00077.exe: ..\gdbuild\gdimageline_bug00077.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_bug00111.exe: ..\gdbuild\gdimageline_bug00111.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_bug00315.exe: ..\gdbuild\gdimageline_bug00315.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_gdImageAALine_thickness.exe: ..\gdbuild\gdimageline_gdImageAALine_thickness.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_gdimageline_aa.exe: ..\gdbuild\gdimageline_gdimageline_aa.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_gdimageline_aa_outofrange.exe: ..\gdbuild\gdimageline_gdimageline_aa_outofrange.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_gdimageline_bug5.exe: ..\gdbuild\gdimageline_gdimageline_bug5.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageline_github_bug_167.exe: ..\gdbuild\gdimageline_github_bug_167.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagenegate_basic.exe: ..\gdbuild\gdimagenegate_basic.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon0.exe: ..\gdbuild\gdimageopenpolygon_gdimageopenpolygon0.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon1.exe: ..\gdbuild\gdimageopenpolygon_gdimageopenpolygon1.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon2.exe: ..\gdbuild\gdimageopenpolygon_gdimageopenpolygon2.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimageopenpolygon_gdimageopenpolygon3.exe: ..\gdbuild\gdimageopenpolygon_gdimageopenpolygon3.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagepixelate_gdimagepixelate.exe: ..\gdbuild\gdimagepixelate_gdimagepixelate.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagepolygon_gdimagepolygon0.exe: ..\gdbuild\gdimagepolygon_gdimagepolygon0.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagepolygon_gdimagepolygon1.exe: ..\gdbuild\gdimagepolygon_gdimagepolygon1.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagepolygon_gdimagepolygon2.exe: ..\gdbuild\gdimagepolygon_gdimagepolygon2.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagepolygon_gdimagepolygon3.exe: ..\gdbuild\gdimagepolygon_gdimagepolygon3.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerectangle_bug00003.exe: ..\gdbuild\gdimagerectangle_bug00003.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerectangle_bug00106_gdimagerectangle.exe: ..\gdbuild\gdimagerectangle_bug00106_gdimagerectangle.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerectangle_bug00299.exe: ..\gdbuild\gdimagerectangle_bug00299.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerectangle_github_bug_00172.exe: ..\gdbuild\gdimagerectangle_github_bug_00172.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerectangle_point_ordering.exe: ..\gdbuild\gdimagerectangle_point_ordering.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerotate_bug00067.exe: ..\gdbuild\gdimagerotate_bug00067.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerotate_php_bug_64898.exe: ..\gdbuild\gdimagerotate_php_bug_64898.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagerotate_php_bug_65070.exe: ..\gdbuild\gdimagerotate_php_bug_65070.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagescale_bug00329.exe: ..\gdbuild\gdimagescale_bug00329.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagescale_bug00330.exe: ..\gdbuild\gdimagescale_bug00330.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagescale_bug_overflow_large_new_size.exe: ..\gdbuild\gdimagescale_bug_overflow_large_new_size.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagescale_github_bug_00218.exe: ..\gdbuild\gdimagescale_github_bug_00218.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagescatterex_bug00208_1.exe: ..\gdbuild\gdimagescatterex_bug00208_1.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagescatterex_bug00208_2.exe: ..\gdbuild\gdimagescatterex_bug00208_2.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagesetpixel_alpha_blending.exe: ..\gdbuild\gdimagesetpixel_alpha_blending.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagesetpixel_bug00186.exe: ..\gdbuild\gdimagesetpixel_bug00186.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagesetpixel_gdeffectmultiply.exe: ..\gdbuild\gdimagesetpixel_gdeffectmultiply.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagesetpixel_gdeffectoverlay.exe: ..\gdbuild\gdimagesetpixel_gdeffectoverlay.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagestringft_gdimagestringft_bbox.exe: ..\gdbuild\gdimagestringft_gdimagestringft_bbox.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagestringftex_gdimagestringftex_returnfontpathname.exe: ..\gdbuild\gdimagestringftex_gdimagestringftex_returnfontpathname.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagetruecolortopalette_bug00307.exe: ..\gdbuild\gdimagetruecolortopalette_bug00307.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagetruecolortopalette_php_bug_67325.exe: ..\gdbuild\gdimagetruecolortopalette_php_bug_67325.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdimagetruecolortopalette_php_bug_72512.exe: ..\gdbuild\gdimagetruecolortopalette_php_bug_72512.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdinterpolatedscale_gdModesAndPalettes.exe: ..\gdbuild\gdinterpolatedscale_gdModesAndPalettes.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdinterpolatedscale_gdTrivialResize.exe: ..\gdbuild\gdinterpolatedscale_gdTrivialResize.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdnewfilectx_gdnewfilectx_null.exe: ..\gdbuild\gdnewfilectx_gdnewfilectx_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdtiled_bug00032.exe: ..\gdbuild\gdtiled_bug00032.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gdtransformaffineboundingbox_github_bug_00221.exe: ..\gdbuild\gdtransformaffineboundingbox_github_bug_00221.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_bug00005.exe: ..\gdbuild\gif_bug00005.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_bug00005_2.exe: ..\gdbuild\gif_bug00005_2.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_bug00006.exe: ..\gdbuild\gif_bug00006.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_bug00060.exe: ..\gdbuild\gif_bug00060.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_bug00066.exe: ..\gdbuild\gif_bug00066.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_bug00181.exe: ..\gdbuild\gif_bug00181.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_bug00227.exe: ..\gdbuild\gif_bug00227.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_gif_im2im.exe: ..\gdbuild\gif_gif_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_gif_null.exe: ..\gdbuild\gif_gif_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_ossfuzz5700.exe: ..\gdbuild\gif_ossfuzz5700.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_php_bug_75571.exe: ..\gdbuild\gif_php_bug_75571.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\gif_uninitialized_memory_read.exe: ..\gdbuild\gif_uninitialized_memory_read.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\jpeg_bug00338.exe: ..\gdbuild\jpeg_bug00338.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\jpeg_bug_github_18.exe: ..\gdbuild\jpeg_bug_github_18.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\jpeg_jpeg_empty_file.exe: ..\gdbuild\jpeg_jpeg_empty_file.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\jpeg_jpeg_im2im.exe: ..\gdbuild\jpeg_jpeg_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\jpeg_jpeg_null.exe: ..\gdbuild\jpeg_jpeg_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\jpeg_jpeg_read.exe: ..\gdbuild\jpeg_jpeg_read.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\jpeg_jpeg_resolution.exe: ..\gdbuild\jpeg_jpeg_resolution.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00011.exe: ..\gdbuild\png_bug00011.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00033.exe: ..\gdbuild\png_bug00033.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00086.exe: ..\gdbuild\png_bug00086.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00088.exe: ..\gdbuild\png_bug00088.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00193.exe: ..\gdbuild\png_bug00193.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00338.exe: ..\gdbuild\png_bug00338.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00381_1.exe: ..\gdbuild\png_bug00381_1.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_bug00381_2.exe: ..\gdbuild\png_bug00381_2.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_png_im2im.exe: ..\gdbuild\png_png_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_png_null.exe: ..\gdbuild\png_png_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\png_png_resolution.exe: ..\gdbuild\png_png_resolution.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_bug00084.exe: ..\gdbuild\tga_bug00084.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_bug00247.exe: ..\gdbuild\tga_bug00247.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_bug00247a.exe: ..\gdbuild\tga_bug00247a.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_bug00248.exe: ..\gdbuild\tga_bug00248.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_bug00248a.exe: ..\gdbuild\tga_bug00248a.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_heap_overflow.exe: ..\gdbuild\tga_heap_overflow.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_tga_null.exe: ..\gdbuild\tga_tga_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tga_tga_read.exe: ..\gdbuild\tga_tga_read.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tiff_tiff_dpi.exe: ..\gdbuild\tiff_tiff_dpi.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tiff_tiff_im2im.exe: ..\gdbuild\tiff_tiff_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tiff_tiff_invalid_read.exe: ..\gdbuild\tiff_tiff_invalid_read.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tiff_tiff_null.exe: ..\gdbuild\tiff_tiff_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\tiff_tiff_read_bw.exe: ..\gdbuild\tiff_tiff_read_bw.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\wbmp_wbmp_im2im.exe: ..\gdbuild\wbmp_wbmp_im2im.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\wbmp_wbmp_null.exe: ..\gdbuild\wbmp_wbmp_null.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\webp_bug00111.exe: ..\gdbuild\webp_bug00111.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\webp_bug_double_free.exe: ..\gdbuild\webp_bug_double_free.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\xbm_github_bug_109.exe: ..\gdbuild\xbm_github_bug_109.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\xbm_github_bug_170.exe: ..\gdbuild\xbm_github_bug_170.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\xbm_x10_basic_read.exe: ..\gdbuild\xbm_x10_basic_read.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\xpm_bug00166.exe: ..\gdbuild\xpm_bug00166.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\xpm_bug00185.exe: ..\gdbuild\xpm_bug00185.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 
+..\gdbuild\tests\xpm_color_name.exe: ..\gdbuild\xpm_color_name.obj; link /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib $** /out:$@ 

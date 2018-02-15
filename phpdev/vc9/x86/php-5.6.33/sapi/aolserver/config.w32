@@ -1,0 +1,29 @@
+// vim:ft=javascript
+// $Id$
+
+ARG_WITH('aolserver', 'Build AOLserver support', 'no');
+
+if (PHP_AOLSERVER != "no") {
+	if (PHP_ZTS == "no") {
+		WARNING("AOLSERVER module requires an --enable-zts build of PHP");
+		if (CHECK_HEADER_ADD_INCLUDE("ns.h", "CFLAGS_AOLSERVER", PHP_AOLSERVER) && CHECK_LIB("nsd.lib", "aolserver", PHP_AOLSERVER)) {
+			SAPI('aolserver', 'aolserver.c', 'php' + PHP_VERSION + 'aolserver.dll', '/D PHP_PHPDBG_EXPORTS /I XP_WIN32');
+			//ADD_FLAG('LDFLAGS_AOLSERVER', '/DEF:sapi\\aolserver\\php5aolserver.def');
+			if (PHP_CRT_DEBUG == "yes") {
+				ADD_FLAG("CFLAGS_AOLSERVER", "/D PHP_PHPDBG_EXPORTS");
+			}			
+		} else {
+			WARNING("sapi/aolserver not enabled: Could not find libraries/headers");
+		}		
+	} else {
+		if (CHECK_HEADER_ADD_INCLUDE("ns.h", "CFLAGS_AOLSERVER", PHP_AOLSERVER) && CHECK_LIB("nsd.lib", "aolserver", PHP_AOLSERVER)) {
+			SAPI('aolserver', 'aolserver.c', 'php' + PHP_VERSION + 'aolserver.dll', '/D PHP_PHPDBG_EXPORTS /I XP_WIN32');
+			//ADD_FLAG('LDFLAGS_AOLSERVER', '/DEF:sapi\\aolserver\\php5aolserver.def');
+			if (PHP_CRT_DEBUG == "yes") {
+				ADD_FLAG("CFLAGS_AOLSERVER", "/D PHP_PHPDBG_EXPORTS");
+			}			
+		} else {
+			WARNING("sapi/aolserver not enabled: Could not find libraries/headers");
+		}
+	}
+}

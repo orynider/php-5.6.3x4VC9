@@ -1,0 +1,121 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libpng_a.lib(pngerror.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+libiconv_a.lib(iconv.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+libpng_a.lib(pngerror.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php_gd2.lib and object Release_TS\php_gd2.exp
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+gd.obj : error LNK2001: unresolved external symbol _gdImageDestroy
+xbm.obj : error LNK2001: unresolved external symbol _gdImageDestroy
+gd.obj : error LNK2001: unresolved external symbol _gdFontCacheShutdown
+gd.obj : error LNK2001: unresolved external symbol _gdImageSetStyle
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateTrueColor
+gd.obj : error LNK2001: unresolved external symbol _gdImageTrueColorToPalette
+gd.obj : error LNK2001: unresolved external symbol _gdImageSetThickness
+gd.obj : error LNK2001: unresolved external symbol _gdImageFilledArc
+gd.obj : error LNK2001: unresolved external symbol _gdImageAlphaBlending
+gd.obj : error LNK2001: unresolved external symbol _gdImageSaveAlpha
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorAllocateAlpha
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorResolveAlpha
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorClosestAlpha
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorExactAlpha
+gd.obj : error LNK2001: unresolved external symbol _gdImageCopyResampled
+gd.obj : error LNK2001: unresolved external symbol _gdImageSetPixel
+gd_arc.obj : error LNK2001: unresolved external symbol _gdImageSetPixel
+xbm.obj : error LNK2001: unresolved external symbol _gdImageSetPixel
+gd.obj : error LNK2001: unresolved external symbol _gdImageSetTile
+gd.obj : error LNK2001: unresolved external symbol _gdImageSetBrush
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreate
+xbm.obj : error LNK2001: unresolved external symbol _gdImageCreate
+gd.obj : error LNK2001: unresolved external symbol _gdNewDynamicCtxEx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGd2Ctx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromWBMPCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGifCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromPngCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromJpegCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGif
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromJpeg
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromPng
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromWBMP
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGdCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGd
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGd2
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGd2PartCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromGd2Part
+gd.obj : error LNK2001: unresolved external symbol _gdImageWBMP
+gd.obj : error LNK2001: unresolved external symbol _gdImageGd
+gd.obj : error LNK2001: unresolved external symbol _gdImageGd2
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorAllocate
+xbm.obj : error LNK2001: unresolved external symbol _gdImageColorAllocate
+gd.obj : error LNK2001: unresolved external symbol _gdImagePaletteCopy
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorClosest
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorClosestHWB
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorDeallocate
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorResolve
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorExact
+gd.obj : error LNK2001: unresolved external symbol _gdImageGetPixel
+xbm.obj : error LNK2001: unresolved external symbol _gdImageGetPixel
+gd.obj : error LNK2001: unresolved external symbol _gdImageLine
+gd.obj : error LNK2001: unresolved external symbol _gdImageAALine
+gd.obj : error LNK2001: unresolved external symbol _gdImageDashedLine
+gd.obj : error LNK2001: unresolved external symbol _gdImageRectangle
+gd.obj : error LNK2001: unresolved external symbol _gdImageFilledRectangle
+gd.obj : error LNK2001: unresolved external symbol _gdImageArc
+gd.obj : error LNK2001: unresolved external symbol _gdImageFillToBorder
+gd.obj : error LNK2001: unresolved external symbol _gdImageFill
+gd.obj : error LNK2001: unresolved external symbol _gdImageColorTransparent
+gd.obj : error LNK2001: unresolved external symbol _gdImageInterlace
+gd.obj : error LNK2001: unresolved external symbol _gdImagePolygon
+gd.obj : error LNK2001: unresolved external symbol _gdImageFilledPolygon
+gd.obj : error LNK2001: unresolved external symbol _gdFontGiant
+gd.obj : error LNK2001: unresolved external symbol _gdFontLarge
+gd.obj : error LNK2001: unresolved external symbol _gdFontMediumBold
+gd.obj : error LNK2001: unresolved external symbol _gdFontSmall
+gd.obj : error LNK2001: unresolved external symbol _gdFontTiny
+gd.obj : error LNK2001: unresolved external symbol _gdImageCharUp
+gd.obj : error LNK2001: unresolved external symbol _gdImageChar
+gd.obj : error LNK2001: unresolved external symbol _gdImageCopy
+gd.obj : error LNK2001: unresolved external symbol _gdImageCopyMerge
+gd.obj : error LNK2001: unresolved external symbol _gdImageCopyMergeGray
+gd.obj : error LNK2001: unresolved external symbol _gdImageCopyResized
+gd.obj : error LNK2001: unresolved external symbol _gdImageStringFT
+gd.obj : error LNK2001: unresolved external symbol _gdImageStringFTEx
+gd.obj : error LNK2001: unresolved external symbol _gdImageWBMPCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageNegate
+gd.obj : error LNK2001: unresolved external symbol _gdImageGrayScale
+gd.obj : error LNK2001: unresolved external symbol _gdImageBrightness
+gd.obj : error LNK2001: unresolved external symbol _gdImageContrast
+gd.obj : error LNK2001: unresolved external symbol _gdImageColor
+gd.obj : error LNK2001: unresolved external symbol _gdImageEdgeDetectQuick
+gd.obj : error LNK2001: unresolved external symbol _gdImageEmboss
+gd.obj : error LNK2001: unresolved external symbol _gdImageGaussianBlur
+gd.obj : error LNK2001: unresolved external symbol _gdImageSelectiveBlur
+gd.obj : error LNK2001: unresolved external symbol _gdImageMeanRemoval
+gd.obj : error LNK2001: unresolved external symbol _gdImageSmooth
+gd.obj : error LNK2001: unresolved external symbol _gdImageConvolution
+gd.obj : error LNK2001: unresolved external symbol _gdImageAntialias
+gd.obj : error LNK2001: unresolved external symbol _gdImageGifCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImagePngCtxEx
+gd.obj : error LNK2001: unresolved external symbol _gdImageJpegCtx
+xbm.obj : error LNK2001: unresolved external symbol _php_gd_error
+Release_TS\php_gd2.dll : fatal error LNK1120: 87 unresolved externals

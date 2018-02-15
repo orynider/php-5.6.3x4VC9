@@ -1,0 +1,358 @@
+<refentry id="glib-Pointer-Arrays">
+<refmeta>
+<refentrytitle>Pointer Arrays</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Pointer Arrays</refname><refpurpose>arrays of pointers to any type of data, which grow automatically as new
+elements are added.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GPtrArray">GPtrArray</link>;
+<link linkend="GPtrArray">GPtrArray</link>*  <link linkend="g-ptr-array-new">g_ptr_array_new</link>                 (void);
+<link linkend="GPtrArray">GPtrArray</link>*  <link linkend="g-ptr-array-sized-new">g_ptr_array_sized_new</link>           (<link linkend="guint">guint</link> reserved_size);
+void        <link linkend="g-ptr-array-add">g_ptr_array_add</link>                 (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-ptr-array-remove">g_ptr_array_remove</link>              (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-ptr-array-remove-index">g_ptr_array_remove_index</link>        (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="guint">guint</link> index);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-ptr-array-remove-fast">g_ptr_array_remove_fast</link>         (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-ptr-array-remove-index-fast">g_ptr_array_remove_index_fast</link>   (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="guint">guint</link> index);
+void        <link linkend="g-ptr-array-sort">g_ptr_array_sort</link>                (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="GCompareFunc">GCompareFunc</link> compare_func);
+void        <link linkend="g-ptr-array-sort-with-data">g_ptr_array_sort_with_data</link>      (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="GCompareDataFunc">GCompareDataFunc</link> compare_func,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+void        <link linkend="g-ptr-array-set-size">g_ptr_array_set_size</link>            (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gint">gint</link> length);
+#define     <link linkend="g-ptr-array-index">g_ptr_array_index</link>               (array,index)
+<link linkend="gpointer">gpointer</link>*   <link linkend="g-ptr-array-free">g_ptr_array_free</link>                (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gboolean">gboolean</link> free_seg);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+Pointer Arrays are similar to Arrays but are used only for storing pointers.
+</para>
+<note>
+<para>
+If you remove elements from the array, elements at the end of the array
+are moved into the space previously occupied by the removed element.
+This means that you should not rely on the index of particular elements
+remaining the same. You should also be careful when deleting elements while
+iterating over the array.
+</para>
+</note>
+<para>
+To create a pointer array, use <link linkend="g-ptr-array-new">g_ptr_array_new</link>().
+</para>
+<para>
+To add elements to a pointer array, use <link linkend="g-ptr-array-add">g_ptr_array_add</link>().
+</para>
+<para>
+To remove elements from a pointer array, use <link linkend="g-ptr-array-remove">g_ptr_array_remove</link>(),
+<link linkend="g-ptr-array-remove-index">g_ptr_array_remove_index</link>() or <link linkend="g-ptr-array-remove-index-fast">g_ptr_array_remove_index_fast</link>().
+</para>
+<para>
+To access an element of a pointer array, use <link linkend="g-ptr-array-index">g_ptr_array_index</link>().
+</para>
+<para>
+To set the size of a pointer array, use <link linkend="g-ptr-array-set-size">g_ptr_array_set_size</link>().
+</para>
+<para>
+To free a pointer array, use <link linkend="g-ptr-array-free">g_ptr_array_free</link>().
+</para>
+<example>
+<title>Using a <structname>GPtrArray</structname>.</title>
+<programlisting>
+  GPtrArray *gparray;
+  gchar *string1 = "one", *string2 = "two", *string3 = "three";
+
+  gparray = g_ptr_array_new (<!>);
+  g_ptr_array_add (gparray, (gpointer) string1);
+  g_ptr_array_add (gparray, (gpointer) string2);
+  g_ptr_array_add (gparray, (gpointer) string3);
+
+  if (g_ptr_array_index (gparray, 0) != (gpointer) string1)
+    g_print ("ERROR: got <literal>p</literal> instead of <literal>p</literal>\n",
+             g_ptr_array_index (gparray, 0), string1);
+
+  g_ptr_array_free (gparray, TRUE);
+</programlisting></example>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GPtrArray">struct GPtrArray</title>
+<programlisting>struct GPtrArray
+{
+  gpointer *pdata;
+  guint	    len;
+};
+</programlisting>
+<para>
+Contains the public fields of a pointer array.
+</para><variablelist role="struct">
+<varlistentry>
+<term><link linkend="gpointer">gpointer</link> *<structfield>pdata</structfield></term>
+<listitem><para>points to the array of pointers, which may be moved when the array grows.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="guint">guint</link> <structfield>len</structfield></term>
+<listitem><para>number of pointers in the array.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-new">g_ptr_array_new ()</title>
+<programlisting><link linkend="GPtrArray">GPtrArray</link>*  g_ptr_array_new                 (void);</programlisting>
+<para>
+Creates a new <link linkend="GPtrArray">GPtrArray</link>.
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the new <link linkend="GPtrArray">GPtrArray</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-sized-new">g_ptr_array_sized_new ()</title>
+<programlisting><link linkend="GPtrArray">GPtrArray</link>*  g_ptr_array_sized_new           (<link linkend="guint">guint</link> reserved_size);</programlisting>
+<para>
+Creates a new <link linkend="GPtrArray">GPtrArray</link> with <parameter>reserved_size</parameter> pointers
+preallocated. This avoids frequent reallocation, if you are going to
+add many pointers to the array. Note however that the size of the
+array is still 0.
+</para><variablelist role="params">
+<varlistentry><term><parameter>reserved_size</parameter>&nbsp;:</term>
+<listitem><para>number of pointers preallocated.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the new <link linkend="GPtrArray">GPtrArray</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-add">g_ptr_array_add ()</title>
+<programlisting>void        g_ptr_array_add                 (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Adds a pointer to the end of the pointer array.
+The array will grow in size automatically if necessary.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the pointer to add.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-remove">g_ptr_array_remove ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_ptr_array_remove              (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Removes the first occurrence of the given pointer from the pointer array.
+The following elements are moved down one place.
+</para>
+<para>
+It returns <literal>TRUE</literal> if the pointer was removed, or <literal>FALSE</literal> if the pointer
+was not found.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the pointer to remove.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the pointer is removed. <literal>FALSE</literal> if the pointer is not found
+in the array.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-remove-index">g_ptr_array_remove_index ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_ptr_array_remove_index        (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="guint">guint</link> index);</programlisting>
+<para>
+Removes the pointer at the given index from the pointer array.
+The following elements are moved down one place.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>index</parameter>&nbsp;:</term>
+<listitem><para>the index of the pointer to remove.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the pointer which was removed.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-remove-fast">g_ptr_array_remove_fast ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_ptr_array_remove_fast         (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Removes the first occurrence of the given pointer from the pointer array.
+The last element in the array is used to fill in the space, so this function
+does not preserve the order of the array. But it is faster than
+<link linkend="g-ptr-array-remove">g_ptr_array_remove</link>().
+</para>
+<para>
+It returns <literal>TRUE</literal> if the pointer was removed, or <literal>FALSE</literal> if the pointer
+was not found.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the pointer to remove.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the pointer was found in the array.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-remove-index-fast">g_ptr_array_remove_index_fast ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_ptr_array_remove_index_fast   (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="guint">guint</link> index);</programlisting>
+<para>
+Removes the pointer at the given index from the pointer array.
+The last element in the array is used to fill in the space, so this function
+does not preserve the order of the array. But it is faster than
+<link linkend="g-ptr-array-remove-index">g_ptr_array_remove_index</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>index</parameter>&nbsp;:</term>
+<listitem><para>the index of the pointer to remove.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the pointer which was removed.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-sort">g_ptr_array_sort ()</title>
+<programlisting>void        g_ptr_array_sort                (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="GCompareFunc">GCompareFunc</link> compare_func);</programlisting>
+<para>
+Sorts the array, using <parameter>compare_func</parameter> which should be a <function><link linkend="qsort">qsort</link>()</function>-style comparison
+function (returns -1 for first arg is less than second arg, 0 for equal, 1 if
+first arg is greater than second arg).
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>compare_func</parameter>&nbsp;:</term>
+<listitem><para>comparison function.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-sort-with-data">g_ptr_array_sort_with_data ()</title>
+<programlisting>void        g_ptr_array_sort_with_data      (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="GCompareDataFunc">GCompareDataFunc</link> compare_func,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Like <link linkend="g-ptr-array-sort">g_ptr_array_sort</link>(), but the comparison function has a user data argument.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>compare_func</parameter>&nbsp;:</term>
+<listitem><para>comparison function.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para>data to pass to <parameter>compare_func</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-set-size">g_ptr_array_set_size ()</title>
+<programlisting>void        g_ptr_array_set_size            (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gint">gint</link> length);</programlisting>
+<para>
+Sets the size of the array, expanding it if necessary.
+New elements are set to <literal>NULL</literal>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>length</parameter>&nbsp;:</term>
+<listitem><para>the new length of the pointer array.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-index">g_ptr_array_index()</title>
+<programlisting>#define     g_ptr_array_index(array,index)</programlisting>
+<para>
+Returns the pointer at the given index of the pointer array.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>index</parameter>&nbsp;:</term>
+<listitem><para>the index of the pointer to return.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the pointer at the given index.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-ptr-array-free">g_ptr_array_free ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>*   g_ptr_array_free                (<link linkend="GPtrArray">GPtrArray</link> *array,
+                                             <link linkend="gboolean">gboolean</link> free_seg);</programlisting>
+<para>
+Frees all of the memory allocated for the pointer array.
+</para><variablelist role="params">
+<varlistentry><term><parameter>array</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GPtrArray">GPtrArray</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>free_seg</parameter>&nbsp;:</term>
+<listitem><para>if <literal>TRUE</literal> the actual element data is freed as well.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

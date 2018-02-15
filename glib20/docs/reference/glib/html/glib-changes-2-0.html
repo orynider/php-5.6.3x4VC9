@@ -1,0 +1,423 @@
+<HTML
+><HEAD
+><TITLE
+>Changes from 1.0 to 2.0</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GLib Reference Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="GLib Overview"
+HREF="glib.html"><LINK
+REL="PREVIOUS"
+TITLE="Running GLib Applications"
+HREF="glib-running.html"><LINK
+REL="NEXT"
+TITLE="Mailing lists and bug reports"
+HREF="glib-resources.html"></HEAD
+><BODY
+CLASS="REFENTRY"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="5"
+>GLib Reference Manual</FONT
+></TH
+></TR
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="glib-running.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="glib.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="glib-resources.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+></TABLE
+></DIV
+><H1
+><A
+NAME="GLIB-CHANGES-2-0">Changes from 1.0 to 2.0</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN204"
+></A
+><H2
+>Name</H2
+>Changes from 1.0 to 2.0&nbsp;--&nbsp;Incompatible changes made between version 1.0 and version 2.0</DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN207"
+></A
+><H2
+>Incompatible changes from 1.0 to 2.0</H2
+><P
+>The <A
+HREF="http://developer.gnome.org/dotplan/porting/"
+TARGET="_top"
+>GNOME 2.0
+porting guide</A
+> on <A
+HREF="http://developer.gnome.org"
+TARGET="_top"
+>http://developer.gnome.org</A
+>
+has some more detailed discussion of porting from 1.0 to 2.0.
+See the section on GLib.</P
+><P
+></P
+><UL
+><LI
+><P
+>The event loop functionality <SPAN
+CLASS="STRUCTNAME"
+>GMain</SPAN
+> has extensively 
+been revised to support multiple separate main loops in separate threads. 
+All sources (timeouts, idle functions, etc.) are associated with a 
+<SPAN
+CLASS="STRUCTNAME"
+>GMainContext</SPAN
+>.</P
+><P
+>Compatibility functions exist so that most application code dealing with
+the main loop will continue to work. However, code that creates new custom 
+types of sources will require modification.</P
+><P
+>The main changes here are:
+
+  <P
+></P
+><UL
+><LI
+><P
+>   Sources are now exposed as <SPAN
+CLASS="TYPE"
+>GSource *</SPAN
+>, rather than simply as 
+   numeric ids.
+  </P
+></LI
+><LI
+><P
+>   New types of sources are created by structure "derivation" from 
+   <SPAN
+CLASS="STRUCTNAME"
+>GSource</SPAN
+>, so the <TT
+CLASS="LITERAL"
+>source_data</TT
+> 
+   parameter to the <SPAN
+CLASS="STRUCTNAME"
+>GSource</SPAN
+> virtual functions has been
+   replaced with a <SPAN
+CLASS="TYPE"
+>GSource *</SPAN
+>.
+  </P
+></LI
+><LI
+><P
+>   Sources are first created, then later added to a specific 
+   <SPAN
+CLASS="STRUCTNAME"
+>GMainContext</SPAN
+>. 
+  </P
+></LI
+><LI
+><P
+>   Dispatching has been modified so both the callback and data are passed
+   in to the <TT
+CLASS="FUNCTION"
+>dispatch()</TT
+> virtual function.
+  </P
+></LI
+></UL
+>
+  To go along with this change, the vtable for 
+  <SPAN
+CLASS="STRUCTNAME"
+>GIOChannel</SPAN
+> has changed and
+  <TT
+CLASS="FUNCTION"
+>add_watch()</TT
+> has been replaced by 
+  <TT
+CLASS="FUNCTION"
+>create_watch()</TT
+>.</P
+></LI
+><LI
+><P
+><TT
+CLASS="FUNCTION"
+>g_list_foreach()</TT
+> and 
+<TT
+CLASS="FUNCTION"
+>g_slist_foreach()</TT
+> have been changed so they
+are now safe against removal of the current item, not the next item.</P
+><P
+>It's not recommended to mutate the list in the callback to these
+functions in any case.</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="STRUCTNAME"
+>GDate</SPAN
+> now works in UTF-8, not in the current locale. 
+If you want to use it with the encoding of the locale, you need to convert 
+strings using <TT
+CLASS="FUNCTION"
+>g_locale_to_utf8()</TT
+> first.</P
+></LI
+><LI
+><P
+><TT
+CLASS="FUNCTION"
+>g_strsplit()</TT
+> has been fixed to:
+
+  <P
+></P
+><UL
+><LI
+><P
+>   include trailing empty tokens, rather than stripping them
+  </P
+></LI
+><LI
+><P
+>   split into a maximum of <TT
+CLASS="LITERAL"
+>max_tokens</TT
+> tokens, rather 
+   than <TT
+CLASS="LITERAL"
+>max_tokens + 1</TT
+>
+  </P
+></LI
+></UL
+>
+
+  Code depending on either of these bugs will need to be fixed.</P
+></LI
+><LI
+><P
+>Deprecated functions that got removed:
+<TT
+CLASS="FUNCTION"
+>g_set_error_handler()</TT
+>, 
+<TT
+CLASS="FUNCTION"
+>g_set_warning_handler()</TT
+>,
+<TT
+CLASS="FUNCTION"
+>g_set_message_handler()</TT
+>, use 
+<TT
+CLASS="FUNCTION"
+>g_log_set_handler()</TT
+> instead.</P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><BR
+CLEAR="all"><BR><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="glib-running.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="glib.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="glib-resources.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+><TR
+><TD
+COLSPAN="2"
+ALIGN="left"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Running GLib Applications</B
+></FONT
+></TD
+><TD
+COLSPAN="2"
+ALIGN="right"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Mailing lists and bug reports</B
+></FONT
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

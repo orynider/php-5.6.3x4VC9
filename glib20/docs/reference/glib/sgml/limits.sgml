@@ -1,0 +1,176 @@
+<refentry id="glib-Limits-of-Basic-Types">
+<refmeta>
+<refentrytitle>Limits of Basic Types</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Limits of Basic Types</refname><refpurpose>portable method of determining the limits of the standard types.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+#define     <link linkend="G-MININT-CAPS">G_MININT</link>
+#define     <link linkend="G-MAXINT-CAPS">G_MAXINT</link>
+#define     <link linkend="G-MAXUINT-CAPS">G_MAXUINT</link>
+
+#define     <link linkend="G-MINSHORT-CAPS">G_MINSHORT</link>
+#define     <link linkend="G-MAXSHORT-CAPS">G_MAXSHORT</link>
+#define     <link linkend="G-MAXUSHORT-CAPS">G_MAXUSHORT</link>
+
+#define     <link linkend="G-MINLONG-CAPS">G_MINLONG</link>
+#define     <link linkend="G-MAXLONG-CAPS">G_MAXLONG</link>
+#define     <link linkend="G-MAXULONG-CAPS">G_MAXULONG</link>
+
+#define     <link linkend="G-MININT64-CAPS">G_MININT64</link>
+#define     <link linkend="G-MAXINT64-CAPS">G_MAXINT64</link>
+#define     <link linkend="G-MAXUINT64-CAPS">G_MAXUINT64</link>
+
+#define     <link linkend="G-MINFLOAT-CAPS">G_MINFLOAT</link>
+#define     <link linkend="G-MAXFLOAT-CAPS">G_MAXFLOAT</link>
+
+#define     <link linkend="G-MINDOUBLE-CAPS">G_MINDOUBLE</link>
+#define     <link linkend="G-MAXDOUBLE-CAPS">G_MAXDOUBLE</link>
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+These macros provide a portable method to determine the limits of some of
+the standard integer and floating point types.
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="G-MININT-CAPS">G_MININT</title>
+<programlisting>#define G_MININT	INT_MIN
+</programlisting>
+<para>
+The minimum value which can be held in a <link linkend="gint">gint</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXINT-CAPS">G_MAXINT</title>
+<programlisting>#define G_MAXINT	INT_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="gint">gint</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXUINT-CAPS">G_MAXUINT</title>
+<programlisting>#define G_MAXUINT	UINT_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="guint">guint</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MINSHORT-CAPS">G_MINSHORT</title>
+<programlisting>#define G_MINSHORT	SHRT_MIN
+</programlisting>
+<para>
+The minimum value which can be held in a <link linkend="gshort">gshort</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXSHORT-CAPS">G_MAXSHORT</title>
+<programlisting>#define G_MAXSHORT	SHRT_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="gshort">gshort</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXUSHORT-CAPS">G_MAXUSHORT</title>
+<programlisting>#define G_MAXUSHORT	USHRT_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="gushort">gushort</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MINLONG-CAPS">G_MINLONG</title>
+<programlisting>#define G_MINLONG	LONG_MIN
+</programlisting>
+<para>
+The minimum value which can be held in a <link linkend="glong">glong</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXLONG-CAPS">G_MAXLONG</title>
+<programlisting>#define G_MAXLONG	LONG_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="glong">glong</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXULONG-CAPS">G_MAXULONG</title>
+<programlisting>#define G_MAXULONG	ULONG_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="gulong">gulong</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MININT64-CAPS">G_MININT64</title>
+<programlisting>#define G_MININT64	((gint64)  0x8000000000000000)
+</programlisting>
+<para>
+The minimum value which can be held in a <link linkend="gint64">gint64</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXINT64-CAPS">G_MAXINT64</title>
+<programlisting>#define G_MAXINT64	((gint64)  0x7fffffffffffffff)
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="gint64">gint64</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXUINT64-CAPS">G_MAXUINT64</title>
+<programlisting>#define G_MAXUINT64	((guint64) 0xffffffffffffffff)
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="guint64">guint64</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MINFLOAT-CAPS">G_MINFLOAT</title>
+<programlisting>#define G_MINFLOAT	FLT_MIN
+</programlisting>
+<para>
+The minimum value which can be held in a <link linkend="gfloat">gfloat</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXFLOAT-CAPS">G_MAXFLOAT</title>
+<programlisting>#define G_MAXFLOAT	FLT_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="gfloat">gfloat</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MINDOUBLE-CAPS">G_MINDOUBLE</title>
+<programlisting>#define G_MINDOUBLE	DBL_MIN
+</programlisting>
+<para>
+The minimum value which can be held in a <link linkend="gdouble">gdouble</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-MAXDOUBLE-CAPS">G_MAXDOUBLE</title>
+<programlisting>#define G_MAXDOUBLE	DBL_MAX
+</programlisting>
+<para>
+The maximum value which can be held in a <link linkend="gdouble">gdouble</link>.
+</para></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

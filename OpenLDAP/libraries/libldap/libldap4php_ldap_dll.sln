@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libldap", "libldap4php_ldap_dll.vcproj", "{CFA078BA-2AB8-454D-B711-CC28D51D5474}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Single Debug|Win32 = Single Debug|Win32
+		Single Release|Win32 = Single Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Debug|Win32.Build.0 = Debug|Win32
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Release|Win32.ActiveCfg = Release|Win32
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Release|Win32.Build.0 = Release|Win32
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Single Debug|Win32.ActiveCfg = Single Debug|Win32
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Single Debug|Win32.Build.0 = Single Debug|Win32
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Single Release|Win32.ActiveCfg = Single Release|Win32
+		{CFA078BA-2AB8-454D-B711-CC28D51D5474}.Single Release|Win32.Build.0 = Single Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

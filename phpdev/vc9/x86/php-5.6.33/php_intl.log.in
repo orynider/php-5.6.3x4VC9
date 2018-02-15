@@ -1,0 +1,36 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+cclient_a.lib(os_w2k.obj) : warning LNK4006: _flock already defined in flock_compat.obj; second definition ignored
+cclient_a.lib(os_w2k.obj) : warning LNK4006: _openlog already defined in wsyslog.obj; second definition ignored
+cclient_a.lib(os_w2k.obj) : warning LNK4006: _syslog already defined in wsyslog.obj; second definition ignored
+libiconv_a.lib(iconv.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+cclient_a.lib(os_w2k.obj) : warning LNK4006: _flock already defined in flock_compat.obj; second definition ignored
+cclient_a.lib(os_w2k.obj) : warning LNK4006: _openlog already defined in wsyslog.obj; second definition ignored
+cclient_a.lib(os_w2k.obj) : warning LNK4006: _syslog already defined in wsyslog.obj; second definition ignored
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+cclient_a.lib(imap4r1.obj) : error LNK2001: unresolved external symbol ___report_rangecheckfailure
+cclient_a.lib(mail.obj) : error LNK2001: unresolved external symbol ___report_rangecheckfailure
+cclient_a.lib(os_w2k.obj) : error LNK2001: unresolved external symbol ___report_rangecheckfailure
+cclient_a.lib(dummynt.obj) : error LNK2001: unresolved external symbol ___report_rangecheckfailure
+cclient_a.lib(mbxnt.obj) : error LNK2001: unresolved external symbol ___report_rangecheckfailure
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_simple_bind_s
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_unbind_s
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_msgfree
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_next_entry
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ber_free
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_next_attribute
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_value_free_len
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_get_values_len
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_first_attribute
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_memfree
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_get_dn
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_first_entry
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_search_s
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_init
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_set_option
+libcurl_a.lib(ldap.obj) : error LNK2001: unresolved external symbol __imp__ldap_err2string
+Release_TS\php5ts.dll : fatal error LNK1120: 17 unresolved externals

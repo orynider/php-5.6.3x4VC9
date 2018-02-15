@@ -1,0 +1,966 @@
+<refentry id="glib-Hook-Functions">
+<refmeta>
+<refentrytitle>Hook Functions</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Hook Functions</refname><refpurpose>support for manipulating lists of hook functions.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GHookList">GHookList</link>;
+void        (<link linkend="GHookFinalizeFunc">*GHookFinalizeFunc</link>)            (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);
+struct      <link linkend="GHook">GHook</link>;
+void        (<link linkend="GHookFunc">*GHookFunc</link>)                    (<link linkend="gpointer">gpointer</link> data);
+<link linkend="gboolean">gboolean</link>    (<link linkend="GHookCheckFunc">*GHookCheckFunc</link>)               (<link linkend="gpointer">gpointer</link> data);
+
+void        <link linkend="g-hook-list-init">g_hook_list_init</link>                (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="guint">guint</link> hook_size);
+void        <link linkend="g-hook-list-invoke">g_hook_list_invoke</link>              (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse);
+void        <link linkend="g-hook-list-invoke-check">g_hook_list_invoke_check</link>        (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse);
+void        <link linkend="g-hook-list-marshal">g_hook_list_marshal</link>             (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse,
+                                             <link linkend="GHookMarshaller">GHookMarshaller</link> marshaller,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);
+void        (<link linkend="GHookMarshaller">*GHookMarshaller</link>)              (<link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);
+void        <link linkend="g-hook-list-marshal-check">g_hook_list_marshal_check</link>       (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse,
+                                             <link linkend="GHookCheckMarshaller">GHookCheckMarshaller</link> marshaller,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);
+<link linkend="gboolean">gboolean</link>    (<link linkend="GHookCheckMarshaller">*GHookCheckMarshaller</link>)         (<link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);
+void        <link linkend="g-hook-list-clear">g_hook_list_clear</link>               (<link linkend="GHookList">GHookList</link> *hook_list);
+
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-alloc">g_hook_alloc</link>                    (<link linkend="GHookList">GHookList</link> *hook_list);
+#define     <link linkend="g-hook-append">g_hook_append</link>                   ( hook_list, hook )
+void        <link linkend="g-hook-prepend">g_hook_prepend</link>                  (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);
+void        <link linkend="g-hook-insert-before">g_hook_insert_before</link>            (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *sibling,
+                                             <link linkend="GHook">GHook</link> *hook);
+void        <link linkend="g-hook-insert-sorted">g_hook_insert_sorted</link>            (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="GHookCompareFunc">GHookCompareFunc</link> func);
+<link linkend="gint">gint</link>        (<link linkend="GHookCompareFunc">*GHookCompareFunc</link>)             (<link linkend="GHook">GHook</link> *new_hook,
+                                             <link linkend="GHook">GHook</link> *sibling);
+<link linkend="gint">gint</link>        <link linkend="g-hook-compare-ids">g_hook_compare_ids</link>              (<link linkend="GHook">GHook</link> *new_hook,
+                                             <link linkend="GHook">GHook</link> *sibling);
+
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-get">g_hook_get</link>                      (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gulong">gulong</link> hook_id);
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-find">g_hook_find</link>                     (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="GHookFindFunc">GHookFindFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="gboolean">gboolean</link>    (<link linkend="GHookFindFunc">*GHookFindFunc</link>)                (<link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-find-data">g_hook_find_data</link>                (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-find-func">g_hook_find_func</link>                (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="gpointer">gpointer</link> func);
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-find-func-data">g_hook_find_func_data</link>           (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="gpointer">gpointer</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);
+
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-first-valid">g_hook_first_valid</link>              (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_be_in_call);
+<link linkend="GHook">GHook</link>*      <link linkend="g-hook-next-valid">g_hook_next_valid</link>               (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gboolean">gboolean</link> may_be_in_call);
+enum        <link linkend="GHookFlagMask">GHookFlagMask</link>;
+#define     <link linkend="G-HOOK-FLAGS-CAPS">G_HOOK_FLAGS</link>                    (hook)
+#define     <link linkend="G-HOOK-FLAG-USER-SHIFT-CAPS">G_HOOK_FLAG_USER_SHIFT</link>
+
+#define     <link linkend="G-HOOK-CAPS">G_HOOK</link>                          (hook)
+#define     <link linkend="G-HOOK-IS-VALID-CAPS">G_HOOK_IS_VALID</link>                 (hook)
+#define     <link linkend="G-HOOK-ACTIVE-CAPS">G_HOOK_ACTIVE</link>                   (hook)
+#define     <link linkend="G-HOOK-IN-CALL-CAPS">G_HOOK_IN_CALL</link>                  (hook)
+#define     <link linkend="G-HOOK-IS-UNLINKED-CAPS">G_HOOK_IS_UNLINKED</link>              (hook)
+
+void        <link linkend="g-hook-ref">g_hook_ref</link>                      (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);
+void        <link linkend="g-hook-unref">g_hook_unref</link>                    (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);
+void        <link linkend="g-hook-free">g_hook_free</link>                     (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-hook-destroy">g_hook_destroy</link>                  (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gulong">gulong</link> hook_id);
+void        <link linkend="g-hook-destroy-link">g_hook_destroy_link</link>             (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+The <link linkend="GHookList">GHookList</link>, <link linkend="GHook">GHook</link> and their related functions provide support for
+lists of hook functions. Functions can be added and removed from the lists,
+and the list of hook functions can be invoked.
+
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GHookList">struct GHookList</title>
+<programlisting>struct GHookList
+{
+  gulong	    seq_id;
+  guint		    hook_size : 16;
+  guint		    is_setup : 1;
+  GHook		   *hooks;
+  GMemChunk	   *hook_memchunk;
+  GHookFinalizeFunc finalize_hook;
+  gpointer	    dummy[2];
+};
+</programlisting>
+<para>
+The <structname>GHookList</structname> struct represents a 
+list of hook functions.
+</para><variablelist role="struct">
+<varlistentry>
+<term><link linkend="gulong">gulong</link> <structfield>seq_id</structfield></term>
+<listitem><para>the next free <link linkend="GHook">GHook</link> id.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="guint">guint</link> <structfield>hook_size</structfield> : 16</term>
+<listitem><para>the size of the <link linkend="GHookList">GHookList</link> elements, in bytes.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="guint">guint</link> <structfield>is_setup</structfield> : 1</term>
+<listitem><para>1 if the <link linkend="GHookList">GHookList</link> has been initialized.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GHook">GHook</link> *<structfield>hooks</structfield></term>
+<listitem><para>the first <link linkend="GHook">GHook</link> element in the list.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GMemChunk">GMemChunk</link> *<structfield>hook_memchunk</structfield></term>
+<listitem><para>the <link linkend="GMemChunk">GMemChunk</link> used for allocating the <link linkend="GHook">GHook</link> elements.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GHookFinalizeFunc">GHookFinalizeFunc</link> <structfield>finalize_hook</structfield></term>
+<listitem><para>the function to call to finalize a <link linkend="GHook">GHook</link> element. The
+default behaviour is to call the hooks <function>destroy</function> function.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="gpointer">gpointer</link> <structfield>dummy</structfield>[2]</term>
+<listitem><para>
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookFinalizeFunc">GHookFinalizeFunc ()</title>
+<programlisting>void        (*GHookFinalizeFunc)            (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);</programlisting>
+<para>
+Defines the type of function to be called when a hook in a 
+list of hooks gets finalized.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the hook in <parameter>hook_list</parameter> that gets finalized.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHook">struct GHook</title>
+<programlisting>struct GHook
+{
+  gpointer	 data;
+  GHook		*next;
+  GHook		*prev;
+  guint		 ref_count;
+  gulong	 hook_id;
+  guint		 flags;
+  gpointer	 func;
+  GDestroyNotify destroy;
+};
+</programlisting>
+<para>
+The <structname>GHook</structname> struct represents a single hook 
+function in a <link linkend="GHookList">GHookList</link>.
+</para><variablelist role="struct">
+<varlistentry>
+<term><link linkend="gpointer">gpointer</link> <structfield>data</structfield></term>
+<listitem><para>data which is passed to func when this hook is invoked.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GHook">GHook</link> *<structfield>next</structfield></term>
+<listitem><para>pointer to the next hook in the list.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GHook">GHook</link> *<structfield>prev</structfield></term>
+<listitem><para>pointer to the previous hook in the list.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="guint">guint</link> <structfield>ref_count</structfield></term>
+<listitem><para>the reference count of this hook.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="gulong">gulong</link> <structfield>hook_id</structfield></term>
+<listitem><para>the id of this hook, which is unique within its list.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="guint">guint</link> <structfield>flags</structfield></term>
+<listitem><para>flags which are set for this hook. See <link linkend="GHookFlagMask">GHookFlagMask</link> for
+predefined flags.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="gpointer">gpointer</link> <structfield>func</structfield></term>
+<listitem><para>the function to call when this hook is invoked. The possible 
+signatures for this function are <link linkend="GHookFunc">GHookFunc</link> and <link linkend="GHookCheckFunc">GHookCheckFunc</link>.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GDestroyNotify">GDestroyNotify</link> <structfield>destroy</structfield></term>
+<listitem><para>the default <function>finalize_hook</function> function of a 
+<link linkend="GHookList">GHookList</link> calls this member of the hook that is being finalized.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookFunc">GHookFunc ()</title>
+<programlisting>void        (*GHookFunc)                    (<link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Defines the type of a hook function that can be invoked
+by <link linkend="g-hook-list-invoke">g_hook_list_invoke</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data field of the <link linkend="GHook">GHook</link> is passed to the hook function here.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookCheckFunc">GHookCheckFunc ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    (*GHookCheckFunc)               (<link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Defines the type of a hook function that can be invoked
+by <link linkend="g-hook-list-invoke-check">g_hook_list_invoke_check</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data field of the <link linkend="GHook">GHook</link> is passed to the hook function here.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>FALSE</literal> if the <link linkend="GHook">GHook</link> should be destroyed.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-list-init">g_hook_list_init ()</title>
+<programlisting>void        g_hook_list_init                (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="guint">guint</link> hook_size);</programlisting>
+<para>
+Initializes a <link linkend="GHookList">GHookList</link>.
+This must be called before the <link linkend="GHookList">GHookList</link> is used.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook_size</parameter>&nbsp;:</term>
+<listitem><para>the size of each element in the <link linkend="GHookList">GHookList</link>, typically
+<literal>sizeof (GHook)</literal>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-list-invoke">g_hook_list_invoke ()</title>
+<programlisting>void        g_hook_list_invoke              (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse);</programlisting>
+<para>
+Calls all of the <link linkend="GHook">GHook</link> functions in a <link linkend="GHookList">GHookList</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>may_recurse</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if functions which are already running (e.g. in another
+thread) can be called. If set to <literal>FALSE</literal>, these are skipped.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-list-invoke-check">g_hook_list_invoke_check ()</title>
+<programlisting>void        g_hook_list_invoke_check        (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse);</programlisting>
+<para>
+Calls all of the <link linkend="GHook">GHook</link> functions in a <link linkend="GHookList">GHookList</link>.
+Any function which returns <literal>TRUE</literal> is removed from the <link linkend="GHookList">GHookList</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>may_recurse</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if functions which are already running (e.g. in another
+thread) can be called. If set to <literal>FALSE</literal>, these are skipped.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-list-marshal">g_hook_list_marshal ()</title>
+<programlisting>void        g_hook_list_marshal             (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse,
+                                             <link linkend="GHookMarshaller">GHookMarshaller</link> marshaller,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);</programlisting>
+<para>
+Calls a function on each valid <link linkend="GHook">GHook</link>. 
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>may_recurse</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if hooks which are currently running (e.g. in another
+thread) are considered valid. If set to <literal>FALSE</literal>, these are skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>marshaller</parameter>&nbsp;:</term>
+<listitem><para>the function to call for each <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>marshal_data</parameter>&nbsp;:</term>
+<listitem><para>data to pass to <parameter>marshaller</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookMarshaller">GHookMarshaller ()</title>
+<programlisting>void        (*GHookMarshaller)              (<link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);</programlisting>
+<para>
+Defines the type of function used by <link linkend="g-hook-list-marshal">g_hook_list_marshal</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>marshal_data</parameter>&nbsp;:</term>
+<listitem><para>user data.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-list-marshal-check">g_hook_list_marshal_check ()</title>
+<programlisting>void        g_hook_list_marshal_check       (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_recurse,
+                                             <link linkend="GHookCheckMarshaller">GHookCheckMarshaller</link> marshaller,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);</programlisting>
+<para>
+Calls a function on each valid <link linkend="GHook">GHook</link> and destroys it if the 
+function returns <literal>FALSE</literal>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>may_recurse</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if hooks which are currently running (e.g. in another
+thread) are considered valid. If set to <literal>FALSE</literal>, these are skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>marshaller</parameter>&nbsp;:</term>
+<listitem><para>the function to call for each <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>marshal_data</parameter>&nbsp;:</term>
+<listitem><para>data to pass to <parameter>marshaller</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookCheckMarshaller">GHookCheckMarshaller ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    (*GHookCheckMarshaller)         (<link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gpointer">gpointer</link> marshal_data);</programlisting>
+<para>
+Defines the type of function used by <link linkend="g-hook-list-marshal-check">g_hook_list_marshal_check</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>marshal_data</parameter>&nbsp;:</term>
+<listitem><para>user data.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>FALSE</literal> if <parameter>hook</parameter> should be destroyed.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-list-clear">g_hook_list_clear ()</title>
+<programlisting>void        g_hook_list_clear               (<link linkend="GHookList">GHookList</link> *hook_list);</programlisting>
+<para>
+Removes all the <link linkend="GHook">GHook</link> elements from a <link linkend="GHookList">GHookList</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-alloc">g_hook_alloc ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_alloc                    (<link linkend="GHookList">GHookList</link> *hook_list);</programlisting>
+<para>
+Allocates space for a <link linkend="GHook">GHook</link> and initializes it.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a new <link linkend="GHook">GHook</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-append">g_hook_append()</title>
+<programlisting>#define     g_hook_append( hook_list, hook )</programlisting>
+<para>
+Appends a <link linkend="GHook">GHook</link> onto the end of a <link linkend="GHookList">GHookList</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to add to the end of <parameter>hook_list</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-prepend">g_hook_prepend ()</title>
+<programlisting>void        g_hook_prepend                  (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);</programlisting>
+<para>
+Prepends a <link linkend="GHook">GHook</link> on the start of a <link linkend="GHookList">GHookList</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to add to the start of <parameter>hook_list</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-insert-before">g_hook_insert_before ()</title>
+<programlisting>void        g_hook_insert_before            (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *sibling,
+                                             <link linkend="GHook">GHook</link> *hook);</programlisting>
+<para>
+Inserts a <link linkend="GHook">GHook</link> into a <link linkend="GHookList">GHookList</link>, before a given <link linkend="GHook">GHook</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>sibling</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to insert the new <link linkend="GHook">GHook</link> before.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to insert.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-insert-sorted">g_hook_insert_sorted ()</title>
+<programlisting>void        g_hook_insert_sorted            (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="GHookCompareFunc">GHookCompareFunc</link> func);</programlisting>
+<para>
+Inserts a <link linkend="GHook">GHook</link> into a <link linkend="GHookList">GHookList</link>, sorted by the given function.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the comparison function used to sort the <link linkend="GHook">GHook</link> elements.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookCompareFunc">GHookCompareFunc ()</title>
+<programlisting><link linkend="gint">gint</link>        (*GHookCompareFunc)             (<link linkend="GHook">GHook</link> *new_hook,
+                                             <link linkend="GHook">GHook</link> *sibling);</programlisting>
+<para>
+Defines the type of function used to compare <link linkend="GHook">GHook</link> elements in
+<link linkend="g-hook-insert-sorted">g_hook_insert_sorted</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>new_hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> being inserted.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>sibling</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to compare with <parameter>new_hook</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a value <= 0 if <parameter>new_hook</parameter> should be before <parameter>sibling</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-compare-ids">g_hook_compare_ids ()</title>
+<programlisting><link linkend="gint">gint</link>        g_hook_compare_ids              (<link linkend="GHook">GHook</link> *new_hook,
+                                             <link linkend="GHook">GHook</link> *sibling);</programlisting>
+<para>
+Compares the ids of two <link linkend="GHook">GHook</link> elements, returning a negative value
+if the second id is greater than the first.
+</para><variablelist role="params">
+<varlistentry><term><parameter>new_hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>sibling</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link> to compare with <parameter>new_hook</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a value <= 0 if the id of <parameter>sibling</parameter> is >= the id of <parameter>new_hook</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-get">g_hook_get ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_get                      (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gulong">gulong</link> hook_id);</programlisting>
+<para>
+Returns the <link linkend="GHook">GHook</link> with the given id, or <literal>NULL</literal> if it is not found.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook_id</parameter>&nbsp;:</term>
+<listitem><para>a hook id.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the <link linkend="GHook">GHook</link> with the given id, or <literal>NULL</literal> if it is not found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-find">g_hook_find ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_find                     (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="GHookFindFunc">GHookFindFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Finds a <link linkend="GHook">GHook</link> in a <link linkend="GHookList">GHookList</link> using the given function to test for a match.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>need_valids</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if <link linkend="GHook">GHook</link> elements which have been destroyed should be
+skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to call for each <link linkend="GHook">GHook</link>, which should return <literal>TRUE</literal> when
+the <link linkend="GHook">GHook</link> has been found.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data to pass to <parameter>func</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the found <link linkend="GHook">GHook</link> or <literal>NULL</literal> if no matching <link linkend="GHook">GHook</link> is found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookFindFunc">GHookFindFunc ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    (*GHookFindFunc)                (<link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Defines the type of the function passed to <link linkend="g-hook-find">g_hook_find</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>user data passed to <link linkend="g-hook-find-func">g_hook_find_func</link>().
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the required <link linkend="GHook">GHook</link> has been found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-find-data">g_hook_find_data ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_find_data                (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Finds a <link linkend="GHook">GHook</link> in a <link linkend="GHookList">GHookList</link> with the given data.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>need_valids</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if <link linkend="GHook">GHook</link> elements which have been destroyed should be
+skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data to find.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the <link linkend="GHook">GHook</link> with the given <parameter>data</parameter> or <literal>NULL</literal> if no matching
+<link linkend="GHook">GHook</link> is found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-find-func">g_hook_find_func ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_find_func                (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="gpointer">gpointer</link> func);</programlisting>
+<para>
+Finds a <link linkend="GHook">GHook</link> in a <link linkend="GHookList">GHookList</link> with the given function.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>need_valids</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if <link linkend="GHook">GHook</link> elements which have been destroyed should be
+skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to find.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the <link linkend="GHook">GHook</link> with the given <parameter>func</parameter> or <literal>NULL</literal> if no matching
+<link linkend="GHook">GHook</link> is found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-find-func-data">g_hook_find_func_data ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_find_func_data           (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> need_valids,
+                                             <link linkend="gpointer">gpointer</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Finds a <link linkend="GHook">GHook</link> in a <link linkend="GHookList">GHookList</link> with the given function and data.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>need_valids</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if <link linkend="GHook">GHook</link> elements which have been destroyed should be
+skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to find.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data to find.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the <link linkend="GHook">GHook</link> with the given <parameter>func</parameter> and <parameter>data</parameter> or <literal>NULL</literal> if no matching
+<link linkend="GHook">GHook</link> is found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-first-valid">g_hook_first_valid ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_first_valid              (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gboolean">gboolean</link> may_be_in_call);</programlisting>
+<para>
+Returns the first <link linkend="GHook">GHook</link> in a <link linkend="GHookList">GHookList</link> which has not been destroyed.
+The reference count for the <link linkend="GHook">GHook</link> is incremented, so you must call
+<link linkend="g-hook-unref">g_hook_unref</link>() to restore it when no longer needed. (Or call
+<link linkend="g-hook-next-valid">g_hook_next_valid</link>() if you are stepping through the <link linkend="GHookList">GHookList</link>.)
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>may_be_in_call</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if hooks which are currently running (e.g. in another
+thread) are considered valid. If set to <literal>FALSE</literal>, these are skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the first valid <link linkend="GHook">GHook</link>, or <literal>NULL</literal> if none are valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-next-valid">g_hook_next_valid ()</title>
+<programlisting><link linkend="GHook">GHook</link>*      g_hook_next_valid               (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook,
+                                             <link linkend="gboolean">gboolean</link> may_be_in_call);</programlisting>
+<para>
+Returns the next <link linkend="GHook">GHook</link> in a <link linkend="GHookList">GHookList</link> which has not been destroyed.
+The reference count for the <link linkend="GHook">GHook</link> is incremented, so you must call
+<link linkend="g-hook-unref">g_hook_unref</link>() to restore it when no longer needed. (Or continue to call
+<link linkend="g-hook-next-valid">g_hook_next_valid</link>() until <literal>NULL</literal> is returned.)
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the current <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>may_be_in_call</parameter>&nbsp;:</term>
+<listitem><para><literal>TRUE</literal> if hooks which are currently running (e.g. in another
+thread) are considered valid. If set to <literal>FALSE</literal>, these are skipped.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the next valid <link linkend="GHook">GHook</link>, or <literal>NULL</literal> if none are valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHookFlagMask">enum GHookFlagMask</title>
+<programlisting>typedef enum
+{
+  G_HOOK_FLAG_ACTIVE	    = 1 &lt;&lt; 0,
+  G_HOOK_FLAG_IN_CALL	    = 1 &lt;&lt; 1,
+  G_HOOK_FLAG_MASK	    = 0x0f
+} GHookFlagMask;
+</programlisting>
+<para>
+Flags used internally in the <link linkend="GHook">GHook</link> implementation.
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_HOOK_FLAG_ACTIVE</literal></term>
+<listitem><para>set if the hook has not been destroyed.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_HOOK_FLAG_IN_CALL</literal></term>
+<listitem><para>set if the hook is currently being run.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_HOOK_FLAG_MASK</literal></term>
+<listitem><para>
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-HOOK-FLAGS-CAPS">G_HOOK_FLAGS()</title>
+<programlisting>#define	G_HOOK_FLAGS(hook)		(G_HOOK (hook)-&gt;flags)
+</programlisting>
+<para>
+Returns the flags of a hook.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-HOOK-FLAG-USER-SHIFT-CAPS">G_HOOK_FLAG_USER_SHIFT</title>
+<programlisting>#define G_HOOK_FLAG_USER_SHIFT	(4)
+</programlisting>
+<para>
+The position of the first bit which is not reserved for internal
+use be the <link linkend="GHook">GHook</link> implementation, i.e. 
+<literal>1 << G_HOOK_FLAG_USER_SHIFT</literal> is the first bit
+which can be used for application-defined flags.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-HOOK-CAPS">G_HOOK()</title>
+<programlisting>#define	G_HOOK(hook)			((GHook*) (hook))
+</programlisting>
+<para>
+Casts a pointer to a <literal>GHook*</literal>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a pointer.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-HOOK-IS-VALID-CAPS">G_HOOK_IS_VALID()</title>
+<programlisting>#define     G_HOOK_IS_VALID(hook)</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the <link linkend="GHook">GHook</link> is valid, i.e. it is in a <link linkend="GHookList">GHookList</link>, it is active
+and it has not been destroyed.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the <link linkend="GHook">GHook</link> is valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-HOOK-ACTIVE-CAPS">G_HOOK_ACTIVE()</title>
+<programlisting>#define     G_HOOK_ACTIVE(hook)</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the <link linkend="GHook">GHook</link> is active, which is normally <literal>TRUE</literal> until the <link linkend="GHook">GHook</link>
+is destroyed.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the <link linkend="GHook">GHook</link> is active.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-HOOK-IN-CALL-CAPS">G_HOOK_IN_CALL()</title>
+<programlisting>#define     G_HOOK_IN_CALL(hook)</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the <link linkend="GHook">GHook</link> function is currently executing.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the <link linkend="GHook">GHook</link> function is currently executing.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-HOOK-IS-UNLINKED-CAPS">G_HOOK_IS_UNLINKED()</title>
+<programlisting>#define     G_HOOK_IS_UNLINKED(hook)</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the <link linkend="GHook">GHook</link> is not in a <link linkend="GHookList">GHookList</link>.
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHook">GHook</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the <link linkend="GHook">GHook</link> is not in a <link linkend="GHookList">GHookList</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-ref">g_hook_ref ()</title>
+<programlisting>void        g_hook_ref                      (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);</programlisting>
+<para>
+Increments the reference count for a <link linkend="GHook">GHook</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to increment the reference count of.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-unref">g_hook_unref ()</title>
+<programlisting>void        g_hook_unref                    (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);</programlisting>
+<para>
+Decrements the reference count of a <link linkend="GHook">GHook</link>.
+If the reference count falls to 0, the <link linkend="GHook">GHook</link> is removed from the <link linkend="GHookList">GHookList</link>
+and <link linkend="g-hook-free">g_hook_free</link>() is called to free it.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to unref.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-free">g_hook_free ()</title>
+<programlisting>void        g_hook_free                     (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);</programlisting>
+<para>
+Calls the <link linkend="GHookList">GHookList</link> <parameter>hook_free</parameter> function if it exists, and frees the memory
+allocated for the <link linkend="GHook">GHook</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to free.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-destroy">g_hook_destroy ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_hook_destroy                  (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="gulong">gulong</link> hook_id);</programlisting>
+<para>
+Destroys a <link linkend="GHook">GHook</link>, given its ID.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook_id</parameter>&nbsp;:</term>
+<listitem><para>a hook ID.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the <link linkend="GHook">GHook</link> was found in the <link linkend="GHookList">GHookList</link> and destroyed.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hook-destroy-link">g_hook_destroy_link ()</title>
+<programlisting>void        g_hook_destroy_link             (<link linkend="GHookList">GHookList</link> *hook_list,
+                                             <link linkend="GHook">GHook</link> *hook);</programlisting>
+<para>
+Removes one <link linkend="GHook">GHook</link> from a <link linkend="GHookList">GHookList</link>, marking it inactive and calling
+<link linkend="g-hook-unref">g_hook_unref</link>() on it. 
+</para><variablelist role="params">
+<varlistentry><term><parameter>hook_list</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GHookList">GHookList</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>hook</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GHook">GHook</link> to remove.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

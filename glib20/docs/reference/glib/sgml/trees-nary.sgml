@@ -1,0 +1,912 @@
+<refentry id="glib-N-ary-Trees">
+<refmeta>
+<refentrytitle>N-ary Trees</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>N-ary Trees</refname><refpurpose>trees of data with any number of branches.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GNode">GNode</link>;
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-new">g_node_new</link>                      (<link linkend="gpointer">gpointer</link> data);
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-copy">g_node_copy</link>                     (<link linkend="GNode">GNode</link> *node);
+
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-insert">g_node_insert</link>                   (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="gint">gint</link> position,
+                                             <link linkend="GNode">GNode</link> *node);
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-insert-before">g_node_insert_before</link>            (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="GNode">GNode</link> *sibling,
+                                             <link linkend="GNode">GNode</link> *node);
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-insert-after">g_node_insert_after</link>             (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="GNode">GNode</link> *sibling,
+                                             <link linkend="GNode">GNode</link> *node);
+#define     <link linkend="g-node-append">g_node_append</link>                   (parent, node)
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-prepend">g_node_prepend</link>                  (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="GNode">GNode</link> *node);
+
+#define     <link linkend="g-node-insert-data">g_node_insert_data</link>              (parent, position, data)
+#define     <link linkend="g-node-insert-data-before">g_node_insert_data_before</link>       (parent, sibling, data)
+#define     <link linkend="g-node-append-data">g_node_append_data</link>              (parent, data)
+#define     <link linkend="g-node-prepend-data">g_node_prepend_data</link>             (parent, data)
+
+void        <link linkend="g-node-reverse-children">g_node_reverse_children</link>         (<link linkend="GNode">GNode</link> *node);
+void        <link linkend="g-node-traverse">g_node_traverse</link>                 (<link linkend="GNode">GNode</link> *root,
+                                             <link linkend="GTraverseType">GTraverseType</link> order,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="gint">gint</link> max_depth,
+                                             <link linkend="GNodeTraverseFunc">GNodeTraverseFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);
+enum        <link linkend="GTraverseFlags">GTraverseFlags</link>;
+<link linkend="gboolean">gboolean</link>    (<link linkend="GNodeTraverseFunc">*GNodeTraverseFunc</link>)            (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="gpointer">gpointer</link> data);
+void        <link linkend="g-node-children-foreach">g_node_children_foreach</link>         (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="GNodeForeachFunc">GNodeForeachFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);
+void        (<link linkend="GNodeForeachFunc">*GNodeForeachFunc</link>)             (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="gpointer">gpointer</link> data);
+
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-get-root">g_node_get_root</link>                 (<link linkend="GNode">GNode</link> *node);
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-find">g_node_find</link>                     (<link linkend="GNode">GNode</link> *root,
+                                             <link linkend="GTraverseType">GTraverseType</link> order,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-find-child">g_node_find_child</link>               (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="gint">gint</link>        <link linkend="g-node-child-index">g_node_child_index</link>              (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="gint">gint</link>        <link linkend="g-node-child-position">g_node_child_position</link>           (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GNode">GNode</link> *child);
+#define     <link linkend="g-node-first-child">g_node_first_child</link>              (node)
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-last-child">g_node_last_child</link>               (<link linkend="GNode">GNode</link> *node);
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-nth-child">g_node_nth_child</link>                (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="guint">guint</link> n);
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-first-sibling">g_node_first_sibling</link>            (<link linkend="GNode">GNode</link> *node);
+#define     <link linkend="g-node-next-sibling">g_node_next_sibling</link>             (node)
+#define     <link linkend="g-node-prev-sibling">g_node_prev_sibling</link>             (node)
+<link linkend="GNode">GNode</link>*      <link linkend="g-node-last-sibling">g_node_last_sibling</link>             (<link linkend="GNode">GNode</link> *node);
+
+#define     <link linkend="G-NODE-IS-LEAF-CAPS">G_NODE_IS_LEAF</link>                  (node)
+#define     <link linkend="G-NODE-IS-ROOT-CAPS">G_NODE_IS_ROOT</link>                  (node)
+<link linkend="guint">guint</link>       <link linkend="g-node-depth">g_node_depth</link>                    (<link linkend="GNode">GNode</link> *node);
+<link linkend="guint">guint</link>       <link linkend="g-node-n-nodes">g_node_n_nodes</link>                  (<link linkend="GNode">GNode</link> *root,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags);
+<link linkend="guint">guint</link>       <link linkend="g-node-n-children">g_node_n_children</link>               (<link linkend="GNode">GNode</link> *node);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-node-is-ancestor">g_node_is_ancestor</link>              (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GNode">GNode</link> *descendant);
+<link linkend="guint">guint</link>       <link linkend="g-node-max-height">g_node_max_height</link>               (<link linkend="GNode">GNode</link> *root);
+
+void        <link linkend="g-node-unlink">g_node_unlink</link>                   (<link linkend="GNode">GNode</link> *node);
+void        <link linkend="g-node-destroy">g_node_destroy</link>                  (<link linkend="GNode">GNode</link> *root);
+
+void        <link linkend="g-node-push-allocator">g_node_push_allocator</link>           (<link linkend="GAllocator">GAllocator</link> *allocator);
+void        <link linkend="g-node-pop-allocator">g_node_pop_allocator</link>            (void);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+The <link linkend="GNode">GNode</link> struct and its associated functions provide a N-ary tree data
+structure, where nodes in the tree can contain arbitrary data.
+</para>
+<para>
+To create a new tree use <link linkend="g-node-new">g_node_new</link>().
+</para>
+<para>
+To insert a node into a tree use <link linkend="g-node-insert">g_node_insert</link>(), <link linkend="g-node-insert-before">g_node_insert_before</link>(),
+<link linkend="g-node-append">g_node_append</link>() and <link linkend="g-node-prepend">g_node_prepend</link>().
+</para>
+<para>
+To create a new node and insert it into a tree use <link linkend="g-node-insert-data">g_node_insert_data</link>(), 
+<link linkend="g-node-insert-data-before">g_node_insert_data_before</link>(), <link linkend="g-node-append-data">g_node_append_data</link>() and <link linkend="g-node-prepend-data">g_node_prepend_data</link>().
+</para>
+<para>
+To reverse the children of a node use <link linkend="g-node-reverse-children">g_node_reverse_children</link>().
+</para>
+<para>
+To find a node use <link linkend="g-node-get-root">g_node_get_root</link>(), <link linkend="g-node-find">g_node_find</link>(), <link linkend="g-node-find-child">g_node_find_child</link>(),
+<link linkend="g-node-child-index">g_node_child_index</link>(), <link linkend="g-node-child-position">g_node_child_position</link>(), 
+<link linkend="g-node-first-child">g_node_first_child</link>(), <link linkend="g-node-last-child">g_node_last_child</link>(),
+<link linkend="g-node-nth-child">g_node_nth_child</link>(), <link linkend="g-node-first-sibling">g_node_first_sibling</link>(), <link linkend="g-node-prev-sibling">g_node_prev_sibling</link>(),
+<link linkend="g-node-next-sibling">g_node_next_sibling</link>() or <link linkend="g-node-last-sibling">g_node_last_sibling</link>().
+</para>
+<para>
+To get information about a node or tree use <link linkend="G-NODE-IS-LEAF-CAPS">G_NODE_IS_LEAF</link>(),
+<link linkend="G-NODE-IS-ROOT-CAPS">G_NODE_IS_ROOT</link>(), <link linkend="g-node-depth">g_node_depth</link>(), <link linkend="g-node-n-nodes">g_node_n_nodes</link>(), <link linkend="g-node-n-children">g_node_n_children</link>(),
+<link linkend="g-node-is-ancestor">g_node_is_ancestor</link>() or <link linkend="g-node-max-height">g_node_max_height</link>().
+</para>
+<para>
+To traverse a tree, calling a function for each node visited in the
+traversal, use <link linkend="g-node-traverse">g_node_traverse</link>() or <link linkend="g-node-children-foreach">g_node_children_foreach</link>().
+</para>
+<para>
+To remove a node or subtree from a tree use <link linkend="g-node-unlink">g_node_unlink</link>() or
+<link linkend="g-node-destroy">g_node_destroy</link>().
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GNode">struct GNode</title>
+<programlisting>struct GNode
+{
+  gpointer data;
+  GNode	  *next;
+  GNode	  *prev;
+  GNode	  *parent;
+  GNode	  *children;
+};
+</programlisting>
+<para>
+The <structname>GNode</structname> struct represents one node in a
+<link linkend="glib-N-ary-Trees">N-ary Tree</link>.
+The <structfield>data</structfield> field contains the actual data of the node.
+The <structfield>next</structfield> and <structfield>prev</structfield>
+fields point to the node's siblings (a sibling is another <structname>GNode</structname> with the
+same parent).
+The <structfield>parent</structfield> field points to the parent of the <structname>GNode</structname>,
+or is <literal>NULL</literal> if the <structname>GNode</structname> is the root of the tree.
+The <structfield>children</structfield> field points to the first child of the
+<structname>GNode</structname>. The other children are accessed by using the
+<structfield>next</structfield> pointer of each child.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-node-new">g_node_new ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_new                      (<link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Creates a new <link linkend="GNode">GNode</link> containing the given data.
+Used to create the first node in a tree.
+</para><variablelist role="params">
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data of the new node.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a new <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-copy">g_node_copy ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_copy                     (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Recursively copies a <link linkend="GNode">GNode</link> (but does not deep-copy the data inside the nodes,
+since there's no way for GLib to know how to do that).
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a new <link linkend="GNode">GNode</link> containing the same data pointers.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-insert">g_node_insert ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_insert                   (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="gint">gint</link> position,
+                                             <link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Inserts a <link linkend="GNode">GNode</link> beneath the parent at the given position.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place <parameter>node</parameter> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>position</parameter>&nbsp;:</term>
+<listitem><para>the position to place <parameter>node</parameter> at, with respect to its siblings.
+If position is -1, <parameter>node</parameter> is inserted as the last child of <parameter>parent</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the inserted <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-insert-before">g_node_insert_before ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_insert_before            (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="GNode">GNode</link> *sibling,
+                                             <link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Inserts a <link linkend="GNode">GNode</link> beneath the parent before the given sibling.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place <parameter>node</parameter> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>sibling</parameter>&nbsp;:</term>
+<listitem><para>the sibling <link linkend="GNode">GNode</link> to place <parameter>node</parameter> before. If sibling is <literal>NULL</literal>,
+the node is inserted as the last child of <parameter>parent</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the inserted <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-insert-after">g_node_insert_after ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_insert_after             (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="GNode">GNode</link> *sibling,
+                                             <link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Inserts a <link linkend="GNode">GNode</link> beneath the parent after the given sibling.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place <parameter>node</parameter> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>sibling</parameter>&nbsp;:</term>
+<listitem><para>the sibling <link linkend="GNode">GNode</link> to place <parameter>node</parameter> after. If sibling is <literal>NULL</literal>,
+the node is inserted as the first child of <parameter>parent</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the inserted <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-append">g_node_append()</title>
+<programlisting>#define     g_node_append(parent, node)</programlisting>
+<para>
+Inserts a <link linkend="GNode">GNode</link> as the last child of the given parent.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place the new <link linkend="GNode">GNode</link> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the inserted <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-prepend">g_node_prepend ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_prepend                  (<link linkend="GNode">GNode</link> *parent,
+                                             <link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Inserts a <link linkend="GNode">GNode</link> as the first child of the given parent.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place the new <link linkend="GNode">GNode</link> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the inserted <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-insert-data">g_node_insert_data()</title>
+<programlisting>#define     g_node_insert_data(parent, position, data)</programlisting>
+<para>
+Inserts a new <link linkend="GNode">GNode</link> at the given position.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place the new <link linkend="GNode">GNode</link> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>position</parameter>&nbsp;:</term>
+<listitem><para>the position to place the new <link linkend="GNode">GNode</link> at.
+If position is -1, the new <link linkend="GNode">GNode</link> is inserted as the last child of <parameter>parent</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data for the new <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the new <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-insert-data-before">g_node_insert_data_before()</title>
+<programlisting>#define     g_node_insert_data_before(parent, sibling, data)</programlisting>
+<para>
+Inserts a new <link linkend="GNode">GNode</link> before the given sibling.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place the new <link linkend="GNode">GNode</link> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>sibling</parameter>&nbsp;:</term>
+<listitem><para>the sibling <link linkend="GNode">GNode</link> to place the new <link linkend="GNode">GNode</link> before.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data for the new <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the new <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-append-data">g_node_append_data()</title>
+<programlisting>#define     g_node_append_data(parent, data)</programlisting>
+<para>
+Inserts a new <link linkend="GNode">GNode</link> as the last child of the given parent.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place the new <link linkend="GNode">GNode</link> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data for the new <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the new <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-prepend-data">g_node_prepend_data()</title>
+<programlisting>#define     g_node_prepend_data(parent, data)</programlisting>
+<para>
+Inserts a new <link linkend="GNode">GNode</link> as the first child of the given parent.
+</para><variablelist role="params">
+<varlistentry><term><parameter>parent</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to place the new <link linkend="GNode">GNode</link> under.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data for the new <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the new <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-reverse-children">g_node_reverse_children ()</title>
+<programlisting>void        g_node_reverse_children         (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Reverses the order of the children of a <link linkend="GNode">GNode</link>.
+(It doesn't change the order of the grandchildren.)
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-traverse">g_node_traverse ()</title>
+<programlisting>void        g_node_traverse                 (<link linkend="GNode">GNode</link> *root,
+                                             <link linkend="GTraverseType">GTraverseType</link> order,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="gint">gint</link> max_depth,
+                                             <link linkend="GNodeTraverseFunc">GNodeTraverseFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Traverses a tree starting at the given root <link linkend="GNode">GNode</link>.
+It calls the given function for each node visited.
+The traversal can be halted at any point by returning <literal>TRUE</literal> from <parameter>func</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><para>the root <link linkend="GNode">GNode</link> of the tree to traverse.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>order</parameter>&nbsp;:</term>
+<listitem><para>the order in which nodes are visited - <literal>G_IN_ORDER</literal>, <literal>G_PRE_ORDER</literal>,
+<literal>G_POST_ORDER</literal>, or <literal>G_LEVEL_ORDER</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&nbsp;:</term>
+<listitem><para>which types of children are to be visited, one of <literal>G_TRAVERSE_ALL</literal>,
+<literal>G_TRAVERSE_LEAFS</literal> and <literal>G_TRAVERSE_NON_LEAFS</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>max_depth</parameter>&nbsp;:</term>
+<listitem><para>the maximum depth of the traversal. Nodes below this
+depth will not be visited. If max_depth is -1 all nodes in the tree are
+visited. If depth is 1, only the root is visited. If depth is 2, the root
+and its children are visited. And so on.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to call for each visited <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>user data to pass to the function.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GTraverseFlags">enum GTraverseFlags</title>
+<programlisting>typedef enum
+{
+  G_TRAVERSE_LEAFS      = 1 &lt;&lt; 0,
+  G_TRAVERSE_NON_LEAFS  = 1 &lt;&lt; 1,
+  G_TRAVERSE_ALL        = G_TRAVERSE_LEAFS | G_TRAVERSE_NON_LEAFS,
+  G_TRAVERSE_MASK       = 0x03
+} GTraverseFlags;
+</programlisting>
+<para>
+Specifies which nodes are visited during several of the tree functions,
+including <link linkend="g-node-traverse">g_node_traverse</link>() and <link linkend="g-node-find">g_node_find</link>().
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_TRAVERSE_LEAFS</literal></term>
+<listitem><para>only leaf nodes should be visited.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_TRAVERSE_NON_LEAFS</literal></term>
+<listitem><para>only non-leaf nodes should be visited.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_TRAVERSE_ALL</literal></term>
+<listitem><para>all nodes should be visited.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_TRAVERSE_MASK</literal></term>
+<listitem><para>
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GNodeTraverseFunc">GNodeTraverseFunc ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    (*GNodeTraverseFunc)            (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Specifies the type of function passed to <link linkend="g-node-traverse">g_node_traverse</link>().
+The function is called with each of the nodes visited, together with the
+user data passed to <link linkend="g-node-traverse">g_node_traverse</link>().
+If the function returns <literal>TRUE</literal>, then the traversal is stopped.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>user data passed to <link linkend="g-node-traverse">g_node_traverse</link>().
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> to stop the traversal.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-children-foreach">g_node_children_foreach ()</title>
+<programlisting>void        g_node_children_foreach         (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="GNodeForeachFunc">GNodeForeachFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Calls a function for each of the children of a <link linkend="GNode">GNode</link>.
+Note that it doesn't descend beneath the child nodes.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&nbsp;:</term>
+<listitem><para>which types of children are to be visited, one of <literal>G_TRAVERSE_ALL</literal>,
+<literal>G_TRAVERSE_LEAFS</literal> and <literal>G_TRAVERSE_NON_LEAFS</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para>the function to call for each visited node.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>user data to pass to the function.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GNodeForeachFunc">GNodeForeachFunc ()</title>
+<programlisting>void        (*GNodeForeachFunc)             (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Specifies the type of function passed to <link linkend="g-node-children-foreach">g_node_children_foreach</link>().
+The function is called with each child node, together with the user data
+passed to <link linkend="g-node-children-foreach">g_node_children_foreach</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>user data passed to <link linkend="g-node-children-foreach">g_node_children_foreach</link>().
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-get-root">g_node_get_root ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_get_root                 (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Gets the root of a tree.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the root of the tree.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-find">g_node_find ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_find                     (<link linkend="GNode">GNode</link> *root,
+                                             <link linkend="GTraverseType">GTraverseType</link> order,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Finds a <link linkend="GNode">GNode</link> in a tree.
+</para><variablelist role="params">
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><para>the root <link linkend="GNode">GNode</link> of the tree to search.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>order</parameter>&nbsp;:</term>
+<listitem><para>the order in which nodes are visited - <literal>G_IN_ORDER</literal>, <literal>G_PRE_ORDER</literal>,
+<literal>G_POST_ORDER</literal>, or <literal>G_LEVEL_ORDER</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&nbsp;:</term>
+<listitem><para>which types of children are to be searched, one of <literal>G_TRAVERSE_ALL</literal>,
+<literal>G_TRAVERSE_LEAFS</literal> and <literal>G_TRAVERSE_NON_LEAFS</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data to find.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the found <link linkend="GNode">GNode</link>, or <literal>NULL</literal> if the data is not found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-find-child">g_node_find_child ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_find_child               (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Finds the first child of a <link linkend="GNode">GNode</link> with the given data.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&nbsp;:</term>
+<listitem><para>which types of children are to be searched, one of <literal>G_TRAVERSE_ALL</literal>,
+<literal>G_TRAVERSE_LEAFS</literal> and <literal>G_TRAVERSE_NON_LEAFS</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data to find.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the found child <link linkend="GNode">GNode</link>, or <literal>NULL</literal> if the data is not found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-child-index">g_node_child_index ()</title>
+<programlisting><link linkend="gint">gint</link>        g_node_child_index              (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Gets the position of the first child of a <link linkend="GNode">GNode</link> which contains the given data.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para>the data to find.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the index of the child of <parameter>node</parameter> which contains <parameter>data</parameter>, or -1
+if the data is not found.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-child-position">g_node_child_position ()</title>
+<programlisting><link linkend="gint">gint</link>        g_node_child_position           (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GNode">GNode</link> *child);</programlisting>
+<para>
+Gets the position of a <link linkend="GNode">GNode</link> with respect to its siblings.
+<parameter>child</parameter> must be a child of <parameter>node</parameter>.
+The first child is numbered 0, the second 1, and so on.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&nbsp;:</term>
+<listitem><para>a child of <parameter>node</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the position of <parameter>child</parameter> with respect to its siblings.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-first-child">g_node_first_child()</title>
+<programlisting>#define     g_node_first_child(node)</programlisting>
+<para>
+Gets the first child of a <link linkend="GNode">GNode</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the last child of <parameter>node</parameter>, or <literal>NULL</literal> if <parameter>node</parameter> is <literal>NULL</literal> or has no children.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-last-child">g_node_last_child ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_last_child               (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Gets the last child of a <link linkend="GNode">GNode</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link> (must not be <literal>NULL</literal>).
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the last child of <parameter>node</parameter>, or <literal>NULL</literal> if <parameter>node</parameter> has no children.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-nth-child">g_node_nth_child ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_nth_child                (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="guint">guint</link> n);</programlisting>
+<para>
+Gets a child of a <link linkend="GNode">GNode</link>, using the given index.
+The first child is at index 0. If the index is too big, <literal>NULL</literal> is returned.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n</parameter>&nbsp;:</term>
+<listitem><para>the index of the desired child.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the child of <parameter>node</parameter> at index <parameter>n</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-first-sibling">g_node_first_sibling ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_first_sibling            (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Gets the first sibling of a <link linkend="GNode">GNode</link>.
+This could possibly be the node itself.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the first sibling of <parameter>node</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-next-sibling">g_node_next_sibling()</title>
+<programlisting>#define     g_node_next_sibling(node)</programlisting>
+<para>
+Gets the next sibling of a <link linkend="GNode">GNode</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the next sibling of <parameter>node</parameter>, or <literal>NULL</literal> if <parameter>node</parameter> is <literal>NULL</literal>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-prev-sibling">g_node_prev_sibling()</title>
+<programlisting>#define     g_node_prev_sibling(node)</programlisting>
+<para>
+Gets the previous sibling of a <link linkend="GNode">GNode</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the previous sibling of <parameter>node</parameter>, or <literal>NULL</literal> if <parameter>node</parameter> is <literal>NULL</literal>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-last-sibling">g_node_last_sibling ()</title>
+<programlisting><link linkend="GNode">GNode</link>*      g_node_last_sibling             (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Gets the last sibling of a <link linkend="GNode">GNode</link>.
+This could possibly be the node itself.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the last sibling of <parameter>node</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-NODE-IS-LEAF-CAPS">G_NODE_IS_LEAF()</title>
+<programlisting>#define	 G_NODE_IS_LEAF(node)	(((GNode*) (node))-&gt;children == NULL)
+</programlisting>
+<para>
+Returns <literal>TRUE</literal> if a <link linkend="GNode">GNode</link> is a leaf node.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the <link linkend="GNode">GNode</link> is a leaf node (i.e. it has no children).
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-NODE-IS-ROOT-CAPS">G_NODE_IS_ROOT()</title>
+<programlisting>#define     G_NODE_IS_ROOT(node)</programlisting>
+<para>
+Returns <literal>TRUE</literal> if a <link linkend="GNode">GNode</link> is the root of a tree.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the <link linkend="GNode">GNode</link> is the root of a tree (i.e. it has no parent
+or siblings).
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-depth">g_node_depth ()</title>
+<programlisting><link linkend="guint">guint</link>       g_node_depth                    (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Gets the depth of a <link linkend="GNode">GNode</link>.
+</para>
+<para>
+If <parameter>node</parameter> is <literal>NULL</literal> the depth is 0.
+The root node has a depth of 1.
+For the children of the root node the depth is 2. And so on.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the depth of the <link linkend="GNode">GNode</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-n-nodes">g_node_n_nodes ()</title>
+<programlisting><link linkend="guint">guint</link>       g_node_n_nodes                  (<link linkend="GNode">GNode</link> *root,
+                                             <link linkend="GTraverseFlags">GTraverseFlags</link> flags);</programlisting>
+<para>
+Gets the number of nodes in a tree.
+</para><variablelist role="params">
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&nbsp;:</term>
+<listitem><para>which types of children are to be counted, one of <literal>G_TRAVERSE_ALL</literal>,
+<literal>G_TRAVERSE_LEAFS</literal> and <literal>G_TRAVERSE_NON_LEAFS</literal>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the number of nodes in the tree.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-n-children">g_node_n_children ()</title>
+<programlisting><link linkend="guint">guint</link>       g_node_n_children               (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Gets the number of children of a <link linkend="GNode">GNode</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the number of children of <parameter>node</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-is-ancestor">g_node_is_ancestor ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_node_is_ancestor              (<link linkend="GNode">GNode</link> *node,
+                                             <link linkend="GNode">GNode</link> *descendant);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if <parameter>node</parameter> is an ancestor of <parameter>descendant</parameter>.
+This is true if node is the parent of <parameter>descendant</parameter>, or if node is the
+grandparent of <parameter>descendant</parameter> etc.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>descendant</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if <parameter>node</parameter> is an ancestor of <parameter>descendant</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-max-height">g_node_max_height ()</title>
+<programlisting><link linkend="guint">guint</link>       g_node_max_height               (<link linkend="GNode">GNode</link> *root);</programlisting>
+<para>
+Gets the maximum height of all branches beneath a <link linkend="GNode">GNode</link>.
+This is the maximum distance from the <link linkend="GNode">GNode</link> to all leaf nodes.
+</para>
+<para>
+If <parameter>root</parameter> is <literal>NULL</literal>, 0 is returned. If <parameter>root</parameter> has no children, 1 is returned.
+If <parameter>root</parameter> has children, 2 is returned. And so on.
+</para><variablelist role="params">
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GNode">GNode</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the maximum height of the tree beneath <parameter>root</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-unlink">g_node_unlink ()</title>
+<programlisting>void        g_node_unlink                   (<link linkend="GNode">GNode</link> *node);</programlisting>
+<para>
+Unlinks a <link linkend="GNode">GNode</link> from a tree, resulting in two separate trees.
+</para><variablelist role="params">
+<varlistentry><term><parameter>node</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GNode">GNode</link> to unlink, which becomes the root of a new tree.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-destroy">g_node_destroy ()</title>
+<programlisting>void        g_node_destroy                  (<link linkend="GNode">GNode</link> *root);</programlisting>
+<para>
+Removes the <link linkend="GNode">GNode</link> and its children from the tree, freeing any memory
+allocated.
+</para><variablelist role="params">
+<varlistentry><term><parameter>root</parameter>&nbsp;:</term>
+<listitem><para>the root of the tree/subtree to destroy.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-push-allocator">g_node_push_allocator ()</title>
+<programlisting>void        g_node_push_allocator           (<link linkend="GAllocator">GAllocator</link> *allocator);</programlisting>
+<para>
+Sets the allocator to use to allocate <link linkend="GNode">GNode</link> elements.
+Use <link linkend="g-node-pop-allocator">g_node_pop_allocator</link>() to restore the previous allocator.
+</para><variablelist role="params">
+<varlistentry><term><parameter>allocator</parameter>&nbsp;:</term>
+<listitem><para>the <link linkend="GAllocator">GAllocator</link> to use when allocating <link linkend="GNode">GNode</link> elements.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-node-pop-allocator">g_node_pop_allocator ()</title>
+<programlisting>void        g_node_pop_allocator            (void);</programlisting>
+<para>
+Restores the previous <link linkend="GAllocator">GAllocator</link>, used when allocating <link linkend="GNode">GNode</link> elements.
+</para></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

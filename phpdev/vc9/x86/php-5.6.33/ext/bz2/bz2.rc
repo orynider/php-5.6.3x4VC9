@@ -1,0 +1,58 @@
+// Version Resource Script
+//
+
+#include <winver.h>
+#include <php_bz2.h>
+
+//
+// build-up the name suffix that defines the type of build this is.
+//
+#if SDL_THREADS
+#define SUFFIX_THREADS	    "t"
+#else
+#define SUFFIX_THREADS	    ""
+#endif
+
+#if DEBUG && !UNCHECKED
+#define SUFFIX_DEBUG	    "g"
+#else
+#define SUFFIX_DEBUG	    ""
+#endif
+
+#define SUFFIX		    SUFFIX_THREADS SUFFIX_DEBUG
+
+
+LANGUAGE 0x9, 0x1	/* LANG_ENGLISH, SUBLANG_DEFAULT */
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 	2,1,0,6
+ PRODUCTVERSION 5,6,33,0
+ FILEFLAGSMASK 	0x3fL
+#ifdef DEBUG
+ FILEFLAGS 	VS_FF_DEBUG
+#else
+ FILEFLAGS 	0x0L
+#endif
+ FILEOS 	VOS__WINDOWS32
+ FILETYPE 	VFT_DLL
+ FILESUBTYPE 	0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0" /* LANG_ENGLISH/SUBLANG_ENGLISH_US, Unicode CP */
+        BEGIN
+            VALUE "FileDescription", "php bzip2/libbzip2 version 2.1.0.6 of 6 September 2010 DLL\0"
+            VALUE "CompanyName", "Julian Seward <jseward@bzip.org>\0"
+            VALUE "LegalCopyright", "Copyright \251 1996-2010 by Julian Seward <jseward@bzip.org>, et al\0"
+            VALUE "ProductName", "php bzip2 " SDL_VERSION " for Windows\0"
+            VALUE "FileVersion",     VERSION_VALUE, "\0"
+            VALUE "InternalName",    VER_INTERNALNAME_STR, "\0"
+            VALUE "OriginalFilename",VER_ORIGINALFILENAME_STR, "\0"
+            VALUE "ProductVersion",  VER_PRODUCTVERSION_STR, "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

@@ -1,0 +1,338 @@
+<HTML
+><HEAD
+><TITLE
+>Introduction</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GObject Reference Manual"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="GObject Reference Manual"
+HREF="index.html"><LINK
+REL="NEXT"
+TITLE="API Reference"
+HREF="r28.html"></HEAD
+><BODY
+CLASS="PREFACE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="5"
+>GObject Reference Manual</FONT
+></TH
+></TR
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&nbsp;</B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="PREFACE"
+><H1
+><A
+NAME="AEN4">Introduction</H1
+><P
+>	Most modern programming languages come with their own native object
+	systems and additional fundamental algorithmic language constructs.
+	Just as GLib serves as an implementation of such fundamental
+	types and algorithms (linked lists, hash tables and so forth), the
+	GLib Object System provides the required implementations of a
+	flexible extensible and intentionally easy to map (into other
+	languages) object oriented framework for C.
+	The substantial elements that are provided can be summarized as:
+	<P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN8"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	    * A generic type system to register arbitrary single-inherited
+	      flat and deep derived types as well as interfaces for
+	      structured types.
+	      It takes care of creation, initialization and memory management
+	      of the assorted object and class structures, maintains
+	      parent/child relationships and deals with dynamic implementations
+	      of such types. That is, their type specific implementations are
+	      relocatable/unloadable during runtime.
+	  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN12"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	    * A collection of fundamental type implementations, such as integers,
+	      doubles, enums and structured types, to name a few.
+	  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN16"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	    * A sample fundamental type implementation to base object hierarchies
+	      upon - the GObject fundamental type.
+	  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN20"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	    * A signal system that allows very flexible user customization of
+	      virtual/overridable object methods and can serve as a powerful
+	      notification mechanism.
+	  </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN24"><SPAN
+STYLE="white-space: nowrap"
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>	    * An extensible parameter/value system, supporting all the provided
+	      fundamental types that can be used to generically handle object
+	      properties or otherwise parameterized types.
+	  </P
+></TD
+></TR
+></TBODY
+></TABLE
+>
+      </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><BR
+CLEAR="all"><BR><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&nbsp;</B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+><TR
+><TD
+COLSPAN="2"
+ALIGN="left"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>GObject Reference Manual</B
+></FONT
+></TD
+><TD
+COLSPAN="2"
+ALIGN="right"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>API Reference</B
+></FONT
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

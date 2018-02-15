@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stresstest", "stresstest.vcproj", "{CDE72559-FA7A-491A-B8B4-A34A57C8A07A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDE72559-FA7A-491A-B8B4-A34A57C8A07A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CDE72559-FA7A-491A-B8B4-A34A57C8A07A}.Debug|Win32.Build.0 = Debug|Win32
+		{CDE72559-FA7A-491A-B8B4-A34A57C8A07A}.Release|Win32.ActiveCfg = Release|Win32
+		{CDE72559-FA7A-491A-B8B4-A34A57C8A07A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

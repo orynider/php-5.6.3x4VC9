@@ -1,0 +1,178 @@
+<!doctype book PUBLIC "-//Davenport//DTD DocBook V3.0//EN" [
+<!entity glib-Basic-Types SYSTEM "sgml/types.sgml">
+<!entity glib-Limits-of-Basic-Types SYSTEM "sgml/limits.sgml">
+<!entity glib-Standard-Macros SYSTEM "sgml/macros.sgml">
+<!entity glib-Type-Conversion-Macros SYSTEM "sgml/type_conversion.sgml">
+<!entity glib-Byte-Order-Macros SYSTEM "sgml/byte_order.sgml">
+<!entity glib-Numerical-Definitions SYSTEM "sgml/numerical.sgml">
+<!entity glib-Miscellaneous-Macros SYSTEM "sgml/macros_misc.sgml">
+<!entity glib-Memory-Allocation SYSTEM "sgml/memory.sgml">
+<!entity glib-Error-Reporting SYSTEM "sgml/error_reporting.sgml">
+<!entity glib-Warnings-and-Assertions SYSTEM "sgml/warnings.sgml">
+<!entity glib-Message-Logging SYSTEM "sgml/messages.sgml">
+<!entity glib-Pattern-Matching SYSTEM "sgml/patterns.sgml">
+<!entity glib-Timers SYSTEM "sgml/timers.sgml">
+<!entity glib-String-Utility-Functions SYSTEM "sgml/string_utils.sgml">
+<!entity glib-Character-Set-Conversion SYSTEM "sgml/conversions.sgml">
+<!entity glib-Unicode-Manipulation SYSTEM "sgml/unicode.sgml">
+<!entity glib-Random-Numbers SYSTEM "sgml/random_numbers.sgml">
+<!entity glib-Miscellaneous-Utility-Functions SYSTEM "sgml/misc_utils.sgml">
+<!entity glib-Date-and-Time-Functions SYSTEM "sgml/date.sgml">
+<!entity glib-The-Main-Event-Loop SYSTEM "sgml/main.sgml">
+<!entity glib-Threads SYSTEM "sgml/threads.sgml">
+<!entity glib-Thread-Pools SYSTEM "sgml/thread_pools.sgml">
+<!entity glib-Async-Queues SYSTEM "sgml/async_queues.sgml">
+<!entity glib-IO-Channels SYSTEM "sgml/iochannels.sgml">
+<!entity glib-Hook-Functions SYSTEM "sgml/hooks.sgml">
+<!entity glib-Lexical-Scanner SYSTEM "sgml/scanner.sgml">
+<!entity glib-Dynamic-Loading-of-Modules SYSTEM "sgml/modules.sgml">
+<!entity glib-Automatic-String-Completion SYSTEM "sgml/completion.sgml">
+<!entity glib-Windows-Compatability-Functions SYSTEM "sgml/windows.sgml">
+<!entity glib-Memory-Chunks SYSTEM "sgml/memory_chunks.sgml">
+<!entity glib-Doubly-Linked-Lists SYSTEM "sgml/linked_lists_double.sgml">
+<!entity glib-Singly-Linked-Lists SYSTEM "sgml/linked_lists_single.sgml">
+<!entity glib-Double-ended-Queues SYSTEM "sgml/queue.sgml">
+<!entity glib-Trash-Stacks SYSTEM "sgml/trash_stack.sgml">
+<!entity glib-Hash-Tables SYSTEM "sgml/hash_tables.sgml">
+<!entity glib-Strings SYSTEM "sgml/strings.sgml">
+<!entity glib-String-Chunks SYSTEM "sgml/string_chunks.sgml">
+<!entity glib-Arrays SYSTEM "sgml/arrays.sgml">
+<!entity glib-Pointer-Arrays SYSTEM "sgml/arrays_pointer.sgml">
+<!entity glib-Byte-Arrays SYSTEM "sgml/arrays_byte.sgml">
+<!entity glib-Balanced-Binary-Trees SYSTEM "sgml/trees-binary.sgml">
+<!entity glib-N-ary-Trees SYSTEM "sgml/trees-nary.sgml">
+<!entity glib-Quarks SYSTEM "sgml/quarks.sgml">
+<!entity glib-Keyed-Data-Lists SYSTEM "sgml/datalist.sgml">
+<!entity glib-Datasets SYSTEM "sgml/datasets.sgml">
+<!entity glib-Relations-and-Tuples SYSTEM "sgml/relations.sgml">
+<!entity glib-Caches SYSTEM "sgml/caches.sgml">
+<!entity glib-Memory-Allocators SYSTEM "sgml/allocators.sgml">
+<!entity glib-Spawn SYSTEM "sgml/spawn.sgml">
+<!entity glib-Fileutils SYSTEM "sgml/fileutils.sgml">
+<!entity glib-Shell SYSTEM "sgml/shell.sgml">
+<!entity glib-Markup SYSTEM "sgml/markup.sgml">
+
+<!entity glib-Compiling SYSTEM "compiling.sgml">
+<!entity glib-Building SYSTEM "building.sgml">
+<!entity glib-Running SYSTEM "running.sgml">
+<!entity glib-Resources SYSTEM "resources.sgml">
+<!entity glib-Changes-2-0 SYSTEM "changes-2.0.sgml">
+
+]>
+<book id="index">
+  <bookinfo>
+    <title>GLib Reference Manual</title>
+  </bookinfo>
+
+  <chapter id="glib">
+    <title>GLib Overview</title>
+    <para>
+GLib is a general-purpose utility library, which provides many useful data 
+types, macros, type conversions, string utilities, file utilities, a main 
+loop abstraction, and so on. It works on many UNIX-like platforms, Windows,
+OS/2 and BeOS. GLib is released under the GNU Library General Public License 
+(GNU LGPL). 
+    </para>
+    <para>
+GLib depends on the following: 
+<variablelist>
+
+<varlistentry>
+<term><function>iconv()</function></term>
+<listitem><para>
+In order to implement conversions between character sets,
+GLib requires an implementation of the standard <function>iconv()</function> 
+routine. Most modern systems will have a suitable implementation, however
+many older systems lack an <function>iconv()</function> implementation. On 
+such systems, you must install the 
+<ulink url="http://clisp.cons.org/~haible/packages-libiconv.html">libiconv</ulink> library.
+</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>a thread implementation</term>
+<listitem><para>
+The thread support in GLib can be based upon several native thread 
+implementations, e.g. POSIX threads, DCE threads or Solaris threads.
+</para></listitem>
+</varlistentry>
+
+</variablelist>    
+    </para>
+
+    &glib-Building;
+    &glib-Compiling;
+    &glib-Running;
+    &glib-Changes-2-0;
+    &glib-Resources;
+ 
+  </chapter> 
+
+  <chapter id="glib-fundamentals">
+    <title>GLib Fundamentals</title>
+    &glib-Basic-Types;
+    &glib-Limits-of-Basic-Types;
+    &glib-Standard-Macros;
+    &glib-Type-Conversion-Macros;
+    &glib-Byte-Order-Macros;
+    &glib-Numerical-Definitions;
+    &glib-Miscellaneous-Macros;
+  </chapter>
+
+  <chapter id="glib-core">
+    <title>GLib Core Application Support</title>
+    &glib-The-Main-Event-Loop;
+    &glib-Threads;
+    &glib-Thread-Pools;
+    &glib-Async-Queues;
+    &glib-Dynamic-Loading-of-Modules;
+    &glib-Memory-Allocation;
+    &glib-IO-Channels;
+    &glib-Error-Reporting;
+    &glib-Warnings-and-Assertions;
+    &glib-Message-Logging;
+  </chapter>
+
+  <chapter id="glib-utilities">
+    <title>GLib Utilities</title>
+    &glib-String-Utility-Functions;
+    &glib-Character-Set-Conversion;
+    &glib-Unicode-Manipulation;
+    &glib-Date-and-Time-Functions;
+    &glib-Random-Numbers;   
+    &glib-Hook-Functions;
+    &glib-Miscellaneous-Utility-Functions;
+    &glib-Lexical-Scanner;
+    &glib-Automatic-String-Completion;
+    &glib-Timers;
+    &glib-Spawn;
+    &glib-Fileutils;
+    &glib-Shell;
+    &glib-Pattern-Matching;
+    &glib-Markup;
+    &glib-Windows-Compatability-Functions;
+  </chapter>
+
+  <chapter id="glib-data-types">
+    <title>GLib Data Types</title>
+    &glib-Memory-Chunks;
+    &glib-Doubly-Linked-Lists;
+    &glib-Singly-Linked-Lists;
+    &glib-Double-ended-Queues;
+    &glib-Trash-Stacks;
+    &glib-Hash-Tables;
+    &glib-Strings;
+    &glib-String-Chunks;
+    &glib-Arrays;
+    &glib-Pointer-Arrays;
+    &glib-Byte-Arrays;
+    &glib-Balanced-Binary-Trees;
+    &glib-N-ary-Trees;
+    &glib-Quarks;
+    &glib-Keyed-Data-Lists;
+    &glib-Datasets;
+    &glib-Relations-and-Tuples;
+    &glib-Caches;
+    &glib-Memory-Allocators;
+  </chapter>
+</book>

@@ -1,0 +1,10 @@
+# $OpenLDAP: pkg/ldap/libraries/Makefile.in,v 1.9.2.2 2000/06/13 17:57:16 kurt Exp $
+## Copyright 1998-2000 The OpenLDAP Foundation, All Rights Reserved.
+## COPYING RESTRICTIONS APPLY, see COPYRIGHT file
+##
+## Libraries Makefile for OpenLDAP
+
+SUBDIRS= liblutil libldif \
+	liblber libldap libldap_r \
+	libavl libldbm liblunicode
+

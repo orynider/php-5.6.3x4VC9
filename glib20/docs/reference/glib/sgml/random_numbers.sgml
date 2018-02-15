@@ -1,0 +1,299 @@
+<refentry id="glib-Random-Numbers">
+<refmeta>
+<refentrytitle>Random Numbers</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Random Numbers</refname><refpurpose>pseudo random number generator.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GRand">GRand</link>;
+<link linkend="GRand">GRand</link>*      <link linkend="g-rand-new-with-seed">g_rand_new_with_seed</link>            (<link linkend="guint32">guint32</link> seed);
+<link linkend="GRand">GRand</link>*      <link linkend="g-rand-new">g_rand_new</link>                      (void);
+void        <link linkend="g-rand-free">g_rand_free</link>                     (<link linkend="GRand">GRand</link> *rand);
+void        <link linkend="g-rand-set-seed">g_rand_set_seed</link>                 (<link linkend="GRand">GRand</link> *rand,
+                                             <link linkend="guint32">guint32</link> seed);
+#define     <link linkend="g-rand-boolean">g_rand_boolean</link>                  (rand)
+<link linkend="guint32">guint32</link>     <link linkend="g-rand-int">g_rand_int</link>                      (<link linkend="GRand">GRand</link> *rand);
+<link linkend="gint32">gint32</link>      <link linkend="g-rand-int-range">g_rand_int_range</link>                (<link linkend="GRand">GRand</link> *rand,
+                                             <link linkend="gint32">gint32</link> begin,
+                                             <link linkend="gint32">gint32</link> end);
+<link linkend="gdouble">gdouble</link>     <link linkend="g-rand-double">g_rand_double</link>                   (<link linkend="GRand">GRand</link> *rand);
+<link linkend="gdouble">gdouble</link>     <link linkend="g-rand-double-range">g_rand_double_range</link>             (<link linkend="GRand">GRand</link> *rand,
+                                             <link linkend="gdouble">gdouble</link> begin,
+                                             <link linkend="gdouble">gdouble</link> end);
+void        <link linkend="g-random-set-seed">g_random_set_seed</link>               (<link linkend="guint32">guint32</link> seed);
+#define     <link linkend="g-random-boolean">g_random_boolean</link>                ()
+<link linkend="guint32">guint32</link>     <link linkend="g-random-int">g_random_int</link>                    (void);
+<link linkend="gint32">gint32</link>      <link linkend="g-random-int-range">g_random_int_range</link>              (<link linkend="gint32">gint32</link> begin,
+                                             <link linkend="gint32">gint32</link> end);
+<link linkend="gdouble">gdouble</link>     <link linkend="g-random-double">g_random_double</link>                 (void);
+<link linkend="gdouble">gdouble</link>     <link linkend="g-random-double-range">g_random_double_range</link>           (<link linkend="gdouble">gdouble</link> begin,
+                                             <link linkend="gdouble">gdouble</link> end);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+The following functions allow you to use a portable, fast and good
+pseudo random number generator (PRNG). It uses the Mersenne Twister
+PRNG, which was originally developed by Makoto Matsumoto and Takuji
+Nishimura. Further information can be found at <ulink
+url="http://www.math.keio.ac.jp/~matumoto/emt.html"
+>www.math.keio.ac.jp/~matumoto/emt.html</ulink>.
+</para>
+
+<para>
+If you just need a random number, you simply call the 
+<function>g_random_*</function> functions, which will create a globally 
+used <link linkend="GRand">GRand</link> and use the according <function>g_rand_*</function> functions 
+internally. Whenever you need a stream of reproducible random numbers, you 
+better create a <link linkend="GRand">GRand</link> yourself and use the <function>g_rand_*</function> 
+functions directly, which will also be slightly faster. Initializing a <link linkend="GRand">GRand</link> 
+with a certain seed will produce exactly the same series of random numbers 
+on all platforms. This can thus be used as a seed for e.g. games.
+</para>
+
+<para>
+The <function>g_rand*_range</function> functions will return high quality
+equally distributed random numbers, whereas for example the
+<literal>(<link linkend="g-random-int">g_random_int</link>()%<literal>max</literal>)</literal> approach often doesn't
+yield equally distributed numbers.
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GRand">struct GRand</title>
+<programlisting>struct GRand;</programlisting>
+<para>
+The <link linkend="GRand">GRand</link> struct is an opaque data structure. It should only be
+accessed through the <function>g_rand_*</function> functions.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-rand-new-with-seed">g_rand_new_with_seed ()</title>
+<programlisting><link linkend="GRand">GRand</link>*      g_rand_new_with_seed            (<link linkend="guint32">guint32</link> seed);</programlisting>
+<para>
+Creates a new random number generator initialized with <parameter>seed</parameter>.</para>
+<variablelist role="params">
+<varlistentry><term><parameter>seed</parameter>&nbsp;:</term>
+<listitem><para> a value to initialize the random number generator.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the new <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-new">g_rand_new ()</title>
+<programlisting><link linkend="GRand">GRand</link>*      g_rand_new                      (void);</programlisting>
+<para>
+Creates a new random number generator initialized with a seed taken
+either from <filename>/dev/urandom</filename> (if existing) or from 
+the current time (as a fallback).</para>
+<variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the new <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-free">g_rand_free ()</title>
+<programlisting>void        g_rand_free                     (<link linkend="GRand">GRand</link> *rand);</programlisting>
+<para>
+Frees the memory allocated for the <link linkend="GRand">GRand</link>.</para>
+<variablelist role="params">
+<varlistentry><term><parameter>rand</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-set-seed">g_rand_set_seed ()</title>
+<programlisting>void        g_rand_set_seed                 (<link linkend="GRand">GRand</link> *rand,
+                                             <link linkend="guint32">guint32</link> seed);</programlisting>
+<para>
+Sets the seed for the random number generator <link linkend="GRand">GRand</link> to <parameter>seed</parameter>.</para>
+<variablelist role="params">
+<varlistentry><term><parameter>rand</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>seed</parameter>&nbsp;:</term>
+<listitem><para> a value to reinitialize the random number generator.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-boolean">g_rand_boolean()</title>
+<programlisting>#define     g_rand_boolean(rand)</programlisting>
+<para>
+Returns a random <link linkend="gboolean">gboolean</link> from <parameter>rand</parameter>. This corresponds to a unbiased
+coin toss.
+</para><variablelist role="params">
+<varlistentry><term><parameter>rand</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a random <link linkend="gboolean">gboolean</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-int">g_rand_int ()</title>
+<programlisting><link linkend="guint32">guint32</link>     g_rand_int                      (<link linkend="GRand">GRand</link> *rand);</programlisting>
+<para>
+Returns the next random <link linkend="guint32">guint32</link> from <parameter>rand</parameter> equally distributed over
+the range [0..2^32-1].</para>
+<variablelist role="params">
+<varlistentry><term><parameter>rand</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-int-range">g_rand_int_range ()</title>
+<programlisting><link linkend="gint32">gint32</link>      g_rand_int_range                (<link linkend="GRand">GRand</link> *rand,
+                                             <link linkend="gint32">gint32</link> begin,
+                                             <link linkend="gint32">gint32</link> end);</programlisting>
+<para>
+Returns the next random <link linkend="gint32">gint32</link> from <parameter>rand</parameter> equally distributed over
+the range [<parameter>begin</parameter>..<parameter>end</parameter>-1].</para>
+<variablelist role="params">
+<varlistentry><term><parameter>rand</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>begin</parameter>&nbsp;:</term>
+<listitem><para> lower closed bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>end</parameter>&nbsp;:</term>
+<listitem><para> upper open bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-double">g_rand_double ()</title>
+<programlisting><link linkend="gdouble">gdouble</link>     g_rand_double                   (<link linkend="GRand">GRand</link> *rand);</programlisting>
+<para>
+Returns the next random <link linkend="gdouble">gdouble</link> from <parameter>rand</parameter> equally distributed over
+the range [0..1).</para>
+<variablelist role="params">
+<varlistentry><term><parameter>rand</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-rand-double-range">g_rand_double_range ()</title>
+<programlisting><link linkend="gdouble">gdouble</link>     g_rand_double_range             (<link linkend="GRand">GRand</link> *rand,
+                                             <link linkend="gdouble">gdouble</link> begin,
+                                             <link linkend="gdouble">gdouble</link> end);</programlisting>
+<para>
+Returns the next random <link linkend="gdouble">gdouble</link> from <parameter>rand</parameter> equally distributed over
+the range [<parameter>begin</parameter>..<parameter>end</parameter>).</para>
+<variablelist role="params">
+<varlistentry><term><parameter>rand</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GRand">GRand</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>begin</parameter>&nbsp;:</term>
+<listitem><para> lower closed bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>end</parameter>&nbsp;:</term>
+<listitem><para> upper open bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-random-set-seed">g_random_set_seed ()</title>
+<programlisting>void        g_random_set_seed               (<link linkend="guint32">guint32</link> seed);</programlisting>
+<para>
+Sets the seed for the global random number generator, which is used
+by the <function>g_random_*</function> functions, to <parameter>seed</parameter>.</para>
+<variablelist role="params">
+<varlistentry><term><parameter>seed</parameter>&nbsp;:</term>
+<listitem><para> a value to reinitialize the global random number generator.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-random-boolean">g_random_boolean()</title>
+<programlisting>#define     g_random_boolean()</programlisting>
+<para>
+Returns a random <link linkend="gboolean">gboolean</link>. This corresponds to a unbiased coin toss.
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a random <link linkend="gboolean">gboolean</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-random-int">g_random_int ()</title>
+<programlisting><link linkend="guint32">guint32</link>     g_random_int                    (void);</programlisting>
+<para>
+Return a random <link linkend="guint32">guint32</link> equally distributed over the range
+[0..2^32-1].</para>
+<variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-random-int-range">g_random_int_range ()</title>
+<programlisting><link linkend="gint32">gint32</link>      g_random_int_range              (<link linkend="gint32">gint32</link> begin,
+                                             <link linkend="gint32">gint32</link> end);</programlisting>
+<para>
+Returns a random <link linkend="gint32">gint32</link> equally distributed over the range
+[<parameter>begin</parameter>..<parameter>end</parameter>-1].</para>
+<variablelist role="params">
+<varlistentry><term><parameter>begin</parameter>&nbsp;:</term>
+<listitem><para> lower closed bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>end</parameter>&nbsp;:</term>
+<listitem><para> upper open bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-random-double">g_random_double ()</title>
+<programlisting><link linkend="gdouble">gdouble</link>     g_random_double                 (void);</programlisting>
+<para>
+Returns a random <link linkend="gdouble">gdouble</link> equally distributed over the range [0..1).</para>
+<variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-random-double-range">g_random_double_range ()</title>
+<programlisting><link linkend="gdouble">gdouble</link>     g_random_double_range           (<link linkend="gdouble">gdouble</link> begin,
+                                             <link linkend="gdouble">gdouble</link> end);</programlisting>
+<para>
+Returns a random <link linkend="gdouble">gdouble</link> equally distributed over the range [<parameter>begin</parameter>..<parameter>end</parameter>).</para>
+<variablelist role="params">
+<varlistentry><term><parameter>begin</parameter>&nbsp;:</term>
+<listitem><para> lower closed bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>end</parameter>&nbsp;:</term>
+<listitem><para> upper open bound of the interval.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> A random number.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

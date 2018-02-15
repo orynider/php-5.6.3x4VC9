@@ -1,0 +1,751 @@
+<!-- ##### SECTION Title ##### -->
+Signals
+
+<!-- ##### SECTION Short_Description ##### -->
+Signals provide a means for customization of object behaviour and are used
+as general purpose notification mechanism.
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+The basic concept of the signal system is that of the <emphasis>emission</emphasis>
+of a signal.
+Signals are introduced per-type and are identified through strings.
+Signals introduced for a parent type are available in derived types as well,
+so basically they are a per-type facility that is inherited.
+A signal emission mainly involves invocation of a certain set of callbacks in
+precisely defined manner. There are two main categories of such callbacks,
+per-object
+	<footnote><para>Although signals can deal with any kind of instantiatable type,
+	i'm referring to those types as "object types" in the following, simply
+	because that is the context most users will encounter signals in.
+	</para></footnote>
+ones and user provided ones.
+The per-object callbacks are most often referred to as "object method
+handler" or "default (signal) handler", while user provided callbacks are
+usually just called "signal handler".
+The object method handler is provided at signal creation time (this most
+frequently happens at the end of an object class' creation), while user
+provided handlers are frequently connected and disconnected to/from a certain
+signal on certain object instances.
+</para>
+<para>
+A signal emission consists of five stages, unless prematurely stopped:
+<variablelist>
+  <varlistentry><term></term><listitem><para>
+	1 - Invocation of the object method handler for %G_SIGNAL_RUN_FIRST signals
+  </para></listitem></varlistentry>
+  <varlistentry><term></term><listitem><para>
+	2 - Invocation of normal user-provided signal handlers (<emphasis>after</emphasis> flag %FALSE)
+  </para></listitem></varlistentry>
+  <varlistentry><term></term><listitem><para>
+	3 - Invocation of the object method handler for %G_SIGNAL_RUN_LAST signals
+  </para></listitem></varlistentry>
+  <varlistentry><term></term><listitem><para>
+	4 - Invocation of user provided signal handlers, connected with an <emphasis>after</emphasis> flag of %TRUE
+  </para></listitem></varlistentry>
+  <varlistentry><term></term><listitem><para>
+	5 - Invocation of the object method handler for %G_SIGNAL_RUN_CLEANUP signals
+  </para></listitem></varlistentry>
+</variablelist>
+The user provided signal handlers are called in the order they were
+connected in.
+All handlers may prematurely stop a signal emission, and any number of
+handlers may be connected, disconnected, blocked or unblocked during
+a signal emission.
+There are certain criteria for skipping user handlers in stages 2 and 4
+of a signal emission.
+First, user handlers may be <emphasis>blocked</emphasis>, blocked handlers are omitted
+during callback invocation, to return from the "blocked" state, a
+handler has to get unblocked exactly the same amount of times
+it has been blocked before.
+Second, upon emission of a %G_SIGNAL_DETAILED signal, an additional
+"detail" argument passed in to g_signal_emit() has to match the detail
+argument of the signal handler currently subject to invocation.
+Specification of no detail argument for signal handlers (omission of the
+detail part of the signal specification upon connection) serves as a
+wildcard and matches any detail argument passed in to emission.
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT GSignalInvocationHint ##### -->
+<para>
+The #GSignalInvocationHint structure is used to pass on additional information
+to callbacks during a signal emission.
+</para>
+
+@signal_id: 	The signal id of the signal invoking the callback
+@detail: 	The detail passed on for this emission
+@run_type: 	The stage the signal emission is currently in, this
+		field will contain one of %G_SIGNAL_RUN_FIRST,
+		%G_SIGNAL_RUN_LAST or %G_SIGNAL_RUN_CLEANUP.
+
+<!-- ##### USER_FUNCTION GSignalAccumulator ##### -->
+<para>
+The signal accumulator is a special callback function that can be used
+to collect return values of the various callbacks that are called
+during a signal emission. The signal accumulator is specified at signal
+creation time, if it is left NULL, no accumulation of callback return
+values is performed. The return value of signal emissions is then the
+value returned by the last callback.
+</para>
+
+@ihint: 	Signal invocation hint, see #GSignalInvocationHint.
+@return_accu: 	Accumulator to collect callback return values in, this
+		is the return value of the current signal emission.
+@handler_return: 
+@data: 
+@Returns: 	The accumulator function returns whether the signal emission
+		should be aborted. Returning %FALSE means to abort the
+		current emission and %TRUE is returned for continuation.
+<!-- # Unused Parameters # -->
+@return_value: 	The return value of the most recent callback function.
+
+
+<!-- ##### TYPEDEF GSignalCMarshaller ##### -->
+<para>
+This is the signature of marshaller functions, required to marshall
+arrays of parameter values to signal emissions into C language callback
+invocations. It is merely an alias to #GClosureMarshal since the #GClosure
+mechanism takes over responsibility of actual function invocation for the
+signal system.
+</para>
+
+
+<!-- ##### USER_FUNCTION GSignalEmissionHook ##### -->
+<para>
+
+</para>
+
+@ihint: 
+@n_param_values: 
+@param_values: 
+@data: 
+@Returns: 
+<!-- # Unused Parameters # -->
+@signal_id: 
+@n_values: 
+@values: 
+
+
+<!-- ##### ENUM GSignalFlags ##### -->
+<para>
+The signal flags are used to specify a signal's behaviour, the overall
+signal description outlines how especially the RUN flags control the
+stages of a signal emission.
+</para>
+
+@G_SIGNAL_RUN_FIRST:   Invoke the object method handler in the first emission stage.
+@G_SIGNAL_RUN_LAST:    Invoke the object method handler in the third emission stage.
+@G_SIGNAL_RUN_CLEANUP: Invoke the object method handler in the last emission stage.
+@G_SIGNAL_NO_RECURSE:  Signals being emitted for an object while currently being in
+                       emission for this very object will not be emitted recursively,
+                       but instead cause the first emission to be restarted.
+@G_SIGNAL_DETAILED:    This signal supports "::detail" appendixes to the signal name
+                       upon handler connections and emissions.
+@G_SIGNAL_ACTION:      Action signals are signals that may freely be emitted on alive
+                       objects from user code via g_signal_emit() and friends, without
+                       the need of being embedded into extra code that performs pre or
+                       post emission adjustments on the object. They can also be thought
+                       of as by third-party code generically callable object methods.
+@G_SIGNAL_NO_HOOKS:    No emissions hooks are supported for this signal.
+
+<!-- ##### ENUM GSignalMatchType ##### -->
+<para>
+
+</para>
+
+@G_SIGNAL_MATCH_ID: 
+@G_SIGNAL_MATCH_DETAIL: 
+@G_SIGNAL_MATCH_CLOSURE: 
+@G_SIGNAL_MATCH_FUNC: 
+@G_SIGNAL_MATCH_DATA: 
+@G_SIGNAL_MATCH_UNBLOCKED: 
+
+<!-- ##### STRUCT GSignalQuery ##### -->
+<para>
+A structure holding in-depth information for a specific signal. It is
+filled in by the g_signal_query() function.
+</para>
+
+@signal_id: 	The signal id of the signal being queried, or 0 if the
+		signal to be queried was unknown.
+@signal_name: 	The signal name.
+@itype: 	The interface/instance type that this signal can be emitted for.
+@signal_flags: 	The signal flags as passed in to g_signal_new().
+@return_type: 	The return type for user callbacks.
+@n_params: 	The number of parameters that user callbacks take.
+@param_types: 	The individual parameter types for user callbacks, note that the
+		effective callback signature is:
+<msgtext><programlisting>
+@return_type callback (#gpointer     data1,
+                      [#param_types param_names,]
+                       #gpointer     data2);
+</programlisting></msgtext>
+
+<!-- ##### MACRO G_SIGNAL_TYPE_STATIC_SCOPE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO G_SIGNAL_MATCH_MASK ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO G_SIGNAL_FLAGS_MASK ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION g_signal_new ##### -->
+<para>
+
+</para>
+
+@signal_name: 
+@itype: 
+@signal_flags: 
+@class_offset: 
+@accumulator: 
+@accu_data: 
+@c_marshaller: 
+@return_type: 
+@n_params: 
+@Varargs: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_newv ##### -->
+<para>
+
+</para>
+
+@signal_name: 
+@itype: 
+@signal_flags: 
+@class_closure: 
+@accumulator: 
+@accu_data: 
+@c_marshaller: 
+@return_type: 
+@n_params: 
+@param_types: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_new_valist ##### -->
+<para>
+
+</para>
+
+@signal_name: 
+@itype: 
+@signal_flags: 
+@class_closure: 
+@accumulator: 
+@accu_data: 
+@c_marshaller: 
+@return_type: 
+@n_params: 
+@args: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_query ##### -->
+<para>
+Query the signal system for in-depth information about a
+specific signal. This function will fill in a user-provided
+structure to hold signal-specific information. If an invalid
+signal id is passed in, the @signal_id member of the #GSignalQuery
+is 0. All members filled into the #GSignalQuery structure should
+be considered constant and have to be left untouched.
+</para>
+
+@signal_id: 	The signal id of the signal to query information for.
+@query: 	A user provided structure that is filled in with constant
+		values upon success.
+
+
+<!-- ##### FUNCTION g_signal_lookup ##### -->
+<para>
+
+</para>
+
+@name: 
+@itype: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_name ##### -->
+<para>
+
+</para>
+
+@signal_id: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_list_ids ##### -->
+<para>
+List the signals by id, that a certain instance or interface type
+created. Further information about the signals can be acquired through
+g_signal_query().
+</para>
+
+@itype: 	Instance or interface type.
+@n_ids: 	Location to store the number of signal ids for @itype.
+@Returns: 	Newly allocated array of signal IDs.
+
+
+<!-- ##### FUNCTION g_signal_emit ##### -->
+<para>
+
+</para>
+
+@instance: 
+@signal_id: 
+@detail: 
+@Varargs: 
+
+
+<!-- ##### FUNCTION g_signal_emit_by_name ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+@Varargs: 
+
+
+<!-- ##### FUNCTION g_signal_emitv ##### -->
+<para>
+
+</para>
+
+@instance_and_params: 
+@signal_id: 
+@detail: 
+@return_value: 
+
+
+<!-- ##### FUNCTION g_signal_emit_valist ##### -->
+<para>
+
+</para>
+
+@instance: 
+@signal_id: 
+@detail: 
+@var_args: 
+
+
+<!-- ##### MACRO g_signal_connect ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+@c_handler: 
+@data: 
+
+
+<!-- ##### MACRO g_signal_connect_after ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+@c_handler: 
+@data: 
+
+
+<!-- ##### MACRO g_signal_connect_swapped ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+@c_handler: 
+@data: 
+
+
+<!-- ##### FUNCTION g_signal_connect_object ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+@c_handler: 
+@gobject: 
+@connect_flags: 
+@Returns: 
+<!-- # Unused Parameters # -->
+@swapped: 
+@after: 
+
+
+<!-- ##### ENUM GConnectFlags ##### -->
+<para>
+
+</para>
+
+@G_CONNECT_AFTER: 
+@G_CONNECT_SWAPPED: 
+
+<!-- ##### FUNCTION g_signal_connect_data ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+@c_handler: 
+@data: 
+@destroy_data: 
+@connect_flags: 
+@Returns: 
+<!-- # Unused Parameters # -->
+@swapped: 
+@after: 
+
+
+<!-- ##### FUNCTION g_signal_connect_closure ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+@closure: 
+@after: 
+@Returns: 
+<!-- # Unused Parameters # -->
+@signal_id: 
+@detail: 
+
+
+<!-- ##### FUNCTION g_signal_connect_closure_by_id ##### -->
+<para>
+
+</para>
+
+@instance: 
+@signal_id: 
+@detail: 
+@closure: 
+@after: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_handler_block ##### -->
+<para>
+g_signal_handler_block() blocks a handler of an
+instance so it will not be called during any signal emissions
+unless it is unblocked again. Thus "blocking" a signal handler
+means to temporarily deactive it, a signal handler has to be
+unblocked exactly the same amount of times it has been blocked
+before to become active again.
+The @handler_id passed into g_signal_handler_block() has
+to be a valid signal handler id, connected to a signal of
+@instance.
+</para>
+
+@instance: 	The instance to block the signal handler of.
+@handler_id: 	Handler id of the handler to be blocked.
+
+
+<!-- ##### FUNCTION g_signal_handler_unblock ##### -->
+<para>
+g_signal_handler_unblock() undoes the effect of a previous
+g_signal_handler_block() call. A blocked handler is skipped
+during signal emissions and will not be invoked, unblocking
+it (for exactly the amount of times it has been blocked before)
+reverts its "blocked" state, so the handler will be recognized
+by the signal system and is called upon future or currently
+ongoing signal emissions (since the order in which handlers are
+called during signal emissions is deterministic, whether the
+unblocked handler in question is called as part of a currently
+ongoing emission depends on how far that emission has proceeded
+yet).
+The @handler_id passed into g_signal_handler_unblock() has
+to be a valid id of a signal handler that is connected to a
+signal of @instance and is currently blocked.
+</para>
+
+@instance: 	The instance to unblock the signal handler of.
+@handler_id: 	Handler id of the handler to be unblocked.
+
+
+<!-- ##### FUNCTION g_signal_handler_disconnect ##### -->
+<para>
+g_signal_handler_disconnect() disconnects a handler from an
+instance so it will not be called during any future or currently
+ongoing emissions of the signal it has been connected to.
+The @handler_id becomes invalid and may be reused.
+The @handler_id passed into g_signal_handler_disconnect() has
+to be a valid signal handler id, connected to a signal of
+@instance.
+</para>
+
+@instance: 	The instance to remove the signal handler from.
+@handler_id: 	Handler id of the handler to be disconnected.
+
+
+<!-- ##### FUNCTION g_signal_handler_find ##### -->
+<para>
+Find the first signal handler that matches certain selection criteria.
+The criteria mask is passed as an OR-ed combination of #GSignalMatchType
+flags, and the criteria values are passed as arguments.
+The match @mask has to be non-0 for successful matches.
+If no handler was found, 0 is returned.
+</para>
+
+@instance: 	The instance owning the signal handler to be found.
+@mask: 		Mask indicating which of @signal_id, @detail,
+		@closure, @func and/or @data the handler has to match.
+@signal_id: 	Signal the handler has to be connected to.
+@detail: 	Signal detail the handler has to be connected to.
+@closure: 	The closure the handler will invoke.
+@func: 		The C closure callback of the handler (useless for non-C closures).
+@data: 		The closure data of the handler's closure.
+@Returns: 	A valid non-0 signal handler id for a successful match.
+
+
+<!-- ##### FUNCTION g_signal_handlers_block_matched ##### -->
+<para>
+This function blocks all handlers on an instance that match a certain
+selection criteria. The criteria mask is passed as an OR-ed combination of
+#GSignalMatchType flags, and the criteria values are passed as arguments.
+Passing at least one of the %G_SIGNAL_MATCH_CLOSURE, %G_SIGNAL_MATCH_FUNC
+or %G_SIGNAL_MATCH_DATA match flags is required for successful matches.
+If no handlers were found, 0 is returned, the number of blocked handlers
+otherwise.
+</para>
+
+@instance: 	The instance to block handlers from.
+@mask: 		Mask indicating which of @signal_id, @detail,
+		@closure, @func and/or @data the handlers have to match.
+@signal_id: 	Signal the handlers have to be connected to.
+@detail: 	Signal detail the handlers have to be connected to.
+@closure: 	The closure the handlers will invoke.
+@func: 		The C closure callback of the handlers (useless for non-C closures).
+@data: 		The closure data of the handlers' closures.
+@Returns: 	The amount of handlers that got blocked.
+
+
+<!-- ##### FUNCTION g_signal_handlers_unblock_matched ##### -->
+<para>
+This function unblocks all handlers on an instance that match a certain
+selection criteria. The criteria mask is passed as an OR-ed combination of
+#GSignalMatchType flags, and the criteria values are passed as arguments.
+Passing at least one of the %G_SIGNAL_MATCH_CLOSURE, %G_SIGNAL_MATCH_FUNC
+or %G_SIGNAL_MATCH_DATA match flags is required for successful matches.
+If no handlers were found, 0 is returned, the number of unblocked handlers
+otherwise. The match criteria should not apply to any handlers that are
+not currently blocked.
+</para>
+
+@instance: 	The instance to unblock handlers from.
+@mask: 		Mask indicating which of @signal_id, @detail,
+		@closure, @func and/or @data the handlers have to match.
+@signal_id: 	Signal the handlers have to be connected to.
+@detail: 	Signal detail the handlers have to be connected to.
+@closure: 	The closure the handlers will invoke.
+@func: 		The C closure callback of the handlers (useless for non-C closures).
+@data: 		The closure data of the handlers' closures.
+@Returns: 	The amount of handlers that got unblocked.
+
+
+<!-- ##### FUNCTION g_signal_handlers_disconnect_matched ##### -->
+<para>
+This function disconnects all handlers on an instance that match a certain
+selection criteria. The criteria mask is passed as an OR-ed combination of
+#GSignalMatchType flags, and the criteria values are passed as arguments.
+Passing at least one of the %G_SIGNAL_MATCH_CLOSURE, %G_SIGNAL_MATCH_FUNC
+or %G_SIGNAL_MATCH_DATA match flags is required for successful matches.
+If no handlers were found, 0 is returned, the number of disconnected handlers
+otherwise.
+</para>
+
+@instance: 	The instance to remove handlers from.
+@mask: 		Mask indicating which of @signal_id, @detail,
+		@closure, @func and/or @data the handlers have to match.
+@signal_id: 	Signal the handlers have to be connected to.
+@detail: 	Signal detail the handlers have to be connected to.
+@closure: 	The closure the handlers will invoke.
+@func: 		The C closure callback of the handlers (useless for non-C closures).
+@data: 		The closure data of the handlers' closures.
+@Returns: 	The amount of handlers that got disconnected.
+
+
+<!-- ##### FUNCTION g_signal_handler_is_connected ##### -->
+<para>
+
+</para>
+
+@instance: 
+@handler_id: 
+@Returns: 
+
+
+<!-- ##### MACRO g_signal_handlers_block_by_func ##### -->
+<para>
+
+</para>
+
+@instance: 
+@func: 
+@data: 
+
+
+<!-- ##### MACRO g_signal_handlers_unblock_by_func ##### -->
+<para>
+
+</para>
+
+@instance: 
+@func: 
+@data: 
+
+
+<!-- ##### MACRO g_signal_handlers_disconnect_by_func ##### -->
+<para>
+
+</para>
+
+@instance: 
+@func: 
+@data: 
+
+
+<!-- ##### FUNCTION g_signal_has_handler_pending ##### -->
+<para>
+
+</para>
+
+@instance: 
+@signal_id: 
+@detail: 
+@may_be_blocked: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_stop_emission ##### -->
+<para>
+
+</para>
+
+@instance: 
+@signal_id: 
+@detail: 
+
+
+<!-- ##### FUNCTION g_signal_stop_emission_by_name ##### -->
+<para>
+
+</para>
+
+@instance: 
+@detailed_signal: 
+
+
+<!-- ##### FUNCTION g_signal_override_class_closure ##### -->
+<para>
+
+</para>
+
+@signal_id: 
+@instance_type: 
+@class_closure: 
+
+
+<!-- ##### FUNCTION g_signal_chain_from_overridden ##### -->
+<para>
+
+</para>
+
+@instance_and_params: 
+@return_value: 
+<!-- # Unused Parameters # -->
+@signal_id: 
+
+
+<!-- ##### FUNCTION g_signal_add_emission_hook ##### -->
+<para>
+
+</para>
+
+@signal_id: 
+@quark: 
+@hook_func: 
+@hook_data: 
+@data_destroy: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_remove_emission_hook ##### -->
+<para>
+
+</para>
+
+@signal_id: 
+@hook_id: 
+
+
+<!-- ##### FUNCTION g_signal_parse_name ##### -->
+<para>
+Internal function to parse a signal names into its @signal_id
+and @detail quark.
+</para>
+
+@detailed_signal: 	A string of the form "signal-name::detail".
+@itype: 		The interface/instance type that introduced "signal-name".
+@signal_id_p: 		Location to store the signal id.
+@detail_p: 		Location to stroe the detail quark.
+@force_detail_quark: 	%TRUE forces creation of a GQuark for the detail.
+@Returns: 		Whether the signal name could successfully be parsed and
+			@signal_id_p and @detail_p contain valid return values.
+
+
+<!-- ##### FUNCTION g_signal_get_invocation_hint ##### -->
+<para>
+
+</para>
+
+@instance: 
+@Returns: 
+
+
+<!-- ##### FUNCTION g_signal_handlers_destroy ##### -->
+<para>
+
+</para>
+
+@instance: 
+
+
+<!-- ##### FUNCTION g_signal_type_cclosure_new ##### -->
+<para>
+
+</para>
+
+@itype: 
+@struct_offset: 
+@Returns: 
+
+

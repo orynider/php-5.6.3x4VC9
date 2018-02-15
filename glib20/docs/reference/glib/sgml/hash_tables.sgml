@@ -1,0 +1,690 @@
+<refentry id="glib-Hash-Tables">
+<refmeta>
+<refentrytitle>Hash Tables</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Hash Tables</refname><refpurpose>associations between keys and values so that given a key the value
+can be found quickly.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GHashTable">GHashTable</link>;
+<link linkend="GHashTable">GHashTable</link>* <link linkend="g-hash-table-new">g_hash_table_new</link>                (<link linkend="GHashFunc">GHashFunc</link> hash_func,
+                                             <link linkend="GEqualFunc">GEqualFunc</link> key_equal_func);
+<link linkend="GHashTable">GHashTable</link>* <link linkend="g-hash-table-new-full">g_hash_table_new_full</link>           (<link linkend="GHashFunc">GHashFunc</link> hash_func,
+                                             <link linkend="GEqualFunc">GEqualFunc</link> key_equal_func,
+                                             <link linkend="GDestroyNotify">GDestroyNotify</link> key_destroy_func,
+                                             <link linkend="GDestroyNotify">GDestroyNotify</link> value_destroy_func);
+<link linkend="guint">guint</link>       (<link linkend="GHashFunc">*GHashFunc</link>)                    (<link linkend="gconstpointer">gconstpointer</link> key);
+<link linkend="gboolean">gboolean</link>    (<link linkend="GEqualFunc">*GEqualFunc</link>)                   (<link linkend="gconstpointer">gconstpointer</link> a,
+                                             <link linkend="gconstpointer">gconstpointer</link> b);
+void        <link linkend="g-hash-table-insert">g_hash_table_insert</link>             (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value);
+void        <link linkend="g-hash-table-replace">g_hash_table_replace</link>            (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value);
+<link linkend="guint">guint</link>       <link linkend="g-hash-table-size">g_hash_table_size</link>               (<link linkend="GHashTable">GHashTable</link> *hash_table);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-hash-table-lookup">g_hash_table_lookup</link>             (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> key);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-hash-table-lookup-extended">g_hash_table_lookup_extended</link>    (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> lookup_key,
+                                             <link linkend="gpointer">gpointer</link> *orig_key,
+                                             <link linkend="gpointer">gpointer</link> *value);
+void        <link linkend="g-hash-table-foreach">g_hash_table_foreach</link>            (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="GHFunc">GHFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+void        (<link linkend="GHFunc">*GHFunc</link>)                       (<link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-hash-table-remove">g_hash_table_remove</link>             (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> key);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-hash-table-steal">g_hash_table_steal</link>              (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> key);
+<link linkend="guint">guint</link>       <link linkend="g-hash-table-foreach-remove">g_hash_table_foreach_remove</link>     (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="GHRFunc">GHRFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+<link linkend="guint">guint</link>       <link linkend="g-hash-table-foreach-steal">g_hash_table_foreach_steal</link>      (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="GHRFunc">GHRFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+<link linkend="gboolean">gboolean</link>    (<link linkend="GHRFunc">*GHRFunc</link>)                      (<link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value,
+                                             <link linkend="gpointer">gpointer</link> user_data);
+#define     <link linkend="g-hash-table-freeze">g_hash_table_freeze</link>             (hash_table)
+#define     <link linkend="g-hash-table-thaw">g_hash_table_thaw</link>               (hash_table)
+void        <link linkend="g-hash-table-destroy">g_hash_table_destroy</link>            (<link linkend="GHashTable">GHashTable</link> *hash_table);
+
+<link linkend="gboolean">gboolean</link>    <link linkend="g-direct-equal">g_direct_equal</link>                  (<link linkend="gconstpointer">gconstpointer</link> v,
+                                             <link linkend="gconstpointer">gconstpointer</link> v2);
+<link linkend="guint">guint</link>       <link linkend="g-direct-hash">g_direct_hash</link>                   (<link linkend="gconstpointer">gconstpointer</link> v);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-int-equal">g_int_equal</link>                     (<link linkend="gconstpointer">gconstpointer</link> v,
+                                             <link linkend="gconstpointer">gconstpointer</link> v2);
+<link linkend="guint">guint</link>       <link linkend="g-int-hash">g_int_hash</link>                      (<link linkend="gconstpointer">gconstpointer</link> v);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-str-equal">g_str_equal</link>                     (<link linkend="gconstpointer">gconstpointer</link> v,
+                                             <link linkend="gconstpointer">gconstpointer</link> v2);
+<link linkend="guint">guint</link>       <link linkend="g-str-hash">g_str_hash</link>                      (<link linkend="gconstpointer">gconstpointer</link> v);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+A <link linkend="GHashTable">GHashTable</link> provides associations between keys and values which
+is optimized so that given a key, the associated value can be found
+very quickly.
+</para>
+<para>
+Note that neither keys nor values are copied when inserted into the
+<link linkend="GHashTable">GHashTable</link>, so they must exist for the lifetime of the <link linkend="GHashTable">GHashTable</link>.
+This means that the use of static strings is OK, but temporary
+strings (i.e. those created in buffers and those returned by GTK+ widgets)
+should be copied with <link linkend="g-strdup">g_strdup</link>() before being inserted.
+</para>
+<para>
+If keys or values are dynamically allocated, you must be careful to ensure
+that they are freed when they are removed from the <link linkend="GHashTable">GHashTable</link>, and also
+when they are overwritten by new insertions into the <link linkend="GHashTable">GHashTable</link>.
+It is also not advisable to mix static strings and dynamically-allocated
+strings in a <link linkend="GHashTable">GHashTable</link>, because it then becomes difficult to determine
+whether the string should be freed.
+</para>
+<para>
+To create a <link linkend="GHashTable">GHashTable</link>, use <link linkend="g-hash-table-new">g_hash_table_new</link>().
+</para>
+<para>
+To insert a key and value into a <link linkend="GHashTable">GHashTable</link>, use <link linkend="g-hash-table-insert">g_hash_table_insert</link>().
+</para>
+<para>
+To lookup a value corresponding to a given key, use <link linkend="g-hash-table-lookup">g_hash_table_lookup</link>()
+and <link linkend="g-hash-table-lookup-extended">g_hash_table_lookup_extended</link>().
+</para>
+<para>
+To remove a key and value, use <link linkend="g-hash-table-remove">g_hash_table_remove</link>().
+</para>
+<para>
+To call a function for each key and value pair use <link linkend="g-hash-table-foreach">g_hash_table_foreach</link>().
+</para>
+<para>
+To destroy a <link linkend="GHashTable">GHashTable</link> use <link linkend="g-hash-table-destroy">g_hash_table_destroy</link>().
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GHashTable">struct GHashTable</title>
+<programlisting>struct GHashTable;</programlisting>
+<para>
+The <structname>GHashTable</structname> struct is an opaque data structure to represent a
+<link linkend="glib-Hash-Tables">Hash Table</link>.
+It should only be accessed via the following functions.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-new">g_hash_table_new ()</title>
+<programlisting><link linkend="GHashTable">GHashTable</link>* g_hash_table_new                (<link linkend="GHashFunc">GHashFunc</link> hash_func,
+                                             <link linkend="GEqualFunc">GEqualFunc</link> key_equal_func);</programlisting>
+<para>
+Creates a new <link linkend="GHashTable">GHashTable</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_func</parameter>&nbsp;:</term>
+<listitem><para> a function to create a hash value from a key.
+  Hash values are used to determine where keys are stored within the
+  <link linkend="GHashTable">GHashTable</link> data structure. The <link linkend="g-direct-hash">g_direct_hash</link>(), <link linkend="g-int-hash">g_int_hash</link>() and 
+  <link linkend="g-str-hash">g_str_hash</link>() functions are provided for some common types of keys. 
+  If hash_func is <literal>NULL</literal>, <link linkend="g-direct-hash">g_direct_hash</link>() is used.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key_equal_func</parameter>&nbsp;:</term>
+<listitem><para> a function to check two keys for equality.  This is
+  used when looking up keys in the <link linkend="GHashTable">GHashTable</link>.  The <link linkend="g-direct-equal">g_direct_equal</link>(),
+  <link linkend="g-int-equal">g_int_equal</link>() and <link linkend="g-str-equal">g_str_equal</link>() functions are provided for the most
+  common types of keys. If <parameter>key_equal_func</parameter> is <literal>NULL</literal>, keys are compared
+  directly in a similar fashion to <link linkend="g-direct-equal">g_direct_equal</link>(), but without the
+  overhead of a function call.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> a new <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-new-full">g_hash_table_new_full ()</title>
+<programlisting><link linkend="GHashTable">GHashTable</link>* g_hash_table_new_full           (<link linkend="GHashFunc">GHashFunc</link> hash_func,
+                                             <link linkend="GEqualFunc">GEqualFunc</link> key_equal_func,
+                                             <link linkend="GDestroyNotify">GDestroyNotify</link> key_destroy_func,
+                                             <link linkend="GDestroyNotify">GDestroyNotify</link> value_destroy_func);</programlisting>
+<para>
+Creates a new <link linkend="GHashTable">GHashTable</link> like <link linkend="g-hash-table-new">g_hash_table_new</link>() and allows to specify
+functions to free the memory allocated for the key and value that get 
+called when removing the entry from the <link linkend="GHashTable">GHashTable</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_func</parameter>&nbsp;:</term>
+<listitem><para> a function to create a hash value from a key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key_equal_func</parameter>&nbsp;:</term>
+<listitem><para> a function to check two keys for equality.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key_destroy_func</parameter>&nbsp;:</term>
+<listitem><para> a function to free the memory allocated for the key 
+  used when removing the entry from the <link linkend="GHashTable">GHashTable</link> or <literal>NULL</literal> if you 
+  don't want to supply such a function.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>value_destroy_func</parameter>&nbsp;:</term>
+<listitem><para> a function to free the memory allocated for the 
+  value used when removing the entry from the <link linkend="GHashTable">GHashTable</link> or <literal>NULL</literal> if 
+  you don't want to supply such a function.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> a new <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHashFunc">GHashFunc ()</title>
+<programlisting><link linkend="guint">guint</link>       (*GHashFunc)                    (<link linkend="gconstpointer">gconstpointer</link> key);</programlisting>
+<para>
+Specifies the type of the hash function which is passed to
+<link linkend="g-hash-table-new">g_hash_table_new</link>() when a <link linkend="GHashTable">GHashTable</link> is created.
+</para>
+<para>
+The function is passed a key and should return a <link linkend="guint">guint</link> hash value.
+The functions <link linkend="g-direct-hash">g_direct_hash</link>(), <link linkend="g-int-hash">g_int_hash</link>() and <link linkend="g-str-hash">g_str_hash</link>() provide
+hash functions which can be used when the key is a <link linkend="gpointer">gpointer</link>, <link linkend="gint">gint</link>, and 
+<link linkend="gchar">gchar</link>* respectively.
+</para>
+<para>
+FIXME: Need more here.
+The hash values should be evenly distributed over a fairly large range?
+The modulus is taken with the hash table size (a prime number)
+to find the 'bucket' to place each key into.
+The function should also be very fast, since it is called for each key
+lookup.
+</para><variablelist role="params">
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para>a key.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the hash value corresponding to the key.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GEqualFunc">GEqualFunc ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    (*GEqualFunc)                   (<link linkend="gconstpointer">gconstpointer</link> a,
+                                             <link linkend="gconstpointer">gconstpointer</link> b);</programlisting>
+<para>
+Specifies the type of a function used to test two values for
+equality. The function should return <literal>TRUE</literal> if both values are equal and
+<literal>FALSE</literal> otherwise.
+</para><variablelist role="params">
+<varlistentry><term><parameter>a</parameter>&nbsp;:</term>
+<listitem><para>a value.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>b</parameter>&nbsp;:</term>
+<listitem><para>a value to compare with.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if <parameter>a</parameter> = <parameter>b</parameter>; <literal>FALSE</literal> otherwise.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-insert">g_hash_table_insert ()</title>
+<programlisting>void        g_hash_table_insert             (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value);</programlisting>
+<para>
+Inserts a new key and value into a <link linkend="GHashTable">GHashTable</link>.
+</para>
+<para>
+If the key already exists in the <link linkend="GHashTable">GHashTable</link> its current value is replaced
+with the new value. If you supplied a <parameter>value_destroy_func</parameter> when creating the 
+<link linkend="GHashTable">GHashTable</link>, the old value is freed using that function. If you supplied
+a <parameter>key_destroy_func</parameter> when creating the <link linkend="GHashTable">GHashTable</link>, the passed key is freed 
+using that function.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para> a key to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><para> the value to associate with the key.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-replace">g_hash_table_replace ()</title>
+<programlisting>void        g_hash_table_replace            (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value);</programlisting>
+<para>
+Inserts a new key and value into a <link linkend="GHashTable">GHashTable</link> similar to 
+<link linkend="g-hash-table-insert">g_hash_table_insert</link>(). The difference is that if the key already exists 
+in the <link linkend="GHashTable">GHashTable</link>, it gets replaced by the new key. If you supplied a 
+<parameter>value_destroy_func</parameter> when creating the <link linkend="GHashTable">GHashTable</link>, the old value is freed 
+using that function. If you supplied a <parameter>key_destroy_func</parameter> when creating the 
+<link linkend="GHashTable">GHashTable</link>, the old key is freed using that function.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para> a key to insert.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><para> the value to associate with the key.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-size">g_hash_table_size ()</title>
+<programlisting><link linkend="guint">guint</link>       g_hash_table_size               (<link linkend="GHashTable">GHashTable</link> *hash_table);</programlisting>
+<para>
+Returns the number of elements contained in the <link linkend="GHashTable">GHashTable</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the number of key/value pairs in the <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-lookup">g_hash_table_lookup ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_hash_table_lookup             (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> key);</programlisting>
+<para>
+Looks up a key in a <link linkend="GHashTable">GHashTable</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para> the key to look up.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the associated value, or <literal>NULL</literal> if the key is not found.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-lookup-extended">g_hash_table_lookup_extended ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_hash_table_lookup_extended    (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> lookup_key,
+                                             <link linkend="gpointer">gpointer</link> *orig_key,
+                                             <link linkend="gpointer">gpointer</link> *value);</programlisting>
+<para>
+Looks up a key in the <link linkend="GHashTable">GHashTable</link>, returning the original key and the
+associated value and a <link linkend="gboolean">gboolean</link> which is <literal>TRUE</literal> if the key was found. This 
+is useful if you need to free the memory allocated for the original key, 
+for example before calling <link linkend="g-hash-table-remove">g_hash_table_remove</link>().</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>lookup_key</parameter>&nbsp;:</term>
+<listitem><para> the key to look up.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>orig_key</parameter>&nbsp;:</term>
+<listitem><para> returns the original key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><para> returns the value associated with the key.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>TRUE</literal> if the key was found in the <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-foreach">g_hash_table_foreach ()</title>
+<programlisting>void        g_hash_table_foreach            (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="GHFunc">GHFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Calls the given function for each of the key/value pairs in the
+<link linkend="GHashTable">GHashTable</link>.  The function is passed the key and value of each
+pair, and the given <parameter>user_data</parameter> parameter.  The hash table may not
+be modified while iterating over it (you can't add/remove
+items). To remove all items matching a predicate, use
+<link linkend="g-hash-table-remove">g_hash_table_remove</link>().</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para> the function to call for each key/value pair.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para> user data to pass to the function.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHFunc">GHFunc ()</title>
+<programlisting>void        (*GHFunc)                       (<link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Specifies the type of the function passed to <link linkend="g-hash-table-foreach">g_hash_table_foreach</link>().
+It is called with each key/value pair, together with the <parameter>user_data</parameter> parameter
+which is passed to <link linkend="g-hash-table-foreach">g_hash_table_foreach</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para>a key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><para>the value corresponding to the key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para>user data passed to <link linkend="g-hash-table-foreach">g_hash_table_foreach</link>().
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-remove">g_hash_table_remove ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_hash_table_remove             (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> key);</programlisting>
+<para>
+Removes a key and its associated value from a <link linkend="GHashTable">GHashTable</link>.
+</para>
+<para>
+If the <link linkend="GHashTable">GHashTable</link> was created using <link linkend="g-hash-table-new-full">g_hash_table_new_full</link>(), the
+key and value are freed using the supplied destroy functions, otherwise
+you have to make sure that any dynamically allocated values are freed 
+yourself.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para> the key to remove.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>TRUE</literal> if the key was found and removed from the <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-steal">g_hash_table_steal ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_hash_table_steal              (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="gconstpointer">gconstpointer</link> key);</programlisting>
+<para>
+Removes a key and its associated value from a <link linkend="GHashTable">GHashTable</link> without
+calling the key and value destroy functions.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para> the key to remove.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>TRUE</literal> if the key was found and removed from the <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-foreach-remove">g_hash_table_foreach_remove ()</title>
+<programlisting><link linkend="guint">guint</link>       g_hash_table_foreach_remove     (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="GHRFunc">GHRFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Calls the given function for each key/value pair in the <link linkend="GHashTable">GHashTable</link>.
+If the function returns <literal>TRUE</literal>, then the key/value pair is removed from the
+<link linkend="GHashTable">GHashTable</link>. If you supplied key or value destroy functions when creating
+the <link linkend="GHashTable">GHashTable</link>, they are used to free the memory allocated for the removed
+keys and values.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para> the function to call for each key/value pair.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para> user data to pass to the function.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the number of key/value pairs removed.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-foreach-steal">g_hash_table_foreach_steal ()</title>
+<programlisting><link linkend="guint">guint</link>       g_hash_table_foreach_steal      (<link linkend="GHashTable">GHashTable</link> *hash_table,
+                                             <link linkend="GHRFunc">GHRFunc</link> func,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Calls the given function for each key/value pair in the <link linkend="GHashTable">GHashTable</link>.
+If the function returns <literal>TRUE</literal>, then the key/value pair is removed from the
+<link linkend="GHashTable">GHashTable</link>, but no key or value destroy functions are called.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>func</parameter>&nbsp;:</term>
+<listitem><para> the function to call for each key/value pair.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para> user data to pass to the function.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the number of key/value pairs removed.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GHRFunc">GHRFunc ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    (*GHRFunc)                      (<link linkend="gpointer">gpointer</link> key,
+                                             <link linkend="gpointer">gpointer</link> value,
+                                             <link linkend="gpointer">gpointer</link> user_data);</programlisting>
+<para>
+Specifies the type of the function passed to <link linkend="g-hash-table-foreach-remove">g_hash_table_foreach_remove</link>().
+It is called with each key/value pair, together with the <parameter>user_data</parameter> parameter
+passed to <link linkend="g-hash-table-foreach-remove">g_hash_table_foreach_remove</link>().
+It should return <literal>TRUE</literal> if the key/value pair should be removed from the
+<link linkend="GHashTable">GHashTable</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>key</parameter>&nbsp;:</term>
+<listitem><para>a key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&nbsp;:</term>
+<listitem><para>the value associated with the key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&nbsp;:</term>
+<listitem><para>user data passed to <link linkend="g-hash-table-remove">g_hash_table_remove</link>().
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the key/value pair should be removed from the <link linkend="GHashTable">GHashTable</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-freeze">g_hash_table_freeze()</title>
+<programlisting>#define     g_hash_table_freeze(hash_table)</programlisting>
+<warning>
+<para>
+<literal>g_hash_table_freeze</literal> is deprecated and should not be used in newly-written code.
+</para>
+</warning>
+<para>
+This function is deprecated and will be removed in the next major
+ release of GLib. It does nothing.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para>
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-thaw">g_hash_table_thaw()</title>
+<programlisting>#define     g_hash_table_thaw(hash_table)</programlisting>
+<warning>
+<para>
+<literal>g_hash_table_thaw</literal> is deprecated and should not be used in newly-written code.
+</para>
+</warning>
+<para>
+This function is deprecated and will be removed in the next major
+ release of GLib. It does nothing.
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para>
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-hash-table-destroy">g_hash_table_destroy ()</title>
+<programlisting>void        g_hash_table_destroy            (<link linkend="GHashTable">GHashTable</link> *hash_table);</programlisting>
+<para>
+Destroys the <link linkend="GHashTable">GHashTable</link>. If keys and/or values are dynamically 
+allocated, you should either free them first or create the <link linkend="GHashTable">GHashTable</link>
+using <link linkend="g-hash-table-new-full">g_hash_table_new_full</link>(). In the latter case the destroy functions 
+you supplied will be called on all keys and values before destroying 
+the <link linkend="GHashTable">GHashTable</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>hash_table</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GHashTable">GHashTable</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-direct-equal">g_direct_equal ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_direct_equal                  (<link linkend="gconstpointer">gconstpointer</link> v,
+                                             <link linkend="gconstpointer">gconstpointer</link> v2);</programlisting>
+<para>
+Compares two <link linkend="gpointer">gpointer</link> arguments and returns <literal>TRUE</literal> if they are equal.
+It can be passed to <link linkend="g-hash-table-new">g_hash_table_new</link>() as the <parameter>key_equal_func</parameter>
+parameter, when using pointers as keys in a <link linkend="GHashTable">GHashTable</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>v</parameter>&nbsp;:</term>
+<listitem><para>a key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>v2</parameter>&nbsp;:</term>
+<listitem><para>a key to compare with <parameter>v</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the two keys match.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-direct-hash">g_direct_hash ()</title>
+<programlisting><link linkend="guint">guint</link>       g_direct_hash                   (<link linkend="gconstpointer">gconstpointer</link> v);</programlisting>
+<para>
+Converts a gpointer to a hash value.
+It can be passed to <link linkend="g-hash-table-new">g_hash_table_new</link>() as the <parameter>hash_func</parameter> parameter, when
+using pointers as keys in a <link linkend="GHashTable">GHashTable</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>v</parameter>&nbsp;:</term>
+<listitem><para>a gpointer key.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a hash value corresponding to the key.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-int-equal">g_int_equal ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_int_equal                     (<link linkend="gconstpointer">gconstpointer</link> v,
+                                             <link linkend="gconstpointer">gconstpointer</link> v2);</programlisting>
+<para>
+Compares the two <link linkend="gint">gint</link> values being pointed to and returns <literal>TRUE</literal> if they are
+equal.
+It can be passed to <link linkend="g-hash-table-new">g_hash_table_new</link>() as the <parameter>key_equal_func</parameter>
+parameter, when using pointers to integers as keys in a <link linkend="GHashTable">GHashTable</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>v</parameter>&nbsp;:</term>
+<listitem><para>a pointer to a <link linkend="gint">gint</link> key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>v2</parameter>&nbsp;:</term>
+<listitem><para>a pointer to a <link linkend="gint">gint</link> key to compare with <parameter>v</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the two keys match.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-int-hash">g_int_hash ()</title>
+<programlisting><link linkend="guint">guint</link>       g_int_hash                      (<link linkend="gconstpointer">gconstpointer</link> v);</programlisting>
+<para>
+Converts a pointer to a <link linkend="gint">gint</link> to a hash value.
+It can be passed to <link linkend="g-hash-table-new">g_hash_table_new</link>() as the <parameter>hash_func</parameter> parameter, when
+using pointers to integers values as keys in a <link linkend="GHashTable">GHashTable</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>v</parameter>&nbsp;:</term>
+<listitem><para>a pointer to a <link linkend="gint">gint</link> key.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a hash value corresponding to the key.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-str-equal">g_str_equal ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_str_equal                     (<link linkend="gconstpointer">gconstpointer</link> v,
+                                             <link linkend="gconstpointer">gconstpointer</link> v2);</programlisting>
+<para>
+Compares two strings and returns <literal>TRUE</literal> if they are equal.
+It can be passed to <link linkend="g-hash-table-new">g_hash_table_new</link>() as the <parameter>key_equal_func</parameter>
+parameter, when using strings as keys in a <link linkend="GHashTable">GHashTable</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>v</parameter>&nbsp;:</term>
+<listitem><para>a key.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>v2</parameter>&nbsp;:</term>
+<listitem><para>a key to compare with <parameter>v</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the two keys match.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-str-hash">g_str_hash ()</title>
+<programlisting><link linkend="guint">guint</link>       g_str_hash                      (<link linkend="gconstpointer">gconstpointer</link> v);</programlisting>
+<para>
+Converts a string to a hash value.
+It can be passed to <link linkend="g-hash-table-new">g_hash_table_new</link>() as the <parameter>hash_func</parameter> parameter, when
+using strings as keys in a <link linkend="GHashTable">GHashTable</link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>v</parameter>&nbsp;:</term>
+<listitem><para>a string key.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a hash value corresponding to the key.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

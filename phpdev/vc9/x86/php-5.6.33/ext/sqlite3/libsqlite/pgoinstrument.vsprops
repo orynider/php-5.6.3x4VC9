@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<VisualStudioPropertySheet 
+	ProjectType="Visual C++" 
+	Version="8.00" 
+	Name="PGO - Instrumental Build Properties"
+	>
+	<Tool 
+		Name="VCCLCompilerTool"
+		WholeProgramOptimization="true"
+	/>
+	<Tool 
+		Name="VCLinkerTool"
+		LinkTimeCodeGeneration="2"
+	/>
+	<Tool
+		Name="VCLibrarianTool"
+		LinkTimeCodeGeneration="true"
+	/>
+</VisualStudioPropertySheet>

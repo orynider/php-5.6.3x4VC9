@@ -1,0 +1,26 @@
+Remarks
+
+GetTickCount() vs GetTickCount64()
+
+The resolution of the GetTickCount function is limited to the resolution of the system timer, which is typically in the range of 10 milliseconds to 16 milliseconds. The resolution of the GetTickCount function is not affected by adjustments made by the GetSystemTimeAdjustment function.
+
+The elapsed time is stored as a DWORD value. Therefore, the time will wrap around to zero if the system is run continuously for 49.7 days. To avoid this problem, use the GetTickCount64 function. Otherwise, check for an overflow condition when comparing times.
+
+If you need a higher resolution timer, use a multimedia timer or a high-resolution timer.
+
+To obtain the time elapsed since the computer was started, retrieve the System Up Time counter in the performance data in the registry key HKEY_PERFORMANCE_DATA. The value returned is an 8-byte value. For more information, see Performance Counters.
+
+To obtain the time the system has spent in the working state since it was started, use the QueryUnbiasedInterruptTime function.
+
+To compile an application that uses GetTickCount64() function, define _WIN32_WINNT as 0x0600 or later.
+
+https://msdn.microsoft.com/en-us/library/windows/desktop/ms724408(v=vs.85).aspx
+
+Macro SQLITE_OS_WINRT
+
+When it is set to non-zero, it means that the SQLite core library is being
+built specifically for the Windows Runtime (present on Windows 8.x): 
+https://en.wikipedia.org/wiki/Windows_Runtime
+Link: http://sqlite.1065341.n5.nabble.com/What-does-SQLITE-OS-WINRT-mean-td74498.html
+
+

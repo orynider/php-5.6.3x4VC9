@@ -1,0 +1,5 @@
+/config
+/enchant_*.so
+/enchant_*.dylib
+/enchant*.dll
+/providers.test

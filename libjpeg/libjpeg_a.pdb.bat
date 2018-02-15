@@ -1,0 +1,1 @@
+link /DEBUG /DEBUGTYPE:cv  /INCREMENTAL:NO /NOLOGO -subsystem:console,5.01 -out:jpegtran.exe jpegtran.obj rdswitch.obj cdjpeg.obj transupp.obj libjpeg_a.lib kernel32.lib  ws2_32.lib mswsock.lib advapi32.lib /pdb:"libjpeg_a.pdb"

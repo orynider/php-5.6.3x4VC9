@@ -1,0 +1,4 @@
+LINK : warning LNK4044: unrecognized option '/version:5.6.33'; ignored
+LINK : warning LNK4044: unrecognized option '/incremental:no'; ignored
+LINK : warning LNK4044: unrecognized option '/debug'; ignored
+LINK : warning LNK4044: unrecognized option '/opt:ref,icf'; ignored

@@ -1,0 +1,88 @@
+
+'\"
+'\" The contents of this file are subject to the AOLserver Public License
+'\" Version 1.1 (the "License"); you may not use this file except in
+'\" compliance with the License. You may obtain a copy of the License at
+'\" http://aolserver.com/.
+'\"
+'\" Software distributed under the License is distributed on an "AS IS"
+'\" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See
+'\" the License for the specific language governing rights and limitations
+'\" under the License.
+'\"
+'\" The Original Code is AOLserver Code and related documentation
+'\" distributed by AOL.
+'\" 
+'\" The Initial Developer of the Original Code is America Online,
+'\" Inc. Portions created by AOL are Copyright (C) 1999 America Online,
+'\" Inc. All Rights Reserved.
+'\"
+'\" Alternatively, the contents of this file may be used under the terms
+'\" of the GNU General Public License (the "GPL"), in which case the
+'\" provisions of GPL are applicable instead of those above.  If you wish
+'\" to allow use of your version of this file only under the terms of the
+'\" GPL and not to allow others to use your version of this file under the
+'\" License, indicate your decision by deleting the provisions above and
+'\" replace them with the notice and other provisions required by the GPL.
+'\" If you do not delete the provisions above, a recipient may use your
+'\" version of this file under either the License or the GPL.
+'\" 
+'\"
+'\" $Header: /Users/dossy/Desktop/cvs/aolserver/doc/Ns_ConnReturnFile.3,v 1.1 2006/04/19 17:37:30 jgdavidson Exp $
+'\"
+'\" 
+.so man.macros
+
+.TH Ns_ConnReturnFile 3 4.0 AOLserver "AOLserver Library Procedures"
+.BS
+'\" Note:  do not modify the .SH NAME line immediately below!
+.SH NAME
+Ns_ConnReturnFile \- Return a file as a complete response
+.SH SYNOPSIS
+.nf
+\fB#include "ns.h"\fR
+.sp
+int
+\fBNs_ConnReturnFile\fR(\fIconn, status, type, file\fR)
+.SH ARGUMENTS
+.AS Ns_Conn conn in
+.AP Ns_Conn conn in
+Pointer to open connection.
+.AP char *file in
+Pointer to filename string.
+.AP int status in
+HTTP status code.
+.AP char *type in
+Pointer to mimetype string.
+.BE
+
+.SH DESCRIPTION
+.PP
+This routine is used to generate complete responses, including the
+HTTP status code specified by the \fIstatus\fR argument and appropriate
+headers followed by the contents of the file specified with the
+\fIfile\fR argument.  This routine utilizes the underlying builtin
+file-server code (aka, "fastpath").  As such, it shares the fastpath
+capabilities to automatically cache pre-read or memory mapped copies
+of the files and can safely support multiple, simultaneous responses.
+The following headers are included in the output:
+
+.TP
+Last-modified
+Constructed based on the modification time of the given file.
+
+.TP
+Content-length
+Constructed based on the size of the give file.
+
+.TP
+Content-type
+Constructed with the given \fItype\fR argument.  If \fItype\fR is
+NULL, the type will be determined based on the filename using the
+\fBNs_GetMimeType\fR routine
+
+.SH "SEE ALSO"
+Ns_ConnFlush(3), Ns_ConnReturnOpenFd(3), Ns_GetMimeType(3)
+
+.SH KEYWORDS
+connnection, response

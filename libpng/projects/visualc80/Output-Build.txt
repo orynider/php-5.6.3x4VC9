@@ -1,0 +1,26 @@
+1>------ Build started: Project: libpng, Configuration: LIB Release Win32 ------
+1>Performing Pre-Build Event...
+1>        1 file(s) copied.
+1>Compiling...
+1>pngerror.c
+1>Compiling...
+1>pngwutil.c
+1>pngwtran.c
+1>pngwrite.c
+1>pngwio.c
+1>pngtrans.c
+1>pngset.c
+1>pngrutil.c
+1>pngrtran.c
+1>pngrio.c
+1>pngread.c
+1>pngpread.c
+1>pngmem.c
+1>pngget.c
+1>Generating Code...
+1>Compiling...
+1>png.c
+1>Creating library...
+1>Build log was saved at "file://c:\php-sdk\libpng\projects\visualc80\Win32_LIB_Release\BuildLog.htm"
+1>libpng - 0 error(s), 0 warning(s)
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========

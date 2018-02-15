@@ -1,0 +1,1161 @@
+<HTML
+><HEAD
+><TITLE
+>GTypeModule</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GObject Reference Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="API Reference"
+HREF="r28.html"><LINK
+REL="PREVIOUS"
+TITLE="GTypePlugin"
+HREF="gobject-gtypeplugin.html"><LINK
+REL="NEXT"
+TITLE="GObject"
+HREF="gobject-the-base-object-type.html"></HEAD
+><BODY
+CLASS="REFENTRY"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="5"
+>GObject Reference Manual</FONT
+></TH
+></TR
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="gobject-gtypeplugin.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="gobject-the-base-object-type.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+></TABLE
+></DIV
+><H1
+><A
+NAME="GOBJECT-GTYPEMODULE">GTypeModule</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN2370"
+></A
+><H2
+>Name</H2
+>GTypeModule&nbsp;--&nbsp;Type Loading Modules</DIV
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN2373"><H2
+>Synopsis</H2
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="SYNOPSIS"
+>&#13;#include &lt;gobject.h&gt;
+
+
+struct      <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+>;
+<A
+HREF=../glib/glib-basic-types.html#GBOOLEAN
+>gboolean</A>    <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-USE"
+>g_type_module_use</A
+>               (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module);
+void        <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-UNUSE"
+>g_type_module_unuse</A
+>             (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module);
+void        <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-SET-NAME"
+>g_type_module_set_name</A
+>          (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *name);
+<A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-REGISTER-TYPE"
+>g_type_module_register_type</A
+>     (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> parent_type,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> *type_info,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);
+void        <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-ADD-INTERFACE"
+>g_type_module_add_interface</A
+>     (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             const <A
+HREF="gobject-gtype.html#GINTERFACEINFO"
+>GInterfaceInfo</A
+> *interface_info);&#13;</PRE
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN2397"
+></A
+><H2
+>Description</H2
+><P
+><A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> provides a simple implementation of the <A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+>
+interface. The model of <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> is a dynamically loaded module
+which implements some number of types and interface
+implementations. When the module is loaded, it registers its types
+and interfaces using <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-REGISTER-TYPE"
+>g_type_module_register_type</A
+>() and
+<A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-ADD-INTERFACE"
+>g_type_module_add_interface</A
+>().  As long as any instances of these
+types and interface implementations are in use, the module is kept
+loaded. When the types and interfaces are gone, the module may be
+unloaded. If the types and interfaces become used again, the module
+will be reloaded.</P
+><P
+>Keeping track of whether the module should be loaded or not is done by
+using a use count - it starts at zero, and whenever it is greater than
+zero, the module is loaded. The use count is maintained internally by
+the type system, but also can be explicitly controlled by
+<A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-USE"
+>g_type_module_use</A
+>() and <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-UNUSE"
+>g_type_module_unuse</A
+>(). Typically, when loading
+a module for the first type, <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-USE"
+>g_type_module_use</A
+>() will be used to load
+it so that it can initialize its types. At some later point, when the
+module no longer needs to be loaded except for the type
+implementations it contains, <A
+HREF="gobject-gtypemodule.html#G-TYPE-MODULE-UNUSE"
+>g_type_module_unuse</A
+>() is called.</P
+><P
+><A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> does not actually provide any implementation of module
+loading and unloading. To create a particular module type you must
+derive from <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> and implement the load and unload functions
+in GTypeModuleClass.</P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN2414"
+></A
+><H2
+>Details</H2
+><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2416"
+></A
+><H3
+><A
+NAME="GTYPEMODULE"
+></A
+>struct GTypeModule</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>struct GTypeModule 
+{
+  GObject parent_instance;
+
+  guint use_count;
+  GSList *type_infos;
+  GSList *interface_infos;
+  gchar *name;
+};</PRE
+></TD
+></TR
+></TABLE
+><P
+></P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2421"
+></A
+><H3
+><A
+NAME="G-TYPE-MODULE-USE"
+></A
+>g_type_module_use ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF=../glib/glib-basic-types.html#GBOOLEAN
+>gboolean</A>    g_type_module_use               (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Increases the use count of a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> by one. If the
+use count was zero before, the plugin will be loaded.</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2431"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>module</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2437"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> <TT
+CLASS="LITERAL"
+>FALSE</TT
+> if the plugin needed to be loaded and
+              loading the plugin failed.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2443"
+></A
+><H3
+><A
+NAME="G-TYPE-MODULE-UNUSE"
+></A
+>g_type_module_unuse ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_module_unuse             (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Decreases the use count of a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> by one. If the
+result is zero, the module will be unloaded. (However, the
+<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> will not be freed, and types associated with the
+<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> are not unregistered. Once a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> is 
+initialized, it must exist forever.)</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2455"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>module</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+></P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2461"
+></A
+><H3
+><A
+NAME="G-TYPE-MODULE-SET-NAME"
+></A
+>g_type_module_set_name ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_module_set_name          (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *name);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Sets the name for a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+></P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2471"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>module</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+>.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2477"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> a human-readable name to use in error messages.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2482"
+></A
+><H3
+><A
+NAME="G-TYPE-MODULE-REGISTER-TYPE"
+></A
+>g_type_module_register_type ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+>       g_type_module_register_type     (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> parent_type,
+                                             const <A
+HREF=../glib/glib-basic-types.html#GCHAR
+>gchar</A> *type_name,
+                                             const <A
+HREF="gobject-gtype.html#GTYPEINFO"
+>GTypeInfo</A
+> *type_info,
+                                             <A
+HREF="gobject-gtype.html#GTYPEFLAGS"
+>GTypeFlags</A
+> flags);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Looks up or registers a type that is implemented with a particular
+type plugin. If a type with name <TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+> is already registered,
+the <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> identifier for the type is returned, otherwise the type
+is newly registered, and the resulting <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> identifier returned.</P
+><P
+>As long as any instances of the type exist, the type plugin will
+not be unloaded.</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2499"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>module</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>  a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2505"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>parent_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>    the type for the parent class</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2510"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type_name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>      name for the type</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2515"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>type_info</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>      type information structure</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2520"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>flags</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>          flags field providing details about the type           </P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2525"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> the type ID for the class.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN2530"
+></A
+><H3
+><A
+NAME="G-TYPE-MODULE-ADD-INTERFACE"
+></A
+>g_type_module_add_interface ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>void        g_type_module_add_interface     (<A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+> *module,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> instance_type,
+                                             <A
+HREF="gobject-gtype.html#GTYPE"
+>GType</A
+> interface_type,
+                                             const <A
+HREF="gobject-gtype.html#GINTERFACEINFO"
+>GInterfaceInfo</A
+> *interface_info);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Registers an additional interface for a type, whose interface
+lives in the given type plugin. If the interface was already registered
+for the type in this plugin, nothing will be done. </P
+><P
+>As long as any instances of the type exist, the type plugin will
+not be unloaded.</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2542"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>module</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> a <A
+HREF="gobject-gtypemodule.html#GTYPEMODULE"
+>GTypeModule</A
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2548"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>instance_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> type to which to add the interface.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2553"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>interface_type</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> interface type to add</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2558"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>interface_info</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> type information structure</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN2563"
+></A
+><H2
+>See Also</H2
+><P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2567"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF="gobject-gtypeplugin.html#GTYPEPLUGIN"
+>GTypePlugin</A
+></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>The abstract type loader interface.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN2572"><SPAN
+STYLE="white-space: nowrap"
+><A
+HREF=../glib/glib-dynamic-loading-of-modules.html#GMODULE
+>GModule</A></SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>Portable mechanism for dynamically loaded modules.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><BR
+CLEAR="all"><BR><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="gobject-gtypeplugin.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="r28.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="gobject-the-base-object-type.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+><TR
+><TD
+COLSPAN="2"
+ALIGN="left"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>GTypePlugin</B
+></FONT
+></TD
+><TD
+COLSPAN="2"
+ALIGN="right"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>GObject</B
+></FONT
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

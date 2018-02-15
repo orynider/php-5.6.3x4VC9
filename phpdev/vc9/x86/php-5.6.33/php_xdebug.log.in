@@ -1,0 +1,99 @@
+	"cl.exe" /D COMPILE_DL_XDEBUG /D XDEBUG_EXPORTS=1 /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /I "C:\php-sdk\freetds\include"  /I "C:\php-sdk\freetds\win32"  /D FD_SETSIZE=256 /FoRelease_TS\ext\xdebug\ /FdRelease_TS\ext\xdebug\ /FpRelease_TS\ext\xdebug\ /FRRelease_TS\ext\xdebug\ /c ext\xdebug\usefulstuff.c ext\xdebug\xdebug.c ext\xdebug\xdebug_branch_info.c ext\xdebug\xdebug_code_coverage.c ext\xdebug\xdebug_com.c ext\xdebug\xdebug_compat.c ext\xdebug\xdebug_handler_dbgp.c ext\xdebug\xdebug_handlers.c ext\xdebug\xdebug_hash.c ext\xdebug\xdebug_llist.c ext\xdebug\xdebug_monitor.c ext\xdebug\xdebug_private.c ext\xdebug\xdebug_profiler.c ext\xdebug\xdebug_set.c ext\xdebug\xdebug_stack.c ext\xdebug\xdebug_str.c ext\xdebug\xdebug_superglobals.c ext\xdebug\xdebug_trace_computerized.c ext\xdebug\xdebug_trace_html.c ext\xdebug\xdebug_trace_textual.c ext\xdebug\xdebug_tracing.c ext\xdebug\xdebug_var.c ext\xdebug\xdebug_xml.c
+usefulstuff.c
+xdebug.c
+ext\xdebug\xdebug.c(665) : warning C4047: '=' : 'int' differs in levels of indirection from 'char *'
+xdebug_branch_info.c
+xdebug_code_coverage.c
+xdebug_com.c
+xdebug_compat.c
+xdebug_handler_dbgp.c
+xdebug_handlers.c
+xdebug_hash.c
+xdebug_llist.c
+xdebug_monitor.c
+xdebug_private.c
+xdebug_profiler.c
+xdebug_set.c
+xdebug_stack.c
+xdebug_str.c
+ext\xdebug\xdebug_stack.c(88) : warning C4013: 'xdebug_is_output_tty' undefined; assuming extern returning int
+ext\xdebug\xdebug_stack.c(626) : warning C4020: 'xdebug_create_socket' : too many actual parameters
+ext\xdebug\xdebug_stack.c(629) : warning C4020: 'xdebug_create_socket' : too many actual parameters
+ext\xdebug\xdebug_stack.c(633) : warning C4020: 'xdebug_create_socket' : too many actual parameters
+xdebug_superglobals.c
+xdebug_trace_computerized.c
+xdebug_trace_html.c
+xdebug_trace_textual.c
+xdebug_tracing.c
+xdebug_var.c
+xdebug_xml.c
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+Generating code
+c:\php-sdk\libiconv\lib\tcvn.h(105) : warning C4701: potentially uninitialized local variable 'k' used
+c:\php-sdk\libiconv\lib\cp1258.h(100) : warning C4701: potentially uninitialized local variable 'k' used
+c:\php-sdk\libiconv\lib\utf7.h(347) : warning C4701: potentially uninitialized local variable 'c' used
+c:\php-sdk\libiconv\lib\utf7.h(261) : warning C4701: potentially uninitialized local variable 'c' used
+c:\php-sdk\libiconv\lib\utf7.h(301) : warning C4701: potentially uninitialized local variable 'c' used
+c:\php-sdk\libiconv\lib\iso2022_cn.h(158) : warning C4701: potentially uninitialized local variable 'ret' used
+c:\php-sdk\libiconv\lib\iso2022_cnext.h(276) : warning C4701: potentially uninitialized local variable 'ret' used
+Finished generating code
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(catalog.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(chvalid.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(debugXML.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(dict.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(encoding.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(entities.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(error.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(globals.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(hash.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(HTMLparser.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(HTMLtree.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(list.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(nanoftp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(nanohttp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(parser.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(parserInternals.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(pattern.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(relaxng.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(SAX2.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(SAX.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(threads.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(tree.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(uri.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(valid.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xinclude.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlIO.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlmemory.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlreader.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlregexp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlsave.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlschemas.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlschemastypes.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlunicode.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xpath.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xpointer.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libxml2_a_dll.lib(xmlstring.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libxml2_a_dll.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_xdebug.lib and object Release_TS\php_xdebug.exp
+EXT xdebug build complete

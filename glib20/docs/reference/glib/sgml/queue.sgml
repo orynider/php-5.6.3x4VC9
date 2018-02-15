@@ -1,0 +1,303 @@
+<refentry id="glib-Double-ended-Queues">
+<refmeta>
+<refentrytitle>Double-ended Queues</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Double-ended Queues</refname><refpurpose>double-ended queue data structure.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+struct      <link linkend="GQueue">GQueue</link>;
+<link linkend="GQueue">GQueue</link>*     <link linkend="g-queue-new">g_queue_new</link>                     (void);
+void        <link linkend="g-queue-free">g_queue_free</link>                    (<link linkend="GQueue">GQueue</link> *queue);
+void        <link linkend="g-queue-push-head">g_queue_push_head</link>               (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="gpointer">gpointer</link> data);
+void        <link linkend="g-queue-push-tail">g_queue_push_tail</link>               (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="gpointer">gpointer</link> data);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-queue-pop-head">g_queue_pop_head</link>                (<link linkend="GQueue">GQueue</link> *queue);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-queue-pop-tail">g_queue_pop_tail</link>                (<link linkend="GQueue">GQueue</link> *queue);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-queue-is-empty">g_queue_is_empty</link>                (<link linkend="GQueue">GQueue</link> *queue);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-queue-peek-head">g_queue_peek_head</link>               (<link linkend="GQueue">GQueue</link> *queue);
+<link linkend="gpointer">gpointer</link>    <link linkend="g-queue-peek-tail">g_queue_peek_tail</link>               (<link linkend="GQueue">GQueue</link> *queue);
+void        <link linkend="g-queue-push-head-link">g_queue_push_head_link</link>          (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="GList">GList</link> *link);
+void        <link linkend="g-queue-push-tail-link">g_queue_push_tail_link</link>          (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="GList">GList</link> *link);
+<link linkend="GList">GList</link>*      <link linkend="g-queue-pop-head-link">g_queue_pop_head_link</link>           (<link linkend="GQueue">GQueue</link> *queue);
+<link linkend="GList">GList</link>*      <link linkend="g-queue-pop-tail-link">g_queue_pop_tail_link</link>           (<link linkend="GQueue">GQueue</link> *queue);
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+The <link linkend="GQueue">GQueue</link> structure and its associated functions provide a standard
+queue data structure. Internally, <link linkend="GQueue">GQueue</link> uses the same data structure as 
+<link linkend="GList">GList</link> to store elements.  
+</para>
+<para>
+The data contained in each element can be either integer values, by using one
+of the
+<link linkend="glib-Type-Conversion-Macros">Type Conversion Macros</link>,
+or simply pointers to any type of data.
+</para>
+<para>
+To create a new <link linkend="GQueue">GQueue</link>, use <link linkend="g-queue-new">g_queue_new</link>().
+</para>
+<para>
+To add elements, use <link linkend="g-queue-push-head">g_queue_push_head</link>(), <link linkend="g-queue-push-head-link">g_queue_push_head_link</link>(), 
+<link linkend="g-queue-push-tail">g_queue_push_tail</link>() and <link linkend="g-queue-push-tail-link">g_queue_push_tail_link</link>().
+</para>
+<para>
+To remove elements, use <link linkend="g-queue-pop-head">g_queue_pop_head</link>() and <link linkend="g-queue-pop-tail">g_queue_pop_tail</link>().
+</para>
+<para>
+To free the entire queue, use <link linkend="g-queue-free">g_queue_free</link>().
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="GQueue">struct GQueue</title>
+<programlisting>struct GQueue
+{
+  GList *head;
+  GList *tail;
+  guint  length;
+};
+</programlisting>
+<para>
+Contains the public fields of a <link linkend="glib-queues">Queue</link>.
+</para><variablelist role="struct">
+<varlistentry>
+<term><link linkend="GList">GList</link> *<structfield>head</structfield></term>
+<listitem><para>a pointer to the first element of the queue.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="GList">GList</link> *<structfield>tail</structfield></term>
+<listitem><para>a pointer to the last element of the queue.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="guint">guint</link> <structfield>length</structfield></term>
+<listitem><para>the number of elements in the queue.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-new">g_queue_new ()</title>
+<programlisting><link linkend="GQueue">GQueue</link>*     g_queue_new                     (void);</programlisting>
+<para>
+Creates a new <link linkend="GQueue">GQueue</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> a new <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-free">g_queue_free ()</title>
+<programlisting>void        g_queue_free                    (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Frees the memory allocated for the <link linkend="GQueue">GQueue</link>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-push-head">g_queue_push_head ()</title>
+<programlisting>void        g_queue_push_head               (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Adds a new element at the head of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para> the data for the new element.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-push-tail">g_queue_push_tail ()</title>
+<programlisting>void        g_queue_push_tail               (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="gpointer">gpointer</link> data);</programlisting>
+<para>
+Adds a new element at the tail of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>data</parameter>&nbsp;:</term>
+<listitem><para> the data for the new element.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-pop-head">g_queue_pop_head ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_queue_pop_head                (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Removes the first element of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the data of the first element in the queue, or <literal>NULL</literal> if the queue
+  is empty.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-pop-tail">g_queue_pop_tail ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_queue_pop_tail                (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Removes the last element of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the data of the last element in the queue, or <literal>NULL</literal> if the queue
+  is empty.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-is-empty">g_queue_is_empty ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_queue_is_empty                (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the queue is empty.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> <literal>TRUE</literal> if the queue is empty.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-peek-head">g_queue_peek_head ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_queue_peek_head               (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Returns the first element of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the data of the first element in the queue, or <literal>NULL</literal> if the queue
+  is empty.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-peek-tail">g_queue_peek_tail ()</title>
+<programlisting><link linkend="gpointer">gpointer</link>    g_queue_peek_tail               (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Returns the last element of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the data of the last element in the queue, or <literal>NULL</literal> if the queue
+  is empty.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-push-head-link">g_queue_push_head_link ()</title>
+<programlisting>void        g_queue_push_head_link          (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="GList">GList</link> *link);</programlisting>
+<para>
+Adds a new element at the head of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>link</parameter>&nbsp;:</term>
+<listitem><para> a single <link linkend="GList">GList</link> element, <emphasis>not</emphasis> a list with
+  more than one element.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-push-tail-link">g_queue_push_tail_link ()</title>
+<programlisting>void        g_queue_push_tail_link          (<link linkend="GQueue">GQueue</link> *queue,
+                                             <link linkend="GList">GList</link> *link);</programlisting>
+<para>
+Adds a new element at the tail of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>link</parameter>&nbsp;:</term>
+<listitem><para> a single <link linkend="GList">GList</link> element, <emphasis>not</emphasis> a list with
+  more than one element.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-pop-head-link">g_queue_pop_head_link ()</title>
+<programlisting><link linkend="GList">GList</link>*      g_queue_pop_head_link           (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Removes the first element of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the <link linkend="GList">GList</link> element at the head of the queue, or <literal>NULL</literal> if the queue
+  is empty.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-queue-pop-tail-link">g_queue_pop_tail_link ()</title>
+<programlisting><link linkend="GList">GList</link>*      g_queue_pop_tail_link           (<link linkend="GQueue">GQueue</link> *queue);</programlisting>
+<para>
+Removes the last element of the queue.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>queue</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GQueue">GQueue</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para> the <link linkend="GList">GList</link> element at the tail of the queue, or <literal>NULL</literal> if the queue
+  is empty.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,1 @@
+c:\perl\bin\perl Configure --openssldir=c:/openssl enable-static-engine VC-WIN32

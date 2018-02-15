@@ -1,0 +1,72 @@
+
+'\"
+'\" The contents of this file are subject to the AOLserver Public License
+'\" Version 1.1 (the "License"); you may not use this file except in
+'\" compliance with the License. You may obtain a copy of the License at
+'\" http://aolserver.com/.
+'\"
+'\" Software distributed under the License is distributed on an "AS IS"
+'\" basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See
+'\" the License for the specific language governing rights and limitations
+'\" under the License.
+'\"
+'\" The Original Code is AOLserver Code and related documentation
+'\" distributed by AOL.
+'\" 
+'\" The Initial Developer of the Original Code is America Online,
+'\" Inc. Portions created by AOL are Copyright (C) 1999 America Online,
+'\" Inc. All Rights Reserved.
+'\"
+'\" Alternatively, the contents of this file may be used under the terms
+'\" of the GNU General Public License (the "GPL"), in which case the
+'\" provisions of GPL are applicable instead of those above.  If you wish
+'\" to allow use of your version of this file only under the terms of the
+'\" GPL and not to allow others to use your version of this file under the
+'\" License, indicate your decision by deleting the provisions above and
+'\" replace them with the notice and other provisions required by the GPL.
+'\" If you do not delete the provisions above, a recipient may use your
+'\" version of this file under either the License or the GPL.
+'\" 
+'\"
+'\" $Header: /Users/dossy/Desktop/cvs/aolserver/doc/Ns_ConnClose.3,v 1.1 2006/04/19 17:37:30 jgdavidson Exp $
+'\"
+'\" 
+.so man.macros
+
+.TH Ns_ConnClose 3 4.0 AOLserver "AOLserver Library Procedures"
+.BS
+'\" Note:  do not modify the .SH NAME line immediately below!
+.SH NAME
+Ns_ConnClose \- Close an open connection
+.SH SYNOPSIS
+.nf
+\fB#include "ns.h"\fR
+.sp
+int
+\fBNs_ConnClose\fR(\fIconn\fR)
+.SH ARGUMENTS
+.AS Ns_Conn conn in
+.AP Ns_Conn conn in
+Pointer to open connection.
+.BE
+
+.SH DESCRIPTION
+.PP
+This function calls the connection's communication driver to close
+the connection if it is not already closed.  It always returns
+NS_OK.
+.PP
+If the connection is marked for keep-alive, the underlying connection
+is not actually closed but instead returned to the driver thread
+to process additional requests, if any.  Connections are automatically
+marked for keep-alive by setting the \fINS_CONN_KEEPALIVE\fR flag
+if the client supports it by sending an appropriate
+\fIconnection-keepalive\fR header.  Keep alive can be disabled
+before a call to \fBNs_ConnClose\fR with the \fBNs_ConnSetKeepAliveFlag\fR
+routine with a zero value for the \fIflag\fR argument.
+
+.SH "SEE ALSO"
+Ns_ConnSetKeepAliveFlag(3), Ns_ConnGetKeepAliveFlag(3), Ns_ConnFlush(3)
+
+.SH KEYWORDS
+connection, close, keep-alive

@@ -1,0 +1,766 @@
+L, ian. 29 2018 08:17:21         bin.msvc
+	if not exist bin.msvc mkdir bin.msvc
+L, ian. 29 2018 08:17:21           int.msvc
+	if not exist int.msvc mkdir int.msvc
+L, ian. 29 2018 08:33:09         int.msvc\buf.obj
+D, iul. 23 2017 07:10:06           ..\buf.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:08         int.msvc\c14n.obj
+D, iul. 23 2017 07:10:06           ..\c14n.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:08         int.msvc\catalog.obj
+J, oct. 26 2017 09:54:40           ..\catalog.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:08         int.msvc\chvalid.obj
+Ma, iun. 07 2016 12:04:13           ..\chvalid.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:08         int.msvc\debugXML.obj
+D, iul. 23 2017 07:10:06           ..\debugXML.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:08         int.msvc\dict.obj
+J, oct. 26 2017 09:54:40           ..\dict.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:07         int.msvc\DOCBparser.obj
+Ma, iun. 07 2016 13:04:13           ..\DOCBparser.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:07         int.msvc\encoding.obj
+D, iul. 23 2017 07:10:06           ..\encoding.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:07         int.msvc\entities.obj
+L, aug. 28 2017 14:07:17           ..\entities.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:07         int.msvc\error.obj
+D, iul. 23 2017 07:10:06           ..\error.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:07         int.msvc\globals.obj
+Ma, iun. 07 2016 12:04:14           ..\globals.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:07         int.msvc\hash.obj
+D, iul. 23 2017 07:10:06           ..\hash.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:07         int.msvc\HTMLparser.obj
+D, iul. 23 2017 07:10:06           ..\HTMLparser.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:06         int.msvc\HTMLtree.obj
+Ma, iun. 07 2016 12:04:13           ..\HTMLtree.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:06         int.msvc\legacy.obj
+Ma, iun. 07 2016 12:04:14           ..\legacy.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:06         int.msvc\list.obj
+D, iul. 23 2017 07:10:06           ..\list.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:06         int.msvc\nanoftp.obj
+J, oct. 26 2017 09:54:40           ..\nanoftp.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:06         int.msvc\nanohttp.obj
+J, oct. 26 2017 09:54:40           ..\nanohttp.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:06         int.msvc\parser.obj
+J, oct. 26 2017 09:54:40           ..\parser.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:03         int.msvc\parserInternals.obj
+J, oct. 26 2017 09:54:40           ..\parserInternals.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:21         int.msvc\pattern.obj
+D, iul. 23 2017 07:10:06           ..\pattern.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:21         int.msvc\relaxng.obj
+J, oct. 26 2017 09:54:40           ..\relaxng.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:20         int.msvc\SAX2.obj
+J, oct. 26 2017 09:54:40           ..\SAX2.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:20         int.msvc\SAX.obj
+Ma, iun. 07 2016 12:04:13           ..\SAX.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:19         int.msvc\schematron.obj
+Ma, iun. 07 2016 12:04:14           ..\schematron.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:19         int.msvc\threads.obj
+J, oct. 26 2017 09:54:40           ..\threads.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:19         int.msvc\tree.obj
+J, oct. 26 2017 09:54:40           ..\tree.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:19         int.msvc\uri.obj
+J, oct. 26 2017 09:54:40           ..\uri.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:18         int.msvc\valid.obj
+J, oct. 26 2017 09:54:40           ..\valid.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:18         int.msvc\xinclude.obj
+Ma, iun. 07 2016 12:04:14           ..\xinclude.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:18         int.msvc\xlink.obj
+Ma, iun. 07 2016 12:04:14           ..\xlink.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:18         int.msvc\xmlIO.obj
+J, oct. 26 2017 09:54:40           ..\xmlIO.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:17         int.msvc\xmlmemory.obj
+J, oct. 26 2017 09:54:40           ..\xmlmemory.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:17         int.msvc\xmlreader.obj
+D, iul. 23 2017 07:10:06           ..\xmlreader.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:17         int.msvc\xmlregexp.obj
+J, oct. 26 2017 09:54:40           ..\xmlregexp.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:16         int.msvc\xmlmodule.obj
+J, oct. 26 2017 09:54:40           ..\xmlmodule.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:16         int.msvc\xmlsave.obj
+D, iul. 23 2017 07:10:06           ..\xmlsave.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:16         int.msvc\xmlschemas.obj
+J, oct. 26 2017 09:54:40           ..\xmlschemas.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:14         int.msvc\xmlschemastypes.obj
+J, oct. 26 2017 09:54:40           ..\xmlschemastypes.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:13         int.msvc\xmlunicode.obj
+L, aug. 28 2017 21:26:28           ..\xmlunicode.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:24         int.msvc\xmlwriter.obj
+J, oct. 26 2017 09:54:40           ..\xmlwriter.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:23         int.msvc\xpath.obj
+J, oct. 26 2017 09:54:40           ..\xpath.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:22         int.msvc\xpointer.obj
+L, aug. 28 2017 14:23:46           ..\xpointer.c
+L, ian. 29 2018 08:53:18           int.msvc
+L, ian. 29 2018 08:33:22         int.msvc\xmlstring.obj
+D, iul. 23 2017 07:10:06           ..\xmlstring.c
+L, ian. 29 2018 08:53:18           int.msvc
+Ma, iun. 07 2016 13:04:14           libxml2.def.src
+L, ian. 29 2018 08:32:59         int.msvc\libxml2.def
+	cl.exe /EP /nologo /I..\include /D "NOLIBTOOL" /D "_REENTRANT" libxml2.def.src > int.msvc\libxml2.def
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.msvc\ /c ..\buf.c ..\c14n.c ..\catalog.c ..\chvalid.c ..\debugXML.c ..\dict.c ..\DOCBparser.c ..\encoding.c ..\entities.c ..\error.c ..\globals.c ..\hash.c ..\HTMLparser.c ..\HTMLtree.c ..\legacy.c ..\list.c ..\nanoftp.c ..\nanohttp.c ..\parser.c ..\parserInternals.c ..\pattern.c ..\relaxng.c ..\SAX2.c ..\SAX.c ..\schematron.c ..\threads.c ..\tree.c ..\uri.c ..\valid.c ..\xinclude.c ..\xlink.c ..\xmlIO.c ..\xmlmemory.c ..\xmlreader.c ..\xmlregexp.c ..\xmlmodule.c ..\xmlsave.c ..\xmlschemas.c ..\xmlschemastypes.c ..\xmlunicode.c ..\xmlwriter.c ..\xpath.c ..\xpointer.c ..\xmlstring.c 
+buf.c
+c14n.c
+catalog.c
+chvalid.c
+debugXML.c
+dict.c
+DOCBparser.c
+encoding.c
+entities.c
+error.c
+globals.c
+hash.c
+HTMLparser.c
+HTMLtree.c
+legacy.c
+list.c
+nanoftp.c
+nanohttp.c
+parser.c
+parserInternals.c
+Generating Code...
+Compiling...
+pattern.c
+relaxng.c
+SAX2.c
+SAX.c
+schematron.c
+threads.c
+tree.c
+uri.c
+valid.c
+xinclude.c
+xlink.c
+xmlIO.c
+xmlmemory.c
+xmlreader.c
+xmlregexp.c
+xmlmodule.c
+xmlsave.c
+xmlschemas.c
+xmlschemastypes.c
+xmlunicode.c
+Generating Code...
+Compiling...
+xmlwriter.c
+xpath.c
+xpointer.c
+xmlstring.c
+Generating Code...
+L, ian. 29 2018 08:25:03       bin.msvc\libxml2d.dll
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /DLL  /IMPLIB:bin.msvc\libxml2d.lib /OUT:bin.msvc\libxml2d.dll int.msvc\buf.obj int.msvc\c14n.obj int.msvc\catalog.obj int.msvc\chvalid.obj int.msvc\debugXML.obj int.msvc\dict.obj int.msvc\DOCBparser.obj int.msvc\encoding.obj int.msvc\entities.obj int.msvc\error.obj int.msvc\globals.obj int.msvc\hash.obj int.msvc\HTMLparser.obj int.msvc\HTMLtree.obj int.msvc\legacy.obj int.msvc\list.obj int.msvc\nanoftp.obj int.msvc\nanohttp.obj int.msvc\parser.obj int.msvc\parserInternals.obj int.msvc\pattern.obj int.msvc\relaxng.obj int.msvc\SAX2.obj int.msvc\SAX.obj int.msvc\schematron.obj int.msvc\threads.obj int.msvc\tree.obj int.msvc\uri.obj int.msvc\valid.obj int.msvc\xinclude.obj int.msvc\xlink.obj int.msvc\xmlIO.obj int.msvc\xmlmemory.obj int.msvc\xmlreader.obj int.msvc\xmlregexp.obj int.msvc\xmlmodule.obj int.msvc\xmlsave.obj int.msvc\xmlschemas.obj int.msvc\xmlschemastypes.obj int.msvc\xmlunicode.obj int.msvc\xmlwriter.obj int.msvc\xpath.obj int.msvc\xpointer.obj int.msvc\xmlstring.obj  wsock32.lib ws2_32.lib kernel32.lib
+   Creating library bin.msvc\libxml2d.lib and object bin.msvc\libxml2d.exp
+                              libxml target does not exist
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:17:50           int.a.msvc
+	if not exist int.a.msvc mkdir int.a.msvc
+L, ian. 29 2018 08:33:33         int.a.msvc\buf.obj
+L, ian. 29 2018 08:53:18           ..\buf.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:33         int.a.msvc\c14n.obj
+L, ian. 29 2018 08:53:18           ..\c14n.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:33         int.a.msvc\catalog.obj
+L, ian. 29 2018 08:53:18           ..\catalog.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:33         int.a.msvc\chvalid.obj
+L, ian. 29 2018 08:53:18           ..\chvalid.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:33         int.a.msvc\debugXML.obj
+L, ian. 29 2018 08:53:18           ..\debugXML.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\dict.obj
+L, ian. 29 2018 08:53:18           ..\dict.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\DOCBparser.obj
+L, ian. 29 2018 08:53:18           ..\DOCBparser.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\encoding.obj
+L, ian. 29 2018 08:53:18           ..\encoding.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\entities.obj
+L, ian. 29 2018 08:53:18           ..\entities.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\error.obj
+L, ian. 29 2018 08:53:18           ..\error.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\globals.obj
+L, ian. 29 2018 08:53:18           ..\globals.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\hash.obj
+L, ian. 29 2018 08:53:18           ..\hash.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:32         int.a.msvc\HTMLparser.obj
+L, ian. 29 2018 08:53:18           ..\HTMLparser.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:31         int.a.msvc\HTMLtree.obj
+L, ian. 29 2018 08:53:18           ..\HTMLtree.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:31         int.a.msvc\legacy.obj
+L, ian. 29 2018 08:53:18           ..\legacy.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:31         int.a.msvc\list.obj
+L, ian. 29 2018 08:53:18           ..\list.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:31         int.a.msvc\nanoftp.obj
+L, ian. 29 2018 08:53:18           ..\nanoftp.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:31         int.a.msvc\nanohttp.obj
+L, ian. 29 2018 08:53:18           ..\nanohttp.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:31         int.a.msvc\parser.obj
+L, ian. 29 2018 08:53:18           ..\parser.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:28         int.a.msvc\parserInternals.obj
+L, ian. 29 2018 08:53:18           ..\parserInternals.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:46         int.a.msvc\pattern.obj
+L, ian. 29 2018 08:53:18           ..\pattern.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:46         int.a.msvc\relaxng.obj
+L, ian. 29 2018 08:53:18           ..\relaxng.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:45         int.a.msvc\SAX2.obj
+L, ian. 29 2018 08:53:18           ..\SAX2.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:45         int.a.msvc\SAX.obj
+L, ian. 29 2018 08:53:18           ..\SAX.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:45         int.a.msvc\schematron.obj
+L, ian. 29 2018 08:53:18           ..\schematron.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:45         int.a.msvc\threads.obj
+L, ian. 29 2018 08:53:18           ..\threads.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:45         int.a.msvc\tree.obj
+L, ian. 29 2018 08:53:18           ..\tree.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:44         int.a.msvc\uri.obj
+L, ian. 29 2018 08:53:18           ..\uri.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:44         int.a.msvc\valid.obj
+L, ian. 29 2018 08:53:18           ..\valid.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:43         int.a.msvc\xinclude.obj
+L, ian. 29 2018 08:53:18           ..\xinclude.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:43         int.a.msvc\xlink.obj
+L, ian. 29 2018 08:53:18           ..\xlink.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:43         int.a.msvc\xmlIO.obj
+L, ian. 29 2018 08:53:18           ..\xmlIO.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:43         int.a.msvc\xmlmemory.obj
+L, ian. 29 2018 08:53:18           ..\xmlmemory.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:43         int.a.msvc\xmlreader.obj
+L, ian. 29 2018 08:53:18           ..\xmlreader.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:42         int.a.msvc\xmlregexp.obj
+L, ian. 29 2018 08:53:18           ..\xmlregexp.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:41         int.a.msvc\xmlmodule.obj
+L, ian. 29 2018 08:53:18           ..\xmlmodule.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:41         int.a.msvc\xmlsave.obj
+L, ian. 29 2018 08:53:18           ..\xmlsave.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:41         int.a.msvc\xmlschemas.obj
+L, ian. 29 2018 08:53:18           ..\xmlschemas.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:39         int.a.msvc\xmlschemastypes.obj
+L, ian. 29 2018 08:53:18           ..\xmlschemastypes.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:38         int.a.msvc\xmlunicode.obj
+L, ian. 29 2018 08:53:18           ..\xmlunicode.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:49         int.a.msvc\xmlwriter.obj
+L, ian. 29 2018 08:53:18           ..\xmlwriter.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:49         int.a.msvc\xpath.obj
+L, ian. 29 2018 08:53:18           ..\xpath.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:47         int.a.msvc\xpointer.obj
+L, ian. 29 2018 08:53:18           ..\xpointer.c
+L, ian. 29 2018 08:53:42           int.a.msvc
+L, ian. 29 2018 08:33:47         int.a.msvc\xmlstring.obj
+L, ian. 29 2018 08:53:18           ..\xmlstring.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /D "LIBXML_STATIC" /Foint.a.msvc\ /c ..\buf.c ..\c14n.c ..\catalog.c ..\chvalid.c ..\debugXML.c ..\dict.c ..\DOCBparser.c ..\encoding.c ..\entities.c ..\error.c ..\globals.c ..\hash.c ..\HTMLparser.c ..\HTMLtree.c ..\legacy.c ..\list.c ..\nanoftp.c ..\nanohttp.c ..\parser.c ..\parserInternals.c ..\pattern.c ..\relaxng.c ..\SAX2.c ..\SAX.c ..\schematron.c ..\threads.c ..\tree.c ..\uri.c ..\valid.c ..\xinclude.c ..\xlink.c ..\xmlIO.c ..\xmlmemory.c ..\xmlreader.c ..\xmlregexp.c ..\xmlmodule.c ..\xmlsave.c ..\xmlschemas.c ..\xmlschemastypes.c ..\xmlunicode.c ..\xmlwriter.c ..\xpath.c ..\xpointer.c ..\xmlstring.c 
+buf.c
+c14n.c
+catalog.c
+chvalid.c
+debugXML.c
+dict.c
+DOCBparser.c
+encoding.c
+entities.c
+error.c
+globals.c
+hash.c
+HTMLparser.c
+HTMLtree.c
+legacy.c
+list.c
+nanoftp.c
+nanohttp.c
+parser.c
+parserInternals.c
+Generating Code...
+Compiling...
+pattern.c
+relaxng.c
+SAX2.c
+SAX.c
+schematron.c
+threads.c
+tree.c
+uri.c
+valid.c
+xinclude.c
+xlink.c
+xmlIO.c
+xmlmemory.c
+xmlreader.c
+xmlregexp.c
+xmlmodule.c
+xmlsave.c
+xmlschemas.c
+xmlschemastypes.c
+xmlunicode.c
+Generating Code...
+Compiling...
+xmlwriter.c
+xpath.c
+xpointer.c
+xmlstring.c
+Generating Code...
+L, ian. 29 2018 08:25:04       bin.msvc\libxml2_ad.lib
+	lib.exe /nologo /OUT:bin.msvc\libxml2_ad.lib int.a.msvc\buf.obj int.a.msvc\c14n.obj int.a.msvc\catalog.obj int.a.msvc\chvalid.obj int.a.msvc\debugXML.obj int.a.msvc\dict.obj int.a.msvc\DOCBparser.obj int.a.msvc\encoding.obj int.a.msvc\entities.obj int.a.msvc\error.obj int.a.msvc\globals.obj int.a.msvc\hash.obj int.a.msvc\HTMLparser.obj int.a.msvc\HTMLtree.obj int.a.msvc\legacy.obj int.a.msvc\list.obj int.a.msvc\nanoftp.obj int.a.msvc\nanohttp.obj int.a.msvc\parser.obj int.a.msvc\parserInternals.obj int.a.msvc\pattern.obj int.a.msvc\relaxng.obj int.a.msvc\SAX2.obj int.a.msvc\SAX.obj int.a.msvc\schematron.obj int.a.msvc\threads.obj int.a.msvc\tree.obj int.a.msvc\uri.obj int.a.msvc\valid.obj int.a.msvc\xinclude.obj int.a.msvc\xlink.obj int.a.msvc\xmlIO.obj int.a.msvc\xmlmemory.obj int.a.msvc\xmlreader.obj int.a.msvc\xmlregexp.obj int.a.msvc\xmlmodule.obj int.a.msvc\xmlsave.obj int.a.msvc\xmlschemas.obj int.a.msvc\xmlschemastypes.obj int.a.msvc\xmlunicode.obj int.a.msvc\xmlwriter.obj int.a.msvc\xpath.obj int.a.msvc\xpointer.obj int.a.msvc\xmlstring.obj
+                              libxmla target does not exist
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:18:15           int.a.dll.msvc
+	if not exist int.a.dll.msvc mkdir int.a.dll.msvc
+L, ian. 29 2018 08:33:59         int.a.dll.msvc\buf.obj
+L, ian. 29 2018 08:53:18           ..\buf.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:59         int.a.dll.msvc\c14n.obj
+L, ian. 29 2018 08:53:18           ..\c14n.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:59         int.a.dll.msvc\catalog.obj
+L, ian. 29 2018 08:53:18           ..\catalog.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:59         int.a.dll.msvc\chvalid.obj
+L, ian. 29 2018 08:53:18           ..\chvalid.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:59         int.a.dll.msvc\debugXML.obj
+L, ian. 29 2018 08:53:18           ..\debugXML.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\dict.obj
+L, ian. 29 2018 08:53:18           ..\dict.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\DOCBparser.obj
+L, ian. 29 2018 08:53:18           ..\DOCBparser.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\encoding.obj
+L, ian. 29 2018 08:53:18           ..\encoding.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\entities.obj
+L, ian. 29 2018 08:53:18           ..\entities.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\error.obj
+L, ian. 29 2018 08:53:18           ..\error.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\globals.obj
+L, ian. 29 2018 08:53:18           ..\globals.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\hash.obj
+L, ian. 29 2018 08:53:18           ..\hash.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:58         int.a.dll.msvc\HTMLparser.obj
+L, ian. 29 2018 08:53:18           ..\HTMLparser.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:57         int.a.dll.msvc\HTMLtree.obj
+L, ian. 29 2018 08:53:18           ..\HTMLtree.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:57         int.a.dll.msvc\legacy.obj
+L, ian. 29 2018 08:53:18           ..\legacy.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:57         int.a.dll.msvc\list.obj
+L, ian. 29 2018 08:53:18           ..\list.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:57         int.a.dll.msvc\nanoftp.obj
+L, ian. 29 2018 08:53:18           ..\nanoftp.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:57         int.a.dll.msvc\nanohttp.obj
+L, ian. 29 2018 08:53:18           ..\nanohttp.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:57         int.a.dll.msvc\parser.obj
+L, ian. 29 2018 08:53:18           ..\parser.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:33:54         int.a.dll.msvc\parserInternals.obj
+L, ian. 29 2018 08:53:18           ..\parserInternals.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:13         int.a.dll.msvc\pattern.obj
+L, ian. 29 2018 08:53:18           ..\pattern.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:12         int.a.dll.msvc\relaxng.obj
+L, ian. 29 2018 08:53:18           ..\relaxng.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:11         int.a.dll.msvc\SAX2.obj
+L, ian. 29 2018 08:53:18           ..\SAX2.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:11         int.a.dll.msvc\SAX.obj
+L, ian. 29 2018 08:53:18           ..\SAX.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:11         int.a.dll.msvc\schematron.obj
+L, ian. 29 2018 08:53:18           ..\schematron.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:11         int.a.dll.msvc\threads.obj
+L, ian. 29 2018 08:53:18           ..\threads.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:11         int.a.dll.msvc\tree.obj
+L, ian. 29 2018 08:53:18           ..\tree.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:10         int.a.dll.msvc\uri.obj
+L, ian. 29 2018 08:53:18           ..\uri.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:10         int.a.dll.msvc\valid.obj
+L, ian. 29 2018 08:53:18           ..\valid.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:09         int.a.dll.msvc\xinclude.obj
+L, ian. 29 2018 08:53:18           ..\xinclude.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:09         int.a.dll.msvc\xlink.obj
+L, ian. 29 2018 08:53:18           ..\xlink.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:09         int.a.dll.msvc\xmlIO.obj
+L, ian. 29 2018 08:53:18           ..\xmlIO.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:09         int.a.dll.msvc\xmlmemory.obj
+L, ian. 29 2018 08:53:18           ..\xmlmemory.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:09         int.a.dll.msvc\xmlreader.obj
+L, ian. 29 2018 08:53:18           ..\xmlreader.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:09         int.a.dll.msvc\xmlregexp.obj
+L, ian. 29 2018 08:53:18           ..\xmlregexp.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:08         int.a.dll.msvc\xmlmodule.obj
+L, ian. 29 2018 08:53:18           ..\xmlmodule.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:08         int.a.dll.msvc\xmlsave.obj
+L, ian. 29 2018 08:53:18           ..\xmlsave.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:08         int.a.dll.msvc\xmlschemas.obj
+L, ian. 29 2018 08:53:18           ..\xmlschemas.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:05         int.a.dll.msvc\xmlschemastypes.obj
+L, ian. 29 2018 08:53:18           ..\xmlschemastypes.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:04         int.a.dll.msvc\xmlunicode.obj
+L, ian. 29 2018 08:53:18           ..\xmlunicode.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:15         int.a.dll.msvc\xmlwriter.obj
+L, ian. 29 2018 08:53:18           ..\xmlwriter.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:15         int.a.dll.msvc\xpath.obj
+L, ian. 29 2018 08:53:18           ..\xpath.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:14         int.a.dll.msvc\xpointer.obj
+L, ian. 29 2018 08:53:18           ..\xpointer.c
+L, ian. 29 2018 08:54:10           int.a.dll.msvc
+L, ian. 29 2018 08:34:13         int.a.dll.msvc\xmlstring.obj
+L, ian. 29 2018 08:53:18           ..\xmlstring.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /D "LIBXML_STATIC" /D "LIBXML_STATIC_FOR_DLL" /Foint.a.dll.msvc\ /c ..\buf.c ..\c14n.c ..\catalog.c ..\chvalid.c ..\debugXML.c ..\dict.c ..\DOCBparser.c ..\encoding.c ..\entities.c ..\error.c ..\globals.c ..\hash.c ..\HTMLparser.c ..\HTMLtree.c ..\legacy.c ..\list.c ..\nanoftp.c ..\nanohttp.c ..\parser.c ..\parserInternals.c ..\pattern.c ..\relaxng.c ..\SAX2.c ..\SAX.c ..\schematron.c ..\threads.c ..\tree.c ..\uri.c ..\valid.c ..\xinclude.c ..\xlink.c ..\xmlIO.c ..\xmlmemory.c ..\xmlreader.c ..\xmlregexp.c ..\xmlmodule.c ..\xmlsave.c ..\xmlschemas.c ..\xmlschemastypes.c ..\xmlunicode.c ..\xmlwriter.c ..\xpath.c ..\xpointer.c ..\xmlstring.c 
+buf.c
+c14n.c
+catalog.c
+chvalid.c
+debugXML.c
+dict.c
+DOCBparser.c
+encoding.c
+entities.c
+error.c
+globals.c
+hash.c
+HTMLparser.c
+HTMLtree.c
+legacy.c
+list.c
+nanoftp.c
+nanohttp.c
+parser.c
+parserInternals.c
+Generating Code...
+Compiling...
+pattern.c
+relaxng.c
+SAX2.c
+SAX.c
+schematron.c
+threads.c
+tree.c
+uri.c
+valid.c
+xinclude.c
+xlink.c
+xmlIO.c
+xmlmemory.c
+xmlreader.c
+xmlregexp.c
+xmlmodule.c
+xmlsave.c
+xmlschemas.c
+xmlschemastypes.c
+xmlunicode.c
+Generating Code...
+Compiling...
+xmlwriter.c
+xpath.c
+xpointer.c
+xmlstring.c
+Generating Code...
+L, ian. 29 2018 08:34:16       bin.msvc\libxml2_a_dll.lib
+	lib.exe /nologo /OUT:bin.msvc\libxml2_a_dll.lib int.a.dll.msvc\buf.obj int.a.dll.msvc\c14n.obj int.a.dll.msvc\catalog.obj int.a.dll.msvc\chvalid.obj int.a.dll.msvc\debugXML.obj int.a.dll.msvc\dict.obj int.a.dll.msvc\DOCBparser.obj int.a.dll.msvc\encoding.obj int.a.dll.msvc\entities.obj int.a.dll.msvc\error.obj int.a.dll.msvc\globals.obj int.a.dll.msvc\hash.obj int.a.dll.msvc\HTMLparser.obj int.a.dll.msvc\HTMLtree.obj int.a.dll.msvc\legacy.obj int.a.dll.msvc\list.obj int.a.dll.msvc\nanoftp.obj int.a.dll.msvc\nanohttp.obj int.a.dll.msvc\parser.obj int.a.dll.msvc\parserInternals.obj int.a.dll.msvc\pattern.obj int.a.dll.msvc\relaxng.obj int.a.dll.msvc\SAX2.obj int.a.dll.msvc\SAX.obj int.a.dll.msvc\schematron.obj int.a.dll.msvc\threads.obj int.a.dll.msvc\tree.obj int.a.dll.msvc\uri.obj int.a.dll.msvc\valid.obj int.a.dll.msvc\xinclude.obj int.a.dll.msvc\xlink.obj int.a.dll.msvc\xmlIO.obj int.a.dll.msvc\xmlmemory.obj int.a.dll.msvc\xmlreader.obj int.a.dll.msvc\xmlregexp.obj int.a.dll.msvc\xmlmodule.obj int.a.dll.msvc\xmlsave.obj int.a.dll.msvc\xmlschemas.obj int.a.dll.msvc\xmlschemastypes.obj int.a.dll.msvc\xmlunicode.obj int.a.dll.msvc\xmlwriter.obj int.a.dll.msvc\xpath.obj int.a.dll.msvc\xpointer.obj int.a.dll.msvc\xmlstring.obj
+                              libxmladll target does not exist
+L, ian. 29 2018 08:18:39         int.utils.msvc
+	if not exist int.utils.msvc mkdir int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:17       bin.msvc\xmllint.exe
+J, oct. 26 2017 09:54:40         ..\xmllint.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\xmllint.c
+xmllint.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\xmllint.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\xmllint.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:17       bin.msvc\xmlcatalog.exe
+J, oct. 26 2017 09:54:40         ..\xmlcatalog.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\xmlcatalog.c
+xmlcatalog.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\xmlcatalog.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\xmlcatalog.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:17       bin.msvc\testAutomata.exe
+Ma, iun. 07 2016 13:04:14         ..\testAutomata.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testAutomata.c
+testAutomata.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testAutomata.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testAutomata.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:18       bin.msvc\testC14N.exe
+Ma, iun. 07 2016 13:04:14         ..\testC14N.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testC14N.c
+testC14N.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testC14N.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testC14N.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+                                bin.msvc\testDocbook.exe target does not exist
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:18       bin.msvc\testHTML.exe
+Ma, iun. 07 2016 13:04:14         ..\testHTML.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testHTML.c
+testHTML.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testHTML.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testHTML.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:18       bin.msvc\testReader.exe
+J, iul. 30 2009 18:24:35         ..\testReader.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testReader.c
+testReader.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testReader.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testReader.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:19       bin.msvc\testRelax.exe
+Ma, iun. 07 2016 13:04:14         ..\testRelax.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testRelax.c
+testRelax.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testRelax.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testRelax.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:19       bin.msvc\testRegexp.exe
+Ma, iun. 07 2016 13:04:14         ..\testRegexp.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testRegexp.c
+testRegexp.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testRegexp.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testRegexp.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:19       bin.msvc\testModule.exe
+Ma, iun. 07 2016 13:04:14         ..\testModule.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testModule.c
+testModule.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testModule.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testModule.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:19       bin.msvc\testSAX.exe
+Ma, iun. 07 2016 13:04:14         ..\testSAX.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testSAX.c
+testSAX.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testSAX.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testSAX.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:20       bin.msvc\testSchemas.exe
+Ma, iun. 07 2016 13:04:14         ..\testSchemas.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testSchemas.c
+testSchemas.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testSchemas.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testSchemas.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:20       bin.msvc\testURI.exe
+Ma, iun. 07 2016 08:44:54         ..\testURI.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testURI.c
+testURI.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testURI.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testURI.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:20       bin.msvc\testXPath.exe
+Ma, iun. 07 2016 13:04:14         ..\testXPath.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testXPath.c
+testXPath.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testXPath.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testXPath.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:21       bin.msvc\runtest.exe
+J, oct. 26 2017 10:54:40         ..\runtest.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\runtest.c
+runtest.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\runtest.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\runtest.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:22       bin.msvc\runsuite.exe
+Ma, iun. 07 2016 13:04:14         ..\runsuite.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\runsuite.c
+runsuite.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\runsuite.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\runsuite.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:29       bin.msvc\testapi.exe
+J, aug. 31 2017 11:52:05         ..\testapi.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testapi.c
+testapi.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testapi.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testapi.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:29       bin.msvc\testlimits.exe
+L, nov. 07 2016 10:41:40         ..\testlimits.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testlimits.c
+testlimits.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testlimits.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testlimits.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:30       bin.msvc\testrecurse.exe
+J, oct. 26 2017 10:54:40         ..\testrecurse.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testrecurse.c
+testrecurse.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testrecurse.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testrecurse.obj
+L, ian. 29 2018 08:54:33         int.utils.msvc
+L, ian. 29 2018 08:53:18         bin.msvc
+L, ian. 29 2018 08:53:42         libxml
+L, ian. 29 2018 08:54:10         libxmla
+L, ian. 29 2018 08:54:33         libxmladll
+L, ian. 29 2018 08:34:31       bin.msvc\testThreadsWin32.exe
+Ma, iun. 07 2016 13:04:14         ..\testThreadsWin32.c
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /D "NOLIBTOOL" /W3 /wd4244 /wd4267 /MD /I.. /I..\include /I.\include /D "_REENTRANT" /D "HAVE_WIN32_THREADS" /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\testThreadsWin32.c
+testThreadsWin32.c
+	link.exe /nologo /VERSION:2.9 /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\testThreadsWin32.exe libxml2d.lib  wsock32.lib ws2_32.lib kernel32.lib int.utils.msvc\testThreadsWin32.obj
+                              utils target does not exist
+                            all target does not exist

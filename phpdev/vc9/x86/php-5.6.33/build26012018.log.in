@@ -1,0 +1,299 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+	SET PATH=C:\php-sdk\bin\;C:\Program Files\Git\mingw32\bin\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\include\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Windows\Microsoft.NET\Framework\v3.5;;C:\MsVS09\Common7\IDE;C:\MsVS09\Common7\Tools;;C:\MsVS09\VC\Bin;C:\MsVS09\VC\Bin\VCPackages;;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin\NETFX 4.0 Tools;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin;;C:\Program Files\Microsoft SDKs\Windows\v8.1\bin\NETFX 4.0 Tools;c:\MsVS09\\Common7\IDE;c:\MsVS09\\VC\BIN;c:\MsVS09\\Common7\Tools;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Framework\v2.0.50727;c:\MsVS09\\VC\VCPackages;C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin;C:\php-sdk\bin;C:\php-sdk\msys2\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Universal Extractor;C:\Program Files\Universal Extractor\bin;C:\Program Files\WinMerge;C:\Program Files\Microsoft Network Monitor 3\;C:\Program Files\Skype\Phone\;c:\Program Files\Java\jdk1.8.0_152\bin\;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\Git\cmd;c:\Program Files\Resource Hacker\;C:\php-sdk\phpdev\vc9\x86\deps\bin
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+	for %T in (php5aolserver.dll php5apache2_2_filter.dll php5apache2_2.dll php5apache2_4.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll) do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5aolserver.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+SAPI sapi\aolserver build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_2_filter.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php5apache2_2_filter.lib and object Release_TS\php5apache2_2_filter.exp
+SAPI sapi\apache2filter (via sapi\apache2_2filter) build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php5apache2_2.lib and object Release_TS\php5apache2_2.exp
+SAPI sapi\apache2handler (via sapi\apache2_2handler) build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_4.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php5apache2_4.lib and object Release_TS\php5apache2_4.exp
+SAPI sapi\apache2handler (via sapi\apache2handler) build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php-cgi.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+SAPI sapi\cgi build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php.lib and object Release_TS\php.exp
+SAPI sapi\cli build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php-win.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php-win.lib and object Release_TS\php-win.exp
+SAPI sapi\cli build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5embed.lib" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+	lib.exe /nologo /out:Release_TS\php5embed.lib /nologo /version:5.6.33 /incremental:no /debug /opt:ref,icf /libpath:"C:\php-sdk\phpdev\vc9\x86\deps\lib" Release_TS\sapi\embed\php_embed.obj Release_TS\php5ts.lib   Release_TS\php5embed.lib.res
+LINK : warning LNK4044: unrecognized option '/version:5.6.33'; ignored
+LINK : warning LNK4044: unrecognized option '/incremental:no'; ignored
+LINK : warning LNK4044: unrecognized option '/debug'; ignored
+LINK : warning LNK4044: unrecognized option '/opt:ref,icf'; ignored
+SAPI sapi\embed build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5isapi.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php5isapi.lib and object Release_TS\php5isapi.exp
+SAPI sapi\isapi build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "phpdbg.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\phpdbg.lib and object Release_TS\phpdbg.exp
+SAPI sapi\phpdbg build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5phpdbg.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php5phpdbg.lib and object Release_TS\php5phpdbg.exp
+SAPI sapi\phpdbg build complete
+	for %T in (php_bz2.dll php_fileinfo.dll php_odbc.dll php_opcache.dll php_sqlite3.dll php_zip.dll php_mysqli.dll php_pdo_firebird.dll php_pdo_mysql.dll php_pdo_odbc.dll php_pdo_pgsql.dll php_pdo_sqlite.dll) do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_bz2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+EXT bz2 build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_fileinfo.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_fileinfo.lib and object Release_TS\php_fileinfo.exp
+EXT fileinfo build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_odbc.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_odbc.lib and object Release_TS\php_odbc.exp
+EXT odbc build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_opcache.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_opcache.lib and object Release_TS\php_opcache.exp
+EXT opcache build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_sqlite3.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_sqlite3.lib and object Release_TS\php_sqlite3.exp
+EXT sqlite3 build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_zip.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_zip.lib and object Release_TS\php_zip.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+EXT zip build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_mysqli.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_mysqli.lib and object Release_TS\php_mysqli.exp
+EXT mysqli build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_firebird.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+EXT pdo_firebird build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_mysql.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_pdo_mysql.lib and object Release_TS\php_pdo_mysql.exp
+EXT pdo_mysql build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_odbc.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+EXT pdo_odbc build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_pgsql.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_pdo_pgsql.lib and object Release_TS\php_pdo_pgsql.exp
+EXT pdo_pgsql build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_sqlite.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_pdo_sqlite.lib and object Release_TS\php_pdo_sqlite.exp
+EXT pdo_sqlite build complete
+	for %T in () do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+Release_TS\php_fileinfo.lib
+        1 file(s) copied.
+Release_TS\php_odbc.lib
+        1 file(s) copied.
+Release_TS\php_opcache.lib
+        1 file(s) copied.
+Release_TS\php_sqlite3.lib
+        1 file(s) copied.
+Release_TS\php_zip.lib
+        1 file(s) copied.
+Release_TS\php_mysqli.lib
+        1 file(s) copied.
+Release_TS\php_pdo_mysql.lib
+        1 file(s) copied.
+Release_TS\php_pdo_pgsql.lib
+        1 file(s) copied.
+Release_TS\php_pdo_sqlite.lib
+        1 file(s) copied.
+	rd /s /q Release_TS\php-5.6.33
+	rd /s /q Release_TS\pecl-5.6.33
+	del /f /q Release_TS\php-5.6.33-Win32-VC9-x86.zip
+	del /f /q Release_TS\php-debug-pack-5.6.33-Win32-VC9-x86.zip
+	del /f /q Release_TS\pecl-5.6.33-Win32-VC9-x86.zip
+	Release_TS\php.exe -d date.timezone=UTC -n -dphar.readonly=0 win32/build/mkdist.php "Release_TS" "C:\php-sdk\phpdev\vc9\x86\deps" "php5ts.dll" "php5aolserver.dll php5apache2_2_filter.dll php5apache2_2.dll php5apache2_4.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll" "php_bz2.dll php_fileinfo.dll php_odbc.dll php_opcache.dll php_sqlite3.dll php_zip.dll php_mysqli.dll php_pdo_firebird.dll php_pdo_mysql.dll php_pdo_odbc.dll php_pdo_pgsql.dll php_pdo_sqlite.dll " " " "C:\php-sdk\phpdev\vc9\x86\deps\template"
+Making dist for Release_TS
+Copying php5aolserver.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2_2_filter.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2_2.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2_4.dll from Release_TS to Release_TS/php-5.6.33
+Copying php-cgi.exe from Release_TS to Release_TS/php-5.6.33
+Copying php.exe from Release_TS to Release_TS/php-5.6.33
+Copying php-win.exe from Release_TS to Release_TS/php-5.6.33
+Copying php5embed.lib from Release_TS to Release_TS/php-5.6.33
+Copying php5isapi.dll from Release_TS to Release_TS/php-5.6.33
+Copying phpdbg.exe from Release_TS to Release_TS/php-5.6.33
+Copying php5phpdbg.dll from Release_TS to Release_TS/php-5.6.33
+Copying php_bz2.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_fileinfo.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_odbc.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_opcache.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_sqlite3.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_zip.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_mysqli.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_firebird.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_mysql.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_odbc.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_pgsql.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_sqlite.dll from Release_TS to Release_TS/php-5.6.33/ext
+WARNING: distro depends on libbz2.dll, but could not find it on your system
+Array
+(
+    [0] => C:\php-sdk\phpdev\vc9\x86\deps\template/ssl
+)
+Generating pharcommand.phar
+adding clicommand.inc
+adding directorygraphiterator.inc
+adding directorytreeiterator.inc
+adding invertedregexiterator.inc
+adding phar.inc
+adding pharcommand.inc
+Creating phar.phar.bat
+	cd Release_TS\php-5.6.33
+	zip.exe -9 -q -r ..\php-5.6.33-Win32-VC9-x86.zip .
+	cd ..\..
+	cd Release_TS\pecl-5.6.33
+	zip.exe -9 -q -r ..\pecl-5.6.33-Win32-VC9-x86.zip .
+
+zip error: Nothing to do! (try: zip -9 -q -r ..\pecl-5.6.33-Win32-VC9-x86.zip . -i .)
+	cd ..\..
+	cd Release_TS\php-test-pack-5.6.33
+	zip.exe -9 -q -r ..\php-test-pack-5.6.33.zip .
+	cd ..\..
+	cd Release_TS
+	zip.exe -9 -q php-debug-pack-5.6.33-Win32-VC9-x86.zip *.pdb
+	cd
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS
+	cd
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS
+	zip.exe -9 -q -r php-devel-pack-5.6.33-Win32-VC9-x86.zip php-5.6.33-devel-VC9-x86
+	cd ..\..

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "php", "php5cli.vcproj", "{4547147B-FF2F-40E3-9584-02EA4634DC71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_TS|Win32 = Debug_TS|Win32
+		Release_TS_inline|Win32 = Release_TS_inline|Win32
+		Release_TS|Win32 = Release_TS|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4547147B-FF2F-40E3-9584-02EA4634DC71}.Debug_TS|Win32.ActiveCfg = Debug_TS|Win32
+		{4547147B-FF2F-40E3-9584-02EA4634DC71}.Debug_TS|Win32.Build.0 = Debug_TS|Win32
+		{4547147B-FF2F-40E3-9584-02EA4634DC71}.Release_TS_inline|Win32.ActiveCfg = Release_TS_inline|Win32
+		{4547147B-FF2F-40E3-9584-02EA4634DC71}.Release_TS_inline|Win32.Build.0 = Release_TS_inline|Win32
+		{4547147B-FF2F-40E3-9584-02EA4634DC71}.Release_TS|Win32.ActiveCfg = Release_TS|Win32
+		{4547147B-FF2F-40E3-9584-02EA4634DC71}.Release_TS|Win32.Build.0 = Release_TS|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

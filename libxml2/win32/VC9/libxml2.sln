@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libXML2_a_DLL", "libXML2_a_DLL.vcproj", "{4E4CD8DE-44D1-4593-AE98-90E7F970FE3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E4CD8DE-44D1-4593-AE98-90E7F970FE3A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4E4CD8DE-44D1-4593-AE98-90E7F970FE3A}.Debug|Win32.Build.0 = Debug|Win32
+		{4E4CD8DE-44D1-4593-AE98-90E7F970FE3A}.Release|Win32.ActiveCfg = Release|Win32
+		{4E4CD8DE-44D1-4593-AE98-90E7F970FE3A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,783 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+	SET PATH=C:\php-sdk\bin\;C:\Program Files\Git\mingw32\bin\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\include\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Windows\Microsoft.NET\Framework\v3.5;;C:\MsVS09\Common7\IDE;C:\MsVS09\Common7\Tools;;C:\MsVS09\VC\Bin;C:\MsVS09\VC\Bin\VCPackages;;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin\NETFX 4.0 Tools;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin;;C:\Program Files\Microsoft SDKs\Windows\v8.1\bin\NETFX 4.0 Tools;c:\MsVS09\\Common7\IDE;c:\MsVS09\\VC\BIN;c:\MsVS09\\Common7\Tools;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Framework\v2.0.50727;c:\MsVS09\\VC\VCPackages;C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin;C:\php-sdk\bin;C:\php-sdk\msys2\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Universal Extractor;C:\Program Files\Universal Extractor\bin;C:\Program Files\WinMerge;C:\Program Files\Microsoft Network Monitor 3\;C:\Program Files\Skype\Phone\;c:\Program Files\Java\jdk1.8.0_152\bin\;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\Git\cmd;c:\Program Files\Resource Hacker\;C:\Program Files\CVSNT\;C:\php-sdk\phpdev\vc9\x86\deps\bin
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+	for %T in (php5aolserver.dll php5apache.dll php5apache2_filter.dll php5apache2_2_filter.dll php5apache2.dll php5apache2_2.dll php5apache2_4.dll php5apache_hooks.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll) do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5aolserver.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+SAPI sapi\aolserver build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5apache.lib and object Release_TS\php5apache.exp
+SAPI sapi\apache build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_filter.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5apache2_filter.lib and object Release_TS\php5apache2_filter.exp
+SAPI sapi\apache2filter build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_2_filter.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5apache2_2_filter.lib and object Release_TS\php5apache2_2_filter.exp
+SAPI sapi\apache2filter (via sapi\apache2_2filter) build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5apache2.lib and object Release_TS\php5apache2.exp
+SAPI sapi\apache2handler build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5apache2_2.lib and object Release_TS\php5apache2_2.exp
+SAPI sapi\apache2handler (via sapi\apache2_2handler) build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_4.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5apache2_4.lib and object Release_TS\php5apache2_4.exp
+SAPI sapi\apache2handler (via sapi\apache2_4handler) build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache_hooks.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5apache_hooks.lib and object Release_TS\php5apache_hooks.exp
+SAPI sapi\apache_hooks build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php-cgi.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+SAPI sapi\cgi build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php.lib and object Release_TS\php.exp
+SAPI sapi\cli build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php-win.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php-win.lib and object Release_TS\php-win.exp
+SAPI sapi\cli build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5embed.lib" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+	lib.exe /nologo /out:Release_TS\php5embed.lib /nologo /version:5.6.33 /incremental:no /debug /opt:ref,icf /libpath:"C:\php-sdk\phpdev\vc9\x86\deps\lib" Release_TS\sapi\embed\php_embed.obj Release_TS\php5ts.lib   Release_TS\php5embed.lib.res
+LINK : warning LNK4044: unrecognized option '/version:5.6.33'; ignored
+LINK : warning LNK4044: unrecognized option '/incremental:no'; ignored
+LINK : warning LNK4044: unrecognized option '/debug'; ignored
+LINK : warning LNK4044: unrecognized option '/opt:ref,icf'; ignored
+SAPI sapi\embed build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5isapi.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5isapi.lib and object Release_TS\php5isapi.exp
+SAPI sapi\isapi build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "phpdbg.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\phpdbg.lib and object Release_TS\phpdbg.exp
+SAPI sapi\phpdbg build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5phpdbg.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php5phpdbg.lib and object Release_TS\php5phpdbg.exp
+SAPI sapi\phpdbg build complete
+	for %T in (php_bz2.dll php_fileinfo.dll php_gd2.dll php_mbstring.dll php_odbc.dll php_opcache.dll php_sockets.dll php_sqlite3.dll php_zip.dll php_dom.dll php_exif.dll php_mysqli.dll php_pdo_firebird.dll php_pdo_mysql.dll php_pdo_odbc.dll php_pdo_pgsql.dll php_pdo_sqlite.dll php_xml.dll) do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_bz2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_bz2.lib and object Release_TS\php_bz2.exp
+EXT bz2 build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_fileinfo.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_fileinfo.lib and object Release_TS\php_fileinfo.exp
+EXT fileinfo build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_gd2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+libpng_a.lib(pngerror.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+libxpm_a.lib(misc.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+libpng_a.lib(pngerror.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php_gd2.lib and object Release_TS\php_gd2.exp
+LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+Generating code
+Finished generating code
+EXT gd build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_mbstring.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_mbstring.lib and object Release_TS\php_mbstring.exp
+EXT mbstring build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_odbc.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_odbc.lib and object Release_TS\php_odbc.exp
+EXT odbc build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_opcache.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_opcache.lib and object Release_TS\php_opcache.exp
+EXT opcache build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_sockets.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_sockets.lib and object Release_TS\php_sockets.exp
+EXT sockets build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_sqlite3.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_sqlite3.lib and object Release_TS\php_sqlite3.exp
+EXT sqlite3 build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_zip.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_zip.lib and object Release_TS\php_zip.exp
+EXT zip build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_dom.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_dom.lib and object Release_TS\php_dom.exp
+attr.obj : error LNK2019: unresolved external symbol _xmlNewProp referenced in function _zim_domattr___construct
+processinginstruction.obj : error LNK2001: unresolved external symbol _xmlValidateName
+attr.obj : error LNK2019: unresolved external symbol _xmlValidateName referenced in function _zim_domattr___construct
+document.obj : error LNK2001: unresolved external symbol _xmlValidateName
+element.obj : error LNK2001: unresolved external symbol _xmlValidateName
+entityreference.obj : error LNK2001: unresolved external symbol _xmlValidateName
+processinginstruction.obj : error LNK2001: unresolved external symbol _xmlFree
+text.obj : error LNK2001: unresolved external symbol _xmlFree
+xpath.obj : error LNK2001: unresolved external symbol _xmlFree
+element.obj : error LNK2001: unresolved external symbol _xmlFree
+entity.obj : error LNK2001: unresolved external symbol _xmlFree
+node.obj : error LNK2001: unresolved external symbol _xmlFree
+php_dom.obj : error LNK2001: unresolved external symbol _xmlFree
+attr.obj : error LNK2001: unresolved external symbol _xmlFree
+characterdata.obj : error LNK2019: unresolved external symbol _xmlFree referenced in function _dom_characterdata_data_read
+document.obj : error LNK2001: unresolved external symbol _xmlFree
+domimplementation.obj : error LNK2001: unresolved external symbol _xmlFree
+php_dom.obj : error LNK2001: unresolved external symbol _xmlNodeGetContent
+processinginstruction.obj : error LNK2001: unresolved external symbol _xmlNodeGetContent
+text.obj : error LNK2019: unresolved external symbol _xmlNodeGetContent referenced in function _dom_text_whole_text_read
+attr.obj : error LNK2001: unresolved external symbol _xmlNodeGetContent
+characterdata.obj : error LNK2001: unresolved external symbol _xmlNodeGetContent
+entity.obj : error LNK2001: unresolved external symbol _xmlNodeGetContent
+node.obj : error LNK2001: unresolved external symbol _xmlNodeGetContent
+processinginstruction.obj : error LNK2001: unresolved external symbol _xmlNodeSetContentLen
+attr.obj : error LNK2019: unresolved external symbol _xmlNodeSetContentLen referenced in function _dom_attr_value_write
+characterdata.obj : error LNK2001: unresolved external symbol _xmlNodeSetContentLen
+element.obj : error LNK2001: unresolved external symbol _xmlNodeSetContentLen
+node.obj : error LNK2001: unresolved external symbol _xmlNodeSetContentLen
+cdatasection.obj : error LNK2019: unresolved external symbol _xmlNewCDataBlock referenced in function _zim_domcdatasection___construct
+document.obj : error LNK2001: unresolved external symbol _xmlNewCDataBlock
+characterdata.obj : error LNK2019: unresolved external symbol _xmlUTF8Strlen referenced in function _dom_characterdata_length_read
+text.obj : error LNK2001: unresolved external symbol _xmlUTF8Strlen
+characterdata.obj : error LNK2019: unresolved external symbol _xmlUTF8Strsub referenced in function _zif_dom_characterdata_substring_data
+text.obj : error LNK2001: unresolved external symbol _xmlUTF8Strsub
+characterdata.obj : error LNK2019: unresolved external symbol _xmlTextConcat referenced in function _zif_dom_characterdata_append_data
+characterdata.obj : error LNK2019: unresolved external symbol _xmlNodeAddContent referenced in function _zif_dom_characterdata_insert_data
+node.obj : error LNK2001: unresolved external symbol _xmlNodeAddContent
+php_dom.obj : error LNK2001: unresolved external symbol _xmlNodeAddContent
+characterdata.obj : error LNK2019: unresolved external symbol _xmlNodeSetContent referenced in function _zif_dom_characterdata_insert_data
+node.obj : error LNK2001: unresolved external symbol _xmlNodeSetContent
+text.obj : error LNK2001: unresolved external symbol _xmlNodeSetContent
+characterdata.obj : error LNK2019: unresolved external symbol _xmlUTF8Strndup referenced in function _zif_dom_characterdata_insert_data
+text.obj : error LNK2001: unresolved external symbol _xmlUTF8Strndup
+characterdata.obj : error LNK2019: unresolved external symbol _xmlStrcat referenced in function _zif_dom_characterdata_delete_data
+element.obj : error LNK2001: unresolved external symbol _xmlStrcat
+node.obj : error LNK2001: unresolved external symbol _xmlStrcat
+text.obj : error LNK2001: unresolved external symbol _xmlStrcat
+comment.obj : error LNK2019: unresolved external symbol _xmlNewComment referenced in function _zim_domcomment___construct
+document.obj : error LNK2019: unresolved external symbol _xmlGetIntSubset referenced in function _dom_document_doctype_read
+documenttype.obj : error LNK2001: unresolved external symbol _xmlGetIntSubset
+xpath.obj : error LNK2001: unresolved external symbol _xmlDocGetRootElement
+document.obj : error LNK2019: unresolved external symbol _xmlDocGetRootElement referenced in function _dom_document_document_element_read
+dom_iterators.obj : error LNK2001: unresolved external symbol _xmlDocGetRootElement
+node.obj : error LNK2001: unresolved external symbol _xmlDocGetRootElement
+nodelist.obj : error LNK2001: unresolved external symbol _xmlDocGetRootElement
+node.obj : error LNK2001: unresolved external symbol _xmlStrdup
+php_dom.obj : error LNK2019: unresolved external symbol _xmlStrdup referenced in function _dom_objects_new
+xpath.obj : error LNK2001: unresolved external symbol _xmlStrdup
+document.obj : error LNK2001: unresolved external symbol _xmlStrdup
+dom_iterators.obj : error LNK2001: unresolved external symbol _xmlStrdup
+domimplementation.obj : error LNK2001: unresolved external symbol _xmlStrdup
+element.obj : error LNK2001: unresolved external symbol _xmlStrdup
+document.obj : error LNK2019: unresolved external symbol _xmlCharEncCloseFunc referenced in function _dom_document_encoding_write
+document.obj : error LNK2019: unresolved external symbol _xmlFindCharEncodingHandler referenced in function _dom_document_encoding_write
+document.obj : error LNK2019: unresolved external symbol _xmlNewDocNode referenced in function _zif_dom_document_create_element
+domimplementation.obj : error LNK2001: unresolved external symbol _xmlNewDocNode
+element.obj : error LNK2001: unresolved external symbol _xmlNewDocNode
+xpath.obj : error LNK2001: unresolved external symbol _xmlNewDocNode
+document.obj : error LNK2019: unresolved external symbol _xmlNewDocFragment referenced in function _zif_dom_document_create_document_fragment
+documentfragment.obj : error LNK2001: unresolved external symbol _xmlNewDocFragment
+document.obj : error LNK2019: unresolved external symbol _xmlNewDocText referenced in function _zif_dom_document_create_text_node
+text.obj : error LNK2001: unresolved external symbol _xmlNewDocText
+document.obj : error LNK2019: unresolved external symbol _xmlNewDocComment referenced in function _zif_dom_document_create_comment
+document.obj : error LNK2019: unresolved external symbol _xmlNewPI referenced in function _zif_dom_document_create_processing_instruction
+processinginstruction.obj : error LNK2001: unresolved external symbol _xmlNewPI
+document.obj : error LNK2019: unresolved external symbol _xmlNewDocProp referenced in function _zif_dom_document_create_attribute
+document.obj : error LNK2019: unresolved external symbol _xmlNewReference referenced in function _zif_dom_document_create_entity_reference
+entityreference.obj : error LNK2001: unresolved external symbol _xmlNewReference
+document.obj : error LNK2019: unresolved external symbol _xmlCharStrndup referenced in function _zif_dom_document_get_elements_by_tag_name
+element.obj : error LNK2001: unresolved external symbol _xmlCharStrndup
+document.obj : error LNK2019: unresolved external symbol _xmlSetNs referenced in function _zif_dom_document_import_node
+element.obj : error LNK2001: unresolved external symbol _xmlSetNs
+node.obj : error LNK2001: unresolved external symbol _xmlSetNs
+document.obj : error LNK2019: unresolved external symbol _xmlSearchNsByHref referenced in function _zif_dom_document_import_node
+element.obj : error LNK2001: unresolved external symbol _xmlSearchNsByHref
+node.obj : error LNK2001: unresolved external symbol _xmlSearchNsByHref
+document.obj : error LNK2019: unresolved external symbol _xmlDocCopyNode referenced in function _zif_dom_document_import_node
+node.obj : error LNK2001: unresolved external symbol _xmlDocCopyNode
+php_dom.obj : error LNK2001: unresolved external symbol _xmlDocCopyNode
+document.obj : error LNK2019: unresolved external symbol _xmlFreeNode referenced in function _zif_dom_document_create_element_ns
+element.obj : error LNK2001: unresolved external symbol _xmlFreeNode
+document.obj : error LNK2019: unresolved external symbol _xmlFreeProp referenced in function _zif_dom_document_create_attribute_ns
+element.obj : error LNK2001: unresolved external symbol _xmlFreeProp
+document.obj : error LNK2019: unresolved external symbol _xmlGetID referenced in function _zif_dom_document_get_element_by_id
+document.obj : error LNK2019: unresolved external symbol _xmlNewDoc referenced in function _zim_domdocument___construct
+domimplementation.obj : error LNK2001: unresolved external symbol _xmlNewDoc
+document.obj : error LNK2019: unresolved external symbol _xmlFreeURI referenced in function __dom_get_valid_file_path
+domimplementation.obj : error LNK2001: unresolved external symbol _xmlFreeURI
+document.obj : error LNK2019: unresolved external symbol _xmlParseURIReference referenced in function __dom_get_valid_file_path
+document.obj : error LNK2019: unresolved external symbol _xmlURIEscapeStr referenced in function __dom_get_valid_file_path
+document.obj : error LNK2019: unresolved external symbol _xmlCreateURI referenced in function __dom_get_valid_file_path
+document.obj : error LNK2019: unresolved external symbol _xmlFreeParserCtxt referenced in function _dom_document_parser
+document.obj : error LNK2019: unresolved external symbol _xmlFreeDoc referenced in function _dom_document_parser
+domimplementation.obj : error LNK2001: unresolved external symbol _xmlFreeDoc
+document.obj : error LNK2019: unresolved external symbol _xmlParseDocument referenced in function _dom_document_parser
+document.obj : error LNK2001: unresolved external symbol _executor_globals_id
+php_dom.obj : error LNK2001: unresolved external symbol _executor_globals_id
+xpath.obj : error LNK2001: unresolved external symbol _executor_globals_id
+document.obj : error LNK2019: unresolved external symbol _xmlCtxtUseOptions referenced in function _dom_document_parser
+document.obj : error LNK2019: unresolved external symbol _xmlCanonicPath referenced in function _dom_document_parser
+document.obj : error LNK2019: unresolved external symbol _xmlCreateMemoryParserCtxt referenced in function _dom_document_parser
+document.obj : error LNK2019: unresolved external symbol _xmlCreateFileParserCtxt referenced in function _dom_document_parser
+document.obj : error LNK2019: unresolved external symbol _xmlInitParser referenced in function _dom_document_parser
+document.obj : error LNK2019: unresolved external symbol _xmlSaveFormatFileEnc referenced in function _zif_dom_document_save
+document.obj : error LNK2019: unresolved external symbol ___xmlSaveNoEmptyTags referenced in function _zif_dom_document_save
+document.obj : error LNK2019: unresolved external symbol _xmlDocDumpFormatMemory referenced in function _zif_dom_document_savexml
+document.obj : error LNK2019: unresolved external symbol _xmlBufferFree referenced in function _zif_dom_document_savexml
+document.obj : error LNK2019: unresolved external symbol _xmlBufferContent referenced in function _zif_dom_document_savexml
+document.obj : error LNK2019: unresolved external symbol _xmlNodeDump referenced in function _zif_dom_document_savexml
+document.obj : error LNK2019: unresolved external symbol _xmlBufferCreate referenced in function _zif_dom_document_savexml
+document.obj : error LNK2019: unresolved external symbol _xmlUnlinkNode referenced in function _php_dom_free_xinclude_node
+element.obj : error LNK2001: unresolved external symbol _xmlUnlinkNode
+node.obj : error LNK2001: unresolved external symbol _xmlUnlinkNode
+php_dom.obj : error LNK2001: unresolved external symbol _xmlUnlinkNode
+document.obj : error LNK2019: unresolved external symbol _xmlXIncludeProcessFlags referenced in function _zif_dom_document_xinclude
+document.obj : error LNK2019: unresolved external symbol _xmlFreeValidCtxt referenced in function _zif_dom_document_validate
+document.obj : error LNK2019: unresolved external symbol _xmlValidateDocument referenced in function _zif_dom_document_validate
+document.obj : error LNK2019: unresolved external symbol _xmlNewValidCtxt referenced in function _zif_dom_document_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaFreeValidCtxt referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaValidateDoc referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaSetValidErrors referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaSetValidOptions referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaFree referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaNewValidCtxt referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaFreeParserCtxt referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaParse referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaSetParserErrors referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaNewMemParserCtxt referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlSchemaNewParserCtxt referenced in function __dom_document_schema_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGFreeValidCtxt referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGValidateDoc referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGSetValidErrors referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGFree referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGNewValidCtxt referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGFreeParserCtxt referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGParse referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGSetParserErrors referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGNewMemParserCtxt referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _xmlRelaxNGNewParserCtxt referenced in function __dom_document_relaxNG_validate
+document.obj : error LNK2019: unresolved external symbol _htmlFreeParserCtxt referenced in function _dom_load_html
+document.obj : error LNK2019: unresolved external symbol _htmlParseDocument referenced in function _dom_load_html
+document.obj : error LNK2019: unresolved external symbol _htmlCtxtUseOptions referenced in function _dom_load_html
+document.obj : error LNK2019: unresolved external symbol _htmlCreateMemoryParserCtxt referenced in function _dom_load_html
+document.obj : error LNK2019: unresolved external symbol _xmlStrlen referenced in function _dom_load_html
+dom_iterators.obj : error LNK2001: unresolved external symbol _xmlStrlen
+document.obj : error LNK2019: unresolved external symbol _htmlCreateFileParserCtxt referenced in function _dom_load_html
+document.obj : error LNK2019: unresolved external symbol _htmlSaveFileFormat referenced in function _zif_dom_document_save_html_file
+document.obj : error LNK2019: unresolved external symbol _htmlGetMetaEncoding referenced in function _zif_dom_document_save_html_file
+document.obj : error LNK2019: unresolved external symbol _htmlDocDumpMemoryFormat referenced in function _zif_dom_document_save_html
+document.obj : error LNK2019: unresolved external symbol _htmlNodeDump referenced in function _zif_dom_document_save_html
+documentfragment.obj : error LNK2019: unresolved external symbol _xmlAddChildList referenced in function _zim_domdocumentfragment_appendXML
+documentfragment.obj : error LNK2019: unresolved external symbol _xmlParseBalancedChunkMemory referenced in function _zim_domdocumentfragment_appendXML
+documenttype.obj : error LNK2019: unresolved external symbol _xmlOutputBufferClose referenced in function _dom_documenttype_internal_subset_read
+node.obj : error LNK2001: unresolved external symbol _xmlOutputBufferClose
+documenttype.obj : error LNK2019: unresolved external symbol _xmlOutputBufferGetContent referenced in function _dom_documenttype_internal_subset_read
+node.obj : error LNK2001: unresolved external symbol _xmlOutputBufferGetContent
+documenttype.obj : error LNK2019: unresolved external symbol _xmlOutputBufferGetSize referenced in function _dom_documenttype_internal_subset_read
+node.obj : error LNK2001: unresolved external symbol _xmlOutputBufferGetSize
+documenttype.obj : error LNK2019: unresolved external symbol _xmlOutputBufferFlush referenced in function _dom_documenttype_internal_subset_read
+documenttype.obj : error LNK2019: unresolved external symbol _xmlNodeDumpOutput referenced in function _dom_documenttype_internal_subset_read
+documenttype.obj : error LNK2019: unresolved external symbol _xmlAllocOutputBuffer referenced in function _dom_documenttype_internal_subset_read
+node.obj : error LNK2001: unresolved external symbol _xmlAllocOutputBuffer
+dom_iterators.obj : error LNK2001: unresolved external symbol _xmlMalloc
+php_dom.obj : error LNK2001: unresolved external symbol _xmlMalloc
+dom_iterators.obj : error LNK2019: unresolved external symbol _xmlHashScan referenced in function _php_dom_libxml_hash_iter
+dom_iterators.obj : error LNK2019: unresolved external symbol _xmlHashSize referenced in function _php_dom_libxml_hash_iter
+namednodemap.obj : error LNK2001: unresolved external symbol _xmlHashSize
+nodelist.obj : error LNK2001: unresolved external symbol _xmlHashSize
+domimplementation.obj : error LNK2019: unresolved external symbol _xmlCreateIntSubset referenced in function _zim_domimplementation_createDocumentType
+domimplementation.obj : error LNK2019: unresolved external symbol _xmlStrchr referenced in function _zim_domimplementation_createDocumentType
+domimplementation.obj : error LNK2019: unresolved external symbol _xmlParseURI referenced in function _zim_domimplementation_createDocumentType
+domimplementation.obj : error LNK2019: unresolved external symbol _xmlDocSetRootElement referenced in function _zim_domimplementation_createDocument
+xpath.obj : error LNK2019: unresolved external symbol _xmlNewNs referenced in function _dom_xpath_ext_function_php
+domimplementation.obj : error LNK2001: unresolved external symbol _xmlNewNs
+element.obj : error LNK2001: unresolved external symbol _xmlNewNs
+node.obj : error LNK2001: unresolved external symbol _xmlNewNs
+php_dom.obj : error LNK2001: unresolved external symbol _xmlNewNs
+element.obj : error LNK2019: unresolved external symbol _xmlSplitQName2 referenced in function _zim_domelement___construct
+php_dom.obj : error LNK2001: unresolved external symbol _xmlSplitQName2
+element.obj : error LNK2019: unresolved external symbol _xmlNewNode referenced in function _zim_domelement___construct
+element.obj : error LNK2019: unresolved external symbol _xmlHasNsProp referenced in function _dom_get_dom1_attribute
+namednodemap.obj : error LNK2001: unresolved external symbol _xmlHasNsProp
+node.obj : error LNK2001: unresolved external symbol _xmlHasNsProp
+element.obj : error LNK2019: unresolved external symbol _xmlSearchNs referenced in function _dom_get_dom1_attribute
+node.obj : error LNK2001: unresolved external symbol _xmlSearchNs
+element.obj : error LNK2019: unresolved external symbol _xmlStrEqual referenced in function _dom_get_dom1_attribute
+node.obj : error LNK2001: unresolved external symbol _xmlStrEqual
+php_dom.obj : error LNK2001: unresolved external symbol _xmlStrEqual
+element.obj : error LNK2019: unresolved external symbol _xmlStrndup referenced in function _dom_get_dom1_attribute
+element.obj : error LNK2019: unresolved external symbol _xmlSplitQName3 referenced in function _dom_get_dom1_attribute
+element.obj : error LNK2019: unresolved external symbol _xmlNodeListGetString referenced in function _zif_dom_element_get_attribute
+element.obj : error LNK2019: unresolved external symbol _xmlSetProp referenced in function _zif_dom_element_set_attribute
+element.obj : error LNK2019: unresolved external symbol _xmlAddChild referenced in function _zif_dom_element_set_attribute_node
+node.obj : error LNK2001: unresolved external symbol _xmlAddChild
+element.obj : error LNK2019: unresolved external symbol _xmlHasProp referenced in function _zif_dom_element_set_attribute_node
+namednodemap.obj : error LNK2001: unresolved external symbol _xmlHasProp
+node.obj : error LNK2001: unresolved external symbol _xmlHasProp
+element.obj : error LNK2019: unresolved external symbol _xmlGetNsProp referenced in function _zif_dom_element_get_attribute_ns
+element.obj : error LNK2019: unresolved external symbol _xmlSetNsProp referenced in function _zif_dom_element_set_attribute_ns
+element.obj : error LNK2019: unresolved external symbol _xmlReconciliateNs referenced in function _zif_dom_element_set_attribute_ns
+node.obj : error LNK2001: unresolved external symbol _xmlReconciliateNs
+element.obj : error LNK2019: unresolved external symbol _xmlRemoveID referenced in function _php_set_attribute_id
+element.obj : error LNK2019: unresolved external symbol _xmlAddID referenced in function _php_set_attribute_id
+namednodemap.obj : error LNK2019: unresolved external symbol _xmlHashLookup referenced in function _zif_dom_namednodemap_get_named_item
+node.obj : error LNK2019: unresolved external symbol _xmlNodeGetBase referenced in function _dom_node_base_uri_read
+node.obj : error LNK2019: unresolved external symbol _xmlSetTreeDoc referenced in function __php_dom_insert_fragment
+node.obj : error LNK2019: unresolved external symbol _xmlAddPrevSibling referenced in function _zif_dom_node_insert_before
+node.obj : error LNK2019: unresolved external symbol _xmlReplaceNode referenced in function _zif_dom_node_replace_child
+node.obj : error LNK2019: unresolved external symbol _xmlCopyPropList referenced in function _zif_dom_node_clone_node
+node.obj : error LNK2019: unresolved external symbol _xmlCopyNamespaceList referenced in function _zif_dom_node_clone_node
+node.obj : error LNK2019: unresolved external symbol _xmlC14NDocSaveTo referenced in function _dom_canonicalization
+node.obj : error LNK2019: unresolved external symbol _xmlOutputBufferCreateFilename referenced in function _dom_canonicalization
+node.obj : error LNK2019: unresolved external symbol _xmlXPathRegisterNs referenced in function _dom_canonicalization
+xpath.obj : error LNK2001: unresolved external symbol _xmlXPathRegisterNs
+node.obj : error LNK2019: unresolved external symbol _xmlXPathFreeContext referenced in function _dom_canonicalization
+php_dom.obj : error LNK2001: unresolved external symbol _xmlXPathFreeContext
+xpath.obj : error LNK2001: unresolved external symbol _xmlXPathFreeContext
+node.obj : error LNK2019: unresolved external symbol _xmlXPathFreeObject referenced in function _dom_canonicalization
+xpath.obj : error LNK2001: unresolved external symbol _xmlXPathFreeObject
+node.obj : error LNK2019: unresolved external symbol _xmlXPathEvalExpression referenced in function _dom_canonicalization
+xpath.obj : error LNK2001: unresolved external symbol _xmlXPathEvalExpression
+node.obj : error LNK2019: unresolved external symbol _xmlXPathNewContext referenced in function _dom_canonicalization
+xpath.obj : error LNK2001: unresolved external symbol _xmlXPathNewContext
+node.obj : error LNK2019: unresolved external symbol _xmlGetNodePath referenced in function _zim_domnode_getNodePath
+node.obj : error LNK2019: unresolved external symbol _xmlGetLineNo referenced in function _zim_domnode_getLineNo
+php_dom.obj : error LNK2001: unresolved external symbol _zval_used_for_init
+php_dom.obj : error LNK2019: unresolved external symbol _xmlValidateQName referenced in function _dom_check_qname
+php_dom.obj : error LNK2001: unresolved external symbol _zend_ce_traversable
+php_dom.obj : error LNK2001: unresolved external symbol _zend_new_interned_string
+text.obj : error LNK2019: unresolved external symbol _xmlNewText referenced in function _zim_domtext___construct
+text.obj : error LNK2019: unresolved external symbol _xmlAddNextSibling referenced in function _zif_dom_text_split_text
+text.obj : error LNK2019: unresolved external symbol _xmlIsBlankNode referenced in function _zif_dom_text_is_whitespace_in_element_content
+xpath.obj : error LNK2019: unresolved external symbol _xmlXPathNewBoolean referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol _xmlXPathNewNodeSet referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol _valuePush referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol _xmlXPathNewString referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol _xmlXPathCastToString referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol _valuePop referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol ___xmlGenericErrorContext referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol ___xmlGenericError referenced in function _dom_xpath_ext_function_php
+xpath.obj : error LNK2019: unresolved external symbol _xmlXPathRegisterFuncNS referenced in function _zim_domxpath___construct
+xpath.obj : error LNK2019: unresolved external symbol _xmlGetNsList referenced in function _php_xpath_eval
+Release_TS\php_dom.dll : fatal error LNK1120: 155 unresolved externals
+
+mt.exe : general error c101008d: Failed to write the updated manifest to the resource of file "Release_TS\php_dom.dll". The system cannot find the file specified.
+EXT dom build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_exif.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_mbstring.lib and object Release_TS\php_mbstring.exp
+   Creating library Release_TS\php_exif.lib and object Release_TS\php_exif.exp
+EXT exif build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_mysqli.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_mysqli.lib and object Release_TS\php_mysqli.exp
+EXT mysqli build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_firebird.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_pdo_firebird.lib and object Release_TS\php_pdo_firebird.exp
+EXT pdo_firebird build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_mysql.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_pdo_mysql.lib and object Release_TS\php_pdo_mysql.exp
+EXT pdo_mysql build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_odbc.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_pdo_odbc.lib and object Release_TS\php_pdo_odbc.exp
+EXT pdo_odbc build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_pgsql.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_pdo_pgsql.lib and object Release_TS\php_pdo_pgsql.exp
+EXT pdo_pgsql build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_sqlite.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+   Creating library Release_TS\php_pdo_sqlite.lib and object Release_TS\php_pdo_sqlite.exp
+EXT pdo_sqlite build complete
+
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_xml.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+libiconv_a.lib(iconv.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+http_querystring_api.obj : warning LNK4217: locally defined symbol _php_iconv_string imported in function __http_querystring_xlate
+EXT xml build complete
+	for %T in () do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+Release_TS\php_bz2.lib
+        1 file(s) copied.
+Release_TS\php_fileinfo.lib
+        1 file(s) copied.
+Release_TS\php_gd2.lib
+        1 file(s) copied.
+Release_TS\php_mbstring.lib
+        1 file(s) copied.
+Release_TS\php_odbc.lib
+        1 file(s) copied.
+Release_TS\php_opcache.lib
+        1 file(s) copied.
+Release_TS\php_sockets.lib
+        1 file(s) copied.
+Release_TS\php_sqlite3.lib
+        1 file(s) copied.
+Release_TS\php_zip.lib
+        1 file(s) copied.
+Release_TS\php_dom.lib
+        1 file(s) copied.
+Release_TS\php_exif.lib
+        1 file(s) copied.
+Release_TS\php_mysqli.lib
+        1 file(s) copied.
+Release_TS\php_pdo_firebird.lib
+        1 file(s) copied.
+Release_TS\php_pdo_mysql.lib
+        1 file(s) copied.
+Release_TS\php_pdo_odbc.lib
+        1 file(s) copied.
+Release_TS\php_pdo_pgsql.lib
+        1 file(s) copied.
+Release_TS\php_pdo_sqlite.lib
+        1 file(s) copied.
+	rd /s /q Release_TS\php-5.6.33
+	rd /s /q Release_TS\pecl-5.6.33
+	del /f /q Release_TS\php-5.6.33-Win32-VC9-x86.zip
+	del /f /q Release_TS\php-debug-pack-5.6.33-Win32-VC9-x86.zip
+	del /f /q Release_TS\pecl-5.6.33-Win32-VC9-x86.zip
+	Release_TS\php.exe -d date.timezone=UTC -n -dphar.readonly=0 win32/build/mkdist.php "Release_TS" "C:\php-sdk\phpdev\vc9\x86\deps" "php5ts.dll" "php5aolserver.dll php5apache.dll php5apache2_filter.dll php5apache2_2_filter.dll php5apache2.dll php5apache2_2.dll php5apache2_4.dll php5apache_hooks.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll" "php_bz2.dll php_fileinfo.dll php_gd2.dll php_mbstring.dll php_odbc.dll php_opcache.dll php_sockets.dll php_sqlite3.dll php_zip.dll php_dom.dll php_exif.dll php_mysqli.dll php_pdo_firebird.dll php_pdo_mysql.dll php_pdo_odbc.dll php_pdo_pgsql.dll php_pdo_sqlite.dll php_xml.dll " " " "C:\php-sdk\phpdev\vc9\x86\deps\template"
+Making dist for Release_TS
+Copying php5aolserver.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2_filter.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2_2_filter.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2_2.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache2_4.dll from Release_TS to Release_TS/php-5.6.33
+Copying php5apache_hooks.dll from Release_TS to Release_TS/php-5.6.33
+Copying php-cgi.exe from Release_TS to Release_TS/php-5.6.33
+Copying php.exe from Release_TS to Release_TS/php-5.6.33
+Copying php-win.exe from Release_TS to Release_TS/php-5.6.33
+Copying php5embed.lib from Release_TS to Release_TS/php-5.6.33
+Copying php5isapi.dll from Release_TS to Release_TS/php-5.6.33
+Copying phpdbg.exe from Release_TS to Release_TS/php-5.6.33
+Copying php5phpdbg.dll from Release_TS to Release_TS/php-5.6.33
+Copying php_bz2.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_fileinfo.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_gd2.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_mbstring.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_odbc.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_opcache.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_sockets.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_sqlite3.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_zip.dll from Release_TS to Release_TS/php-5.6.33/ext
+WARNING: php_dom.dll not found
+Copying php_exif.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_mysqli.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_firebird.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_mysql.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_odbc.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_pgsql.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_pdo_sqlite.dll from Release_TS to Release_TS/php-5.6.33/ext
+Copying php_xml.dll from Release_TS to Release_TS/php-5.6.33/ext
+WARNING: distro depends on libbz2.dll, but could not find it on your system
+WARNING: distro depends on iphlpapi.dll, but could not find it on your system
+Array
+(
+    [0] => C:\php-sdk\phpdev\vc9\x86\deps\template/ssl
+)
+Generating pharcommand.phar
+adding clicommand.inc
+adding directorygraphiterator.inc
+adding directorytreeiterator.inc
+adding invertedregexiterator.inc
+adding phar.inc
+adding pharcommand.inc
+Creating phar.phar.bat
+	cd Release_TS\php-5.6.33
+	zip.exe -9 -q -r ..\php-5.6.33-Win32-VC9-x86.zip .
+	cd ..\..
+	cd Release_TS\pecl-5.6.33
+	zip.exe -9 -q -r ..\pecl-5.6.33-Win32-VC9-x86.zip .
+
+zip error: Nothing to do! (try: zip -9 -q -r ..\pecl-5.6.33-Win32-VC9-x86.zip . -i .)
+	cd ..\..
+	cd Release_TS\php-test-pack-5.6.33
+	zip.exe -9 -q -r ..\php-test-pack-5.6.33.zip .
+	cd ..\..
+	cd Release_TS
+	zip.exe -9 -q php-debug-pack-5.6.33-Win32-VC9-x86.zip *.pdb
+	cd
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS
+	cd
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS
+	zip.exe -9 -q -r php-devel-pack-5.6.33-Win32-VC9-x86.zip php-5.6.33-devel-VC9-x86
+	cd ..\..

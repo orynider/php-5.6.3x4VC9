@@ -1,0 +1,454 @@
+diff -ur openssl-0.9.8e.original\apps\s_client.c openssl-0.9.8e\apps\s_client.c
+--- openssl-0.9.8e.original\apps\s_client.c	Thu Feb 22 19:39:50 2007
++++ openssl-0.9.8e\apps\s_client.c	Mon Jun 25 02:56:52 2007
+@@ -281,8 +281,8 @@
+ 	int mbuf_len=0;
+ #ifndef OPENSSL_NO_ENGINE
+ 	char *engine_id=NULL;
+-	ENGINE *e=NULL;
+ #endif
++	ENGINE *e=NULL;
+ #if defined(OPENSSL_SYS_WINDOWS) || defined(OPENSSL_SYS_MSDOS) || defined(OPENSSL_SYS_NETWARE)
+ 	struct timeval tv;
+ #endif
+diff -ur openssl-0.9.8e.original\apps\s_server.c openssl-0.9.8e\apps\s_server.c
+--- openssl-0.9.8e.original\apps\s_server.c	Wed Nov 29 22:47:12 2006
++++ openssl-0.9.8e\apps\s_server.c	Mon Jun 25 02:56:52 2007
+@@ -549,9 +549,7 @@
+ #undef sock_type
+ #endif
+     int sock_type=SOCK_STREAM;
+-#ifndef OPENSSL_NO_ENGINE
+ 	ENGINE *e=NULL;
+-#endif
+ 	char *inrand=NULL;
+ 	int s_cert_format = FORMAT_PEM, s_key_format = FORMAT_PEM;
+ 	char *passarg = NULL, *pass = NULL;
+diff -ur openssl-0.9.8e.original\engines\e_4758cca.c openssl-0.9.8e\engines\e_4758cca.c
+--- openssl-0.9.8e.original\engines\e_4758cca.c	Sat Jul 16 13:13:08 2005
++++ openssl-0.9.8e\engines\e_4758cca.c	Mon Jun 25 02:56:52 2007
+@@ -53,6 +53,9 @@
+  *
+  */
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_4758_CCA
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+@@ -65,9 +68,6 @@
+ #include <openssl/rsa.h>
+ #endif
+ #include <openssl/bn.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_4758_CCA
+ 
+ #ifdef FLAT_INC
+ #include "hw_4758_cca.h"
+diff -ur openssl-0.9.8e.original\engines\e_aep.c openssl-0.9.8e\engines\e_aep.c
+--- openssl-0.9.8e.original\engines\e_aep.c	Sat Jul 16 13:13:08 2005
++++ openssl-0.9.8e\engines\e_aep.c	Mon Jun 25 02:56:52 2007
+@@ -52,6 +52,9 @@
+  *
+  */
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_AEP
++
+ #include <stdio.h>
+ #include <openssl/bn.h>
+ #include <string.h>
+@@ -80,8 +83,6 @@
+ #endif
+ #include <openssl/bn.h>
+ 
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_AEP
+ #ifdef FLAT_INC
+ #include "aep.h"
+ #else
+diff -ur openssl-0.9.8e.original\engines\e_atalla.c openssl-0.9.8e\engines\e_atalla.c
+--- openssl-0.9.8e.original\engines\e_atalla.c	Sat Jul 16 13:13:08 2005
++++ openssl-0.9.8e\engines\e_atalla.c	Mon Jun 25 02:56:52 2007
+@@ -56,6 +56,9 @@
+  *
+  */
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_ATALLA
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+@@ -72,9 +75,6 @@
+ #include <openssl/dh.h>
+ #endif
+ #include <openssl/bn.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_ATALLA
+ 
+ #ifdef FLAT_INC
+ #include "atalla.h"
+diff -ur openssl-0.9.8e.original\engines\e_chil.c openssl-0.9.8e\engines\e_chil.c
+--- openssl-0.9.8e.original\engines\e_chil.c	Sat Jul 16 13:13:08 2005
++++ openssl-0.9.8e\engines\e_chil.c	Mon Jun 25 02:56:52 2007
+@@ -57,6 +57,9 @@
+  *
+  */
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_CHIL
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+@@ -72,9 +75,6 @@
+ #include <openssl/dh.h>
+ #endif
+ #include <openssl/bn.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_CHIL
+ 
+ /* Attribution notice: nCipher have said several times that it's OK for
+  * us to implement a general interface to their boxes, and recently declared
+diff -ur openssl-0.9.8e.original\engines\e_cswift.c openssl-0.9.8e\engines\e_cswift.c
+--- openssl-0.9.8e.original\engines\e_cswift.c	Wed Feb 08 21:16:30 2006
++++ openssl-0.9.8e\engines\e_cswift.c	Mon Jun 25 02:56:52 2007
+@@ -56,6 +56,9 @@
+  *
+  */
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_CSWIFT
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+@@ -73,9 +76,6 @@
+ #endif
+ #include <openssl/rand.h>
+ #include <openssl/bn.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_CSWIFT
+ 
+ /* Attribution notice: Rainbow have generously allowed me to reproduce
+  * the necessary definitions here from their API. This means the support
+diff -ur openssl-0.9.8e.original\engines\e_gmp.c openssl-0.9.8e\engines\e_gmp.c
+--- openssl-0.9.8e.original\engines\e_gmp.c	Thu Mar 25 04:55:18 2004
++++ openssl-0.9.8e\engines\e_gmp.c	Mon Jun 25 02:56:52 2007
+@@ -80,14 +80,14 @@
+  * chipsets might be a good deal more favourable to the GMP version (eg. PPC).
+  * Feedback welcome. */
+ 
++#ifndef OPENSSL_NO_HW
++#if defined(OPENSSL_USE_GMP) && !defined(OPENSSL_NO_HW_GMP)
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+ #include <openssl/buffer.h>
+ #include <openssl/engine.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#if defined(OPENSSL_USE_GMP) && !defined(OPENSSL_NO_HW_GMP)
+ 
+ #include <gmp.h>
+ 
+diff -ur openssl-0.9.8e.original\engines\e_nuron.c openssl-0.9.8e\engines\e_nuron.c
+--- openssl-0.9.8e.original\engines\e_nuron.c	Sat Jul 16 13:13:08 2005
++++ openssl-0.9.8e\engines\e_nuron.c	Mon Jun 25 02:56:52 2007
+@@ -56,6 +56,9 @@
+  *
+  */
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_NURON
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+@@ -72,9 +75,6 @@
+ #include <openssl/dh.h>
+ #endif
+ #include <openssl/bn.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_NURON
+ 
+ #define NURON_LIB_NAME "nuron engine"
+ #include "e_nuron_err.c"
+diff -ur openssl-0.9.8e.original\engines\e_sureware.c openssl-0.9.8e\engines\e_sureware.c
+--- openssl-0.9.8e.original\engines\e_sureware.c	Wed Feb 08 21:16:30 2006
++++ openssl-0.9.8e\engines\e_sureware.c	Mon Jun 25 02:56:52 2007
+@@ -50,6 +50,9 @@
+ *		SUCH DAMAGE.																			*
+ ====================================================================*/
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_SUREWARE
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+@@ -67,9 +70,6 @@
+ #include <openssl/dh.h>
+ #endif
+ #include <openssl/bn.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_SUREWARE
+ 
+ #ifdef FLAT_INC
+ #include "sureware.h"
+diff -ur openssl-0.9.8e.original\engines\e_ubsec.c openssl-0.9.8e\engines\e_ubsec.c
+--- openssl-0.9.8e.original\engines\e_ubsec.c	Sat Jul 16 13:13:08 2005
++++ openssl-0.9.8e\engines\e_ubsec.c	Mon Jun 25 02:56:52 2007
+@@ -58,6 +58,9 @@
+  *
+  */
+ 
++#ifndef OPENSSL_NO_HW
++#ifndef OPENSSL_NO_HW_UBSEC
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <openssl/crypto.h>
+@@ -74,9 +77,6 @@
+ #include <openssl/dh.h>
+ #endif
+ #include <openssl/bn.h>
+-
+-#ifndef OPENSSL_NO_HW
+-#ifndef OPENSSL_NO_HW_UBSEC
+ 
+ #ifdef FLAT_INC
+ #include "hw_ubsec.h"
+diff -ur openssl-0.9.8e.original\ms\do_masm.bat openssl-0.9.8e\ms\do_masm.bat
+--- openssl-0.9.8e.original\ms\do_masm.bat	Tue May 17 02:07:14 2005
++++ openssl-0.9.8e\ms\do_masm.bat	Mon Jun 25 03:34:31 2007
+@@ -57,7 +57,11 @@
+ 
+ perl util\mkfiles.pl >MINFO
+ perl util\mk1mf.pl VC-WIN32 >ms\nt.mak
++perl util\mk1mf.pl debug VC-WIN32 >ms\ntd.mak
+ perl util\mk1mf.pl dll VC-WIN32 >ms\ntdll.mak
++perl util\mk1mf.pl dll debug VC-WIN32 >ms\ntdlld.mak
+ 
+ perl util\mkdef.pl 32 libeay > ms\libeay32.def
++perl util\mkdef.pl D 32 libeay > ms\libeay32d.def
+ perl util\mkdef.pl 32 ssleay > ms\ssleay32.def
++perl util\mkdef.pl D 32 ssleay > ms\ssleay32d.def
+diff -ur openssl-0.9.8e.original\ms\do_win64a.bat openssl-0.9.8e\ms\do_win64a.bat
+--- openssl-0.9.8e.original\ms\do_win64a.bat	Tue Jul 05 01:24:12 2005
++++ openssl-0.9.8e\ms\do_win64a.bat	Mon Jun 25 03:33:11 2007
+@@ -3,7 +3,11 @@
+ perl ms\uplink.pl win64a > ms\uptable.asm
+ ml64 -c -Foms\uptable.obj ms\uptable.asm
+ perl util\mk1mf.pl no-asm VC-WIN64A >ms\nt.mak
++perl util\mk1mf.pl no-asm debug VC-WIN64A >ms\ntd.mak
+ perl util\mk1mf.pl dll no-asm VC-WIN64A >ms\ntdll.mak
++perl util\mk1mf.pl dll no-asm debug VC-WIN64A >ms\ntdlld.mak
+ 
+ perl util\mkdef.pl 32 libeay > ms\libeay32.def
++perl util\mkdef.pl D 32 libeay > ms\libeay32d.def
+ perl util\mkdef.pl 32 ssleay > ms\ssleay32.def
++perl util\mkdef.pl D 32 ssleay > ms\ssleay32d.def
+diff -ur openssl-0.9.8e.original\ms\do_win64i.bat openssl-0.9.8e\ms\do_win64i.bat
+--- openssl-0.9.8e.original\ms\do_win64i.bat	Tue Jul 05 01:24:12 2005
++++ openssl-0.9.8e\ms\do_win64i.bat	Mon Jun 25 04:02:35 2007
+@@ -3,7 +3,11 @@
+ perl ms\uplink.pl win64i > ms\uptable.asm
+ ias -o ms\uptable.obj ms\uptable.asm
+ perl util\mk1mf.pl no-asm VC-WIN64I >ms\nt.mak
++perl util\mk1mf.pl no-asm debug VC-WIN64I >ms\ntd.mak
+ perl util\mk1mf.pl dll no-asm VC-WIN64I >ms\ntdll.mak
++perl util\mk1mf.pl dll no-asm debug VC-WIN64I >ms\ntdlld.mak
+ 
+ perl util\mkdef.pl 32 libeay > ms\libeay32.def
++perl util\mkdef.pl D 32 libeay > ms\libeay32d.def
+ perl util\mkdef.pl 32 ssleay > ms\ssleay32.def
++perl util\mkdef.pl D 32 ssleay > ms\ssleay32d.def
+\ No newline at end of file
+diff -ur openssl-0.9.8e.original\util\mkdef.pl openssl-0.9.8e\util\mkdef.pl
+--- openssl-0.9.8e.original\util\mkdef.pl	Thu Nov 30 15:04:44 2006
++++ openssl-0.9.8e\util\mkdef.pl	Mon Jun 25 02:56:52 2007
+@@ -59,6 +59,7 @@
+ my $crypto_num= "util/libeay.num";
+ my $ssl_num=    "util/ssleay.num";
+ my $libname;
++my $SUFFIX = "";
+ 
+ my $do_update = 0;
+ my $do_rewrite = 1;
+@@ -121,6 +122,7 @@
+ foreach (@ARGV, split(/ /, $options))
+ 	{
+ 	$debug=1 if $_ eq "debug";
++	$SUFFIX="D" if $_ eq "D";
+ 	$W32=1 if $_ eq "32";
+ 	$W16=1 if $_ eq "16";
+ 	if($_ eq "NT") {
+@@ -1189,7 +1191,7 @@
+ 	my $description = "$what $version, $name - http://$http_vendor";
+ 
+ 	if ($W32)
+-		{ $libname.="32"; }
++		{ $libname.="32"; $libname.=$SUFFIX; }
+ 	elsif ($W16)
+ 		{ $libname.="16"; }
+ 	elsif ($OS2)
+diff -ur openssl-0.9.8e.original\util\pl\VC-32.pl openssl-0.9.8e\util\pl\VC-32.pl
+--- openssl-0.9.8e.original\util\pl\VC-32.pl	Sun Jan 15 15:46:20 2006
++++ openssl-0.9.8e\util\pl\VC-32.pl	Mon Jun 25 03:30:32 2007
+@@ -3,8 +3,27 @@
+ # Win64 and WinCE [follow $FLAVOR variable to trace the differences].
+ #
+ 
+-$ssl=	"ssleay32";
+-$crypto="libeay32";
++if ($debug) {	
++	if ($shlib) {
++		$ssl=	 "ssleay32d";	
++		$crypto= "libeay32d";
++		$pdbname="ssleay32d.pdb";
++	} else {
++		$ssl=	 "ssleay32std";	
++		$crypto= "libeay32std";
++		$pdbname="ssleay32std.pdb";
++	}
++} else {
++	if ($shlib) {
++		$ssl=	 "ssleay32";
++		$crypto= "libeay32";
++		$pdbname="ssleay32.pdb";
++	} else {
++		$ssl=	 "ssleay32st";
++		$crypto= "libeay32st";		
++		$pdbname="ssleay32st.pdb";
++	}
++}
+ 
+ $o='\\';
+ $cp='$(PERL) util/copy.pl';
+@@ -28,12 +47,22 @@
+     # per 0.9.8 release remaining warnings were explicitly examined and
+     # considered safe to ignore.
+     # 
+-    $base_cflags=' /W3 /Gs0 /GF /Gy /nologo -DWIN32_LEAN_AND_MEAN -DL_ENDIAN -DDSO_WIN32 -DOPENSSL_SYSNAME_WIN32 -DOPENSSL_SYSNAME_WINNT -DUNICODE -D_UNICODE';
++    $base_cflags=' /W3 /GF /Gy /Zi /nologo -DWIN32_LEAN_AND_MEAN -DL_ENDIAN -DDSO_WIN32 -DOPENSSL_SYSNAME_WIN32 -DOPENSSL_SYSNAME_WINNT -DUNICODE -D_UNICODE';
+     $base_cflags.=' -D_CRT_SECURE_NO_DEPRECATE';	# shut up VC8
+     $base_cflags.=' -D_CRT_NONSTDC_NO_DEPRECATE';	# shut up VC8
+-    $opt_cflags=' /MD /Ox';
+-    $dbg_cflags=' /MDd /Od -DDEBUG -D_DEBUG';
+-    $lflags="/nologo /subsystem:console /opt:ref";
++    $opt_cflags=' /Ox';
++    $dbg_cflags=' /Od -DDEBUG -D_DEBUG';
++    $lflags="/nologo /subsystem:console /opt:ref /debug";
++    if ($shlib)
++        {
++    	$opt_cflags.= ' /MD';
++    	$dbg_cflags.= ' /MDd';
++        }
++    else
++        {
++    	$opt_cflags.= ' /MT';
++    	$dbg_cflags.= ' /MTd';
++        }
+     }
+ elsif ($FLAVOR =~ /CE/)
+     {
+@@ -83,7 +112,7 @@
+     }
+ 
+     $cc='$(CC)';
+-    $base_cflags=' /W3 /WX /GF /Gy /nologo -DUNICODE -D_UNICODE -DOPENSSL_SYSNAME_WINCE -DWIN32_LEAN_AND_MEAN -DL_ENDIAN -DDSO_WIN32 -DNO_CHMOD -I$(WCECOMPAT)/include -DOPENSSL_SMALL_FOOTPRINT';
++    $base_cflags=' /W3 /WX /GF /Gy /Zi /nologo -DUNICODE -D_UNICODE -DOPENSSL_SYSNAME_WINCE -DWIN32_LEAN_AND_MEAN -DL_ENDIAN -DDSO_WIN32 -DNO_CHMOD -I$(WCECOMPAT)/include -DOPENSSL_SMALL_FOOTPRINT';
+     $base_cflags.=" $wcecdefs";
+     $opt_cflags=' /MC /O1i';	# optimize for space, but with intrinsics...
+     $dbg_clfags=' /MC /Od -DDEBUG -D_DEBUG';
+@@ -91,14 +120,24 @@
+     }
+ else	# Win32
+     {
+-    $base_cflags=' /W3 /WX /Gs0 /GF /Gy /nologo -DOPENSSL_SYSNAME_WIN32 -DWIN32_LEAN_AND_MEAN -DL_ENDIAN -DDSO_WIN32';
++    $base_cflags=' /W3 /WX /GF /Gy /Zi /nologo -DOPENSSL_SYSNAME_WIN32 -DWIN32_LEAN_AND_MEAN -DL_ENDIAN -DDSO_WIN32';
+     $base_cflags.=' -D_CRT_SECURE_NO_DEPRECATE';	# shut up VC8
+     $base_cflags.=' -D_CRT_NONSTDC_NO_DEPRECATE';	# shut up VC8
+-    $opt_cflags=' /MD /Ox /O2 /Ob2';
+-    $dbg_cflags=' /MDd /Od -DDEBUG -D_DEBUG';
+-    $lflags="/nologo /subsystem:console /opt:ref";
++    $opt_cflags=' /O1';
++    $dbg_cflags=' /Od -DDEBUG -D_DEBUG';
++    $lflags="/nologo /subsystem:console /opt:ref /debug";
++    if ($shlib)
++        {
++    	$opt_cflags.= ' /MD';
++    	$dbg_cflags.= ' /MDd';
++        }
++    else
++        {
++    	$opt_cflags.= ' /MT';
++    	$dbg_cflags.= ' /MTd';
++        }
+     }
+-$mlflags='';
++$mlflags=' /debug';
+ 
+ $out_def="out32"; $out_def.='_$(TARGETCPU)' if ($FLAVOR =~ /CE/);
+ $tmp_def="tmp32"; $tmp_def.='_$(TARGETCPU)' if ($FLAVOR =~ /CE/);
+@@ -107,8 +146,6 @@
+ if ($debug)
+ 	{
+ 	$cflags=$dbg_cflags.$base_cflags;
+-	$lflags.=" /debug";
+-	$mlflags.=' /debug';
+ 	}
+ else
+ 	{
+@@ -160,7 +197,7 @@
+ 	$afile='-o ';
+ } else {
+ 	$asm='ml /Cp /coff /c /Cx';
+-	$asm.=" /Zi" if $debug;
++	$asm.=" /Zi";
+ 	$afile='/Fo';
+ }
+ 
+@@ -234,7 +271,7 @@
+ 	$tmp_def='tmp32dll_$(TARGETCPU)';
+ 	}
+ 
+-$cflags.=" /Fd$out_def";
++$cflags.=" /Fd$pdbname";
+ 
+ sub do_lib_rule
+ 	{
+@@ -275,7 +312,10 @@
+ 			}
+ 		$ex.=" $zlib_lib" if $zlib_opt == 1 && $target =~ /O_CRYPTO/;
+ 		$ret.="\t\$(LINK) \$(MLFLAGS) $efile$target $name @<<\n  \$(SHLIB_EX_OBJ) $objs $ex\n<<\n";
+-        $ret.="\tIF EXIST \$@.manifest mt -manifest \$@.manifest -outputresource:\$@;2\n\n";
++		if ($FLAVOR !~ /CE/)
++			{
++	        	$ret.="\tIF EXIST \$@.manifest mt -manifest \$@.manifest -outputresource:\$@;2\n\n";
++			}
+ 		}
+ 	$ret.="\n";
+ 	return($ret);
+@@ -291,7 +331,10 @@
+ 	$ret.="$target: $files $dep_libs\n";
+ 	$ret.="\t\$(LINK) \$(LFLAGS) $efile$target @<<\n";
+ 	$ret.="  \$(APP_EX_OBJ) $files $libs\n<<\n";
+-    $ret.="\tIF EXIST \$@.manifest mt -manifest \$@.manifest -outputresource:\$@;1\n\n";
++	if ($FLAVOR !~ /CE/)
++		{
++		$ret.="\tIF EXIST \$@.manifest mt -manifest \$@.manifest -outputresource:\$@;1\n\n";
++	        }
+ 	return($ret);
+ 	}
+ 

@@ -1,0 +1,1240 @@
+<HTML
+><HEAD
+><TITLE
+>Windows Compatibility Functions</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.76b+
+"><LINK
+REL="HOME"
+TITLE="GLib Reference Manual"
+HREF="index.html"><LINK
+REL="UP"
+TITLE="GLib Utilities"
+HREF="glib-utilities.html"><LINK
+REL="PREVIOUS"
+TITLE="Simple XML Subset Parser"
+HREF="glib-simple-xml-subset-parser.html"><LINK
+REL="NEXT"
+TITLE="GLib Data Types"
+HREF="glib-data-types.html"></HEAD
+><BODY
+CLASS="REFENTRY"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="4"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="5"
+>GLib Reference Manual</FONT
+></TH
+></TR
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="glib-simple-xml-subset-parser.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="glib-utilities.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="glib-data-types.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+></TABLE
+></DIV
+><H1
+><A
+NAME="GLIB-WINDOWS-COMPATABILITY-FUNCTIONS">Windows Compatibility Functions</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN22690"
+></A
+><H2
+>Name</H2
+>Windows Compatibility Functions&nbsp;--&nbsp;UNIX emulation on Windows.</DIV
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN22693"><H2
+>Synopsis</H2
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="SYNOPSIS"
+>&#13;#include &lt;glib.h&gt;
+
+
+#define     <A
+HREF="glib-windows-compatability-functions.html#MAXPATHLEN-CAPS"
+>MAXPATHLEN</A
+>
+typedef     <A
+HREF="glib-windows-compatability-functions.html#PID-T"
+>pid_t</A
+>;
+#define     <A
+HREF="glib-windows-compatability-functions.html#PIPE"
+>pipe</A
+>                            (phandles)
+#define     <A
+HREF="glib-windows-compatability-functions.html#FTRUNCATE"
+>ftruncate</A
+>                       (fd, size)
+<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      <A
+HREF="glib-windows-compatability-functions.html#G-WIN32-ERROR-MESSAGE"
+>g_win32_error_message</A
+>           (<A
+HREF="glib-basic-types.html#GINT"
+>gint</A
+> error);
+<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      <A
+HREF="glib-windows-compatability-functions.html#G-WIN32-GETLOCALE"
+>g_win32_getlocale</A
+>               (void);
+<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      <A
+HREF="glib-windows-compatability-functions.html#G-WIN32-GET-PACKAGE-INSTALLATION-DIRECTORY"
+>g_win32_get_package_installation_directory</A
+>
+                                            (<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *package,
+                                             <A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *dll_name);
+<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      <A
+HREF="glib-windows-compatability-functions.html#G-WIN32-GET-PACKAGE-INSTALLATION-SUBDIRECTORY"
+>g_win32_get_package_installation_subdirectory</A
+>
+                                            (<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *package,
+                                             <A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *dll_name,
+                                             <A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *subdir);
+#define     <A
+HREF="glib-windows-compatability-functions.html#G-WIN32-DLLMAIN-FOR-DLL-NAME-CAPS"
+>G_WIN32_DLLMAIN_FOR_DLL_NAME</A
+>    (static, dll_name)&#13;</PRE
+></TD
+></TR
+></TABLE
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN22715"
+></A
+><H2
+>Description</H2
+><P
+></P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN22718"
+></A
+><H2
+>Details</H2
+><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22720"
+></A
+><H3
+><A
+NAME="MAXPATHLEN-CAPS"
+></A
+>MAXPATHLEN</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define MAXPATHLEN 1024</PRE
+></TD
+></TR
+></TABLE
+><P
+>Provided for UNIX emulation on Windows; equivalent to UNIX 
+macro <TT
+CLASS="LITERAL"
+>MAXPATHLEN</TT
+>, which is the maximum length of a filename
+(including full path).</P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22726"
+></A
+><H3
+><A
+NAME="PID-T"
+></A
+>pid_t</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>typedef int pid_t;</PRE
+></TD
+></TR
+></TABLE
+><P
+>Provided for UNIX emulation on Windows; process ID type.</P
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22731"
+></A
+><H3
+><A
+NAME="PIPE"
+></A
+>pipe()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define pipe(phandles)	_pipe (phandles, 4096, _O_BINARY)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Provided for UNIX emulation on Windows; see documentation for <TT
+CLASS="FUNCTION"
+><A
+HREF="glib-windows-compatability-functions.html#PIPE"
+>pipe</A
+>()</TT
+>
+in any UNIX manual.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22739"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>phandles</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22744"
+></A
+><H3
+><A
+NAME="FTRUNCATE"
+></A
+>ftruncate()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#    define ftruncate(fd, size)	g_win32_ftruncate (fd, size)</PRE
+></TD
+></TR
+></TABLE
+><P
+>Provided for UNIX emulation on Windows; see documentation for <TT
+CLASS="FUNCTION"
+><A
+HREF="glib-windows-compatability-functions.html#FTRUNCATE"
+>ftruncate</A
+>()</TT
+>
+in any UNIX manual.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22752"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>fd</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22757"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>size</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>&#13;</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22762"
+></A
+><H3
+><A
+NAME="G-WIN32-ERROR-MESSAGE"
+></A
+>g_win32_error_message ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      g_win32_error_message           (<A
+HREF="glib-basic-types.html#GINT"
+>gint</A
+> error);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Translate a Win32 error code (as returned by GetLastError()) into
+the corresponding message. The message is either language neutral,
+or in the thread's language, or the user's language, the system's
+language, or US English (see docs for <TT
+CLASS="FUNCTION"
+>FormatMessage()</TT
+>). *
+The returned string should be deallocated with <A
+HREF="glib-memory-allocation.html#G-FREE"
+>g_free</A
+>().</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22775"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>error</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> error code.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22780"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> newly-allocated error message</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22785"
+></A
+><H3
+><A
+NAME="G-WIN32-GETLOCALE"
+></A
+>g_win32_getlocale ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      g_win32_getlocale               (void);</PRE
+></TD
+></TR
+></TABLE
+><P
+>The setlocale in the Microsoft C library uses locale names of the
+form "English_United States.1252" etc. We want the UNIXish standard
+form "en_US", "zh_TW" etc. This function gets the current thread
+locale from Windows - without any encoding info - and returns it as
+a string of the above form for use in forming file names etc. The
+returned string should be deallocated with <A
+HREF="glib-memory-allocation.html#G-FREE"
+>g_free</A
+>().</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22794"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> newly-allocated locale name.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22799"
+></A
+><H3
+><A
+NAME="G-WIN32-GET-PACKAGE-INSTALLATION-DIRECTORY"
+></A
+>g_win32_get_package_installation_directory ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      g_win32_get_package_installation_directory
+                                            (<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *package,
+                                             <A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *dll_name);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Try to determine the installation directory for a software package.
+Typically used by GNU software packages.</P
+><P
+><TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+> should be a short identifier for the package. Typically it
+is the same identifier as used for
+<TT
+CLASS="LITERAL"
+>GETTEXT_PACKAGE</TT
+> in software configured according
+to GNU standards. The function first looks in the Windows Registry
+for the value <TT
+CLASS="LITERAL"
+>InstallationDirectory</TT
+> in the key
+<TT
+CLASS="LITERAL"
+>HKLM\Software\<TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+></TT
+>, and if that value
+exists and is a string, returns that.</P
+><P
+>If <TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+> is <TT
+CLASS="LITERAL"
+>NULL</TT
+>, or the above value isn't found in the
+Registry, but <TT
+CLASS="PARAMETER"
+><I
+>dll_name</I
+></TT
+> is non-<TT
+CLASS="LITERAL"
+>NULL</TT
+>, it should name a DLL loaded
+into the current process. Typically that would be the name of the
+DLL calling this function, looking for its installation
+directory. The function then asks Windows what directory that DLL
+was loaded from. If that directory's last component is "bin" or
+"lib", the parent directory is returned, otherwise the directory
+itself. If that DLL isn't loaded, the function proceeds as if
+<TT
+CLASS="PARAMETER"
+><I
+>dll_name</I
+></TT
+> was <TT
+CLASS="LITERAL"
+>NULL</TT
+>.</P
+><P
+>If both <TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+> and <TT
+CLASS="PARAMETER"
+><I
+>dll_name</I
+></TT
+> are <TT
+CLASS="LITERAL"
+>NULL</TT
+>, the directory from where
+the main executable of the process was loaded is uses instead in
+the same way as above.</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22828"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> An identifier for a software package, or <TT
+CLASS="LITERAL"
+>NULL</TT
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22834"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>dll_name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> The name of a DLL that a package provides, or <TT
+CLASS="LITERAL"
+>NULL</TT
+>.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22840"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> a string containing the installation directory for <TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+>.
+The return value should be freed with <A
+HREF="glib-memory-allocation.html#G-FREE"
+>g_free</A
+>() when not needed any longer.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22847"
+></A
+><H3
+><A
+NAME="G-WIN32-GET-PACKAGE-INSTALLATION-SUBDIRECTORY"
+></A
+>g_win32_get_package_installation_subdirectory ()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+>*      g_win32_get_package_installation_subdirectory
+                                            (<A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *package,
+                                             <A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *dll_name,
+                                             <A
+HREF="glib-basic-types.html#GCHAR"
+>gchar</A
+> *subdir);</PRE
+></TD
+></TR
+></TABLE
+><P
+>Returns a newly-allocated string containing the path of the
+subdirectory <TT
+CLASS="PARAMETER"
+><I
+>subdir</I
+></TT
+> in the return value from calling
+<A
+HREF="glib-windows-compatability-functions.html#G-WIN32-GET-PACKAGE-INSTALLATION-DIRECTORY"
+>g_win32_get_package_installation_directory</A
+>() with the <TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+> and
+<TT
+CLASS="PARAMETER"
+><I
+>dll_name</I
+></TT
+> parameters.</P
+><P
+></P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22862"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> An identifier for a software package, or <TT
+CLASS="LITERAL"
+>NULL</TT
+>.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22868"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>dll_name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> The name of a DLL that a package provides, or <TT
+CLASS="LITERAL"
+>NULL</TT
+>.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22874"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>subdir</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> A subdirectory of the package installation directory.</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22879"><SPAN
+STYLE="white-space: nowrap"
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>Returns</I
+></SPAN
+> :</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+> a string containing the complete path to <TT
+CLASS="PARAMETER"
+><I
+>subdir</I
+></TT
+> inside the 
+installation directory of <TT
+CLASS="PARAMETER"
+><I
+>package</I
+></TT
+>. The return value should be freed with
+<A
+HREF="glib-memory-allocation.html#G-FREE"
+>g_free</A
+>() when no longer needed.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+><HR><DIV
+CLASS="REFSECT2"
+><A
+NAME="AEN22887"
+></A
+><H3
+><A
+NAME="G-WIN32-DLLMAIN-FOR-DLL-NAME-CAPS"
+></A
+>G_WIN32_DLLMAIN_FOR_DLL_NAME()</H3
+><TABLE
+BORDER="0"
+BGCOLOR="#E8E8FF"
+WIDTH="100%"
+CELLPADDING="6"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>#define     G_WIN32_DLLMAIN_FOR_DLL_NAME(static, dll_name)</PRE
+></TD
+></TR
+></TABLE
+><P
+>On Windows, this macro defines a <TT
+CLASS="FUNCTION"
+>DllMain()</TT
+> function 
+that stores the actual DLL name that the code being compiled will be 
+included in.</P
+><P
+>On non-Windows platforms, expands to nothing.</P
+><P
+></P
+><TABLE
+CLASS="VARIABLELIST"
+BORDER="0"
+CELLSPACING="0"
+CELLPADDING="4"
+WIDTH="100%"
+BGCOLOR="#F0F0D0"
+><TBODY
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22896"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>static</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>empty or "static".</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="RIGHT"
+VALIGN="TOP"
+WIDTH="20%"
+><A
+NAME="AEN22901"><SPAN
+STYLE="white-space: nowrap"
+><TT
+CLASS="PARAMETER"
+><I
+>dll_name</I
+></TT
+>&nbsp;:</SPAN
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="80%"
+><P
+>the name of the (pointer to the) char array where the DLL name 
+   will be stored. If this is used, you must also include 
+   <TT
+CLASS="FILENAME"
+>windows.h</TT
+>. If you need a more complex DLL entry 
+   point function, you cannot use this.</P
+></TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><BR
+CLEAR="all"><BR><TABLE
+WIDTH="100%"
+BORDER="0"
+BGCOLOR="#000000"
+CELLPADDING="1"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="left"
+><A
+HREF="glib-simple-xml-subset-parser.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>&#60;&#60;&#60; Previous Page</B
+></FONT
+></A
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="index.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Home</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="center"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+><A
+HREF="glib-utilities.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Up</B
+></FONT
+></A
+></B
+></FONT
+></TD
+><TD
+WIDTH="25%"
+BGCOLOR="#C00000"
+ALIGN="right"
+><A
+HREF="glib-data-types.html"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Next Page &#62;&#62;&#62;</B
+></FONT
+></A
+></TD
+></TR
+><TR
+><TD
+COLSPAN="2"
+ALIGN="left"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>Simple XML Subset Parser</B
+></FONT
+></TD
+><TD
+COLSPAN="2"
+ALIGN="right"
+><FONT
+COLOR="#FFFFFF"
+SIZE="3"
+><B
+>GLib Data Types</B
+></FONT
+></TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

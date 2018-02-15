@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibXML", "libxml.vcproj", "{470D3FB6-E9A7-4275-BB54-95261A670565}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_TS|Win32 = Debug_TS|Win32
+		Release_TS|Win32 = Release_TS|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{470D3FB6-E9A7-4275-BB54-95261A670565}.Debug_TS|Win32.ActiveCfg = Debug_TS|Win32
+		{470D3FB6-E9A7-4275-BB54-95261A670565}.Debug_TS|Win32.Build.0 = Debug_TS|Win32
+		{470D3FB6-E9A7-4275-BB54-95261A670565}.Release_TS|Win32.ActiveCfg = Release_TS|Win32
+		{470D3FB6-E9A7-4275-BB54-95261A670565}.Release_TS|Win32.Build.0 = Release_TS|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

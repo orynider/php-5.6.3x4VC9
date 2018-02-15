@@ -1,0 +1,1302 @@
+<refentry id="glib-Date-and-Time-Functions">
+<refmeta>
+<refentrytitle>Date and Time Functions</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GLIB Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>Date and Time Functions</refname><refpurpose>calendrical calculations and miscellaneous time stuff.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv><title>Synopsis</title>
+<synopsis>
+
+#include &lt;glib.h&gt;
+
+
+#define     <link linkend="G-USEC-PER-SEC-CAPS">G_USEC_PER_SEC</link>
+struct      <link linkend="GTimeVal">GTimeVal</link>;
+void        <link linkend="g-get-current-time">g_get_current_time</link>              (<link linkend="GTimeVal">GTimeVal</link> *result);
+void        <link linkend="g-usleep">g_usleep</link>                        (<link linkend="gulong">gulong</link> microseconds);
+void        <link linkend="g-time-val-add">g_time_val_add</link>                  (<link linkend="GTimeVal">GTimeVal</link> *time,
+                                             <link linkend="glong">glong</link> microseconds);
+
+struct      <link linkend="GDate">GDate</link>;
+typedef     <link linkend="GTime">GTime</link>;
+enum        <link linkend="GDateDMY">GDateDMY</link>;
+typedef     <link linkend="GDateDay">GDateDay</link>;
+enum        <link linkend="GDateMonth">GDateMonth</link>;
+typedef     <link linkend="GDateYear">GDateYear</link>;
+enum        <link linkend="GDateWeekday">GDateWeekday</link>;
+
+#define     <link linkend="G-DATE-BAD-DAY-CAPS">G_DATE_BAD_DAY</link>
+#define     <link linkend="G-DATE-BAD-JULIAN-CAPS">G_DATE_BAD_JULIAN</link>
+#define     <link linkend="G-DATE-BAD-YEAR-CAPS">G_DATE_BAD_YEAR</link>
+
+<link linkend="GDate">GDate</link>*      <link linkend="g-date-new">g_date_new</link>                      (void);
+<link linkend="GDate">GDate</link>*      <link linkend="g-date-new-dmy">g_date_new_dmy</link>                  (<link linkend="GDateDay">GDateDay</link> day,
+                                             <link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> year);
+<link linkend="GDate">GDate</link>*      <link linkend="g-date-new-julian">g_date_new_julian</link>               (<link linkend="guint32">guint32</link> julian_day);
+void        <link linkend="g-date-clear">g_date_clear</link>                    (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_dates);
+void        <link linkend="g-date-free">g_date_free</link>                     (<link linkend="GDate">GDate</link> *date);
+
+void        <link linkend="g-date-set-day">g_date_set_day</link>                  (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateDay">GDateDay</link> day);
+void        <link linkend="g-date-set-month">g_date_set_month</link>                (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateMonth">GDateMonth</link> month);
+void        <link linkend="g-date-set-year">g_date_set_year</link>                 (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateYear">GDateYear</link> year);
+void        <link linkend="g-date-set-dmy">g_date_set_dmy</link>                  (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateDay">GDateDay</link> day,
+                                             <link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> y);
+void        <link linkend="g-date-set-julian">g_date_set_julian</link>               (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint32">guint32</link> julian_date);
+void        <link linkend="g-date-set-time">g_date_set_time</link>                 (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GTime">GTime</link> time);
+void        <link linkend="g-date-set-parse">g_date_set_parse</link>                (<link linkend="GDate">GDate</link> *date,
+                                             const <link linkend="gchar">gchar</link> *str);
+
+void        <link linkend="g-date-add-days">g_date_add_days</link>                 (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_days);
+void        <link linkend="g-date-subtract-days">g_date_subtract_days</link>            (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_days);
+void        <link linkend="g-date-add-months">g_date_add_months</link>               (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_months);
+void        <link linkend="g-date-subtract-months">g_date_subtract_months</link>          (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_months);
+void        <link linkend="g-date-add-years">g_date_add_years</link>                (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_years);
+void        <link linkend="g-date-subtract-years">g_date_subtract_years</link>           (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_years);
+<link linkend="gint">gint</link>        <link linkend="g-date-days-between">g_date_days_between</link>             (const <link linkend="GDate">GDate</link> *date1,
+                                             const <link linkend="GDate">GDate</link> *date2);
+<link linkend="gint">gint</link>        <link linkend="g-date-compare">g_date_compare</link>                  (const <link linkend="GDate">GDate</link> *lhs,
+                                             const <link linkend="GDate">GDate</link> *rhs);
+void        <link linkend="g-date-clamp">g_date_clamp</link>                    (<link linkend="GDate">GDate</link> *date,
+                                             const <link linkend="GDate">GDate</link> *min_date,
+                                             const <link linkend="GDate">GDate</link> *max_date);
+void        <link linkend="g-date-order">g_date_order</link>                    (<link linkend="GDate">GDate</link> *date1,
+                                             <link linkend="GDate">GDate</link> *date2);
+
+<link linkend="GDateDay">GDateDay</link>    <link linkend="g-date-get-day">g_date_get_day</link>                  (const <link linkend="GDate">GDate</link> *date);
+<link linkend="GDateMonth">GDateMonth</link>  <link linkend="g-date-get-month">g_date_get_month</link>                (const <link linkend="GDate">GDate</link> *date);
+<link linkend="GDateYear">GDateYear</link>   <link linkend="g-date-get-year">g_date_get_year</link>                 (const <link linkend="GDate">GDate</link> *date);
+<link linkend="guint32">guint32</link>     <link linkend="g-date-get-julian">g_date_get_julian</link>               (const <link linkend="GDate">GDate</link> *date);
+<link linkend="GDateWeekday">GDateWeekday</link> <link linkend="g-date-get-weekday">g_date_get_weekday</link>             (const <link linkend="GDate">GDate</link> *date);
+<link linkend="guint">guint</link>       <link linkend="g-date-get-day-of-year">g_date_get_day_of_year</link>          (const <link linkend="GDate">GDate</link> *date);
+
+<link linkend="guint8">guint8</link>      <link linkend="g-date-get-days-in-month">g_date_get_days_in_month</link>        (<link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> year);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-is-first-of-month">g_date_is_first_of_month</link>        (const <link linkend="GDate">GDate</link> *date);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-is-last-of-month">g_date_is_last_of_month</link>         (const <link linkend="GDate">GDate</link> *date);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-is-leap-year">g_date_is_leap_year</link>             (<link linkend="GDateYear">GDateYear</link> year);
+<link linkend="guint">guint</link>       <link linkend="g-date-get-monday-week-of-year">g_date_get_monday_week_of_year</link>  (const <link linkend="GDate">GDate</link> *date);
+<link linkend="guint8">guint8</link>      <link linkend="g-date-get-monday-weeks-in-year">g_date_get_monday_weeks_in_year</link> (<link linkend="GDateYear">GDateYear</link> year);
+<link linkend="guint">guint</link>       <link linkend="g-date-get-sunday-week-of-year">g_date_get_sunday_week_of_year</link>  (const <link linkend="GDate">GDate</link> *date);
+<link linkend="guint8">guint8</link>      <link linkend="g-date-get-sunday-weeks-in-year">g_date_get_sunday_weeks_in_year</link> (<link linkend="GDateYear">GDateYear</link> year);
+
+<link linkend="gsize">gsize</link>       <link linkend="g-date-strftime">g_date_strftime</link>                 (<link linkend="gchar">gchar</link> *s,
+                                             <link linkend="gsize">gsize</link> slen,
+                                             const <link linkend="gchar">gchar</link> *format,
+                                             const <link linkend="GDate">GDate</link> *date);
+void        <link linkend="g-date-to-struct-tm">g_date_to_struct_tm</link>             (const <link linkend="GDate">GDate</link> *date,
+                                             struct <link linkend="tm">tm</link> *tm);
+
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-valid">g_date_valid</link>                    (const <link linkend="GDate">GDate</link> *date);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-valid-day">g_date_valid_day</link>                (<link linkend="GDateDay">GDateDay</link> day);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-valid-month">g_date_valid_month</link>              (<link linkend="GDateMonth">GDateMonth</link> month);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-valid-year">g_date_valid_year</link>               (<link linkend="GDateYear">GDateYear</link> year);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-valid-dmy">g_date_valid_dmy</link>                (<link linkend="GDateDay">GDateDay</link> day,
+                                             <link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> year);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-valid-julian">g_date_valid_julian</link>             (<link linkend="guint32">guint32</link> julian_date);
+<link linkend="gboolean">gboolean</link>    <link linkend="g-date-valid-weekday">g_date_valid_weekday</link>            (<link linkend="GDateWeekday">GDateWeekday</link> weekday);
+
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+<refsect1>
+<title>Description</title>
+<para>
+The <link linkend="GDate">GDate</link> data structure represents a day between January 1, Year 1,
+and sometime a few thousand years in the future (right now it will go
+to the year 65535 or so, but <link linkend="g-date-set-parse">g_date_set_parse</link>() only parses up to the
+year 8000 or so - just count on "a few thousand"). <link linkend="GDate">GDate</link> is meant to
+represent everyday dates, not astronomical dates or historical dates
+or ISO timestamps or the like. It extrapolates the current Gregorian
+calendar forward and backward in time; there is no attempt to change
+the calendar to match time periods or locations. <link linkend="GDate">GDate</link> does not store
+time information; it represents a <emphasis>day</emphasis>.
+</para>
+
+<para>
+The <link linkend="GDate">GDate</link> implementation has several nice features; it is only a
+64-bit struct, so storing large numbers of dates is very efficient. It
+can keep both a Julian and day-month-year representation of the date,
+since some calculations are much easier with one representation or the
+other. A Julian representation is simply a count of days since some
+fixed day in the past; for <link linkend="GDate">GDate</link> the fixed day is January 1, 1 AD.
+("Julian" dates in the <link linkend="GDate">GDate</link> API aren't really Julian dates in the
+technical sense; technically, Julian dates count from the start of the
+Julian period, Jan 1, 4713 BC).
+</para>
+
+<para>
+<link linkend="GDate">GDate</link> is simple to use. First you need a "blank" date; you can get a
+dynamically allocated date from <link linkend="g-date-new">g_date_new</link>(), or you can declare an
+automatic variable or array and initialize it to a sane state by
+calling <link linkend="g-date-clear">g_date_clear</link>(). A cleared date is sane; it's safe to call
+<link linkend="g-date-set-dmy">g_date_set_dmy</link>() and the other mutator functions to initialize the
+value of a cleared date. However, a cleared date is initially
+<emphasis>invalid</emphasis>, meaning that it doesn't represent a day
+that exists. It is undefined to call any of the date calculation
+routines on an invalid date. If you obtain a date from a user or other
+unpredictable source, you should check its validity with the
+<link linkend="g-date-valid">g_date_valid</link>() predicate. <link linkend="g-date-valid">g_date_valid</link>() is also used to check for
+errors with <link linkend="g-date-set-parse">g_date_set_parse</link>() and other functions that can
+fail. Dates can be invalidated by calling <link linkend="g-date-clear">g_date_clear</link>() again.
+</para>
+
+<para>
+<emphasis>It is very important to use the API to access the <link linkend="GDate">GDate</link>
+struct.</emphasis> Often only the day-month-year or only the Julian
+representation is valid. Sometimes neither is valid. Use the API.
+</para>
+
+<para>
+GLib doesn't contain any time-manipulation functions; however, there
+is a <link linkend="GTime">GTime</link> typedef which is equivalent to <type>time_t</type>, and a <link linkend="GTimeVal">GTimeVal</link>
+struct which represents a more precise time (with microseconds). You
+can request the current time as a <link linkend="GTimeVal">GTimeVal</link> with <link linkend="g-get-current-time">g_get_current_time</link>().
+</para>
+</refsect1>
+
+<refsect1>
+<title>Details</title>
+<refsect2>
+<title><anchor id="G-USEC-PER-SEC-CAPS">G_USEC_PER_SEC</title>
+<programlisting>#define G_USEC_PER_SEC 1000000
+</programlisting>
+<para>
+Number of microseconds in one second (1 million). This macro is provided for
+code readability.
+</para></refsect2>
+<refsect2>
+<title><anchor id="GTimeVal">struct GTimeVal</title>
+<programlisting>struct GTimeVal
+{
+  glong tv_sec;
+  glong tv_usec;
+};
+</programlisting>
+<para>
+Represents a precise time, with seconds and microseconds. Same as the
+<structname>struct timeval</structname> returned by the
+<function><link linkend="gettimeofday">gettimeofday</link>()</function> UNIX call.
+</para><variablelist role="struct">
+<varlistentry>
+<term><link linkend="glong">glong</link> <structfield>tv_sec</structfield></term>
+<listitem><para>seconds.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><link linkend="glong">glong</link> <structfield>tv_usec</structfield></term>
+<listitem><para>microseconds.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-get-current-time">g_get_current_time ()</title>
+<programlisting>void        g_get_current_time              (<link linkend="GTimeVal">GTimeVal</link> *result);</programlisting>
+<para>
+Equivalent to the UNIX <function><link linkend="gettimeofday">gettimeofday</link>()</function> function, but portable.</para>
+<para>
+Equivalent to <function><link linkend="gettimeofday">gettimeofday</link>()</function>, but also works on
+Win32. Returns the current time.
+</para><variablelist role="params">
+<varlistentry><term><parameter>result</parameter>&nbsp;:</term>
+<listitem><para> <link linkend="GTimeVal">GTimeVal</link> structure in which to store current time.
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-usleep">g_usleep ()</title>
+<programlisting>void        g_usleep                        (<link linkend="gulong">gulong</link> microseconds);</programlisting>
+<para>
+Pauses the current thread for the given number of microseconds. There
+are 1 million microseconds per second (represented by the
+<link linkend="G-USEC-PER-SEC-CAPS">G_USEC_PER_SEC</link> macro). <link linkend="g-usleep">g_usleep</link>() may have limited precision,
+depending on hardware and operating system; don't rely on the exact
+length of the sleep.
+</para><variablelist role="params">
+<varlistentry><term><parameter>microseconds</parameter>&nbsp;:</term>
+<listitem><para>number of microseconds to pause.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-time-val-add">g_time_val_add ()</title>
+<programlisting>void        g_time_val_add                  (<link linkend="GTimeVal">GTimeVal</link> *time,
+                                             <link linkend="glong">glong</link> microseconds);</programlisting>
+<para>
+Adds the given number of microseconds to <parameter>time</parameter>. <parameter>microseconds</parameter> can
+also be negative to decrease the value of <parameter>time</parameter>.</para>
+<para>
+
+</para><variablelist role="params">
+<varlistentry><term><parameter>time</parameter>&nbsp;:</term>
+<listitem><para> a <link linkend="GTimeVal">GTimeVal</link>
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>microseconds</parameter>&nbsp;:</term>
+<listitem><para> number of microseconds to add to <parameter>time</parameter>
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GDate">struct GDate</title>
+<programlisting>struct GDate
+{
+  guint julian_days : 32; /* julian days representation - we use a
+                           *  bitfield hoping that 64 bit platforms
+                           *  will pack this whole struct in one big
+                           *  int
+                           */
+
+  guint julian : 1;    /* julian is valid */
+  guint dmy    : 1;    /* dmy is valid */
+
+  /* DMY representation */
+  guint day    : 6;
+  guint month  : 4;
+  guint year   : 16;
+};
+</programlisting>
+<para>
+Represents a day between January 1, Year 1 and a few thousand years in
+the future. None of its members should be accessed directly. If the
+<structname>GDate</structname> is obtained from <link linkend="g-date-new">g_date_new</link>(), it will
+be safe to mutate but invalid and thus not safe for calendrical computations.
+If it's declared on the stack, it will contain garbage so must be
+initialized with <link linkend="g-date-clear">g_date_clear</link>(). <link linkend="g-date-clear">g_date_clear</link>() makes the date invalid
+but sane. An invalid date doesn't represent a day, it's "empty." A
+date becomes valid after you set it to a Julian day or you set a day,
+month, and year.
+</para></refsect2>
+<refsect2>
+<title><anchor id="GTime">GTime</title>
+<programlisting>typedef gint32  GTime;
+</programlisting>
+<para>
+Simply a replacement for <type>time_t</type>. Unrelated to <link linkend="GTimer">GTimer</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="GDateDMY">enum GDateDMY</title>
+<programlisting>typedef enum
+{
+  G_DATE_DAY   = 0,
+  G_DATE_MONTH = 1,
+  G_DATE_YEAR  = 2
+} GDateDMY;
+</programlisting>
+<para>
+This enumeration isn't used in the API, but may be useful if you need
+to mark a number as a day, month, or year.
+</para></refsect2>
+<refsect2>
+<title><anchor id="GDateDay">GDateDay</title>
+<programlisting>typedef guint8  GDateDay;   /* day of the month */
+</programlisting>
+<para>
+Integer representing a day of the month; between 1 and
+31. <link linkend="G-DATE-BAD-DAY-CAPS">G_DATE_BAD_DAY</link> represents an invalid day of the month.
+</para></refsect2>
+<refsect2>
+<title><anchor id="GDateMonth">enum GDateMonth</title>
+<programlisting>typedef enum
+{
+  G_DATE_BAD_MONTH = 0,
+  G_DATE_JANUARY   = 1,
+  G_DATE_FEBRUARY  = 2,
+  G_DATE_MARCH     = 3,
+  G_DATE_APRIL     = 4,
+  G_DATE_MAY       = 5,
+  G_DATE_JUNE      = 6,
+  G_DATE_JULY      = 7,
+  G_DATE_AUGUST    = 8,
+  G_DATE_SEPTEMBER = 9,
+  G_DATE_OCTOBER   = 10,
+  G_DATE_NOVEMBER  = 11,
+  G_DATE_DECEMBER  = 12
+} GDateMonth;
+</programlisting>
+<para>
+Enumeration representing a month; values are <link linkend="G-DATE-JANUARY-CAPS">G_DATE_JANUARY</link>,
+<link linkend="G-DATE-FEBRUARY-CAPS">G_DATE_FEBRUARY</link>, etc. <link linkend="G-DATE-BAD-MONTH-CAPS">G_DATE_BAD_MONTH</link> is the invalid value.
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_DATE_BAD_MONTH</literal></term>
+<listitem><para>invalid value.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_JANUARY</literal></term>
+<listitem><para>January.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_FEBRUARY</literal></term>
+<listitem><para>February.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_MARCH</literal></term>
+<listitem><para>March.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_APRIL</literal></term>
+<listitem><para>April.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_MAY</literal></term>
+<listitem><para>May.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_JUNE</literal></term>
+<listitem><para>June.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_JULY</literal></term>
+<listitem><para>July.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_AUGUST</literal></term>
+<listitem><para>August.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_SEPTEMBER</literal></term>
+<listitem><para>September.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_OCTOBER</literal></term>
+<listitem><para>October.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_NOVEMBER</literal></term>
+<listitem><para>November.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_DECEMBER</literal></term>
+<listitem><para>December.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="GDateYear">GDateYear</title>
+<programlisting>typedef guint16 GDateYear;
+</programlisting>
+<para>
+Integer representing a year; <link linkend="G-DATE-BAD-YEAR-CAPS">G_DATE_BAD_YEAR</link> is the invalid
+value. The year must be 1 or higher; negative (BC) years are not
+allowed. The year is represented with four digits.
+</para></refsect2>
+<refsect2>
+<title><anchor id="GDateWeekday">enum GDateWeekday</title>
+<programlisting>typedef enum
+{
+  G_DATE_BAD_WEEKDAY  = 0,
+  G_DATE_MONDAY       = 1,
+  G_DATE_TUESDAY      = 2,
+  G_DATE_WEDNESDAY    = 3,
+  G_DATE_THURSDAY     = 4,
+  G_DATE_FRIDAY       = 5,
+  G_DATE_SATURDAY     = 6,
+  G_DATE_SUNDAY       = 7
+} GDateWeekday;
+</programlisting>
+<para>
+Enumeration representing a day of the week; <link linkend="G-DATE-MONDAY-CAPS">G_DATE_MONDAY</link>,
+<link linkend="G-DATE-TUESDAY-CAPS">G_DATE_TUESDAY</link>, etc. <link linkend="G-DATE-BAD-WEEKDAY-CAPS">G_DATE_BAD_WEEKDAY</link> is an invalid weekday.
+</para><variablelist role="enum">
+<varlistentry>
+<term><literal>G_DATE_BAD_WEEKDAY</literal></term>
+<listitem><para>invalid value.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_MONDAY</literal></term>
+<listitem><para>Monday.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_TUESDAY</literal></term>
+<listitem><para>Tuesday.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_WEDNESDAY</literal></term>
+<listitem><para>Wednesday.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_THURSDAY</literal></term>
+<listitem><para>Thursday.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_FRIDAY</literal></term>
+<listitem><para>Friday.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_SATURDAY</literal></term>
+<listitem><para>Saturday.
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><literal>G_DATE_SUNDAY</literal></term>
+<listitem><para>Sunday.
+
+</para></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="G-DATE-BAD-DAY-CAPS">G_DATE_BAD_DAY</title>
+<programlisting>#define G_DATE_BAD_DAY    0U
+</programlisting>
+<para>
+Represents an invalid <link linkend="GDateDay">GDateDay</link>.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-DATE-BAD-JULIAN-CAPS">G_DATE_BAD_JULIAN</title>
+<programlisting>#define G_DATE_BAD_JULIAN 0U
+</programlisting>
+<para>
+Represents an invalid Julian day number.
+</para></refsect2>
+<refsect2>
+<title><anchor id="G-DATE-BAD-YEAR-CAPS">G_DATE_BAD_YEAR</title>
+<programlisting>#define G_DATE_BAD_YEAR   0U
+</programlisting>
+<para>
+Represents an invalid year.
+</para></refsect2>
+<refsect2>
+<title><anchor id="g-date-new">g_date_new ()</title>
+<programlisting><link linkend="GDate">GDate</link>*      g_date_new                      (void);</programlisting>
+<para>
+Allocates a <link linkend="GDate">GDate</link> and initializes it to a sane state. The new date will
+be cleared (as if you'd called <link linkend="g-date-clear">g_date_clear</link>()) but invalid (it won't
+represent an existing day). Free the return value with <link linkend="g-date-free">g_date_free</link>().
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a newly-allocated <link linkend="GDate">GDate</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-new-dmy">g_date_new_dmy ()</title>
+<programlisting><link linkend="GDate">GDate</link>*      g_date_new_dmy                  (<link linkend="GDateDay">GDateDay</link> day,
+                                             <link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Like <link linkend="g-date-new">g_date_new</link>(), but also sets the value of the date. Assuming the
+day-month-year triplet you pass in represents an existing day, the
+returned date will be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>day</parameter>&nbsp;:</term>
+<listitem><para>day of the month.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>month</parameter>&nbsp;:</term>
+<listitem><para>month of the year.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>year
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a newly-allocated <link linkend="GDate">GDate</link> initialized with <parameter>day</parameter>, <parameter>month</parameter>, and <parameter>year</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-new-julian">g_date_new_julian ()</title>
+<programlisting><link linkend="GDate">GDate</link>*      g_date_new_julian               (<link linkend="guint32">guint32</link> julian_day);</programlisting>
+<para>
+Like <link linkend="g-date-new">g_date_new</link>(), but also sets the value of the date. Assuming the
+Julian day number you pass in is valid (greater than 0, less than an
+unreasonably large number), the returned date will be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>julian_day</parameter>&nbsp;:</term>
+<listitem><para>days since January 1, Year 1.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>a newly-allocated <link linkend="GDate">GDate</link> initialized with <parameter>julian_day</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-clear">g_date_clear ()</title>
+<programlisting>void        g_date_clear                    (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_dates);</programlisting>
+<para>
+Initializes one or more <link linkend="GDate">GDate</link> structs to a sane but invalid
+state. The cleared dates will not represent an existing date, but will
+not contain garbage. Useful to init a date declared on the stack.
+Validity can be tested with <link linkend="g-date-valid">g_date_valid</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>pointer to one or more dates to clear.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n_dates</parameter>&nbsp;:</term>
+<listitem><para>number of dates to clear.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-free">g_date_free ()</title>
+<programlisting>void        g_date_free                     (<link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Frees a <link linkend="GDate">GDate</link> returned from <link linkend="g-date-new">g_date_new</link>().
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-set-day">g_date_set_day ()</title>
+<programlisting>void        g_date_set_day                  (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateDay">GDateDay</link> day);</programlisting>
+<para>
+Sets the day of the month for a <link linkend="GDate">GDate</link>. If the resulting day-month-year
+triplet is invalid, the date will be invalid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>day</parameter>&nbsp;:</term>
+<listitem><para>day to set.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-set-month">g_date_set_month ()</title>
+<programlisting>void        g_date_set_month                (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateMonth">GDateMonth</link> month);</programlisting>
+<para>
+Sets the month of the year for a <link linkend="GDate">GDate</link>.  If the resulting
+day-month-year triplet is invalid, the date will be invalid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>month</parameter>&nbsp;:</term>
+<listitem><para>month to set.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-set-year">g_date_set_year ()</title>
+<programlisting>void        g_date_set_year                 (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Sets the year for a <link linkend="GDate">GDate</link>. If the resulting day-month-year triplet is
+invalid, the date will be invalid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>year to set.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-set-dmy">g_date_set_dmy ()</title>
+<programlisting>void        g_date_set_dmy                  (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GDateDay">GDateDay</link> day,
+                                             <link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> y);</programlisting>
+<para>
+Sets the value of a <link linkend="GDate">GDate</link> from a day, month, and year. The day-month-year 
+triplet must be valid; if you aren't sure it is, call <link linkend="g-date-valid-dmy">g_date_valid_dmy</link>() to
+check before you set it.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>day</parameter>&nbsp;:</term>
+<listitem><para>day.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>month</parameter>&nbsp;:</term>
+<listitem><para>month.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>y</parameter>&nbsp;:</term>
+<listitem><para>year.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-set-julian">g_date_set_julian ()</title>
+<programlisting>void        g_date_set_julian               (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint32">guint32</link> julian_date);</programlisting>
+<para>
+Sets the value of a <link linkend="GDate">GDate</link> from a Julian day number.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>julian_date</parameter>&nbsp;:</term>
+<listitem><para>Julian day number (days since January 1, Year 1).
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-set-time">g_date_set_time ()</title>
+<programlisting>void        g_date_set_time                 (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="GTime">GTime</link> time);</programlisting>
+<para>
+Sets the value of a date from a <link linkend="GTime">GTime</link> (<type>time_t</type>) value. 
+To set the value of a date to the current day, you could write:
+<informalexample><programlisting>
+g_date_set_time (date, time (NULL));
+</programlisting></informalexample>
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>time</parameter>&nbsp;:</term>
+<listitem><para><link linkend="GTime">GTime</link> value to set.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-set-parse">g_date_set_parse ()</title>
+<programlisting>void        g_date_set_parse                (<link linkend="GDate">GDate</link> *date,
+                                             const <link linkend="gchar">gchar</link> *str);</programlisting>
+<para>
+Parses a user-inputted string <parameter>str</parameter>, and try to figure out what date it
+represents, taking the current locale into account. If the string is
+successfully parsed, the date will be valid after the call. Otherwise,
+it will be invalid. You should check using <link linkend="g-date-valid">g_date_valid</link>() to see
+whether the parsing succeeded.
+</para>
+
+<para>
+This function is not appropriate for file formats and the like; it
+isn't very precise, and its exact behavior varies with the
+locale. It's intended to be a heuristic routine that guesses what the
+user means by a given string (and it does work pretty well in that
+capacity).
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to fill in.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>str</parameter>&nbsp;:</term>
+<listitem><para>string to parse.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-add-days">g_date_add_days ()</title>
+<programlisting>void        g_date_add_days                 (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_days);</programlisting>
+<para>
+Increments a date some number of days. To move forward by weeks, add
+weeks*7 days. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to increment.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n_days</parameter>&nbsp;:</term>
+<listitem><para>number of days to move the date forward.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-subtract-days">g_date_subtract_days ()</title>
+<programlisting>void        g_date_subtract_days            (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_days);</programlisting>
+<para>
+Moves a date some number of days into the past. To move by weeks, just
+move by weeks*7 days. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to decrement.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n_days</parameter>&nbsp;:</term>
+<listitem><para>number of days to move.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-add-months">g_date_add_months ()</title>
+<programlisting>void        g_date_add_months               (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_months);</programlisting>
+<para>
+Increments a date by some number of months. If the day of the month is
+greater than 28, this routine may change the day of the month (because
+the destination month may not have the current day in it). The date
+must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to increment.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n_months</parameter>&nbsp;:</term>
+<listitem><para>number of months to move forward.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-subtract-months">g_date_subtract_months ()</title>
+<programlisting>void        g_date_subtract_months          (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_months);</programlisting>
+<para>
+Moves a date some number of months into the past. If the current day of
+the month doesn't exist in the destination month, the day of the month
+may change. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to decrement.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n_months</parameter>&nbsp;:</term>
+<listitem><para>number of months to move.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-add-years">g_date_add_years ()</title>
+<programlisting>void        g_date_add_years                (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_years);</programlisting>
+<para>
+Increments a date by some number of years. If the date is February 29,
+and the destination year is not a leap year, the date will be changed
+to February 28. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to increment.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n_years</parameter>&nbsp;:</term>
+<listitem><para>number of years to move forward.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-subtract-years">g_date_subtract_years ()</title>
+<programlisting>void        g_date_subtract_years           (<link linkend="GDate">GDate</link> *date,
+                                             <link linkend="guint">guint</link> n_years);</programlisting>
+<para>
+Moves a date some number of years into the past. If the current day
+doesn't exist in the destination year (i.e. it's February 29 and you
+move to a non-leap-year) then the day is changed to February 29. The date
+must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to decrement.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>n_years</parameter>&nbsp;:</term>
+<listitem><para>number of years to move.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-days-between">g_date_days_between ()</title>
+<programlisting><link linkend="gint">gint</link>        g_date_days_between             (const <link linkend="GDate">GDate</link> *date1,
+                                             const <link linkend="GDate">GDate</link> *date2);</programlisting>
+<para>
+Computes the number of days between two dates.
+If <parameter>date2</parameter> is prior to <parameter>date1</parameter>, the returned value is negative.
+Both dates must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date1</parameter>&nbsp;:</term>
+<listitem><para>the first date.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>date2</parameter>&nbsp;:</term>
+<listitem><para>the second date.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>the number of days between <parameter>date1</parameter> and <parameter>date2</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-compare">g_date_compare ()</title>
+<programlisting><link linkend="gint">gint</link>        g_date_compare                  (const <link linkend="GDate">GDate</link> *lhs,
+                                             const <link linkend="GDate">GDate</link> *rhs);</programlisting>
+<para>
+<function><link linkend="qsort">qsort</link>()</function>-style comparsion function for dates. Both
+dates must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>lhs</parameter>&nbsp;:</term>
+<listitem><para>first date to compare.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>rhs</parameter>&nbsp;:</term>
+<listitem><para>second date to compare.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>0 for equal, less than zero if <parameter>lhs</parameter> is less than <parameter>rhs</parameter>,
+greater than zero if <parameter>lhs</parameter> is greater than <parameter>rhs</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-clamp">g_date_clamp ()</title>
+<programlisting>void        g_date_clamp                    (<link linkend="GDate">GDate</link> *date,
+                                             const <link linkend="GDate">GDate</link> *min_date,
+                                             const <link linkend="GDate">GDate</link> *max_date);</programlisting>
+<para>
+If <parameter>date</parameter> is prior to <parameter>min_date</parameter>, sets <parameter>date</parameter> equal to <parameter>min_date</parameter>.
+If <parameter>date</parameter> falls after <parameter>max_date</parameter>, sets <parameter>date</parameter> equal to <parameter>max_date</parameter>.
+Either <parameter>min_date</parameter> and <parameter>max_date</parameter> may be <literal>NULL</literal>.  All non-<literal>NULL</literal> dates
+must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to clamp.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>min_date</parameter>&nbsp;:</term>
+<listitem><para>minimum accepted value for <parameter>date</parameter>.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>max_date</parameter>&nbsp;:</term>
+<listitem><para>maximum accepted value for <parameter>date</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-order">g_date_order ()</title>
+<programlisting>void        g_date_order                    (<link linkend="GDate">GDate</link> *date1,
+                                             <link linkend="GDate">GDate</link> *date2);</programlisting>
+<para>
+Checks if <parameter>date1</parameter> is less than or equal to <parameter>date2</parameter>,
+and swap the values if this is not the case.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date1</parameter>&nbsp;:</term>
+<listitem><para>the first date.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>date2</parameter>&nbsp;:</term>
+<listitem><para>the second date.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-day">g_date_get_day ()</title>
+<programlisting><link linkend="GDateDay">GDateDay</link>    g_date_get_day                  (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the day of the month. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to extract the day of the month from.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>day of the month.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-month">g_date_get_month ()</title>
+<programlisting><link linkend="GDateMonth">GDateMonth</link>  g_date_get_month                (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the month of the year. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to get the month from.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>month of the year as a <link linkend="GDateMonth">GDateMonth</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-year">g_date_get_year ()</title>
+<programlisting><link linkend="GDateYear">GDateYear</link>   g_date_get_year                 (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the year of a <link linkend="GDate">GDate</link>. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>year in which the date falls.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-julian">g_date_get_julian ()</title>
+<programlisting><link linkend="guint32">guint32</link>     g_date_get_julian               (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the Julian day or "serial number" of the <link linkend="GDate">GDate</link>. The
+Julian day is simply the number of days since January 1, Year 1; i.e.,
+January 1, Year 1 is Julian day 1; January 2, Year 1 is Julian day 2,
+etc. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to extract the Julian day from.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>Julian day.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-weekday">g_date_get_weekday ()</title>
+<programlisting><link linkend="GDateWeekday">GDateWeekday</link> g_date_get_weekday             (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the day of the week for a <link linkend="GDate">GDate</link>. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>day of the week as a <link linkend="GDateWeekday">GDateWeekday</link>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-day-of-year">g_date_get_day_of_year ()</title>
+<programlisting><link linkend="guint">guint</link>       g_date_get_day_of_year          (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the day of the year, where Jan 1 is the first day of the
+year. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to extract day of year from.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>day of the year.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-days-in-month">g_date_get_days_in_month ()</title>
+<programlisting><link linkend="guint8">guint8</link>      g_date_get_days_in_month        (<link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Returns the number of days in a month, taking leap years into account.
+</para><variablelist role="params">
+<varlistentry><term><parameter>month</parameter>&nbsp;:</term>
+<listitem><para>month.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>year.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>number of days in <parameter>month</parameter> during the <parameter>year</parameter>.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-is-first-of-month">g_date_is_first_of_month ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_is_first_of_month        (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the date is on the first of a month. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to check.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the date is the first of the month.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-is-last-of-month">g_date_is_last_of_month ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_is_last_of_month         (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the date is the last day of the month. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to check.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the date is the last day of the month.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-is-leap-year">g_date_is_leap_year ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_is_leap_year             (<link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the year is a leap year.
+</para><variablelist role="params">
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>year to check.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the year is a leap year.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-monday-week-of-year">g_date_get_monday_week_of_year ()</title>
+<programlisting><link linkend="guint">guint</link>       g_date_get_monday_week_of_year  (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the week of the year, where weeks are understood to start on
+Monday. If the date is before the first Monday of the year, return
+0. The date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>week of the year.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-monday-weeks-in-year">g_date_get_monday_weeks_in_year ()</title>
+<programlisting><link linkend="guint8">guint8</link>      g_date_get_monday_weeks_in_year (<link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Returns the number of weeks in the year, where weeks are taken to start
+on Monday. Will be 52 or 53. The date must be valid. (Years always have 52
+7-day periods, plus 1 or 2 extra days depending on whether it's a leap
+year. This function is basically telling you how many Mondays are in
+the year, i.e. there are 53 Mondays if one of the extra days happens
+to be a Monday.)
+</para><variablelist role="params">
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>a year.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>number of Mondays in the year.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-sunday-week-of-year">g_date_get_sunday_week_of_year ()</title>
+<programlisting><link linkend="guint">guint</link>       g_date_get_sunday_week_of_year  (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns the week of the year during which this date falls, if weeks 
+are understood to being on Sunday. The date must be valid. Can return 0 if 
+the day is before the first Sunday of the year.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>week number.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-get-sunday-weeks-in-year">g_date_get_sunday_weeks_in_year ()</title>
+<programlisting><link linkend="guint8">guint8</link>      g_date_get_sunday_weeks_in_year (<link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Returns the number of weeks in the year, where weeks are taken to start
+on Sunday. Will be 52 or 53. The date must be valid. (Years always have 52
+7-day periods, plus 1 or 2 extra days depending on whether it's a leap
+year. This function is basically telling you how many Sundays are in
+the year, i.e. there are 53 Sundays if one of the extra days happens
+to be a Sunday.)
+</para><variablelist role="params">
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>year to count weeks in.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>number of weeks.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-strftime">g_date_strftime ()</title>
+<programlisting><link linkend="gsize">gsize</link>       g_date_strftime                 (<link linkend="gchar">gchar</link> *s,
+                                             <link linkend="gsize">gsize</link> slen,
+                                             const <link linkend="gchar">gchar</link> *format,
+                                             const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Generates a printed representation of the date, in a locale-specific
+way. Works just like the standard C <function><link linkend="strftime">strftime</link>()</function>
+function, but only accepts date-related formats; time-related formats
+give undefined results. Date must be valid.
+</para><variablelist role="params">
+<varlistentry><term><parameter>s</parameter>&nbsp;:</term>
+<listitem><para>destination buffer.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>slen</parameter>&nbsp;:</term>
+<listitem><para>buffer size.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>format</parameter>&nbsp;:</term>
+<listitem><para>format string.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>valid <link linkend="GDate">GDate</link>.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>number of characters written to the buffer, or 0 the buffer was too small.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-to-struct-tm">g_date_to_struct_tm ()</title>
+<programlisting>void        g_date_to_struct_tm             (const <link linkend="GDate">GDate</link> *date,
+                                             struct <link linkend="tm">tm</link> *tm);</programlisting>
+<para>
+Fills in the date-related bits of a <structname>struct tm</structname>
+using the <parameter>date</parameter> value. Initializes the non-date parts with something
+sane but meaningless.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to set the <structname>struct tm</structname> from.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>tm</parameter>&nbsp;:</term>
+<listitem><para><structname>struct tm</structname> to fill.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-valid">g_date_valid ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_valid                    (const <link linkend="GDate">GDate</link> *date);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the <link linkend="GDate">GDate</link> represents an existing day. The date must not
+contain garbage; it should have been initialized with <link linkend="g-date-clear">g_date_clear</link>()
+if it wasn't allocated by one of the <link linkend="g-date-new">g_date_new</link>() variants.
+</para><variablelist role="params">
+<varlistentry><term><parameter>date</parameter>&nbsp;:</term>
+<listitem><para>a <link linkend="GDate">GDate</link> to check.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para>Whether the date is valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-valid-day">g_date_valid_day ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_valid_day                (<link linkend="GDateDay">GDateDay</link> day);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the day of the month is valid (a day is valid if it's
+between 1 and 31 inclusive).
+</para><variablelist role="params">
+<varlistentry><term><parameter>day</parameter>&nbsp;:</term>
+<listitem><para>day to check.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the day is valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-valid-month">g_date_valid_month ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_valid_month              (<link linkend="GDateMonth">GDateMonth</link> month);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the month value is valid. The 12 <link linkend="GDateMonth">GDateMonth</link>
+enumeration values are the only valid months.
+</para><variablelist role="params">
+<varlistentry><term><parameter>month</parameter>&nbsp;:</term>
+<listitem><para>month.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the month is valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-valid-year">g_date_valid_year ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_valid_year               (<link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the year is valid. Any year greater than 0 is valid,
+though there is a 16-bit limit to what <link linkend="GDate">GDate</link> will understand.
+</para><variablelist role="params">
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>year.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the year is valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-valid-dmy">g_date_valid_dmy ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_valid_dmy                (<link linkend="GDateDay">GDateDay</link> day,
+                                             <link linkend="GDateMonth">GDateMonth</link> month,
+                                             <link linkend="GDateYear">GDateYear</link> year);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the day-month-year triplet forms a valid, existing day
+in the range of days <link linkend="GDate">GDate</link> understands (Year 1 or later, no more than
+a few thousand years in the future).
+</para><variablelist role="params">
+<varlistentry><term><parameter>day</parameter>&nbsp;:</term>
+<listitem><para>day.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>month</parameter>&nbsp;:</term>
+<listitem><para>month.
+</para></listitem></varlistentry>
+<varlistentry><term><parameter>year</parameter>&nbsp;:</term>
+<listitem><para>year.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the date is a valid one.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-valid-julian">g_date_valid_julian ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_valid_julian             (<link linkend="guint32">guint32</link> julian_date);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the Julian day is valid. Anything greater than zero is basically a
+valid Julian, though there is a 32-bit limit.
+</para><variablelist role="params">
+<varlistentry><term><parameter>julian_date</parameter>&nbsp;:</term>
+<listitem><para>Julian day to check.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the Julian day is valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2>
+<title><anchor id="g-date-valid-weekday">g_date_valid_weekday ()</title>
+<programlisting><link linkend="gboolean">gboolean</link>    g_date_valid_weekday            (<link linkend="GDateWeekday">GDateWeekday</link> weekday);</programlisting>
+<para>
+Returns <literal>TRUE</literal> if the weekday is valid. The 7 <link linkend="GDateWeekday">GDateWeekday</link> enumeration
+values are the only valid weekdays.
+</para><variablelist role="params">
+<varlistentry><term><parameter>weekday</parameter>&nbsp;:</term>
+<listitem><para>weekday.
+</para></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis> :</term><listitem><para><literal>TRUE</literal> if the weekday is valid.
+
+
+</para></listitem></varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

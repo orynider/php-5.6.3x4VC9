@@ -1,0 +1,21 @@
+
+Scan Started Thu Jan 18 16:16:12 2018
+-------------------------------------------------------------------------------
+
+C:\php-sdk\php-src\ext\tidy\tests\bug54682.phpt: moved to 'C:\ProgramData\.clamwin\quarantine\bug54682.phpt.infected'
+
+C:\php-sdk\php-src\ext\tidy\tests\bug54682.phpt: Php.Exploit.CVE_2011_4153-1 FOUND
+----------- SCAN SUMMARY -----------
+Known viruses: 6387894
+Engine version: 0.99.1
+Scanned directories: 3668
+Scanned files: 128936
+Infected files: 1
+
+Data scanned: 4416.24 MB
+Data read: 4057.09 MB (ratio 1.09:1)
+Time: 2751.777 sec (45 m 51 s)
+
+--------------------------------------
+Completed
+--------------------------------------

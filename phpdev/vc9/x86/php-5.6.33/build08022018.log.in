@@ -1,0 +1,971 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+	SET PATH=C:\php-sdk\bin\;C:\Program Files\Git\mingw32\bin\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\;C:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\aolserver\include\;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Windows\Microsoft.NET\Framework\v3.5;;C:\MsVS09\Common7\IDE;C:\MsVS09\Common7\Tools;;C:\MsVS09\VC\Bin;C:\MsVS09\VC\Bin\VCPackages;;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin\NETFX 4.0 Tools;C:\Program Files\Microsoft SDKs\Windows\v8.1\Bin;;C:\Program Files\Microsoft SDKs\Windows\v8.1\bin\NETFX 4.0 Tools;c:\MsVS09\\Common7\IDE;c:\MsVS09\\VC\BIN;c:\MsVS09\\Common7\Tools;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Framework\v2.0.50727;c:\MsVS09\\VC\VCPackages;C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin;C:\php-sdk\bin;C:\php-sdk\msys2\usr\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Universal Extractor;C:\Program Files\Universal Extractor\bin;C:\Program Files\WinMerge;C:\Program Files\Microsoft Network Monitor 3\;C:\Program Files\Skype\Phone\;c:\Program Files\Java\jdk1.8.0_152\bin\;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\Git\cmd;c:\Program Files\Resource Hacker\;C:\Program Files\CVSNT\;C:\php-sdk\phpdev\vc9\x86\deps\bin
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+	for %T in (php5aolserver.dll php5apache.dll php5apache2_filter.dll php5apache2_2_filter.dll php5apache2.dll php5apache2_2.dll php5apache2_4.dll php5apache_hooks.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll) do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5aolserver.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+SAPI sapi\aolserver build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5apache.lib and object Release_TS\php5apache.exp
+SAPI sapi\apache build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_filter.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5apache2_filter.lib and object Release_TS\php5apache2_filter.exp
+SAPI sapi\apache2filter build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_2_filter.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5apache2_2_filter.lib and object Release_TS\php5apache2_2_filter.exp
+SAPI sapi\apache2filter (via sapi\apache2_2filter) build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5apache2.lib and object Release_TS\php5apache2.exp
+SAPI sapi\apache2handler build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5apache2_2.lib and object Release_TS\php5apache2_2.exp
+SAPI sapi\apache2handler (via sapi\apache2_2handler) build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache2_4.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5apache2_4.lib and object Release_TS\php5apache2_4.exp
+SAPI sapi\apache2handler (via sapi\apache2_4handler) build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5apache_hooks.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5apache_hooks.lib and object Release_TS\php5apache_hooks.exp
+SAPI sapi\apache_hooks build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php-cgi.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+SAPI sapi\cgi build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php.exe" 
+	"cl.exe"  /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\sapi\cli\ /FdRelease_TS\sapi\cli\ /FpRelease_TS\sapi\cli\ /FRRelease_TS\sapi\cli\ /c sapi\cli\php_cli.c sapi\cli\php_cli_process_title.c sapi\cli\php_cli_server.c sapi\cli\php_http_parser.c sapi\cli\ps_title.c
+php_cli.c
+php_cli_process_title.c
+sapi\cli\php_cli.c(686) : warning C4020: 'php_getopt' : too many actual parameters
+sapi\cli\php_cli.c(740) : warning C4020: 'php_getopt' : too many actual parameters
+sapi\cli\php_cli.c(1274) : warning C4020: 'php_getopt' : too many actual parameters
+php_cli_server.c
+php_http_parser.c
+sapi\cli\php_cli_server.c(881) : warning C4018: '>' : signed/unsigned mismatch
+sapi\cli\php_cli_server.c(2562) : warning C4020: 'php_getopt' : too many actual parameters
+ps_title.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\cli\php_http_parser.h(121) : error C2061: syntax error : identifier 'uint32_t'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\sapi\cli\php_http_parser.h(139) : error C2059: syntax error : '}'
+sapi\cli\php_http_parser.c(151) : error C2061: syntax error : identifier 'unhex'
+sapi\cli\php_http_parser.c(151) : error C2059: syntax error : ';'
+sapi\cli\php_http_parser.c(151) : error C3409: empty attribute block is not allowed
+sapi\cli\php_http_parser.c(151) : error C2143: syntax error : missing ']' before 'constant'
+sapi\cli\php_http_parser.c(163) : error C2061: syntax error : identifier 'normal_url_char'
+sapi\cli\php_http_parser.c(163) : error C2059: syntax error : ';'
+sapi\cli\php_http_parser.c(163) : error C3409: empty attribute block is not allowed
+sapi\cli\php_http_parser.c(163) : error C2143: syntax error : missing ']' before 'constant'
+sapi\cli\php_http_parser.c(334) : error C2037: left of 'state' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(335) : error C2037: left of 'header_state' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(336) : error C2065: 'uint32_t' : undeclared identifier
+sapi\cli\php_http_parser.c(336) : error C2146: syntax error : missing ';' before identifier 'index'
+sapi\cli\php_http_parser.c(336) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(336) : error C2037: left of 'index' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(337) : error C2065: 'uint32_t' : undeclared identifier
+sapi\cli\php_http_parser.c(337) : error C2146: syntax error : missing ';' before identifier 'nread'
+sapi\cli\php_http_parser.c(337) : error C2065: 'nread' : undeclared identifier
+sapi\cli\php_http_parser.c(337) : error C2037: left of 'nread' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(342) : error C2143: syntax error : missing ';' before 'const'
+sapi\cli\php_http_parser.c(343) : error C2143: syntax error : missing ';' before 'const'
+sapi\cli\php_http_parser.c(344) : error C2143: syntax error : missing ';' before 'const'
+sapi\cli\php_http_parser.c(345) : error C2143: syntax error : missing ';' before 'const'
+sapi\cli\php_http_parser.c(346) : error C2143: syntax error : missing ';' before 'const'
+sapi\cli\php_http_parser.c(347) : error C2143: syntax error : missing ';' before 'const'
+sapi\cli\php_http_parser.c(357) : error C2065: 'header_field_mark' : undeclared identifier
+sapi\cli\php_http_parser.c(357) : warning C4047: '=' : 'int' differs in levels of indirection from 'const char *'
+sapi\cli\php_http_parser.c(359) : error C2065: 'header_value_mark' : undeclared identifier
+sapi\cli\php_http_parser.c(359) : warning C4047: '=' : 'int' differs in levels of indirection from 'const char *'
+sapi\cli\php_http_parser.c(361) : error C2065: 'fragment_mark' : undeclared identifier
+sapi\cli\php_http_parser.c(361) : warning C4047: '=' : 'int' differs in levels of indirection from 'const char *'
+sapi\cli\php_http_parser.c(363) : error C2065: 'query_string_mark' : undeclared identifier
+sapi\cli\php_http_parser.c(363) : warning C4047: '=' : 'int' differs in levels of indirection from 'const char *'
+sapi\cli\php_http_parser.c(365) : error C2065: 'path_mark' : undeclared identifier
+sapi\cli\php_http_parser.c(365) : warning C4047: '=' : 'int' differs in levels of indirection from 'const char *'
+sapi\cli\php_http_parser.c(371) : error C2065: 'url_mark' : undeclared identifier
+sapi\cli\php_http_parser.c(371) : warning C4047: '=' : 'int' differs in levels of indirection from 'const char *'
+sapi\cli\php_http_parser.c(376) : error C2037: left of 'flags' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(377) : error C2065: 'nread' : undeclared identifier
+sapi\cli\php_http_parser.c(379) : error C2065: 'nread' : undeclared identifier
+sapi\cli\php_http_parser.c(394) : error C2037: left of 'flags' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(395) : error C2037: left of 'content_length' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(402) : error C2037: left of 'type' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(410) : error C2037: left of 'type' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(414) : error C2037: left of 'type' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(415) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(416) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(423) : error C2037: left of 'flags' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(424) : error C2037: left of 'content_length' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(465) : error C2037: left of 'http_major' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(479) : error C2037: left of 'http_major' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(480) : error C2037: left of 'http_major' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(482) : error C2037: left of 'http_major' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(489) : error C2037: left of 'http_minor' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(503) : error C2037: left of 'http_minor' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(504) : error C2037: left of 'http_minor' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(506) : error C2037: left of 'http_minor' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(518) : error C2037: left of 'status_code' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(542) : error C2037: left of 'status_code' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(543) : error C2037: left of 'status_code' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(545) : error C2037: left of 'status_code' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(572) : error C2037: left of 'flags' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(573) : error C2037: left of 'content_length' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(580) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(581) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(583) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(584) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(585) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(586) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(587) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(588) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(589) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(590) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(591) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(592) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(593) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(594) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(595) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(596) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(608) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(610) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(610) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(611) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(614) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(614) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(616) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(617) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(618) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(619) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(620) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(622) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(624) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(625) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(626) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(627) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(628) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(629) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(630) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(631) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(632) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(633) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(634) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(636) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(638) : error C2065: 'index' : undeclared identifier
+sapi\cli\php_http_parser.c(638) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(639) : error C2037: left of 'method' specifies undefined struct/union 'php_http_parser'
+sapi\cli\php_http_parser.c(639) : fatal error C1003: error count exceeds 100; stopping compilation
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+LINK : fatal error LNK1181: cannot open input file 'Release_TS\sapi\cli\php_http_parser.obj'
+
+mt.exe : general error c101008d: Failed to write the updated manifest to the resource of file "Release_TS\php.exe". The system cannot find the file specified.
+SAPI sapi\cli build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php-win.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php-win.lib and object Release_TS\php-win.exp
+SAPI sapi\cli build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5embed.lib" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+	lib.exe /nologo /out:Release_TS\php5embed.lib /nologo /version:5.6.33 /incremental:no /debug /opt:ref,icf /libpath:"C:\php-sdk\phpdev\vc9\x86\deps\lib" Release_TS\sapi\embed\php_embed.obj Release_TS\php5ts.lib   Release_TS\php5embed.lib.res
+LINK : warning LNK4044: unrecognized option '/version:5.6.33'; ignored
+LINK : warning LNK4044: unrecognized option '/incremental:no'; ignored
+LINK : warning LNK4044: unrecognized option '/debug'; ignored
+LINK : warning LNK4044: unrecognized option '/opt:ref,icf'; ignored
+SAPI sapi\embed build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5isapi.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5isapi.lib and object Release_TS\php5isapi.exp
+SAPI sapi\isapi build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "phpdbg.exe" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\phpdbg.lib and object Release_TS\phpdbg.exp
+SAPI sapi\phpdbg build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php5phpdbg.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php5phpdbg.lib and object Release_TS\php5phpdbg.exp
+SAPI sapi\phpdbg build complete
+	for %T in (php_bz2.dll php_fileinfo.dll php_mbstring.dll php_odbc.dll php_opcache.dll php_sockets.dll php_sqlite3.dll php_zip.dll php_exif.dll php_mysqli.dll php_pdo_firebird.dll php_pdo_mysql.dll php_pdo_odbc.dll php_pdo_pgsql.dll php_pdo_sqlite.dll) do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_bz2.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_bz2.lib and object Release_TS\php_bz2.exp
+EXT bz2 build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_fileinfo.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_fileinfo.lib and object Release_TS\php_fileinfo.exp
+EXT fileinfo build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_mbstring.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_mbstring.lib and object Release_TS\php_mbstring.exp
+EXT mbstring build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_odbc.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_odbc.lib and object Release_TS\php_odbc.exp
+EXT odbc build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_opcache.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_opcache.lib and object Release_TS\php_opcache.exp
+EXT opcache build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_sockets.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_sockets.lib and object Release_TS\php_sockets.exp
+EXT sockets build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_sqlite3.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_sqlite3.lib and object Release_TS\php_sqlite3.exp
+EXT sqlite3 build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_zip.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_zip.lib and object Release_TS\php_zip.exp
+EXT zip build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_exif.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_mbstring.lib and object Release_TS\php_mbstring.exp
+   Creating library Release_TS\php_exif.lib and object Release_TS\php_exif.exp
+EXT exif build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_mysqli.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_mysqli.lib and object Release_TS\php_mysqli.exp
+EXT mysqli build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_firebird.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_pdo_firebird.lib and object Release_TS\php_pdo_firebird.exp
+EXT pdo_firebird build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_mysql.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_pdo_mysql.lib and object Release_TS\php_pdo_mysql.exp
+EXT pdo_mysql build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_odbc.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_pdo_odbc.lib and object Release_TS\php_pdo_odbc.exp
+EXT pdo_odbc build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_pgsql.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_pdo_pgsql.lib and object Release_TS\php_pdo_pgsql.exp
+EXT pdo_pgsql build complete
+
+C:\php-sdk\phpdev\vc9\x86\php-5.6.33>C:\MsVS09\VC\Bin\nmake.exe /I /nologo "php_pdo_sqlite.dll" 
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_crypt_r.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\php_crypt_r.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+math.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\math.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt_freesec.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt_freesec.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+crypt.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\standard\crypt.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_whirlpool.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_whirlpool.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_tiger.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_tiger.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_snefru.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_snefru.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_sha.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_sha.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_ripemd.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_ripemd.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_md.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_md.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_joaat.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_joaat.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_haval.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_haval.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_gost.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_gost.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_fnv.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_fnv.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_crc32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_crc32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+hash_adler32.obj : warning LNK4099: PDB 'vc90.pdb' was not found with 'Release_TS\ext\hash\hash_adler32.obj' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_pdo_sqlite.lib and object Release_TS\php_pdo_sqlite.exp
+EXT pdo_sqlite build complete
+	for %T in () do C:\MsVS09\VC\Bin\nmake.exe /I /nologo "%T"
+Release_TS\php_bz2.lib
+        1 file(s) copied.
+Release_TS\php_fileinfo.lib
+        1 file(s) copied.
+Release_TS\php_mbstring.lib
+        1 file(s) copied.
+Release_TS\php_odbc.lib
+        1 file(s) copied.
+Release_TS\php_opcache.lib
+        1 file(s) copied.
+Release_TS\php_sockets.lib
+        1 file(s) copied.
+Release_TS\php_sqlite3.lib
+        1 file(s) copied.
+Release_TS\php_zip.lib
+        1 file(s) copied.
+Release_TS\php_exif.lib
+        1 file(s) copied.
+Release_TS\php_mysqli.lib
+        1 file(s) copied.
+Release_TS\php_pdo_firebird.lib
+        1 file(s) copied.
+Release_TS\php_pdo_mysql.lib
+        1 file(s) copied.
+Release_TS\php_pdo_odbc.lib
+        1 file(s) copied.
+Release_TS\php_pdo_pgsql.lib
+        1 file(s) copied.
+Release_TS\php_pdo_sqlite.lib
+        1 file(s) copied.
+	rd /s /q Release_TS\php-5.6.33
+	rd /s /q Release_TS\pecl-5.6.33
+	del /f /q Release_TS\php-5.6.33-Win32-VC9-x86.zip
+	del /f /q Release_TS\php-debug-pack-5.6.33-Win32-VC9-x86.zip
+	del /f /q Release_TS\pecl-5.6.33-Win32-VC9-x86.zip
+	
+Release_TS\php.exe -d date.timezone=UTC -n -dphar.readonly=0 win32/build/mkdist.php "Release_TS" "C:\php-sdk\phpdev\vc9\x86\deps" "php5ts.dll" "php5aolserver.dll php5apache.dll php5apache2_filter.dll php5apache2_2_filter.dll php5apache2.dll php5apache2_2.dll php5apache2_4.dll php5apache_hooks.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll" "php_bz2.dll php_fileinfo.dll php_mbstring.dll php_odbc.dll php_opcache.dll php_sockets.dll php_sqlite3.dll php_zip.dll php_exif.dll php_mysqli.dll php_pdo_firebird.dll php_pdo_mysql.dll php_pdo_odbc.dll php_pdo_pgsql.dll php_pdo_sqlite.dll " " " "C:\php-sdk\phpdev\vc9\x86\deps\template"

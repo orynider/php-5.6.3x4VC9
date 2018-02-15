@@ -1,0 +1,1 @@
+lib.exe /nologo /OUT:libgd2_a_DLL.lib gd.obj gdcache.obj gdfontg.obj gdfontl.obj gdfontmb.obj gdfonts.obj gdfontt.obj gdkanji.obj gdpp.obj gdtables.obj gd_color.obj gd_color_match.obj gd_io.obj gd_io_stream.obj gd_jpeg.obj gd_png.obj gd_rotate.obj gd_security.obj gd_tiff.obj gd_webp.obj wbmp.obj 

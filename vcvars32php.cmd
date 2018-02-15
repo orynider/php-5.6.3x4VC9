@@ -1,0 +1,1 @@
+ %comspec% /k ""c:\php-sdk\bin\vsvarsall.bat"" /Release /x86 /XP

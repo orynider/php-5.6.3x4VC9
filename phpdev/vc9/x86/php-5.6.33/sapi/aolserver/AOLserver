@@ -1,0 +1,161 @@
+
+README:  AOLserver
+
+    This is the AOLserver 4.5 source distribution.  AOLserver is
+    available at http://aolserver.com, a SourceForge hosted site.
+
+RCS: @(#) $Id: README,v 1.7 2005/08/24 14:12:45 shmooved Exp $
+
+
+Contents
+--------
+    1. Introduction
+    2. Documentation
+    3. Compiling and installing AOLserver
+    4. Mailing lists
+    5. Thank You
+
+
+1. Introduction
+---------------
+
+AOLserver is a multithread web server with flexible and extensible C
+and Tcl API's.  AOLserver is used for several high traffic, dynamic
+web applications and services at America Online among other sites.
+
+AOLserver is maintained, enhanced, and distributed freely by the
+AOLserver community.  The home for AOLserver sources and bug/patch
+database is on SourceForge available at:
+
+	http://aolserver.com/
+
+AOLserver is a freely available open source package.  See the file
+"license.terms" for complete information.
+
+
+2. Documentation
+----------------
+
+Documentation is available in the "doc" subdirectory of this release.
+It contains of Unix-style reference manual entries for AOLserver.
+Files with extension ".1" are for programs (for example, nsd.1); files
+with extension ".3" are for C library procedures; and files with
+extension ".n" describe Tcl commands.  The file "doc/nsd.1" gives a
+quick summary of the AOLserver configuration.  To view any of the man
+pages on Unix, cd to the "doc" directory and invoke your favorite
+variant of troff using the normal -man macros, for example:
+
+		groff -Tascii -man nsd.1 | more
+
+Conversion to HTML may be possible with:
+
+		groff -Thtml -man nsd.1 > nsd.html
+
+If AOLserver has been installed correctly and your "man" program
+supports it, you should be able to access the AOLserver manual entries
+using the normal "man" mechanisms, such as
+
+		man -M /usr/local/aolserver/man nsd
+
+
+3. Compiling and installing AOLserver
+-------------------------------------
+
+AOLserver is known to compile and run on Windows XP, FreeBSD, Linux,
+Solaris, and Mac OS/X 10.4.  Ports to other modern Unix platforms
+such as HP/UX should be easy.  To compile and install AOLserver:
+
+3a.     Download, configure, build and install Tcl 8.4 or better
+	with threads and shared libraries enabled.  To do so,
+	download the latest release from http://tcl.tk and follow
+	the instructions in the included README.  You may install
+	Tcl within the directory you intend to install AOLserver
+	(e.g., /usr/local/aolserver) or in some other location.
+	The following should work:
+
+	Unix:
+
+	% gunzip < tcl8.4.11-src.tar.gz | tar xvf -
+	% cd tcl8.4.11/unix
+	% ./configure --prefix=/usr/local/aolserver --enable-threads
+	% make install
+
+	Windows:
+
+	c:\tcl\srcdir> cd win
+	c:\tcl\srcdir\win> nmake -f makefile.vc \
+		INSTALLDIR=c:\aolserver OPTS=threads,thrdalloc,symbols \
+		install
+	
+
+3b.     On Unix, if you don't have GNU make (Linux make is GNU
+	make), install it as AOLserver's makefiles require it.  If
+	you're not sure if you have GNU make, try "make -v" to
+	check.  You can get GNU make at http://www.gnu.org.
+
+
+3c.     Configure, build, and install AOLserver.  The build process
+	requires a working, installed Tcl, and supports Unix and
+	Windows with the same makefiles and a few supporting Tcl
+	scripts.  The following should work:
+
+	Windows:
+
+	c:\aolserver\srcdir> c:\aolserver\bin\tclsh84.exe nsconfig.tcl
+	c:\aolserver\srcdir> nmake install
+
+	Unix:
+
+	% /usr/local/aolserver/bin/tclsh84 ./nsconfig.tcl 
+	% gmake install
+
+	The nsconfig.tcl script is designed to work on Unix and
+	Windows.  The tclsh used to execute the script must be from
+	the installed Tcl location you intend to use for AOLserver
+	as nsconfig.tcl will determine certain config settings from
+	the tclsh environment.  In addition, two options may be
+	specified:
+
+        -install dir    Specify path to install (default: Tcl directory)
+        -debug          Debug build with symbols and without optimization.
+
+	On Windows, nsconfig.tcl will create include\ns.mak directly.
+
+	On Unix, nsconfig.tcl will call the configure shell script
+	with the appropriate options to create include/ns.mak.  You
+	may also run configure directly although it has few additional
+	features.
+
+
+3d.     Once the binaries are built and installed, create and edit
+	a config file, nsd.tcl by convention.  A sample is provided
+	to get started:
+
+	% cd /usr/local/aolserver
+	% cp base.tcl nsd.tcl
+	% vi nsd.tcl
+
+        Additional configuration examples can be found in the 
+        examples/config directory.
+
+3e.	Try running the server in a shell window:
+
+	% cd /usr/local/aolserver
+	% bin/nsd -ft nsd.tcl
+
+
+4. Mailing lists
+----------------
+
+There is a mailing list for AOLserver to discuss anything from
+configuration, development, and future direction.  To join visit:
+
+	http://aolserver.com/
+
+
+5. Thank You
+-------------
+
+Thank you for your interest in AOLserver!  We hope you find it
+useful and look forward to hearing from you on our mailing list.
+

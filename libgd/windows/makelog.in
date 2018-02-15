@@ -1,0 +1,19 @@
+library source:  src
+
+c:\php-sdk\libgd>SETLOCAL ENABLEDELAYEDEXPANSION 
+tests ..\gdbuild "/nologo /O2 /Qvec-report:1 /MD /TC  /DWIN32=1 /D_WIN32=1 /DMSWIN32=1 /DBGDWIN32=1 /DHAVE_FT2BUILD_H=1 /DHAVE_GD_H=1 /DHAVE_ICONV_H=1 /DHAVE_LIBFREETYPE=1 /DHAVE_LIBJPEG=1 /DHAVE_LIBPNG=1 /DHAVE_LIBWEBP=1 /DHAVE_LIBZ=1 /DHAVE_LIBXPM=1 /DHAVE_LIBTIFF=1 /Isrc /I..\deps\include -I..\deps\include\libpng16 -I..\deps\include\freetype -I..\deps\include\freetype2 /Itests /Itests\gdtest -I..\deps\include" "/nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib" cl link "..\gdbuild\tests\Maketests.vc" "..\gdbuild\tests\testlist.txt"
+recieved tests ..\gdbuild /nologo /O2 /Qvec-report:1 /MD /TC  /DWIN32=1 /D_WIN32=1 /DMSWIN32=1 /DBGDWIN32=1 /DHAVE_FT2BUILD_H=1 /DHAVE_GD_H=1 /DHAVE_ICONV_H=1 /DHAVE_LIBFREETYPE=1 /DHAVE_LIBJPEG=1 /DHAVE_LIBPNG=1 /DHAVE_LIBWEBP=1 /DHAVE_LIBZ=1 /DHAVE_LIBXPM=1 /DHAVE_LIBTIFF=1 /Isrc /I..\deps\include -I..\deps\include\libpng16 -I..\deps\include\freetype -I..\deps\include\freetype2 /Itests /Itests\gdtest -I..\deps\include /nologo /nodefaultlib:libcmt /libpath:..\deps\lib /MACHINE:xp ..\gdbuild\readdir.obj ..\gdbuild\gdtest.obj ..\gdbuild\libgd.lib cl
+	cl /nologo /O2 /Qvec-report:1 /MD /TC  /DWIN32=1 /D_WIN32=1 /DMSWIN32=1 /DBGDWIN32=1 /DHAVE_FT2BUILD_H=1 /DHAVE_GD_H=1 /DHAVE_ICONV_H=1 /DHAVE_LIBFREETYPE=1 /DHAVE_LIBJPEG=1 /DHAVE_LIBPNG=1 /DHAVE_LIBWEBP=1 /DHAVE_LIBZ=1 /DHAVE_LIBXPM=1 /DHAVE_LIBTIFF=1 /Isrc /I..\deps\include -I..\deps\include\libpng16 -I..\deps\include\freetype -I..\deps\include\freetype2 /Itests /Itests\gdtest -I..\deps\include /c /Fo"..\gdbuild\gdft.obj" /Fd..\gdbuild\gdft.pdb src\gdft.c
+gdft.c
+src\gdft.c(1558) : error C2275: 'FT_Pos' : illegal use of this type as an expression
+        ..\deps\include\freetype/ftimage.h(58) : see declaration of 'FT_Pos'
+src\gdft.c(1558) : error C2146: syntax error : missing ';' before identifier 'pen_x'
+src\gdft.c(1558) : error C2065: 'pen_x' : undeclared identifier
+src\gdft.c(1559) : error C2275: 'FT_Pos' : illegal use of this type as an expression
+        ..\deps\include\freetype/ftimage.h(58) : see declaration of 'FT_Pos'
+src\gdft.c(1559) : error C2146: syntax error : missing ';' before identifier 'pen_y'
+src\gdft.c(1559) : error C2065: 'pen_y' : undeclared identifier
+src\gdft.c(1561) : error C2065: 'pen_x' : undeclared identifier
+src\gdft.c(1561) : error C2065: 'pen_y' : undeclared identifier
+src\gdft.c(1562) : error C2065: 'pen_x' : undeclared identifier
+src\gdft.c(1562) : error C2065: 'pen_y' : undeclared identifier

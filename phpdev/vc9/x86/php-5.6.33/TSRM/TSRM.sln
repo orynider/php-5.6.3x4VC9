@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSRM", "TSRM.vcproj", "{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_TS|Win32 = Debug_TS|Win32
+		Release_TS_inline|Win32 = Release_TS_inline|Win32
+		Release_TS|Win32 = Release_TS|Win32
+		Release_TSDbg|Win32 = Release_TSDbg|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Debug_TS|Win32.ActiveCfg = Debug_TS|Win32
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Debug_TS|Win32.Build.0 = Debug_TS|Win32
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Release_TS_inline|Win32.ActiveCfg = Release_TS_inline|Win32
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Release_TS_inline|Win32.Build.0 = Release_TS_inline|Win32
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Release_TS|Win32.ActiveCfg = Release_TS|Win32
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Release_TS|Win32.Build.0 = Release_TS|Win32
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Release_TSDbg|Win32.ActiveCfg = Release_TSDbg|Win32
+		{A5D008DC-7A7F-4427-A5D6-D062998EE0A0}.Release_TSDbg|Win32.Build.0 = Release_TSDbg|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
