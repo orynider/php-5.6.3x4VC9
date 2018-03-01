@@ -24,7 +24,7 @@
 #include "php.h"
 #include "php_math.h"
 #include "zend_multiply.h"
-
+#include <win32/php_stdint.h>
 #include <math.h>
 #include <float.h>
 #include <stdlib.h>

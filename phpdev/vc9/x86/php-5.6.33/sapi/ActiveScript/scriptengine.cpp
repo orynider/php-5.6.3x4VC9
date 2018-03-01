@@ -31,7 +31,9 @@
 
 #define _WIN32_DCOM
 #define ZEND_INCLUDE_FULL_WINDOWS_HEADERS
-
+#ifdef __DEBUG__
+# include <stinttypes/stdio.h>
+#endif
 #include "php.h"
 extern "C" {
 #include "php_main.h"
@@ -51,7 +53,7 @@ extern "C" {
 #include "php5as_scriptengine.h"
 #include "php5as_classfactory.h"
 #include <objbase.h>
-#undef php_win_err
+//#undef php_error
 
 #include "trace_dump.h" 
 
@@ -897,10 +899,12 @@ static int execute_code_fragment(code_frag *frag,
 	//orig_jmpbuf = frag->engine->m_err_trap;
 //	frag->engine->m_err_trap = &err_trap;
 
-	if (setjmp(err_trap) == 0) {
+	if (setjmp(err_trap) == 0) 
+	{
 		trace("*** Executing code in thread %08x\n", tsrm_thread_id());
 
-		if (frag->functionname) {
+		if (frag->functionname) 
+		{
             trace("\ncall function: %s",frag->functionname);
 
 			zval fname;
@@ -913,25 +917,24 @@ static int execute_code_fragment(code_frag *frag,
 
 		} else {
 			
-
 			zend_op_array 		*active_op_array		= EG(active_op_array);
-			zend_function_state	*function_state_ptr		= EG(function_state_ptr);
+			//zend_function_state	*function_state			= EG(function_state);
 			zval				**return_value_ptr_ptr	= EG(return_value_ptr_ptr);
 			zend_op				**opline_ptr			= EG(opline_ptr);
 
 			EG(return_value_ptr_ptr)	= &retval_ptr;
 			EG(active_op_array)			= frag->opcodes;
 			EG(no_extensions)			= 0;  //ding,chengliang change here.
-
-trace("\ncall opcodes entery ");
- trace_dump_op_array(frag->opcodes);
+			
+			trace("\ncall opcodes entery ");
+			trace_dump_op_array(frag->opcodes);
 			zend_execute(frag->opcodes TSRMLS_CC);
-trace("\ncall opcodes finished \n");
+			trace("\ncall opcodes finished \n");
 
 			EG(no_extensions)			= 0;
 			EG(opline_ptr)				= opline_ptr;
 			EG(active_op_array)			= active_op_array;
-			EG(function_state_ptr)		= function_state_ptr;
+			//EG(function_state)			= function_state;
 			EG(return_value_ptr_ptr)	= return_value_ptr_ptr;
 
 			trace("\ncall opcodes done");
@@ -1183,8 +1186,14 @@ static inline void make_auto_global(char *name, zval *val TSRMLS_DC)
 {
 	int namelen = strlen(name);
 trace("make_auto_global %s\n", name);
-	zend_register_auto_global(name, namelen, NULL TSRMLS_CC);
-	zend_auto_global_disable_jit(name, namelen TSRMLS_CC);
+	zend_register_auto_global(name, namelen, 1, NULL TSRMLS_CC);
+#ifndef ZTS
+	zend_init_rsrc_plist(TSRMLS_C);
+	zend_init_exception_op(TSRMLS_C);
+#endif
+
+	zend_ini_startup(TSRMLS_C);
+
 	ZEND_SET_SYMBOL(&EG(symbol_table), name, val);
 }
 
@@ -1374,14 +1383,13 @@ STDMETHODIMP TPHPScriptingEngine::SetScriptSite(IActiveScriptSite *pass)
 	if (pass) {
 		trace("taking a ref on pass\n");
 		ret = pass->QueryInterface(IID_IActiveScriptSite, (void**)&m_pass);
-		trace("----> %s", php_win_err(ret));
+		php_error(E_WARNING, "----> %s", ret);
 		
 		if (SUCCEEDED(ret)) {
 			GIT_put(m_pass, IID_IActiveScriptSite, &m_asscookie);
 			SetScriptState(SCRIPTSTATE_INITIALIZED);
 		}
 	}
-
 	return ret;
 }
 
@@ -1528,11 +1536,11 @@ STDMETHODIMP TPHPScriptingEngine::AddNamedItem(LPCOLESTR pstrName, DWORD dwFlags
 			add_to_global_namespace(disp, dwFlags, name.ansi_string() TSRMLS_CC);
 			disp->Release();
 		} else {
-			trace("Ouch: failed to get IDispatch for %s from GIT '%s'\n", name.ansi_string(), php_win_err(res));
+			php_error(E_WARNING, "Ouch: failed to get IDispatch for %s from GIT '%s'\n", name.ansi_string());
 		}
 
 	} else {
-		trace("failed to get named item, %s", php_win_err(res));
+		php_error(E_WARNING, "failed to get named item, %s", res);
 	}
 	return res;
 }
@@ -2153,7 +2161,8 @@ void activescript_error_handler(int type, const char *error_filename,
 	
 	/* ugly way to detect an exception for an eval'd fragment */
 	if (type == E_ERROR && EG(exception) && strstr("Exception thrown without a stack frame", format)) {
-		zend_exception_error(EG(exception) TSRMLS_CC);
+		#include "zend_exceptions.h"
+		zend_exception_error(EG(exception), E_ERROR TSRMLS_CC);
 		/* NOTREACHED -- recursive E_ERROR */
 	} else {
 		buflen = vspprintf(&buf, PG(log_errors_max_len), format, args);

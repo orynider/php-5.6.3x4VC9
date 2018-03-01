@@ -10,7 +10,7 @@
 #endif
 
 #include "php_stdint.h"
-
+#include <win32/php_stdint.h>
 #define MD5_HASH_MAX_LEN 120
 
 struct php_crypt_extended_data {

@@ -1,0 +1,32 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_xmlreader.obj : warning LNK4217: locally defined symbol _php_dom_create_object imported in function _zim_xmlreader_expand
+php_xmlreader.obj : warning LNK4049: locally defined symbol _dom_node_class_entry imported
+libiconv_a.lib(iconv.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+   Creating library Release_TS\php_gd2035.lib and object Release_TS\php_gd2035.exp
+gd.obj : error LNK2001: unresolved external symbol _gdPngGetVersionString
+gd.obj : error LNK2001: unresolved external symbol _gdJpegGetVersionString
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromPngCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromJpegCtx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromJpegEx
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromXpm
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromJpeg
+gd.obj : error LNK2001: unresolved external symbol _gdImageCreateFromPng
+gd.obj : error LNK2001: unresolved external symbol _gdImagePngCtxEx
+gd.obj : error LNK2001: unresolved external symbol _gdImageJpegCtx
+gdft.obj : error LNK2001: unresolved external symbol _gdCacheGet
+gdft.obj : error LNK2001: unresolved external symbol _gdCacheDelete
+gdft.obj : error LNK2001: unresolved external symbol _gdCacheCreate
+Release_TS\php_gd2035.dll : fatal error LNK1120: 13 unresolved externals
+
+mt.exe : general error c10100b1: Failed to load file "Release_TS\php_gd2035.dll". The system cannot find the file specified.
+EXT gd2 build complete

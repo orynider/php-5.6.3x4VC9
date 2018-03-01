@@ -1,49 +1,82 @@
-dist: precise
-sudo: required
 language: php
+
+# When updating 7.2.0X, update the download URL in ci/install_php_custom.sh as well,
+# so that 32-bit testing will work.
+# PHP 5.3 is still supported in igbinary releases; it's just that travis can't/won't build php 5.3 in trusty.
 php:
-  - 5.3
-  - 5.4
-  - 5.5
-  - 5.6
-  - 7.0
-  - 7.1
+  - master
   - 7.2
-  - nightly
-env: CC=gcc
+  - 7.1
+  - 7.0
+  - 5.6
+  - 5.5
+  - 5.4
+
+# For unsupported versions(5.4-5.5), run minimal tests to cover 32-bit, 64-bit, and clang
+# Exclude everything else.
 matrix:
-  allow_failures:
-    - php: nightly
-  include:
-    - php: 5.4
-      env: CC=clang
-    - php: 5.5
-      env: CC=clang
-    - php: 5.6
-      env: CC=clang
-    - php: 7.0
-      env: CC=clang
-    - php: 7.1
-      env: CC=clang
-    - php: 7.2
-      env: CC=clang
-addons:
-  apt:
-    packages: clang
-before_install:
-  - phpize
-  - pecl install igbinary
-  - ./configure --enable-redis-igbinary --enable-redis-lzf CFLAGS=-Wall
-install: make install
+  exclude:
+  - php: 5.4
+    env: CC=clang   CFLAGS="-g -O0"
+  - php: 5.4
+    env: CC=gcc-4.8 CFLAGS="-g"
+  - php: 5.4
+    env: CC=gcc-4.8 CXX=g++-4.8 USE_32BIT=1 PHP_CUSTOM=maintainer-zts PHP_CONFIGURE_ARGS='--disable-all --enable-maintainer-zts --enable-debug --enable-cgi --enable-session --enable-json'
+  - php: 5.5
+    env: CC=clang   CFLAGS="-g -O0"
+  - php: 5.5
+    env: CC=gcc-4.8 CFLAGS=""
+  - php: 5.5
+    env: CC=gcc-4.8 CXX=g++-4.8 USE_32BIT=1 PHP_CUSTOM=maintainer-zts PHP_CONFIGURE_ARGS='--disable-all --enable-maintainer-zts --enable-debug --enable-cgi --enable-session --enable-json'
+  - php: 7.0
+    env: CC=clang   CFLAGS="-g -O0"
+  - php: 7.1
+    env: CC=clang   CFLAGS="-O3" SKIP_VALGRIND=1
+  - php: 7.1
+    env: CC=gcc-4.8 CFLAGS="-g -O0 -fstack-protector -fstack-protector-all" SKIP_VALGRIND=1
+  - php: 7.2
+    env: CC=clang   CFLAGS="-g -O0"
+  - php: master
+    env: CC=clang   CFLAGS="-O3" SKIP_VALGRIND=1
+  - php: master
+    env: CC=clang   CFLAGS="-g -O0"
+  - php: master
+    env: CC=gcc-4.8 CFLAGS=""
+  - php: master
+    env: CC=gcc-4.8 CXX=g++-4.8 USE_32BIT=1 PHP_CUSTOM=maintainer-zts PHP_CONFIGURE_ARGS='--disable-all --enable-maintainer-zts --enable-debug --enable-cgi --enable-session --enable-json'
+
+cache:
+  directories:
+    - $HOME/travis_cache
+
+env:
+  - CC=clang   CFLAGS="-O3" SKIP_VALGRIND=1
+  - CC=clang   CFLAGS="-g -O0"
+  - CC=gcc-4.8 CFLAGS=""
+  - CC=gcc-4.8 CFLAGS="-g -O0 -fstack-protector -fstack-protector-all" SKIP_VALGRIND=1
+  - CC=gcc-4.8 CXX=g++-4.8 USE_32BIT=1 PHP_CUSTOM=maintainer-zts PHP_CONFIGURE_ARGS='--disable-all --enable-maintainer-zts --enable-debug --enable-cgi --enable-session --enable-json'
+
+install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq $CC
+  # For 32-bit installations: Install multilib so it can be compiled, as well libc6-dbg:i386 so that valgrind will work.
+  - if [ "x$USE_32BIT" != "x" ]; then sudo apt-get install -y $CXX g++-4.8-multilib libc6-dev-i386 libc6-dbg:i386; export CC="$PWD/ci/gcc-32.sh"; export CXX="$PWD/ci/g++-32.sh"; $CC --version;  fi
+  # If making a 32-bit build: Automatically determine and download the latest patch of each minor version we support.
+  - if [ "x$SKIP_VALGRIND" = "x" ]; then sudo apt-get install -qq valgrind; valgrind --version; fi
+  - if [ "x$PHP_CUSTOM" != "x" ]; then export PHP_CUSTOM_VERSION=$(./ci/get_global_php_version.sh); echo "Version is $PHP_CUSTOM_VERSION"; ./ci/install_php_custom.sh || exit 1; export PATH="$(./ci/generate_php_install_dir.sh)/bin:$PATH"; export PHPRC=$PWD/ci/; else ./ci/wipe_travis_cache.sh; fi
+  - $CC --version
+
 before_script:
-  - gem install redis
-  - mkdir -p tests/nodes/ && echo > tests/nodes/nodemap
-  - for PORT in $(seq 6379 6382); do redis-server --port $PORT --daemonize yes; done
-  - for PORT in $(seq 7000 7011); do redis-server --port $PORT --cluster-enabled yes --cluster-config-file $PORT.conf --daemonize yes; echo 127.0.0.1:$PORT >> tests/nodes/nodemap; done
-  - wget https://raw.githubusercontent.com/antirez/redis/unstable/src/redis-trib.rb
-  - echo yes | ruby redis-trib.rb create --replicas 3 $(seq -f 127.0.0.1:%g 7000 7011)
-  - echo 'extension = redis.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - $CC --version && ci/print_php_int_max.php
+
 script:
-  - php tests/TestRedis.php --class Redis
-  - php tests/TestRedis.php --class RedisArray
-  - php tests/TestRedis.php --class RedisCluster
+  - phpize
+  - ./configure --enable-igbinary
+  - make
+  - REPORT_EXIT_STATUS=1 NO_INTERACTION=1 make test
+  # For most travis builds, re-run `make test` with valgrind.
+  - if [ "x$SKIP_VALGRIND" = "x" ]; then export TEST_PHP_ARGS="-m"; REPORT_EXIT_STATUS=1 NO_INTERACTION=1 make test; fi
+
+branches:
+  only:
+    - master

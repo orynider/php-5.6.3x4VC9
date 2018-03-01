@@ -18,35 +18,35 @@ extern "C" {
  *
  * the version string like "1.2.3"
  */
-#define LIBEXSLT_DOTTED_VERSION "0.8.17"
+#define LIBEXSLT_DOTTED_VERSION "0.8.12"
 
 /**
  * LIBEXSLT_VERSION:
  *
- * the version number: 1.2.3 value is 10203
+ * the version number: 1.2.3 value is 1002003
  */
-#define LIBEXSLT_VERSION 817
+#define LIBEXSLT_VERSION 812
 
 /**
  * LIBEXSLT_VERSION_STRING:
  *
- * the version number string, 1.2.3 value is "10203"
+ * the version number string, 1.2.3 value is "1002003"
  */
-#define LIBEXSLT_VERSION_STRING "817"
+#define LIBEXSLT_VERSION_STRING "812"
 
 /**
  * LIBEXSLT_VERSION_EXTRA:
  *
  * extra version information, used to show a CVS compilation
  */
-#define	LIBEXSLT_VERSION_EXTRA ""
+#define	LIBEXSLT_VERSION_EXTRA "CVS1037"
 
 /**
  * WITH_CRYPTO:
  *
  * Whether crypto support is configured into exslt
  */
-#if 0
+#if 1
 #define EXSLT_CRYPTO_ENABLED
 #endif
 

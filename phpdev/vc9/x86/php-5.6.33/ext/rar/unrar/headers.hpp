@@ -46,8 +46,10 @@
 // Old style file comment embed into file header. Must not be used
 // in new archives anymore.
 #define  LHD_COMMENT        0x0008U
+
 // For non-file subheaders it denotes 'subblock having a parent file' flag.
 #define  LHD_SOLID          0x0010U
+
 
 #define  LHD_WINDOWMASK     0x00e0U
 #define  LHD_WINDOW64       0x0000U
@@ -153,7 +155,7 @@ struct BaseBlock
 
 struct BlockHeader:BaseBlock
 {
-    uint DataSize;
+  uint DataSize;
 };
 
 

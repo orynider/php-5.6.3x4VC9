@@ -2,7 +2,7 @@
    +----------------------------------------------------------------------+
    | PHP Version 5                                                        |
    +----------------------------------------------------------------------+
-   | Copyright (c) 1997-2016 The PHP Group                                |
+   | Copyright (c) 1997-2013 The PHP Group                                |
    +----------------------------------------------------------------------+
    | This source file is subject to version 3.01 of the PHP license,      |
    | that is bundled with this package in the file LICENSE, and is        |
@@ -39,9 +39,8 @@
 #include "php_globals.h"
 #include "rfc1867.h"
 #include "php_content_types.h"
-
-#include "TSRM.h"
 #include "SAPI.h"
+#include "TSRM.h"
 
 #include "mb_gpc.h"
 /* }}} */
@@ -261,7 +260,7 @@ const mbfl_encoding *_php_mb_encoding_handler_ex(const php_mb_encoding_handler_i
 		goto out;
 	}
 
-	num = n; /* make sure to process initialized vars only */
+	num = n; /* make sure to process initilized vars only */
 	
 	/* initialize converter */
 	if (info->num_from_encodings <= 0) {
@@ -332,12 +331,10 @@ const mbfl_encoding *_php_mb_encoding_handler_ex(const php_mb_encoding_handler_i
 		n++;
 		/* we need val to be emalloc()ed */
 		val = estrndup(val, val_len);
-#ifdef ZTS
 		if (sapi_module.input_filter(info->data_type, var, &val, val_len, &new_val_len TSRMLS_CC)) {
 			/* add variable to symbol table */
 			php_register_variable_safe(var, val, new_val_len, array_ptr TSRMLS_CC);
 		}
-#endif		
 		efree(val);
 		
 		if (convd != NULL){
@@ -367,7 +364,6 @@ SAPI_POST_HANDLER_FUNC(php_mb_post_handler)
 {
 	const mbfl_encoding *detected;
 	php_mb_encoding_handler_info_t info;
-	char *post_data_str = NULL;
 
 	MBSTRG(http_input_identify_post) = NULL;
 
@@ -380,10 +376,7 @@ SAPI_POST_HANDLER_FUNC(php_mb_post_handler)
 	info.num_from_encodings     = MBSTRG(http_input_list_size); 
 	info.from_language          = MBSTRG(language);
 
-	php_stream_rewind(SG(request_info).request_body);
-	php_stream_copy_to_mem(SG(request_info).request_body, &post_data_str, PHP_STREAM_COPY_ALL, 0);
-	detected = _php_mb_encoding_handler_ex(&info, arg, post_data_str TSRMLS_CC);
-	STR_FREE(post_data_str);
+	detected = _php_mb_encoding_handler_ex(&info, arg, SG(request_info).post_data TSRMLS_CC);
 
 	MBSTRG(http_input_identify) = detected;
 	if (detected) {

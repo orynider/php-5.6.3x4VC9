@@ -35,6 +35,22 @@
 # include "php_config.h"
 #endif
 
+#if defined(_WIN32) && !defined(__MINGW32__)
+# include <windows.h>
+//#if _MSC_VER >= 1600
+# include "win32/php_stdint.h" /* was introduced with VS 2010 */
+# define HAVE_STDINT_H 1
+//#endif
+# include "config.w32.h"
+#else
+# include <stdint.h>
+# define HAVE_STDINT_H 1
+#endif
+
+#ifdef __riscos__
+#include <unixlib/local.h>
+#endif
+
 #ifdef __riscos__
 #include <unixlib/local.h>
 #endif
@@ -878,7 +894,7 @@ static void php_cli_server_poller_add(php_cli_server_poller *poller, int mode, i
 	if (mode & POLLOUT) {
 		PHP_SAFE_FD_SET(fd, &poller->wfds);
 	}
-	if (fd > poller->max_fd) {
+	if (fd > &poller->max_fd) {
 		poller->max_fd = fd;
 	}
 } /* }}} */

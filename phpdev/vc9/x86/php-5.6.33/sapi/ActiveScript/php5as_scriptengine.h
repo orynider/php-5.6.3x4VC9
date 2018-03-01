@@ -25,7 +25,9 @@
 
 #include "trace_debug.h"
 
-
+#ifdef PHP_WIN32
+# include "win32/php_inttypes.h"
+#endif
 
 #if 0
 #define ACTIVEPHP_THREADING_MODE	COINIT_MULTITHREADED

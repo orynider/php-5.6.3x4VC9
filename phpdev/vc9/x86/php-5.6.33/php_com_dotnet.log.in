@@ -1,0 +1,304 @@
+	"cl.exe" /D COMPILE_DL_COM_DOTNET /D COM_DOTNET_EXPORTS=1  /DHAVE_MSCOREE_H=1 /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\com_dotnet\ /FdRelease_TS\ext\com_dotnet\ /FpRelease_TS\ext\com_dotnet\ /FRRelease_TS\ext\com_dotnet\ /c ext\com_dotnet\com_com.c ext\com_dotnet\com_dotnet.c ext\com_dotnet\com_extension.c ext\com_dotnet\com_handlers.c ext\com_dotnet\com_iterator.c ext\com_dotnet\com_misc.c ext\com_dotnet\com_olechar.c ext\com_dotnet\com_persist.c ext\com_dotnet\com_saproxy.c ext\com_dotnet\com_typeinfo.c ext\com_dotnet\com_variant.c ext\com_dotnet\com_wrapper.c
+com_com.c
+com_dotnet.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+com_extension.c
+com_handlers.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+com_iterator.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+com_misc.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+com_olechar.c
+com_persist.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+ext\com_dotnet\com_olechar.c(53) : warning C4018: '<' : signed/unsigned mismatch
+com_saproxy.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+com_typeinfo.c
+com_variant.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+com_wrapper.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_xmlreader.obj : warning LNK4217: locally defined symbol _php_dom_create_object imported in function _zim_xmlreader_expand
+php_xmlreader.obj : warning LNK4049: locally defined symbol _dom_node_class_entry imported
+libmcrypt_a.lib(cbc.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(cfb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ctr.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ecb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ncfb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(nofb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ofb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(stream.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(arcfour.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(blowfish-compat.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(blowfish.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(cast-128.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(cast-256.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(des.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(enigma.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(gost.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(loki97.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rc2.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rijndael-128.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rijndael-192.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rijndael-256.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(saferplus.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(serpent.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(tripledes.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(twofish.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(wake.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xtea.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(bzero.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt_extra.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt_modules.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt_symb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmemory.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(buf.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(c14n.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(catalog.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(chvalid.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(debugXML.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(dict.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(encoding.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(entities.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(error.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(globals.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(hash.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(HTMLparser.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(HTMLtree.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(list.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(nanoftp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(nanohttp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(parser.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(parserInternals.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(pattern.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(relaxng.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(SAX.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(SAX2.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(tree.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(uri.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(valid.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xinclude.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlIO.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlmemory.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlreader.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlregexp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlsave.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlschemas.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlschemastypes.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlstring.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlunicode.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlwriter.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xpath.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xpointer.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+   Creating library Release_TS\php_com_dotnet.lib and object Release_TS\php_com_dotnet.exp
+EXT com_dotnet build complete

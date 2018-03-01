@@ -4,7 +4,17 @@ extern "C" {
 
 #include <php.h>
 #include "php_rar.h"
-
+#ifndef PHP_WIN32
+# include <sys/types.h>
+# include <sys/socket.h>
+# include <arpa/inet.h>
+# include <netinet/in.h>
+# include <sys/un.h>
+# include <sys/ioctl.h>
+# include <net/if.h>
+#else
+# include <win32/php_stdint.h>
+#endif
 void rar_time_convert(unsigned low, unsigned high, time_t *to) /* {{{ */
 {
 	time_t default_ = (time_t) 0,

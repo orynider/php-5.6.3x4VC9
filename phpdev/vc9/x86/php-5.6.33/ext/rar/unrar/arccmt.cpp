@@ -7,7 +7,7 @@ bool Archive::GetComment(Array<wchar> *CmtData)
   SaveFilePos SavePos(*this);
 
 #ifndef SFX_MODULE
-  ushort CmtLength;
+  uint CmtLength;
   if (Format==RARFMT14)
   {
     Seek(SFXSize+SIZEOF_MAINHEAD14,SEEK_SET);
@@ -52,7 +52,7 @@ bool Archive::GetComment(Array<wchar> *CmtData)
     if (Format==RARFMT14)
     {
 #ifdef RAR_NOCRYPT
-      return(false);
+      return false;
 #else
       UnpCmtLength=GetByte();
       UnpCmtLength+=(GetByte()<<8);
@@ -96,9 +96,11 @@ bool Archive::GetComment(Array<wchar> *CmtData)
   }
   else
   {
+    if (CmtLength==0)
+      return false;
     Array<byte> CmtRaw(CmtLength);
     Read(&CmtRaw[0],CmtLength);
-    
+
     if (Format!=RARFMT14 && CommHead.CommCRC!=(~CRC32(0xffffffff,&CmtRaw[0],CmtLength)&0xffff))
     {
       uiMsg(UIERROR_CMTBROKEN,FileName);
@@ -113,7 +115,7 @@ bool Archive::GetComment(Array<wchar> *CmtData)
 #endif
     CharToWide((char *)&CmtRaw[0],CmtData->Addr(0),CmtLength);
     CmtData->Alloc(wcslen(CmtData->Addr(0)));
-    }
+  }
 #endif
   return CmtData->Size() > 0;
 }
@@ -131,12 +133,12 @@ bool Archive::ReadCommentData(Array<wchar> *CmtData)
     UtfToWide((char *)&CmtRaw[0],CmtData->Addr(0),CmtData->Size());
   else
     if ((SubHead.SubFlags & SUBHEAD_FLAGS_CMT_UNICODE)!=0)
-  {
+    {
       RawToWide(&CmtRaw[0],CmtData->Addr(0),CmtSize/2);
       (*CmtData)[CmtSize/2]=0;
 
     }
-  else
+    else
     {
       CharToWide((char *)&CmtRaw[0],CmtData->Addr(0),CmtData->Size());
     }

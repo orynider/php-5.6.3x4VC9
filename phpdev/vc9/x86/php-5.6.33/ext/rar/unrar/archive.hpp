@@ -147,4 +147,5 @@ class Archive:public File
     wchar FirstVolumeName[NM];
 };
 
+
 #endif

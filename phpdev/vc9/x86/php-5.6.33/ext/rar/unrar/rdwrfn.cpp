@@ -203,9 +203,6 @@ void ComprDataIO::UnpWrite(byte *Addr,size_t Count)
       UnpackToMemoryAddr+=Count;
       UnpackToMemorySize-=Count;
     }
-    else
-        //added by me
-	    Cmd->DllError = ERAR_SMALL_BUF;
   }
   else
     if (!TestMode)
@@ -314,7 +311,7 @@ void ComprDataIO::SetCmt13Encryption()
 
 
 
-void ComprDataIO::SetUnpackToMemory(byte *Addr,size_t Size) //changed from uint by me
+void ComprDataIO::SetUnpackToMemory(byte *Addr,uint Size)
 {
   UnpackToMemory=true;
   UnpackToMemoryAddr=Addr;

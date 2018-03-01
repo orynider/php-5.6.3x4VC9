@@ -41,15 +41,16 @@
 #ifdef PHP_WIN32
 typedef void (WINAPI *PGNSI)(LPSYSTEM_INFO);
 typedef BOOL (WINAPI *PGPI)(DWORD, DWORD, DWORD, DWORD, PDWORD);
-#include "winver.h"
-
+#ifndef PRODUCT_ENTERPRISE_EVALUATION
+#	include "../standard/winver.h"
+#endif
+#ifndef PRODUCT_STARTER_E
+#	include "../standard/winver.h"
+#endif
+#include <winnt.h>
 #if _MSC_VER < 1300
-#define OSVERSIONINFOEX php_win_OSVERSIONINFOEX
+#	define OSVERSIONINFOEX php_win_OSVERSIONINFOEX
 #endif
-#endif
-
-#ifndef PRODUCT_CORE
-#include "../standard/winver.h"
 #endif
 
 #define SECTION(name)	if (!sapi_module.phpinfo_as_text) { \
@@ -392,7 +393,12 @@ char* php_get_windows_name()
 
 			pGPI = (PGPI) GetProcAddress(GetModuleHandle("kernel32.dll"), "GetProductInfo");
 			pGPI(6, 0, 0, 0, &dwType);
-
+#ifndef PRODUCT_ENTERPRISE_EVALUATION
+#include "../standard/winver.h"
+#endif
+#ifndef PRODUCT_STARTER_E
+#include "../standard/winver.h"
+#endif
 			switch (dwType) {
 				case PRODUCT_ULTIMATE:
 					sub = "Ultimate Edition";

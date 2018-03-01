@@ -1,5 +1,18 @@
-Redis client extension for PHP
-Alfonso Jimenez (yo@alfonsojimenez.com)
-Nasreddine Bouafif (n.bouafif@owlient.eu)
-Nicolas Favre-Felix (n.favre-felix@owlient.eu)
-Michael Grunder (michael.grunder@gmail.com)
+igbinary is written for IRC-Galleria by Sulake Dynamoid Oy and its employees.
+
+Author
+* Oleg Grenrus <oleg.grenrus@iki.fi>
+
+Contributors
+* Teddy Grenman <tricky.github@luuseri.com> (fixes, tests, docs)
+* Kari Lavikka <kari.lavikka@sulake.com> (docs)
+* Pierre Joye (Windows support)
+* Mikko Koppanen (PECL and RPM spec files)
+* Tyson Andre <tysonandre775@hotmail.com> (PHP7 compatibility fixes)
+
+Other
+* Original hash functions - Bob Jenkins <bob_jenkins@burtleburtle.net>
+
+---
+
+http://irc-galleria.net/ - a finnish social networking site

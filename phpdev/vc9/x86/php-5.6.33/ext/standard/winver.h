@@ -16,9 +16,26 @@
 #ifndef VER_SUITE_WH_SERVER
 #define VER_SUITE_WH_SERVER 0x8000
 #endif
-#ifndef PRODUCT_CORE
+#ifndef PRODUCT_STARTER_PRODUCT_ENTERPRISE_EVALUATION_ETC
 //#ifndef PRODUCT_ULTIMATE
+// begin_winnt
+
+//
+// Product types
+// This list grows with each OS release.
+//
+// There is no ordering of values to ensure callers
+// do an equality test i.e. greater-than and less-than
+// comparisons are not useful.
+//
+// NOTE: Values in this list should never be deleted.
+//       When a product-type 'X' gets dropped from a
+//       OS release onwards, the value of 'X' continues
+//       to be used in the mapping table of GetProductInfo.
+//
+
 #define PRODUCT_UNDEFINED                           0x00000000
+
 #define PRODUCT_ULTIMATE                            0x00000001
 #define PRODUCT_HOME_BASIC                          0x00000002
 #define PRODUCT_HOME_PREMIUM                        0x00000003
@@ -75,26 +92,60 @@
 #define PRODUCT_SB_SOLUTION_SERVER_EM               0x00000036
 #define PRODUCT_SERVER_FOR_SB_SOLUTIONS_EM          0x00000037
 #define PRODUCT_SOLUTION_EMBEDDEDSERVER             0x00000038
+#define PRODUCT_SOLUTION_EMBEDDEDSERVER_CORE        0x00000039
+#define PRODUCT_PROFESSIONAL_EMBEDDED               0x0000003A
 #define PRODUCT_ESSENTIALBUSINESS_SERVER_MGMT       0x0000003B
 #define PRODUCT_ESSENTIALBUSINESS_SERVER_ADDL       0x0000003C
 #define PRODUCT_ESSENTIALBUSINESS_SERVER_MGMTSVC    0x0000003D
 #define PRODUCT_ESSENTIALBUSINESS_SERVER_ADDLSVC    0x0000003E
 #define PRODUCT_SMALLBUSINESS_SERVER_PREMIUM_CORE   0x0000003F
 #define PRODUCT_CLUSTER_SERVER_V                    0x00000040
+#define PRODUCT_EMBEDDED                            0x00000041
+#define PRODUCT_STARTER_E                           0x00000042
+#define PRODUCT_HOME_BASIC_E                        0x00000043
+#define PRODUCT_HOME_PREMIUM_E                      0x00000044
+#define PRODUCT_PROFESSIONAL_E                      0x00000045
+#define PRODUCT_ENTERPRISE_E                        0x00000046
+#define PRODUCT_ULTIMATE_E                          0x00000047
 #define PRODUCT_ENTERPRISE_EVALUATION               0x00000048
 #define PRODUCT_MULTIPOINT_STANDARD_SERVER          0x0000004C
 #define PRODUCT_MULTIPOINT_PREMIUM_SERVER           0x0000004D
 #define PRODUCT_STANDARD_EVALUATION_SERVER          0x0000004F
 #define PRODUCT_DATACENTER_EVALUATION_SERVER        0x00000050
 #define PRODUCT_ENTERPRISE_N_EVALUATION             0x00000054
+#define PRODUCT_EMBEDDED_AUTOMOTIVE                 0x00000055
+#define PRODUCT_EMBEDDED_INDUSTRY_A                 0x00000056
+#define PRODUCT_THINPC                              0x00000057
+#define PRODUCT_EMBEDDED_A                          0x00000058
+#define PRODUCT_EMBEDDED_INDUSTRY                   0x00000059
+#define PRODUCT_EMBEDDED_E                          0x0000005A
+#define PRODUCT_EMBEDDED_INDUSTRY_E                 0x0000005B
+#define PRODUCT_EMBEDDED_INDUSTRY_A_E               0x0000005C
 #define PRODUCT_STORAGE_WORKGROUP_EVALUATION_SERVER 0x0000005F
 #define PRODUCT_STORAGE_STANDARD_EVALUATION_SERVER  0x00000060
+#define PRODUCT_CORE_ARM                            0x00000061
 #define PRODUCT_CORE_N                              0x00000062
 #define PRODUCT_CORE_COUNTRYSPECIFIC                0x00000063
 #define PRODUCT_CORE_SINGLELANGUAGE                 0x00000064
 #define PRODUCT_CORE                                0x00000065
 #define PRODUCT_PROFESSIONAL_WMC                    0x00000067
+#define PRODUCT_MOBILE_CORE                         0x00000068
+#define PRODUCT_EMBEDDED_INDUSTRY_EVAL              0x00000069
+#define PRODUCT_EMBEDDED_INDUSTRY_E_EVAL            0x0000006A
+#define PRODUCT_EMBEDDED_EVAL                       0x0000006B
+#define PRODUCT_EMBEDDED_E_EVAL                     0x0000006C
+#define PRODUCT_CORE_SERVER                         0x0000006D
+#define PRODUCT_CLOUD_STORAGE_SERVER                0x0000006E
+#define PRODUCT_CORE_CONNECTED                      0x0000006F
+#define PRODUCT_PROFESSIONAL_STUDENT                0x00000070
+#define PRODUCT_CORE_CONNECTED_N                    0x00000071
+#define PRODUCT_PROFESSIONAL_STUDENT_N              0x00000072
+#define PRODUCT_CORE_CONNECTED_SINGLELANGUAGE       0x00000073
+#define PRODUCT_CORE_CONNECTED_COUNTRYSPECIFIC      0x00000074
+
+#define PRODUCT_UNLICENSED                          0xABCDABCD
 #endif
+// end_winnt
 
 #ifndef VER_NT_WORKSTATION
 #define VER_NT_WORKSTATION              0x0000001
@@ -143,5 +194,5 @@ typedef struct _php_win_OSVERSIONINFOEXA {
     BYTE  wProductType;
     BYTE  wReserved;
 } php_win_OSVERSIONINFOEX;
-
+#define PRODUCT_STARTER_PRODUCT_ENTERPRISE_EVALUATION_ETC
 #endif

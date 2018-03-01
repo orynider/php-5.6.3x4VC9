@@ -416,6 +416,8 @@ static inline void sub_times(struct timeval a, struct timeval b, struct timeval 
 }
 /* }}} */
 
+//#include "phpws2_32.h" /* To do: Move this to an object. Now in sapi via basic_functions.c
+
 /* Bind to a local IP address.
  * Returns the bound socket, or -1 on failure.
  * */
@@ -538,7 +540,7 @@ PHPAPI int php_network_parse_network_address_with_port(const char *addr, long ad
 	/* first, try interpreting the address as a numeric address */
 
 #if HAVE_IPV6 && HAVE_INET_PTON
-	if (inet_pton(AF_INET6, tmp, &in6->sin6_addr) > 0) {
+	if (inet_pton32(AF_INET6, tmp, &in6->sin6_addr) > 0) {
 		in6->sin6_port = htons(port);
 		in6->sin6_family = AF_INET6;
 		*sl = sizeof(struct sockaddr_in6);
@@ -626,7 +628,7 @@ PHPAPI void php_network_populate_name_from_sockaddr(
 
 #if HAVE_IPV6 && HAVE_INET_NTOP
 			case AF_INET6:
-				buf = (char*)inet_ntop(sa->sa_family, &((struct sockaddr_in6*)sa)->sin6_addr, (char *)&abuf, sizeof(abuf));
+				buf = (char*)inet_ntop32(sa->sa_family, &((struct sockaddr_in6*)sa)->sin6_addr, (char *)&abuf, sizeof(abuf));
 				if (buf) {
 					*textaddrlen = spprintf(textaddr, 0, "%s:%d",
 						buf, ntohs(((struct sockaddr_in6*)sa)->sin6_port));
@@ -863,7 +865,7 @@ php_socket_t php_network_connect_socket_to_host(const char *host, unsigned short
 
 					in6->sin6_family = sa->sa_family;
 					in6->sin6_port = htons(bindport);
-					if (inet_pton(AF_INET6, bindto, &in6->sin6_addr) < 1) {
+					if (inet_pton32(AF_INET6, bindto, &in6->sin6_addr) < 1) {
 						php_error_docref(NULL TSRMLS_CC, E_WARNING, "Invalid IP Address: %s", bindto);
 						goto skip_bind;
 					}

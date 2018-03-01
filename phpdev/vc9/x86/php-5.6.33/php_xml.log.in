@@ -1,0 +1,564 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+	"cl.exe" /D _USRDLL /D PHP5DLLTS_EXPORTS /D PHP_EXPORTS /D LIBZEND_EXPORTS /D TSRM_EXPORTS /D SAPI_EXPORTS /D WINVER=0x500 /D COMPILE_DL_BZ2 /D COMPILE_DL_COM_DOTNET /D COMPILE_DL_CURL /D COMPILE_DL_ENCHANT /D COMPILE_DL_FILEINFO /D COMPILE_DL_GD /D COMPILE_DL_ICONV /D COMPILE_DL_LDAP /D COMPILE_DL_MBSTRING /D COMPILE_DL_MCRYPT /D COMPILE_DL_MSSQL /D COMPILE_DL_ODBC /D COMPILE_DL_OPCACHE /D COMPILE_DL_OPENSSL /D COMPILE_DL_PGSQL /D COMPILE_DL_SNMP /D COMPILE_DL_SOCKETS /D COMPILE_DL_SQLITE3 /D COMPILE_DL_SYBASE_CT /D COMPILE_DL_TIDY /D COMPILE_DL_XDEBUG /D COMPILE_DL_DOM /D COMPILE_DL_EXIF /D COMPILE_DL_IGBINARY /D COMPILE_DL_MYSQL /D COMPILE_DL_MYSQLI /D COMPILE_DL_PDO_MSSQL /D COMPILE_DL_PDO_FIREBIRD /D COMPILE_DL_PDO_MYSQL /D COMPILE_DL_PDO_ODBC /D COMPILE_DL_PDO_PGSQL /D COMPILE_DL_PDO_SQLITE /D COMPILE_DL_XML /D COMPILE_DL_WDDX /D COMPILE_DL_XMLREADER /D COMPILE_DL_XMLRPC /D COMPILE_DL_XSL -Iext/bcmath/libbcmath/src   /Iext/date/lib /DHAVE_TIMELIB_CONFIG_H=1 /wd4244 -Dregexec=php_regexec -Dregerror=php_regerror -Dregfree=php_regfree -Dregcomp=php_regcomp -Iext/ereg/regex      -Iext/pcre/pcrelib  /D HAVE_CONFIG_H     /I "ext/date/lib"  /DHAVE_TIMELIB_CONFIG_H=1 /I "ext\mbstring\oniguruma"  /DHAVE_ONIGURUMA_H=1  /D ZLIB_EXPORTS /I "C:\php-sdk\phpdev\vc9\x86\deps\include\libxml2"  /DHAVE_LIBXML_PARSER_H=1 /DHAVE_LIBXML_TREE_H=1 /DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 /D LIBXML_STATIC /D LIBXML_STATIC_FOR_DLL /D HAVE_WIN32_THREADS   /D LIBXML_STATIC /D PHP_SIMPLEXML_EXPORTS /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /DHAVE_LIBXML_XMLWRITER_H=1 /D LIBXML_STATIC /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\main\ /FdRelease_TS\main\ /FpRelease_TS\main\ /FRRelease_TS\main\ /c main\SAPI.c main\fopen_wrappers.c main\getopt.c main\internal_functions.c main\main.c main\mergesort.c main\network.c main\output.c main\php_content_types.c main\php_ini.c main\php_open_temporary_file.c main\php_scandir.c main\php_sprintf.c main\php_ticks.c main\php_variables.c main\reentrancy.c main\rfc1867.c main\snprintf.c main\spprintf.c main\strlcat.c main\strlcpy.c
+SAPI.c
+fopen_wrappers.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+main\SAPI.c(265) : warning C4018: '<' : signed/unsigned mismatch
+main\SAPI.c(754) : warning C4018: '<' : signed/unsigned mismatch
+getopt.c
+main\fopen_wrappers.c(785) : warning C4013: 'close' undefined; assuming extern returning int
+internal_functions.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+main\getopt.c(103) : warning C4090: '=' : different 'const' qualifiers
+main.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(80) : warning C4005: 'INT8_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(137) : see previous definition of 'INT8_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(81) : warning C4005: 'INT16_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(139) : see previous definition of 'INT16_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(82) : warning C4005: 'INT32_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(141) : see previous definition of 'INT32_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(83) : warning C4005: 'INT64_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(143) : see previous definition of 'INT64_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(85) : warning C4005: 'INT8_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(138) : see previous definition of 'INT8_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(86) : warning C4005: 'INT16_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(140) : see previous definition of 'INT16_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(87) : warning C4005: 'INT32_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(142) : see previous definition of 'INT32_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(88) : warning C4005: 'INT64_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(144) : see previous definition of 'INT64_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(90) : warning C4005: 'UINT8_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(145) : see previous definition of 'UINT8_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(91) : warning C4005: 'UINT16_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(146) : see previous definition of 'UINT16_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(92) : warning C4005: 'UINT32_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(147) : see previous definition of 'UINT32_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(93) : warning C4005: 'UINT64_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(148) : see previous definition of 'UINT64_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(149) : warning C4005: 'PTRDIFF_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(200) : see previous definition of 'PTRDIFF_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(150) : warning C4005: 'PTRDIFF_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(201) : see previous definition of 'PTRDIFF_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(153) : warning C4005: 'SIG_ATOMIC_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(204) : see previous definition of 'SIG_ATOMIC_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(154) : warning C4005: 'SIG_ATOMIC_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(205) : see previous definition of 'SIG_ATOMIC_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(173) : warning C4005: 'WINT_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(224) : see previous definition of 'WINT_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(196) : warning C4005: 'INT8_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(235) : see previous definition of 'INT8_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(197) : warning C4005: 'INT16_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(236) : see previous definition of 'INT16_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(198) : warning C4005: 'INT32_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(237) : see previous definition of 'INT32_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(199) : warning C4005: 'INT64_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(238) : see previous definition of 'INT64_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(201) : warning C4005: 'UINT8_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(240) : see previous definition of 'UINT8_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(202) : warning C4005: 'UINT16_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(241) : see previous definition of 'UINT16_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(203) : warning C4005: 'UINT32_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(242) : see previous definition of 'UINT32_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(204) : warning C4005: 'UINT64_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(243) : see previous definition of 'UINT64_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(207) : warning C4005: 'INTMAX_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(246) : see previous definition of 'INTMAX_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(208) : warning C4005: 'UINTMAX_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(247) : see previous definition of 'UINTMAX_C'
+mergesort.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(80) : warning C4005: 'INT8_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(137) : see previous definition of 'INT8_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(81) : warning C4005: 'INT16_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(139) : see previous definition of 'INT16_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(82) : warning C4005: 'INT32_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(141) : see previous definition of 'INT32_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(83) : warning C4005: 'INT64_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(143) : see previous definition of 'INT64_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(85) : warning C4005: 'INT8_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(138) : see previous definition of 'INT8_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(86) : warning C4005: 'INT16_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(140) : see previous definition of 'INT16_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(87) : warning C4005: 'INT32_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(142) : see previous definition of 'INT32_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(88) : warning C4005: 'INT64_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(144) : see previous definition of 'INT64_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(90) : warning C4005: 'UINT8_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(145) : see previous definition of 'UINT8_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(91) : warning C4005: 'UINT16_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(146) : see previous definition of 'UINT16_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(92) : warning C4005: 'UINT32_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(147) : see previous definition of 'UINT32_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(93) : warning C4005: 'UINT64_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(148) : see previous definition of 'UINT64_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(149) : warning C4005: 'PTRDIFF_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(200) : see previous definition of 'PTRDIFF_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(150) : warning C4005: 'PTRDIFF_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(201) : see previous definition of 'PTRDIFF_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(153) : warning C4005: 'SIG_ATOMIC_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(204) : see previous definition of 'SIG_ATOMIC_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(154) : warning C4005: 'SIG_ATOMIC_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(205) : see previous definition of 'SIG_ATOMIC_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(173) : warning C4005: 'WINT_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(224) : see previous definition of 'WINT_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(196) : warning C4005: 'INT8_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(235) : see previous definition of 'INT8_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(197) : warning C4005: 'INT16_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(236) : see previous definition of 'INT16_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(198) : warning C4005: 'INT32_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(237) : see previous definition of 'INT32_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(199) : warning C4005: 'INT64_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(238) : see previous definition of 'INT64_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(201) : warning C4005: 'UINT8_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(240) : see previous definition of 'UINT8_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(202) : warning C4005: 'UINT16_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(241) : see previous definition of 'UINT16_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(203) : warning C4005: 'UINT32_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(242) : see previous definition of 'UINT32_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(204) : warning C4005: 'UINT64_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(243) : see previous definition of 'UINT64_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(207) : warning C4005: 'INTMAX_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(246) : see previous definition of 'INTMAX_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(208) : warning C4005: 'UINTMAX_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(247) : see previous definition of 'UINTMAX_C'
+main\main.c(719) : warning C4013: 'write' undefined; assuming extern returning int
+main\main.c(722) : warning C4013: 'close' undefined; assuming extern returning int
+main\main.c(2539) : warning C4090: 'function' : different 'const' qualifiers
+main\main.c(2647) : warning C4090: 'function' : different 'const' qualifiers
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+network.c
+output.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+php_content_types.c
+php_ini.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+php_open_temporary_file.c
+php_scandir.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+main\php_open_temporary_file.c(323) : warning C4013: 'close' undefined; assuming extern returning int
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+php_sprintf.c
+php_ticks.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+main\php_sprintf.c(38) : warning C4013: 'vsprintf' undefined; assuming extern returning int
+php_variables.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+reentrancy.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(80) : warning C4005: 'INT8_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(137) : see previous definition of 'INT8_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(81) : warning C4005: 'INT16_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(139) : see previous definition of 'INT16_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(82) : warning C4005: 'INT32_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(141) : see previous definition of 'INT32_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(83) : warning C4005: 'INT64_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(143) : see previous definition of 'INT64_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(85) : warning C4005: 'INT8_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(138) : see previous definition of 'INT8_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(86) : warning C4005: 'INT16_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(140) : see previous definition of 'INT16_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(87) : warning C4005: 'INT32_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(142) : see previous definition of 'INT32_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(88) : warning C4005: 'INT64_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(144) : see previous definition of 'INT64_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(90) : warning C4005: 'UINT8_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(145) : see previous definition of 'UINT8_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(91) : warning C4005: 'UINT16_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(146) : see previous definition of 'UINT16_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(92) : warning C4005: 'UINT32_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(147) : see previous definition of 'UINT32_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(93) : warning C4005: 'UINT64_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(148) : see previous definition of 'UINT64_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(149) : warning C4005: 'PTRDIFF_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(200) : see previous definition of 'PTRDIFF_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(150) : warning C4005: 'PTRDIFF_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(201) : see previous definition of 'PTRDIFF_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(153) : warning C4005: 'SIG_ATOMIC_MIN' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(204) : see previous definition of 'SIG_ATOMIC_MIN'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(154) : warning C4005: 'SIG_ATOMIC_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(205) : see previous definition of 'SIG_ATOMIC_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(173) : warning C4005: 'WINT_MAX' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(224) : see previous definition of 'WINT_MAX'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(196) : warning C4005: 'INT8_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(235) : see previous definition of 'INT8_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(197) : warning C4005: 'INT16_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(236) : see previous definition of 'INT16_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(198) : warning C4005: 'INT32_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(237) : see previous definition of 'INT32_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(199) : warning C4005: 'INT64_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(238) : see previous definition of 'INT64_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(201) : warning C4005: 'UINT8_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(240) : see previous definition of 'UINT8_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(202) : warning C4005: 'UINT16_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(241) : see previous definition of 'UINT16_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(203) : warning C4005: 'UINT32_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(242) : see previous definition of 'UINT32_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(204) : warning C4005: 'UINT64_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(243) : see previous definition of 'UINT64_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(207) : warning C4005: 'INTMAX_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(246) : see previous definition of 'INTMAX_C'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32\stdint.h(208) : warning C4005: 'UINTMAX_C' : macro redefinition
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\win32/php_stdint.h(247) : see previous definition of 'UINTMAX_C'
+rfc1867.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+snprintf.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+main\rfc1867.c(1050) : warning C4013: 'write' undefined; assuming extern returning int
+main\rfc1867.c(1074) : warning C4013: 'close' undefined; assuming extern returning int
+spprintf.c
+strlcat.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+strlcpy.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_xml.lib and object Release_TS\php_xml.exp
+compat.obj : warning LNK4049: locally defined symbol _xmlFree imported
+compat.obj : warning LNK4049: locally defined symbol _xmlMalloc imported
+xml.obj : warning LNK4217: locally defined symbol _php_XML_ParserFree imported in function _xml_parser_dtor
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetUserData imported in function _php_xml_parser_create_impl
+xml.obj : warning LNK4217: locally defined symbol _php_XML_ParserCreate_MM imported in function _php_xml_parser_create_impl
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetElementHandler imported in function _zif_xml_set_element_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_Parse imported in function _zif_xml_parse
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetErrorCode imported in function _zif_xml_get_error_code
+xml.obj : warning LNK4217: locally defined symbol _php_XML_ErrorString imported in function _zif_xml_error_string
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetCurrentLineNumber imported in function _zif_xml_get_current_line_number
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetCurrentColumnNumber imported in function _zif_xml_get_current_column_number
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetCurrentByteIndex imported in function _zif_xml_get_current_byte_index
+xml.obj : warning LNK4217: locally defined symbol _XML_GetUserData imported in function __xml_externalEntityRefHandler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetCharacterDataHandler imported in function _zif_xml_set_character_data_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetProcessingInstructionHandler imported in function _zif_xml_set_processing_instruction_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetDefaultHandler imported in function _zif_xml_set_default_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetUnparsedEntityDeclHandler imported in function _zif_xml_set_unparsed_entity_decl_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetNotationDeclHandler imported in function _zif_xml_set_notation_decl_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetExternalEntityRefHandler imported in function _zif_xml_set_external_entity_ref_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetStartNamespaceDeclHandler imported in function _zif_xml_set_start_namespace_decl_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetEndNamespaceDeclHandler imported in function _zif_xml_set_end_namespace_decl_handler
+EXT xml build complete

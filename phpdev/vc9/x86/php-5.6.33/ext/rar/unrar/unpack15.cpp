@@ -37,23 +37,19 @@ static unsigned int DecHf4[]={0xff00,0xffff,0xffff,0xffff,0xffff,0xffff};
 static unsigned int PosHf4[]={0,0,0,0,0,0,0,0,0,255,0,0,0};
 
 
-void Unpack::Unpack15(bool Solid,bool SuspendAfterInit)
+void Unpack::Unpack15(bool Solid)
 {
-    UnpInitData(Solid);
+  UnpInitData(Solid);
   UnpInitData15(Solid);
-    UnpReadBuf();
-    if (!Solid)
-    {
-      InitHuff();
-      UnpPtr=0;
-    }
-    else
-      UnpPtr=WrPtr;
-    --DestUnpSize;
-
-  if (SuspendAfterInit)
-   Suspended = true;
-
+  UnpReadBuf();
+  if (!Solid)
+  {
+    InitHuff();
+    UnpPtr=0;
+  }
+  else
+    UnpPtr=WrPtr;
+  --DestUnpSize;
   if (DestUnpSize>=0)
   {
     GetFlagsBuf();
@@ -289,7 +285,7 @@ void Unpack::LongLZ()
       break;
   }
 
-  ChSetB[DistancePlace]=ChSetB[NewDistancePlace];
+  ChSetB[DistancePlace & 0xff]=ChSetB[NewDistancePlace];
   ChSetB[NewDistancePlace]=Distance;
 
   Distance=((Distance & 0xff00) | (Inp.fgetbits() >> 8)) >> 1;

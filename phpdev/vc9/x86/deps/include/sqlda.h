@@ -1,47 +1,58 @@
-/*
-**		Sybase CT-LIBRARY
-**		Confidential Property of Sybase, Inc.
-**		(c) Copyright Sybase, Inc. 1995 - 2005
-**		All rights reserved
-**
-*/
+/**************************************************************************
 
-#ifndef __SQLDA_H__
-#define __SQLDA_H__
+   Module Name	  = SQLDA.H
 
-typedef struct _sqlda
-{
-	CS_SMALLINT sd_sqln;
-	CS_SMALLINT sd_sqld;
-	struct _sd_column
-	{
-		CS_DATAFMT sd_datafmt;
-		CS_VOID *sd_sqldata;
-		CS_SMALLINT sd_sqlind;
-		CS_INT sd_sqllen;
-		CS_VOID	*sd_sqlmore;
-	} sd_column[1];
-} syb_sqlda;
+   SQLDA External Include File
 
-typedef syb_sqlda SQLDA;
+   Copyright = nnnnnnnn (C) Copyright IBM Corp. 1987
+	       Licensed Material - Program Property of IBM
+	       Refer to Copyright Instructions Form Number G120-3083
 
-#define SYB_SQLDA_SIZE(n) (sizeof(SQLDA) \
-		- sizeof(struct _sd_column) \
-		+ (n) * sizeof(struct _sd_column))
+   Function = Include File defining SQLDA
 
-#ifndef SQLDA_DECL
-#define SQLDA_DECL(name, size) \
-struct { \
-	CS_SMALLINT sd_sqln; \
-	CS_SMALLINT sd_sqld; \
-	struct { \
-		CS_DATAFMT sd_datafmt; \
-		CS_VOID *sd_sqldata; \
-		CS_SMALLINT sd_sqlind; \
-		CS_INT sd_sqllen; \
-		CS_VOID	*sd_sqlmore; \
-	} sd_column[(size)]; \
-} name
-#endif /* SQLDA_DECL */
+		IMPORTANT
+		=========
+ This file is automatically included by sqlprep.exe.
+ Do not include it manually.
 
-#endif /* __SQLDA_H__ */
+**************************************************************************/
+
+#ifndef _SQLPREP_
+#pragma message( "Do not include sqlda.h manually. It will be included by sqlprep.exe. ")
+#endif	// _SQLPREP_
+
+
+/* SQL Descriptor Area - Variable descriptor */
+
+#ifndef   SQLDASIZE
+
+/* SQL Descriptor Area - SQLDA */
+struct sqlda {
+	
+    unsigned char   sqldaid[8];	        // Eye catcher = 'SQLDA   ' 
+	long            sqldabc;			// SQLDA size in bytes = 16+44*SQLN 
+	short           sqln;			    // Number of SQLVAR elements
+	short           sqld;			    // # of used SQLVAR elements
+	struct          sqlvar 
+    {
+		short       sqltype;			// Variable data type
+		short       sqllen;			    // Variable data length
+		unsigned char far *sqldata;	    // Pointer to variable data value
+		short       far *sqlind;		// Pointer to Null indicator
+		struct      sqlname             // Variable Name
+        {
+			short   length;		        // Name length [1..30]
+			unsigned char data[30];	    // Variable or Column name
+		}sqlname;
+
+	} sqlvar[1];
+};
+
+/* macro for allocating SQLDA */
+
+#define   SQLDASIZE(n) (sizeof(struct sqlda) + (n-1)*sizeof(struct sqlvar))
+
+#endif	// SQLDASIZE
+
+/* EOF: sqlda.h */
+

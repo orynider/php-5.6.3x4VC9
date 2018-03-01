@@ -1,140 +1,87 @@
-dnl $Id$
-dnl config.m4 for extension redis
+dnl config.m4 for extension igbinary
 
-PHP_ARG_ENABLE(redis, whether to enable redis support,
+dnl Comments in this file start with the string 'dnl'.
+dnl Remove where necessary. This file will not work
+dnl without editing.
+
+dnl If your extension references something external, use with:
+
+dnl PHP_ARG_WITH(igbinary, for igbinary support,
 dnl Make sure that the comment is aligned:
-[  --enable-redis          Enable redis support])
+dnl [  --with-igbinary             Include igbinary support])
 
-PHP_ARG_ENABLE(redis-session, whether to enable sessions,
-[  --disable-redis-session Disable session support], yes, no)
+dnl Otherwise use enable:
 
-PHP_ARG_ENABLE(redis-igbinary, whether to enable igbinary serializer support,
-[  --enable-redis-igbinary Enable igbinary serializer support], no, no)
+PHP_ARG_ENABLE(igbinary, whether to enable igbinary support,
+  [  --enable-igbinary          Enable igbinary support])
 
-PHP_ARG_ENABLE(redis-lzf, whether to enable lzf compression,
-[  --enable-redis-lzf      Enable lzf compression support], no, no)
+if test "$PHP_IGBINARY" != "no"; then
+  AC_CHECK_HEADERS([stdbool.h],, AC_MSG_ERROR([stdbool.h not exists]))
+  AC_CHECK_HEADERS([stddef.h],, AC_MSG_ERROR([stddef.h not exists]))
+  AC_CHECK_HEADERS([stdint.h],, AC_MSG_ERROR([stdint.h not exists]))
 
-PHP_ARG_WITH(liblzf, use system liblzf,
-[  --with-liblzf[=DIR]       Use system liblzf], no, no)
+  AC_MSG_CHECKING(PHP version)
 
-if test "$PHP_REDIS" != "no"; then
+  AC_TRY_COMPILE([
+  #include <$phpincludedir/main/php_version.h>
+  ],[
+#if PHP_MAJOR_VERSION > 5
+#error PHP > 5
+#endif
+  ],[
+  subdir=src/php5
+  PHP_IGBINARY_SRC_FILES="$subdir/igbinary.c $subdir/hash_si.c $subdir/hash_si_ptr.c"
+  AC_MSG_RESULT([PHP 5])
+  ],[
+  subdir=src/php7
+  PHP_IGBINARY_SRC_FILES="$subdir/igbinary.c $subdir/hash_si.c $subdir/hash_si_ptr.c"
+  AC_MSG_RESULT([PHP 7])
+  ])
 
-  if test "$PHP_REDIS_SESSION" != "no"; then
-    AC_DEFINE(PHP_SESSION,1,[redis sessions])
-  fi
-
-dnl Check for igbinary
-  if test "$PHP_REDIS_IGBINARY" != "no"; then
-    AC_MSG_CHECKING([for igbinary includes])
-    igbinary_inc_path=""
-
-    if test -f "$abs_srcdir/include/php/ext/igbinary/igbinary.h"; then
-      igbinary_inc_path="$abs_srcdir/include/php"
-    elif test -f "$abs_srcdir/ext/igbinary/igbinary.h"; then
-      igbinary_inc_path="$abs_srcdir"
-    elif test -f "$phpincludedir/ext/igbinary/igbinary.h"; then
-      igbinary_inc_path="$phpincludedir"
-    else
-      for i in php php4 php5 php6; do
-        if test -f "$prefix/include/$i/ext/igbinary/igbinary.h"; then
-          igbinary_inc_path="$prefix/include/$i"
-        fi
-      done
-    fi
-
-    if test "$igbinary_inc_path" = ""; then
-      AC_MSG_ERROR([Cannot find igbinary.h])
-    else
-      AC_MSG_RESULT([$igbinary_inc_path])
-    fi
-  fi
-
-  AC_MSG_CHECKING([for redis igbinary support])
-  if test "$PHP_REDIS_IGBINARY" != "no"; then
-    AC_MSG_RESULT([enabled])
-    AC_DEFINE(HAVE_REDIS_IGBINARY,1,[Whether redis igbinary serializer is enabled])
-    IGBINARY_INCLUDES="-I$igbinary_inc_path"
-    IGBINARY_EXT_DIR="$igbinary_inc_path/ext"
-    ifdef([PHP_ADD_EXTENSION_DEP],
-    [
-      PHP_ADD_EXTENSION_DEP(redis, igbinary)
-    ])
-    PHP_ADD_INCLUDE($IGBINARY_EXT_DIR)
+  AC_MSG_CHECKING([for APC/APCU includes])
+  if test -f "$phpincludedir/ext/apcu/apc_serializer.h"; then
+    apc_inc_path="$phpincludedir"
+    AC_MSG_RESULT([APCU in $apc_inc_path])
+    AC_DEFINE(HAVE_APCU_SUPPORT,1,[Whether to enable apcu support])
+  elif test "$subdir" == src/php5 && test -f "$phpincludedir/ext/apc/apc_serializer.h"; then
+    apc_inc_path="$phpincludedir"
+    AC_MSG_RESULT([APC in $apc_inc_path])
+    AC_DEFINE(HAVE_APC_SUPPORT,1,[Whether to enable apc support])
+  elif test "$subdir" == src/php5 && test -f "${srcdir}/$subdir/apc_serializer.h"; then
+    AC_MSG_RESULT([apc_serializer.h bundled])
+    AC_DEFINE(HAVE_APC_SUPPORT,1,[Whether to enable apc support])
+    AC_DEFINE(USE_BUNDLED_APC,1,[Whether to use bundled apc includes])
   else
-    IGBINARY_INCLUDES=""
-    AC_MSG_RESULT([disabled])
+    AC_MSG_RESULT([not found])
   fi
 
-  if test "$PHP_REDIS_LZF" != "no"; then
-    AC_DEFINE(HAVE_REDIS_LZF, 1, [ ])
-    if test "$PHP_LIBLZF" != "no"; then
-      AC_MSG_CHECKING(for liblzf files in default path)
-      for i in $PHP_LIBLZF /usr/local /usr; do
-        if test -r $i/include/lzf.h; then
-          AC_MSG_RESULT(found in $i)
-          LIBLZF_DIR=$i
-          break
-        fi
-      done
-      if test -z "$LIBLZF_DIR"; then
-        AC_MSG_RESULT([not found])
-        AC_MSG_ERROR([Please reinstall the liblzf distribution])
-      fi
-      PHP_CHECK_LIBRARY(lzf, lzf_compress,
-      [
-        PHP_ADD_LIBRARY_WITH_PATH(lzf, $LIBLZF_DIR/$PHP_LIBDIR, REDIS_SHARED_LIBADD)
-      ], [
-        AC_MSG_ERROR([could not find usable liblzf])
-      ], [
-        -L$LIBLZF_DIR/$PHP_LIBDIR
-      ])
-      PHP_SUBST(REDIS_SHARED_LIBADD)
-    else
-      PHP_ADD_INCLUDE(liblzf)
-      PHP_ADD_INCLUDE($ext_srcdir/liblzf)
-      PHP_ADD_BUILD_DIR(liblzf)
-      lzf_sources="liblzf/lzf_c.c liblzf/lzf_d.c"
+  AC_CHECK_SIZEOF([long])
+
+  dnl GCC
+  AC_MSG_CHECKING(compiler type)
+  if test ! -z "`$CC --version | grep -i CLANG`"; then
+    AC_MSG_RESULT(clang)
+    if test -z "`echo $CFLAGS | grep -- -O0`"; then
+      PHP_IGBINARY_CFLAGS="$CFLAGS -Wall -O2"
     fi
+  elif test "$GCC" = yes; then
+    AC_MSG_RESULT(gcc)
+    if test -z "`echo $CFLAGS | grep -- '-O[0123]'`"; then
+      PHP_IGBINARY_CFLAGS="$CFLAGS -O2 -Wall -Wpointer-arith -Wmissing-prototypes -Wstrict-prototypes -Wcast-align -Wshadow -Wwrite-strings -Wswitch -finline-limit=10000 --param large-function-growth=10000 --param inline-unit-growth=10000"
+    fi
+  elif test "$ICC" = yes; then
+    AC_MSG_RESULT(icc)
+    if test -z "`echo $CFLAGS | grep -- -O0`"; then
+      PHP_IGBINARY_CFLAGS="$CFLAGS -no-prec-div -O3 -x0 -unroll2"
+    fi
+  else
+    AC_MSG_RESULT(other)
   fi
 
-  dnl # --with-redis -> check with-path
-  dnl SEARCH_PATH="/usr/local /usr"     # you might want to change this
-  dnl SEARCH_FOR="/include/redis.h"  # you most likely want to change this
-  dnl if test -r $PHP_REDIS/$SEARCH_FOR; then # path given as parameter
-  dnl   REDIS_DIR=$PHP_REDIS
-  dnl else # search default path list
-  dnl   AC_MSG_CHECKING([for redis files in default path])
-  dnl   for i in $SEARCH_PATH ; do
-  dnl     if test -r $i/$SEARCH_FOR; then
-  dnl       REDIS_DIR=$i
-  dnl       AC_MSG_RESULT(found in $i)
-  dnl     fi
-  dnl   done
-  dnl fi
-  dnl
-  dnl if test -z "$REDIS_DIR"; then
-  dnl   AC_MSG_RESULT([not found])
-  dnl   AC_MSG_ERROR([Please reinstall the redis distribution])
-  dnl fi
-
-  dnl # --with-redis -> add include path
-  dnl PHP_ADD_INCLUDE($REDIS_DIR/include)
-
-  dnl # --with-redis -> check for lib and symbol presence
-  dnl LIBNAME=redis # you may want to change this
-  dnl LIBSYMBOL=redis # you most likely want to change this 
-
-  dnl PHP_CHECK_LIBRARY($LIBNAME,$LIBSYMBOL,
-  dnl [
-  dnl   PHP_ADD_LIBRARY_WITH_PATH($LIBNAME, $REDIS_DIR/lib, REDIS_SHARED_LIBADD)
-  dnl   AC_DEFINE(HAVE_REDISLIB,1,[ ])
-  dnl ],[
-  dnl   AC_MSG_ERROR([wrong redis lib version or lib not found])
-  dnl ],[
-  dnl   -L$REDIS_DIR/lib -lm -ldl
-  dnl ])
-  dnl
-  dnl PHP_SUBST(REDIS_SHARED_LIBADD)
-
-  PHP_NEW_EXTENSION(redis, redis.c redis_commands.c library.c redis_session.c redis_array.c redis_array_impl.c redis_cluster.c cluster_library.c $lzf_sources, $ext_shared)
+  PHP_ADD_MAKEFILE_FRAGMENT(Makefile.bench)
+  PHP_INSTALL_HEADERS([ext/igbinary], [igbinary.h $subdir/igbinary.h php_igbinary.h $subdir/php_igbinary.h])
+  PHP_NEW_EXTENSION(igbinary, $PHP_IGBINARY_SRC_FILES, $ext_shared,, $PHP_IGBINARY_CFLAGS)
+  PHP_ADD_EXTENSION_DEP(igbinary, session, true)
+  PHP_ADD_BUILD_DIR($abs_builddir/$subdir, 1)
+  PHP_SUBST(IGBINARY_SHARED_LIBADD)
 fi

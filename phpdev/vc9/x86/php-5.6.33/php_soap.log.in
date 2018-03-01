@@ -1,0 +1,99 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_xmlreader.obj : error LNK2019: unresolved external symbol __imp__php_dom_create_object referenced in function _zim_xmlreader_expand
+php_xmlreader.obj : error LNK2001: unresolved external symbol __imp__dom_node_class_entry
+Release_TS\php5ts.dll : fatal error LNK1120: 2 unresolved externals
+
+mt.exe : general error c10100b1: Failed to load file "Release_TS\php5ts.dll". The system cannot find the file specified.
+   Creating library Release_TS\php_soap.lib and object Release_TS\php_soap.exp
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlSearchNs referenced in function _master_to_zval_int
+php_schema.obj : error LNK2001: unresolved external symbol _xmlSearchNs
+php_sdl.obj : error LNK2001: unresolved external symbol _xmlSearchNs
+php_xml.obj : error LNK2001: unresolved external symbol _xmlSearchNs
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlFreeNode referenced in function _to_zval_user
+php_xml.obj : error LNK2001: unresolved external symbol _xmlFreeNode
+soap.obj : error LNK2001: unresolved external symbol _xmlFreeNode
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlBufferFree referenced in function _to_zval_user
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlBufferContent referenced in function _to_zval_user
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNodeDump referenced in function _to_zval_user
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlBufferCreate referenced in function _to_zval_user
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlCopyNode referenced in function _to_zval_user
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlCharEncOutFunc referenced in function _to_zval_string
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlBufferCreateStatic referenced in function _to_zval_string
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlStrlen referenced in function _to_zval_string
+php_schema.obj : error LNK2001: unresolved external symbol _xmlStrlen
+php_sdl.obj : error LNK2001: unresolved external symbol _xmlStrlen
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlStrEqual referenced in function _xmlSearchNsPrefixByHref
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNewNs referenced in function _encode_add_ns
+php_schema.obj : error LNK2001: unresolved external symbol _xmlNewNs
+soap.obj : error LNK2001: unresolved external symbol _xmlNewNs
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlSearchNsByHref referenced in function _encode_add_ns
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlSetNsProp referenced in function _set_ns_prop
+soap.obj : error LNK2001: unresolved external symbol _xmlSetNsProp
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlSetProp referenced in function _soap_check_zval_ref
+php_schema.obj : error LNK2001: unresolved external symbol _xmlSetProp
+soap.obj : error LNK2001: unresolved external symbol _xmlSetProp
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlSetNs referenced in function _soap_check_zval_ref
+soap.obj : error LNK2001: unresolved external symbol _xmlSetNs
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNodeSetName referenced in function _soap_check_zval_ref
+soap.obj : error LNK2001: unresolved external symbol _xmlNodeSetName
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlAddChild referenced in function _to_xml_null
+soap.obj : error LNK2001: unresolved external symbol _xmlAddChild
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNewNode referenced in function _to_xml_null
+soap.obj : error LNK2001: unresolved external symbol _xmlNewNode
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNodeSetContent referenced in function _model_to_zval_object
+soap.obj : error LNK2001: unresolved external symbol _xmlNodeSetContent
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNewText referenced in function _to_zval_object_ex
+php_xml.obj : error LNK2001: unresolved external symbol _xmlFreeDoc
+soap.obj : error LNK2019: unresolved external symbol _xmlFreeDoc referenced in function _zim_SoapServer_SoapServer
+php_encoding.obj : error LNK2001: unresolved external symbol _xmlFreeDoc
+php_packet_soap.obj : error LNK2001: unresolved external symbol _xmlFreeDoc
+php_schema.obj : error LNK2001: unresolved external symbol _xmlFreeDoc
+php_sdl.obj : error LNK2001: unresolved external symbol _xmlFreeDoc
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlDocCopyNode referenced in function _to_xml_user
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNewTextLen referenced in function _to_xml_string
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlCharEncInFunc referenced in function _to_xml_string
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlNodeSetContentLen referenced in function _to_xml_long
+soap.obj : error LNK2001: unresolved external symbol _xmlNodeSetContentLen
+php_encoding.obj : error LNK2019: unresolved external symbol _xmlUnlinkNode referenced in function _to_xml_object
+php_xml.obj : error LNK2001: unresolved external symbol _xmlUnlinkNode
+soap.obj : error LNK2001: unresolved external symbol _xmlUnlinkNode
+php_encoding.obj : error LNK2001: unresolved external symbol __imp__xmlStringTextNoenc
+php_packet_soap.obj : error LNK2019: unresolved external symbol _xmlGetIntSubset referenced in function _parse_packet_soap
+soap.obj : error LNK2001: unresolved external symbol _xmlGetIntSubset
+php_schema.obj : error LNK2019: unresolved external symbol _xmlStrcmp referenced in function _schema_load_file
+php_schema.obj : error LNK2001: unresolved external symbol __imp__xmlFree
+php_sdl.obj : error LNK2019: unresolved external symbol __imp__xmlFree referenced in function _load_wsdl
+soap.obj : error LNK2001: unresolved external symbol __imp__xmlFree
+php_schema.obj : error LNK2019: unresolved external symbol _xmlBuildURI referenced in function _load_schema
+php_sdl.obj : error LNK2001: unresolved external symbol _xmlBuildURI
+php_schema.obj : error LNK2019: unresolved external symbol _xmlNodeGetBase referenced in function _load_schema
+php_sdl.obj : error LNK2001: unresolved external symbol _xmlNodeGetBase
+php_sdl.obj : error LNK2019: unresolved external symbol _xmlGetLastError referenced in function _load_wsdl_ex
+php_xml.obj : error LNK2019: unresolved external symbol _xmlFreeParserCtxt referenced in function _soap_xmlParseFile
+php_xml.obj : error LNK2019: unresolved external symbol _xmlCharStrdup referenced in function _soap_xmlParseFile
+soap.obj : error LNK2001: unresolved external symbol _xmlCharStrdup
+php_xml.obj : error LNK2019: unresolved external symbol _xmlParseDocument referenced in function _soap_xmlParseFile
+php_xml.obj : error LNK2019: unresolved external symbol _xmlCreateFileParserCtxt referenced in function _soap_xmlParseFile
+php_xml.obj : error LNK2019: unresolved external symbol _xmlCreateMemoryParserCtxt referenced in function _soap_xmlParseMemory
+soap.obj : error LNK2019: unresolved external symbol _xmlFindCharEncodingHandler referenced in function _zim_SoapServer_SoapServer
+soap.obj : error LNK2019: unresolved external symbol _xmlDocDumpMemory referenced in function _soap_server_fault_ex
+soap.obj : error LNK2019: unresolved external symbol _xmlCharEncCloseFunc referenced in function _zim_SoapClient_SoapClient
+soap.obj : error LNK2019: unresolved external symbol _xmlNewChild referenced in function _serialize_response_call2
+soap.obj : error LNK2019: unresolved external symbol _xmlBuildQName referenced in function _serialize_response_call
+soap.obj : error LNK2019: unresolved external symbol _xmlDocSetRootElement referenced in function _serialize_response_call
+soap.obj : error LNK2019: unresolved external symbol _xmlNewDocNode referenced in function _serialize_response_call
+soap.obj : error LNK2019: unresolved external symbol _xmlNewDoc referenced in function _serialize_response_call
+Release_TS\php_soap.dll : fatal error LNK1120: 47 unresolved externals
+
+mt.exe : general error c10100b1: Failed to load file "Release_TS\php_soap.dll". The system cannot find the file specified.
+EXT soap build complete

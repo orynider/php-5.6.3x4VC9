@@ -16,23 +16,29 @@
    +----------------------------------------------------------------------+
  */
 /* $Id$ */
-
 /* Fun with threads */
-
 #define _INC_MATH  //make math.lib not re-include
+#ifdef __DEBUG__
+# include <stinttypes/stdio.h>
+#endif
+#include "php.h"
+extern "C" {
+#include "php_main.h"
+#include "php_globals.h"
+#include "php_variables.h"
+#include "php5activescript.h"
+#include "zend_exceptions.h"
+}
 
 #define _WIN32_DCOM
 #define ZEND_INCLUDE_FULL_WINDOWS_HEADERS
 #include <winsock2.h>
+#include "php_ticks.h"
 #include "php5as_scriptengine.h"
 #include "php5as_classfactory.h"
 #include <objbase.h>
-#undef php_win_err
-
-
-
-
-extern "C" char *php_win_err(HRESULT ret);
+//#undef php_error
+//extern "C" char *php_error(HRESULT ret);
 
 #define APHPM_IN	1
 #define APHPM_OUT	2
@@ -92,7 +98,7 @@ static HRESULT do_marshal_in(int stub, void *args[16], int *mdef, LPSTREAM *ppst
 	
 	ret = CreateStreamOnHGlobal(NULL, TRUE, &stm);
 	if (FAILED(ret)) {
-		trace(" failed to create stm %s", php_win_err(ret));
+		php_error(E_WARNING, " failed to create stm %s", ret);
 		return ret;
 	}
 		
@@ -119,7 +125,7 @@ static HRESULT do_marshal_in(int stub, void *args[16], int *mdef, LPSTREAM *ppst
 				case APHPT_UNK:
 					if (IFACE_PRESENT) {
 						ret = CoMarshalInterface(stm, IID_IUnknown, OUT_IFACE, MSHCTX_INPROC, NULL, MSHLFLAGS_NORMAL);
-						trace("   arg=%d IUnknown --> %s", argno, php_win_err(ret));
+						php_error(E_WARNING, "   arg=%d IUnknown --> %s", argno, ret);
 					} else {
 						trace("   arg=%d IUnknown(NULL) - skip\n", argno);
 					}
@@ -128,9 +134,9 @@ static HRESULT do_marshal_in(int stub, void *args[16], int *mdef, LPSTREAM *ppst
 				case APHPT_DISP:
 					if (IFACE_PRESENT) {
 						ret = CoMarshalInterface(stm, IID_IDispatch, OUT_IFACE, MSHCTX_INPROC, NULL, MSHLFLAGS_NORMAL);
-						trace("   arg=%d IDispatch --> %s", argno, php_win_err(ret));
+						php_error(E_WARNING, "   arg=%d IDispatch --> %s", argno, ret);
 					} else {
-						trace("   arg=%d IDispatch(NULL) - skip\n", argno);
+						php_error(E_WARNING, "   arg=%d IDispatch(NULL) - skip\n", argno);
 					}
 					break;
 
@@ -195,7 +201,7 @@ static HRESULT do_marshal_out(int stub, void *args[16], int *mdef, LPSTREAM stm)
 				case APHPT_UNK:
 					if (IFACE_PRESENT) {
 						ret = CoUnmarshalInterface(stm, IID_IUnknown, OUT_IFACE);
-						trace("   unmarshal arg=%d IUnknown --> %s", argno, php_win_err(ret));
+						php_error(E_WARNING, "   unmarshal arg=%d IUnknown --> %s", argno, ret);
 					} else {
 						trace("   unmarshal arg=%d IUnknown(NULL) - skip\n", argno);
 					}
@@ -203,11 +209,9 @@ static HRESULT do_marshal_out(int stub, void *args[16], int *mdef, LPSTREAM stm)
 
 				case APHPT_DISP:
 					if (IFACE_PRESENT) {
-						trace("   unmarshal dispatch: args[%d]=%p   *args[%d]=%p\n",
-								argno, args[argno], argno, args[argno] ? *(void**)args[argno] : NULL);
+						trace("   unmarshal dispatch: args[%d]=%p   *args[%d]=%p\n", argno, args[argno], argno, args[argno] ? *(void**)args[argno] : NULL);
 						ret = CoUnmarshalInterface(stm, IID_IDispatch, OUT_IFACE);
-						trace("   unmarshal arg=%d IDispatch --> %s:  args[%d]=%p *args[%d]=%p\n", argno, php_win_err(ret),
-								argno, args[argno], argno, args[argno] ? *(void**)args[argno] : NULL);
+						trace("   unmarshal arg=%d IDispatch --> %s:  args[%d]=%p *args[%d]=%p\n", argno, ret, argno, args[argno], argno, args[argno] ? *(void**)args[argno] : NULL);
 					} else {
 						trace("   unmarshal arg=%d IDispatch(NULL) - skip\n", argno);
 					}
@@ -311,7 +315,7 @@ HRESULT marshal_call(class TPHPScriptingEngine *engine, enum activephp_engine_fu
 	if (msg.instm)
 		msg.instm->Release();
 	
-	trace("marshall call to %s completed %s", func_names[func], php_win_err(ret));
+	php_error(E_WARNING, "marshall call to %s completed %s", func_names[func], ret);
 	
 	return ret;
 }

@@ -25,7 +25,7 @@
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
+#include <msinttypes/stdint.h>
 #include "php.h"
 #include "php_globals.h"
 #include "ext/standard/php_standard.h"
@@ -1042,7 +1042,7 @@ static void php_mssql_get_column_content_with_type(mssql_link *mssql_ptr,int off
 					}
 			
 					res_length = 19;
-					spprintf(&res_buf, 0, "%d-%02d-%02d %02d:%02d:%02d" , dateinfo.year, dateinfo.month, dateinfo.day, dateinfo.hour, dateinfo.minute, dateinfo.second);
+					spprintf(&res_buf, 0, "%d-%02d-%02d %02d:%02d:%02d" , &dateinfo); //spprintf(&res_buf, 0, "%d-%02d-%02d %02d:%02d:%02d" , dateinfo.year, dateinfo.month, dateinfo.day, dateinfo.hour, dateinfo.minute, dateinfo.second);
 				}
 		
 				ZVAL_STRINGL(result, res_buf, res_length, 0);
@@ -1122,7 +1122,7 @@ static void php_mssql_get_column_content_without_type(mssql_link *mssql_ptr,int 
 			}
 			
 			res_length = 19;
-			spprintf(&res_buf, 0, "%d-%02d-%02d %02d:%02d:%02d" , dateinfo.year, dateinfo.month, dateinfo.day, dateinfo.hour, dateinfo.minute, dateinfo.second);
+			spprintf(&res_buf, 0, "%d-%02d-%02d %02d:%02d:%02d" , &dateinfo); //spprintf(&res_buf, 0, "%d-%02d-%02d %02d:%02d:%02d" , dateinfo.year, dateinfo.month, dateinfo.day, dateinfo.hour, dateinfo.minute, dateinfo.second);
 		}
 
 		ZVAL_STRINGL(result, res_buf, res_length, 0);

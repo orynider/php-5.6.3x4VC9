@@ -59,7 +59,6 @@ class ComprDataIO
     void UnpWrite(byte *Addr,size_t Count);
     void EnableShowProgress(bool Show) {ShowProgress=Show;}
     void GetUnpackedData(byte **Data,size_t *Size);
-    size_t GetUnpackToMemorySizeLeft(void) { return UnpackToMemorySize; }
     void SetPackedSizeToRead(int64 Size) {UnpPackedSize=Size;}
     void SetTestMode(bool Mode) {TestMode=Mode;}
     void SetSkipUnpCRC(bool Skip) {SkipUnpCRC=Skip;}
@@ -70,7 +69,7 @@ class ComprDataIO
          const byte *Salt,const byte *InitV,uint Lg2Cnt,byte *HashKey,byte *PswCheck);
     void SetAV15Encryption();
     void SetCmt13Encryption();
-    void SetUnpackToMemory(byte *Addr,size_t Size); //changed by me
+    void SetUnpackToMemory(byte *Addr,uint Size);
     void SetCurrentCommand(wchar Cmd) {CurrentCommand=Cmd;}
 
 

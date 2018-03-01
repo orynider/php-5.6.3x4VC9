@@ -308,17 +308,17 @@ size_t Archive::ReadHeader15()
 
         if (FileBlock)
         {
+          *hd->FileName=0;
           if ((hd->Flags & LHD_UNICODE)!=0)
           {
             EncodeFileName NameCoder;
             size_t Length=strlen(FileName);
             Length++;
-            NameCoder.Decode(FileName,(byte *)FileName+Length,
-                             NameSize-Length,hd->FileName,
-                             ASIZE(hd->FileName));
+            if (ReadNameSize>Length)
+              NameCoder.Decode(FileName,(byte *)FileName+Length,
+                               ReadNameSize-Length,hd->FileName,
+                               ASIZE(hd->FileName));
           }
-          else
-            *hd->FileName=0;
 
           if (*hd->FileName==0)
             ArcCharToWide(FileName,hd->FileName,ASIZE(hd->FileName),ACTW_OEM);
@@ -1261,7 +1261,7 @@ void Archive::ConvertAttributes()
   if (mask == (mode_t) -1)
   {
     // umask call returns the current umask value. Argument (022) is not 
-    // important here.
+    // really important here.
     mask = umask(022);
 
     // Restore the original umask value, which was changed to 022 above.
@@ -1402,9 +1402,9 @@ bool Archive::ReadSubData(Array<byte> *UnpData,File *DestFile)
       SubDataIO.SetTestMode(true);
     else
     {
-    UnpData->Alloc((size_t)SubHead.UnpSize);
-    SubDataIO.SetUnpackToMemory(&(*UnpData)[0],(uint)SubHead.UnpSize);
-  }
+      UnpData->Alloc((size_t)SubHead.UnpSize);
+      SubDataIO.SetUnpackToMemory(&(*UnpData)[0],(uint)SubHead.UnpSize);
+    }
   }
   if (SubHead.Encrypted)
     if (Cmd->Password.IsSet())

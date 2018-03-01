@@ -986,8 +986,6 @@ void CommandData::OutHelp(RAR_EXIT ExitCode)
     MCHelpSwTA,MCHelpSwTB,MCHelpSwTN,MCHelpSwTO,MCHelpSwTS,MCHelpSwU,
     MCHelpSwVUnr,MCHelpSwVER,MCHelpSwVP,MCHelpSwX,MCHelpSwXa,MCHelpSwXal,
     MCHelpSwY
-    // RAR switches definition.
-    //removed in 3.9.7
 #endif
   };
 

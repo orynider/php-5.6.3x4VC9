@@ -1,0 +1,13 @@
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php_dom.lib and object Release_TS\php_dom.exp
+   Creating library Release_TS\php_xmlreader.lib and object Release_TS\php_xmlreader.exp
+php_xmlreader.obj : warning LNK4049: locally defined symbol _xmlFree imported
+EXT xmlreader build complete

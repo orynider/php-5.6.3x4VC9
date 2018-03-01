@@ -1,0 +1,419 @@
+	"cl.exe" /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /DHAVE_FT2BUILD_H=1 /I "ext\gd\libgd"  /DHAVE_GD_H=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include\libpng16"  /DHAVE_PNG_H=1 /DHAVE_ICONV_H=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include\X11"  /DHAVE_XPM_H=1 /DHAVE_T1LIB_H=1 /D HAVE_LIBT1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include\vpx"  /DHAVE_VP8_H=1 /D HAVE_LIBVPX /D HAVE_GD_WEBP /D COMPILE_DL_GD /D GD_EXPORTS=1 -Iext/gd/libgd  /D HAVE_GD_DYNAMIC_CTX_EX=1 /D HAVE_GD_BUNDLED=1  /D HAVE_GD_GD2  /D HAVE_GD_GIF_READ=1  /D HAVE_GD_GIF_CREATE=1  /D HAVE_GDIMAGECOLORRESOLVE=1  /D HAVE_GD_IMAGESETBRUSH=1  /D HAVE_GD_IMAGESETTILE=1 /D HAVE_GD_FONTCACHESHUTDOWN=1 /D HAVE_GD_FONTMUTEX=1 /D HAVE_LIBFREETYPE=1 /D HAVE_GD_JPG  /D HAVE_GD_PNG  /D HAVE_GD_STRINGFTEX=1  /D HAVE_GD_STRINGTTF=1  /D HAVE_GD_WBMP  /D HAVE_GD_XBM  /D HAVE_GD_XPM  /D HAVE_GD_FREETYPE=1  /D HAVE_LIBGD13=1  /D HAVE_LIBGD15=1  /D HAVE_LIBGD20=1  /D HAVE_LIBGD204=1 /D HAVE_LIBJPEG  /D HAVE_LIBPNG  /D HAVE_XPM  /D HAVE_COLORCLOSESTHWB  /D USE_GD_IMGSTRTTF  /D USE_GD_IOCTX /D MSWIN32 		  /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\gd\libgd\ /FdRelease_TS\ext\gd\libgd\ /FpRelease_TS\ext\gd\libgd\ /FRRelease_TS\ext\gd\libgd\ /c ext\gd\libgd\gd.c ext\gd\libgd\gd2copypal.c ext\gd\libgd\gd_arc.c ext\gd\libgd\gd_arc_f_buggy.c ext\gd\libgd\gd_color.c ext\gd\libgd\gd_crop.c ext\gd\libgd\gd_filter.c ext\gd\libgd\gd_gd.c ext\gd\libgd\gd_gd2.c ext\gd\libgd\gd_gif_in.c ext\gd\libgd\gd_gif_out.c ext\gd\libgd\gd_interpolation.c ext\gd\libgd\gd_io.c ext\gd\libgd\gd_io_dp.c ext\gd\libgd\gd_io_file.c ext\gd\libgd\gd_io_ss.c ext\gd\libgd\gd_jpeg.c ext\gd\libgd\gd_matrix.c ext\gd\libgd\gd_pixelate.c ext\gd\libgd\gd_png.c ext\gd\libgd\gd_rotate.c ext\gd\libgd\gd_security.c ext\gd\libgd\gd_ss.c ext\gd\libgd\gd_topal.c ext\gd\libgd\gd_transform.c ext\gd\libgd\gd_wbmp.c ext\gd\libgd\gd_webp.c ext\gd\libgd\gdcache.c ext\gd\libgd\gdfontg.c ext\gd\libgd\gdfontl.c ext\gd\libgd\gdfontmb.c ext\gd\libgd\gdfonts.c ext\gd\libgd\gdfontt.c ext\gd\libgd\gdft.c ext\gd\libgd\gdhelpers.c ext\gd\libgd\gdkanji.c ext\gd\libgd\gdtables.c ext\gd\libgd\gdxpm.c ext\gd\libgd\wbmp.c ext\gd\libgd\webpimg.c ext\gd\libgd\xbm.c
+gd.c
+gd2copypal.c
+gd_arc.c
+gd_arc_f_buggy.c
+gd_color.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+ext\gd\libgd\gd.c(978) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+ext\gd\libgd\gd.c(988) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+ext\gd\libgd\gd.c(1037) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+ext\gd\libgd\gd.c(1038) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+ext\gd\libgd\gd.c(1145) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+ext\gd\libgd\gd.c(1209) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+ext\gd\libgd\gd.c(1393) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+ext\gd\libgd\gd.c(1443) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+ext\gd\libgd\gd.c(2737) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_crop.c
+gd_filter.c
+ext\gd\libgd\gd_crop.c(246) : warning C4018: '>=' : signed/unsigned mismatch
+gd_gd.c
+gd_gd2.c
+gd_gif_in.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_gif_out.c
+gd_interpolation.c
+gd_io.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_io_dp.c
+ext\gd\libgd\gd_interpolation.c(2167) : warning C4018: '>=' : signed/unsigned mismatch
+ext\gd\libgd\gd_interpolation.c(2167) : warning C4018: '>=' : signed/unsigned mismatch
+ext\gd\libgd\gd_interpolation.c(2169) : warning C4018: '>=' : signed/unsigned mismatch
+ext\gd\libgd\gd_interpolation.c(2169) : warning C4018: '>=' : signed/unsigned mismatch
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_io_file.c
+gd_io_ss.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_jpeg.c
+gd_matrix.c
+gd_pixelate.c
+gd_png.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_rotate.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_security.c
+gd_ss.c
+gd_topal.c
+gd_transform.c
+gd_wbmp.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gd_webp.c
+gdcache.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gdfontg.c
+gdfontl.c
+gdfontmb.c
+gdfonts.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+gdfontt.c
+gdft.c
+gdhelpers.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+ext\gd\libgd\gdft.c(640) : warning C4018: '<' : signed/unsigned mismatch
+ext\gd\libgd\gdft.c(649) : warning C4018: '<' : signed/unsigned mismatch
+ext\gd\libgd\gdft.c(697) : warning C4018: '<' : signed/unsigned mismatch
+ext\gd\libgd\gdft.c(711) : warning C4018: '<' : signed/unsigned mismatch
+gdkanji.c
+gdtables.c
+gdxpm.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+ext\gd\libgd\gdxpm.c(126) : warning C4018: '<' : signed/unsigned mismatch
+ext\gd\libgd\gdxpm.c(127) : warning C4018: '<' : signed/unsigned mismatch
+wbmp.c
+webpimg.c
+xbm.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_xmlreader.obj : warning LNK4217: locally defined symbol _php_dom_create_object imported in function _zim_xmlreader_expand
+php_xmlreader.obj : warning LNK4049: locally defined symbol _dom_node_class_entry imported
+libiconv_a.lib(iconv.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+   Creating library Release_TS\php_gd2.lib and object Release_TS\php_gd2.exp
+Generating code
+c:\php-sdk\libiconv\lib\tcvn.h(105) : warning C4701: potentially uninitialized local variable 'k' used
+c:\php-sdk\libiconv\lib\cp1258.h(100) : warning C4701: potentially uninitialized local variable 'k' used
+c:\php-sdk\libiconv\lib\utf7.h(347) : warning C4701: potentially uninitialized local variable 'c' used
+c:\php-sdk\libiconv\lib\utf7.h(261) : warning C4701: potentially uninitialized local variable 'c' used
+c:\php-sdk\libiconv\lib\utf7.h(301) : warning C4701: potentially uninitialized local variable 'c' used
+c:\php-sdk\libiconv\lib\iso2022_cn.h(158) : warning C4701: potentially uninitialized local variable 'ret' used
+c:\php-sdk\libiconv\lib\iso2022_cnext.h(276) : warning C4701: potentially uninitialized local variable 'ret' used
+Finished generating code
+libpng_a.lib(zutil.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(uncompr.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(trees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(inftrees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(inflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(deflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(crc32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(compress.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+libpng_a.lib(adler32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libpng_a.lib' or at 'C:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\zlib.pdb'; linking object as if no debug info
+EXT gd build complete

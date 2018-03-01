@@ -9,11 +9,6 @@ CmdExtract::CmdExtract(CommandData *Cmd)
   *DestFileName=0;
 
   TotalFileCount=0;
-
-  //next two lines added by me
-  Buffer = NULL;
-  BufferSize = 0;
-
   Unp=new Unpack(&DataIO);
 #ifdef RAR_SMP
   Unp->SetThreads(Cmd->Threads);
@@ -305,8 +300,8 @@ bool CmdExtract::ExtractCurrentFile(Archive &Arc,size_t HeaderSize,bool &Repeat)
     wcsncpyz(Cmd->ArcPath,MatchedArg,ASIZE(Cmd->ArcPath));
     *PointToName(Cmd->ArcPath)=0;
     if (IsWildcard(Cmd->ArcPath)) // Cannot correctly process path*\* masks here.
-    *Cmd->ArcPath=0;
-    }
+      *Cmd->ArcPath=0;
+  }
 #endif
   if (MatchFound && !EqualNames)
     AllMatchesExact=false;
@@ -434,18 +429,18 @@ bool CmdExtract::ExtractCurrentFile(Archive &Arc,size_t HeaderSize,bool &Repeat)
 
     while (true) // Repeat password prompt in case of wrong password here.
     {
-    if (Arc.FileHead.Encrypted)
-    {
+      if (Arc.FileHead.Encrypted)
+      {
         // Stop archive extracting if user cancelled a password prompt.
 #ifdef RARDLL
-      if (!ExtrDllGetPassword())
+        if (!ExtrDllGetPassword())
         {
           Cmd->DllError=ERAR_MISSING_PASSWORD;
-        return false;
+          return false;
         }
 #else
         if (!ExtrGetPassword(Arc,ArcFileName))
-      {
+        {
           PasswordCancelled=true;
           return false;
         }
@@ -456,11 +451,13 @@ bool CmdExtract::ExtractCurrentFile(Archive &Arc,size_t HeaderSize,bool &Repeat)
         // and cancelled passwords differently sometimes.
         if (!Cmd->Password.IsSet())
         {
-        ErrHandler.SetErrorCode(RARX_WARNING);
-        Cmd->DllError=ERAR_MISSING_PASSWORD;
-        ExtrFile=false;
+          ErrHandler.SetErrorCode(RARX_WARNING);
+#ifdef RARDLL
+          Cmd->DllError=ERAR_MISSING_PASSWORD;
+#endif
+          ExtrFile=false;
+        }
       }
-    }
 
 
       // Set a password before creating the file, so we can skip creating
@@ -481,14 +478,14 @@ bool CmdExtract::ExtractCurrentFile(Archive &Arc,size_t HeaderSize,bool &Repeat)
       if (Arc.FileHead.Encrypted && Arc.FileHead.UsePswCheck &&
           memcmp(Arc.FileHead.PswCheck,PswCheck,SIZE_PSWCHECK)!=0 &&
           !Arc.BrokenHeader)
-    {
+      {
         uiMsg(UIWAIT_BADPSW,ArcFileName);
 
         if (!PasswordAll) // If entered manually and not through -p<pwd>.
         {
           Cmd->Password.Clean();
           continue; // Request a password again.
-    }
+        }
 #ifdef RARDLL
         // If we already have ERAR_EOPEN as result of missing volume,
         // we should not replace it with less precise ERAR_BAD_PASSWORD.
@@ -708,11 +705,11 @@ bool CmdExtract::ExtractCurrentFile(Archive &Arc,size_t HeaderSize,bool &Repeat)
         }
         else
         {
-            if (Arc.FileHead.Encrypted && (!Arc.FileHead.UsePswCheck || 
-                Arc.BrokenHeader) && !AnySolidDataUnpackedWell)
-              uiMsg(UIERROR_CHECKSUMENC,Arc.FileName,ArcFileName);
-            else
-              uiMsg(UIERROR_CHECKSUM,Arc.FileName,ArcFileName);
+          if (Arc.FileHead.Encrypted && (!Arc.FileHead.UsePswCheck || 
+              Arc.BrokenHeader) && !AnySolidDataUnpackedWell)
+            uiMsg(UIERROR_CHECKSUMENC,Arc.FileName,ArcFileName);
+          else
+            uiMsg(UIERROR_CHECKSUM,Arc.FileName,ArcFileName);
           BrokenFile=true;
           ErrHandler.SetErrorCode(RARX_CRC);
 #ifdef RARDLL
@@ -791,7 +788,6 @@ void CmdExtract::UnstoreFile(ComprDataIO &DataIO,int64 DestUnpSize)
     uint Code=DataIO.UnpRead(&Buffer[0],Buffer.Size());
     if (Code==0 || (int)Code==-1)
       break;
-	/* basically Code = MIN(Code, (uint) DestUnpSize); */
     Code=Code<DestUnpSize ? Code:(uint)DestUnpSize;
     DataIO.UnpWrite(&Buffer[0],Code);
     if (DestUnpSize>=0)
@@ -839,14 +835,14 @@ void CmdExtract::ExtrPrepareName(Archive &Arc,const wchar *ArcFileName,wchar *De
   if (*Cmd->ExtrPath!=0)
   {
      wchar LastChar=*PointToLastChar(Cmd->ExtrPath);
-  // We need IsPathDiv check here to correctly handle Unix forward slash
-  // in the end of destination path in Windows: rar x arc dest/
+    // We need IsPathDiv check here to correctly handle Unix forward slash
+    // in the end of destination path in Windows: rar x arc dest/
     // IsDriveDiv is needed for current drive dir: rar x arc d:
     if (!IsPathDiv(LastChar) && !IsDriveDiv(LastChar))
-  {
-    // Destination path can be without trailing slash if it come from GUI shell.
-    AddEndSlash(DestName,DestSize);
-  }
+    {
+      // Destination path can be without trailing slash if it come from GUI shell.
+      AddEndSlash(DestName,DestSize);
+    }
   }
 
 #ifndef SFX_MODULE
@@ -874,15 +870,15 @@ void CmdExtract::ExtrPrepareName(Archive &Arc,const wchar *ArcFileName,wchar *De
         (IsPathDiv(Cmd->ArcPath[ArcPathLength-1]) || 
          IsPathDiv(ArcFileName[ArcPathLength]) || ArcFileName[ArcPathLength]==0))
     {
-    ArcFileName+=Min(ArcPathLength,NameLength);
+      ArcFileName+=Min(ArcPathLength,NameLength);
       while (IsPathDiv(*ArcFileName))
-      ArcFileName++;
-    if (*ArcFileName==0) // Excessive -ap switch.
-    {
-      *DestName=0;
-      return;
+        ArcFileName++;
+      if (*ArcFileName==0) // Excessive -ap switch.
+      {
+        *DestName=0;
+        return;
+      }
     }
-  }
   }
 #endif
 

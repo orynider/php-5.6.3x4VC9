@@ -1,434 +1,367 @@
-<?xml version="1.0"?>
-<package packagerversion="1.4.11" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-http://pear.php.net/dtd/tasks-1.0.xsd
-http://pear.php.net/dtd/package-2.0
-http://pear.php.net/dtd/package-2.0.xsd">
- <name>redis</name>
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>igbinary</name>
  <channel>pecl.php.net</channel>
- <summary>PHP extension for interfacing with Redis</summary>
- <description>
-   This extension provides an API for communicating with Redis servers.
- </description>
+ <summary>igbinary extension</summary>
+ <description>Igbinary is a drop in replacement for the standard php serializer. Instead of
+	time and space consuming textual representation, igbinary stores php data
+	structures in a compact binary form. Savings are significant when using
+	memcached or similar memory based storages for serialized data.</description>
  <lead>
-  <name>Nicolas Favre-Felix</name>
-  <user>nff</user>
-  <email>n.favrefelix@gmail.com</email>
+  <name>Oleg Grenrus</name>
+  <user>phadej</user>
+  <email>oleg.grenrus@iki.fi</email>
   <active>yes</active>
  </lead>
  <lead>
-  <name>Michael Grunder</name>
-  <user>mgrunder</user>
-  <email>michael.grunder@gmail.com</email>
+  <name>Pierre Joye</name>
+  <user>pajoye</user>
+  <email>pierre@php.net</email>
   <active>yes</active>
  </lead>
  <lead>
-  <name>Pavlo Yatsukhnenko</name>
-  <user>yatsukhnenko</user>
-  <email>p.yatsukhnenko@gmail.com</email>
+  <name>Teddy Grenman</name>
+  <user>tricky</user>
+  <email>teddy.pecl@luuseri.com</email>
   <active>yes</active>
  </lead>
- <date>2017-09-27</date>
+ <lead>
+  <name>Tyson Andre</name>
+  <user>tandre</user>
+  <email>tysonandre775@hotmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2017-11-04</date>
+ <time>16:00:00</time>
  <version>
-  <release>3.1.4</release>
-  <api>3.1.4</api>
+  <release>2.0.5</release>
+  <api>1.1.1</api>
  </version>
  <stability>
   <release>stable</release>
   <api>stable</api>
  </stability>
- <license uri="http://www.php.net/license">PHP</license>
+ <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
  <notes>
-    phpredis 3.1.4
-
-    The primary new feature phpredis 3.1.4 is the ability to send MULTI .. EXEC blocks in pipeline mode.  There are
-    also many bugfixes and minor improvements to the api, listed below:
-
-    * Allow mixing MULTI and PIPELINE modes (experimental)!  [5874b0] (Pavlo Yatsukhnenko)
-
-    * Added integration for coverty static analysis and fixed several warnings 
-      [faac8b0, eff7398, 4766c25, 0438ab4, 1e0b065, 733732a, 26eeda5, 735025, 42f1c9, af71d4] (Pavlo Yatsukhnenko)
-    * Fixed link to redis cluster documentation [3b0b06] (Pavlo Yatsukhnenko)
-    * Remove unused PHP_RINIT and PHP_RSHUTDOWN functions [c760bf] (Pavlo Yatsukhnenko)
-    * Removed duplicate HGET in redis array hash table, formatting [d0b9c5] (Pavlo Yatsukhnenko)
-    * Treat NULL bulk as success for session read [659450] (Pavlo Yatsukhnenko)
-    * Refactor redis_send_discard [ea15ce] (Pavlo Yatsukhnenko)
-    * Updated runtime exception handling [8dcaa4, 7c1407] (Pavlo Yatsukhnenko)
-    * Added a github issue template [61aba9] (Pavlo Yatsukhnenko)
-    * Initialize gc member of zend_string [37f569) (Pavlo Yatsukhnenko)
-    * Fix valgrind warnings [471ce07, 1ab89e1, b624a8b] (Pavlo Yatsukhnenko)
-    * Fix php5/php7 compatibility layer [1ab89e, 4e3225] (Pavlo Yatsukhnenko)
-    * Fix typo in README.markdown [e47e44] (Mark Shehata)
-    * Improve redis array rehash [577a91] (Pavlo Yatsukhnenko)
-    * Change redis array pure_cmds from zval to hashtable [a56ed7] (Pavlo Yatsukhnenko)
-    * Don't try to set TCP_NODELAY on a unix socket and don't warn on multiple
-      calls to pipeline [d11798, 77aeba] (Michael Grunder)
-    * Use zend_string rather than char* for various context fields (err, prefix, etc) [2bf7b2] (Pavlo Yatsukhnenko)
-    * Various other library fixes [142b51, 4452f6, e672f4, 658ee3, c9df77, 4a0a46] (Pavlo Yatsukhnenko)
+* Same as 2.0.5RC1 (no bugs were reported in that release candidate)
  </notes>
  <contents>
   <dir name="/">
-   <file role='doc' name='COPYING'/>
-   <file role='doc' name='CREDITS'/>
-   <file role='doc' name='README.markdown'/>
-   <file role='doc' name='arrays.markdown'/>
-   <file role='doc' name='cluster.markdown'/>
-   <file role='src' name='cluster_library.c'/>
-   <file role='src' name='cluster_library.h'/>
-   <file role='src' name='common.h'/>
-   <file role='src' name='config.m4'/>
-   <file role='src' name='config.w32'/>
-   <file role='src' name='crc16.h'/>
-   <file role='src' name='library.c'/>
-   <file role='src' name='library.h'/>
-   <file role='src' name='php_redis.h'/>
-   <file role='src' name='redis.c'/>
-   <file role='src' name='redis_array.c'/>
-   <file role='src' name='redis_array.h'/>
-   <file role='src' name='redis_array_impl.c'/>
-   <file role='src' name='redis_array_impl.h'/>
-   <file role='src' name='redis_cluster.c'/>
-   <file role='src' name='redis_cluster.h'/>
-   <file role='src' name='redis_commands.c'/>
-   <file role='src' name='redis_commands.h'/>
-   <file role='src' name='redis_session.c'/>
-   <file role='src' name='redis_session.h'/>
-   <dir name='liblzf'>
-     <file role='doc' name='LICENSE'/>
-     <file role='doc' name='README'/>
-     <file role='src' name='lzf.h'/>
-     <file role='src' name='lzf_c.c'/>
-     <file role='src' name='lzf_d.c'/>
-   </dir> <!-- liblzf -->
-   <dir name='tests'>
-     <file role='test' name='RedisArrayTest.php'/>
-     <file role='test' name='RedisClusterTest.php'/>
-     <file role='test' name='RedisTest.php'/>
-     <file role='test' name='TestRedis.php'/>
-     <file role='test' name='TestSuite.php'/>
-     <file role='test' name='make-cluster.sh'/>
-     <file role='test' name='mkring.sh'/>
-   </dir> <!-- tests -->
-  </dir> <!-- / -->
+   <file name="config.m4" role="src" />
+   <file name="config.w32" role="src" />
+   <file name="igbinary.h" role="src" />
+   <file name="php_igbinary.h" role="src" />
+   <file name="src/php5/hash.h" role="src" />
+   <file name="src/php5/hash_ptr.h" role="src" />
+   <file name="src/php5/hash_si.c" role="src" />
+   <file name="src/php5/hash_si_ptr.c" role="src" />
+   <file name="src/php5/igbinary.c" role="src" />
+   <file name="src/php5/igbinary.h" role="src" />
+   <file name="src/php5/igbinary_macros.h" role="src" />
+   <file name="src/php5/php_igbinary.h" role="src" />
+   <file name="src/php5/ig_win32.h" role="src" />
+   <file name="src/php5/apc_serializer.h" role="src" />
+   <file name="src/php7/hash.h" role="src" />
+   <file name="src/php7/hash_ptr.h" role="src" />
+   <file name="src/php7/hash_si.c" role="src" />
+   <file name="src/php7/hash_si_ptr.c" role="src" />
+   <file name="src/php7/igbinary.c" role="src" />
+   <file name="src/php7/igbinary.h" role="src" />
+   <file name="src/php7/php_igbinary.h" role="src" />
+   <file name="src/php7/ig_win32.h" role="src" />
+   <file name="igbinary.php" role="doc" />
+   <file name="igbinary.php.ini" role="doc" />
+   <file name="tags.sh" role="doc" />
+   <file name="igbinary.spec" role="doc" />
+   <file name="COPYING" role="doc" />
+   <file name="CREDITS" role="doc" />
+   <file name="README.md" role="doc" />
+   <file name="NEWS" role="doc" />
+   <dir name="tests">
+    <file name="igbinary_001.phpt" role="test" />
+    <file name="igbinary_002.phpt" role="test" />
+    <file name="igbinary_003.phpt" role="test" />
+    <file name="igbinary_004.phpt" role="test" />
+    <file name="igbinary_005.phpt" role="test" />
+    <file name="igbinary_006.phpt" role="test" />
+    <file name="igbinary_007.phpt" role="test" />
+    <file name="igbinary_008.phpt" role="test" />
+    <file name="igbinary_009.phpt" role="test" />
+    <file name="igbinary_009b.phpt" role="test" />
+    <file name="igbinary_010.phpt" role="test" />
+    <file name="igbinary_012.phpt" role="test" />
+    <file name="igbinary_013.phpt" role="test" />
+    <file name="igbinary_014.phpt" role="test" />
+    <file name="igbinary_015.phpt" role="test" />
+    <file name="igbinary_015b.phpt" role="test" />
+    <file name="igbinary_015c.phpt" role="test" />
+    <file name="igbinary_016.phpt" role="test" />
+    <file name="igbinary_017.phpt" role="test" />
+    <file name="igbinary_018.phpt" role="test" />
+    <file name="igbinary_019.phpt" role="test" />
+    <file name="igbinary_020.phpt" role="test" />
+    <file name="igbinary_021.phpt" role="test" />
+    <file name="igbinary_022.phpt" role="test" />
+    <file name="igbinary_023.phpt" role="test" />
+    <file name="igbinary_024.phpt" role="test" />
+    <file name="igbinary_025.phpt" role="test" />
+    <file name="igbinary_026.phpt" role="test" />
+    <file name="igbinary_026b.phpt" role="test" />
+    <file name="igbinary_027.phpt" role="test" />
+    <file name="igbinary_028.phpt" role="test" />
+    <file name="igbinary_029.phpt" role="test" />
+    <file name="igbinary_030_php72.phpt" role="test" />
+    <file name="igbinary_030_php7.phpt" role="test" />
+    <file name="igbinary_030.phpt" role="test" />
+    <file name="igbinary_031.phpt" role="test" />
+    <file name="igbinary_032.phpt" role="test" />
+    <file name="igbinary_033.phpt" role="test" />
+    <file name="igbinary_034.phpt" role="test" />
+    <file name="igbinary_040.phpt" role="test" />
+    <file name="igbinary_041.phpt" role="test" />
+    <file name="igbinary_042.phpt" role="test" />
+    <file name="igbinary_043.phpt" role="test" />
+    <file name="igbinary_044.phpt" role="test" />
+    <file name="igbinary_045.phpt" role="test" />
+    <file name="igbinary_045b.phpt" role="test" />
+    <file name="igbinary_045c.phpt" role="test" />
+    <file name="igbinary_046.phpt" role="test" />
+    <file name="igbinary_046b.phpt" role="test" />
+    <file name="igbinary_046c.phpt" role="test" />
+    <file name="igbinary_046d.phpt" role="test" />
+    <file name="igbinary_047.phpt" role="test" />
+    <file name="igbinary_048.phpt" role="test" />
+    <file name="igbinary_048b.phpt" role="test" />
+    <file name="igbinary_049.phpt" role="test" />
+    <file name="igbinary_049b.phpt" role="test" />
+    <file name="igbinary_050.phpt" role="test" />
+    <file name="igbinary_051.phpt" role="test" />
+    <file name="igbinary_052.phpt" role="test" />
+    <file name="igbinary_053.phpt" role="test" />
+    <file name="igbinary_054.phpt" role="test" />
+    <file name="igbinary_055.phpt" role="test" />
+    <file name="igbinary_057.phpt" role="test" />
+    <file name="igbinary_058.phpt" role="test" />
+    <file name="igbinary_058b.phpt" role="test" />
+    <file name="igbinary_059.phpt" role="test" />
+    <file name="igbinary_060.phpt" role="test" />
+    <file name="igbinary_061.phpt" role="test" />
+    <file name="igbinary_062.phpt" role="test" />
+    <file name="igbinary_063_php72.phpt" role="test" />
+    <file name="igbinary_063_php7.phpt" role="test" />
+    <file name="igbinary_063.phpt" role="test" />
+    <file name="igbinary_064.phpt" role="test" />
+    <file name="igbinary_bug54662.phpt" role="test" />
+    <file name="igbinary_bug72134.phpt" role="test" />
+    <file name="igbinary_unserialize_v1_compatible.phpt" role="test" />
+   </dir>
+  </dir>
  </contents>
  <dependencies>
   <required>
    <php>
-    <min>5.3.0</min>
-    <max>7.9.99</max>
+    <min>5.2.0</min>
    </php>
    <pearinstaller>
     <min>1.4.0b1</min>
    </pearinstaller>
   </required>
  </dependencies>
- <providesextension>redis</providesextension>
- <extsrcrelease>
-  <configureoption name="enable-redis-igbinary" prompt="enable igbinary serializer support?" default="no"/>
-  <configureoption name="enable-redis-lzf" prompt="enable lzf compression support?" default="no"/>
- </extsrcrelease>
+ <providesextension>igbinary</providesextension>
+ <extsrcrelease />
  <changelog>
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>3.1.4</release><api>3.1.4</api></version>
-   <date>2017-09-27</date>
+  <release>
+   <date>2017-11-04</date>
+   <time>16:00:00</time>
+   <version>
+    <release>2.0.5</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
    <notes>
-    phpredis 3.1.4
-
-    The primary new feature phpredis 3.1.4 is the ability to send MULTI .. EXEC blocks in pipeline mode.  There are
-    also many bugfixes and minor improvements to the api, listed below:
-
-    * Allow mixing MULTI and PIPELINE modes (experimental)!  [5874b0] (Pavlo Yatsukhnenko)
-
-    * Added integration for coverty static analysis and fixed several warnings 
-      [faac8b0, eff7398, 4766c25, 0438ab4, 1e0b065, 733732a, 26eeda5, 735025, 42f1c9, af71d4] (Pavlo Yatsukhnenko)
-    * Added arginfo inrospection structures [81a0303, d5609fc, e5660be, 3c60e1f, 50dcb15, 6c2c6fa, 
-      212e323, e23be2c, 682593d, f8de702, 4ef3acd, f116be9, 5c111dd, 9caa029, 0d69650, 6859828, 024e593, 
-      3643ab6, f576fab, 122d41f, a09d0e6] (Tyson Andre, Pavlo Yatsukhnenko)
-    * Fixed link to redis cluster documentation [3b0b06] (Pavlo Yatsukhnenko)
-    * Remove unused PHP_RINIT and PHP_RSHUTDOWN functions [c760bf] (Pavlo Yatsukhnenko)
-    * Removed duplicate HGET in redis array hash table, formatting [d0b9c5] (Pavlo Yatsukhnenko)
-    * Treat NULL bulk as success for session read [659450] (Pavlo Yatsukhnenko)
-    * Refactor redis_send_discard [ea15ce] (Pavlo Yatsukhnenko)
-    * Updated runtime exception handling [8dcaa4, 7c1407] (Pavlo Yatsukhnenko)
-    * Added a github issue template [61aba9] (Pavlo Yatsukhnenko)
-    * Initialize gc member of zend_string [37f569) (Pavlo Yatsukhnenko)
-    * Fix valgrind warnings [471ce07, 1ab89e1, b624a8b] (Pavlo Yatsukhnenko)
-    * Fix php5/php7 compatibility layer [1ab89e, 4e3225] (Pavlo Yatsukhnenko)
-    * Fix typo in README.markdown [e47e44] (Mark Shehata)
-    * Improve redis array rehash [577a91] (Pavlo Yatsukhnenko)
-    * Change redis array pure_cmds from zval to hashtable [a56ed7] (Pavlo Yatsukhnenko)
-    * Don't try to set TCP_NODELAY on a unix socket and don't warn on multiple
-      calls to pipeline [d11798, 77aeba] (Michael Grunder)
-    * Use zend_string rather than char* for various context fields (err, prefix, etc) [2bf7b2] (Pavlo Yatsukhnenko)
-    * Various other library fixes [142b51, 4452f6, e672f4, 658ee3, c9df77, 4a0a46] (Pavlo Yatsukhnenko)
-   </notes>
-   </release>
-
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>3.1.3</release><api>3.1.3</api></version>
-   <date>2017-07-15</date>
-   <notes>
-    phpredis 3.1.3
-
-    This release contains two big improvements:
-      1. Adding a new printf like command construction function with additionaly format specifiers specific to phpredis.
-      2. Implementation of custom objects for Redis and RedisArray wich eliminates double hash lookup.
-    Also many small improvements and bug fixes were made.
-
-    * A printf like method to construct a Redis RESP command [a4a0ed, d75081, bdd287, 0eaeae, b3d00d] (Michael Grunder)
-    * Use custom objects instead of zend_list for storing Redis/RedisArray [a765f8, 8fa85a] (Pavlo Yatsukhnenko)
-    * Make sure redisCluster members are all initialized on (re)creation [162d88] (Michael Grunder)
-    * Fix Null Bulk String response parsing in cluster library [058753] (Alberto Fernández)
-    * Add hStrLen command [c52077, fb88e1] (Pavlo Yatsukhnenko)
-    * Add optional COUNT argument to sPop [d2e203] (Michael Grunder)
-    * Allow sInterStore to take one arg [26aec4, 4cd06b] (Michael Grunder)
-    * Allow MIGRATE to accept multiple keys [9aa3db] (Michael Grunder)
-    * Allow using numeric string in zInter command [ba0070] (Pavlo Yatsukhnenko)
-    * Use crc32 table from PHP distro [f81694] (Pavlo Yatsukhnenko)
-    * Use ZVAL_DEREF macros for dereference input variables [ad4596] (Pavlo Yatsukhnenko)
-    * Add configureoption tag to package.xml [750963] (Pavlo Yatsukhnenko)
-    * Fix read_timeout [18149e, b56dc4] (Pavlo Yatsukhnenko)
-    * Fix zval_get_string impl for PHP5 [4e56ba] (Pavlo Yatsukhnenko)
-    * Fix Redis/RedisArray segfaults [be5c1f, 635c3a, 1f8dde, 43e1e0] (Pavlo Yatsukhnenko)
-    * Fix memory leak and potential segfault [aa6ff7, 88efaa] (Michael Grunder)
-    * Throw exception for all non recoverable errors [e37239] (Pavlo Yatsukhnenko)
-    * Assume "NULL bulk" reply as success (empty session data) [4a81e1] (Pavlo Yatsukhnenko)
-    * Increase read buffers size [520e06] (Pavlo Yatsukhnenko)
-    * Better documentation [f0c25a, c5991f, 9ec9ae] (Michael Grunder)
-    * Better TravisCI integration [e37c08] (Pavlo Yatsukhnenko)
-    * Refactoring (Pavlo Yatsukhnenko, Michael Grunder)
-   </notes>
-   </release>
-
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>3.1.2</release><api>3.1.2</api></version>
-   <date>2017-03-16</date>
-   <notes>
-   phpredis 3.1.2
-
-   * RedisArray segfault fix [564ce3] (Pavlo Yatsukhnenko)
-   * Small memory leak fix [645888b] (Mike Grunder)
-   * Segfault fix when recreating RedisCluster objects [abf7d4] (Michael Grunder)
-   * Fix for RedisCluster bulk response parsing [4121c4] (Alberto Fernández)
-   * Re allow single array for sInterStore [6ef0c2, d01966] (Michael Grunder)
-   * Better TravisCI integration [4fd2f6] (Pavlo Yatsukhnenko)
-   </notes>
-   </release>
-
-   <release>
-   <stability><release>beta</release><api>beta</api></stability>
-   <version><release>3.1.1RC2</release><api>3.1.1RC2</api></version>
-   <date>2017-01-16</date>
-   <notes>
-
-    phpredis 3.1.1RC2
-
-    * Additional test updates for 32 bit systems (@remicollet)
-    * ARM rounding issue in tests (@remicollet)
-    * Use new zend_list_close instead of zend_list_delete when reconnecting.
-    * Refactoring of redis_boolean_response_impl and redis_sock_write (@yatsukhnenko)
-
-    phpredis 3.1.1.RC1
-
-    This release contains mostly fixes for issues introduced when merging
-    the php 5 and 7 codebase into a single branch.
-
-    * Fixed a segfault in igbinary serialization (@yatsukhnenko)
-    * Restore 2.2.8/3.0.0 functionality to distinguish between an error
-      and simply empty session data. (@remicollet)
-    * Fix double to string conversion function (@yatsukhnenko)
-    * Use PHP_FE_END definition when available (@remicollet)
-    * Fixed various 'static function declared but not used' warnings
-    * Fixes to various calls which were typecasting pointers to the
-      wrong size. (@remicollet)
-
-    * Added php session unit test (@yatsukhnenko)
-    * Added explicit module dependancy for igbinary (@remicollet)
-    * Added phpinfo serialization information (@remicollet)
-   </notes>
-   </release>
-
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>3.1.0</release><api>3.1.0</api></version>
-   <date>2016-12-14</date>
-   <notes>
-    phpredis 3.1.0
-
-    In this version of phpredis codebase was unified to work with all versions of php \o/
-    Also many bug fixes and some improvements has been made.
-
-    --- Improvements ---
-
-    * Support the client to Redis Cluster just having one master (andyli) [892e5646]
-    * Allow both long and strings that are longs for zrangebyscore offset/limit (Michael Grunder) [bdcdd2aa]
-    * Process NX|XX, CH and INCR options in zAdd command (Pavlo Yatsukhnenko) [71c9f7c8]
-
-    --- Fixes ---
-
-    * Fix incrby/decrby for large integers (Michael Grunder) [3a12758a]
-    * Use static declarations for spl_ce_RuntimeException decl (Jeremy Mikola) [a9857d69]
-    * Fixed method call problem causes session handler to display two times (ZiHang Gao) [24f86c49]
-    * psetex method returns '+OK' on success, not true (sitri@ndxbn) [afcd8445]
-    * Fix integer overflow for long (>32bit) increments in hIncrBy (iyesin) [58e1d799]
-    * Move zend_object handler to the end (Michael Grunder) [34107966]
-    * Using setOption on redis array causes immediate connection (Pavlo Yatsukhnenko) [f1a85b38]
-   </notes>
-   </release>
-
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>2.2.8</release><api>2.2.8</api></version>
-   <date>2016-06-02</date>
-   <notes>
-    phpredis 2.2.8
-
-    The main improvement in this version of phpredis is support for Redis
-    Cluster.  This version of phpredis is intended for versions of php older
-    than 7.
-
-    In addition there have been many bug fixes and improvements to non cluster
-    related commands, which are listed below.
-
-    I've attempted to include everyone who contribued to the project in each fix
-    description and have included names or github user ids.
-
-    Thanks to everyone for submitting bug reports and pull requests.  A special
-    thanks to Remi Collet for helping with any and all packaging related issues
-
-    \o/
-
-    --- Improvements ---
-
-    * Added randomization to our seed nodes to balance which instance is used
-      to map the keyspace (Vitaliy Stepanyuk) [32eb1c5f]
-    * Added support for IPv6 addresses
-
-    --- Fixes ---
-
-    * PHP liveness checking workaround (Shafreeck Sea) [c18d58b9]
-    * Various documentation and code formatting and style fixes (ares333,
-      sanpili, Bryan Nelson, linfangrong, Romero Malaquias, Viktor Szépe)
-    * Fix scan reply processing to use long instead of int to avoid overflow
-      (mixiaojiong).
-    * Fix potential segfault in Redis Cluster session storage (Sergei Lomakov)
-      [cc15aae]
-    * Fixed memory leak in discard function [17b1f427]
-    * Sanity check for igbinary unserialization (Maurus Cuelenaere) [3266b222,
-      5528297a]
-    * Fix segfault occuring from unclosed socket connection for Redis Cluster
-      (CatKang) [04196aee]
-    * Case insensitive zRangeByScore options
-    * Fixed dreaded size_t vs long long compiler warning
-   </notes>
-   </release>
-
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>2.2.7</release><api>2.2.7</api></version>
-   <date>2015-03-03</date>
-   <notes>
-      phpredis 2.2.7
-
-       -- Improvements ---
-
-       * Implemented PFADD, PFMERGE, and PFCOUNT command handling
-       * Implemented ZRANGEBYLEX command (holding off on ZREVRANGEBYLEX
-         as that won't be out until 3.0)
-       * Implemented getMode() so clients can detect whether we're in
-         ATOMIC/MULTI/PIPELINE mode.
-       * Implemented rawCommand() so clients can send arbitrary things to
-         the redis server
-       * Implemented DEBUG OBJECT (@michael-grunder, @isage)
-       * Added/abide by connect timeout for RedisArray
-       * Select to the last selected DB when phpredis reconnects
-
-       -- Fixes ---
-
-       * Fix a possible invalid free in _serialize
-       * Added SAVE and BGSAVE to "distributable" commands for RedisArray
-       * @welting -- Fixed invalid "argc" calculation re HLL commands
-       * Allow clients to break out of the subscribe loop and return context.
-       * Fixes a memory leak in SCAN when OPT_SCAN_RETRY id.
-       * @remicollet -- Fix possible segfault when igbinary is enabled.
-       * Add a couple of cases where we throw on an error (LOADING/NOAUTH/MASTERDOWN)
-       * Fix several issues with serialization NARY
-       * @itcom -- Fix missing TSRMLS_CC and a TSRMLS_DC/TSRMLS_CC typo
-   </notes>
-   </release>
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>2.2.5</release><api>2.2.5</api></version>
-   <date>2014-03-15</date>
-   <notes>
-    phpredis 2.2.5
-
-    This is a minor release with several bug fixes as well as additions to support
-    new commands that have been introduced to Redis since our last release.
-
-    A special thanks to everyone who helps the project by commenting on issues and
-    submitting pull requests!  :)
-
-    [NEW] Support for the BITPOS command
-    [NEW] Connection timeout option for RedisArray (@MikeToString)
-    [NEW] A _serialize method, to complement our existing _unserialize method
-    [NEW] Support for the PUBSUB command
-    [NEW] Support for SCAN, SSCAN, HSCAN, and ZSCAN
-    [NEW] Support for the WAIT command
-
-    [FIX] Handle the COPY and REPLACE arguments for the MIGRATE command
-
-    [DOC] Fix syntax error in documentation for the SET command (@mithunsatheesh)
-    [DOC] Homebrew documentation instructions (@mathias)
-
-   </notes>
-   </release>
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>2.2.4</release><api>2.2.4</api></version>
-   <date>2013-09-01</date>
-   <notes>
-   **
-   ** Features / Improvements
-   **
-
-   * Randomized reconnect delay for RedisArray @mobli
-     This feature adds an optional parameter when constructing a RedisArray object
-     such that a random delay will be introduced if reconnections are made,
-     mitigating any &apos;thundering herd&apos; type problems.
-
-   * Lazy connections to RedisArray servers @mobli
-     By default, RedisArray will attempt to connect to each server you pass in
-     the ring on construction.  This feature lets you specify that you would
-     rather have RedisArray only attempt a connection when it needs to get data
-     from a particular node (throughput/performance improvement).
-
-   * Allow LONG and STRING keys in MGET/MSET
-   * Extended SET options for Redis &gt;= 2.6.12
-   * Persistent connections and UNIX SOCKET support for RedisArray
-   * Allow aggregates for ZUNION/ZINTER without weights @mheijkoop
-   * Support for SLOWLOG command
-   * Reworked MGET algorithm to run in linear time regardless of key count.
-   * Reworked ZINTERSTORE/ZUNIONSTORE algorithm to run in linear time
-
-   **
-   ** Bug fixes
-   **
-
-   * C99 Compliance (or rather lack thereof) fix @mobli
-   * Added ZEND_ACC_CTOR and ZEND_ACC_DTOR @euskadi31
-   * Stop throwing and clearing an exception on connect failure @matmoi
-   * Fix a false positive unit test failure having to do with TTL returns
+* Same as 2.0.5RC1 (no bugs were reported in that release candidate)
    </notes>
   </release>
-   <release>
-   <stability><release>stable</release><api>stable</api></stability>
-   <version><release>2.2.3</release><api>2.2.3</api></version>
-   <date>2013-04-29</date>
+  <release>
+   <date>2017-10-15</date>
+   <time>16:00:00</time>
+   <version>
+    <release>2.0.5RC1</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
    <notes>
-    First release to PECL
+* Improve performance when unserializing objects/arrays and serializing objects/arrays/strings in php 5/7.
+* Update unserialization of integer object keys for php 7.2: Make those keys accessible when unserializing.
+* Properly pick up presence of gcc for default compiler flags (`cc --version` doesn't contain gcc).
+  Add -O2 to default gcc compiler flags.
+* Use empty string for serializing empty $_SESSION array, similar to "session.serialize_handler=php".
+  Older igbinary releases already unserialize the empty string to the empty array.
+   </notes>
+  </release>
+  <release>
+   <date>2017-04-14</date>
+   <time>16:00:00</time>
+   <version>
+    <release>2.0.4</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
+   <notes>
+* Fixes bug #129: Should not call __wakeup() on data which was created by Serializable::unserialize()
+   </notes>
+  </release>
+  <release>
+   <date>2017-03-31</date>
+   <time>16:00:00</time>
+   <version>
+    <release>2.0.3</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
+   <notes>
+- Fixes bug #126: Fatal error: "igbinary_serialize_zval: zval has unknown type 0" (IS_UNDEF)
+  Make this a warning instead of a fatal error (and serialize as null instead), since IS_UNDEF is a known type.
+  Later releases will fix the root cause of the warning, and consistently omit array/object/other entries for IS_UNDEF.
+   </notes>
+  </release>
+  <release>
+   <date>2017-02-28</date>
+   <time>16:00:00</time>
+   <version>
+    <release>2.0.2</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
+   <notes>
+- Compatible with PHP 5.2 - 7.1
+- Fixes crash in Memcached->setMulti (in php 7.0+) when the first level of array elements have references as values.
+  Other extensions using igbinary shouldn't be affected.
+   </notes>
+  </release>
+  <release>
+   <date>2016-11-19</date>
+   <time>16:00:00</time>
+   <version>
+    <release>2.0.1</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
+   <notes>
+- Compatible with PHP 5.2 - 7.0
+- Fixes bug in session decoder not calling wakeup in php 7.0+
+- (Enhancement) Reuses identical strings when unserializing objects and arrays in php 7.0+
+   </notes>
+  </release>
+  <release>
+   <date>2016-10-30</date>
+   <time>16:00:00</time>
+   <version>
+    <release>2.0.0</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
+   <notes>
+- Compatible with PHP 5.2 - 7.0 (Adds PHP 7 support)
+- Serialization format is unchanged
+- Performance improvements for serialization and unserialization in PHP 5.2 - 7.0
+- (PHP 7) Don't call __destruct if __wakeup threw an exception (or __wakeup wasn't called yet)
+- Ports integration with other extensions to PHP 7.0 (session serialization, Memcached, Redis, APCu, etc.)
+- Fixes Windows PECL builds for PHP 5.6+
+- Reword warnings for invalid header bytes of serialized data (in igbinary_unserialize).
+   </notes>
+  </release>
+  <release>
+   <date>2014-08-29</date>
+   <time>09:00:00</time>
+   <version>
+    <release>1.2.1</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause-3-Clause</license>
+   <notes>
+- Compatible with PHP 5.2 - 5.6
+   </notes>
+  </release>
+  <release>
+   <date>2014-08-29</date>
+   <time>08:00:00</time>
+   <version>
+    <release>1.2.0</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="https://github.com/igbinary/igbinary/blob/master/COPYING">BSD-3-Clause</license>
+   <notes>
+- PECL bug #22614, igbinary_unserialize(FALSE) must return FALSE
+- PHP bug #54662, unserializing nested objects cause crash
+- Other fixes
+   </notes>
+  </release>
+  <release>
+   <date>2011-03-14</date>
+   <time>12:32:48</time>
+   <version>
+    <release>1.1.1</release>
+    <api>1.1.1</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://opensource.dynamoid.com/#license">BSD-3-Clause</license>
+   <notes>
+- Initial PECL release
+   </notes>
+  </release>
+  <release>
+   <date>2009-09-02</date>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://opensource.dynamoid.com/#license">PHP like license</license>
+   <notes>
+- Use Z_ADDREF_PP or Z_ADDREF et al. when increasing refcount.
    </notes>
   </release>
  </changelog>

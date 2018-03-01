@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9,00"
 	Name="XML"
-	ProjectGUID="{A2CCD038-C0CC-4A90-8FF1-2E614D5C3221}"
+	ProjectGUID="{6B03D576-7593-46CD-BD4F-5CFCB0608D87}"
 	RootNamespace="XML"
 	TargetFrameworkVersion="0"
 	>
@@ -59,7 +59,7 @@
 				ProgramDataBaseFileName=".\Debug_TS/"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
-				DebugInformationFormat="4"
+				DebugInformationFormat="3"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -174,7 +174,7 @@
 				OutputFile="..\..\Release_TS/php_xml.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="..\..\Release_TS,..\..\Release_TS_Inline,..\..\..\deps\release"
+				AdditionalLibraryDirectories="..\..\Release_TS;..\..\Release_TS_Inline;..\..\..\deps\lib"
 				ProgramDatabaseFile=".\Release_TS/php_xml.pdb"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
@@ -271,10 +271,6 @@
 				>
 			</File>
 		</Filter>
-		<File
-			RelativePath=".\php_xml.res"
-			>
-		</File>
 	</Files>
 	<Globals>
 	</Globals>

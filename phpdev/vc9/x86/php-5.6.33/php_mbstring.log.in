@@ -1,0 +1,320 @@
+	"cl.exe" /D COMPILE_DL_MBSTRING /D MBSTRING_EXPORTS=1  -Iext/mbstring/libmbfl -Iext/mbstring/libmbfl/mbfl 			-Iext/mbstring/oniguruma /D NOT_RUBY=1 /D LIBMBFL_EXPORTS=1 		        /D HAVE_STDARG_PROTOTYPES=1 /D HAVE_CONFIG_H /D HAVE_STDLIB_H 		        /D HAVE_STRICMP /D MBFL_DLL_EXPORT=1 /D EXPORT /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\mbstring\ /FdRelease_TS\ext\mbstring\ /FpRelease_TS\ext\mbstring\ /FRRelease_TS\ext\mbstring\ /c ext\mbstring\mb_gpc.c ext\mbstring\mbstring.c ext\mbstring\php_unicode.c
+mb_gpc.c
+mbstring.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+ext\mbstring\mbstring.c(696) : warning C4090: '=' : different 'const' qualifiers
+ext\mbstring\mbstring.c(709) : warning C4090: '=' : different 'const' qualifiers
+ext\mbstring\mbstring.c(745) : warning C4018: '<' : signed/unsigned mismatch
+ext\mbstring\mbstring.c(750) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(750) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(753) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(753) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(835) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(835) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(838) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(838) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1209) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1209) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1221) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1221) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1237) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1237) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1249) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1249) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1517) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1520) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1645) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1916) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1925) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(1937) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(3206) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(3216) : warning C4090: 'function' : different 'const' qualifiers
+ext\mbstring\mbstring.c(4561) : warning C4090: 'function' : different 'const' qualifiers
+php_unicode.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+	"cl.exe" /D COMPILE_DL_MBSTRING /D MBSTRING_EXPORTS=1  -Iext/mbstring/libmbfl -Iext/mbstring/libmbfl/mbfl 			-Iext/mbstring/oniguruma /D NOT_RUBY=1 /D LIBMBFL_EXPORTS=1 		        /D HAVE_STDARG_PROTOTYPES=1 /D HAVE_CONFIG_H /D HAVE_STDLIB_H 		        /D HAVE_STRICMP /D MBFL_DLL_EXPORT=1 /D EXPORT /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\mbstring\libmbfl\filters\ /FdRelease_TS\ext\mbstring\libmbfl\filters\ /FpRelease_TS\ext\mbstring\libmbfl\filters\ /FRRelease_TS\ext\mbstring\libmbfl\filters\ /c ext\mbstring\libmbfl\filters\html_entities.c ext\mbstring\libmbfl\filters\mbfilter_7bit.c ext\mbstring\libmbfl\filters\mbfilter_armscii8.c ext\mbstring\libmbfl\filters\mbfilter_ascii.c ext\mbstring\libmbfl\filters\mbfilter_base64.c ext\mbstring\libmbfl\filters\mbfilter_big5.c ext\mbstring\libmbfl\filters\mbfilter_byte2.c ext\mbstring\libmbfl\filters\mbfilter_byte4.c ext\mbstring\libmbfl\filters\mbfilter_cp1251.c ext\mbstring\libmbfl\filters\mbfilter_cp1252.c ext\mbstring\libmbfl\filters\mbfilter_cp1254.c ext\mbstring\libmbfl\filters\mbfilter_cp5022x.c ext\mbstring\libmbfl\filters\mbfilter_cp51932.c ext\mbstring\libmbfl\filters\mbfilter_cp850.c ext\mbstring\libmbfl\filters\mbfilter_cp866.c ext\mbstring\libmbfl\filters\mbfilter_cp932.c ext\mbstring\libmbfl\filters\mbfilter_cp936.c ext\mbstring\libmbfl\filters\mbfilter_euc_cn.c ext\mbstring\libmbfl\filters\mbfilter_euc_jp.c ext\mbstring\libmbfl\filters\mbfilter_euc_jp_2004.c ext\mbstring\libmbfl\filters\mbfilter_euc_jp_win.c ext\mbstring\libmbfl\filters\mbfilter_euc_kr.c ext\mbstring\libmbfl\filters\mbfilter_euc_tw.c ext\mbstring\libmbfl\filters\mbfilter_gb18030.c ext\mbstring\libmbfl\filters\mbfilter_htmlent.c ext\mbstring\libmbfl\filters\mbfilter_hz.c ext\mbstring\libmbfl\filters\mbfilter_iso2022_jp_ms.c ext\mbstring\libmbfl\filters\mbfilter_iso2022_kr.c ext\mbstring\libmbfl\filters\mbfilter_iso2022jp_2004.c ext\mbstring\libmbfl\filters\mbfilter_iso2022jp_mobile.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_1.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_10.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_13.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_14.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_15.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_16.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_2.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_3.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_4.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_5.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_6.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_7.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_8.c ext\mbstring\libmbfl\filters\mbfilter_iso8859_9.c ext\mbstring\libmbfl\filters\mbfilter_jis.c ext\mbstring\libmbfl\filters\mbfilter_koi8r.c ext\mbstring\libmbfl\filters\mbfilter_koi8u.c ext\mbstring\libmbfl\filters\mbfilter_qprint.c ext\mbstring\libmbfl\filters\mbfilter_sjis.c ext\mbstring\libmbfl\filters\mbfilter_sjis_2004.c ext\mbstring\libmbfl\filters\mbfilter_sjis_mac.c ext\mbstring\libmbfl\filters\mbfilter_sjis_mobile.c ext\mbstring\libmbfl\filters\mbfilter_sjis_open.c ext\mbstring\libmbfl\filters\mbfilter_tl_jisx0201_jisx0208.c ext\mbstring\libmbfl\filters\mbfilter_ucs2.c ext\mbstring\libmbfl\filters\mbfilter_ucs4.c ext\mbstring\libmbfl\filters\mbfilter_uhc.c ext\mbstring\libmbfl\filters\mbfilter_utf16.c ext\mbstring\libmbfl\filters\mbfilter_utf32.c ext\mbstring\libmbfl\filters\mbfilter_utf7.c ext\mbstring\libmbfl\filters\mbfilter_utf7imap.c ext\mbstring\libmbfl\filters\mbfilter_utf8.c ext\mbstring\libmbfl\filters\mbfilter_utf8_mobile.c ext\mbstring\libmbfl\filters\mbfilter_uuencode.c
+html_entities.c
+mbfilter_7bit.c
+mbfilter_armscii8.c
+mbfilter_ascii.c
+mbfilter_base64.c
+mbfilter_big5.c
+mbfilter_byte2.c
+mbfilter_byte4.c
+mbfilter_cp1251.c
+mbfilter_cp1252.c
+mbfilter_cp1254.c
+mbfilter_cp5022x.c
+mbfilter_cp51932.c
+mbfilter_cp850.c
+mbfilter_cp866.c
+mbfilter_cp932.c
+mbfilter_cp936.c
+mbfilter_euc_cn.c
+mbfilter_euc_jp.c
+mbfilter_euc_jp_2004.c
+mbfilter_euc_jp_win.c
+mbfilter_euc_kr.c
+mbfilter_euc_tw.c
+mbfilter_gb18030.c
+mbfilter_htmlent.c
+mbfilter_hz.c
+mbfilter_iso2022_jp_ms.c
+mbfilter_iso2022_kr.c
+mbfilter_iso2022jp_2004.c
+mbfilter_iso2022jp_mobile.c
+ext\mbstring\libmbfl\filters\mbfilter_iso2022jp_mobile.c(51) : warning C4047: 'initializing' : 'const char *(*)[]' differs in levels of indirection from 'const char **'
+mbfilter_iso8859_1.c
+mbfilter_iso8859_10.c
+mbfilter_iso8859_13.c
+mbfilter_iso8859_14.c
+mbfilter_iso8859_15.c
+mbfilter_iso8859_16.c
+mbfilter_iso8859_2.c
+mbfilter_iso8859_3.c
+mbfilter_iso8859_4.c
+mbfilter_iso8859_5.c
+mbfilter_iso8859_6.c
+mbfilter_iso8859_7.c
+mbfilter_iso8859_8.c
+mbfilter_iso8859_9.c
+mbfilter_jis.c
+mbfilter_koi8r.c
+mbfilter_koi8u.c
+mbfilter_qprint.c
+mbfilter_sjis.c
+mbfilter_sjis_2004.c
+mbfilter_sjis_mac.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\ext\mbstring\libmbfl\filters\mbfilter_sjis_2004.c(675) : warning C4715: 'mbfl_filt_conv_wchar_jis2004' : not all control paths return a value
+mbfilter_sjis_mobile.c
+mbfilter_sjis_open.c
+mbfilter_tl_jisx0201_jisx0208.c
+mbfilter_ucs2.c
+mbfilter_ucs4.c
+mbfilter_uhc.c
+mbfilter_utf16.c
+mbfilter_utf32.c
+mbfilter_utf7.c
+mbfilter_utf7imap.c
+mbfilter_utf8.c
+mbfilter_utf8_mobile.c
+mbfilter_uuencode.c
+	"cl.exe" /D COMPILE_DL_MBSTRING /D MBSTRING_EXPORTS=1  -Iext/mbstring/libmbfl -Iext/mbstring/libmbfl/mbfl 			-Iext/mbstring/oniguruma /D NOT_RUBY=1 /D LIBMBFL_EXPORTS=1 		        /D HAVE_STDARG_PROTOTYPES=1 /D HAVE_CONFIG_H /D HAVE_STDLIB_H 		        /D HAVE_STRICMP /D MBFL_DLL_EXPORT=1 /D EXPORT /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\mbstring\libmbfl\mbfl\ /FdRelease_TS\ext\mbstring\libmbfl\mbfl\ /FpRelease_TS\ext\mbstring\libmbfl\mbfl\ /FRRelease_TS\ext\mbstring\libmbfl\mbfl\ /c ext\mbstring\libmbfl\mbfl\mbfilter.c ext\mbstring\libmbfl\mbfl\mbfilter_8bit.c ext\mbstring\libmbfl\mbfl\mbfilter_pass.c ext\mbstring\libmbfl\mbfl\mbfilter_wchar.c ext\mbstring\libmbfl\mbfl\mbfl_allocators.c ext\mbstring\libmbfl\mbfl\mbfl_convert.c ext\mbstring\libmbfl\mbfl\mbfl_encoding.c ext\mbstring\libmbfl\mbfl\mbfl_filter_output.c ext\mbstring\libmbfl\mbfl\mbfl_ident.c ext\mbstring\libmbfl\mbfl\mbfl_language.c ext\mbstring\libmbfl\mbfl\mbfl_memory_device.c ext\mbstring\libmbfl\mbfl\mbfl_string.c
+mbfilter.c
+mbfilter_8bit.c
+ext\mbstring\libmbfl\mbfl\mbfilter.c(1118) : warning C4018: '>' : signed/unsigned mismatch
+ext\mbstring\libmbfl\mbfl\mbfilter.c(1477) : warning C4018: '>=' : signed/unsigned mismatch
+ext\mbstring\libmbfl\mbfl\mbfilter.c(1504) : warning C4018: '>=' : signed/unsigned mismatch
+ext\mbstring\libmbfl\mbfl\mbfilter.c(1513) : warning C4018: '>=' : signed/unsigned mismatch
+ext\mbstring\libmbfl\mbfl\mbfilter.c(1520) : warning C4018: '>=' : signed/unsigned mismatch
+mbfilter_pass.c
+mbfilter_wchar.c
+mbfl_allocators.c
+mbfl_convert.c
+mbfl_encoding.c
+mbfl_filter_output.c
+mbfl_ident.c
+mbfl_language.c
+mbfl_memory_device.c
+mbfl_string.c
+	"cl.exe" /D COMPILE_DL_MBSTRING /D MBSTRING_EXPORTS=1  -Iext/mbstring/libmbfl -Iext/mbstring/libmbfl/mbfl 			-Iext/mbstring/oniguruma /D NOT_RUBY=1 /D LIBMBFL_EXPORTS=1 		        /D HAVE_STDARG_PROTOTYPES=1 /D HAVE_CONFIG_H /D HAVE_STDLIB_H 		        /D HAVE_STRICMP /D MBFL_DLL_EXPORT=1 /D EXPORT /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\mbstring\libmbfl\nls\ /FdRelease_TS\ext\mbstring\libmbfl\nls\ /FpRelease_TS\ext\mbstring\libmbfl\nls\ /FRRelease_TS\ext\mbstring\libmbfl\nls\ /c ext\mbstring\libmbfl\nls\nls_de.c ext\mbstring\libmbfl\nls\nls_en.c ext\mbstring\libmbfl\nls\nls_hy.c ext\mbstring\libmbfl\nls\nls_ja.c ext\mbstring\libmbfl\nls\nls_kr.c ext\mbstring\libmbfl\nls\nls_neutral.c ext\mbstring\libmbfl\nls\nls_ru.c ext\mbstring\libmbfl\nls\nls_tr.c ext\mbstring\libmbfl\nls\nls_ua.c ext\mbstring\libmbfl\nls\nls_uni.c ext\mbstring\libmbfl\nls\nls_zh.c
+nls_de.c
+nls_en.c
+nls_hy.c
+nls_ja.c
+nls_kr.c
+nls_neutral.c
+nls_ru.c
+nls_tr.c
+nls_ua.c
+nls_uni.c
+nls_zh.c
+	"cl.exe" /D COMPILE_DL_MBSTRING /D MBSTRING_EXPORTS=1  -Iext/mbstring/libmbfl -Iext/mbstring/libmbfl/mbfl 			-Iext/mbstring/oniguruma /D NOT_RUBY=1 /D LIBMBFL_EXPORTS=1 		        /D HAVE_STDARG_PROTOTYPES=1 /D HAVE_CONFIG_H /D HAVE_STDLIB_H 		        /D HAVE_STRICMP /D MBFL_DLL_EXPORT=1 /D EXPORT /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\mbstring\oniguruma\ /FdRelease_TS\ext\mbstring\oniguruma\ /FpRelease_TS\ext\mbstring\oniguruma\ /FRRelease_TS\ext\mbstring\oniguruma\ /c ext\mbstring\oniguruma\regcomp.c ext\mbstring\oniguruma\regenc.c ext\mbstring\oniguruma\regerror.c ext\mbstring\oniguruma\regexec.c ext\mbstring\oniguruma\regext.c ext\mbstring\oniguruma\reggnu.c ext\mbstring\oniguruma\regparse.c ext\mbstring\oniguruma\regposerr.c ext\mbstring\oniguruma\regsyntax.c ext\mbstring\oniguruma\regtrav.c ext\mbstring\oniguruma\regversion.c ext\mbstring\oniguruma\st.c
+regcomp.c
+regenc.c
+regerror.c
+ext\mbstring\oniguruma\regerror.c(200) : warning C4013: 'sprintf' undefined; assuming extern returning int
+regexec.c
+regext.c
+reggnu.c
+regparse.c
+regposerr.c
+regsyntax.c
+ext\mbstring\oniguruma\regposerr.c(79) : warning C4013: 'sprintf' undefined; assuming extern returning int
+regtrav.c
+regversion.c
+ext\mbstring\oniguruma\regversion.c(38) : warning C4013: 'sprintf' undefined; assuming extern returning int
+st.c
+	"cl.exe" /D COMPILE_DL_MBSTRING /D MBSTRING_EXPORTS=1  -Iext/mbstring/libmbfl -Iext/mbstring/libmbfl/mbfl 			-Iext/mbstring/oniguruma /D NOT_RUBY=1 /D LIBMBFL_EXPORTS=1 		        /D HAVE_STDARG_PROTOTYPES=1 /D HAVE_CONFIG_H /D HAVE_STDLIB_H 		        /D HAVE_STRICMP /D MBFL_DLL_EXPORT=1 /D EXPORT /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\mbstring\oniguruma\enc\ /FdRelease_TS\ext\mbstring\oniguruma\enc\ /FpRelease_TS\ext\mbstring\oniguruma\enc\ /FRRelease_TS\ext\mbstring\oniguruma\enc\ /c ext\mbstring\oniguruma\enc\ascii.c ext\mbstring\oniguruma\enc\big5.c ext\mbstring\oniguruma\enc\euc_jp.c ext\mbstring\oniguruma\enc\euc_kr.c ext\mbstring\oniguruma\enc\euc_tw.c ext\mbstring\oniguruma\enc\gb18030.c ext\mbstring\oniguruma\enc\iso8859_1.c ext\mbstring\oniguruma\enc\iso8859_10.c ext\mbstring\oniguruma\enc\iso8859_11.c ext\mbstring\oniguruma\enc\iso8859_13.c ext\mbstring\oniguruma\enc\iso8859_14.c ext\mbstring\oniguruma\enc\iso8859_15.c ext\mbstring\oniguruma\enc\iso8859_16.c ext\mbstring\oniguruma\enc\iso8859_2.c ext\mbstring\oniguruma\enc\iso8859_3.c ext\mbstring\oniguruma\enc\iso8859_4.c ext\mbstring\oniguruma\enc\iso8859_5.c ext\mbstring\oniguruma\enc\iso8859_6.c ext\mbstring\oniguruma\enc\iso8859_7.c ext\mbstring\oniguruma\enc\iso8859_8.c ext\mbstring\oniguruma\enc\iso8859_9.c ext\mbstring\oniguruma\enc\koi8.c ext\mbstring\oniguruma\enc\koi8_r.c ext\mbstring\oniguruma\enc\sjis.c ext\mbstring\oniguruma\enc\unicode.c ext\mbstring\oniguruma\enc\utf16_be.c ext\mbstring\oniguruma\enc\utf16_le.c ext\mbstring\oniguruma\enc\utf32_be.c ext\mbstring\oniguruma\enc\utf32_le.c ext\mbstring\oniguruma\enc\utf8.c
+ascii.c
+big5.c
+euc_jp.c
+euc_kr.c
+euc_tw.c
+gb18030.c
+iso8859_1.c
+iso8859_10.c
+iso8859_11.c
+iso8859_13.c
+iso8859_14.c
+iso8859_15.c
+iso8859_16.c
+iso8859_2.c
+iso8859_3.c
+iso8859_4.c
+iso8859_5.c
+iso8859_6.c
+iso8859_7.c
+iso8859_8.c
+iso8859_9.c
+koi8.c
+koi8_r.c
+sjis.c
+unicode.c
+utf16_be.c
+utf16_le.c
+utf32_be.c
+utf32_le.c
+utf8.c
+	"cl.exe" /D COMPILE_DL_MBSTRING /D MBSTRING_EXPORTS=1  -Iext/mbstring/libmbfl -Iext/mbstring/libmbfl/mbfl 			-Iext/mbstring/oniguruma /D NOT_RUBY=1 /D LIBMBFL_EXPORTS=1 		        /D HAVE_STDARG_PROTOTYPES=1 /D HAVE_CONFIG_H /D HAVE_STDLIB_H 		        /D HAVE_STRICMP /D MBFL_DLL_EXPORT=1 /D EXPORT /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\mbstring\ /FdRelease_TS\ext\mbstring\ /FpRelease_TS\ext\mbstring\ /FRRelease_TS\ext\mbstring\ /c ext\mbstring\php_mbregex.c
+php_mbregex.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+xml.obj : warning LNK4217: locally defined symbol __zval_dtor_func imported in function __zval_dtor
+xml.obj : warning LNK4217: locally defined symbol __zval_copy_ctor_func imported in function __zval_copy_ctor
+xml.obj : warning LNK4217: locally defined symbol __emalloc imported in function _php_xml_malloc_wrapper
+xml.obj : warning LNK4217: locally defined symbol __erealloc imported in function _php_xml_realloc_wrapper
+xml.obj : warning LNK4217: locally defined symbol __efree imported in function _php_xml_free_wrapper
+xml.obj : warning LNK4217: locally defined symbol _php_info_print_table_end imported in function _zm_info_xml
+xml.obj : warning LNK4217: locally defined symbol _php_info_print_table_row imported in function _zm_info_xml
+xml.obj : warning LNK4217: locally defined symbol _php_info_print_table_start imported in function _zm_info_xml
+xml.obj : warning LNK4217: locally defined symbol __zend_list_addref imported in function __xml_resource_zval
+xml.obj : warning LNK4217: locally defined symbol _ts_resource_ex imported in function __xml_resource_zval
+xml.obj : warning LNK4217: locally defined symbol __estrndup imported in function __xml_string_zval
+xml.obj : warning LNK4217: locally defined symbol __zval_ptr_dtor imported in function _xml_parser_dtor
+xml.obj : warning LNK4217: locally defined symbol _php_XML_ParserFree imported in function _xml_parser_dtor
+xml.obj : warning LNK4217: locally defined symbol _zval_add_ref imported in function _xml_set_handler
+xml.obj : warning LNK4217: locally defined symbol __convert_to_string imported in function _xml_set_handler
+xml.obj : warning LNK4217: locally defined symbol _zend_get_class_entry imported in function _xml_call_handler
+xml.obj : warning LNK4217: locally defined symbol _zend_hash_index_find imported in function _xml_call_handler
+xml.obj : warning LNK4217: locally defined symbol _php_error_docref0 imported in function _xml_call_handler
+xml.obj : warning LNK4217: locally defined symbol _zend_call_function imported in function _xml_call_handler
+xml.obj : warning LNK4217: locally defined symbol __safe_emalloc imported in function _xml_call_handler
+xml.obj : warning LNK4049: locally defined symbol _executor_globals_id imported
+xml.obj : warning LNK4217: locally defined symbol __safe_emalloc_string imported in function _xml_utf8_encode
+xml.obj : warning LNK4217: locally defined symbol _php_next_utf8_char imported in function _xml_utf8_decode
+xml.obj : warning LNK4217: locally defined symbol _add_next_index_long imported in function __xml_add_to_info
+xml.obj : warning LNK4217: locally defined symbol __zend_hash_add_or_update imported in function __xml_add_to_info
+xml.obj : warning LNK4217: locally defined symbol __array_init imported in function __xml_add_to_info
+xml.obj : warning LNK4217: locally defined symbol _zend_hash_find imported in function __xml_add_to_info
+xml.obj : warning LNK4217: locally defined symbol _php_strtoupper imported in function __xml_decode_tag
+xml.obj : warning LNK4217: locally defined symbol __zend_hash_index_update_or_next_insert imported in function __xml_startElementHandler
+xml.obj : warning LNK4217: locally defined symbol __estrdup imported in function __xml_startElementHandler
+xml.obj : warning LNK4217: locally defined symbol _add_assoc_long_ex imported in function __xml_startElementHandler
+xml.obj : warning LNK4217: locally defined symbol _add_assoc_string_ex imported in function __xml_startElementHandler
+xml.obj : warning LNK4217: locally defined symbol _add_assoc_stringl_ex imported in function __xml_startElementHandler
+xml.obj : warning LNK4217: locally defined symbol _zend_register_resource imported in function _php_xml_parser_create_impl
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetUserData imported in function _php_xml_parser_create_impl
+xml.obj : warning LNK4217: locally defined symbol _php_XML_ParserCreate_MM imported in function _php_xml_parser_create_impl
+xml.obj : warning LNK4217: locally defined symbol __ecalloc imported in function _php_xml_parser_create_impl
+xml.obj : warning LNK4217: locally defined symbol _zend_parse_parameters imported in function _php_xml_parser_create_impl
+xml.obj : warning LNK4217: locally defined symbol _zend_fetch_resource imported in function _zif_xml_set_object
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetElementHandler imported in function _zif_xml_set_element_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_Parse imported in function _zif_xml_parse
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetErrorCode imported in function _zif_xml_get_error_code
+xml.obj : warning LNK4217: locally defined symbol _zend_error imported in function _zif_xml_error_string
+xml.obj : warning LNK4217: locally defined symbol _php_XML_ErrorString imported in function _zif_xml_error_string
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetCurrentLineNumber imported in function _zif_xml_get_current_line_number
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetCurrentColumnNumber imported in function _zif_xml_get_current_column_number
+xml.obj : warning LNK4217: locally defined symbol _php_XML_GetCurrentByteIndex imported in function _zif_xml_get_current_byte_index
+xml.obj : warning LNK4217: locally defined symbol __zend_list_delete imported in function _zif_xml_parser_free
+xml.obj : warning LNK4217: locally defined symbol _convert_to_long imported in function _zif_xml_parser_set_option
+xml.obj : warning LNK4217: locally defined symbol _zend_register_string_constant imported in function _zm_startup_xml
+xml.obj : warning LNK4217: locally defined symbol _zend_register_long_constant imported in function _zm_startup_xml
+xml.obj : warning LNK4217: locally defined symbol _zend_register_list_destructors_ex imported in function _zm_startup_xml
+xml.obj : warning LNK4217: locally defined symbol _zend_hash_get_current_data_ex imported in function __xml_characterDataHandler
+xml.obj : warning LNK4217: locally defined symbol _zend_hash_internal_pointer_end_ex imported in function __xml_characterDataHandler
+xml.obj : warning LNK4217: locally defined symbol _XML_GetUserData imported in function __xml_externalEntityRefHandler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetCharacterDataHandler imported in function _zif_xml_set_character_data_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetProcessingInstructionHandler imported in function _zif_xml_set_processing_instruction_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetDefaultHandler imported in function _zif_xml_set_default_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetUnparsedEntityDeclHandler imported in function _zif_xml_set_unparsed_entity_decl_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetNotationDeclHandler imported in function _zif_xml_set_notation_decl_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetExternalEntityRefHandler imported in function _zif_xml_set_external_entity_ref_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetStartNamespaceDeclHandler imported in function _zif_xml_set_start_namespace_decl_handler
+xml.obj : warning LNK4217: locally defined symbol _php_XML_SetEndNamespaceDeclHandler imported in function _zif_xml_set_end_namespace_decl_handler
+   Creating library Release_TS\php_mbstring.lib and object Release_TS\php_mbstring.exp
+EXT mbstring build complete

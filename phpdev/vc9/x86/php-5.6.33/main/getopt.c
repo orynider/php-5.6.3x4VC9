@@ -18,10 +18,10 @@
 
 /* $Id$ */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <string.h>
 #include <assert.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 #include "php_getopt.h"
 
 #define OPTERRCOLON (1)

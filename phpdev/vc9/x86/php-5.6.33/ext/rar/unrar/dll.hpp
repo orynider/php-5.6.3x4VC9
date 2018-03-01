@@ -27,21 +27,16 @@
 #define RAR_SKIP              0
 #define RAR_TEST              1
 #define RAR_EXTRACT           2
-#define RAR_EXTRACT_CHUNK     3
 
 #define RAR_VOL_ASK           0
 #define RAR_VOL_NOTIFY        1
 
 #define RAR_DLL_VERSION       8
-#define RAR_DLL_EXT_VERSION   1 //added by me
 
 #define RAR_HASH_NONE         0
 #define RAR_HASH_CRC32        1
 #define RAR_HASH_BLAKE2       2
 
-//Must be the same as MAXWINSIZE
-//not in original
-#define RAR_CHUNK_BUFFER_SIZE   0x400000
 
 #ifdef _UNIX
 #define CALLBACK
@@ -51,21 +46,6 @@
 #define LPARAM long
 #define UINT unsigned int
 #endif
-
-/* struct not in original
- * (it's RarLocalTime from timefn.hpp with uint replaced by unsigned int) */
-typedef struct RARTime
-{
-  unsigned int Year;
-  unsigned int Month;
-  unsigned int Day;
-  unsigned int Hour;
-  unsigned int Minute;
-  unsigned int Second;
-  unsigned int Reminder;
-  unsigned int wDay;
-  unsigned int yDay;
-} RARTime;
 
 #define RHDF_SPLITBEFORE 0x01
 #define RHDF_SPLITAFTER  0x02
@@ -128,9 +108,7 @@ struct RARHeaderDataEx
   unsigned int CtimeHigh;
   unsigned int AtimeLow;
   unsigned int AtimeHigh;
-  /* removed by me: we don't need to retain binary compatibility in case new
-   * fields are added, so we avoid wasting space here */
-  /* unsigned int Reserved[988]; */
+  unsigned int Reserved[988];
 };
 
 
@@ -170,8 +148,7 @@ struct RAROpenArchiveDataEx
   unsigned int  Flags;
   UNRARCALLBACK Callback;
   LPARAM        UserData;
-  /* removed by me */
-  /* unsigned int  Reserved[28]; */
+  unsigned int  Reserved[28];
 };
 
 enum UNRARCALLBACK_MESSAGES {
@@ -193,9 +170,6 @@ int    PASCAL RARReadHeader(HANDLE hArcData,struct RARHeaderData *HeaderData);
 int    PASCAL RARReadHeaderEx(HANDLE hArcData,struct RARHeaderDataEx *HeaderData);
 int    PASCAL RARProcessFile(HANDLE hArcData,int Operation,char *DestPath,char *DestName);
 int    PASCAL RARProcessFileW(HANDLE hArcData,int Operation,wchar_t *DestPath,wchar_t *DestName);
-int    PASCAL RARProcessFileChunkInit(HANDLE hArcData);
-int    PASCAL RARProcessFileChunk(HANDLE hArcData, void *Buffer, size_t BufferSize, size_t *ReadSize, int *finished);
-void   PASCAL RARSetProcessExtendedData(HANDLE hArcData,int value);
 void   PASCAL RARSetCallback(HANDLE hArcData,UNRARCALLBACK Callback,LPARAM UserData);
 void   PASCAL RARSetChangeVolProc(HANDLE hArcData,CHANGEVOLPROC ChangeVolProc);
 void   PASCAL RARSetProcessDataProc(HANDLE hArcData,PROCESSDATAPROC ProcessDataProc);

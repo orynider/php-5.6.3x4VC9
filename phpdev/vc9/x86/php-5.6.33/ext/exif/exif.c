@@ -36,7 +36,8 @@
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
+#include <msinttypes/stdint.h>
+//#include <stdio.h>
 #include "php.h"
 #include "zend.h"
 #include "ext/standard/file.h"

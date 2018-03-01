@@ -255,16 +255,16 @@ static int pdo_dblib_stmt_get_col(pdo_stmt_t *stmt, int colno, char **ptr,
 			*ptr = tmp_ptr;
 			break;
 		}
-		case SQLUNIQUE: {
+		/* case SQLUNIQUE: {
 			*len = 36+1;
 			tmp_ptr = emalloc(*len + 1);
-
-			/* uniqueidentifier is a 16-byte binary number, convert to 32 char hex string */
+		*/
+			/* uniqueidentifier is a 16-byte binary number, convert to 32 char hex string * /
 			*len = dbconvert(NULL, SQLUNIQUE, *ptr, *len, SQLCHAR, tmp_ptr, *len);
 			php_strtoupper(tmp_ptr, *len);
 			*ptr = tmp_ptr;
 			break;
-		}
+		} */
 		case SQLDATETIM4:
 		case SQLDATETIME: {
 			DBDATETIME dt;
@@ -309,24 +309,45 @@ static int pdo_dblib_stmt_param_hook(pdo_stmt_t *stmt, struct pdo_bound_param_da
 
 static int pdo_dblib_stmt_get_column_meta(pdo_stmt_t *stmt, long colno, zval *return_value TSRMLS_DC)
 {
-	pdo_dblib_stmt *S = (pdo_dblib_stmt*)stmt->driver_data;
-	pdo_dblib_db_handle *H = S->H;
-	DBTYPEINFO* dbtypeinfo;
+	pdo_dblib_stmt *S = (pdo_dblib_stmt*)stmt->driver_data; pdo_dblib_db_handle *H = S->H; 
 
+	unsigned long dbtypeinfo;
+	unsigned long colinfo;
+	int dbproc = H->link;
+	int column = colno + 1;	
+
+	
+	struct pdo_column_data *columns;
 	if(colno >= stmt->column_count || colno < 0)  {
 		return FAILURE;
 	}
 
 	array_init(return_value);
 
-	dbtypeinfo = dbcoltypeinfo(H->link, colno+1);
+	//dbtypeinfo = dbcoltypeinfo(H->link, colno + 1);
+
+	#define TDSCOLUMN *colinfo
+
+	//tdsdump_log(TDS_DBG_FUNC, "dbcoltypeinfo(%p, %d)\n", dbproc, column);
+
+	//colinfo = dbcolptr(dbproc, column);
 	
+	colinfo = column - 1;
+	
+	if (!colinfo)
+		return NULL;
+
+	//dbproc->typeinfo.precision = colinfo->column_prec;
+	//dbproc->typeinfo.scale = colinfo->column_scale;
+	//return &dbproc->typeinfo;	
+	return colinfo;
+	#define DBTYPEINFO dbtypeinfo;	
 	if(!dbtypeinfo) return FAILURE;
 		
 	add_assoc_long(return_value, "max_length", dbcollen(H->link, colno+1) );
-	add_assoc_long(return_value, "precision", (int) dbtypeinfo->precision );
-	add_assoc_long(return_value, "scale", (int) dbtypeinfo->scale );
-	add_assoc_string(return_value, "column_source", dbcolsource(H->link, colno+1), 1);
+	//add_assoc_long(return_value, "precision", (int) dbtypeinfo->precision );
+	//add_assoc_long(return_value, "scale", (int) dbtypeinfo->scale );
+	//add_assoc_string(return_value, "column_source", dbcolsource(H->link, colno+1), 1);
 	add_assoc_string(return_value, "native_type", pdo_dblib_get_field_name(dbcoltype(H->link, colno+1)), 1);
 	add_assoc_long(return_value, "native_type_id", dbcoltype(H->link, colno+1));
 	add_assoc_long(return_value, "native_usertype_id", dbcolutype(H->link, colno+1));

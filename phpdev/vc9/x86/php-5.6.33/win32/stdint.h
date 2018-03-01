@@ -24,17 +24,26 @@
 #include <stddef.h>
 
 /* 7.18.1.1  Exact-width integer types */
-typedef signed char int8_t;
-typedef unsigned char   uint8_t;
+//typedef signed char int8_t;
+//typedef signed integer type int8_t; // optional
 typedef short  int16_t;
-typedef unsigned short  uint16_t;
+//typedef signed integer type int16_t; // optional
 typedef int  int32_t;
-typedef unsigned   uint32_t;
+//typedef signed integer type int32_t; // optional
 typedef __int64  int64_t;
+//typedef signed integer type int64_t; // optional
+
+typedef unsigned char   uint8_t;
+//typedef unsigned integer type uint8_t; // optional
+typedef unsigned short  uint16_t;
+//typedef unsigned integer type uint16_t; // optional
+typedef unsigned   uint32_t;
+//typedef unsigned integer type uint32_t; // optional
 typedef unsigned __int64 uint64_t;
+//typedef unsigned integer type uint64_t; // optional
 
 /* 7.18.1.2  Minimum-width integer types */
-typedef signed char int_least8_t;
+//typedef signed char int_least8_t;
 typedef unsigned char   uint_least8_t;
 typedef short  int_least16_t;
 typedef unsigned short  uint_least16_t;

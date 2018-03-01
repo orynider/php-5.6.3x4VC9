@@ -45,7 +45,7 @@
  */
 
 #include <string.h>
-
+#include <win32/php_stdint.h>
 #include <errno.h>
 #ifndef __set_errno
 #define __set_errno(val) errno = (val)

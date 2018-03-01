@@ -135,7 +135,7 @@ void Unpack::Init(size_t WinSize,bool Solid)
 }
 
 
-void Unpack::DoUnpack(int Method,bool Solid,bool suspendAfterInit)
+void Unpack::DoUnpack(uint Method,bool Solid)
 {
   // Methods <50 will crash in Fragmented mode when accessing NULL Window.
   // They cannot be called in such mode now, but we check it below anyway
@@ -145,17 +145,17 @@ void Unpack::DoUnpack(int Method,bool Solid,bool suspendAfterInit)
 #ifndef SFX_MODULE
     case 15: // rar 1.5 compression
       if (!Fragmented)
-        Unpack15(Solid, suspendAfterInit);
+        Unpack15(Solid);
       break;
     case 20: // rar 2.x compression
     case 26: // files larger than 2GB
       if (!Fragmented)
-        Unpack20(Solid,suspendAfterInit);
+        Unpack20(Solid);
       break;
 #endif
     case 29: // rar 3.x compression
       if (!Fragmented)
-        Unpack29(Solid,suspendAfterInit);
+        Unpack29(Solid);
       break;
     case 50: // RAR 5.0 compression algorithm.
 #ifdef RAR_SMP
@@ -173,7 +173,7 @@ void Unpack::DoUnpack(int Method,bool Solid,bool suspendAfterInit)
           }
       }
 #endif
-      Unpack5(Solid,suspendAfterInit);
+      Unpack5(Solid);
       break;
   }
 }
@@ -206,6 +206,7 @@ void Unpack::UnpInitData(bool Solid)
   UnpInitData20(Solid);
 #endif
   UnpInitData30(Solid);
+  UnpInitData50(Solid);
 }
 
 
@@ -348,6 +349,6 @@ void Unpack::MakeDecodeTables(byte *LengthTable,DecodeTable *Dec,uint Size)
     {
       // Can be here for length table filled with zeroes only (empty).
       Dec->QuickNum[Code]=0;
-  }
+    }
   }
 }

@@ -1,0 +1,535 @@
+	"cl.exe" /D COMPILE_DL_RAR /D RAR_EXPORTS=1 /DRARDLL /DSILENT /EHsc /D_WSTDIO_DEFINED /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\rar\ /FdRelease_TS\ext\rar\ /FpRelease_TS\ext\rar\ /FRRelease_TS\ext\rar\ /c ext\rar\rar.c ext\rar\rar_error.c ext\rar\rar_navigation.c ext\rar\rar_stream.c ext\rar\rar_time.c ext\rar\rararch.c ext\rar\rarentry.c
+rar.c
+rar_error.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\eh.h(30) : fatal error C1189: #error :  "eh.h is only for C++!"
+rar_navigation.c
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\eh.h(30) : fatal error C1189: #error :  "eh.h is only for C++!"
+rar_stream.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\eh.h(30) : fatal error C1189: #error :  "eh.h is only for C++!"
+rar_time.c
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\eh.h(30) : fatal error C1189: #error :  "eh.h is only for C++!"
+rararch.c
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\eh.h(30) : fatal error C1189: #error :  "eh.h is only for C++!"
+rarentry.c
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\eh.h(30) : fatal error C1189: #error :  "eh.h is only for C++!"
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : warning C4985: '_cabs': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(98) : see declaration of '_cabs'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : warning C4985: 'ceil': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(99) : see declaration of 'ceil'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : warning C4985: 'frexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(101) : see declaration of 'frexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : warning C4985: '_hypot': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(102) : see declaration of '_hypot'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : warning C4985: '_j0': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(103) : see declaration of '_j0'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : warning C4985: '_j1': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(104) : see declaration of '_j1'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : warning C4985: '_jn': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(105) : see declaration of '_jn'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : warning C4985: 'ldexp': attributes not present on previous declaration.
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(106) : see declaration of 'ldexp'
+c:\php-sdk\phpdev\vc9\x86\php-5.6.33\zend\zend_operators.h(112) : warning C4244: 'initializing' : conversion from 'unsigned __int64' to 'double', possible loss of data
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2143: syntax error : missing '{' before ':'
+C:\MsVS09\VC\INCLUDE\cstddef(18) : error C2059: syntax error : ':'
+C:\MsVS09\VC\INCLUDE\eh.h(30) : fatal error C1189: #error :  "eh.h is only for C++!"
+	"cl.exe" /D COMPILE_DL_RAR /D RAR_EXPORTS=1 /DRARDLL /DSILENT /EHsc /D_WSTDIO_DEFINED /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\rar\unrar\ /FdRelease_TS\ext\rar\unrar\ /FpRelease_TS\ext\rar\unrar\ /FRRelease_TS\ext\rar\unrar\ /c ext\rar\unrar\archive.cpp ext\rar\unrar\arcread.cpp ext\rar\unrar\blake2s.cpp ext\rar\unrar\cmddata.cpp ext\rar\unrar\consio.cpp ext\rar\unrar\crc.cpp ext\rar\unrar\crypt.cpp ext\rar\unrar\dll.cpp ext\rar\unrar\encname.cpp ext\rar\unrar\errhnd.cpp ext\rar\unrar\extinfo.cpp ext\rar\unrar\extract.cpp ext\rar\unrar\extractchunk.cpp ext\rar\unrar\filcreat.cpp ext\rar\unrar\file.cpp ext\rar\unrar\filefn.cpp ext\rar\unrar\filestr.cpp ext\rar\unrar\find.cpp ext\rar\unrar\getbits.cpp ext\rar\unrar\global.cpp ext\rar\unrar\hash.cpp ext\rar\unrar\headers.cpp ext\rar\unrar\isnt.cpp ext\rar\unrar\list.cpp ext\rar\unrar\match.cpp ext\rar\unrar\options.cpp ext\rar\unrar\pathfn.cpp ext\rar\unrar\qopen.cpp ext\rar\unrar\rar.cpp ext\rar\unrar\rarvm.cpp ext\rar\unrar\rawread.cpp ext\rar\unrar\rdwrfn.cpp ext\rar\unrar\recvol.cpp ext\rar\unrar\resource.cpp ext\rar\unrar\rijndael.cpp ext\rar\unrar\rs.cpp ext\rar\unrar\rs16.cpp ext\rar\unrar\scantree.cpp ext\rar\unrar\secpassword.cpp ext\rar\unrar\sha1.cpp ext\rar\unrar\sha256.cpp ext\rar\unrar\smallfn.cpp ext\rar\unrar\strfn.cpp ext\rar\unrar\strlist.cpp ext\rar\unrar\system.cpp ext\rar\unrar\threadpool.cpp ext\rar\unrar\timefn.cpp ext\rar\unrar\ui.cpp ext\rar\unrar\unicode.cpp ext\rar\unrar\unpack.cpp ext\rar\unrar\volume.cpp
+archive.cpp
+arcread.cpp
+ext\rar\unrar\arcread.cpp(1072) : error C3861: 'swprintf': identifier not found
+blake2s.cpp
+cmddata.cpp
+consio.cpp
+ext\rar\unrar\cmddata.cpp(251) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\cmddata.cpp(544) : error C3861: 'swprintf': identifier not found
+crc.cpp
+crypt.cpp
+dll.cpp
+encname.cpp
+errhnd.cpp
+extinfo.cpp
+ext\rar\unrar\errhnd.cpp(136) : error C3861: 'vswprintf': identifier not found
+extract.cpp
+extractchunk.cpp
+filcreat.cpp
+ext\rar\unrar\extractchunk.cpp(2) : error C2039: 'ExtractCurrentFileChunkInit' : is not a member of 'CmdExtract'
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\ext\rar\unrar\extract.hpp(7) : see declaration of 'CmdExtract'
+ext\rar\unrar\extractchunk.cpp(8) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(8) : error C2227: left of '->DllError' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(10) : error C2065: 'FirstFile' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(13) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(13) : error C2228: left of '.UnpVolume' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(18) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(34) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(34) : error C2228: left of '.SetUnpackToMemory' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(34) : error C2673: 'ExtractCurrentFileChunkInit' : global functions do not have 'this' pointers
+ext\rar\unrar\extractchunk.cpp(34) : error C2227: left of '->Buffer' must point to class/struct/union/generic type
+ext\rar\unrar\extractchunk.cpp(34) : error C2673: 'ExtractCurrentFileChunkInit' : global functions do not have 'this' pointers
+ext\rar\unrar\extractchunk.cpp(34) : error C2227: left of '->BufferSize' must point to class/struct/union/generic type
+ext\rar\unrar\extractchunk.cpp(35) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(35) : error C2228: left of '.SetSkipUnpCRC' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(36) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(36) : error C2228: left of '.SetCurrentCommand' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(39) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(39) : error C2228: left of '.SetTestMode' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(41) : error C2065: 'FirstFile' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(44) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(45) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(45) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(45) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(45) : error C2070: ''unknown-type'': illegal sizeof operand
+ext\rar\unrar\extractchunk.cpp(45) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(47) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(47) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(51) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(55) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(55) : error C2227: left of '->DllError' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(58) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(58) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(58) : error C2070: ''unknown-type'': illegal sizeof operand
+ext\rar\unrar\extractchunk.cpp(58) : error C2065: 'ArcName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(61) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(61) : error C2228: left of '.UnpVolume' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(62) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(62) : error C2228: left of '.NextVolumeMissing' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(68) : error C3861: 'ExtrDllGetPassword': identifier not found
+ext\rar\unrar\extractchunk.cpp(71) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(71) : error C2227: left of '->DllError' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(76) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(76) : error C2227: left of '->DllDestName' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(78) : error C2065: 'DestFileName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(78) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(78) : error C2227: left of '->DllDestName' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(78) : error C2065: 'DestFileName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(78) : error C2070: ''unknown-type'': illegal sizeof operand
+ext\rar\unrar\extractchunk.cpp(78) : error C2065: 'DestFileName' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(86) : error C3861: 'CheckUnpVer': identifier not found
+ext\rar\unrar\extractchunk.cpp(89) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(89) : error C2227: left of '->DllError' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(93) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(93) : error C2227: left of '->Password' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(95) : error C3861: 'ConvertDosPassword': identifier not found
+ext\rar\unrar\extractchunk.cpp(99) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(99) : error C2228: left of '.SetEncryption' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(112) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(112) : error C2228: left of '.CurUnpRead' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(113) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(113) : error C2228: left of '.CurUnpWrite' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(114) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(114) : error C2228: left of '.UnpHash' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(114) : error C2228: left of '.Init' must have class/struct/union
+ext\rar\unrar\extractchunk.cpp(114) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(114) : error C2227: left of '->Threads' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(115) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(115) : error C2228: left of '.PackedDataHash' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(115) : error C2228: left of '.Init' must have class/struct/union
+ext\rar\unrar\extractchunk.cpp(115) : error C2065: 'Cmd' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(115) : error C2227: left of '->Threads' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(116) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(116) : error C2228: left of '.SetPackedSizeToRead' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(117) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(117) : error C2228: left of '.SetFiles' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(118) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(118) : error C2228: left of '.SetTestMode' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(119) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(119) : error C2228: left of '.SetSkipUnpCRC' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(124) : error C2039: 'ExtractCurrentFileChunk' : is not a member of 'CmdExtract'
+        c:\php-sdk\phpdev\vc9\x86\php-5.6.33\ext\rar\unrar\extract.hpp(7) : see declaration of 'CmdExtract'
+ext\rar\unrar\extractchunk.cpp(134) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(134) : error C2228: left of '.SetUnpackToMemory' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(134) : error C2673: 'ExtractCurrentFileChunk' : global functions do not have 'this' pointers
+ext\rar\unrar\extractchunk.cpp(134) : error C2227: left of '->Buffer' must point to class/struct/union/generic type
+ext\rar\unrar\extractchunk.cpp(134) : error C2673: 'ExtractCurrentFileChunk' : global functions do not have 'this' pointers
+ext\rar\unrar\extractchunk.cpp(134) : error C2227: left of '->BufferSize' must point to class/struct/union/generic type
+ext\rar\unrar\extractchunk.cpp(137) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(137) : error C2673: 'ExtractCurrentFileChunk' : global functions do not have 'this' pointers
+ext\rar\unrar\extractchunk.cpp(137) : error C2227: left of '->BufferSize' must point to class/struct/union/generic type
+ext\rar\unrar\extractchunk.cpp(137) : error C3861: 'UnstoreFile': identifier not found
+ext\rar\unrar\extractchunk.cpp(142) : error C2065: 'DataIO' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(142) : error C2228: left of '.GetUnpackToMemorySizeLeft' must have class/struct/union
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(146) : error C2065: 'Unp' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(146) : error C2227: left of '->Init' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(147) : error C2065: 'Unp' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(147) : error C2227: left of '->SetDestSize' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(149) : error C2065: 'Unp' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(149) : error C2227: left of '->DoUnpack' must point to class/struct/union/generic type
+        type is ''unknown-type''
+ext\rar\unrar\extractchunk.cpp(149) : error C2065: 'FileCount' : undeclared identifier
+ext\rar\unrar\extractchunk.cpp(149) : error C2673: 'ExtractCurrentFileChunk' : global functions do not have 'this' pointers
+ext\rar\unrar\extractchunk.cpp(149) : fatal error C1003: error count exceeds 100; stopping compilation
+file.cpp
+ext\rar\unrar\filcreat.cpp(66) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\filcreat.cpp(115) : error C3861: 'swprintf': identifier not found
+filefn.cpp
+filestr.cpp
+find.cpp
+getbits.cpp
+global.cpp
+hash.cpp
+headers.cpp
+isnt.cpp
+list.cpp
+match.cpp
+ext\rar\unrar\list.cpp(80) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\list.cpp(225) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\list.cpp(240) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\list.cpp(435) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\list.cpp(457) : error C3861: 'swprintf': identifier not found
+options.cpp
+pathfn.cpp
+qopen.cpp
+ext\rar\unrar\pathfn.cpp(561) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(736) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(737) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(738) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(739) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(740) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(741) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(742) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(743) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(744) : error C3861: 'sprintf': identifier not found
+ext\rar\unrar\pathfn.cpp(745) : error C3861: 'sprintf': identifier not found
+rar.cpp
+rarvm.cpp
+rawread.cpp
+rdwrfn.cpp
+recvol.cpp
+resource.cpp
+rijndael.cpp
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(36) : warning C4068: unknown pragma
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(37) : warning C4068: unknown pragma
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(43) : error C2065: '__gnu_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(43) : error C2065: '__always_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(43) : error C2065: '__artificial__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(44) : error C2433: '__attribute__' : 'inline' not permitted on data declarations
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(44) : error C2146: syntax error : missing ';' before identifier '_mm_aesdec_si128'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(45) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(46) : error C2065: '__v2di' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(46) : error C2146: syntax error : missing ')' before identifier '__X'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(46) : error C2059: syntax error : ')'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(47) : warning C4508: '_mm_aesdec_si128' : function should return a value; 'void' return type assumed
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(51) : error C2065: '__gnu_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(51) : error C2065: '__always_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(51) : error C2065: '__artificial__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(52) : error C2433: '__attribute__' : 'inline' not permitted on data declarations
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(52) : error C2374: '__attribute__' : redefinition; multiple initialization
+        C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(43) : see declaration of '__attribute__'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(52) : error C2146: syntax error : missing ';' before identifier '_mm_aesdeclast_si128'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(53) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(54) : error C2065: '__v2di' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(54) : error C2146: syntax error : missing ')' before identifier '__X'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(55) : error C2059: syntax error : ')'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(56) : warning C4508: '_mm_aesdeclast_si128' : function should return a value; 'void' return type assumed
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(60) : error C2065: '__gnu_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(60) : error C2065: '__always_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(60) : error C2065: '__artificial__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(61) : error C2433: '__attribute__' : 'inline' not permitted on data declarations
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(61) : error C2374: '__attribute__' : redefinition; multiple initialization
+        C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(43) : see declaration of '__attribute__'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(61) : error C2146: syntax error : missing ';' before identifier '_mm_aesenc_si128'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(62) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(63) : error C2065: '__v2di' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(63) : error C2146: syntax error : missing ')' before identifier '__X'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(63) : error C2059: syntax error : ')'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(64) : warning C4508: '_mm_aesenc_si128' : function should return a value; 'void' return type assumed
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(68) : error C2065: '__gnu_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(68) : error C2065: '__always_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(68) : error C2065: '__artificial__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(69) : error C2433: '__attribute__' : 'inline' not permitted on data declarations
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(69) : error C2374: '__attribute__' : redefinition; multiple initialization
+        C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(43) : see declaration of '__attribute__'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(69) : error C2146: syntax error : missing ';' before identifier '_mm_aesenclast_si128'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(70) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(71) : error C2065: '__v2di' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(71) : error C2146: syntax error : missing ')' before identifier '__X'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(71) : error C2059: syntax error : ')'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(72) : warning C4508: '_mm_aesenclast_si128' : function should return a value; 'void' return type assumed
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(76) : error C2065: '__gnu_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(76) : error C2065: '__always_inline__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(76) : error C2065: '__artificial__' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(77) : error C2433: '__attribute__' : 'inline' not permitted on data declarations
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(77) : error C2374: '__attribute__' : redefinition; multiple initialization
+        C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(43) : see declaration of '__attribute__'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(77) : error C2146: syntax error : missing ';' before identifier '_mm_aesimc_si128'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(78) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(79) : error C2065: '__v2di' : undeclared identifier
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(79) : error C2146: syntax error : missing ')' before identifier '__X'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(79) : error C2059: syntax error : ')'
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(80) : warning C4508: '_mm_aesimc_si128' : function should return a value; 'void' return type assumed
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(99) : warning C4068: unknown pragma
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(105) : warning C4068: unknown pragma
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(106) : warning C4068: unknown pragma
+C:\php-sdk\phpdev\vc9\x86\deps\include\wmmintrin.h(129) : warning C4068: unknown pragma
+ext\rar\unrar\rijndael.cpp(202) : error C2679: binary '=' : no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+        C:\MsVS09\VC\INCLUDE\emmintrin.h(45): could be '__m128i &__m128i::operator =(const __m128i &)'
+        while trying to match the argument list '(__m128i, int)'
+rs.cpp
+ext\rar\unrar\rijndael.cpp(206) : error C2679: binary '=' : no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+        C:\MsVS09\VC\INCLUDE\emmintrin.h(45): could be '__m128i &__m128i::operator =(const __m128i &)'
+        while trying to match the argument list '(__m128i, int)'
+ext\rar\unrar\rijndael.cpp(301) : error C2679: binary '=' : no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+        C:\MsVS09\VC\INCLUDE\emmintrin.h(45): could be '__m128i &__m128i::operator =(const __m128i &)'
+        while trying to match the argument list '(__m128i, int)'
+ext\rar\unrar\rijndael.cpp(305) : error C2679: binary '=' : no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+        C:\MsVS09\VC\INCLUDE\emmintrin.h(45): could be '__m128i &__m128i::operator =(const __m128i &)'
+        while trying to match the argument list '(__m128i, int)'
+rs16.cpp
+scantree.cpp
+secpassword.cpp
+sha1.cpp
+sha256.cpp
+smallfn.cpp
+strfn.cpp
+strlist.cpp
+system.cpp
+threadpool.cpp
+timefn.cpp
+ui.cpp
+ext\rar\unrar\timefn.cpp(232) : error C3861: 'swprintf': identifier not found
+ext\rar\unrar\timefn.cpp(234) : error C3861: 'swprintf': identifier not found
+unicode.cpp
+unpack.cpp
+volume.cpp
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_xmlreader.obj : warning LNK4217: locally defined symbol _php_dom_create_object imported in function _zim_xmlreader_expand
+php_xmlreader.obj : warning LNK4049: locally defined symbol _dom_node_class_entry imported
+libmcrypt_a.lib(cbc.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(cfb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ctr.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ecb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ncfb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(nofb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(ofb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(stream.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(arcfour.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(blowfish-compat.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(blowfish.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(cast-128.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(cast-256.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(des.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(enigma.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(gost.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(loki97.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rc2.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rijndael-128.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rijndael-192.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(rijndael-256.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(saferplus.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(serpent.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(tripledes.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(twofish.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(wake.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xtea.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(bzero.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt_extra.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt_modules.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(mcrypt_symb.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmemory.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(buf.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(c14n.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(catalog.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(chvalid.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(debugXML.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(dict.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(encoding.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(entities.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(error.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(globals.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(hash.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(HTMLparser.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(HTMLtree.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(list.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(nanoftp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(nanohttp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(parser.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(parserInternals.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(pattern.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(relaxng.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(SAX.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(SAX2.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(tree.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(uri.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(valid.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xinclude.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlIO.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlmemory.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlreader.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlregexp.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlsave.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlschemas.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlschemastypes.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlstring.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlunicode.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xmlwriter.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xpath.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+libmcrypt_a.lib(xpointer.obj) : warning LNK4099: PDB 'vc90.pdb' was not found with 'C:\php-sdk\phpdev\vc9\x86\deps\lib\libmcrypt_a.lib' or at 'c:\php-sdk\phpdev\vc9\x86\php-5.6.33\Release_TS\vc90.pdb'; linking object as if no debug info
+LINK : fatal error LNK1181: cannot open input file 'Release_TS\ext\rar\rar_time.obj'
+
+mt.exe : general error c10100b1: Failed to load file "Release_TS\php_rar.dll". The system cannot find the file specified.
+EXT rar build complete

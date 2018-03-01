@@ -12,9 +12,7 @@
 #define SILENT
 #endif
 
-#if defined(__cplusplus)
 #include <new>
-#endif
 
 
 #if defined(_WIN_ALL) || defined(_EMX)
@@ -22,7 +20,7 @@
 #define LITTLE_ENDIAN
 #define NM  2048
 
-#if defined(_WIN_ALL) && !defined(LEAN_RAR_INCLUDES)
+#ifdef _WIN_ALL
 
 #define STRICT
 #define UNICODE
@@ -71,7 +69,6 @@
   #include <dirent.h>
 #endif // _MSC_VER
 
-#undef _WSTDIO_DEFINED
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>

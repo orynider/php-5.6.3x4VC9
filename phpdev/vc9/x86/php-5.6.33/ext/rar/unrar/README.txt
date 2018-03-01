@@ -20,6 +20,9 @@
    you need to undefine ALLOW_NOT_ALIGNED_INT and define
    STRICT_ALIGNMENT_REQUIRED in os.h.
 
+   UnRAR.vcproj and UnRARDll.vcproj are projects for Microsoft Visual C++.
+   UnRARDll.vcproj lets to build unrar.dll library.
+
 
    2. Unrar binaries
 

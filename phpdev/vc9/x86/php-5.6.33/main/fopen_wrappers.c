@@ -25,8 +25,8 @@
 #include "php_globals.h"
 #include "SAPI.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -58,7 +58,7 @@
 #endif
 
 #ifdef PHP_WIN32
-#include <winsock2.h>
+#include <Ws2tcpip.h>
 #elif defined(NETWARE) && defined(USE_WINSOCK)
 #include <novsock2.h>
 #else

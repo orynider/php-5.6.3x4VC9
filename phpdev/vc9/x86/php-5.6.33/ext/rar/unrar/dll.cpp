@@ -48,7 +48,7 @@ HANDLE PASCAL RAROpenArchiveEx(struct RAROpenArchiveDataEx *r)
       strncpyz(AnsiArcName,r->ArcName,ASIZE(AnsiArcName));
 #ifdef _WIN_ALL
       if (!AreFileApisANSI())
-    {
+      {
         OemToCharBuffA(r->ArcName,AnsiArcName,ASIZE(AnsiArcName));
         AnsiArcName[ASIZE(AnsiArcName)-1]=0;
       }
@@ -90,7 +90,7 @@ HANDLE PASCAL RAROpenArchiveEx(struct RAROpenArchiveDataEx *r)
       return NULL;
     }
     r->Flags=0;
-
+    
     if (Data->Arc.Volume)
       r->Flags|=0x01;
     if (Data->Arc.Locked)
@@ -180,6 +180,7 @@ int PASCAL RARReadHeader(HANDLE hArcData,struct RARHeaderData *D)
 
   return Code;
 }
+
 
 int PASCAL RARReadHeaderEx(HANDLE hArcData,struct RARHeaderDataEx *D)
 {
@@ -300,26 +301,9 @@ int PASCAL RARReadHeaderEx(HANDLE hArcData,struct RARHeaderDataEx *D)
 }
 
 
-int PASCAL ProcessFile(HANDLE hArcData, int Operation, char *DestPath,
-                       char *DestName, wchar *DestPathW, wchar *DestNameW,
-                       void *Buffer, size_t BufferSize, size_t *ReadSize,
-                       bool InitDataIO, int *finished)
+int PASCAL ProcessFile(HANDLE hArcData,int Operation,char *DestPath,char *DestName,wchar *DestPathW,wchar *DestNameW)
 {
   DataSet *Data=(DataSet *)hArcData;
-
-  /* if not extracting chunks, we want to init IO all the time
-   * (that was the behaviour before adding RAR_EXTRACT_CHUNK, which thus
-   * remains unaltered) */
-  if (Operation != RAR_EXTRACT_CHUNK)
-    InitDataIO = TRUE;
-
-  /* we must set these here because the function may return before executing the
-   * code that updates the variables. */
-  if (ReadSize != NULL)
-    *ReadSize = 0;
-  if (finished != NULL)
-	  *finished = TRUE;
-
   try
   {
     Data->Cmd.DllError=0;
@@ -381,36 +365,8 @@ int PASCAL ProcessFile(HANDLE hArcData, int Operation, char *DestPath,
 
       wcscpy(Data->Cmd.Command,Operation==RAR_EXTRACT ? L"X":L"T");
       Data->Cmd.Test=Operation!=RAR_EXTRACT;
-      if (Operation == RAR_EXTRACT_CHUNK)
-      {
-        //disabled completion percentage calculation/printing?
-        Data->Cmd.DisablePercentage = true;
-        //doesn't seem to be read except for inactive preproc. blocks anyway:
-        Data->Cmd.DisableDone = true;
-        Data->Extract.Buffer = Buffer;
-        Data->Extract.BufferSize = BufferSize;
-      }
-
       bool Repeat=false;
-      if (Operation != RAR_EXTRACT_CHUNK)
-        Data->Extract.ExtractCurrentFile(Data->Arc,Data->HeaderSize,Repeat);
-      else
-      {
-        if (InitDataIO) //chunk, init
-        {
-          bool res;
-          res = Data->Extract.ExtractCurrentFileChunkInit(Data->Arc,
-            Data->HeaderSize, Repeat);
-          if (!res && Data->Cmd.DllError == 0)
-            Data->Cmd.DllError = ERAR_UNKNOWN;
-          return Data->Cmd.DllError;
-        }
-        else //chunk, no init
-          //returns always true
-          //changes *ReadSize and *finished
-          Data->Extract.ExtractCurrentFileChunk(&Data->Cmd, Data->Arc,
-            ReadSize, finished);
-      }
+      Data->Extract.ExtractCurrentFile(Data->Arc,Data->HeaderSize,Repeat);
 
       // Now we process extra file information if any.
       //
@@ -419,11 +375,6 @@ int PASCAL ProcessFile(HANDLE hArcData, int Operation, char *DestPath,
       // if archive is still open to avoid calling file operations on
       // the invalid file handle. Some of our file operations like Seek()
       // process such invalid handle correctly, some not.
-      /* if extracting by chunks, do move to next block, not even if we've read
-       * the whole file. The only purpose of this code seems to be applying
-       * permissions and other metadata to files, so we're not interested if
-       * extracting chunks */
-      if (Operation != RAR_EXTRACT_CHUNK) {
       while (Data->Arc.IsOpened() && Data->Arc.ReadHeader()!=0 && 
              Data->Arc.GetHeaderType()==HEAD_SERVICE)
       {
@@ -431,7 +382,6 @@ int PASCAL ProcessFile(HANDLE hArcData, int Operation, char *DestPath,
         Data->Arc.SeekToNext();
       }
       Data->Arc.Seek(Data->Arc.CurBlockPos,SEEK_SET);
-    }
     }
   }
   catch (std::bad_alloc&)
@@ -448,32 +398,15 @@ int PASCAL ProcessFile(HANDLE hArcData, int Operation, char *DestPath,
 
 int PASCAL RARProcessFile(HANDLE hArcData,int Operation,char *DestPath,char *DestName)
 {
-  return(ProcessFile(hArcData,Operation,DestPath,DestName,NULL,NULL,NULL,0,
-    NULL,false,NULL));
+  return(ProcessFile(hArcData,Operation,DestPath,DestName,NULL,NULL));
 }
 
 
 int PASCAL RARProcessFileW(HANDLE hArcData,int Operation,wchar *DestPath,wchar *DestName)
 {
-  return(ProcessFile(hArcData,Operation,NULL,NULL,DestPath,DestName,NULL,0,
-    NULL,false,NULL));
+  return(ProcessFile(hArcData,Operation,NULL,NULL,DestPath,DestName));
 }
 
-int PASCAL RARProcessFileChunkInit(HANDLE hArcData)
-{
-  return ProcessFile(hArcData, RAR_EXTRACT_CHUNK, NULL, NULL, NULL, NULL,
-    NULL, 0, NULL, true, NULL);
-}
-
-int PASCAL RARProcessFileChunk(HANDLE hArcData,
-                               void *Buffer,
-                               size_t BufferSize,
-                               size_t *ReadSize,
-                               int *finished)
-{
-  return ProcessFile(hArcData, RAR_EXTRACT_CHUNK, NULL, NULL, NULL, NULL,
-    Buffer, BufferSize, ReadSize, false, finished);
-}
 
 void PASCAL RARSetChangeVolProc(HANDLE hArcData,CHANGEVOLPROC ChangeVolProc)
 {
@@ -487,14 +420,6 @@ void PASCAL RARSetCallback(HANDLE hArcData,UNRARCALLBACK Callback,LPARAM UserDat
   DataSet *Data=(DataSet *)hArcData;
   Data->Cmd.Callback=Callback;
   Data->Cmd.UserData=UserData;
-}
-
-//added by me
-void PASCAL RARSetProcessExtendedData(HANDLE hArcData, int value)
-{
-  DataSet *Data = (DataSet *) hArcData;
-  Data->Cmd.ProcessOwners = value != 0 ? true : false;
-  Data->Cmd.ProcessEA = value != 0 ? true : false;
 }
 
 

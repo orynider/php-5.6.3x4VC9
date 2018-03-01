@@ -64,7 +64,7 @@
 
 #include <sys/types.h>
 #include <string.h>
-
+#include <win32/php_stdint.h>
 #ifdef TEST
 #include <stdio.h>
 #endif

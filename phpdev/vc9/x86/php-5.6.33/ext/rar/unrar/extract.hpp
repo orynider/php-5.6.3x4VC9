@@ -56,13 +56,7 @@ class CmdExtract
     void DoExtract();
     void ExtractArchiveInit(Archive &Arc);
     bool ExtractCurrentFile(Archive &Arc,size_t HeaderSize,bool &Repeat);
-    bool ExtractCurrentFileChunkInit(Archive &Arc, size_t HeaderSize, bool &Repeat);
-    bool ExtractCurrentFileChunk(CommandData *Cmd, Archive &Arc,
-      size_t *ReadSize, int *finished);
     static void UnstoreFile(ComprDataIO &DataIO,int64 DestUnpSize);
-    //next two lines added by me
-	void *Buffer;
-	size_t BufferSize;
 };
 
 #endif

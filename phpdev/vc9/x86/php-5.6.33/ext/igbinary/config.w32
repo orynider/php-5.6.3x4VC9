@@ -1,27 +1,45 @@
-// vim: ft=javascript:
+// $Id$
+// vim:ft=javascript
 
-ARG_ENABLE("redis", "whether to enable redis support", "no");
-ARG_ENABLE("redis-session", "whether to enable sessions", "yes");
-ARG_ENABLE("redis-igbinary", "whether to enable igbinary serializer support", "no");
+ARG_ENABLE("igbinary", "whether to enable igbinary support", "no");
 
-if (PHP_REDIS != "no") {
-	var sources = "redis.c redis_commands.c library.c redis_session.c redis_array.c redis_array_impl.c redis_cluster.c cluster_library.c";
-	if (PHP_REDIS_SESSION != "no") {
-		ADD_EXTENSION_DEP("redis", "session");
-		ADD_FLAG("CFLAGS_REDIS", ' /D PHP_SESSION=1 ');
-		AC_DEFINE("HAVE_REDIS_SESSION", 1);
-	}
+if (PHP_IGBINARY == "yes") {
+  var dll = get_define('PHPDLL');
+  var is_php5 = null != dll.match(/^php5/);
+  var is_php7 = !is_php5 && null != dll.match(/^php7/)
 
-	if (PHP_REDIS_IGBINARY != "no") {
-		if (CHECK_HEADER_ADD_INCLUDE("igbinary.h", "CFLAGS_REDIS", configure_module_dirname + "\\..\\igbinary")) {
+  if (CHECK_HEADER_ADD_INCLUDE("apc_serializer.h", "CFLAGS_IGBINARY", "..\\pecl\\apcu;ext\\apcu")) {
+    AC_DEFINE('HAVE_APCU_SUPPORT', 1, "Whether to enable apcu support");
+    if (!CHECK_HEADER_ADD_INCLUDE("apc_serializer.h", "CFLAGS_IGBINARY", "ext\\apcu")) {
+      // Workaround to allow configuring and making apcu and igbinary at the same time.
+      // If they aren't available in ext/apcu, expect them in ../pecl/apcu
+      AC_DEFINE('HAVE_APCU_HEADERS_IN_PECL', 1, "Whether or not apcu headers exist only in pecl folder")
+    }
+  } else if (is_php5 && CHECK_HEADER_ADD_INCLUDE("apc_serializer.h", "CFLAGS_IGBINARY", "..\\pecl\\apc;ext\\apc")) {
+	// Don't try ext/apc unless this is a php 5 build.
+	// For some reason, the header files still exist for pecl.php.net 7.0 builds.
+    AC_DEFINE('HAVE_APC_SUPPORT', 1, 'Whether to enable apc support')
+  }
+  var old_conf_dir = configure_module_dirname;
+  var php_igbinary_src_files;
+  var subdir;
 
-			ADD_EXTENSION_DEP("redis", "igbinary");
-			AC_DEFINE("HAVE_REDIS_IGBINARY", 1);
-		} else {
-			WARNING("redis igbinary support not enabled");
-		}
-	}
-	EXTENSION("redis", sources);
-
+  /* Copied from solr config.w32 */
+  /* XXX tricky job here, override configure_module_dirname, define the basic extension,
+     then set it back*/
+  if (is_php5) {
+    subdir = "src\\php5"
+    php_igbinary_src_files = "igbinary.c hash_si.c hash_si_ptr.c"
+  } else if (is_php7) {
+    subdir = "src\\php7";
+    php_igbinary_src_files = "igbinary.c hash_si.c hash_si_ptr.c"
+  } else {
+    ERROR("Cannot match any known PHP version with '" + dll + "'");
+  }
+  configure_module_dirname = configure_module_dirname + "\\" + subdir;
+  EXTENSION("igbinary", php_igbinary_src_files);
+  configure_module_dirname = old_conf_dir;
+  AC_DEFINE('HAVE_IGBINARY', 1, 'Have igbinary support', false);
+  ADD_EXTENSION_DEP('igbinary', 'session', true);
+  PHP_INSTALL_HEADERS('ext/igbinary', 'igbinary.h php_igbinary.h ' + subdir + '\\igbinary.h ' + subdir + '\\php_igbinary.h');
 }
-

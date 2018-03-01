@@ -344,27 +344,28 @@ static zend_always_inline zval *_get_zval_ptr_cv_BP_VAR_W(const zend_execute_dat
 
 static inline zval *_get_zval_ptr(int op_type, const znode_op *node, const zend_execute_data *execute_data, zend_free_op *should_free, int type TSRMLS_DC)
 {
-/*	should_free->is_var = 0; */
-	switch (op_type) {
+	/* should_free->is_var = 0; */
+	switch (op_type) 
+	{
 		case IS_CONST:
 			should_free->var = 0;
 			return node->zv;
-			break;
+		break;
 		case IS_TMP_VAR:
 			should_free->var = TMP_FREE(&EX_T(node->var).tmp_var);
 			return &EX_T(node->var).tmp_var;
-			break;
+		break;
 		case IS_VAR:
 			return _get_zval_ptr_var(node->var, execute_data, should_free TSRMLS_CC);
-			break;
+		break;
 		case IS_UNUSED:
 			should_free->var = 0;
 			return NULL;
-			break;
+		break;
 		case IS_CV:
 			should_free->var = 0;
 			return _get_zval_ptr_cv(node->var, type TSRMLS_CC);
-			break;
+		break;
 		EMPTY_SWITCH_DEFAULT_CASE()
 	}
 	return NULL;

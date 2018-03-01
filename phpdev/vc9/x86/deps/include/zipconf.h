@@ -35,9 +35,9 @@
 #define LONG_LONG_LIBZIP 8
 
 #if defined(HAVE_STDINT_H_LIBZIP)
-#include <stdint.h>
+#include <msinttypes/stdint.h>
 #elif defined(HAVE_INTTYPES_H_LIBZIP)
-#include <inttypes.h>
+#include <msinttypes/inttypes.h>
 #elif defined(HAVE_SYS_TYPES_H_LIBZIP)
 #include <sys/types.h>
 #endif

@@ -77,12 +77,11 @@ bool MergeArchive(Archive &Arc,ComprDataIO *DataIO,bool ShowFileName,wchar Comma
         }
       }
 #ifdef RARDLL
-      //rar extension depends on NextName having size NM
       if (!DllVolChange(Cmd,NextName,ASIZE(NextName)))
-          {
-      FailedOpen=true;
-      break;
-    }
+      {
+        FailedOpen=true;
+        break;
+      }
 #else // !RARDLL
 
 #ifndef SFX_MODULE

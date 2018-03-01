@@ -1,0 +1,19 @@
+	"cl.exe" /I "C:\php-sdk\phpdev\vc9\x86\deps\include\libxml2"  /DHAVE_LIBXML_PARSER_H=1 /D COMPILE_DL_WDDX /D WDDX_EXPORTS=1  /I "ext/date/lib"  /DHAVE_TIMELIB_CONFIG_H=1 /nologo /FD /I . /I main /I Zend /I TSRM /I ext /D _WINDOWS /D ZEND_WIN32=1 /D PHP_WIN32=1 /D WIN32 /D _MBCS /W3   /wd4996 /D_USE_32BIT_TIME_T=1   /MP  /Zi /LD /MD /W3 /Ox /D NDebug /D NDEBUG /D ZEND_WIN32_FORCE_INLINE /GF /D ZEND_DEBUG=0 /D ZTS=1 /I "C:\php-sdk\phpdev\vc9\x86\deps\include"  /D FD_SETSIZE=256 /FoRelease_TS\ext\wddx\ /FdRelease_TS\ext\wddx\ /FpRelease_TS\ext\wddx\ /FRRelease_TS\ext\wddx\ /c ext\wddx\wddx.c
+wddx.c
+ext\wddx\wddx.c(538) : warning C4090: 'function' : different 'const' qualifiers
+ext\wddx\wddx.c(542) : warning C4090: 'function' : different 'const' qualifiers
+ext\wddx\wddx.c(874) : warning C4090: '=' : different 'const' qualifiers
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+Recreating build dirs
+        1 file(s) copied.
+   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+php_xmlreader.obj : warning LNK4217: locally defined symbol _php_dom_create_object imported in function _zim_xmlreader_expand
+php_xmlreader.obj : warning LNK4049: locally defined symbol _dom_node_class_entry imported
+   Creating library Release_TS\php_wddx.lib and object Release_TS\php_wddx.exp
+EXT wddx build complete

@@ -2,7 +2,7 @@
    +----------------------------------------------------------------------+
    | PHP Version 5                                                        |
    +----------------------------------------------------------------------+
-   | Copyright (c) 1997-2016 The PHP Group                                |
+   | Copyright (c) 1997-2014 The PHP Group                                |
    +----------------------------------------------------------------------+
    | This source file is subject to version 3.01 of the PHP license,      |
    | that is bundled with this package in the file LICENSE, and is        |
@@ -39,7 +39,7 @@ _qualify_namespace(XML_Parser parser, const xmlChar *name, const xmlChar *URI, x
 	if (URI) {
 			/* Use libxml functions otherwise its memory deallocation is screwed up */
 			*qualified = xmlStrdup(URI);
-			*qualified = xmlStrncat(*qualified, parser->_ns_separator, 1);
+			*qualified = xmlStrncat(*qualified, parser->_ns_seperator, 1);
 			*qualified = xmlStrncat(*qualified, name, xmlStrlen(name));
 	} else {
 		*qualified = xmlStrdup(name);
@@ -446,13 +446,13 @@ php_xml_compat_handlers = {
 	NULL	
 };
 
-PHPAPI XML_Parser 
+extern XML_Parser 
 XML_ParserCreate(const XML_Char *encoding)
 {
 	return XML_ParserCreate_MM(encoding, NULL, NULL);
 }
 
-PHPAPI XML_Parser
+extern XML_Parser
 XML_ParserCreateNS(const XML_Char *encoding, const XML_Char sep)
 {
 	XML_Char tmp[2];
@@ -461,7 +461,7 @@ XML_ParserCreateNS(const XML_Char *encoding, const XML_Char sep)
 	return XML_ParserCreate_MM(encoding, NULL, tmp);
 }
 
-PHPAPI XML_Parser
+extern XML_Parser
 XML_ParserCreate_MM(const XML_Char *encoding, const XML_Memory_Handling_Suite *memsuite, const XML_Char *sep)
 {
 	XML_Parser parser;
@@ -469,7 +469,7 @@ XML_ParserCreate_MM(const XML_Char *encoding, const XML_Memory_Handling_Suite *m
 	parser = (XML_Parser) emalloc(sizeof(struct _XML_Parser));
 	memset(parser, 0, sizeof(struct _XML_Parser));
 	parser->use_namespace = 0;
-	parser->_ns_separator = NULL;
+	parser->_ns_seperator = NULL;
 
 	parser->parser = xmlCreatePushParserCtxt((xmlSAXHandlerPtr) &php_xml_compat_handlers, (void *) parser, NULL, 0, NULL);
 	if (parser->parser == NULL) {
@@ -491,7 +491,7 @@ XML_ParserCreate_MM(const XML_Char *encoding, const XML_Memory_Handling_Suite *m
 	if (sep != NULL) {
 		parser->use_namespace = 1;
 		parser->parser->sax2 = 1;
-		parser->_ns_separator = xmlStrdup(sep);
+		parser->_ns_seperator = xmlStrdup(sep);
 	} else {
 		/* Reset flag as XML_SAX2_MAGIC is needed for xmlCreatePushParserCtxt 
 		so must be set in the handlers */
@@ -500,80 +500,80 @@ XML_ParserCreate_MM(const XML_Char *encoding, const XML_Memory_Handling_Suite *m
 	return parser;
 }
 
-PHPAPI void
+extern void
 XML_SetUserData(XML_Parser parser, void *user)
 {
 	parser->user = user;
 }
 
-PHPAPI void *
+extern void *
 XML_GetUserData(XML_Parser parser)
 {
 	return parser->user;
 }
 
-PHPAPI void
+extern void
 XML_SetElementHandler(XML_Parser parser, XML_StartElementHandler start, XML_EndElementHandler end)
 {
 	parser->h_start_element = start;
 	parser->h_end_element = end;
 }
 
-PHPAPI void
+extern void
 XML_SetCharacterDataHandler(XML_Parser parser, XML_CharacterDataHandler cdata)
 {
 	parser->h_cdata = cdata;
 }
 
-PHPAPI void
+extern void
 XML_SetProcessingInstructionHandler(XML_Parser parser, XML_ProcessingInstructionHandler pi)
 {
 	parser->h_pi = pi;
 }
 
-PHPAPI void
+extern void
 XML_SetCommentHandler(XML_Parser parser, XML_CommentHandler comment)
 {
 	parser->h_comment = comment;
 }
 
-PHPAPI void 
+extern void 
 XML_SetDefaultHandler(XML_Parser parser, XML_DefaultHandler d)
 {
 	parser->h_default = d;
 }
 
-PHPAPI void
+extern void
 XML_SetUnparsedEntityDeclHandler(XML_Parser parser, XML_UnparsedEntityDeclHandler unparsed_decl)
 {
 	parser->h_unparsed_entity_decl = unparsed_decl;
 }
 
-PHPAPI void
+extern void
 XML_SetNotationDeclHandler(XML_Parser parser, XML_NotationDeclHandler notation_decl)
 {
 	parser->h_notation_decl = notation_decl;
 }
 
-PHPAPI void
+extern void
 XML_SetExternalEntityRefHandler(XML_Parser parser, XML_ExternalEntityRefHandler ext_entity)
 {
 	parser->h_external_entity_ref = ext_entity;
 }
 
-PHPAPI void
+extern void
 XML_SetStartNamespaceDeclHandler(XML_Parser parser, XML_StartNamespaceDeclHandler start_ns)
 {
 	parser->h_start_ns = start_ns;
 }
 
-PHPAPI void
+extern void
 XML_SetEndNamespaceDeclHandler(XML_Parser parser, XML_EndNamespaceDeclHandler end_ns)
 {
 	parser->h_end_ns = end_ns;
 }
 
-PHPAPI int
+extern int
 XML_Parse(XML_Parser parser, const XML_Char *data, int data_len, int is_final)
 {
 	int error;
@@ -612,7 +612,7 @@ has been defined and none can be detected */
 	}
 }
 
-PHPAPI int
+extern int
 XML_GetErrorCode(XML_Parser parser)
 {
 	return parser->parser->errNo;
@@ -707,24 +707,24 @@ static const XML_Char *const error_mapping[] = {
 	(const XML_Char *)"Entity value required",
 	(const XML_Char *)"chunk is not well balanced",
 	(const XML_Char *)"extra content at the end of well balanced chunk",
-	(const XML_Char *)"XML_ERR_ENTITY_CHAR_ERROR",
-	(const XML_Char *)"PEReferences forbidden in internal subset",
-	(const XML_Char *)"Detected an entity reference loop",
-	(const XML_Char *)"XML_ERR_ENTITY_BOUNDARY",
-	(const XML_Char *)"Invalid URI",
-	(const XML_Char *)"Fragment not allowed",
-	(const XML_Char *)"XML_WAR_CATALOG_PI",
-	(const XML_Char *)"XML_ERR_NO_DTD",
-	(const XML_Char *)"conditional section INCLUDE or IGNORE keyword expected", /* 95 */
-	(const XML_Char *)"Version in XML Declaration missing", /* 96 */
-	(const XML_Char *)"XML_WAR_UNKNOWN_VERSION", /* 97 */
-	(const XML_Char *)"XML_WAR_LANG_VALUE", /* 98 */
-	(const XML_Char *)"XML_WAR_NS_URI", /* 99 */
-	(const XML_Char *)"XML_WAR_NS_URI_RELATIVE", /* 100 */
-	(const XML_Char *)"Missing encoding in text declaration" /* 101 */
+    (const XML_Char *)"XML_ERR_ENTITY_CHAR_ERROR",
+    (const XML_Char *)"PEReferences forbidden in internal subset",
+    (const XML_Char *)"Detected an entity reference loop",
+    (const XML_Char *)"XML_ERR_ENTITY_BOUNDARY",
+    (const XML_Char *)"Invalid URI",
+    (const XML_Char *)"Fragment not allowed",
+    (const XML_Char *)"XML_WAR_CATALOG_PI",
+    (const XML_Char *)"XML_ERR_NO_DTD",
+    (const XML_Char *)"conditional section INCLUDE or IGNORE keyword expected", /* 95 */
+    (const XML_Char *)"Version in XML Declaration missing", /* 96 */
+    (const XML_Char *)"XML_WAR_UNKNOWN_VERSION", /* 97 */
+    (const XML_Char *)"XML_WAR_LANG_VALUE", /* 98 */
+    (const XML_Char *)"XML_WAR_NS_URI", /* 99 */
+    (const XML_Char *)"XML_WAR_NS_URI_RELATIVE", /* 100 */
+    (const XML_Char *)"Missing encoding in text declaration" /* 101 */
 };
 
-PHPAPI const XML_Char *
+extern const XML_Char *
 XML_ErrorString(int code)
 {
 	if (code < 0 || code >= (int)(sizeof(error_mapping) / sizeof(error_mapping[0]))) {
@@ -733,26 +733,26 @@ XML_ErrorString(int code)
 	return error_mapping[code];
 }
 
-PHPAPI int
+extern int
 XML_GetCurrentLineNumber(XML_Parser parser)
 {
 	return parser->parser->input->line;
 }
 
-PHPAPI int
+extern int
 XML_GetCurrentColumnNumber(XML_Parser parser)
 {
 	return parser->parser->input->col;
 }
 
-PHPAPI int
+extern int
 XML_GetCurrentByteIndex(XML_Parser parser)
 {
 	return parser->parser->input->consumed +
 			(parser->parser->input->cur - parser->parser->input->base);
 }
 
-PHPAPI int
+extern int
 XML_GetCurrentByteCount(XML_Parser parser)
 {
 	/* WARNING: this is identical to ByteIndex; it should probably
@@ -761,17 +761,17 @@ XML_GetCurrentByteCount(XML_Parser parser)
 			(parser->parser->input->cur - parser->parser->input->base);
 }
 
-PHPAPI const XML_Char *XML_ExpatVersion(void)
+extern const XML_Char *XML_ExpatVersion(void)
 {
 	return "1.0";
 }
 
-PHPAPI void
+extern void
 XML_ParserFree(XML_Parser parser)
 {
 	if (parser->use_namespace) {
-		if (parser->_ns_separator) {
-			xmlFree(parser->_ns_separator);
+		if (parser->_ns_seperator) {
+			xmlFree(parser->_ns_seperator);
 		}
 	}
 	if (parser->parser->myDoc) {

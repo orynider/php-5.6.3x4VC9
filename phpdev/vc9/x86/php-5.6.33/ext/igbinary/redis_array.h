@@ -6,7 +6,10 @@
 #else
 #include <stdint.h>
 #endif
+
 #include "common.h"
+
+void redis_destructor_redis_array(zend_rsrc_list_entry * rsrc TSRMLS_DC);
 
 PHP_METHOD(RedisArray, __construct);
 PHP_METHOD(RedisArray, __call);
@@ -25,12 +28,9 @@ PHP_METHOD(RedisArray, flushall);
 PHP_METHOD(RedisArray, mget);
 PHP_METHOD(RedisArray, mset);
 PHP_METHOD(RedisArray, del);
-PHP_METHOD(RedisArray, unlink);
 PHP_METHOD(RedisArray, keys);
 PHP_METHOD(RedisArray, getOption);
 PHP_METHOD(RedisArray, setOption);
-PHP_METHOD(RedisArray, save);
-PHP_METHOD(RedisArray, bgsave);
 
 PHP_METHOD(RedisArray, multi);
 PHP_METHOD(RedisArray, exec);
@@ -40,29 +40,22 @@ PHP_METHOD(RedisArray, unwatch);
 
 typedef struct RedisArray_ {
 
-    int count;
-    char **hosts;           /* array of host:port strings */
-    zval *redis;            /* array of Redis instances */
-    zval *z_multi_exec;     /* Redis instance to be used in multi-exec */
-    zend_bool index;        /* use per-node index */
-    zend_bool auto_rehash;  /* migrate keys on read operations */
-    zend_bool pconnect;     /* should we use pconnect */
-    zval z_fun;             /* key extractor, callable */
-    zval z_dist;            /* key distributor, callable */
-    HashTable *pure_cmds;   /* hash table */
-    double connect_timeout; /* socket connect timeout */
-    double read_timeout;    /* socket read timeout */
+	int count;
+	char **hosts;			/* array of host:port strings */
+	zval **redis;			/* array of Redis instances */
+	zval *z_multi_exec;		/* Redis instance to be used in multi-exec */
+	zend_bool index;		/* use per-node index */
+	zend_bool auto_rehash; 	/* migrate keys on read operations */
+	zend_bool pconnect;     /* should we use pconnect */
+	zval *z_fun;			/* key extractor, callable */
+	zval *z_dist;			/* key distributor, callable */
+	zval *z_pure_cmds;		/* hash table */
+	double connect_timeout; /* socket connect timeout */
 
-    struct RedisArray_ *prev;
+	struct RedisArray_ *prev;
 } RedisArray;
 
-#if (PHP_MAJOR_VERSION < 7)
-zend_object_value create_redis_array_object(zend_class_entry *ce TSRMLS_DC);
-void free_redis_array_object(void *object TSRMLS_DC);
-#else
-zend_object *create_redis_array_object(zend_class_entry *ce TSRMLS_DC);
-void free_redis_array_object(zend_object *object);
-#endif
+uint32_t rcrc32(const char *s, size_t sz);
 
 
 #endif

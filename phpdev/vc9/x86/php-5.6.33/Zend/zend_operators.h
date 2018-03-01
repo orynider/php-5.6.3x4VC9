@@ -16,12 +16,9 @@
    |          Zeev Suraski <zeev@zend.com>                                |
    +----------------------------------------------------------------------+
 */
-
 /* $Id$ */
-
 #ifndef ZEND_OPERATORS_H
 #define ZEND_OPERATORS_H
-
 #include <errno.h>
 #include <math.h>
 #include <assert.h>
@@ -32,6 +29,13 @@
 
 #ifdef HAVE_IEEEFP_H
 #include <ieeefp.h>
+#endif
+
+#ifdef PHP_WIN32
+#ifdef __DEBUG__
+# include <stinttypes/stdio.h> /* printf */
+#endif      
+# include <math.h>       /* fmod */
 #endif
 
 #include "zend_strtod.h"
@@ -76,10 +80,36 @@ END_EXTERN_C()
 #elif SIZEOF_LONG == 4
 static zend_always_inline long zend_dval_to_lval(double d)
 {
-	if (d > LONG_MAX || d < LONG_MIN) {
-		double	two_pow_32 = pow(2., 32.),
-				dmod;
-
+	#ifdef PHP_WIN32
+        double  __cdecl cos(_In_ double _X);
+        double  __cdecl cosh(_In_ double _X);
+        double  __cdecl exp(_In_ double _X);
+		_CRT_JIT_INTRINSIC double  __cdecl fabs(_In_ double _X);
+        double  __cdecl fmod(_In_ double _X, _In_ double _Y);
+        double  __cdecl log(_In_ double _X);
+        double  __cdecl log10(_In_ double _X);
+        double  __cdecl pow(_In_ double _X, _In_ double _Y);
+        double  __cdecl sin(_In_ double _X);
+        double  __cdecl sinh(_In_ double _X);
+        double  __cdecl tan(_In_ double _X);
+        double  __cdecl tanh(_In_ double _X);
+        double  __cdecl sqrt(_In_ double _X);
+		
+		_CRTIMP double  __cdecl _cabs(_In_ struct _complex _Complex_value);
+		_CRTIMP double  __cdecl ceil(_In_ double _X);
+		_CRTIMP double  __cdecl floor(_In_ double _X);
+		_CRTIMP double  __cdecl frexp(_In_ double _X, _Out_ int * _Y);
+		_CRTIMP double  __cdecl _hypot(_In_ double _X, _In_ double _Y);
+		_CRTIMP double  __cdecl _j0(_In_ double _X );
+		_CRTIMP double  __cdecl _j1(_In_ double _X );
+		_CRTIMP double  __cdecl _jn(int _X, _In_ double _Y);
+		_CRTIMP double  __cdecl ldexp(_In_ double _X, _In_ int _Y);
+	#endif		
+		
+	if (d > LONG_MAX || d < LONG_MIN) 
+	{
+		unsigned long long pow_32 = 2ULL << 32;
+		double two_pow_32 = pow_32, dmod;
 		dmod = fmod(d, two_pow_32);
 		if (dmod < 0) {
 			/* we're going to make this number positive; call ceil()

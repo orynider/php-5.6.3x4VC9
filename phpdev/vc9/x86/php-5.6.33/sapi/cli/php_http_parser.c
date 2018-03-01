@@ -81,7 +81,6 @@ static const char *method_strings[] =
   , "HEAD"
   , "POST"
   , "PUT"
-  , "PATCH"
   , "CONNECT"
   , "OPTIONS"
   , "TRACE"
@@ -89,10 +88,8 @@ static const char *method_strings[] =
   , "LOCK"
   , "MKCOL"
   , "MOVE"
-  , "MKCALENDAR"
   , "PROPFIND"
   , "PROPPATCH"
-  , "SEARCH"
   , "UNLOCK"
   , "REPORT"
   , "MKACTIVITY"
@@ -102,7 +99,6 @@ static const char *method_strings[] =
   , "NOTIFY"
   , "SUBSCRIBE"
   , "UNSUBSCRIBE"
-  , "NOTIMPLEMENTED"
   };
 
 
@@ -195,6 +191,75 @@ static const uint8_t normal_url_char[256] = {
         1,       1,       1,       1,       1,       1,       1,       0 };
 
 
+enum state
+  { s_dead = 1 /* important that this is > 0 */
+
+  , s_start_req_or_res
+  , s_res_or_resp_H
+  , s_start_res
+  , s_res_H
+  , s_res_HT
+  , s_res_HTT
+  , s_res_HTTP
+  , s_res_first_http_major
+  , s_res_http_major
+  , s_res_first_http_minor
+  , s_res_http_minor
+  , s_res_first_status_code
+  , s_res_status_code
+  , s_res_status
+  , s_res_line_almost_done
+
+  , s_start_req
+
+  , s_req_method
+  , s_req_spaces_before_url
+  , s_req_schema
+  , s_req_schema_slash
+  , s_req_schema_slash_slash
+  , s_req_host
+  , s_req_port
+  , s_req_path
+  , s_req_query_string_start
+  , s_req_query_string
+  , s_req_fragment_start
+  , s_req_fragment
+  , s_req_http_start
+  , s_req_http_H
+  , s_req_http_HT
+  , s_req_http_HTT
+  , s_req_http_HTTP
+  , s_req_first_http_major
+  , s_req_http_major
+  , s_req_first_http_minor
+  , s_req_http_minor
+  , s_req_line_almost_done
+
+  , s_header_field_start
+  , s_header_field
+  , s_header_value_start
+  , s_header_value
+
+  , s_header_almost_done
+
+  , s_headers_almost_done
+  /* Important: 's_headers_almost_done' must be the last 'header' state. All
+   * states beyond this must be 'body' states. It is used for overflow
+   * checking. See the PARSING_HEADER() macro.
+   */
+  , s_chunk_size_start
+  , s_chunk_size
+  , s_chunk_size_almost_done
+  , s_chunk_parameters
+  , s_chunk_data
+  , s_chunk_data_almost_done
+  , s_chunk_data_done
+
+  , s_body_identity
+  , s_body_identity_eof
+  };
+
+
 #define PARSING_HEADER(state) (state <= s_headers_almost_done && 0 == (parser->flags & F_TRAILING))
 
 
@@ -258,8 +323,7 @@ size_t php_http_parser_execute (php_http_parser *parser,
                             const char *data,
                             size_t len)
 {
-  char ch;
-  signed char c;
+  char c, ch;
   const char *p = data, *pe;
   size_t to_read;
 
@@ -522,7 +586,7 @@ size_t php_http_parser_execute (php_http_parser *parser,
           case 'O': parser->method = PHP_HTTP_OPTIONS; break;
           case 'P': parser->method = PHP_HTTP_POST; /* or PROPFIND or PROPPATCH or PUT */ break;
           case 'R': parser->method = PHP_HTTP_REPORT; break;
-          case 'S': parser->method = PHP_HTTP_SUBSCRIBE; /* or SEARCH */ break;
+          case 'S': parser->method = PHP_HTTP_SUBSCRIBE; break;
           case 'T': parser->method = PHP_HTTP_TRACE; break;
           case 'U': parser->method = PHP_HTTP_UNLOCK; /* or UNSUBSCRIBE */ break;
           default: parser->method = PHP_HTTP_NOT_IMPLEMENTED; break;
@@ -530,6 +594,7 @@ size_t php_http_parser_execute (php_http_parser *parser,
         state = s_req_method;
         break;
       }
+
       case s_req_method:
       {
         const char *matcher;
@@ -572,8 +637,6 @@ size_t php_http_parser_execute (php_http_parser *parser,
           parser->method = PHP_HTTP_PUT;
         } else if (index == 1 && parser->method == PHP_HTTP_POST && ch == 'A') {
           parser->method = PHP_HTTP_PATCH;
-        } else if (index == 1 && parser->method == PHP_HTTP_SUBSCRIBE && ch == 'E') {
-          parser->method = PHP_HTTP_SEARCH;
         } else if (index == 2 && parser->method == PHP_HTTP_UNLOCK && ch == 'S') {
           parser->method = PHP_HTTP_UNSUBSCRIBE;
         } else if (index == 4 && parser->method == PHP_HTTP_PROPFIND && ch == 'P') {
@@ -1322,7 +1385,7 @@ size_t php_http_parser_execute (php_http_parser *parser,
         /* Here we call the headers_complete callback. This is somewhat
          * different than other callbacks because if the user returns 1, we
          * will interpret that as saying that this message has no body. This
-         * is needed for the annoying case of receiving a response to a HEAD
+         * is needed for the annoying case of recieving a response to a HEAD
          * request.
          */
         if (settings->on_headers_complete) {
@@ -1375,9 +1438,7 @@ size_t php_http_parser_execute (php_http_parser *parser,
       }
 
       case s_body_identity:
-        assert(pe >= p);
-
-        to_read = MIN((size_t)(pe - p), (size_t)parser->content_length);
+        to_read = MIN(pe - p, (size_t)parser->content_length);
         if (to_read > 0) {
           if (settings->on_body) settings->on_body(parser, p, to_read);
           p += to_read - 1;
@@ -1461,16 +1522,15 @@ size_t php_http_parser_execute (php_http_parser *parser,
       case s_chunk_data:
       {
         assert(parser->flags & F_CHUNKED);
-        assert(pe >= p);
 
-        to_read = MIN((size_t)(pe - p), (size_t)(parser->content_length));
+        to_read = MIN(pe - p, (size_t)(parser->content_length));
 
         if (to_read > 0) {
           if (settings->on_body) settings->on_body(parser, p, to_read);
           p += to_read - 1;
         }
 
-        if (to_read == (size_t)parser->content_length) {
+        if (to_read == parser->content_length) {
           state = s_chunk_data_almost_done;
         }
 

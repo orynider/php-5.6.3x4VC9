@@ -34,7 +34,8 @@ if (PHP_PDO_MSSQL != "no") {
 	);
 	PDO_DBLIB_FLAVOUR = 0;
 
-	if (CHECK_LIB("sybdb.lib", "pdo_mssql", PHP_PDO_MSSQL) &&
+	if (CHECK_LIB("sybdb.lib", "pdo_mssql", PHP_PDO_MSSQL) && 
+	CHECK_LIB("libsybdb64.lib", "pdo_mssql", PHP_PDO_MSSQL) &&
 			CHECK_HEADER_ADD_INCLUDE("sybfront.h", "CFLAGS_PDO_MSSQL",
 			PHP_PDO_MSSQL, null, null, true)) {
 		/* smells like FreeTDS (or maybe native sybase dblib) */

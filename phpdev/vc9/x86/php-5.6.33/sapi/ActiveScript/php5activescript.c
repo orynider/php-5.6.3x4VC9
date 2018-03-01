@@ -16,18 +16,44 @@
    +----------------------------------------------------------------------+
  */
 /* $Id$ */
-
+#define PHP_ACTIVESCRIPT_WIN32 1
+#ifdef __DEBUG__
+# include <stinttypes/stdio.h>
+#endif
+/* conflict between PHP and Activescript headers */
+#define Debug php_Debug
 #include "php.h"
+#undef Debug
 #include "php_main.h"
 #include "SAPI.h"
 #include "php_globals.h"
 #include "ext/standard/info.h"
-#include "php_variables.h"
 #include "php_ini.h"
+#include "php_variables.h"
 #include "php5activescript.h"
+#include "zend_exceptions.h"
 
+#define _WIN32_DCOM
+#define ZEND_INCLUDE_FULL_WINDOWS_HEADERS
+#include <winsock2.h>
+
+/* header files for imported files */
+/* OCIdl.h ; htiface.h ; HLink.h -> urlmon.h */
+//#include <fcntl.h>
+/* */
+#include "ext/standard/php_smart_str.h"
+#ifndef NETWARE
+#include "ext/standard/php_standard.h"
+#else
+#include "ext/standard/basic_functions.h"
+#endif
+/* */
+#ifdef PHP_WIN32
+# if _MSC_VER <= 1300
+#  include "win32/php_strtoi64.h"
+# endif
+#endif
 /* SAPI definitions and DllMain */
-
 static int php_activescript_startup(sapi_module_struct *sapi_module)
 {
 	if (php_module_startup(sapi_module, &php_activescript_module, 1) == FAILURE) {

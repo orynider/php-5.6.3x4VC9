@@ -267,6 +267,10 @@ static int pdo_dblib_handle_factory(pdo_dbh_t *dbh, zval *driver_options TSRMLS_
 	pdo_dblib_db_handle *H;
 	int i, nvars, nvers, ret = 0;
 	int *val;
+	#define DBVERSION_42 4.2
+	#define DBVERSION_46 4.6
+	#define DBVERSION_70 7.0
+	#define DBVERSION_100 10.0
 	
 	const pdo_dblib_keyval tdsver[] = {
 		 {"4.2",DBVERSION_42}
@@ -313,17 +317,19 @@ static int pdo_dblib_handle_factory(pdo_dbh_t *dbh, zval *driver_options TSRMLS_
 	if (!H->login) {
 		goto cleanup;
 	}
-
+	
 	DBERRHANDLE(H->login, (EHANDLEFUNC) error_handler);
 	DBMSGHANDLE(H->login, (MHANDLEFUNC) msg_handler);
 	
 	if(vars[5].optval) {
 		for(i=0;i<nvers;i++) {
 			if(strcmp(vars[5].optval,tdsver[i].key) == 0) {
+			/*
 				if(FAIL==dbsetlversion(H->login, tdsver[i].value)) {
 					pdo_raise_impl_error(dbh, NULL, "HY000", "PDO_DBLIB: Failed to set version specified in connection string." TSRMLS_CC);		
 					goto cleanup;
 				}
+			*/
 				break;
 			}
 		}
