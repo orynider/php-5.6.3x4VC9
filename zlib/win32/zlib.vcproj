@@ -4,6 +4,7 @@
 	Version="9,00"
 	Name="zlib"
 	ProjectGUID="{DEE5E163-88B0-4047-A38E-CFD610F2A69B}"
+	RootNamespace="zlib"
 	TargetFrameworkVersion="131072"
 	>
 	<Platforms>
@@ -115,6 +116,7 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
+				ProgramDataBaseFileName="$(IntDir)\zlib.pdb"
 				WarningLevel="3"
 				DebugInformationFormat="4"
 				CompileAs="1"
@@ -249,6 +251,7 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
+				ProgramDataBaseFileName="$(IntDir)\zlib.pdb"
 				WarningLevel="3"
 				DebugInformationFormat="4"
 				CompileAs="1"

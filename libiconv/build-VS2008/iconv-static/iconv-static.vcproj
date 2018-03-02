@@ -189,7 +189,7 @@
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="..\..\src;..\..\include;..\..\srclib;..\..\lib"
-				PreprocessorDefinitions="LIBICONV_STATIC;_CRT_SECURE_NO_WARNINGS;NDEBUG"
+				PreprocessorDefinitions="BUILDING_LIBICONV;LIBICONV_STATIC;HAVE_ICONV;DEPENDS_ON_LIBICONV;_CRT_SECURE_NO_WARNINGS;NDEBUG;HAVE_CONFIG_H;ENABLE_RELOCATABLE;IN_LIBRARY;INSTALLDIR"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"

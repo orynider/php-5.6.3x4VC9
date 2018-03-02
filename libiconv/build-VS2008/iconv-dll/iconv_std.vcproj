@@ -67,7 +67,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="libiconv.lib"
+				AdditionalDependencies="$(OutDir)\libiconv.lib"
 				OutputFile="$(OutDir)\$(ProjectName)d.dll"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(TargetDir)$(TargetName).pdb"
@@ -223,7 +223,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="libiconv.lib"
+				AdditionalDependencies="$(OutDir)\libiconv.lib"
 				GenerateDebugInformation="true"
 				SubSystem="0"
 				OptimizeReferences="0"

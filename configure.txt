@@ -1,12 +1,48 @@
 
+configure for 5.6.32
+ configure --without-interbase --disable-intl --enable-mbstring=shared --without-dblib --disable-zip --disable-exif --disable-soap --without-sqlite --with-libxml=shared --with-xml=shared --disable-activescript --without-imap --without-gmp --disable-xmlreader --with-mcrypt=shared --with-xmlrpc=shared --with-xsl=shared --enable-igbinary=shared --with-wddx=shared --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet=shared --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom=shared --disable-xmlreader=shared --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-analyzer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --disable-apache2-4filter --enable-apache2-4handler --with-apache-hooks --disable-http --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-mssql=shared --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
 
-configure --disable-all --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-zip=shared --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom --with-mcrypt --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-analyzer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --enable-apache2-4handler --with-apache-hooks --disable-http --without-libxml --without-xml --without-xsl --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
+configure for 5.6.33
+ configure --without-interbase --disable-intl --enable-mbstring=shared --without-dblib --disable-zip --disable-exif --disable-soap --without-sqlite --with-libxml=shared --with-xml=shared --disable-activescript --without-imap --without-gmp --disable-xmlreader --disable-rar --with-mcrypt=shared --with-xmlrpc=shared --with-xsl=shared --enable-igbinary=shared --with-wddx=shared --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet=shared --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom=shared --disable-xmlreader=shared --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-analyzer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --disable-apache2-4filter --enable-apache2-4handler --with-apache-hooks --disable-http --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-mssql=shared --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
 
-Options that enable extensions and SAPI will accept 'yes' or 'no' as a
-parameter. They also accept 'shared' as a synonym for 'yes' and request a
-shared build of that module. Not all modules can be built as shared modules;
-configure will display [shared] after the module name if can be built that
-way.
+ext\pcre\php_pcre.def
+ext\zlib\php_zlib.def
+ext\libxml\php_libxml2.def
+MC: Compiling win32\build\wsyslog.mc
+
+nmake snap > build29022018.log.in
+
+nmake  /I /nologo "php.exe"
+
+nmake  /I /nologo "php_soap.dll" > php_soap.log.in
+
+nmake  /I /nologo "php_xmlrpc.dll" > php_xmlrpc.log.in
+
+nmake  /I /nologo "php_xsl.dll" > php_xsl.log.in
+
+nmake  /I /nologo "php_gd2.dll" > php_gd2.log.in
+
+nmake  /I /nologo "php_iconv.dll" > php_iconv.log.in
+
+copy 
+libbz2.dll 
+ntwdblib.dll 
+iphlpapi.dll 
+libsybcs.dll 
+libsybct.dll 
+
+configure --enable-xmlreader --with-mcrypt=shared --enable-redis=shared --enable-redis-session --enable-redis-igbinary --with-wddx=shared --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet=shared --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-zip=shared --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-analyzer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --enable-apache2-4handler --with-apache-hooks --disable-http --with-libxml=shared --with-xml=shared --without-xsl --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-mssql=shared --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
+
+
+configure --enable-xmlreader --with-mcrypt=static --with-wddx=shared --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-zip=shared --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-analyzer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --enable-apache2-4handler --with-apache-hooks --disable-http --with-libxml=shared --with-xml=shared --without-xsl --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
+
+configure --disable-all --enable-static-analyze --with-mcrypt=shared --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-zip=shared --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom --with-mcrypt --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-analyzer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --enable-apache2-4handler --with-apache-hooks --disable-http --with-libxml=shared --without-xml --without-xsl --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
+
+nmake snap > build22022018.log.in
+
+configure for 5.4.16
+configure --enable-xmlreader --disable-static-analyze --with-mcrypt=shared --with-wddx=shared --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-zip=shared --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --enable-apache2-4handler --with-apache-hooks --disable-http --with-libxml=shared --with-xml=shared --without-xsl --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-mssql=shared --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
+configure --enable-xmlreader --disable-static-analyze --with-mcrypt=shared --with-wddx=shared --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-zip=shared --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-dom --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --enable-apache2-4handler --with-apache-hooks --disable-http --with-libxml=shared --with-xml=shared --without-xsl --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-mssql=shared --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
 
   --enable-snapshot-build       Build a snapshot; turns on everything it can
                                 and ignores build errors
@@ -156,7 +192,7 @@ configure --disable-all --enable-debug-pack --enable-cgi --enable-cli --enable-c
 
 nmake snap > build14022018.log.in
 
-cmd.exe /c for %T in (php5aolserver.dll php5apache.dll php5apache2_filter.dll php5apache2_2_filter.dll php5apache2.dll php5apache2_2.dll php5apache2_4.dll php5apache_hooks.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll) do nmake.exe /I /nologo "%T" > buildsapi11022018.log.in
+cmd.exe /c for %T in (php4aolserver.dll php4apache.dll php4apache2_filter.dll php4apache2_2_filter.dll php4apache2.dll php4apache2_2.dll php4apache2_4.dll php4apache_hooks.dll php-cgi.exe php.exe php-win.exe php4embed.lib php4isapi.dll phpdbg.exe php4phpdbg.dll) do nmake.exe /I /nologo "%T" > buildsapi11022018.log.in
 
 WARNING: dba not enabled; libraries and headers not found
 WARNING: oci8 not enabled: Oracle Database client libraries or Oracle 10g Instant Client not found
@@ -321,7 +357,7 @@ nmake snap > build08022018.log.in
 
 nmake  /I /nologo "php.exe"
 	
-cmd.exe /c	 for %T in (php5aolserver.dll php5apache.dll php5apache2_filter.dll php5apache2_2_filter.dll php5apache2.dll php5apache2_2.dll php5apache2_4.dll php5apache_hooks.dll php-cgi.exe php.exe php-win.exe php5embed.lib php5isapi.dll phpdbg.exe php5phpdbg.dll) do nmake.exe /I /nologo "%T" > buildsapi09022018.log.in
+cmd.exe /c	 for %T in (php4aolserver.dll php4apache.dll php4apache2_filter.dll php4apache2_2_filter.dll php4apache2.dll php4apache2_2.dll php4apache2_4.dll php4apache_hooks.dll php-cgi.exe php.exe php-win.exe php4embed.lib php4isapi.dll phpdbg.exe php4phpdbg.dll) do nmake.exe /I /nologo "%T" > buildsapi09022018.log.in
 	
 configure --disable-all --enable-debug-pack --enable-cgi --enable-cli --enable-cli-win32 --enable-embed --enable-isapi --enable-phpdbg --enable-phpdbgs --enable-snapshot-build --enable-one-shot --enable-bcmath --enable-calendar --enable-com-dotnet --with-iconv=shared --enable-ctype --with-ereg --enable-mbstring=shared --enable-mbregex=shared --enable-exif=shared --enable-fileinfo --enable-filter --enable-ftp --enable-hash --enable-json --enable-zip=shared --enable-odbc=shared --enable-opcache --enable-phar --enable-phar-native-ssl --enable-session --enable-shmop --with-cygwin --with-mcrypt --enable-sockets=shared --enable-pdo=shared --with-mysqlnd --enable-tokenizer --with-analyzer --with-aolserver --enable-apache --with-apache-includes --with-apache-libs --enable-apache2filter --enable-apache2-2filter --enable-apache2handler --enable-apache2-2handler --enable-apache2-4handler --with-apache-hooks --enable-http --without-libxml --without-xml  --without-xsl --without-dom --with-bz2=shared --with-gd=shared --enable-zts --with-pdo-dblib=shared --with-pdo-mssql=shared --with-pdo-firebird=shared --with-pdo-mysql=shared --with-pdo-oci=shared --with-pdo-odbc=shared --with-pdo-pgsql=shared --with-pdo-sqlite=shared --with-pdo-sqlite-external=shared --with-sqlite3=shared --with-mysqli=shared
 
@@ -371,9 +407,9 @@ configure --disable-all --enable-debug-pack --enable-cgi --enable-cli --enable-c
 
 c:\MsVS11\VC\bin\lib.exe /? > lib.txt
 
-c:\MsVS09\VC\bin\lib.exe /nologo /out:Release_TS\php5embed.lib /nologo /version:5.6.33 /incremental:no /debug /opt:ref,icf /libpath:"C:\php-sdk\phpdev\vc9\x86\deps\lib" Release_TS\sapi\embed\php_embed.obj Release_TS\php5ts.lib   Release_TS\php5embed.lib.res  > lib9.txt
+c:\MsVS09\VC\bin\lib.exe /nologo /out:Release_TS\php4embed.lib /nologo /version:5.6.33 /incremental:no /debug /opt:ref,icf /libpath:"C:\php-sdk\phpdev\vc9\x86\deps\lib" Release_TS\sapi\embed\php_embed.obj Release_TS\php4ts.lib   Release_TS\php4embed.lib.res  > lib9.txt
 
-c:\MsVS11\VC\bin\lib.exe /nologo /out:Release_TS\php5embed.lib /nologo /version:5.6.33 /incremental:no /debug /opt:ref,icf /libpath:"C:\php-sdk\phpdev\vc9\x86\deps\lib" Release_TS\sapi\embed\php_embed.obj Release_TS\php5ts.lib   Release_TS\php5embed.lib.res  > lib11.txt
+c:\MsVS11\VC\bin\lib.exe /nologo /out:Release_TS\php4embed.lib /nologo /version:5.6.33 /incremental:no /debug /opt:ref,icf /libpath:"C:\php-sdk\phpdev\vc9\x86\deps\lib" Release_TS\sapi\embed\php_embed.obj Release_TS\php4ts.lib   Release_TS\php4embed.lib.res  > lib11.txt
 
 LINK : warning LNK4044: unrecognized option '/version:5.6.33'; ignored
 LINK : warning LNK4044: unrecognized option '/incremental:no'; ignored
@@ -442,7 +478,7 @@ Checking for mc.exe ...  C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin
 Checking for mt.exe ...  C:\Program Files\\Microsoft SDKs\Windows\v7.1\bin
 
 Build dir: Release_TS
-PHP Core:  php5ts.dll and php5ts.lib
+PHP Core:  php4ts.dll and php4ts.lib
 
 Checking for wspiapi.h ...  <in default path>
 Enabling IPv6 support
@@ -680,7 +716,7 @@ Recreating build dirs
 Recreating build dirs
 Recreating build dirs
         1 file(s) copied.
-   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php4ts.lib and object Release_TS\php4ts.exp
 	rc /n /fo Release_TS\php_mbstring.dll.res /d FILE_DESCRIPTION="\"Multibyte String Functions\"" /d FILE_NAME="\"php_mbstring.dll\"" /d URL="\"http://www.php.net\"" /d INTERNAL_NAME="\"MBSTRING extension\"" /d THANKS_GUYS="\"Thanks to Tsukada Takuya, Rui Hirokawa\"" win32\build\template.rc
 Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
 
@@ -708,7 +744,7 @@ Recreating build dirs
 Recreating build dirs
 Recreating build dirs
         1 file(s) copied.
-   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php4ts.lib and object Release_TS\php4ts.exp
    Creating library Release_TS\php_zip.lib and object Release_TS\php_zip.exp
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
 EXT zip build complete
@@ -718,7 +754,7 @@ Recreating build dirs
 Recreating build dirs
 Recreating build dirs
         1 file(s) copied.
-   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php4ts.lib and object Release_TS\php4ts.exp
    Creating library Release_TS\php_mbstring.lib and object Release_TS\php_mbstring.exp
 mb_gpc.obj : error LNK2019: unresolved external symbol _sapi_module referenced in function __php_mb_encoding_handler_ex
 mb_gpc.obj : error LNK2019: unresolved external symbol _core_globals_id referenced in function __php_mb_encoding_handler_ex
@@ -751,7 +787,7 @@ Recreating build dirs
 Recreating build dirs
 Recreating build dirs
         1 file(s) copied.
-   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php4ts.lib and object Release_TS\php4ts.exp
 	rc /n /fo Release_TS\php_mbstring.dll.res /d FILE_DESCRIPTION="\"Multibyte String Functions\"" /d FILE_NAME="\"php_mbstring.dll\"" /d URL="\"http://www.php.net\"" /d INTERNAL_NAME="\"MBSTRING extension\"" /d THANKS_GUYS="\"Thanks to Tsukada Takuya, Rui Hirokawa\"" win32\build\template.rc
 Microsoft (R) Windows (R) Resource Compiler Version 6.1.7600.16385
 
@@ -778,7 +814,7 @@ Recreating build dirs
 Recreating build dirs
 Recreating build dirs
         1 file(s) copied.
-   Creating library Release_TS\php5ts.lib and object Release_TS\php5ts.exp
+   Creating library Release_TS\php4ts.lib and object Release_TS\php4ts.exp
    Creating library Release_TS\php_mbstring.lib and object Release_TS\php_mbstring.exp
 mb_gpc.obj : error LNK2019: unresolved external symbol _sapi_module referenced in function __php_mb_encoding_handler_ex
 mb_gpc.obj : error LNK2019: unresolved external symbol _core_globals_id referenced in function __php_mb_encoding_handler_ex

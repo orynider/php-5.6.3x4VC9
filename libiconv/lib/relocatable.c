@@ -157,7 +157,21 @@ set_this_relocation_prefix (const char *orig_prefix_arg,
    Relocation simply replaces a pathname starting with the original prefix
    by the corresponding pathname with the current prefix instead.  Both
    prefixes should be directory names without trailing slash (i.e. use ""
-   instead of "/").  */
+   instead of "/").  * /
+static char *__libiconv_set_relocation_prefix(orig_prefix_arg, curr_prefix_arg)
+{
+  //Now notify all dependent libraries. 
+#if DEPENDS_ON_LIBCHARSET
+	return (char *) "libcharset_set_relocation_prefix (orig_prefix_arg, curr_prefix_arg)";
+#endif
+#if DEPENDS_ON_LIBICONV && HAVE_ICONV && _LIBICONV_VERSION >= 0x0109
+	return (char *) "libiconv_set_relocation_prefix (orig_prefix_arg, curr_prefix_arg)"; 
+#endif
+#if DEPENDS_ON_LIBINTL && ENABLE_NLS && defined libintl_set_relocation_prefix
+	return (char *) "libintl_set_relocation_prefix (orig_prefix_arg, curr_prefix_arg)";
+#endif
+}
+/* */
 void
 set_relocation_prefix (const char *orig_prefix_arg, const char *curr_prefix_arg)
 {

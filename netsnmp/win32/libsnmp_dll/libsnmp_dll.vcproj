@@ -75,10 +75,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ws2_32.lib"
+				AdditionalDependencies="ws2_32.lib libssl.lib"
 				OutputFile="../bin/release/netsnmp.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
+				AdditionalLibraryDirectories="&quot;C:\php-sdk\phpdev\vc9\x86\deps\lib&quot;"
 				ModuleDefinitionFile=".\libsnmp.def"
 				SubSystem="1"
 				RandomizedBaseAddress="1"

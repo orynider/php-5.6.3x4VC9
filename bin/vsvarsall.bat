@@ -14,20 +14,26 @@ REM php_setvars and phpsdk_buildtree will break the batch run them after envirom
 @SET VisualStudioVersion=%VSVersionOverride%.%VSOverrideSufix%
 @SET PlatformToolset=Windows%SDKVersionOverride%.1SDK
 @SET WindowsSdkVersion=v%SDKVersionOverride%.1
-::@SET PHP_SDK_VERSION=src
 @SET PHP_SDK_BRANCH=5.6
+::@SET PHP_SDK_BRANCH=7.2
 @SET PHP_SDK_SUBVERSION=33
+@SET PHP_VERSION_STRING=%PHP_SDK_BRANCH%.%PHP_SDK_SUBVERSION%
 @SET FrameworkDir=%WinDir%\Microsoft.NET\Framework\
 @SET ToolsVersion=4.0
 @SET FrameworkVersion=v2.0.50727
 @SET FrameworkVersion32=v4.0.30319
-:: set VS default path
+:: Set VS default path and rename c:\php-sdk\bin\vsvarsall.bat.in to c:\php-sdk\bin\vsvarsall.bat
 @SET VCINSTALLDIR=c:\MsVS%VSOverridePrefix%%VCVersionOverride%\VC\
 @SET VSINSTALLDIR=c:\MsVS%VSOverridePrefix%%VCVersionOverride%\
 ::@SET VCINSTALLDIR=%Path32%\Microsoft Visual Studio %VCVersionOverride%.0\VC\
 ::@SET VSINSTALLDIR=%Path32%\Microsoft Visual Studio %VCVersionOverride%.0\
-
-if "%PHP_SDK_ROOT_PATH%" == "" SET PHP_SDK_ROOT_PATH=c:\php-sdk\ & SET PHP_SDK_BIN_PATH=c:\php-sdk\bin & echo Changed PHP_SDK_ROOT_PATH: %PHP_SDK_ROOT_PATH%
+::@SET WindowsKitsDirVar=Windows Kits 
+@SET WindowsKitsDirVar=Microsoft SDKs\Windows
+:: Set "\" for old versions of SDK 
+::@SET %WindowsSdkVersion10%=\10.0.10240.0\
+@SET %WindowsSdkVersion10%=\
+if "%PHP_SDK_ROOT_PATH%" == "" SET PHP_SDK_ROOT_PATH=c:\php-5.6.3x4VC9\ & SET PHP_SDK_BIN_PATH=c:\php-5.6.3x4VC9\bin & echo Changed PHP_SDK_ROOT_PATH: %PHP_SDK_ROOT_PATH%
+::if "%PHP_SDK_ROOT_PATH%" == "" SET PHP_SDK_ROOT_PATH=c:\php-sdk\ & SET PHP_SDK_BIN_PATH=c:\php-sdk\bin & echo Changed PHP_SDK_ROOT_PATH: %PHP_SDK_ROOT_PATH%
 if "%PHP_SDK_VC%" == "" SET PHP_SDK_VC=vc%VCVersionOverride%
 @SET PHP_SDK_BIN_PATH=%PHP_SDK_ROOT_PATH%\bin
 @SET PHP_SDK_MSYS2_PATH=%PHP_SDK_ROOT_PATH%\msys2\usr\bin
@@ -126,25 +132,31 @@ IF "%CURRENT_CPU%"=="x64" (
 	) 
 )
 
+:: Windows API headers and libraries.
 @if not "%WindowsSdkDir%" == "" (
 	set "PATH=%WindowsSdkDir%bin;%PATH%"
 	set "INCLUDE=%WindowsSdkDir%include;%INCLUDE%"
 	set "LIB=%WindowsSdkDir%lib;%LIB%"
 )
 
-@SET WindowsSdkDir=%ProgramFiles%\Microsoft SDKs\Windows\%WindowsSdkVersion%\
+@SET WindowsSdkDir=%ProgramFiles%\%WindowsKitsDirVar%\%WindowsSdkVersion%\
+@SET WindowsSdkIncludeDir=%ProgramFiles%\%WindowsKitsDirVar%\%WindowsSdkVersion%\Include\
+@SET WindowsSdkLibDir=%ProgramFiles%\%WindowsKitsDirVar%\%WindowsSdkVersion%\Lib\winv6.3\um\ 
 
 @rem
 @rem Root of Visual Studio IDE installed files.
 @rem
 @set DevEnvDir=%VSINSTALLDIR%\Common7\IDE
-
 @set PATH=%VSINSTALLDIR%\Common7\IDE;%VSINSTALLDIR%\VC\BIN;%VSINSTALLDIR%\Common7\Tools;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Framework\v2.0.50727;%VSINSTALLDIR%\VC\VCPackages;%PATH%
 @set INCLUDE=%VSINSTALLDIR%\VC\ATLMFC\INCLUDE;%VSINSTALLDIR%\VC\INCLUDE;%INCLUDE%
 @set LIB=%VSINSTALLDIR%\VC\ATLMFC\LIB;%VSINSTALLDIR%\VC\LIB;%LIB%
 
 @set LIBPATH=%WinDir%\Microsoft.NET\Framework\v3.5;%WinDir%\Microsoft.NET\Framework\v2.0.50727;%VSINSTALLDIR%\VC\ATLMFC\LIB;%VSINSTALLDIR%\VC\LIB;%LIBPATH%
-@set mc=%ProgramFiles%\Microsoft SDKs\Windows\%WindowsSdkVersion%\bin\MC.Exe
+@set mc=%ProgramFiles%\%WindowsKitsDirVar%\Windows\%WindowsSdkVersion%\bin\MC.Exe
+
+:: Windows C library headers and libraries.
+WindowsCrtIncludeDir=%ProgramFiles%\%WindowsKitsDirVar%\%WindowsSdkVersion%\Include%WindowsSdkVersion10%ucrt
+WindowsCrtLibDir=%ProgramFiles%\%WindowsKitsDirVar%\%WindowsSdkVersion%\Lib%WindowsSdkVersion10%ucrt\
 
 @goto end
 
@@ -693,11 +705,14 @@ ECHO ***************************************************************************
 
 :: Clear the paths for php-sdk
 @set PHP_SDK_VERPATH=%PHP_SDK_ROOT_PATH%\phpdev\vc%VCVersionOverride%\%PHP_SDK_ARCH%\php-%PHP_SDK_VERSION%
+@set PHP_SDK_DEPSPATH=%PHP_SDK_ROOT_PATH%\phpdev\vc%VCVersionOverride%\%PHP_SDK_ARCH%\deps\
+@set PHP_SDK_DEPSINCLUDE=%PHP_SDK_ROOT_PATH%\phpdev\vc%VCVersionOverride%\%PHP_SDK_ARCH%\deps\include\
+@set PHP_SDK_DEPSLIB=%PHP_SDK_ROOT_PATH%\phpdev\vc%VCVersionOverride%\%PHP_SDK_ARCH%\deps\lib\
 
 @set PATH=%PHP_SDK_ROOT_PATH%\bin\;%ProgramFiles%\Git\mingw32\bin\;%PHP_SDK_VERPATH%;%PHP_SDK_VERPATH%\sapi\;%PHP_SDK_VERPATH%\sapi\aolserver\;%PHP_SDK_VERPATH%\sapi\aolserver\include\;%PATH%
 @set INCLUDE=%PHP_SDK_ROOT_PATH%\php_build\zlib;%INCLUDE%
+::@set LIB=%PHP_SDK_DEPSLIB%;%LIB%
 @set LIB=%LIB%
-
 @echo The environment is using Windows SDK %WindowsSdkDir% and /%PHP_SDK_ARCH% /%TARGET_PLATFORM% /%Configuration%
 
 @rem This directory contains Tcl source files that work on all the platforms
@@ -709,7 +724,7 @@ ECHO ***************************************************************************
 
 echo "Check release folder @ %PHP_SDK_VERPATH%\Release_TS\"
 rem cd %PHP_SDK_ROOT_PATH%\
-IF EXIST %PHP_SDK_VERPATH%\configure.js cd %PHP_SDK_VERPATH%\
+IF EXIST %PHP_SDK_VERPATH%\ cd %PHP_SDK_VERPATH%\
 cmd /c phpsdk_deps --update --branch %PHP_SDK_BRANCH%
 
 ::cd %PHP_SDK_ROOT_PATH%\

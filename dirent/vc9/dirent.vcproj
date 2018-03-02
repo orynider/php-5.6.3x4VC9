@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9.00"
+	Version="9,00"
 	Name="dirent"
 	ProjectGUID="{2070F5B9-A78C-4AB9-A94B-C0E485F20B8B}"
+	RootNamespace="dirent"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>
@@ -198,7 +199,7 @@
 				AdditionalOptions="/D_CRT_SECURE_NO_WARNINGS"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
+				PreprocessorDefinitions="WIN32;NDEBUG;_LIB;__USE_FILE_OFFSET64;HAVE_READDIR_R"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"

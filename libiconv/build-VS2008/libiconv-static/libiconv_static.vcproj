@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="libiconv_static"
+	Name="libiconv_a"
 	ProjectGUID="{965775BC-44E3-4994-A553-D9FDD8F45B91}"
 	RootNamespace="libiconv"
 	TargetFrameworkVersion="196613"
@@ -45,7 +45,7 @@
 				Optimization="0"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="..\..\include;..\..\lib;..\..\srclib"
-				PreprocessorDefinitions="BUILDING_LIBICONV;LIBICONV_STATIC;DEPENDS_ON_LIBICONV;_CRT_SECURE_NO_WARNINGS;NDEBUG;HAVE_CONFIG_H;ENABLE_RELOCATABLE;IN_LIBRARY;INSTALLDIR;NO_XMALLOC;libiconv_set_relocation_prefix;_relocate"
+				PreprocessorDefinitions="BUILDING_LIBICONV;LIBICONV_STATIC;HAVE_ICONV;DEPENDS_ON_LIBICONV;_CRT_SECURE_NO_WARNINGS;NDEBUG;HAVE_CONFIG_H;ENABLE_RELOCATABLE;IN_LIBRARY;INSTALLDIR;NO_XMALLOC;__gnu_freebsd__;__FreeBSD__"
 				KeepComments="true"
 				StringPooling="true"
 				MinimalRebuild="true"
@@ -178,7 +178,7 @@
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="..\..\include;..\..\lib;..\..\srclib"
-				PreprocessorDefinitions="BUILDING_LIBICONV;LIBICONV_STATIC;DEPENDS_ON_LIBICONV;_CRT_SECURE_NO_WARNINGS;NDEBUG;HAVE_CONFIG_H;ENABLE_RELOCATABLE;IN_LIBRARY;INSTALLDIR;NO_XMALLOC;libiconv_set_relocation_prefix;_relocate"
+				PreprocessorDefinitions="BUILDING_LIBICONV;LIBICONV_STATIC;HAVE_ICONV;DEPENDS_ON_LIBICONV;_CRT_SECURE_NO_WARNINGS;NDEBUG;HAVE_CONFIG_H;ENABLE_RELOCATABLE;IN_LIBRARY;INSTALLDIR;NO_XMALLOC;__gnu_freebsd__;__FreeBSD__"
 				KeepComments="false"
 				StringPooling="true"
 				MinimalRebuild="true"
@@ -299,7 +299,11 @@
 				Name="include"
 				>
 				<File
-					RelativePath="..\..\include\iconv.h"
+					RelativePath="..\..\woe32dll\export.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\include\iconv.h.msvc-static.h"
 					>
 				</File>
 			</Filter>
@@ -362,6 +366,10 @@
 			<Filter
 				Name="lib"
 				>
+				<File
+					RelativePath="..\..\lib\aliases.gperf"
+					>
+				</File>
 				<File
 					RelativePath="..\..\lib\aliases.h"
 					>
@@ -1267,6 +1275,10 @@
 		<Filter
 			Name="Source Files"
 			>
+			<File
+				RelativePath="..\..\woe32dll\iconv-exports.c"
+				>
+			</File>
 			<Filter
 				Name="lib"
 				>

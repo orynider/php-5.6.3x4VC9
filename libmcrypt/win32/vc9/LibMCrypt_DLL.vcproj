@@ -58,7 +58,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\..\;..\..\lib;..\..\..\..\deps\include;..\..\..\deps\include"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBXML_THREAD_ENABLED;HAVE_READDIR_R"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="0"
 				RuntimeLibrary="3"
@@ -266,7 +266,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\..\;..\..\lib;..\..\..\..\deps\include;..\..\..\deps\include;&quot;C:\php-sdk\phpdev\vc9\x86\deps\include&quot;"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBXML_THREAD_ENABLED"
 				StringPooling="true"
 				BasicRuntimeChecks="0"
 				RuntimeLibrary="2"
@@ -610,6 +610,10 @@
 			>
 			<File
 				RelativePath="..\..\lib\bzero.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\dirent\dirent.h"
 				>
 			</File>
 			<File

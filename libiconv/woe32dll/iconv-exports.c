@@ -15,6 +15,10 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
-#include "woe32dll/export.h"
+#include "export.h"
 
 VARIABLE(_libiconv_version)
+VARIABLE(iconv_open)
+VARIABLE(iconv)
+VARIABLE(iconv_close)
+VARIABLE(libiconv_set_relocation_prefix)

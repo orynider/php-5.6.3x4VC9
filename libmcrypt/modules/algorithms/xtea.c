@@ -9,9 +9,9 @@
 /* modified in order to use the libmcrypt API by Nikos Mavroyanopoulos 
  * All modifications are placed under the license of libmcrypt.
  */
-
+#include <stdio.h>
 #include <libdefs.h>
-
+#include <wchar.h>
 #include <mcrypt_modules.h>
 
 #define _mcrypt_set_key xtea_LTX__mcrypt_set_key
@@ -180,7 +180,7 @@ WIN32DLL_DEFINE int _mcrypt_self_test()
 	int blocksize = _mcrypt_get_block_size(), j;
 	void *key;
 	unsigned char cipher_tmp[200];
-
+	static char buffer;
 	keyword = calloc(1, _mcrypt_get_key_size());
 	if (keyword == NULL)
 		return -1;
@@ -202,9 +202,9 @@ WIN32DLL_DEFINE int _mcrypt_self_test()
 	free(keyword);
 	_mcrypt_encrypt(key, (void *) ciphertext);
 
-	for (j = 0; j < blocksize; j++) {
-		sprintf(&((char *) cipher_tmp)[2 * j], "%.2x",
-			ciphertext[j]);
+	for (j = 0; j < blocksize; j++) 
+	{
+		sprintf_s(NULL, &((char *) cipher_tmp)[2 * j], "%.2x", ciphertext[j]);
 	}
 
 	if (strcmp((char *) cipher_tmp, CIPHER) != 0) {

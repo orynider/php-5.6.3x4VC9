@@ -2,7 +2,7 @@
 //
 #include <winver.h>
 #include "resource.h"
-#include "mcrypt.h"
+#include "MCryptVer.h"
 /* The numeric version number is also available "in parts" by using these  defines: 
 #define MCRYPT_API_VERSION 20021217
 #define LIBMCRYPT_VERSION "2.5.8"
@@ -53,13 +53,13 @@ BEGIN
             VALUE "Comments", "LibMCrypt is a thread-safe library providing a uniform interfaceto access several block and stream encryption algorithms.\0"
             VALUE "CompanyName", "COPYING applies only for the MCrypt program and not the algorithms which most of them are public domain.\0"
             VALUE "FileDescription", "MCrypt library for Windows\0"
-            VALUE "FileVersion", LIBMCRYPT_VERSION "\0"
+            VALUE "FileVersion", PACKAGE_VERSION_STRING "\0"
             VALUE "InternalName", "libMCrypt.dll\0"
             VALUE "LegalCopyright", " http://lists.hellug.gr/mailman/listinfo/mcrypt-dev\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "libMCrypt.dll\0"
             VALUE "ProductName", "libMCrypt: thread-safe library\0"
-            VALUE "ProductVersion", LIBMCRYPT_VERSION "\0"
+            VALUE "ProductVersion", PACKAGE_VERSION_STRING "\0"
         END
     END
     BLOCK "VarFileInfo"

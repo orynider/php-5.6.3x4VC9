@@ -817,7 +817,7 @@ WIN32DLL_DEFINE int _mcrypt_self_test()
 	_mcrypt_encrypt(key, (void *) ciphertext);
 
 	for (j = 0; j < blocksize; j++) {
-		sprintf(&((char *) cipher_tmp)[2 * j], "%.2x",
+		sprintf_s(NULL, &((char *) cipher_tmp)[2 * j], "%.2x",
 			ciphertext[j]);
 	}
 
@@ -832,7 +832,7 @@ WIN32DLL_DEFINE int _mcrypt_self_test()
 	free(key);
 
 	for (j = 0; j < blocksize; j++) {
-		sprintf(&((char *) cipher_tmp)[2 * j], "%.2x",
+		sprintf_s(NULL, &((char *) cipher_tmp)[2 * j], "%.2x",
 			ciphertext[j]);
 	}
 

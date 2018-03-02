@@ -45,7 +45,7 @@
 #include <bzero.h>
 #include <xmemory.h>
 #include <mcrypt_internal.h>
-
+#include <dirent.h>
 #if 0
 static int preloaded_symbols = 0;
 #endif

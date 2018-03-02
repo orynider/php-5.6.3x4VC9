@@ -126,6 +126,7 @@ extern void libiconv_set_relocation_prefix (const char *orig_prefix,
 #ifdef __cplusplus
 }
 #endif
-
+extern void _libiconv_set_relocation_prefix (const char *orig_prefix,
+					    const char *curr_prefix);
 
 #endif /* _LIBICONV_H */

@@ -1,21 +1,3 @@
-/* win32/libxml2.def.src
-   Pseudo-source used to create a .DEF file for proper dynamic linkage. 
-   
-   Assuming you use Microsoft's C compiler, you run a
-   
-       cl /EP libxml2.def.src > libxml2.def
-       
-   in order to get the right .DEF file. Basically, all you do is
-   preprocess this file using a C/C++ preprocessor and the right
-   .DEF file should come out. 
-   
-   Should you need a function which does not seem to be exported
-   from the libxml2.dll, its name is most certainly missing here.
-   Add the name of the offending function to this file and rebuild.
-
-   21.03.2001, Igor Zlatkovic (igor@stud.fh-frankfurt.de)
-*/
-
 #define LIBXML2_COMPILING_MSCCDEF
 #include "../include/libxml/xmlversion.h"
 LIBRARY libxml2

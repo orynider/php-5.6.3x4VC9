@@ -67,7 +67,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(OutDir)\libiconv_static.lib"
+				AdditionalDependencies="$(OutDir)\libiconv_a.lib"
 				OutputFile="$(OutDir)\$(ProjectName)d.dll"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(TargetDir)$(TargetName).pdb"
@@ -220,7 +220,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="$(OutDir)\libiconv_static.lib"
+				AdditionalDependencies="$(OutDir)\libiconv_a.lib"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -335,6 +335,10 @@
 			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
+			<File
+				RelativePath="..\..\lib\relocatable_dll.c"
+				>
+			</File>
 			<Filter
 				Name="lib"
 				>
@@ -361,11 +365,15 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath="..\..\lib\relocatable_dll.h"
+				>
+			</File>
 			<Filter
 				Name="include"
 				>
 				<File
-					RelativePath="..\..\include\iconv.h"
+					RelativePath="..\..\include\iconv.h.msvc-shared"
 					>
 				</File>
 			</Filter>

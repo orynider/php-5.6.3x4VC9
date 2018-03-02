@@ -604,9 +604,9 @@ int _libiconv_version = _LIBICONV_VERSION;
 #define strong_alias(name, aliasname) _strong_alias(name, aliasname)
 #define _strong_alias(name, aliasname) \
 	extern __typeof (name) aliasname __attribute__ ((alias (#name)));
-#undef iconv_open
-#undef iconv
-#undef iconv_close
+//#undef iconv_open
+//#undef iconv
+//#undef iconv_close
 strong_alias (libiconv_open, iconv_open)
 strong_alias (libiconv, iconv)
 strong_alias (libiconv_close, iconv_close)
