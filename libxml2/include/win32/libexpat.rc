@@ -1,0 +1,38 @@
+/* Resources for libiconv.dll */
+
+#include <winver.h>
+#include "expatVer.h"
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION PACKAGE_VERSION_MAJOR,PACKAGE_VERSION_MINOR,PACKAGE_VERSION_PATCH,PACKAGE_VERSION_SUBMINOR
+ PRODUCTVERSION PACKAGE_VERSION_MAJOR,PACKAGE_VERSION_MINOR,PACKAGE_VERSION_PATCH,PACKAGE_VERSION_SUBMINOR
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x10004L  /* VOS_DOS_WINDOWS32 */
+ FILETYPE 0x2L  /* VFT_DLL */
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "Expat is an XML 1.0 parser written in C. <https://downloads.sourceforge.net/project/expat/expat/%{expatVer}/expat-%{expatVer}.tar.bz2>. Alternative source from <https://github.com/libexpat/>.\0"
+            VALUE "CompanyName", "Free Software Foundation\0"
+            VALUE "FileDescription", "XML 1.0 parser for Windows\0"
+            VALUE "FileVersion", PACKAGE_VERSION_STRING "\0"
+            VALUE "InternalName", "libexpat.dll\0"
+            VALUE "LegalCopyright", "Copyright (C) James Clark\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "libexpat.dll\0"
+            VALUE "ProductName", "libexpat: XML 1.0 parser library\0"
+            VALUE "ProductVersion", PACKAGE_VERSION_STRING "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+    END
+END

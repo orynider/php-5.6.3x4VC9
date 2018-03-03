@@ -1,0 +1,60 @@
+	link.exe /nologo /LIBPATH:bin.msvc /LIBPATH:.\lib /DLL  /VERSION:1.1  /IMPLIB:bin.msvc\libxslt.lib /OUT:bin.msvc\libxslt.dll  int.xslt.msvc\attributes.obj int.xslt.msvc\documents.obj int.xslt.msvc\extensions.obj int.xslt.msvc\extra.obj int.xslt.msvc\functions.obj int.xslt.msvc\imports.obj int.xslt.msvc\keys.obj int.xslt.msvc\namespaces.obj int.xslt.msvc\numbers.obj int.xslt.msvc\pattern.obj int.xslt.msvc\preproc.obj int.xslt.msvc\security.obj int.xslt.msvc\templates.obj int.xslt.msvc\transform.obj int.xslt.msvc\variables.obj int.xslt.msvc\xslt.obj int.xslt.msvc\xsltlocale.obj int.xslt.msvc\xsltutils.obj int.xslt.msvc\attrvt.obj wsock32.lib libxml2.lib
+   Creating library bin.msvc\libxslt.lib and object bin.msvc\libxslt.exp
+	if not exist int.xslta.msvc mkdir int.xslta.msvc
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /W3 /wd4244 /wd4267 /MD /D "_REENTRANT" /I.. /I..\libxslt /I.\include /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /D "LIBXML_STATIC" /D "LIBXSLT_STATIC"  /Foint.xslta.msvc\ /c ..\libxslt\attributes.c ..\libxslt\documents.c ..\libxslt\extensions.c ..\libxslt\extra.c ..\libxslt\functions.c ..\libxslt\imports.c ..\libxslt\keys.c ..\libxslt\namespaces.c ..\libxslt\numbers.c ..\libxslt\pattern.c ..\libxslt\preproc.c ..\libxslt\security.c ..\libxslt\templates.c ..\libxslt\transform.c ..\libxslt\variables.c ..\libxslt\xslt.c ..\libxslt\xsltlocale.c ..\libxslt\xsltutils.c ..\libxslt\attrvt.c 
+attributes.c
+documents.c
+extensions.c
+extra.c
+functions.c
+imports.c
+keys.c
+namespaces.c
+numbers.c
+pattern.c
+preproc.c
+security.c
+templates.c
+transform.c
+variables.c
+xslt.c
+xsltlocale.c
+xsltutils.c
+attrvt.c
+Generating Code...
+	lib.exe /nologo /OUT:bin.msvc\libxslt_a.lib int.xslta.msvc\attributes.obj int.xslta.msvc\documents.obj int.xslta.msvc\extensions.obj int.xslta.msvc\extra.obj int.xslta.msvc\functions.obj int.xslta.msvc\imports.obj int.xslta.msvc\keys.obj int.xslta.msvc\namespaces.obj int.xslta.msvc\numbers.obj int.xslta.msvc\pattern.obj int.xslta.msvc\preproc.obj int.xslta.msvc\security.obj int.xslta.msvc\templates.obj int.xslta.msvc\transform.obj int.xslta.msvc\variables.obj int.xslta.msvc\xslt.obj int.xslta.msvc\xsltlocale.obj int.xslta.msvc\xsltutils.obj int.xslta.msvc\attrvt.obj
+	if not exist int.exslt.msvc mkdir int.exslt.msvc
+	cl.exe /EP /nologo libexslt.def.src > int.exslt.msvc\libexslt.def
+	cl.exe /I..\libexslt /nologo /D "_WINDOWS" /D "_MBCS" /W3 /wd4244 /wd4267 /MD /D "_REENTRANT" /I.. /I..\libxslt /I.\include /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.exslt.msvc\ /c ..\libexslt\common.c ..\libexslt\crypto.c ..\libexslt\date.c ..\libexslt\exslt.c ..\libexslt\functions.c ..\libexslt\math.c ..\libexslt\saxon.c ..\libexslt\sets.c ..\libexslt\strings.c ..\libexslt\dynamic.c 
+common.c
+crypto.c
+date.c
+exslt.c
+functions.c
+math.c
+saxon.c
+sets.c
+strings.c
+dynamic.c
+Generating Code...
+	link.exe /nologo /LIBPATH:bin.msvc /LIBPATH:.\lib /DLL  /VERSION:0.8  /IMPLIB:bin.msvc\libexslt.lib /OUT:bin.msvc\libexslt.dll  int.exslt.msvc\common.obj int.exslt.msvc\crypto.obj int.exslt.msvc\date.obj int.exslt.msvc\exslt.obj int.exslt.msvc\functions.obj int.exslt.msvc\math.obj int.exslt.msvc\saxon.obj int.exslt.msvc\sets.obj int.exslt.msvc\strings.obj int.exslt.msvc\dynamic.obj libxslt.lib wsock32.lib libxml2.lib
+   Creating library bin.msvc\libexslt.lib and object bin.msvc\libexslt.exp
+	if not exist int.exslta.msvc mkdir int.exslta.msvc
+	cl.exe /D "LIBXML_STATIC" /D "LIBXSLT_STATIC" /D "LIBEXSLT_STATIC"  /I..\libexslt /nologo /D "_WINDOWS" /D "_MBCS" /W3 /wd4244 /wd4267 /MD /D "_REENTRANT" /I.. /I..\libxslt /I.\include /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.exslta.msvc\ /c ..\libexslt\common.c ..\libexslt\crypto.c ..\libexslt\date.c ..\libexslt\exslt.c ..\libexslt\functions.c ..\libexslt\math.c ..\libexslt\saxon.c ..\libexslt\sets.c ..\libexslt\strings.c ..\libexslt\dynamic.c 
+common.c
+crypto.c
+date.c
+exslt.c
+functions.c
+math.c
+saxon.c
+sets.c
+strings.c
+dynamic.c
+Generating Code...
+	lib.exe /nologo /OUT:bin.msvc\libexslt_a.lib int.exslta.msvc\common.obj int.exslta.msvc\crypto.obj int.exslta.msvc\date.obj int.exslta.msvc\exslt.obj int.exslta.msvc\functions.obj int.exslta.msvc\math.obj int.exslta.msvc\saxon.obj int.exslta.msvc\sets.obj int.exslta.msvc\strings.obj int.exslta.msvc\dynamic.obj
+	if not exist int.utils.msvc mkdir int.utils.msvc
+	cl.exe /nologo /D "_WINDOWS" /D "_MBCS" /W3 /wd4244 /wd4267 /MD /D "_REENTRANT" /I.. /I..\libxslt /I.\include /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /D "NDEBUG" /O2 /Foint.utils.msvc\ /c ..\xsltproc\xsltproc.c
+xsltproc.c
+..\xsltproc\xsltproc.c(564) : warning C4013: 'setmode' undefined; assuming extern returning int
+	link.exe /nologo /LIBPATH:bin.msvc /LIBPATH:.\lib /OUT:bin.msvc\xsltproc.exe libxslt.lib libexslt.lib wsock32.lib libxml2.lib int.utils.msvc\xsltproc.obj

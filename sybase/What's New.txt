@@ -1,0 +1,8 @@
+v0.8.0.17305
+- Option to download the result of Interactive SQL to Excel file
+
+v0.7.0.33778
+- Migration to VS2010
+- Syntax highlight for Interactive SQL and SQL Script generator
+- Support selected text for execution
+- Support "GO" in Interactive SQL to split script for execution

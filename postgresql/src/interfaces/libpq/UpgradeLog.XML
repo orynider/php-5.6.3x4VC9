@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="win32">
+</Property><Property Name="Solution File" Value="C:\php-sdk\postgresql\src\interfaces\libpq\win32.sln">
+</Property><Property Name="Date" Value="26 februarie 2018">
+</Property><Property Name="Time" Value="04:32:39">
+</Property></Properties><Event ErrorLevel="2" Project="C:\php-sdk\postgresql\src\interfaces\libpq\win32.mak" Source="win32" Description="Cannot load the project due to a corrupt project file.">
+</Event><Event ErrorLevel="2" Project="win32" Source="win32.mak" Description="Project upgrade failed.">
+</Event><Event ErrorLevel="3" Project="win32" Source="win32.mak" Description="Not Converted">
+</Event></UpgradeLog>

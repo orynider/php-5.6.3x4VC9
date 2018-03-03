@@ -1,0 +1,118 @@
+1>------ Rebuild All started: Project: expat_static, Configuration: Release Win32 ------
+1>Deleting intermediate and output files for project 'expat_static', configuration 'Release|Win32'
+2>------ Rebuild All started: Project: expat, Configuration: Release Win32 ------
+2>Deleting intermediate and output files for project 'expat', configuration 'Release|Win32'
+1>Compiling...
+2>Compiling...
+1>xmlparse.c
+2>xmltok_ns.c
+2>xmltok_impl.c
+2>xmltok.c
+2>xmlrole.c
+1>.\xmlparse.c(832) : warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+1>        C:\MsVS09\VC\include\stdlib.h(447) : see declaration of 'getenv'
+1>xmltok_ns.c
+1>xmltok_impl.c
+1>xmltok.c
+2>xmlparse.c
+2>loadlibrary.c
+1>xmlrole.c
+2>Generating Code...
+1>Generating Code...
+2>Compiling resources...
+1>Creating library...
+2>Microsoft (R) Windows (R) Resource Compiler Version 6.0.5724.0
+2>Copyright (C) Microsoft Corporation.  All rights reserved.
+2>Linking...
+1>Build log was saved at "file://c:\php-sdk\libxml2\include\win32\tmp\Release_static\BuildLog.htm"
+1>expat_static - 0 error(s), 1 warning(s)
+2>   Creating library .\..\win32\bin\Release/libexpat.lib and object .\..\win32\bin\Release/libexpat.exp
+2>Embedding manifest...
+2>Build log was saved at "file://c:\php-sdk\libxml2\include\win32\tmp\Release\BuildLog.htm"
+2>expat - 0 error(s), 0 warning(s)
+3>------ Rebuild All started: Project: expatw, Configuration: Release Win32 ------
+3>Deleting intermediate and output files for project 'expatw', configuration 'Release|Win32'
+3>Compiling...
+3>xmltok_ns.c
+3>xmltok_impl.c
+3>xmltok.c
+3>xmlrole.c
+3>xmlparse.c
+4>------ Rebuild All started: Project: expatw_static, Configuration: Release Win32 ------
+4>Deleting intermediate and output files for project 'expatw_static', configuration 'Release|Win32'
+4>Compiling...
+4>loadlibrary.c
+3>loadlibrary.c
+4>xmltok_ns.c
+4>xmltok_impl.c
+4>xmltok.c
+3>Generating Code...
+4>xmlrole.c
+4>xmlparse.c
+4>Generating Code...
+3>Compiling resources...
+3>Microsoft (R) Windows (R) Resource Compiler Version 6.0.5724.0
+3>Copyright (C) Microsoft Corporation.  All rights reserved.
+3>Linking...
+3>   Creating library .\..\win32\bin\Release/libexpatw.lib and object .\..\win32\bin\Release/libexpatw.exp
+3>Embedding manifest...
+3>Build log was saved at "file://c:\php-sdk\libxml2\include\win32\tmp\Release-w\BuildLog.htm"
+3>expatw - 0 error(s), 0 warning(s)
+5>------ Rebuild All started: Project: outline, Configuration: Release Win32 ------
+5>Deleting intermediate and output files for project 'outline', configuration 'Release|Win32'
+5>Compiling...
+5>outline.c
+4>Creating library...
+4>Build log was saved at "file://c:\php-sdk\libxml2\include\win32\tmp\Release-w_static\BuildLog.htm"
+4>expatw_static - 0 error(s), 0 warning(s)
+5>Linking...
+6>------ Rebuild All started: Project: elements, Configuration: Release Win32 ------
+6>Deleting intermediate and output files for project 'elements', configuration 'Release|Win32'
+6>Compiling...
+5>Embedding manifest...
+6>elements.c
+6>loadlibrary.c
+5>Build log was saved at "file://c:\php-sdk\libxml2\include\win32\tmp\Release-outline\BuildLog.htm"
+5>outline - 0 error(s), 0 warning(s)
+7>------ Rebuild All started: Project: xmlwf, Configuration: Release Win32 ------
+7>Deleting intermediate and output files for project 'xmlwf', configuration 'Release|Win32'
+7>Compiling...
+6>..\lib\loadlibrary.c(120) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+6>..\lib\loadlibrary.c(121) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+6>Generating Code...
+6>Compiling resources...
+7>xmlwf.c
+7>.\xmlwf.c(1068) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+7>.\xmlwf.c(1069) : warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+7>.\xmlwf.c(1070) : warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+7>.\xmlwf.c(1071) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+7>        C:\MsVS09\VC\include\stdio.h(237) : see declaration of 'fopen'
+7>xmlfile.c
+6>Microsoft (R) Windows (R) Resource Compiler Version 6.0.5724.0
+6>Copyright (C) Microsoft Corporation.  All rights reserved.
+6>Linking...
+6>Embedding manifest...
+7>.\xmlfile.c(144) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+7>.\xmlfile.c(152) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+7>.\xmlfile.c(196) : warning C4996: 'open': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _open. See online help for details.
+7>        C:\MsVS09\VC\include\io.h(316) : see declaration of 'open'
+7>.\xmlfile.c(207) : warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+7>        C:\MsVS09\VC\include\io.h(306) : see declaration of 'close'
+7>.\xmlfile.c(212) : warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _read. See online help for details.
+7>        C:\MsVS09\VC\include\io.h(317) : see declaration of 'read'
+7>.\xmlfile.c(216) : warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+7>        C:\MsVS09\VC\include\io.h(306) : see declaration of 'close'
+7>.\xmlfile.c(222) : warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+7>        C:\MsVS09\VC\include\io.h(306) : see declaration of 'close'
+7>.\xmlfile.c(227) : warning C4996: 'close': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _close. See online help for details.
+7>        C:\MsVS09\VC\include\io.h(306) : see declaration of 'close'
+7>win32filemap.c
+6>Build log was saved at "file://C:\php-sdk\libxml2\include\win32\tmp\Release-elements\BuildLog.htm"
+6>elements - 0 error(s), 2 warning(s)
+7>codepage.c
+7>Generating Code...
+7>Linking...
+7>Embedding manifest...
+7>Build log was saved at "file://c:\php-sdk\libxml2\include\win32\tmp\Release-xmlwf\BuildLog.htm"
+7>xmlwf - 0 error(s), 12 warning(s)
+========== Rebuild All: 7 succeeded, 0 failed, 0 skipped ==========

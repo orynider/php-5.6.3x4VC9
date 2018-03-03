@@ -1,0 +1,251 @@
+.js=jsfile
+jsfile=%SystemRoot%\System32\WScript.exe "%1" %*
+
+HKEY_CLASSES_ROOT\jsfile\shell
+    (Default)    REG_SZ    Open
+
+HKEY_CLASSES_ROOT\jsfile\shell\Edit
+    (Default)    REG_SZ    &Edit
+
+HKEY_CLASSES_ROOT\jsfile\shell\Edit\Command
+    (Default)    REG_SZ    C:\Windows\System32\Notepad.exe %1
+
+HKEY_CLASSES_ROOT\jsfile\shell\Open
+    (Default)    REG_SZ    &Open
+
+HKEY_CLASSES_ROOT\jsfile\shell\Open\Command
+    (Default)    REG_EXPAND_SZ    %SystemRoot%\System32\WScript.exe "%1" %*
+
+HKEY_CLASSES_ROOT\jsfile\shell\Open2
+    (Default)    REG_EXPAND_SZ    Open &with Command Prompt
+    MUIVerb    REG_EXPAND_SZ    @%SystemRoot%\System32\wshext.dll,-4511
+
+HKEY_CLASSES_ROOT\jsfile\shell\Open2\Command
+    (Default)    REG_EXPAND_SZ    %SystemRoot%\System32\CScript.exe "%1" %*
+
+HKEY_CLASSES_ROOT\jsfile\shell\Print
+    (Default)    REG_SZ    &Print
+
+HKEY_CLASSES_ROOT\jsfile\shell\Print\Command
+    (Default)    REG_EXPAND_SZ    %SystemRoot%\System32\Notepad.exe /p %1
+
+
+HKEY_CLASSES_ROOT\CLSID\{B54F3741-5B07-11cf-A4B0-00AA004A55E8}\InprocServer32
+    (Default)    REG_SZ    C:\Windows\system32\vbscript.dll
+    ThreadingModel    REG_SZ    Both
+
+
+HKEY_CLASSES_ROOT\CLSID\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\InprocServer32
+
+HKEY_CLASSES_ROOT\CLSID\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\InprocServer32
+    (Default)    REG_SZ
+
+
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\Inpr
+cServer32
+    (Default)    REG_SZ
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58
+\InprocServer32
+    (Default)    REG_SZ
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\{f414c260-6ac0-11cf-b6d1-
+0aa00bbbb58}\InprocServer32
+    (Default)    REG_SZ
+
+
+HKEY_CLASSES_ROOT\CLSID\{16d51579-a30b-4c8b-a276-0ff4dc41e755}\InprocServer32
+    (Default)    REG_SZ
+    ThreadingModel    REG_SZ    Both
+
+
+HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{16d51579-a30b-4c8b-a276-0ff4dc41e755}\Inpr
+cServer32
+    (Default)    REG_SZ
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{16d51579-a30b-4c8b-a276-0ff4dc41e755
+\InprocServer32
+    (Default)    REG_SZ
+    ThreadingModel    REG_SZ    Both
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\{16d51579-a30b-4c8b-a276-
+ff4dc41e755}\InprocServer32
+    (Default)    REG_SZ
+
+"C:\Windows\system32\cmd.exe calling C:\php-sdk\bin\vsvarsall.bat (/Debug /Rele
+se | /x86 /x64 /ia64 | /vista /xp /2003 /2008 /win7)"
+Setting Environment
+"Selecting /Release compilers."
+ERROR: Invalid key name.
+Type "REG QUERY /?" for usage.
+Setting environment for x86 using Microsoft Visual Studio tools.
+NOTE: If the list of platforms is not already set, use the default list.
+NOTE: Check for MSVC 2012, 2013, and 2015 specially because the Windows
+     SDK directory handling is slightly different for those versions.
+Setting SDK environment relative to C:\Program Files\Microsoft SDKs\Windows\v8.
+\.
+Targeting Windows XP x86 Release
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+v0.8.3
+- Bug fix: reload the server list after reading from INI file
+- New option to set rowcount and noexec
+- Fix the problem for using English excel in Chinese windows (refer to http://support.microsoft.com/kb/320369)
+
+v0.8.2
+- Modification for CMS workstation
+  - Change to .Net Framework 3.5
+  - Change the Sybase driver to Sybase.AdoNet2.AseClient (for .Net framework 3.5)
+  - Add option "iso_1" in the CharSet for conneciton 
+
+v0.8.1
+- New function in SQL Script Generator for saving all selected objects into a single file
+
+v0.8.0.5505
+- Remove the option for save profile, it will always save the profile
+- Add otpion to save password
+- Add option to select CharSet
+- Replace the Sybase driver Sybase.Data.AseClient with Sybase.AdoNet4.AseClient (it should work for both x86 and x64)
+
+v0.8.0.17305
+- Option to download the result of Interactive SQL to Excel file
+
+v0.7.0.33778
+- Migration to VS2010
+- Syntax highlight for Interactive SQL and SQL Script Generator
+- Support selected text for execution
+- Support "GO" in Interactive SQL to split script for execution
