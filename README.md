@@ -99,4 +99,4 @@ Module: php_pdo_pgsql.dll
 	libpq.dll
 
 
-
+https://github.com/orynider/php-5.6.3x4VC9/commit/288151b632052463cdbeb84e4da12c345902ee1d
