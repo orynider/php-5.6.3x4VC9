@@ -2,7 +2,7 @@
   +----------------------------------------------------------------------+
   | PHP Version 5                                                        |
   +----------------------------------------------------------------------+
-  | Copyright (c) 1997-2016 The PHP Group                                |
+  | Copyright (c) 1997-2012 The PHP Group                                |
   +----------------------------------------------------------------------+
   | This source file is subject to version 3.01 of the PHP license,      |
   | that is bundled with this package in the file LICENSE, and is        |
@@ -17,7 +17,7 @@
   +----------------------------------------------------------------------+
 */
 
-/* $Id$ */
+/* $Id: hash_gost.c 321634 2012-01-01 13:15:04Z felipe $ */
 
 #include "php_hash.h"
 #include "php_hash_gost.h"
@@ -27,7 +27,7 @@
  * derived from gost_compress() by Markku-Juhani Saarinen <mjos@ssh.fi>
  */
 
-#define round(tables, k1, k2) \
+#define round(k1, k2) \
 	t = (k1) + r; \
 	l ^= tables[0][t & 0xff] ^ tables[1][(t >> 8) & 0xff] ^ \
 		tables[2][(t >> 16) & 0xff] ^ tables[3][t >> 24]; \
@@ -35,25 +35,25 @@
 	r ^= tables[0][t & 0xff] ^ tables[1][(t >> 8) & 0xff] ^ \
 		tables[2][(t >> 16) & 0xff] ^ tables[3][t >> 24];
 
-#define R(tables, key, h, i, t, l, r) \
+#define R(key, h, i, t, l, r) \
 	r = h[i]; \
 	l = h[i + 1]; \
-	round(tables, key[0], key[1]) \
-	round(tables, key[2], key[3]) \
-	round(tables, key[4], key[5]) \
-	round(tables, key[6], key[7]) \
-	round(tables, key[0], key[1]) \
-	round(tables, key[2], key[3]) \
-	round(tables, key[4], key[5]) \
-	round(tables, key[6], key[7]) \
-	round(tables, key[0], key[1]) \
-	round(tables, key[2], key[3]) \
-	round(tables, key[4], key[5]) \
-	round(tables, key[6], key[7]) \
-	round(tables, key[7], key[6]) \
-	round(tables, key[5], key[4]) \
-	round(tables, key[3], key[2]) \
-	round(tables, key[1], key[0]) \
+	round(key[0], key[1]) \
+	round(key[2], key[3]) \
+	round(key[4], key[5]) \
+	round(key[6], key[7]) \
+	round(key[0], key[1]) \
+	round(key[2], key[3]) \
+	round(key[4], key[5]) \
+	round(key[6], key[7]) \
+	round(key[0], key[1]) \
+	round(key[2], key[3]) \
+	round(key[4], key[5]) \
+	round(key[6], key[7]) \
+	round(key[7], key[6]) \
+	round(key[5], key[4]) \
+	round(key[3], key[2]) \
+	round(key[1], key[0]) \
 	t = r; \
 	r = l; \
 	l = t; \
@@ -194,10 +194,10 @@
 		(v[3] >> 16) ^ v[3] ^ (v[4] << 16) ^ v[4] ^ (v[5] >> 16) ^ v[5] ^ \
 		(v[6] << 16) ^ (v[6] >> 16) ^ (v[7] << 16) ^ v[7];
 
-#define PASS(tables) \
+#define PASS \
 	X(w, u, v); \
 	P(key, w); \
-	R((tables), key, h, i, t, l, r); \
+	R(key, h, i, t, l, r); \
 	S(s, l, r); \
 	if (i != 6) { \
 		A(u, l, r); \
@@ -207,16 +207,16 @@
 		AA(v, l, r); \
 	}
 
-static inline void Gost(PHP_GOST_CTX *context, php_hash_uint32 data[8])
+static inline void Gost(php_hash_uint32 state[8], php_hash_uint32 data[8])
 {
 	int i;
-	php_hash_uint32 l, r, t, key[8], u[8], v[8], w[8], s[8], *h = context->state, *m = data;
+	php_hash_uint32 l, r, t, key[8], u[8], v[8], w[8], s[8], *h = state, *m = data;
 	
-	memcpy(u, context->state, sizeof(u));
+	memcpy(u, state, sizeof(u));
 	memcpy(v, data, sizeof(v));
 	
 	for (i = 0; i < 8; i += 2) {
-		PASS(*context->tables);
+		PASS;
 	}
 	SHIFT12(u, m, s);
 	SHIFT16(h, v, u);
@@ -237,13 +237,13 @@ static inline void GostTransform(PHP_GOST_CTX *context, const unsigned char inpu
 		temp = ((context->state[i + 8] < data[i]) || (context->state[i + 8] < save)) ? 1 : 0;     
 	}
 	
-	Gost(context, data);
+	Gost(context->state, data);
 }
 
 PHP_HASH_API void PHP_GOSTInit(PHP_GOST_CTX *context)
 {
 	memset(context, 0, sizeof(*context));
-	context->tables = &tables_test;
+
 }
 
 PHP_HASH_API void PHP_GOSTInitCrypto(PHP_GOST_CTX *context)
@@ -295,9 +295,9 @@ PHP_HASH_API void PHP_GOSTFinal(unsigned char digest[32], PHP_GOST_CTX *context)
 	}
 	
 	memcpy(l, context->count, sizeof(context->count));
-	Gost(context, l);
+	Gost(context->state, l);
 	memcpy(l, &context->state[8], sizeof(l));
-	Gost(context, l);
+	Gost(context->state, l);
 	
 	for (i = 0, j = 0; j < 32; i++, j += 4) {
 		digest[j] = (unsigned char) (context->state[i] & 0xff);

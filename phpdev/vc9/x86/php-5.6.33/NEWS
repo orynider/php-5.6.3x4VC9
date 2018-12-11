@@ -1,6 +1,65 @@
 PHP                                                                        NEWS
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-04 Jan 2017, PHP 5.6.33
+06 Dec 2018, PHP 5.6.39
+
+- Core:
+  . Fixed bug #77231 (Segfault when using convert.quoted-printable-encode 
+    filter). (Stas)
+
+- IMAP:
+  . Fixed bug #77020 (null pointer dereference in imap_mail). (cmb)
+  . Fixed bug #77153 (imap_open allows to run arbitrary shell commands via
+    mailbox parameter). (Stas)
+
+- Phar:
+  . Fixed bug #77022 (PharData always creates new files with mode 0666). (Stas)
+  . Fixed bug #77143 (Heap Buffer Overflow (READ: 4) in phar_parse_pharfile).
+    (Stas)
+
+13 Sep 2018, PHP 5.6.38
+
+- Apache2
+  . Fixed bug #76582 (XSS due to the header Transfer-Encoding: chunked). (Stas)
+
+19 Jul 2018, PHP 5.6.37
+
+- Exif:
+  . Fixed bug #76423 (Int Overflow lead to Heap OverFlow in
+    exif_thumbnail_extract of exif.c). (Stas)
+  . Fixed bug #76557 (heap-buffer-overflow (READ of size 48) while reading exif
+    data). (Stas)
+
+- Win32:
+  . Fixed bug #76459 (windows linkinfo lacks openbasedir check). (Anatol)
+
+26 Apr 2018 PHP 5.6.36
+
+- Exif:
+  . Fixed bug #76130 (Heap Buffer Overflow (READ: 1786) in exif_iif_add_value).
+  (Stas)
+
+- iconv:
+  . Fixed bug #76249 (stream filter convert.iconv leads to infinite loop on
+    invalid sequence). (Stas)
+
+- LDAP:
+  . Fixed bug #76248 (Malicious LDAP-Server Response causes Crash). (Stas)
+
+- Phar:
+  . Fixed bug #76129 (fix for CVE-2018-5712 may not be complete). (Stas)
+
+29 Mar 2018, PHP 5.6.35
+
+- FPM:
+  . Fixed bug #75605 (Dumpable FPM child processes allow bypassing opcache
+    access controls). (Jakub Zelenka)
+
+01 Mar 2018, PHP 5.6.34
+
+- Standard:
+  . Fixed bug #75981 (stack-buffer-overflow while parsing HTTP response). (Stas)
+
+04 Jan 2018, PHP 5.6.33
 
 - GD:
   . Fixed bug #75571 (Potential infinite loop in gdImageCreateFromGifCtx). (cmb)

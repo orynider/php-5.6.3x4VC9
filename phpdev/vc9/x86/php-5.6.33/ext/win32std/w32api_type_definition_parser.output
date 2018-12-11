@@ -1,0 +1,158 @@
+Gramaticã
+
+    0 $accept: start $end
+
+    1 start: type_definition
+
+    2 type_definition: tTYPEID '{' value_list '}'
+
+    3 value_list: value ';' value_list
+    4           | value ';'
+
+    5 value: tTYPEID tTYPEID
+    6      | tTYPEID tBYREF tTYPEID
+
+
+Terminale, cu reguli acolo unde acestea apar
+
+$end (0) 0
+';' (59) 3 4
+'{' (123) 2
+'}' (125) 2
+error (256)
+tTYPEID (258) 2 5 6
+tBYREF (259) 6
+
+
+Non-terminale, cu reguli acolo unde acestea apar
+
+$accept (8)
+    pe stânga: 0
+start (9)
+    pe stânga: 1, pe dreapta: 0
+type_definition (10)
+    pe stânga: 2, pe dreapta: 1
+value_list (11)
+    pe stânga: 3 4, pe dreapta: 2 3
+value (12)
+    pe stânga: 5 6, pe dreapta: 3 4
+
+
+stare 0
+
+    0 $accept: . start $end
+
+    tTYPEID  shift, ºi mergi în starea 1
+
+    start            mergi în starea 2
+    type_definition  mergi în starea 3
+
+
+stare 1
+
+    2 type_definition: tTYPEID . '{' value_list '}'
+
+    '{'  shift, ºi mergi în starea 4
+
+
+stare 2
+
+    0 $accept: start . $end
+
+    $end  shift, ºi mergi în starea 5
+
+
+stare 3
+
+    1 start: type_definition .
+
+    $implicit  reduce folosind regula 1 (start)
+
+
+stare 4
+
+    2 type_definition: tTYPEID '{' . value_list '}'
+
+    tTYPEID  shift, ºi mergi în starea 6
+
+    value_list  mergi în starea 7
+    value       mergi în starea 8
+
+
+stare 5
+
+    0 $accept: start $end .
+
+    $implicit  accept
+
+
+stare 6
+
+    5 value: tTYPEID . tTYPEID
+    6      | tTYPEID . tBYREF tTYPEID
+
+    tTYPEID  shift, ºi mergi în starea 9
+    tBYREF   shift, ºi mergi în starea 10
+
+
+stare 7
+
+    2 type_definition: tTYPEID '{' value_list . '}'
+
+    '}'  shift, ºi mergi în starea 11
+
+
+stare 8
+
+    3 value_list: value . ';' value_list
+    4           | value . ';'
+
+    ';'  shift, ºi mergi în starea 12
+
+
+stare 9
+
+    5 value: tTYPEID tTYPEID .
+
+    $implicit  reduce folosind regula 5 (value)
+
+
+stare 10
+
+    6 value: tTYPEID tBYREF . tTYPEID
+
+    tTYPEID  shift, ºi mergi în starea 13
+
+
+stare 11
+
+    2 type_definition: tTYPEID '{' value_list '}' .
+
+    $implicit  reduce folosind regula 2 (type_definition)
+
+
+stare 12
+
+    3 value_list: value ';' . value_list
+    4           | value ';' .
+
+    tTYPEID  shift, ºi mergi în starea 6
+
+    $implicit  reduce folosind regula 4 (value_list)
+
+    value_list  mergi în starea 14
+    value       mergi în starea 8
+
+
+stare 13
+
+    6 value: tTYPEID tBYREF tTYPEID .
+
+    $implicit  reduce folosind regula 6 (value)
+
+
+stare 14
+
+    3 value_list: value ';' value_list .
+
+    $implicit  reduce folosind regula 3 (value_list)

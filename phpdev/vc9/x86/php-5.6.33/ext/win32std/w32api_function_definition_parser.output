@@ -1,0 +1,232 @@
+Gramaticã
+
+    0 $accept: funcdef $end
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS tIDENTIFIER '(' argument_list ')' tFROM tFILENAME
+    2        | tIDENTIFIER tIDENTIFIER '(' argument_list ')' tFROM tFILENAME
+
+    3 argument_list: argument ',' argument_list
+    4              | argument
+    5              | /* goleºte */
+
+    6 argument: tIDENTIFIER tIDENTIFIER
+    7         | tIDENTIFIER tBYREF tIDENTIFIER
+
+
+Terminale, cu reguli acolo unde acestea apar
+
+$end (0) 0
+'(' (40) 1 2
+')' (41) 1 2
+',' (44) 3
+error (256)
+tFROM (258) 1 2
+tBYREF (259) 7
+tALIAS (260) 1
+tIDENTIFIER (261) 1 2 6 7
+tFILENAME (262) 1 2
+
+
+Non-terminale, cu reguli acolo unde acestea apar
+
+$accept (11)
+    pe stânga: 0
+funcdef (12)
+    pe stânga: 1 2, pe dreapta: 0
+argument_list (13)
+    pe stânga: 3 4 5, pe dreapta: 1 2 3
+argument (14)
+    pe stânga: 6 7, pe dreapta: 3 4
+
+
+stare 0
+
+    0 $accept: . funcdef $end
+
+    tIDENTIFIER  shift, ºi mergi în starea 1
+
+    funcdef  mergi în starea 2
+
+
+stare 1
+
+    1 funcdef: tIDENTIFIER . tIDENTIFIER tALIAS tIDENTIFIER '(' argument_list ')' tFROM tFILENAME
+    2        | tIDENTIFIER . tIDENTIFIER '(' argument_list ')' tFROM tFILENAME
+
+    tIDENTIFIER  shift, ºi mergi în starea 3
+
+
+stare 2
+
+    0 $accept: funcdef . $end
+
+    $end  shift, ºi mergi în starea 4
+
+
+stare 3
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER . tALIAS tIDENTIFIER '(' argument_list ')' tFROM tFILENAME
+    2        | tIDENTIFIER tIDENTIFIER . '(' argument_list ')' tFROM tFILENAME
+
+    tALIAS  shift, ºi mergi în starea 5
+    '('     shift, ºi mergi în starea 6
+
+
+stare 4
+
+    0 $accept: funcdef $end .
+
+    $implicit  accept
+
+
+stare 5
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS . tIDENTIFIER '(' argument_list ')' tFROM tFILENAME
+
+    tIDENTIFIER  shift, ºi mergi în starea 7
+
+
+stare 6
+
+    2 funcdef: tIDENTIFIER tIDENTIFIER '(' . argument_list ')' tFROM tFILENAME
+
+    tIDENTIFIER  shift, ºi mergi în starea 8
+
+    $implicit  reduce folosind regula 5 (argument_list)
+
+    argument_list  mergi în starea 9
+    argument       mergi în starea 10
+
+
+stare 7
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS tIDENTIFIER . '(' argument_list ')' tFROM tFILENAME
+
+    '('  shift, ºi mergi în starea 11
+
+
+stare 8
+
+    6 argument: tIDENTIFIER . tIDENTIFIER
+    7         | tIDENTIFIER . tBYREF tIDENTIFIER
+
+    tBYREF       shift, ºi mergi în starea 12
+    tIDENTIFIER  shift, ºi mergi în starea 13
+
+
+stare 9
+
+    2 funcdef: tIDENTIFIER tIDENTIFIER '(' argument_list . ')' tFROM tFILENAME
+
+    ')'  shift, ºi mergi în starea 14
+
+
+stare 10
+
+    3 argument_list: argument . ',' argument_list
+    4              | argument .
+
+    ','  shift, ºi mergi în starea 15
+
+    $implicit  reduce folosind regula 4 (argument_list)
+
+
+stare 11
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS tIDENTIFIER '(' . argument_list ')' tFROM tFILENAME
+
+    tIDENTIFIER  shift, ºi mergi în starea 8
+
+    $implicit  reduce folosind regula 5 (argument_list)
+
+    argument_list  mergi în starea 16
+    argument       mergi în starea 10
+
+
+stare 12
+
+    7 argument: tIDENTIFIER tBYREF . tIDENTIFIER
+
+    tIDENTIFIER  shift, ºi mergi în starea 17
+
+
+stare 13
+
+    6 argument: tIDENTIFIER tIDENTIFIER .
+
+    $implicit  reduce folosind regula 6 (argument)
+
+
+stare 14
+
+    2 funcdef: tIDENTIFIER tIDENTIFIER '(' argument_list ')' . tFROM tFILENAME
+
+    tFROM  shift, ºi mergi în starea 18
+
+
+stare 15
+
+    3 argument_list: argument ',' . argument_list
+
+    tIDENTIFIER  shift, ºi mergi în starea 8
+
+    $implicit  reduce folosind regula 5 (argument_list)
+
+    argument_list  mergi în starea 19
+    argument       mergi în starea 10
+
+
+stare 16
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS tIDENTIFIER '(' argument_list . ')' tFROM tFILENAME
+
+    ')'  shift, ºi mergi în starea 20
+
+
+stare 17
+
+    7 argument: tIDENTIFIER tBYREF tIDENTIFIER .
+
+    $implicit  reduce folosind regula 7 (argument)
+
+
+stare 18
+
+    2 funcdef: tIDENTIFIER tIDENTIFIER '(' argument_list ')' tFROM . tFILENAME
+
+    tFILENAME  shift, ºi mergi în starea 21
+
+
+stare 19
+
+    3 argument_list: argument ',' argument_list .
+
+    $implicit  reduce folosind regula 3 (argument_list)
+
+
+stare 20
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS tIDENTIFIER '(' argument_list ')' . tFROM tFILENAME
+
+    tFROM  shift, ºi mergi în starea 22
+
+
+stare 21
+
+    2 funcdef: tIDENTIFIER tIDENTIFIER '(' argument_list ')' tFROM tFILENAME .
+
+    $implicit  reduce folosind regula 2 (funcdef)
+
+
+stare 22
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS tIDENTIFIER '(' argument_list ')' tFROM . tFILENAME
+
+    tFILENAME  shift, ºi mergi în starea 23
+
+
+stare 23
+
+    1 funcdef: tIDENTIFIER tIDENTIFIER tALIAS tIDENTIFIER '(' argument_list ')' tFROM tFILENAME .
+
+    $implicit  reduce folosind regula 1 (funcdef)
