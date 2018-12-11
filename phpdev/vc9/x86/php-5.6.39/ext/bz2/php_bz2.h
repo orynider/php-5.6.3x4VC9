@@ -27,9 +27,9 @@
 #define SDL_RELEASE_SERIAL 0
 
 #define VERSION                     "1.06.000"
-#define VER_PRODUCTVERSION_STR      "5.6.33\0"
-#define VER_PRODUCTVERSION          5,6,33,000
-#define VER_PRODUCTVERSION_DW       (0x05633000 | 100)
+#define VER_PRODUCTVERSION_STR      "5.6.39\0"
+#define VER_PRODUCTVERSION          5,6,39,000
+#define VER_PRODUCTVERSION_DW       (0x05639000 | 100)
 
 #define VER_ORIGINALFILENAME_STR	"php_bz2.dll\0"
 #define VERSION_VALUE "1.06\0"  // should be X.Y : ie. if VERSION_DIGITALVALUE == 4, 7, 1, 0 , then X = 4, Y = 71 

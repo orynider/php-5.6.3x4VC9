@@ -16,7 +16,7 @@ REM php_setvars and phpsdk_buildtree will break the batch run them after envirom
 @SET WindowsSdkVersion=v%SDKVersionOverride%.1
 @SET PHP_SDK_BRANCH=5.6
 ::@SET PHP_SDK_BRANCH=7.2
-@SET PHP_SDK_SUBVERSION=33
+@SET PHP_SDK_SUBVERSION=39
 @SET PHP_VERSION_STRING=%PHP_SDK_BRANCH%.%PHP_SDK_SUBVERSION%
 @SET FrameworkDir=%WinDir%\Microsoft.NET\Framework\
 @SET ToolsVersion=4.0
