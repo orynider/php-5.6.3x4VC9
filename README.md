@@ -1,11 +1,11 @@
 # php-5.6.3x4VC9
 
-PHP 5.6.33 port for VC9
+PHP 5.6.39 port for VC9
 
 This snapshot was automatically generated on
-Wed, 28 Feb 2018 16:51:18 +0000
+Tue, 11 Dec 2018 10:08:02 +0000
 
-Version: 5.6.33
+Version: 5.6.39
 Branch: HEAD
 Build: Release_TS
 
@@ -35,6 +35,7 @@ PDO
 Phar
 SimpleXML
 xmlwriter
+mhash
 
 
 Dependency information:
@@ -97,6 +98,8 @@ Module: php_pdo_mssql.dll
 Module: php_pdo_pgsql.dll
 ===========================
 	libpq.dll
+
+
 
 
 https://github.com/orynider/php-5.6.3x4VC9/commit/288151b632052463cdbeb84e4da12c345902ee1d
