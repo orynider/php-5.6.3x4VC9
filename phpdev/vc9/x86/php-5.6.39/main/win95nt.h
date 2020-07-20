@@ -59,11 +59,37 @@ typedef long pid_t;
 #endif
 
 /* missing in vc5 math.h */
-#define M_PI             3.14159265358979323846
-#define M_TWOPI         (M_PI * 2.0)
-#define M_PI_2           1.57079632679489661923
+   //M_PI   Value of pi
+#ifndef M_PI
+#define M_PI             3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982148086513282306647093844609550582231725359408128481117450284102701938521105559644622948954930381964428810975665933446128475648233786783165271201909145648566923460
+#endif
+  //M_PI_2 Value of pi * 2
+#ifndef M_TWOPI
+#define M_TWOPI          (M_PI * 2.0)
+#endif
+   //M_PI_2 Value of pi/2
+#ifndef M_PI_2
+#define M_PI_2          (M_PI / 2.0)
+#endif
+   //M_PI_4 Value of pi/4
 #ifndef M_PI_4
-#define M_PI_4           0.78539816339744830962
+#define M_PI_4          (M_PI / 4.0)
+#endif
+   //M_1_PI Value of 1/pi
+#ifndef M_1_PI
+#define M_1_PI        (1.0 / M_PI)
+#endif
+   //M_2_PI Value of 2/pi
+#ifndef M_2_PI
+#define M_2_PI         (2.0 / M_PI)
+#endif
+   //M_SQRTPI Value of sqrt pi
+#ifndef M_SQRTPI
+#define M_SQRTPI       sqrt(M_PI)
+#endif
+   //M_2_SQRTPI Value of 2/ sqrt pi
+#ifndef M_2_SQRTPI
+#define M_2_SQRTPI     (2.0 / sqrt(M_PI))
 #endif
 
 #if !defined(PHP_DEBUG)
